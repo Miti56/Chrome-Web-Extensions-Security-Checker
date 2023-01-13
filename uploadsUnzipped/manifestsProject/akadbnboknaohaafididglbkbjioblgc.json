@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "gmail_not_logged_in.png"
+  },
+  "default_locale": "en",
+  "description": "An unofficial fork of another extension of a similar name.",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "name": "Yet Another Mail Checker",
+  "permissions": [
+    "alarms",
+    "tabs",
+    "webNavigation",
+    "*://*.google.com/"
+   ],
+  "version": "4.4.3",
+  "manifest_version": 2
+}

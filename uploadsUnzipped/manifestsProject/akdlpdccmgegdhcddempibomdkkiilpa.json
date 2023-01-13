@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "scripts/bg.js" ],
+      "persistent": true
+   },
+   "content_scripts": [ {
+   		"all_frames": true,
+      "js": [ "scripts/content.js" ],
+      "matches": [ "<all_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "browser_action": {
+      "default_icon": "images/vpn_19.png",
+      "default_popup": "options/options.html",
+      "default_title": "Click To Change Country"
+   },
+	 "icons": {
+      "128": "images/vpn_128.png",
+      "16": "images/vpn_16.png",
+      "48": "images/vpn_48.png"
+   },
+   "manifest_version": 2,    
+   "name": "Total Secure VPN - Unblock Sites, Browse Safe",
+   "description": "Unblock all websites with GEO restrictions - secure locations all around the world! No more restrictions.",
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "permissions": ["<all_urls>", "storage", "tabs", "cookies", "proxy", "webNavigation", "webRequest", "webRequestBlocking"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ "images/vpn_128.png"]
+}

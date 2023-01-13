@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "Gender Ender",
+ "description": "Changing the way the web assumes gender",
+ "version": "1",
+ "content_scripts": [ {
+ 	"matches": ["http://*/*",
+ 				"https://*/*"],
+ 	"js": ["content.js"],
+ 	"run_at": "document_end"
+ } ],
+ "author": "EJM",
+
+"browser_action": {
+   "default_icon": "trans.png",
+   "default_title": "Gender Ender"
+ },
+
+"icons": { "16": "trans16.png",
+		   "48": "trans48.png",
+		   "128": "trans128.png"
+},
+
+"chrome_url_overrides" : {
+  "newtab": "home_page.html"
+},
+ "permissions": ["https://www.sfchronicle.com/local/bayarea/",
+ 				"https://www.latimes.com/",
+ 				"http://www.staradvertiser.com/"]
+}

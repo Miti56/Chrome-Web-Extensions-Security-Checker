@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "AudioPlayer for Slides",
+  "description": "AudioPlayer for Slides by EdTechTeam",
+  "version": "2.2.7",
+  "browser_action": {
+    "default_icon": "images/ett-logo.png",
+    "default_title": "AudioPlayer for Slides by EdTechTeam",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/ett-logo.png",
+    "48": "images/ett-logo.png",
+    "128": "images/ett-logo.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://docs.google.com/presentation/*edit*",
+        "*://docs.google.com/presentation*/present*"
+      ],
+      "js": [
+        "js/contentscript.js"
+      ],
+      "css": [
+        "css/contentscript.css",
+        "css/custom.css"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "notifications", 
+    "*://docs.google.com/presentation/*",
+    "identity",
+    "identity.email",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+      "css/*",
+      "fonts/*",
+      "images/*.png"
+  ],
+  "oauth2": {
+    "client_id": "68220070747-arutki1q1ljm820ofb0luiuq1fh98g6h.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/drive.file",
+      "https://www.googleapis.com/auth/drive.appdata",
+      "https://www.googleapis.com/auth/presentations",
+      "https://www.googleapis.com/auth/presentations.readonly"    
+    ]
+  }
+}

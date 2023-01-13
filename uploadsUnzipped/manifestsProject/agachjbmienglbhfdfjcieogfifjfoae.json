@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Typing Test Online",
+	"version": "2.6.6",
+	"description": "This typing test app will check your typing skills. Choose between different stories. Type as accurate and as quick as possible.",
+	 "app": {
+	    "launch": {
+	      "web_url": "http://touchtypingtest.org/index.html"
+		      }
+		},
+	"icons": { "16": "Icon16.png",
+		   "32": "Icon32.png",
+		   "48": "Icon48.png",
+		   "64": "Icon64.png",
+		   "96": "Icon96.png",
+		   "128": "Icon128.png"
+		 }
+}
+	

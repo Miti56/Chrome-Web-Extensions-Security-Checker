@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Messenger in facebook",
+    "short_name": "Messenger in fb",
+    "version": "1.1.2",
+    "manifest_version": 2,
+    "description": "Replace facebook chat with a sidepanel containing Messenger.com",
+    "homepage_url": "http://rjgtav.wordpress.com",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "content_scripts" : [{
+        "matches" : [ "https://*.facebook.com/*"],
+        "js" : [ "content_script.js" ],
+        "run_at": "document_end"
+    }],
+    "icons": {
+		"16": "img/icon-16.png",
+		"48": "img/icon-48.png",
+		"128": "img/icon-128.png"
+	},
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://*.facebook.com/*",
+        "https://*.messenger.com/*"
+    ],
+    "web_accessible_resources": [
+        "img/*.png"
+    ]
+}

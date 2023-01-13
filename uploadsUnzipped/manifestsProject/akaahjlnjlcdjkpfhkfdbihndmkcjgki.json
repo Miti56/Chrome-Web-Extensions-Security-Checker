@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Use MakerLog Redesign",
+    "version": "1.2.0",
+    "description": "Force yourself to use the new MakerLog redesign.",
+    "homepage_url": "https://miguelpiedrafita.com",
+    "author": "Miguel Piedrafita",
+    "manifest_version": 2,
+    "permissions": [
+        "*://getmakerlog.com/*"
+    ],
+    "content_scripts": [{
+        "matches": ["*://getmakerlog.com/*"],
+        "run_at": "document_start",
+        "js": ["index.js"]
+    }],
+    "icons": {
+        "128": "assets/logo.png"
+    }
+}

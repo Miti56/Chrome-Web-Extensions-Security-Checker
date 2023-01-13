@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [
+         "DragonFlash/scripts/externals/jquery.min.js",
+         "DragonFlash/scripts/background.js"
+      ]
+   },
+   "browser_action": {
+      "default_icon": "DragonFlash/images/icon.png",
+      "default_popup": "DragonFlash/main.html"
+   },
+   "description": "Dragon Flash allows you to download flash files and use it offline or stretch it to fullscreen.",
+   "icons": {
+      "128": "DragonFlash/images/icon_128x128.png",
+      "16": "DragonFlash/images/icon_16x16.png",
+      "48": "DragonFlash/images/icon_48x48.png"
+   },
+   "manifest_version": 2,
+   "name": "Dragon Flash",
+   "offline_enabled": true,
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+   "permissions": [ "tabs", "*://*/*", "webRequest", "webRequestBlocking", "\u003Call_urls>", "storage", "unlimitedStorage" ],
+
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

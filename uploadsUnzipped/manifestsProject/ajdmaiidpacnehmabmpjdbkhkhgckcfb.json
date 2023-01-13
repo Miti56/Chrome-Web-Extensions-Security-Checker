@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Biblia",
+  "version": "2.2",
+
+  "description": "A simple way to approach the Bible, and get into the Word!",
+  "icons": {"128": "icon_128.png"},
+
+ "app": {
+    "urls": [
+      "http://biblia.com/"
+    ],
+    "launch": {
+      "web_url": "http://biblia.com/"
+    }
+  }
+}

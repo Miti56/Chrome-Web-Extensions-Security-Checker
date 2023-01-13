@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "icons/FF_logo_24.png"
+  },
+  "description": "Play Family Farm hassle-free on chrome using this latest Extension from CenturyGame Inc.",
+  "externally_connectable": {
+    "matches": [
+      "https://*.funplusgame.com/*"
+    ]
+  },
+  "icons": {
+    "128": "icons/FF_logo_128.png",
+    "16": "icons/FF_logo_16.png",
+    "48": "icons/FF_logo_48.png"
+  },
+  "manifest_version": 2,
+  "name": "Family Farm Helper",
+  "permissions": [
+    "contentSettings",
+    "storage",
+    "https://*.funplusgame.com/*"
+  ],
+  "short_name": "FamilyFarm",
+  "version": "0.5"
+}

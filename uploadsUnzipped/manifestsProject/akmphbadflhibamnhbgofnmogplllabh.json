@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "Clip to OneNote",
+	"version" : "5.1",
+	"manifest_version" : 2,
+	"description" : "Clip selected content to OneNote right from the context menu (Right Click Menu).",
+	"icons" : {
+		"256" : "img/icon.png"
+	},
+	"options_page" : "options.html",
+	"minimum_chrome_version" : "25",
+	"background" : {
+		"page" : "background.html"
+	},
+	"content_scripts" : [{
+			"all_frames" : true,
+			"js" : [
+				"contentScript.js"
+			],
+			"matches" : [
+				"http://*/*",
+				"https://*/*"
+			],
+			"run_at" : "document_start"
+		}
+	],
+	"permissions" : [
+		"tabs",
+		"contextMenus",
+		"http://*/",
+		"https://*/"
+	],
+	"commands": {
+		"cliptoonenote": {
+			"suggested_key": { "default": "Alt+Shift+L" },
+			"description": "Clip to OneNote"
+		}
+	}
+}

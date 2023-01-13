@@ -1,0 +1,38 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "name":"Virtual Combat Cards Capture",
+    "manifest_version":2,
+    "version":"1.0.2",
+    "description":"Extension that capturing compendium entries in Virtual Combat Cards.",
+    "permissions":[
+        "http://127.0.0.1:4143/*"
+    ],
+    "icons":{
+        "16":"images/d20metal-16.png",
+        "48":"images/d20metal-48.png",
+        "128":"images/d20metal-128.png"
+    },
+    "page_action":{
+        "default_icon":"images/d20metal-16.png",
+        "default_title":"Virtual Combat Cards Capture Extension",
+        "default_popup":"popup.html"
+    },
+    "background":{
+        "scripts":["background.js"]
+    },
+    "content_scripts":[
+        {
+            "matches":[
+                "http://www.wizards.com/dndinsider/compendium/database.aspx*",
+                "http://www.wizards.com/dndinsider/compendium/monster.aspx*",
+                "http://www.wizards.com/dndinsider/compendium/trap.aspx*"
+            ],
+            "js":["dndicapture.js", "contentscript.js" ],
+            "all_frames":true
+        }
+    ],
+    "web_accessible_resources":[
+        "images/camera.png",
+        "css/bar.css"
+    ]
+}

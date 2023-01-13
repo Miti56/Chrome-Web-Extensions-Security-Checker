@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Facebook Photo Descriptor",
+  "version": "0.0.4",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "description": "Display Facebook photo description for all languages (us, uk, fr, de, es, it, jp, ko, cn, etc.)",
+  "permissions": [
+    "http://www.facebook.com/*", "https://www.facebook.com/*"
+  ],
+  "icons": {
+    "128": "logo128.png",
+    "16": "logo16.png",
+    "48": "logo48.png"
+  },
+  "background": {
+    "scripts": [
+      "/bg/ch.js",
+      "/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+      "js" : ["facebookphotodescriptor.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ]
+}

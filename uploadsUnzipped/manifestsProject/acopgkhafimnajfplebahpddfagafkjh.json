@@ -1,0 +1,21 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Air Horner",
+  "description": "The best Air Horn app on the web",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "images/touch/Airhorner_128.png",
+    "152": "images/touch/Airhorner_152.png",
+    "144": "images/touch/Airhorner_144.png",
+    "192": "images/touch/Airhorner_192.png"
+  },
+  "app": {
+    "launch": {
+      "web_url":  "https://theairhorner.appspot.com/index.html"
+    }
+  },
+  "offline_enabled": true
+}

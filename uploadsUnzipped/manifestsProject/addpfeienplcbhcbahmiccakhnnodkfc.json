@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Plop",
+  "description": "Plop - Save form states and load saved states into forms!",
+  "version": "1.2.0",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Save or load a form."
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

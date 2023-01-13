@@ -1,0 +1,31 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Vocaloid: Hatsune Miku",
+  "version": "1.0",
+  "description": "A vocaloid chrome theme of Hatsune Miku ",
+  "icons": { "128": "MikuIcon.png" },
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/MikuThemeToolbar.png",
+      "theme_toolbar" : "images/MikuThemeToolbar2.png",
+      "theme_ntp_background" : "images/MikuBG.png",
+      "theme_tab_background" : "images/MikuUnusedTab.png"
+    },
+    "colors" : {
+      "frame" : [71, 105, 91],
+      "toolbar" : [207, 221, 192],
+      "ntp_text" : [20, 40, 0],
+      "ntp_link" : [36, 70, 0],
+      "ntp_section" : [207, 221, 192],
+      "button_background" : [255, 255, 255]
+    },
+    "tints" : {
+      "buttons" : [0.33, 0.5, 0.47]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom"
+      
+    }
+  }
+}
+

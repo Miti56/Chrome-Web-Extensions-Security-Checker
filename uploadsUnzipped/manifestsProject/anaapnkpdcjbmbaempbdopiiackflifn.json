@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "How is it read Katakana",
+  "version": "1.5",
+  
+"icons": {
+    "128": "128.png"
+},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'", 
+	"background": { 
+	"persistent": true, 
+	"scripts": [ "js/background.js"] 
+}, 
+"permissions": [ "activeTab", "tabs", "http://*/*", "https://*/*" ], 
+    "browser_action": {
+    "default_title": "How is it read Katakana",
+    "default_icon": "128.png",
+    "default_popup": "popup.html"
+	}
+}
+

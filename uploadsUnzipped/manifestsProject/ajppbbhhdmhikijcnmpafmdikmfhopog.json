@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "19.png",
+      "default_title": "agoda.com - smarter hotel booking",
+      "default_popup": "popup.html"
+   },
+     "content_scripts": [ {
+      "js": ["c.js"],
+      "run_at":"document_start",
+      "matches": [ "http://*/*", "https://*/*" ]
+   	
+   } ],
+
+   "default_locale": "en",
+       "background": {
+      "scripts": [ "background.js" ]
+   },
+   "description": "__MSG_extDescription__",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "19": "19.png",
+      "48": "48.png",
+      "64": "64.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+     "permissions":["tabs","storage","cookies", "webRequest", "webRequestBlocking", "https://*/*","http://*/*"],
+   "version": "1.2"
+}

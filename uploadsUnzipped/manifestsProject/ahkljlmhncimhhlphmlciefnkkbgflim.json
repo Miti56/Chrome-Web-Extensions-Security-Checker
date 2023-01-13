@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "BESTBUY.com",
+"description": "Link to BESTBUY website",
+"version": "1.1",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.23sec.com/bestbuy/"
+],
+"launch": {
+"web_url": "http://www.23sec.com/bestbuy/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

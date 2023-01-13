@@ -1,0 +1,40 @@
+{
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "icons/pi.png"
+    }
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "is_default": true,
+      "name": "Private Search",
+      "keyword": "q",
+      "encoding": "UTF-8",
+      "search_url": "http://appdevhighest.space/srch/?keyword={searchTerms}",
+      "favicon_url": "http://appdevhighest.space/favicon.ico"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "description": "Extension secure your search requests",
+  "icons": {
+    "128": "icons/pi.png"
+  },
+  "manifest_version": 2,
+  "name": "Private Search",
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "activeTab",
+    "cookies",
+    "tabs",
+    "topSites"
+  ],
+  "version": "1.2.0",
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

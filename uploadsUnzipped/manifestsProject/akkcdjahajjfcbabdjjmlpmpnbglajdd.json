@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Web Of Life",
+  "version": "0.4",
+  "manifest_version": 2,
+  "description": "Make your webpage alive!",
+  "permissions": ["activeTab"],
+  "icons": {
+    "16": "assets/icon16.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/icon16.png",
+    "default_popup": "dist/popup.html"
+  }
+}

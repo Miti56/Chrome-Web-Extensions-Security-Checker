@@ -1,0 +1,159 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "WMID BOT",
+	"version": "15.6",
+	"description": "This is wmidbot.com extension. Developed by WMIDBOT",
+	"permissions": ["webRequest", "notifications", "webRequestBlocking", "tabs", "cookies", "*://*.github.com/*", "*://*.githubusercontent.com/*", "*://*.svadba.com/*", "*://*.top-dates.net/*", "*://*.habibidate.com/*", "*://*.globalcompanions.com/*", "*://*.dream-marriage.com/*","*://*.dream-singles.com/*", "*://*.zolushka.net/*", "*://find-bride.com/*", "*://jump4love.com/*","*://j4l.com/*", "*://romancecompass.com/*", "*://hanuma-ru.com/*", "*://charmingdate.com/*", "*://chnlove.com/*", "*://*.chnlove.com/*", "*://*.wmid.com.ua/*", "*://*.wmidbot.com/*", "https://www.google-analytics.com/", "*://antigate.com/*", "*://anti-captcha.com/*","https://*.api.anastasiadate.com/*"],
+	"background": {
+		"scripts": ["js/jquery.js", "js/cookie.js", "background.js"]
+	},
+	"manifest_version": 2,
+	"icons": {
+		"128": "images/ic_wmid.png"
+	},
+	"content_scripts": [{
+		"matches": ["*://*.google.com/recaptcha/api2/anchor?k=*"],
+		"js": ["js/jquery.js", "recaptcha/click.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://*.google.com/recaptcha/api2/frame?c=*"],
+		"js": ["js/jquery.js", "recaptcha/img.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["http://*.svadba.com/*"],
+		"js": ["js/jquery.js", "svadba-chat/click.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["http://*.svadba.com/chat/*", "http://m.svadba.com/*"],
+		"css": ["svadba-chat/css.css"],
+		"js": ["js/jquery.js", "js/cookie.js", "svadba-chat/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://svadba.com/Login/*", "*://*.svadba.com/Login/*"],
+		"js": ["js/jquery.js","svadba-mail/js.js"],
+		"run_at" : "document_end"
+	}, {
+		"matches": ["http://*.habibidate.com/*"],
+		"js": ["js/jquery.js", "habibidate-chat/click.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["http://chat.habibidate.com/*"],
+		"css": ["habibidate-chat/css.css"],
+		"js": ["js/jquery.js", "js/cookie.js", "habibidate-chat/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["http://*.globalcompanions.com/*", "https://*.globalcompanions.com/*"],
+		"js": ["js/jquery.js", "globalcompanions-chat/click.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["http://point.globalcompanions.com/*", "https://point.globalcompanions.com/*"],
+		"css": ["globalcompanions-chat/css.css"],
+		"js": ["js/jquery.js", "js/cookie.js", "globalcompanions-chat/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://*.dream-marriage.com/russian-women-search.php*","*://*.dream-marriage.com/russian-women-gallery.php?*","*://*.dream-marriage.com/members/my_favorites.php*","*://*.dream-marriage.com/members/my_admirers.php*","*://*.dream-singles.com/russian-women-search.php*","*://*.dream-singles.com/russian-women-gallery.php?*","*://*.dream-singles.com/members/my_favorites.php*","*://*.dream-singles.com/members/my_admirers.php*"],
+		"css": ["dream-mail/css.css"],
+		"js": ["js/jquery.js", "js/canvas-to-blob.js", "js/cookie.js", "dream-mail/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://*.dream-marriage.com/search.php*","*://*.dream-marriage.com/profiles_gallery.php*","*://*.dream-singles.com/search.php*","*://*.dream-singles.com/profiles_gallery.php*"],
+		"css": ["dream-mail/css.css"],
+		"js": ["js/jquery.js", "js/canvas-to-blob.js", "js/cookie.js", "dream-mail/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://*.dream-marriage.com/adm/*"],
+		"css": ["dream-mail/css.css"],
+		"js": ["js/jquery.js","dream-adm/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://*.dream-marriage.com/chat/*","*://*.dream-singles.com/chat/*"],
+		"css": ["dream-chat/css.css"],
+		"js": ["js/jquery.js", "js/cookie.js", "dream-chat/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://zolushka.net/im/*", "*://www.zolushka.net/im/*"],
+		"js": ["js/jquery.js", "js/cookie.js", "zolushka-chat/js.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://zolushka.net/myhome/*", "*://*.zolushka.net/myhome/*"],
+		"js": ["js/jquery.js", "js/cookie.js", "zolushka-mail/js.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://*.j4l.com/chat_v3/*","*://*.jump4love.com/chat_v2/*","*://*.jump4love.com/chat_v3/*"],
+		"js": ["js/jquery.js", "js/cookie.js", "jump4love-chat/js.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://*.j4l.com/search.love?action=result&*","*://*.jump4love.com/search.love?action=result&*"],
+		"js": ["js/jquery.js", "js/cookie.js", "jump4love-mail/js.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://*.j4l.com/letters.love?get=recapcha*","*://*.jump4love.com/letters.love?get=recapcha*"],
+		"js": ["js/jquery.js", "jump4love-mail/recapcha.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://romancecompass.com/chat/*"],
+		"js": ["js/jquery.js", "js/cookie.js", "romancecompass-chat/js.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://romancecompass.com/search/results/*"],
+		"js": ["js/jquery.js", "js/cookie.js", "romancecompass-mail/js.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://hanuma-ru.com/cgi-bin/livechat/gchat.cgi?hrumenid=*", "*://*.hanuma-ru.com/cgi-bin/livechat/gchat.cgi?hrumenid=*"],
+		"js": ["js/jquery.js", "js/cookie.js", "hanuma-chat/js.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://hanuma-ru.com/*", "*://*.hanuma-ru.com/*"],
+		"js": ["js/jquery.js", "hanuma-chat/fixlinks.js"],
+		"run_at": "document_end"
+	}, {
+		"matches": ["*://top-dates.net/*", "*://*.top-dates.net/*"],
+		"js": ["js/jquery.js", "js/cookie.js", "top-dates/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+		"matches": ["*://charmdate.com/lady/online.php*", "*://*.charmdate.com/lady/online.php*"],
+		"js": ["js/jquery.js", "js/cookie.js", "charmdate-chat/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}, {
+   "matches": ["*://charmdate.com/clagt/admire/men_profiles_result.php*","*://*.charmdate.com/clagt/admire/men_profiles_result.php*"],
+   "js": ["js/jquery.js","js/cookie.js","charmdate-admirer/js.js"],
+   "run_at" : "document_end"
+  }, {
+		"matches": ["*://chnlove.com/lady/online.php*", "*://*.chnlove.com/lady/online.php*","*://asiame.com/lady/online.php*", "*://*.asiame.com/lady/online.php*"],
+		"js": ["js/jquery.js", "js/cookie.js", "chnlove-chat/js.js"],
+		"run_at": "document_end",
+		"all_frames": true
+	}],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://raw.github.com/ https://raw.githubusercontent.com/ https://render.github.com/; object-src 'self'",
+	"page_action": {
+		"default_icon": {
+			"19": "images/ic_wmid19.png",
+			"38": "images/ic_wmid38.png"
+		},
+		"default_title": "WMID BOT"
+	},
+	"requirements": {
+		"plugins": {
+			"npapi": false
+		}
+	},
+	"web_accessible_resources": [
+		"images/ic_wmid48.png"
+	]
+}

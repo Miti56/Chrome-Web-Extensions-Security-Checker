@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "urls": [
+      "http://web.stmath.com/"
+    ],
+    "launch": {
+      "web_url": "http://web.stmath.com/entrance/index.html"
+    }
+  },
+  "manifest_version": 2,
+  "name": "ST Math®",
+  "version": "11.2.0",
+
+  "description": "Visual instructional software for mathematics K-8. **Activation code required**",
+  "icons": {"128": "icon_128.png"},
+
+  "author": "MIND research institute",
+  
+  "kiosk_enabled": true
+}

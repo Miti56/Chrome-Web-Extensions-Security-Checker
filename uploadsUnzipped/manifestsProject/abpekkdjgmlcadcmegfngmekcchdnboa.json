@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version":2,
+    "name":"Arrow shoot",
+    "version":"1.0",
+    "description":"Arrow shoot",
+    "icons":{
+        "128":"images/icon.png"
+    },
+    "browser_action":{
+        "default_icon":{
+            "128":"images/icon.png"
+        },
+        "defalut_title":"Arrow shoot",
+        "default_popup":"index.html"
+    }
+}

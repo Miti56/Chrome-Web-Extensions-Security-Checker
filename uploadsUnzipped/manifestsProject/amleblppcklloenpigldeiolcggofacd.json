@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ClipPod",
+  "version": "0.0.0.1",
+  "description": "ClipPod adds realtime collaboration to your Google Calendar events",
+  "icons": {
+    "128": "icons/logo_128.png",
+    "16": "icons/logo_16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "81290010526"
+}

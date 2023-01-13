@@ -1,0 +1,34 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/underscore.js", "js/dictionary.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon48.png",
+         "38": "images/icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/fullScreener.css" ],
+      "js": [ "js/fullScreener.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "options_page": "options.html",
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "KIOSK EXTENSION",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "KIOSK EXTENSION",
+   "permissions": [ "bookmarks", "tabs", "contextMenus", "idle", "browsingData", "storage"],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "MiniInTheBox.com",
+  "description": "Click and welcome to MiniInTheBox.com!",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },  "icons": {        "128": "miniintheboxicon.png"    },  "background": {    "scripts": ["popup.js"], "persistent": false },  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/* "
+  ]
+}

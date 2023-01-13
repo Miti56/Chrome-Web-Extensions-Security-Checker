@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Chess",
+  "description": "Play the classic chess game",
+  "version": "0.2",
+  "sandbox": {
+  "pages": ["chess.html"]
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "img-16.png", "128": "img-128.png" }
+}

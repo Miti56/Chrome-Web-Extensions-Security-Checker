@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Make New Twitter Less Awful",
+  "description": "Make new Twitter less awful.",
+  "icons": {
+    "16": "fail.png"
+  },
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://twitter.com/*"]
+  }],
+  "version": "1.0.0",
+  "minimum_chrome_version": "9",
+  "manifest_version": 2
+}

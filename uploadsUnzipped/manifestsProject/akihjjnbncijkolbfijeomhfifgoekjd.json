@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "LSCC Web Tools",
+  "description": "This Chrome Extension is a collection of handy web tools for use by members of Living Stones Christian Church.",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "images/lscc48.png",
+    "default_popup": "popup.html"
+  },
+	"content_scripts": [
+		{
+			"matches": ["*://*.biblegateway.com/*"],
+			"js": ["cleanbiblegateway.js"]
+		}
+	],
+  "icons": {
+    "128": "images/lscc128.png"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

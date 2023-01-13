@@ -1,0 +1,151 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"__MSG_extensionName__",
+	"version":"3.7.6",
+	"description":"__MSG_extensionDescription__",
+	"default_locale": "en",
+	"homepage_url":"https://www.irctctatkal.net",
+	"icons":{
+		"48":"icons/ico-48.png",
+		"96":"icons/ico-96.png"
+	},
+
+	"browser_action":{
+		"default_icon":"icons/ico-32.png",
+		"default_title":"Tatkal Plus",
+		"default_popup":"menu.html"
+	},
+	"content_scripts": [
+	    {
+	      "matches": ["*://*.irctctatkal.net/webext/*"],
+	      "js": ["js/jquery-3.1.1.min.js","js/irctctatkal.js"]
+	    },
+	    {
+	      "matches": ["*://*.irctctatkal.net/webext/options"],
+	      "js": ["js/jquery-3.1.1.min.js","js/options.js"]
+	    },
+	    {
+	      "matches": ["*://*.irctctatkal.net/webext/seat_availability"],
+	      "js": ["js/jquery-3.1.1.min.js","js/seat_availability.js"]
+	    },
+	    {
+	      "matches": ["https://www.irctc.co.in/eticketing/*"],
+	      "js": ["js/jquery-3.1.1.min.js","js/irctc.js"],
+				"css": ["css/irctc.css"]
+		},
+		{
+			"matches": ["https://www.irctc.co.in/nget/*"],
+			"js": ["js/jquery-3.1.1.min.js","js/nget.js"]
+		  },
+	    {
+	    	"matches":["*://*.fssnet.co.in/*",
+								"https://irctc.unitedbankofindia.com/IRCTC_WebApp/Payment.aspx",
+				        "https://pgi.billdesk.com/merchant/request/IRCTCCRISPNBPaymentoption.jsp",
+				        "https://pgi.billdesk.com/pgidsk/pgmerc/IRCTCCRISPDCRedirect.jsp",
+				        "https://cardsecurity.enstage.com/ACSWeb/EnrollWeb/BOB/server/AccessControlServer",
+				        "https://pgi.billdesk.com/merchant/request/IRCTCCRISBOIPaymentoption.jsp",
+				        "https://pgi.billdesk.com/merchant/request/IRCTCCRISBOBPaymentoption.jsp",
+				        "https://www.billdesk.com/pgidsk/ProcessPayment*",
+				        "https://migs.mastercard.com.au/vpcpay*",
+				        "https://migs.mastercard.com.au/ssl*",
+				        "https://www.citibank.co.in/servlets/TransReq",
+				        "https://ipay.icicibank.com/mpi/Payment.jsp*",
+				        "https://payseal.icicibank.com/mpi/Ssl.jsp*",
+				        "https://pgi.billdesk.com/merchant/request/IRCTCCRISAMEXPaymentoption.jsp",
+				        "https://genius-epay.in/RupayEMA/KotakRupay/request.action",
+				        "https://merchant.onlinesbi.com/merchant/merchantprelogin.htm",
+				        "https://merchant.sbbjonline.com/merchant/merchantprelogin.htm",
+				        "https://merchant.onlinesbp.com/merchant/merchantprelogin.htm",
+				        "https://merchant.onlinesbh.com/merchant/merchantprelogin.htm",
+				        "https://merchant.sbtonline.in/merchant/merchantprelogin.htm",
+				        "https://merchant.onlinesbm.com/merchant/merchantprelogin.htm",
+				        "https://merchant.onlinesbi.com/merchant/sbigroup.htm",
+				        "https://merchant.onlinesbi.com/merchant/merchantdisplay.htm",
+				        "https://merchant.onlinesbi.com/merchant/loginsubmit.htm",
+				        "https://merchant.onlinesbi.com/merchant/merchantinter.htm",
+				        "https://merchant.onlinesbi.com/merchant/smsenablehighsecurity.htm",
+				        "https://shopping.icicibank.com/corp/BANKAWAY*",
+				        "https://www.fednetbank.com/corp/AuthenticationController*",
+				        "https://www.indianbank.net.in/servlet/ibs.servlets.IBSLoginServlet",
+				        "https://www.unionbankonline.co.in/corp/BANKAWAY*",
+				        "https://www.onlineandhrabank.net.in/BankAwayRetail*",
+				        "https://netbanking.netpnb.com/corp/ShoppingMallPaymentController",
+				        "https://netbanking.netpnb.com/corp/AuthenticationController*",
+				        "https://internetbanking.netpnb.com/corp/AuthenticationController*",
+				        "https://www.allbankonline.in/servlet/ibs.servlets.IBSLoginServlet",
+				        "https://www.vijayabankonline.in/NASApp/AuthenticationController*",
+				        "https://www.axisbiconnect.co.in/BankAway/*",
+				        "https://www.bobibanking.com/BankAwayRetail/*",
+				        "https://www.bobibanking.com/BankAwayCorporate/*",
+				        "https://moneyclick.karnatakabank.co.in/BankAwayRetail/*",
+				        "https://www.obconline.co.in/corp/AuthenticationController*",
+				        "https://www.obconline.co.in/corporate/AuthenticationController*",
+				        "https://www.kvbin.com/B001/merchant",
+				        "https://indusnet.indusind.com/corp/BANKAWAY",
+				        "https://www.centralbank.net.in/irctcnew",
+				        "https://starconnectcbs.bankofindia.com/BankAwayRetail/*",
+				        "https://starconnectcbs.bankofindia.com/BankAwayCorporate/*",
+				        "https://www.syndonline.in/B001/PGTxn",
+				        "https://www.mahaconnect.in/servlet/ibs.servlets*",
+				        "https://inet.idbibank.co.in/corp/BANKAWAY",
+				        "https://www.corpretail.com/RetailBank/IRCTCPG",
+				        "https://netbanking.yesbank.co.in/netbanking/IRCTC",
+				        "https://www.onlinesbiglobal.com/64NP/BANKAWAY",
+				        "https://sibernet.southindianbank.com/corp/AuthenticationController*",
+				        "https://secure.paytm.in/oltp-web/processTransaction*",
+				        "https://walletapi.mobikwik.com/securewallet",
+				        "https://login.freecharge.in/login*",
+				        "https://www.itzcash.com/payment/servlet/ITZPaymentServlet",
+								"https://payment.epaylater.in/irctc/prelogin*",
+								"https://ecom.airtelmoney.in/irctc/*",
+								"https://om.olacabs.com/olamoney/webview/index.html*",
+								"https://erupee.sbi.co.in/*",
+								"https://pg.oxicash.in/OWallet.aspx",
+								"https://www.mrupee.in/Mwallet/startpaymentgateway.do",
+								"https://pingupi.axisbank.co.in/WebCollectRequestIRCTC/MerchantVerification",
+								"https://www.icashcard.in/pgGateway/ICCPaymentGateway.aspx"
+			],
+			"js":["js/jquery-3.1.1.min.js","js/payment.js"]
+	    },
+	    {
+	    	"matches":[
+				        "https://accounts.paytm.com/oauth2/authorize*",
+				        "https://netbanking.hdfcbank.com/netbanking/RSLogin.html*",
+				        "https://netbanking.hdfcbank.com/netbanking/entry"
+				    ],
+	    	"js":["js/jquery-3.1.1.min.js","js/payment.js"],
+	    	"all_frames":true
+	    },
+	    {
+	    	"matches":[
+				        "http://www.indianrail.gov.in/seat_Avail.html",
+				        "http://www.indianrail.gov.in/cgi_bin/inet_accavl_cgi_10251.cgi"
+				    ],
+	    	"js":["js/jquery-3.1.1.min.js","js/availability.js"],
+	    	"all_frames":true
+	    }
+  	],
+	"permissions":[
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"notifications",
+		"cookies",
+		"tabs",
+		"*://*.irctctatkal.net/*",
+		"*://*.irctc.co.in/*",
+		"*://*.erail.in/*",
+		"*://*.googlesyndication.com/*",
+		"*://*.doubleclick.net/*",
+		"*://www.irctctourism.com/*",
+		"*://www.indianrail.gov.in/*"
+	],
+	"background":{
+		"page":"background.html"
+	},
+	"web_accessible_resources":[
+		"seat_availability.html"
+	]
+}

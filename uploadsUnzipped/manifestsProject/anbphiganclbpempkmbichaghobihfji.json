@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Amazon RealViews",
+  "version": "1.13",
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "description": "Adjusting Amazon Reviews for the number of reviewers",
+
+  "permissions": [
+    "activeTab",
+    "http://www.amazon.com/"
+  ],
+
+  "options_page": "options.html",
+
+  "background": {
+    "scripts": ["js/eventPage.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.amazon.com/s/*"],
+      "css": ["css/main.css"],
+      "js": ["js/jquery-2.1.3.min.js", "js/searchPage.js"]
+    },
+    {
+      "matches": ["http://www.amazon.com/*"],
+      "exclude_matches": ["http://www.amazon.com/s/*"],
+      "css": ["css/main.css"],
+      "js": ["js/jquery-2.1.3.min.js", "js/productPage.js"]
+    }
+  ]
+
+}

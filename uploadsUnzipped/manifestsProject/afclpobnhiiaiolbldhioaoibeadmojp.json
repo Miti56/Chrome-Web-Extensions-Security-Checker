@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+    
+  },
+   "description": "Use music in your video using Youtube Music embed.",
+   "manifest_version": 2,
+   "name": "Music Embed for YouTube™",
+   "permissions": ["*://www.youtube.com/watch?v=*"],
+    "version": "1.0.0",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}

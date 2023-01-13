@@ -1,0 +1,26 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jquery/jquery.min.js" ]
+   },
+   "content_scripts": [ {
+      "css": [ "src/inject/inject.css" ],
+      "js": [ "js/inboxsdk.js", "js/jquery/jquery.min.js", "src/inject/inject.js" ],
+      "matches": [ "https://mail.google.com/*", "https://inbox.google.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.google-analytics.com; object-src 'self'",
+   "description": "Inject HTML into Gmail™. Great for HTML Signatures Gmail template injection!",
+   "homepage_url": "http://trever.com/htmlgmail",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "HTML Injector for Gmail™",
+   "permissions": [ "storage", "tabs", "cookies", "https://mail.google.com/", "https://inbox.google.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ "src/bg/background.html", "src/bg/background.js", "src/bg/style.css", "js/*/*.js", "js/*.js", "icons/icon.png", "css/*.css" ]
+}

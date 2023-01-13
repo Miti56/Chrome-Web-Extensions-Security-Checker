@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Dropbox image opener",
+    "description": "Adds button to dropbox share page to quickly open an image",
+    "version": "0.2",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": [
+                "https://www.dropbox.com/*",
+                "http://www.dropbox.com/*"
+            ],
+            "js": [
+                "js/open_image_button.js"
+            ]
+        }
+    ],
+  "permissions": [
+    "https://www.dropbox.com/*",
+    "http://www.dropbox.com/*"
+  ]
+}

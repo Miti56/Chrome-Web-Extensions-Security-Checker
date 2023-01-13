@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Empire Legends Chrome app",
+    "description": "Empire Legends for Chrome lets you manage all your characters for the game Edge of the Empire. ",
+    "version": "1.5.0.6",
+    "manifest_version": 2,
+    "offline_enabled": true,
+    "permissions":[
+        "storage",
+        "webview",
+        "contextMenus"
+    ],
+    "icons": {
+        "16": "icon_16.png",
+        "128": "icon_128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": ["background.js", "window.js"]
+        }
+    }
+}

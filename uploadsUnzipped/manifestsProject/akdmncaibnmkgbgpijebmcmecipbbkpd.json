@@ -1,0 +1,32 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "name": "Facebook Timer",
+    "description": "Y U No work?",
+    "version": "0.2.5",
+    "author": "Tomer",
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "run.js"
+        ]
+    },
+    "icons": {
+        "32": "16.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "32": "16.png"
+        },
+        "default_title": "Facebook Timer"
+    },
+    "manifest_version": 2,
+     "content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*"],
+      "js": ["jquery-3.1.1.js"]
+    }
+  ]
+}

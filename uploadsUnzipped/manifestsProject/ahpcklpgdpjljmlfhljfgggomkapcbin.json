@@ -1,0 +1,95 @@
+{
+  "manifest_version": 2,
+
+  "version": "0.2.6",
+  "name": "Consensus for Gmail",
+  "short_name": "Consensus for Gmail",
+  "description": "Send and track an interactive, custom product demo right from Gmail",
+  "homepage_url": "https://www.goconsensus.com",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "default_locale": "en",
+
+  "offline_enabled" : false,
+
+  "permissions": [
+    "*://mail.google.com/*",
+    "storage"
+  ],
+
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  },
+
+  "icons": {
+     "16":  "images/c16.png",
+     "48":  "images/c48.png",
+     "128": "images/c128.png"
+  },
+
+  "content_security_policy": "script-src 'self' https://*.goconsensus.com; object-src 'self'; frame-src https://*.goconsensus.com",
+  "background": {
+    "scripts": [
+      "js/jquery.min.js",
+      "js/jquery.tooltipster.min.js",
+      "js/communicate.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js":[
+        "js/jquery.min.js",
+        "js/jquery.tooltipster.min.js",
+        "js/inboxsdk.js",
+        "js/formSupport.js"
+      ],
+      "matches" : [
+        "*://*.goconsensus.com/app/static/integrations/*"
+      ]
+    },
+    {
+      "all_frames": false,
+      "js":[
+        "js/jquery.min.js",
+        "js/jquery.tooltipster.min.js",
+        "js/inboxsdk.js",
+        "js/featherlight.min.js",
+        "js/loader.js",
+        "js/dc.js"
+
+      ],
+      "css": [
+        "css/button.css",
+        "css/tooltipster.css",
+        "css/dch-style.css",
+        "css/featherlight.min.css"
+      ],
+      "matches" : [
+        "*://mail.google.com/*",
+        "*://inbox.google.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources" : [
+    "css/buttons.css",
+    "css/tooltipster.css",
+    "css/dch-style.css",
+    "js/inboxsdk.js",
+    "js/jquery.min.js",
+    "js/jquery.tooltipster.min.js",
+    "container_iframe.html",
+    "images/consensus.png",
+    "images/c48.png",
+    "images/c16.png",
+    "images/c128.png",
+    "images/plus.png",
+    "container-iframe.html"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.goconsensus.com/*"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ortograpp",
+  "description": "Euskal ortografia landu",
+  "version": "1",
+  "app": {
+    
+    "launch": {
+      "web_url": "http://www.ortograpp.info/launch/"
+    }
+  },
+  "icons": {
+    "128": "ortograpp.png"
+  },
+"manifest_version": 2,
+
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

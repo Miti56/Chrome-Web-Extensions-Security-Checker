@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"name": "NeonHome",
+	"version": "1.3.3",
+	"manifest_version": 2,
+	"description": "The Handy Home Screen",
+	"browser_action": {
+		"default_icon":"icon16.png",
+		"default_popup": "index.html"
+	},
+	"icons": { 
+		"16": "icon16.png",
+        "48": "icon48.png",
+		"64": "icon64.png",
+        "128": "icon128.png"
+	},
+	"content_scripts": [
+    {
+      "matches": ["http://neonhome.tk/*"],
+      "js": ["app.js"]
+    }
+  ]
+}

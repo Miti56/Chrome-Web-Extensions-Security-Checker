@@ -1,0 +1,19 @@
+{
+	"content_scripts": [ {
+		"js": [ "common/content.js" ],
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_start"
+	} ],
+	"description": "If you want to find discounts you can do it with Live discount. It search for discount sites by your choosing.",
+	"icons": {
+		"128": "logo/ico128.png",
+		"16": "logo/ico16.png",
+		"19": "logo/ico19.png",
+		"48": "logo/ico48.png"
+	},
+	"manifest_version": 2,
+	"name": "Live discount",
+	"permissions": [ "http://*/*", "https://*/*", "cookies" ],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "4.0.0.4"
+}

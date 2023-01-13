@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "GO Search",
+    "description": "O GOSearch é um plugin que te auxilia a encontrar os melhores preços dos produtos enquanto estiver pesquisando em lojas virtuais.",
+    "version": "1.2",
+    "author": "CBits Group",
+    "homepage_url": "http://grupodeofertas.com/go-search.html",
+
+    "background": {
+        "scripts": ["main.js"],
+        "persistent": false
+    },
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["data/scripts/open-popup-offers.js"],
+        "run_at": "document_start"
+    }],
+    "chrome_settings_overrides": {
+        "homepage": "http://search.grupodeofertas.com",
+        "search_provider": {
+            "name": "GO Search",
+            "keyword": "viagens",
+            "search_url": "http://search.grupodeofertas.com/resultados.php?s={searchTerms}&sourceid=13",
+            "favicon_url": "http://grupodeofertas.com/themes/default/img/favicon.png",
+            "encoding": "UTF-8",
+            "is_default": true
+        },
+        "startup_pages": ["http://search.grupodeofertas.com"]
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "alarms",
+        "storage",
+        "debugger",
+        "management",
+        "<all_urls>"
+    ]
+}

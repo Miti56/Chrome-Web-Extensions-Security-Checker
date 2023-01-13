@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "__MSG_appName__",
+ "manifest_version": 2,
+ "description": "__MSG_appDescription__",
+ "icons": {
+  "32": "images/icon-32.png",
+  "114": "images/icon-114.png"
+ },
+ "default_locale": "en",
+ "background": {
+  "scripts": [
+   "lib/background/index.js"
+  ]
+ },
+ "content_scripts": [
+  {
+   "matches": [
+    "http://*/*",
+    "https://*/*"
+   ],
+   "css": [
+    "lib/content/content.css"
+   ],
+   "js": [
+    "lib/content/index.js"
+   ],
+   "run_at": "document_end",
+   "all_frames": false
+  }
+ ],
+ "browser_action": {
+  "default_icon": {
+   "32": "images/icon-32.png",
+   "48": "images/icon-48.png"
+  },
+  "default_title": "kard"
+ },
+ "web_accessible_resources": [
+  "images/*"
+ ],
+ "permissions": [
+  "tabs",
+  "webNavigation",
+  "cookies",
+  "management",
+  "http://*/*",
+  "https://*/*",
+  "storage"
+ ],
+ "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+ "version": "0.1.722"
+}

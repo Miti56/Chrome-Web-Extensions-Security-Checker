@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+	  "js": [ "js/min.js","js/insertJs.js" ],
+      "matches": ["*://item.taobao.com/item.htm*"],
+	  "run_at":"document_start"
+   } ],
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/bg.js" ]
+   },
+   "browser_action": {
+      "default_title": "打开（wxwz.taobao.com）",
+      "default_icon": "images/16.png"
+  },
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   }, 
+   "manifest_version": 2,   
+   "name": "编号查询",
+   "permissions": [ "tabs","background","management","storage", "https://*/*","http://*/*"],
+   "version": "1.0",
+    "web_accessible_resources": ["images/alert.png","js/insert1.js"],
+   "description":"编号查询，获取并查询查询我的宝贝编号"
+   
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Timetable Exporter",
+	"short_name": "TTexp",
+	"version": "1.0",
+	"version_name": "1.0 beta",
+	"author": "KH Digital - khdigital.com.au",
+	"description": "Export a timetable to iCalendar (.ics) format.",
+	"icons": {
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"content_scripts": [{
+		"matches": [ "*://timetable.jcu.edu.au/*"],
+		"js": [ "jquery-3.1.1.min.js", "background.js" ]
+	}]
+}

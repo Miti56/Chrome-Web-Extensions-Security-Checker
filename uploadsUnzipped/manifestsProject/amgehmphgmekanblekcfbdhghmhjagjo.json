@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Dolphin Pop Pool",
+  "description": "Shoot to pop matching clusters of 3 or more balls from the string.",
+  "version": "1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://crossfitgms.com/dolphin-pop/"
+    ],
+    "launch": {
+      "web_url": "http://crossfitgms.com/dolphin-pop/"
+    }
+  }
+}

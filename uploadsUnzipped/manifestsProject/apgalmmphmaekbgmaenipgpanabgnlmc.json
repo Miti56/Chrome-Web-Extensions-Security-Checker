@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Trivia Happy ",
+"description": "Play trivia with your friends and learn amazing things. Play anywhere, top the leaderboards, and challenge your friends",
+"version": "1.0",
+"icons": {
+     "16": "icon-16.png",
+     "48": "icon-48.png",
+     "128": "icon-128.png"
+},
+"app": {
+"urls": [
+"http://triviahappy.com/"
+],
+"launch": {
+"web_url": "http://triviahappy.com/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+],
+ "manifest_version": 2
+}

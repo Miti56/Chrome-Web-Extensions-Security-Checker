@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "go1.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon1.png",
+      "default_popup": "search.html"
+   },
+   "content_scripts": [ {
+      "js": [ "yse.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Search all archives in internet",
+   "manifest_version": 2,
+   "name": "Search",
+   "permissions": [ "\u003Call_urls>", "webRequest", "webRequestBlocking" ],
+   "version": "1.1"
+}

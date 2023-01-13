@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "c'est la vie",
+	"description": "Coccinelle",
+	"version": "1.0.0.0",
+	"manifest_version": 2,
+	"homepage_url": "http://www.studiorafanelli.it/giochi",
+	"app": {
+		"launch": {
+			"local_path": "index.html",
+			"container": "panel",
+			"width": 800,
+			"height": 506
+		}
+	},
+	"icons": {
+		"16": "icon_16.png",
+		"128": "icon_128.png"
+	},
+	"permissions": [
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

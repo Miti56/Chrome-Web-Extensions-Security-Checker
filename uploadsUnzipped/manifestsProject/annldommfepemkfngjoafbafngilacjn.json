@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name" : "Highlight that Abuse",
+	"description" : "Highlights all abuse words listed on the page",
+	"author" : "sudshekhar",
+	"version": "1.0",
+
+	"content_scripts":[
+			{
+				"matches": ["*://*/*"],
+				"js":["keys.js","content_script.js"],
+				"run_at":"document_end"
+			}
+	],
+	"background" :{
+		"scripts": ["background.js", "jquery-1.11.3.min.js"],
+		"persistent" : false
+	},
+	"permissions" :[
+		"tabs",
+		"storage",
+		"*://*/*"
+	],
+	"icons": {"16" :"icon16.png"},
+	"browser_action":{
+		"default_title" : "Highlight abuses",
+		"default_popup" : "popup.html",
+		"default_icon": "icon16.png"
+	}
+}

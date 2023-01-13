@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "ScanCapture Tool",
+    "version": "2.01",
+    "description": "Scan Web Extension!",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },    
+    "permissions": [
+        "usb",
+        "hid",
+        "unlimitedStorage",
+        "notifications",
+        "declarativeContent",
+        "storage",
+        "tabs",
+        "activeTab",
+        "<all_urls>"
+    ],
+    "browser_action": {
+      "default_icon": "scanner.png",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+  }
+  

@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AliSave",
+  "short_name": "AliSave",
+  "description": "Download currently selected product preview image from Aliexpress.com",
+  "version": "0.3",
+  "author": "Roman Gritsay. Email: w2@live.ru",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "downloads"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.aliexpress.com/*", "*://aliexpress.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "page_action": {
+      "name": "Save current product preview image",
+      "default_title": "Save current product preview image",
+      "default_icon": "icon16.png"
+
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 2
+}

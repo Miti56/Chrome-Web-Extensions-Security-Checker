@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+	"name": "__MSG_extName__",
+  "version": "1.0.0",
+  "default_locale": "en",
+	"browser_action": {
+		"default_icon": "assets/img/icon.png",
+		"default_popup": "popup.html"
+	},
+	"description": "__MSG_extDesc__",
+	"icons": {
+		"128": "assets/img/icon128.png",
+		"16": "assets/img/icon16.png",
+		"48": "assets/img/icon48.png"
+	},
+	"permissions": [
+    "tabs",
+		"activeTab",
+		"notifications",
+    "contextMenus",
+    "storage",
+		"https://cbtools.herokuapp.com/",
+    "https://chaturbate.com/*",
+    "http://chaturbate.com/*"
+	],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "omnibox": {
+    "keyword": "cb"
+  },
+  "version_name": "1.0.0 BETA",
+	"incognito": "split"
+}

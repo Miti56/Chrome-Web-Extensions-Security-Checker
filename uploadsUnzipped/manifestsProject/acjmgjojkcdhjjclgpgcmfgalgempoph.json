@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "長科雲端公文製作系統憑證簽章套件",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "利用自然人憑證對線上簽核公文進行電子簽章",
+  "icons": {
+    "128": "ODISFKI_logo.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+      "matches": [ "*://odis.fkinfo.com/*", "*://odiswebedit.fkinfo.com/*" ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+	  "all_frames": true
+  }],
+  "web_accessible_resources": [
+      "messagehandler.js"
+  ],
+  "permissions": [
+    "nativeMessaging",
+	"clipboardWrite",
+    "clipboardRead"
+  ]
+}

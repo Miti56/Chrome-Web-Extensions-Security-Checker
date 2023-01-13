@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Appirio CloudFactor: Salesforce in Gmail",
+  "version": "0.0.0.9",
+  "description": "Brings data and business processes from your other cloud systems, like Salesforce.com, right into Google Apps.",
+  "icons": {
+    "128": "icons/Appirio-Cloudfactor_128x128.png",
+    "16": "icons/Appirio-Cloudfactor_16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "79157059657",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://cloudfactor.appirio.net/"
+    }
+  }
+}

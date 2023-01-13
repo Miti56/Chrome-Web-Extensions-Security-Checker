@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Reddit Open X",
+  "version": "1.0.1",
+  "description": "Open many reddit links at the same time",
+  "icons": {},
+  "author": "Tyler G. Hicks-Wright <ty@tghw.com>",
+  "background": {
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["http://www.reddit.com/*"],
+    "js": ["openx.js"]
+  }],
+  "content_security_policy": "policyString",
+  "minimum_chrome_version": "30",
+  "offline_enabled": true,
+  "permissions": ["tabs", "http://www.reddit.com/*"]
+}

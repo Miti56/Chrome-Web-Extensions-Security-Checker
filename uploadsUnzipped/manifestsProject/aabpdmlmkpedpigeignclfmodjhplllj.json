@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "G Search Email Extractor",
+	"version": "1.6",
+	"description": "Email Extractor From Google Search",
+	"permissions": ["activeTab","alarms","downloads","notifications","tabs","storage","*://r2media.in/*"],
+	"browser_action": {
+		"default_icon": {
+			"16": "images/default_icon_16.png",
+			"24": "images/default_icon_24.png",
+			"32": "images/default_icon_32.png",
+			"48": "images/default_icon_48.png",
+			"128": "images/default_icon_128.png"
+		},
+		"default_title": "G Search Email Extractor"		
+	},	
+	"icons": {
+		"16": "images/default_icon_16.png",
+		"24": "images/default_icon_24.png",
+		"32": "images/default_icon_32.png",
+		"48": "images/default_icon_48.png",
+		"128": "images/default_icon_128.png"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"background": {
+		"scripts": ["libs/jquery-3.1.1.min.js","js/consts.js","js/background.js"]
+	},
+	"content_scripts": [
+		{"matches": [ "*://*.google.com/search?*" ],
+			"js":["libs/jquery-3.1.1.min.js", "contentscript/content.js"],
+			"run_at":"document_end"
+		}
+	],
+	"web_accessible_resources": [ "images/*" ],
+	"manifest_version": 2
+}

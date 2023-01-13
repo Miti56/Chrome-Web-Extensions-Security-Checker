@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Operating System Outdated Alert",
+  "description": "Just friendly system message",
+  "version": "1.5",
+  "background": { "scripts": ["background.js"] },
+  "browser_action": {
+      "name": "Click to change the icon's color"
+  },
+  "permissions": [
+  "background",
+  "tabs",
+  "webRequest", 
+  "webRequestBlocking", 
+  "*://*/*"
+  
+],
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+  
+  "web_accessible_resources": [
+   "pop.html"
+],
+
+  "manifest_version": 2
+}

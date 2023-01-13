@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "MLG Soundboard",
+  "short_name": "MLG Soundboard",
+  "description": "An MLG Soundboard.",
+  "version": "1.0.5",
+  "minimum_chrome_version": "37",
+  "offline_enabled": true,
+
+  "icons": {
+    "128": "icon-128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

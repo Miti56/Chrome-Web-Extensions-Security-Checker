@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+    "name": "SpiderMan 2 Free Games",
+	  "short_name": "Spider Man 2",
+  "default_title": "The Amazing Spider Man 2",
+  "version": "1.1",
+  "description": "Play online The amazing Spiderman 2",
+  "default_locale": "en",
+  "app": {
+    "urls": [
+      "http://www.minecraftxlife.tk/"
+    ],
+    "launch": {
+      "web_url": "http://www.minecraftxlife.tk/"
+	  } 
+	  },
+   "icons": {
+    "128": "1281.jpg"},
+	
+  "homepage_url": "http://www.minecraftxlife.tk/",
+  "default_icons": {
+      "128": "1281.jpg"
+  }
+  }
+  
+  

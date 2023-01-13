@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Brillion Elementary and Middle Lunch Menu",
+  "description": "View what's on the menu at a glance.",
+  "version": "1.0",
+
+  "browser_action": {
+      "default_title": "Lunch Menu",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

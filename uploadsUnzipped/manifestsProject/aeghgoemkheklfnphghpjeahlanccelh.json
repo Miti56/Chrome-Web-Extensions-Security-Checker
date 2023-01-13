@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Alpha Labs",
+  "version": "1.0.0.1",
+  "author": "Carlo Giliam",
+  "short_name": "Alpha Labs - ICT Diensten en Support",
+  "description": "Systeem- en netwerkbeheer op maat voor een eerlijke prijs. Wij bieden een oplossing die werkt en blijft werken!",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "homepage_url": "http://www.alphalabs.nl/",
+  "app": {
+    "urls": [
+      "http://www.alphalabs.nl/"
+    ],
+    "launch": {
+      "web_url": "http://www.alphalabs.nl/"
+    }
+  }
+}

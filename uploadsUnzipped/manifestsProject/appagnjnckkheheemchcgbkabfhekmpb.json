@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Trello Count",
+  "description": "Show no. of cards in Trello list",
+  "version": "0.0.3",
+  "background": {
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+      "default_title": "Trello Count",
+      "default_icon": "icon_96.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://trello.com/*"],
+      "js": ["jquery-3.1.1.min.js","Trello.js"]
+    }
+  ]
+}

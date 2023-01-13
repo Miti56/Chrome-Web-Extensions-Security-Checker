@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "gfyclean",
+    "version": "1.0",
+
+    "homepage_url": "https://github.com/Twinov/gfyclean",
+
+    "description": "Cleans up gfycat, removing everything but the gif itself when a gfycat page is viewed.",
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "gfyclean@cock.email"
+        }
+    },
+
+    "icons": {
+        "16": "icons/gfyclean16.png",
+        "32": "icons/gfyclean32.png",
+        "48": "icons/gfyclean48.png",
+        "96": "icons/gfyclean96.png",
+        "128": "icons/gfyclean128.png"
+    },
+
+    "permissions": ["*://*.gfycat.com/*"],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.gfycat.com/*"],
+            "css": ["hideAll.css"],
+            "run_at": "document_start"
+        },
+		{
+			"matches": ["*://*.gfycat.com/*"],
+            "js": ["removeGfy.js"],
+            "css": ["centerVid.css"],
+            "run_at": "document_end"
+		}
+    ]
+}
+

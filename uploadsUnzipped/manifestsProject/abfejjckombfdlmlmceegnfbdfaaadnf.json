@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "BIG Chrome Tools",
+	"version": "1.1",
+	"description": "Chrome Extension for Bitcoin Investment Group members.",
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://btcjam.com/listings","https://www.btcjam.com/listings"],
+			"js": ["resources/jquery-1.11.1.min.js","tools/btcjamfix/main.js"],
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["https://bitlendingclub.com/loan/browse/lid/*"],
+			"js": ["resources/jquery-1.11.1.min.js","tools/blc/main.js"],
+			"run_at": "document_end"
+		}
+	],
+	"web_accessible_resources": [
+        "resources/bigstyle.css",
+		"tools/btcjamfix/inject.js"
+	]
+}

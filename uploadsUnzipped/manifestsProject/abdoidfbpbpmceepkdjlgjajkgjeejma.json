@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "OpnUC Click2Call Chrome 機能拡張",
+  "description": "Webページ上の電話番号と思われる文字列を、 tel:// 形式のリンクに変換する機能拡張です。",
+  "version": "0.3",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": ["jquery-2.2.0.min.js", "option-default.js", "content_script.js"]
+  }],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icon32.png"
+    },
+    "default_title": "OpnUC Click2Call"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
+  "homepage_url": "http://github.com/OpnUC/OpnUC-Click2Call-ChromeExtension/"
+}

@@ -1,0 +1,11 @@
+{"chrome_url_overrides": {"newtab": "home_new.html"}, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"browser_action": {"default_icon": "128-icons.png", 
+"default_title": "Aston Martin Themes & New Tab"}, 
+"icons": {"128": "128-icons.png"}, 
+"version": "3.2.0", 
+"description": "__MSG_extdescription__", 
+"name": "Aston Martin Themes & New Tab", 
+"background": {"scripts": ["myscript1.js"]}, 
+"default_locale": "en"}

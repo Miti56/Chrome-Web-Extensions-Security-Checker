@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "台灣風景分頁(Taiwan New Tab)",
+    "version": "0.0.6",
+    "manifest_version": 2,
+    "description": "分享台灣的美好風景",
+    "short_name": "台灣風景分頁",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/chromereload.js",
+            "scripts/background.js"
+        ]
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}

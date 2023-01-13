@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Mass SoundCloud Downloader",
+  "description": "You can batch download SoundCloud music, soundtracks and playlists. It is fast and easiest music downloading solution",
+  "version": "1.2",
+
+  "browser_action": {
+   "default_icon": "notes-icon128.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}

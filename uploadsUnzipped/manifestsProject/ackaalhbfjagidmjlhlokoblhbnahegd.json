@@ -1,0 +1,74 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"version": "0.3.4",
+	"name": "__MSG_appName__",
+	"description": "__MSG_appDesc__",
+	"default_locale": "en",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"app": {
+		"background": {
+			"scripts": [
+				"src/libs/chrome-arduino.js",
+				"src/libs/ChromeExternalAPIServer.js",
+				"src/Utils.js",
+				"src/SerialApi.js",
+				"src/HexUploader.js",
+				"src/QuirkbotChromeExtension.js",
+				"src/main.js"
+			]
+		}
+	},
+	"externally_connectable": {
+		"matches": [
+			"*://strawbees.com/*",
+			"*://stage.strawbees.com/*",
+			"*://code.strawbees.com/*",
+			"*://code-dev.strawbees.com/*",
+			"*://code-stage.strawbees.com/*",
+			"*://learning.strawbees.com/*",
+			"*://learning-stage.strawbees.com/*",
+			"*://learning-dev.strawbees.com/*",
+			"*://quirkbot.com/*",
+			"*://ide.quirkbot.com/*",
+			"*://code.quirkbot.com/*",
+			"*://code-stage.quirkbot.com/*",
+			"*://code-local.quirkbot.com/*",
+			"*://ide-local.quirkbot.com/*"
+		]
+	},
+	"permissions": [
+		"alarms",
+		"serial",
+		"usb",
+		{
+			"usbDevices": [
+				{
+					"vendorId": 6991,
+					"productId": 37383
+				},
+				{
+					"vendorId": 10374,
+					"productId": 61444
+				},
+				{
+					"vendorId": 10374,
+					"productId": 61445
+				},
+				{
+					"vendorId": 10374,
+					"productId": 61446
+				},
+				{
+					"vendorId": 10374,
+					"productId": 61447
+				}
+			]
+		}
+	],
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2YbynWewBTXQ9nyx/W45pU5IlZMYdXPtF7kKPo5GWuF0F1tPdwLY5WApDMqjiALILzkCmz6tIWpyjiRwRBVIzsyuWd3UNHrDZxZT8asD537A8dVbs286Nq821xqFfOpAgevyFgZ9TfNEk0QlVrUiZ+Rf2LDAAusoom9hrQhlR+5g20q7s+d0Qw5eP2rsXIG7S9YX9+PYVB6qWqyVuFbVGD8LAmiXcHlZasgilRAwOQy7ATk/iCk23tyUA30nrPpsaOC0myGeWH0Lf8aN620wBk0v8TViRX4L/OXQewV7wb4Cmk9S31WejSoPCoDbHWen/3+YeX0VW+XGiH+Yyo+8BQIDAQAB"
+}

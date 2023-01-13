@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ELDR",
+  "version": "0.1",
+  "description": "Changes all image requests to only load the first 1400 bytes of an image.",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "ELDR",
+    "default_icon": "inactive.png"
+  },
+  "permissions": [
+    "browsingData",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": { 
+    "128": "icon-128.png", 
+    "48": "icon-48.png"
+  },
+  "manifest_version": 2
+}

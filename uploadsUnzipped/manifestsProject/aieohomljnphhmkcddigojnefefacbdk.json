@@ -1,0 +1,20 @@
+{
+   "content_scripts": [ {
+      "js": [ "src/inject/inject.js" ],
+      "matches": [ "*://*.ihg.com/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "This simple extension makes sure there are always 2 adults selected on the IHG site",
+   "homepage_url": "http://florholvoet.be",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+  
+   "manifest_version": 2,
+   "name": "IHG2adults",
+   "permissions": [ "contentSettings", "*://*.ihg.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1"
+}

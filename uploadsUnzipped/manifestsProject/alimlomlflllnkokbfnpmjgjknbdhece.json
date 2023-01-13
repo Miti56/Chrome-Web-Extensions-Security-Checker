@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version":2,
+    "name":"Elium",
+    "description":"Obtenez plusieurs cles ou d'autre chose en 1 clic.",
+    "version":"2.3",
+    "browser_action":{
+         "default_icon":"icon.png",
+         "default_popup":"popup.html"
+    }
+}

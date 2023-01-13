@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Coupons Code - Daily Deals",
+ "manifest_version": 2,
+ "short_name": "Best Online Shopping Daily Deals Site",
+ "description": "Quick search for latest coupons code, daily deals, sale, discounts, offers, voucher, promotions etc",
+ "version": "1",
+ "icons": {
+	"128": "screen-shot-2017-01-16-at-2-11.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://couponsdailydeals.weebly.com/"
+	}
+  }
+}

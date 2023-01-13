@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "FlosMinen ylläpitotyökalut",
+    "description": "Muokkaa FlosMinen käyttämiä hallintapaneeleja FlosMinen tyyliseksi.",
+    "version": "1",
+    "manifest_version": 2,
+	
+	"browser_action": {
+		"default_icon": "logo.png",
+		"default_popup": "main.html",
+		"default_title": "FlosMinen ylläpitotyökalut"
+	},
+	
+    "content_scripts": [ {
+       "css": [ "multicraft.css" ],
+       "matches": [ "http://mc.shockbyte.com/*" ]
+    } ],
+    "icons": { "16": "logo.png", "128": "logo.png" }
+}

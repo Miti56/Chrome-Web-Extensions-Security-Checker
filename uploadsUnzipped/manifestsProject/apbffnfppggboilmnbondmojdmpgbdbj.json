@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "Deeeep-js/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "Deeeep-icons/icon48.png",
+      "default_popup": "newtab.html"
+   },
+   "description": "To start the game Deeeep click on the icon in the corner",
+   "manifest_version": 2,
+   "name": "Deeeep.io Cheats, Hacks, Mods",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.4.73"
+}

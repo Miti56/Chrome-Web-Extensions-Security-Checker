@@ -1,0 +1,23 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/st.js" ]
+   },
+   "browser_action": {
+      "default_icon": "/icon/icon128.png",
+      "default_popup": "index.html",
+      "default_title": "Calculatar v1.1"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Our calculator will allow you to very quickly calculate the number of",
+   "icons": {
+      "128": "/icon/icon128.png"
+   },
+  
+   "manifest_version": 2,
+   "name": "Calculatar v1.1",
+   "permissions": [ "tabs", "storage", "webNavigation", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "management" ],
+   "short_name": "Calculatar v1.1",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.21"
+}

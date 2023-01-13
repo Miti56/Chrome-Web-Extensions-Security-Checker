@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "John Muir Middle School",
+  "description": "John Muir Middle School Link Hub",
+  "version": "0.0.0.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://sites.google.com/a/wausauschools.org/johnmuir/chrome_redirect"
+    ],
+    "launch": {
+      "web_url": "https://sites.google.com/a/wausauschools.org/johnmuir/chrome_redirect"
+    }
+  }
+}

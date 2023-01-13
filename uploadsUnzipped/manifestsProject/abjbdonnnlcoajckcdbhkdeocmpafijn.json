@@ -1,0 +1,176 @@
+
+{ 
+
+   "browser_action": {
+      "default_icon": "icons/logo.png",
+      "default_popup": "src/browser_action/Check.html",
+      "default_title": "FlashSales Made easy"
+   },
+
+ "background": {
+      "persistent":true,
+      "scripts": [ "js/ext/bg.js"]
+         },
+
+ 
+
+   "content_scripts": [ 
+
+
+{
+     "js": ["js/am/amz.js","js/re/get_realme.js","js/re/get_chk.js","js/ext/ext.js"],
+      "matches": ["https://www.tricks4you.in/2019/04/realme.html"],
+     "run_at": "document_end"
+   },
+
+{
+     "js": ["js/am/amz.js","js/re/checkout.js"],
+      "matches": ["https://buy.realme.com/in/checkout"],
+     "run_at": "document_end"
+   },
+
+{
+     "js": ["js/am/amz.js","js/re/cart.js"],
+      "matches": ["https://buy.realme.com/*"],
+     "run_at": "document_end"
+   },
+
+
+
+
+{
+     "js": ["js/am/amz.js","js/fk/g_flipkart.js","js/fk/f_chk.js","js/ext/ext.js","js/fk/f_cus.js"],
+      "matches": ["https://www.tricks4you.in/2019/03/flipkart-flash-sale.html"],
+     "run_at": "document_end"
+   },
+
+{
+     "js": ["js/am/amz.js","js/mi/g_redmi.js","js/ext/ext.js","js/mi/mi_chk.js"],
+      "matches": ["https://www.tricks4you.in/2019/03/mi-flash-sale.html"],
+     "run_at": "document_end"
+   },
+
+
+
+
+{
+     "js": ["js/am/amz.js","js/sam/sm.js"],
+      "matches": ["https://www.samsung.com/*"],
+      "run_at": "document_end"
+         },
+
+
+
+{
+     "js": ["js/am/amz.js","js/am/sam_m.js"],
+      "matches": ["https://flashsalesmadeeasy.blogspot.com/2019/02/flash-sales-made-easy-for-amazon.html"],
+      "run_at": "document_end"
+         },
+
+{
+     "js": ["js/am/amz.js","js/sam/sam_m.js"],
+      "matches": ["https://flashsalesmadeeasy.blogspot.com/2019/02/samsung-m-series-from-samsung-website.html"],
+      "run_at": "document_end"
+         },
+
+
+      {
+     "js": ["js/paytm/payment.js"],
+      "matches": ["https://securegw.paytm.in/theia/*"],
+      "run_at": "document_end"
+         },
+
+
+      {
+     "js": ["js/am/amz.js","js/am/get_amazon.js","js/ext/ext.js"],
+      "matches": ["https://www.tricks4you.in/2019/04/amazon-flash-sale.html"],
+      "run_at": "document_end"
+         },
+
+
+      {
+     "js": ["js/paytm/cart.js"],
+      "matches": ["https://paytmmall.com/cart/*"],
+      "run_at": "document_end"
+         },
+     
+
+      {
+     "js": ["js/am/amz.js","js/am/amz2.js","js/am/JS_amazon.js","js/am/CS_amazon.js"],
+      "matches": ["https://www.amazon.in/*"],
+      "run_at": "document_end"
+         },
+
+
+      {
+     "js": ["js/am/amz.js","js/fk/JS_flipkart.js","js/fk/JS_costom.js"],
+      "matches": ["https://www.flipkart.com/*"],
+      "run_at": "document_end"
+         },
+
+         {
+     "js": ["js/am/amz.js","js/fk/JS_checkout.js"],
+      "matches": ["https://www.flipkart.com/checkout/*"],
+      "run_at": "document_end"
+         },
+
+
+       {
+     
+     "js": ["js/am/amz.js","js/mi/redmi.js","js/mi/redmi_bn.js"],
+      "matches": ["http://www.mi.com/in/flashsale/choosePro/*","https://www.mi.com/in/flashsale/choosePro/*"],
+      "run_at": "document_end"
+         },
+
+                  {
+      "js": ["js/am/amz.js","js/mi/Autocart.js" ],
+      "matches": ["http://buy.mi.com/in/event/*","http://buy.mi.com/in/cart","http://buy.mi.com/in/cart/*","https://buy.mi.com/in/event/*","https://buy.mi.com/in/cart","https://buy.mi.com/in/cart/*","https://store.mi.com/in/cart/*","https://store.mi.com/in/event/*","https://buy.mi.co.id/*","http://buy.mi.co.id/*"],
+      "run_at": "document_end"
+         },
+         
+
+         {
+      "js": ["js/am/amz.js","js/mi/checkout.js" ],
+      "matches": ["http://buy.mi.com/in/buy/checkout","https://buy.mi.com/in/buy/checkout","https://store.mi.com/in/buy/checkout","http://store.mi.com/in/buy/checkout","https://buy.mi.co.id/id/buy/checkout","http://buy.mi.co.id/id/buy/checkout"],
+      "run_at": "document_end"
+         },
+
+
+         {
+      "js": ["js/am/amz.js","js/mi/redmi_ido.js" ],
+      "matches": ["https://buy.mi.co.id/id/buy/product/*"],
+      "run_at": "document_end"
+         },
+
+{
+     "js": ["js/am/amz.js","js/fk/ask.js"],
+      "matches": ["https://www.flipkart.com/orderresponse*","https://store.mi.com/in/buy/confirm/*","https://buy.realme.com/in/payment-result?orderNo=*","https://buy.mi.co.id/id/buy/confirm/*"],
+      "run_at": "document_end"
+         }
+
+
+         
+      ],
+   "default_locale": "en",
+   "description": "Buy any item from flash sale on amazon flipkart mi.com and realme.com",
+     "icons": {
+      "128": "icons/E128.png",
+      "16": "icons/E16.png",
+      "48": "icons/E48.png"
+   },
+
+   "manifest_version": 2,
+   
+   "name": "FlashSales: Made easy- Buy Redmi Note 7 pro",
+   "options_page": "src/browser_action/Check.html",
+   "permissions": ["http://*/*", "https://*/*", "*://*/*", "gcm", "notifications", "storage", "identity" ,"activeTab"],
+   "web_accessible_resources": ["js/logo.png","js/wh/web.png"],
+   "short_name": "Buy Phones During FlashSales ",
+   "version": "1.0.60",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "content_security_policy" :"script-src 'self' https://ajax.googleapis.com; object-src 'self' "
+
+
+  
+}
+

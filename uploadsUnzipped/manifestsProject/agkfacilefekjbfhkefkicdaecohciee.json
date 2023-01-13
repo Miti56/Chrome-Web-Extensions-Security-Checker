@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "bmp.io",
+    "description": "url shortner",
+    "version": "1.0",
+
+    "permissions": [
+        "http://*/",
+        "tabs",
+        "clipboardWrite",
+        "clipboardRead"
+    ],
+    "browser_action": {
+        "default_icon": "icon_blue_19.png",
+        "default_popup": "index.html",
+        "default_title": "bmp.io - url shortner"
+    },
+    "icons": {
+      "48": "icon_blue_48.png"
+   }
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Free strategy SuRFers and Subway Games",
+"version": "1.1",
+"description": "Subway surfers free play",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_1281.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "Subway surfers",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

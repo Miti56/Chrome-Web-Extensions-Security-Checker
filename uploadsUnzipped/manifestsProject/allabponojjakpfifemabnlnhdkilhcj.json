@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "pressPlusRemover",
+  "description": "This extension removes overlays by pressPlus which block site access using z-indexes.",
+  "version": "1.1",
+
+  "content_scripts": [ {
+    "css": ["style.css"],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "New Tab Always Open",
+	"description": "Have one instance of \"New Tab\" always opened in your browser.",
+	"version": "0.0.3",
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+	"permissions": [
+        "tabs"
+	],
+	"background": {
+        "page": "background.html",
+		"persistent": true
+	},
+    "icons": {
+      "16": "img/icon_128.png",
+      "48": "img/icon_128.png",
+      "128": "img/icon_128.png"
+    },
+	"offline_enabled": true,
+	"manifest_version": 2
+}

@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Wolfnet Modifier",
+  "options_page": "options.html",
+  "version": "2.0.1.4",
+  "content_scripts": [
+	  {
+	    "matches": [
+	      "https://wpga.myschoolapp.com/app/student"
+	    ],
+	    "css": ["style.css"],
+	    "js": ["jquery-3.4.1.min.js", "content.js"],
+	    "run_at": "document_end"
+	  }  
+  ],
+  "icons": { "16": "16.png",
+             "32": "32.png",
+             "64": "64.png",
+             "128": "128.png"
+            },
+  "background": {
+  		"scripts": ["background.js"],
+  		"persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "web_accessible_resources": [
+        "themes/*"
+  ]
+}

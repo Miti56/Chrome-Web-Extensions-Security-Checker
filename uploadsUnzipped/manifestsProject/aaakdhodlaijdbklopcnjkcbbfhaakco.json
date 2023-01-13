@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "SA360",
+	"description": "SA360 provides student athletes with digital tools and informational resources that address the unique challenges you face.",
+	"version": "1.0.0.0",
+	"manifest_version": 2,
+	"icons": {
+		"128": "icon_128.png"
+	},
+	"app": {
+		"urls": [
+			"https://evpcoapps.com/app/?theme=sa360"
+		],
+		"launch": {
+			"web_url": "https://evpcoapps.com/app/?theme=sa360"
+		}
+	}
+}

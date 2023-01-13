@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Shell Shock Live",
+  "description": "Shell Shock Live - Jeu multijoueurs de combats de chars en tour par tour avec de nombreuses munitions différentes à exploiter.",
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://harry-games.fr/play-1293-shell-shock-live.html"
+    ],
+    "launch": {
+      "web_url": "http://harry-games.fr/play-1293-shell-shock-live.html"
+    }
+  },
+  "icons": {
+    "128": "1293.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

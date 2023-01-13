@@ -1,0 +1,24 @@
+{
+	"icons": {
+		"48": "wind-rider-icons/icon-48.png",
+		"128": "wind-rider-icons/wind-rider-128.png"
+	},
+	"background": {
+		"scripts": [
+			"assets/background.js"
+		]
+	},
+	"name": "__MSG_name__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"browser_action": {
+		"default_icon": "wind-rider-icons/icon-48.png",
+		"default_popup": "output.html"
+	},
+	"default_locale": "en",
+	"description": "__MSG_description__",
+	"manifest_version": 2,
+	"version": "0.0.1",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

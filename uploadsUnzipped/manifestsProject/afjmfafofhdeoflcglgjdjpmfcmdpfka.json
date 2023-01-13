@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon-64.png"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "A Simple and Easy Newtab",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "32": "icons/icon-32.png",
+      "64": "icons/icon-64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs2HGWpsXAnCv+XIbe+cWA8US7hXlrI73LPXBZTFqEWamQn5X6wcDYJDD8bSf1yqdj5ulfkrMrKv/BVS7pbcxH/ig45PlPSOiUst5AJdtngWypKRGgr6n/epfAovl6lFn1ogk9nc5Jb4j0HI+EQ4TSJYsAxvAsKdzgYJ8yOiCrA4yoFDpYTO9+gL2IJpjEjudfdtR+8dgDuhbFd7EIGtSA8HQZ7us7WZmdyyczKKukX+hmNRpnyjq63F5TSyqU2vHVE/0w3CYDiMm4hwI9Bmgw+vwNPZySvAstWMm5My5gv9tZTFyO6irjzpGz266ZaYsZqh9ikP2FUkrvhA3iGsZ1QIDAQAB",
+   "manifest_version": 2,
+   "name": "uCraft newtab",
+   "permissions": [ "\u003Call_urls>", "tabs", "storage", "unlimitedStorage", "history", "topSites", "webRequest", "webRequestBlocking", "contextMenus", "https://ucraft-1255793964.cos.ap-chengdu.myqcloud.com/*", "https://ucraft-1255793964.cos.ap-chengdu.myqcloud.com/*" ],
+   "version": "0.24"
+}

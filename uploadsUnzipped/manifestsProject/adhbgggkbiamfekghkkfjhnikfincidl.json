@@ -1,0 +1,23 @@
+{
+   "author": "Sparkosis",
+   "background": {
+      "scripts": [ "scripts/jquery-2.1.4.js", "scripts/parameters.js", "scripts/background.js", "chrome.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/off.png",
+      "default_title": "Pixelle - Offline",
+      "default_popup": "popup.html"
+   },
+   "description": "Impossible de louper un de mes lives avec ça !",
+   "icons": {
+      "128": "images/on.png",
+      "256": "images/on.png",
+      "32": "images/on.png",
+      "64": "images/on.png"
+   },
+   "manifest_version": 2,
+   "name": "Pixelle_ Twitch",
+   "permissions": [ "https://api.twitch.tv/", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.1"
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name"				: "AniJS Studio",
+	"version"			: "0.1.8",
+	"description"		: "Add animations and interactions to any Web easily.",
+	"manifest_version"	: 2,
+	"minimum_chrome_version": "18.0",
+	"icons"				: {"32": "assets/images/favicon.png"},
+	"background"		: {
+		"page"			: "background.html"
+	},
+	"browser_action": {
+		"default_icon":"assets/images/favicon.png",
+		"default_title":"Open AniJS Studio",
+		"default_popup": "popup.html"
+	},
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlYF9PdrK8sxw2ZP3njAYbKaTty/uV+WfRwcKZz8/Iv7CJN8hcuvyJ0vwHoRbatLlhGVrM4OV1F9C+RMJ/KitdABvWHXXj0IYkDxyvQ13elKA2S/CS/eVW2KBVQGxEfV+ImRgqFd10WrKsxz488h+GI9PYkSZZYhU4Yj1cW2r6lNdn0//zn7jkrpGfZUbqtInslM6cdl03SZirZD1nVbYVHD9OqB+88TiyF7pEisj+B2/aAoGGG0IygZETXE+A4lF+1hmNlMQ8gfvtt/fT2aSjEvsqSJPxr+fh8eJfQ0QZJwMI5jMQiwlR1loVsLVkHf7SMpNVl+lll7znlKUSPgXoQIDAQAB",
+	"permissions"		: [ 
+		"tabs",
+		"webRequest",
+		"https://www.googleapis.com/",
+	    "http://*/*",
+    	"https://*/*",
+    	"identity",
+    	"storage"
+	],
+	"devtools_page": "devtools.html",
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"oauth2": {
+	    "client_id": "1067419552740-sekclg8nl79r4qkrk1bb8amogrk80arh.apps.googleusercontent.com",
+	    "scopes": [
+			"https://www.googleapis.com/auth/chromewebstore.readonly"
+	    ]
+  	}
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Earn to Die - Install Game",
+  "version": "1.5",
+  "manifest_version": 2,
+  "description": "You're the only survivor of the dreaded zombie apocolypse! Smash zombies and do stunts to earn money for upgrades",
+  "homepage_url": "http://earntodie.littlealchemyunblocked.net/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Earn to Die",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://earntodie.littlealchemyunblocked.net/"
+  ]
+}

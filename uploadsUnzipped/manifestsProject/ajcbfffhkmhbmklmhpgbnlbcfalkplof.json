@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"The Ice Planet",
+"description":"The Ice Planet is coming, get your Umbrella's ready!",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 22 , 40 , 54 ],
+"ntp_text": [ 255 , 255 , 255 ],
+"ntp_section_link": [ 22 , 40 , 54 ],
+"ntp_section_text": [ 255 , 255 , 255 ],
+"ntp_background": [ 150 , 184 , 212 , 0.5 ],
+"ntp_header": [ 0 , 11 , 55 , 0.15 ],
+"ntp_section": [ 0 , 11 , 55 , 0.15 ],
+"frame": [ 0 , 11 , 55 ],
+"toolbar": [ 150 , 184 , 212 ],
+"tab_text": [ 255 , 255 , 255 ],
+"tab_background_text": [ 255 , 255 , 255 ],
+"bookmark_text": [ 255 , 255 , 255 ]
+},
+"tints":
+{
+"buttons": [ 0.575268817204301 , 0.418918918918919 , 0.709803921568627 ],
+"frame_incognito": [ 0.596078431372549 , 0.941176470588235 , 0.101499423298731 ],
+"frame_inactive": [ 0.575268817204301 , 0.418918918918919 , 0.15 ],
+"frame_incognito_inactive": [ 0.575268817204301 , 0.418918918918919 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

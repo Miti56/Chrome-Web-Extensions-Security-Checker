@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Serial Console",
+  "description": "A simple serial console written as a chrome extension",
+  "version": "0.2",
+  "app": {
+    "background": {
+      "scripts": ["js/main.js"]
+    }
+  },
+  "icons": { "16": "serial-console-16.png", "128": "serial-console-128.png" },
+  "permissions": ["serial"]
+}

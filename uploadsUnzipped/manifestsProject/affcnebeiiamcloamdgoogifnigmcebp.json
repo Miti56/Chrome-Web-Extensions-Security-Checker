@@ -1,0 +1,46 @@
+{
+  "background": {
+    "scripts": [
+      "libs/jquery.min.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "inject.js"
+      ],
+      "match_about_blank": true,
+      "matches": [
+        "\u003Call_urls>"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "Select links text like a plain text",
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "manifest_version": 2,
+  "name": "Select Links",
+  "offline_enabled": true,
+  "options_page": "options.html",
+  "permissions": [
+    "\u003Call_urls>",
+    "storage",
+    "tabs",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0.0",
+  "web_accessible_resources": [
+    "options.js"
+  ]
+}

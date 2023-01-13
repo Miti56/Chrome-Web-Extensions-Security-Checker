@@ -1,0 +1,42 @@
+{
+   "background": {
+      "scripts": [ "/lib/jquery-3.3.1.min.js", "/js/IndexedDB.js", "/js/Cache.js", "/js/Redirect.js", "/js/Robots.js", "/js/RobotsParser.js", "/js/Helpers.js", "/js/App.js", "/js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "/img/logo_on.png"
+   },
+   "content_scripts": [ {
+      "js": [ "/js/cs-meta.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "include_globs": [ "*://www.google.*/*" ],
+      "js": [ "/lib/jquery-3.3.1.min.js", "/js/Prefix.js", "/js/prefix-init.js", "/js/cs-google-prerender.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "include_globs": [ "*://www.google.*/*" ],
+      "js": [ "/lib/jquery-3.3.1.min.js", "/js/Prefix.js", "/js/prefix-init.js", "/js/cs-serp-iframe.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "/js/cs-iframe-resize.js" ],
+      "matches": [ "https://calibrateseo.com/service/widget.html*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extensionDescription__",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extensionName__",
+   "permissions": [ "webRequest", "webRequestBlocking", "webNavigation", "activeTab", "tabs", "http://*/*", "https://*/*", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.8",
+   "web_accessible_resources": [ "/img/*", "/html/*" ]
+}

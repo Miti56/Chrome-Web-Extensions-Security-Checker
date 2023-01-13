@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "dam2.png",
+      "default_title": "网页测距",
+      "name": "网页测距"
+   },
+   "content_scripts": [ {
+      "css": [ "index.css" ],
+      "js": [ "jquery.js", "x_y.js" ],
+      "matches": [ "http://*/*" ]
+   } ],
+   "description": "标尺，r和h启动，c取消",
+   "manifest_version": 2,
+   "name": "rule",
+   "permissions": [ "tabs", "http://*/*" ],
+   "version": "1"
+}

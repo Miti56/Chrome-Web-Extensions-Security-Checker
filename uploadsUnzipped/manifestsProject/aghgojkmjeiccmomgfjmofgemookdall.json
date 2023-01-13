@@ -1,0 +1,33 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "assets/js/jquery.js", "assets/js/wesoha-background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "assets/icons/icon.png",
+         "24": "assets/icons/icon.png",
+         "32": "assets/icons/icon.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Wesoha Targeting"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "assets/css/wesoha-main.css" ],
+      "js": [ "assets/js/jquery.js", "assets/js/wesoha-content.js", "assets/js/tablesort.min.js", "assets/js/tablesort.number.js", "assets/js/numeral.min.js", "assets/js/clipboard.min.js" ],
+      "matches": [ "*://*.facebook.com/*", "*://api.wesoha.com/" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Find the page with a lot of people like the most from any post",
+   "icons": {
+      "128": "assets/icons/icon.png",
+      "16": "assets/icons/icon.png",
+      "48": "assets/icons/icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Wesoha Targeting",
+   "permissions": [ "tabs", "cookies", "contextMenus", "storage", "*://api.wesoha.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.6"
+}

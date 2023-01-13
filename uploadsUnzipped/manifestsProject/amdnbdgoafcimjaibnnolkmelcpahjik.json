@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Propel for Gmail",
+	"version": "0.6.6",
+	"description": "Enhance your email with a beautiful action bar",
+	"icons": { "16": "icon.png", "48": "icon48.png", "128": "icon128.png" },
+	"background": {
+		"scripts": ["jquery-1.7.2.min.js", "mystamps.js", "cache.js", "background.js", "settings.js"]
+	}, 
+	"content_scripts": [
+		{
+			"matches": ["*://mail.google.com/*"],
+			"js": ["mystamps-utils.js","jquery-1.7.2.min.js","jquery.tools.min.js","sha1.js","mystamps-gmail-common.js", "mystamps-gmail.js", "html-sanitizer-minified.js"],
+			"run_at": "document_idle",
+			"all_frames": false
+		}
+	],
+	"web_accessible_resources": ["icon.png","icon48.png","icon128.png","loader.gif","lower_menu_button.png","upper_menu_button.jpg","settings.html"],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"permissions": ["*://mail.google.com/*", "http://www.propelgmail.com/*", "https://propel-gmail.appspot.com/*"],
+	"incognito": "spanning"
+}

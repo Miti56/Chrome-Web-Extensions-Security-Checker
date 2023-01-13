@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "author": "Loc Mai",
+  "name": "Vi-En Text to Speech with TTSReader",
+  "short_name": "Vi-En Text to Speech",
+  "description": "Vi-En Text to Speech",
+  "version": "1.0.6",
+  "minimum_chrome_version": "38",
+  "permissions": ["contextMenus","*://*/*"],
+  "icons": {
+	"16": "assets/tts.png",
+	"48": "assets/tts.png",
+	"128": "assets/tts.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/tts.png"
+  },
+  "background": {"page": "background.html"}
+}

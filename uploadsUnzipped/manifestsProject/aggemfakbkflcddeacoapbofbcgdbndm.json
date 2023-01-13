@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Discuz 论坛隐藏内容自动回复",   
+    "version" : "2.1",       
+    "manifest_version": 2,
+    "description" : "Discuz 论坛隐藏内容，自动探测，自动回复。",
+    "background" : 
+    {
+        "page" : "background.html"
+    },
+    "browser_action" : 
+    {
+        "default_icon" : "logo.png",
+        "default_popup" : "popup.html"
+    },
+    "icons" :
+    {
+        "16" : "logo-16.png",
+        "32" : "logo-32.png",
+        "48" : "logo-48.png",
+        "64" : "logo-64.png"
+    },
+    "content_scripts" : 
+    [
+        {
+            "matches" : 
+            [
+                "http://*/thread*",
+                "http://*/forum.php*",
+                "http://*/viewthread*"
+            ],
+            "js" : 
+            [
+                "js/jquery-1.7.1.min.js",
+                "js/autoReply.js"
+            ]
+        }
+    ],
+    "permissions" :
+    [
+        "contextMenus",
+        "tabs",
+        "http://*/*", 
+        "https://*/*"
+    ]
+}

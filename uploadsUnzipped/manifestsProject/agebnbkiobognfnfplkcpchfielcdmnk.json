@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "Libraries/jQuery/jQuery.min.js", "Background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "Libraries/jQuery/jQuery.min.js", "Resource Link.js" ],
+      "matches": [ "http://*.deeeep.io/*" ]
+   } ],
+   "description": "A modern, clean, and flat looking theme for the popular io game deeeep.io!",
+   "icons": {
+      "128": "Icon/Extension Icon 128 x 128.png"
+   },
+   "manifest_version": 2,
+   "name": "Deeeep.io Aero Theme",
+   "permissions": [ "http://*.deeeep.io/*", "webRequest", "webRequestBlocking" ],
+   "version": "1.7",
+   "web_accessible_resources": [ "Main.js", "Main.css", "Icon/*", "Image/*", "Libraries/*", "Resources/*" ]
+}

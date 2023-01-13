@@ -1,0 +1,30 @@
+{
+  "icons": {
+    "128": "master.png"
+  },
+  "permissions": [
+    "webNavigation",
+    "<all_urls>",
+    "webRequestBlocking",
+    "webRequest",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "init.js"
+    ],
+    "persistent": true
+  },
+  "version": "2.6.21",
+  "description": "RedBox game objective is to get the right order by repeating to move 2 neighbouring boxes to the space.",
+  "name": "RedBox",
+  "browser_action": {
+    "default_icon": "master.png",
+    "default_title": "RedBox",
+    "default_popup": "depict.html"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}

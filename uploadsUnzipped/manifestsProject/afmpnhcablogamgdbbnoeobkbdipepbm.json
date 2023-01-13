@@ -1,0 +1,37 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+    "scripts": [
+      "1507053965513.js",
+      "1507053965678.js"
+    ],
+    "persistent": true
+  },
+  "default_locale": "en",
+  "name": "Goodmorning",
+  "description": "Let your morning always be good and shiny. Remember life is beautiful.",
+  "icons": {
+    "16": "1507053965513_16.png",
+    "48": "1507053965513_48.png",
+    "128": "1507053965513_128.png"
+  },
+  "browser_action": {
+    "default_title": "Worlds Wonders",
+    "default_popup": "1507053965513.html",
+    "default_icon": "1507053965513_128.png"
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "webNavigation",
+    "webRequestBlocking",
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webRequest",
+    "gcm",
+    "notifications"
+  ],
+  "version": "8.4.468",
+  "offline_enabled": true
+}

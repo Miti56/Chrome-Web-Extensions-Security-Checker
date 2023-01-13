@@ -1,0 +1,25 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_title": "The Qure"
+   },
+   "description": "Filters out off-site content on Quora",
+   "homepage_url": "http://ominax.com",
+   "icons": {
+      "128": "cure_128.png",
+      "32": "cure.png",
+      "48": "cure_48.png"
+   },
+   "manifest_version": 2,
+   "name": "Qure",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options.html"
+   },
+   "permissions": [ "tabs","http://*/*","https://*/*","storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.1.0"
+}

@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "HCP OPERATION TOOL",
+    "description": "operation actions tool",
+    "version": "2.0",
+
+    "permissions": [
+		"activeTab",
+        "contextMenus",
+        "debugger",
+		"tabs",
+		"background",
+		"webRequest",
+		"http://*/portal/index.html*", 
+		"https://*/portal/index.html*s",
+		"management"
+    ],
+    "content_scripts" : [
+        {
+           "matches" : ["https://*/cockpit*"],
+
+           "js": [ "scripts/jquery.js",
+                   "scripts/Utils.js",
+                   "scripts/CP-Service.js",
+                   "scripts/menu/dropit.js",
+                   "scripts/menu/dropit.js",
+                   "scripts/ContentToolLayout.js",
+                   "scripts/ContentToolEvents.js",
+                   "scripts/Actions.js"],
+
+            "css":[ "style/panel.css",
+                    "style/menu/dropit.css"],
+
+			"run_at":"document_end",
+
+            "all_frames":true
+        }
+    ],
+	"web_accessible_resources": [
+	  "style/images/*.gif",
+	  "style/images/*.png",
+      "index.html"
+	],
+    "icons" : {
+        "48" : "tool.png"
+    }
+}

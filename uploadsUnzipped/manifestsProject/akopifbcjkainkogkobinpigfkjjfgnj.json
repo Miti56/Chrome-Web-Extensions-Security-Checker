@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Thành ngữ Hán Việt mỗi ngày",
+  "version": "1.0.0",
+  "description": "Khởi đầu mỗi tab mới với một câu thành ngữ Hán Việt",
+
+  "background": {
+  },
+  "icons": {
+    "48": "images/icon_idiom_40.png",
+    "128": "images/icon_idiom_128.png"
+  },
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}

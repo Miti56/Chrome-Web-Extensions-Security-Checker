@@ -1,0 +1,81 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "GiiLD Bookmark",
+    "description": "Allows you annotate online resources and leverage them to improve your Web.",
+    "version": "0.93.4",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background/aws/identity.js",
+            "background/aws/misc.js",
+            "background/aws/apig.js",
+            "background/analysis.js",
+            "background/main.js"
+        ],
+        "persistent": true
+    },
+    "commands": {
+        "bookmarks": {
+          "suggested_key": {
+            "default": "Ctrl+Q",
+            "windows": "Ctrl+Q",
+            "mac": "MacCtrl+Shift+1"
+          },
+          "description": "Show bookmarks",
+          "global": false
+        }
+    },
+    "browser_action": {
+        "default_popup": "login.html"
+    },
+    "icons": {
+        "16": "img/logo16.png",
+        "48": "img/logo48.png",
+        "128": "img/logo128.png"
+    },
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "tabs",
+        "storage",
+        "notifications",
+        "commands",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "content/analysis.js",
+                "content/highlight.js",
+                "content/seed.js"
+            ],
+            "css": [
+                "content/all.css"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "run_at": "document_start",
+
+            "all_frames":false
+        }
+    ],
+    "externally_connectable": {
+        "matches": [
+            "https://*.concordlab.com/*",
+            "https://*.giild.net/*"
+        ],
+        "accepts_tls_channel_id": false
+    },
+    "web_accessible_resources":[
+        "img/*",
+        "login.html",
+        "content/sidebar/*",
+        "content/sidebar/sidebar.css",
+        "content/sidebar/sidebar.html",
+        "content/sidebar/sidebar.js"
+    ]
+}

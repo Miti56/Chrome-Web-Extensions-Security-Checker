@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Xtreme Parking Mania",
+	"short_name": "Car Parking",
+	"description": "Put Your Driving Skills To Test .Park Your Car In The Green Spot Without Crashing !",
+	"version": "2.0",
+	"manifest_version": 2,
+	"homepage_url": "http://parkmycar.vvickedgames.com",
+	"app": {
+		"launch": {
+			"web_url": "http://parkmycar.vvickedgames.com"
+		}
+	},
+	"icons": {
+		"128": "icon-128.png"
+	},
+	"permissions": [
+		"storage",
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

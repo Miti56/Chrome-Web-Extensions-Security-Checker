@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://vk.com https://ssl.google-analytics.com;object-src 'self'",
+   "description": "VK Music Saver Chrome Extension",
+   "externally_connectable": {
+      "matches": [ "*://vk.com/*" ]
+   },
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+
+   "manifest_version": 2,
+   "minimum_chrome_version": "35",
+   "name": "VK Music Saver",
+   "permissions": [ "downloads", "http://*/*", "https://*/*" ],
+   "version": "1.2",
+   "web_accessible_resources": [ "img/download.png" ]
+}

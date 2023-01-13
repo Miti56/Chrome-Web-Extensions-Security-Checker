@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Wordo",
+  "version": "1.2.2",
+  "manifest_version":2,
+  "description": "Spelling, style, and grammar assistent",
+
+  "icons" : { "48" : "images/capture48.png",
+              "128" : "images/capture128.png" },
+
+  "page_action": {
+    "default_icon"  : "capture2.png",
+    "default_title" : "Wordo - Checks Spelling and Grammar",
+    "popup" : "action/disable.html"
+  },
+
+  "options_page": "options/options.html",
+  "background" : {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+
+  "permissions": ["activeTab",
+     "tabs",
+     "https://service.afterthedeadline.com/*",
+     "https://de.service.afterthedeadline.com/*",
+     "https://en.service.afterthedeadline.com/*",
+     "https://es.service.afterthedeadline.com/*",
+     "https://fr.service.afterthedeadline.com/*",
+     "https://pt.service.afterthedeadline.com/*"
+   ],
+
+
+  "content_scripts": [
+  {
+      "matches": ["http://*/*", "https://*/*"],
+
+      "js": ["scripts/jquery-1.8.3.js",
+             "scripts/atd.core.js","scripts/sweetalerts2.js",
+             "scripts/jquery.atd.js",
+             "scripts/jquery.atd.proofreader.js",
+             "scripts/jquery.atd.div.js",
+             "scripts/jquery.atd.iframe.js",
+             "scripts/widget.js","content.js",
+	           "scripts/autoproof.js",
+             "scripts/atd-chrome.js"],
+
+     "all_frames": true,
+     "run_at": "document_end"
+  }],
+  "web_accessible_resources" : [
+    "css/atd.css","*.png",
+    "images/*.png"
+  ]
+}

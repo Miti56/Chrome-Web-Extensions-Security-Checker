@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Themindquotes.com",
+  "description": "Themindquotes.com is the world's leading website for free quotes relating to human emotions, world events, holidays and occasions.",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "https://themindquotes.com/"
+    ],
+    "launch": {
+      "web_url": "https://themindquotes.com"
+    }
+  },
+  "icons": {
+    "128": "TMQ-logo-128.png"
+  }
+}

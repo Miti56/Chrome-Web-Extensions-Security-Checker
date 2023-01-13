@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "OpenComments",
+"version": "2.0.5",
+"manifest_version": 2,
+"description": "Make EVERY Web site your personal forum. Rant or rave, vent or praise: graffiti gone digital!",
+"browser_action": {
+	"default_icon": "sign_forbidden.png",
+	"default_title": "Press here to see or post comments for this site"
+},
+"icons": {"16": "icon16.png",
+	     "48": "icon48.png",
+          "128": "icon128.png" },
+"background": {
+	"scripts": ["background.js"]
+},
+"content_scripts": [
+	{
+	"run_at": "document_end",
+	"matches": ["https://groups.google.com/forum/*"],
+	"js": ["postMsg.js"]
+	}
+],
+"permissions": ["tabs",
+	"https://www.chiaramail.com/*"
+	]
+}

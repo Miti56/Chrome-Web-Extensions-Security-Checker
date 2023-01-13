@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LinksForLina",
+  "version": "1.1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://turkishserial.ru/*"],
+      "js": ["inject.js"]
+    }
+  ],
+  "permissions": [
+    "tabs", "http://turkishserial.ru/*"
+  ]
+}

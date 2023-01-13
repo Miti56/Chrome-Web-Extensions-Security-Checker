@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Blackboard Submit Fix",
+  "description": "Fixes the submit button from being shown off screen in blackboard.",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://dacc.blackboard.com/*", "https://dacc.blackboard.com/*"],
+      "js": ["scripts.js"]
+    }
+  ]
+
+}

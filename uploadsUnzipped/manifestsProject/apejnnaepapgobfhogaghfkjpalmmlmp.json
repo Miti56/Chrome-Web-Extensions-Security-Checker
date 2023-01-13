@@ -1,0 +1,78 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "manifest_version": 2,
+  "minimum_chrome_version": "26",
+  "permissions": [
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "cookies",
+    "bookmarks",
+    "history",
+    "unlimitedStorage",
+    "management",
+    "tabs",
+    "notifications",
+    "idle",
+    "geolocation",
+    "chrome://favicon/",
+    "chrome://favicon/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.yandex.ru https://*.yandex.net; img-src * data:; object-src 'self'",
+  "default_locale": "ru",
+  "background": {
+    "scripts": [
+      "background/backend.js",
+      "slice/slice-backend.min.js"
+    ]
+  },
+  "options_page": "options/options.html",
+  "browser_action": {
+    "default_icon": {
+      "19": "img/19/gray.png",
+      "38": "img/38/gray.png"
+    },
+    "default_popup": "slice/index.html"
+  },
+  "web_accessible_resources": [
+    "logo/*",
+    "includes/*",
+    "common/*"
+  ],
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "js": [
+        "includes/nano-includes.min.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "all_frames": true,
+      "js": [
+        "includes/nano-includes-frames.min.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "logo/16_ru.png",
+    "48": "logo/48.png",
+    "128": "logo/128.png"
+  },
+  "version": "8.22.3"
+}

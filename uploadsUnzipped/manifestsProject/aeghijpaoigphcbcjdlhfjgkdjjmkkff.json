@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hazine Avcısı Oyunu",
+  "description": "Hazine Avcısı Oyunu ile altınlar seni bekliyor!",
+    "version": "0.1.2",
+    "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.turkceoyunlar.com/hazine-avcisi-oyunu"
+    ],
+    "launch": {
+      "web_url": "http://www.turkceoyunlar.com/hazine-avcisi-oyunu"
+    }
+  },
+  "icons": {
+    "128": "icon128.png",
+    "64": "icon48.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

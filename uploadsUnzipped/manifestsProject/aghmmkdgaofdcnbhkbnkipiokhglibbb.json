@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Dev Friend",
+  "version": "1.0.1",
+  "description": "Dev Friend extension.",
+  "icons": {
+    "128": "DevFrnd128.png",
+    "48": "DevFrnd48.png",
+    "16": "DevFrnd16.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false 
+  },
+  "options_page": "index.html",
+  "permissions": [
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ]
+}

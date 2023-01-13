@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Restriction Checker",
+  "version": "1.1.0",
+  "author": "blausoft",
+  "description": "Tells you whether video is blocked or restricted in any way. Currently works on YouTube and Vimeo.",
+  "manifest_version": 2,
+  "homepage_url": "https://restriction-checker.com/chrome-extension/",
+  "offline_enabled": false,
+  "permissions": [
+    "declarativeContent",
+    "activeTab"
+  ],
+  "icons": {
+    "96": "images/icon_96.png"
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_title": "Restriction Checker"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

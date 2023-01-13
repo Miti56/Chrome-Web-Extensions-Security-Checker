@@ -1,0 +1,16 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Figura Fácil",
+  "version": "1",
+  "icons": { "24": "24.png", "128": "128.png" },
+  "app": {
+    "urls": [
+      "http://www.figurafacil.com.mx/"
+    ],
+    "launch": {
+      "web_url": "http://www.figurafacil.com.mx/"
+    }
+  },
+  "permissions": ["geolocation"],
+  "manifest_version": 2
+}

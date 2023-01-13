@@ -1,0 +1,28 @@
+{
+   "browser_action": {
+      "default_icon": "icon32.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "style/iThing.css", "style/styles.css" ],
+      "js": [ "js/jquery.js", "js/jqueryui.js", "js/jQRangeSlider-min.js", "js/scripts.js" ],
+      "matches": [ "http://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "Find hidden discounts on Amazon.com",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "64": "icon64.png",
+      "96": "icon96.png"
+   },
+   "manifest_version": 2,
+   "name": "Amazon Discount Finder",
+   "permissions": [  ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.10"
+}

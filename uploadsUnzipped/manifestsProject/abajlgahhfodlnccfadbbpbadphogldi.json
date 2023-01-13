@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "permissions": [
+    "storage"
+   ],
+   "content_scripts": [{
+      "js": ["bg.js"],
+	  "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   }],
+   "browser_action": {
+      "default_icon": "icon2.png",
+      "default_popup": "popup.html",
+      "default_title": "Tweet Tracker"
+   },
+   "description": "Addon showing how much time you spending on TWITTER.",
+   "manifest_version": 2,
+   "name": "Tweet Track",
+   "version": "2"
+}

@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "刷职位",
+	"version": "0.2.3",
+	"manifest_version": 2,
+	"description": "一键刷新招聘网站上发布的职位信息",
+	"icons": {
+			"16": "images/icon-16.png",
+			"128": "images/icon-128.png"
+	},
+	"default_locale": "zh_CN",
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon-19.png",
+			"38": "images/icon-38.png"
+		},
+		"default_title": "刷职位"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://hm.baidu.com; object-src 'self'",
+	"options_page": "index.html",
+	"background": {
+		"page": "index.html#background"
+	},
+	"permissions": [
+		"cookies",
+		"tabs",
+		"management",
+		"webRequest", 
+		"webRequestBlocking",
+		"http://*/*",
+		"https://*/*"
+	],
+	"web_accessible_resources": [
+		"scripts/vendor/components/jquery/index.js"
+	]
+}

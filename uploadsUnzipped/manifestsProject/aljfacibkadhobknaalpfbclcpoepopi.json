@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "HTMLhouse",
+	"description": "Publish HTML quickly with HTMLhouse.",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": {
+		"128": "icon128.png"
+	},
+	"app": {
+		"urls": [
+			"https://html.house/"
+		],
+		"launch": {
+			"web_url": "https://html.house/"
+		}
+	}
+}

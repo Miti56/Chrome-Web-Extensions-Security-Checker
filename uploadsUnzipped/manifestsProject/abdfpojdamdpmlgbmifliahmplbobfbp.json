@@ -1,0 +1,39 @@
+{
+  "name": "Safe Web",
+  "description": "__MSG_extDesc__",
+  "version": "0.1.9",
+  "default_locale": "en",
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "cookies",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "Safe Web",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "js" : ["js/jquery.js", "js/content.js"],
+    "run_at": "document_start",
+    "matches": ["http://*/*", "https://*/*"],
+   	"all_frames": false
+  }],
+  "manifest_version": 2,
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "homepage_url": "https://track10.ru/apps/7/"
+}

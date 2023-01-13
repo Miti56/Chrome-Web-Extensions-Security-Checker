@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "CleanScreen",
+  "description": "Gain complete visibility while cleaning your computer screen",
+  "manifest_version": 2,
+  "version": "1.0",
+  "app": {
+    "launch": {
+      "web_url": "http://www.oneill.co.nz/cleanscreen/"
+    }
+  },
+  "icons": {
+    "128": "128.png"
+  }
+}

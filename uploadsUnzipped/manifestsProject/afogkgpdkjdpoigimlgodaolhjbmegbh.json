@@ -1,0 +1,66 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "",
+  "name": "Spice and Wolf SUN Theme",
+  "theme": {
+    "tints": {"buttons": [
+      0,
+      0,
+      0
+    ]},
+    "colors": {
+      "button_background": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ntp_text": [
+        0,
+        0,
+        0
+      ],
+      "bookmark_text": [
+        90,
+        90,
+        90
+      ],
+      "tab_background_text": [
+        64,
+        64,
+        64
+      ],
+      "tab_text": [
+        0,
+        0,
+        0
+      ],
+      "toolbar": [
+        208,
+        64,
+        41
+      ],
+      "frame": [
+        66,
+        116,
+        201
+      ],
+      "ntp_background": [
+        255,
+        255,
+        255
+      ]
+    },
+    "images": {
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_frame": "images/theme_frame.png"
+    },
+    "properties": {
+      "ntp_background_alignment": "left top",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "manifest_version": 2,
+  "version": "1"
+}

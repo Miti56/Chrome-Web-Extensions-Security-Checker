@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "How Do You Do This in SAS?",
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "2.5.0",
+  "icons": {
+    "16": "icon16x16.png",
+    "128": "icon128x128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  }
+}

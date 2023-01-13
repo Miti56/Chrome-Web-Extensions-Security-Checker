@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Price Quiz",
+  "description": "Try to guess the price of over 30 million products!",
+  "version": "0.1.0.3",
+  "app": {
+    "urls": [
+      "http://pricequizgame.appspot.com/"
+    ],
+    "launch": {
+      "web_url": "http://pricequizgame.appspot.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [  ],
+  "manifest_version": 2
+}

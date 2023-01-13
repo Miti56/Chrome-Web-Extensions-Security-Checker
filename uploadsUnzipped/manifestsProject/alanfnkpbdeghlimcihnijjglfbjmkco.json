@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+   "name": "__MSG_app_name__",
+   "short_name": "__MSG_app_name__",
+   "description": "__MSG_app_description__",
+   "default_locale": "en",
+   "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "candy_crush128.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

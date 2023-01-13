@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Manchester United Theme",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/frame.png",
+      "theme_ntp_background" : "images/flag.jpg"
+    },
+    "colors" : {
+      "frame" : [71, 105, 91],
+      "ntp_text" : [255, 255, 255],
+      "ntp_link" : [255, 255, 255],
+      "ntp_section" : [255, 255, 155],
+      "button_background" : [255, 255, 255]
+    },
+    "tints" : {
+      "buttons" : [0.33, 0.5, 0.47]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "center"
+    }
+  }
+}

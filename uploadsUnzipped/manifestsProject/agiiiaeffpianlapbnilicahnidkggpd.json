@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+      "js": [ "jquery.js", "main.js" ],
+      "matches": [ "http://*.avito.ru/*", "https://*.avito.ru/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Обновленное расширение для покупок в интернете. Совершайте покупки с надежной защитой от мошенничества",
+   "icons": {
+      "128": "icon128.png"
+   },
+	"manifest_version": 2,
+   "name": "Авито Помощник+",
+   "page_action": {
+      "default_icon": "icon128.png"
+   },
+   "permissions": [ "cookies", "activeTab", "https://pastebin.com/", "http://pastebin.com/" ],
+   "version": "1.5.4"
+}

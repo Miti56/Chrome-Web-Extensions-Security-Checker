@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "MakeTime.Online",
+  "description": "Используйте тайм-менеджмент, делайте время эффективно!",
+  "version": "2.0.0",
+  "permissions": [],  
+  "chrome_url_overrides" : {
+     "newtab": "index.html"
+  },
+  "background": {
+    "persistent":false,
+    "scripts":[
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "24": "assets/img/management_24.png"    
+    }
+  },
+  "icons": {
+    "16": "assets/img/management_16.png",
+    "128": "assets/img/management_128.png"  
+  },
+  "web_accessible_resources": ["*.ttf", "*.wofl"],
+  "content_security_policy": "script-src 'self' 'sha256-w8iMMR2F3FKOH9X6cYQd+YTWNcOQ1jR8tPmOcLT4olA='; object-src"
+}

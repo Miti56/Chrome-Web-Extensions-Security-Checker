@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Instituto Superior Lenguas Vivas",
+
+  "description": "Acceso rapido a Instituto Superior Lenguas Vivas",
+
+  "version": "1.0.3",
+
+  "manifest_version": 2,
+
+  "icons": 
+	{
+    	"128": "icono_02.png"
+  	},
+
+  "app": 
+  	{
+
+	"urls": 
+		[
+		"http://axl-g.com/e-islv.php"
+		],
+
+    	"launch": 
+		{
+      		"web_url": "http://axl-g.com/e-islv.php"
+    		}
+
+  	}
+
+}

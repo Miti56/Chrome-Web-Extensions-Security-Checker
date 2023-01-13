@@ -1,0 +1,58 @@
+{
+    "manifest_version": 2,
+    "name": "Shopping Assistant Extension",
+    "description": "Tiết kiệm gấp đôi Tiền Bạc và Thời Gian khi Shopping trên Shopee, Tiki, Sendo, Lazada,...",
+    "version": "2019.12.11",
+    "background": {
+        "scripts": [
+            "js/background.min.js"
+        ]
+    },
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "css": [
+            "css/style.css"
+        ],
+        "js": [
+            "js/Base64Icons.min.js",
+            "js/ConstantVariable.min.js",
+            "js/UtilFunction.min.js",
+            "js/DataService.min.js",
+            "js/UIService.min.js",
+            "js/content.min.js"
+        ]
+    }],
+    "browser_action": {
+        "default_icon": "images/sa-logo-32x32.png",
+        "icons": {
+            "128": "images/sa-logo-128x128.png",
+            "16": "images/sa-logo-16x16.png",
+            "32": "images/sa-logo-32x32.png",
+            "48": "images/sa-logo-48x48.png"
+        }
+    },
+    "icons": {
+        "128": "images/sa-logo-128x128.png",
+        "16": "images/sa-logo-16x16.png",
+        "32": "images/sa-logo-32x32.png",
+        "48": "images/sa-logo-48x48.png"
+    },
+    "permissions": [
+        "https://*.shopee.vn/*",
+        "https://*.tiki.vn/*",
+        "https://*.lazada.vn/*",
+        "https://*.sendo.vn/*",
+        "https://*.adayroi.com/*",
+        "https://*.thegioididong.com/*",
+        "https://*.fptshop.com.vn/*",
+        "https://*.lotte.vn/*",
+        "https://*.aliexpress.com/*",
+        "https://*.dienmayxanh.com/*",
+        "activeTab",
+        "cookies",
+        "webRequest"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx"
+}

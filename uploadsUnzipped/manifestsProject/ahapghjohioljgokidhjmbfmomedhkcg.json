@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "homepage_url": "https://www.myinwebo.com",
+  "name": "inWebo - Password Manager - Beta",
+  "short_name" : "inWebo Password Manager",
+  "description": "inWebo Password Manager relieves you of the pain of managing and remembering passwords across all your devices",
+  "icons": {
+  	"16": "resources/images/iw16.png",
+        "24": "resources/images/iw24.png",
+  	"48": "resources/images/iw48.png",
+  	"128": "resources/images/iw128.png"
+  },
+  "default_locale": "en",
+  "version": "1.9.41",
+  "browser_action": {
+    "default_title": "inWebo Password Manager",
+    "default_icon": "resources/images/Off24.png"
+  },
+  "options_page": "options.html",
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "tabs", "notifications", "cookies", "management", "*://*/*", "http://*/*", "https://*/*"
+  ],
+  "web_accessible_resources": [
+    "resources/images/Notification32.png"
+  ],
+  "content_security_policy": "script-src 'self' http://localhost; object-src 'self'",
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js":  ["vendors/jquery.min.js",
+            "vendors/detectors.js",
+            "chrome/chromeConfig.js",
+            "chrome/config.js",
+            "chrome/chromeIndocFunctions.js",
+            "indoc/backup/backup.js",
+            "indoc/pwdstore/pwdstore-helpers.js",
+            "indoc/pwdstore/pwdstore-labels.js",
+            "indoc/pwdstore/pwdstore-css.js",
+            "indoc/pwdstore/pwdstore-messenger.js",
+            "indoc/pwdstore/pwdstore-messages.js",
+            "indoc/pwdstore/pwdstore-selfcare.js",
+            "indoc/pwdstore/pwdstore-form-helpers.js",
+            "indoc/pwdstore/pwdstore-forms.js",
+            "indoc/pwdstore/pwdstore-controller.js",
+            "indoc/pwdstore/pwdstore-ui.js"],
+    "run_at":"document_end",
+    "all_frames":true
+  }]
+}

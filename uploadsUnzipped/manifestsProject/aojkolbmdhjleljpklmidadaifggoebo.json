@@ -1,0 +1,24 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "images/16.png",
+      "default_popup": "html/popup.html",
+      "default_title": "__MSG_Title__"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_Desc__",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_Name__",
+   "permissions": [ "tabs", "storage", "http://*/*", "https://*/*", "notifications", "bookmarks", "management", "geolocation", "webRequest", "webRequestBlocking", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}

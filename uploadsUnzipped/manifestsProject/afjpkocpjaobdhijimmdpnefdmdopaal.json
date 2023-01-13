@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "はてブ新着コメVIEWER",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "はてなブックマークの新着(一週間以内)のコメントを右側に表示します。",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["tabs", "http://*/*"],
+  "browser_action" : {
+    "default_icon": "icon19g.png",
+    "default_title": "はてブ新着コメVIEWER"
+  },
+  "background": {
+    "scripts": ["jquery-1.11.1.min.js", "background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "css": ["content.css"],
+      "js": ["jquery-1.11.1.min.js", "content.js"]
+    }
+  ]
+}

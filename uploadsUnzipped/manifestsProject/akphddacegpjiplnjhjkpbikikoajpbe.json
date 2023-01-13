@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "ANTIRETRO",
+  "description": "Disfruta de los contenidos de antiretro en un solo click",
+  "manifest_version": 2,
+  "version": "1.0.1",
+  "app": {
+    "urls": [
+      "http://antiretro.es"
+    ],
+    "launch": {
+      "web_url": "http://antiretro.es"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

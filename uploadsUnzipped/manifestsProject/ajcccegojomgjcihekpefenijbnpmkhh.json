@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.png","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.png","theme_frame_overlay":"images\/theme_frame_overlay.png"},"colors":{"frame":[66,116,201],"toolbar":[76,86,98],"tab_text":[210,210,210],"tab_background_text":[36,34,20],"bookmark_text":[210,210,210],"ntp_background":[255,255,255],"ntp_text":[219,211,177],"button_background":[255,255,255,0.54]},"tints":{"buttons":[0,0,0.5]},"properties":{"ntp_background_alignment":"top","ntp_background_repeat":"no-repeat"}},"name":"Draper LDS Mormon Temple","version":"1","description":""}

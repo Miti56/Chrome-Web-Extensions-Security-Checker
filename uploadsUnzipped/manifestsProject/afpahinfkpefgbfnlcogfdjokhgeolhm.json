@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "バイオリズム",
+	"manifest_version": 2,
+	"description": "バイオリズムチャートは、物理的、感情的、知的なあなたの値を伝えます",
+	"version": "1.2",
+	"app": {
+		"urls": [
+			"http://nhipsinhhoc.vn/"
+		],
+		"launch": {
+			"web_url": "http://nhipsinhhoc.vn/?lang=ja"
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"32": "icon-32.png",
+		"48": "icon-48.png",
+		"60": "icon-60.png",
+		"90": "icon-90.png",
+		"120": "icon-120.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png",
+		"512": "icon-512.png"
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	]
+}

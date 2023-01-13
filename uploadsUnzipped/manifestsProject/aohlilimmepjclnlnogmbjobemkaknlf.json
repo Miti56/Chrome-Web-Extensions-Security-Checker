@@ -1,0 +1,16 @@
+{
+    "name": "Pokemon Rojo Fuego (GBA)",
+    "description": "Juga gratis online sin descargar el juego!",
+    "app": {
+        "urls": ["http://www.juegossd.com/"],
+        "launch": {
+            "web_url": "http://www.juegossd.com/game/pokemon-rojo-fuego-%28gba%29"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

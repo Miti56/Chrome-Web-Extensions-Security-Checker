@@ -1,0 +1,53 @@
+{
+	"manifest_version"	: 2,
+	"name"				: "Qvipe",
+	"version"			: "0.1.8",
+
+	"description"		: "Qvipe - review on any page",
+	"icons"				: {
+		"128"			: "icons/icon128.png",
+		"16"			: "icons/icon128.png",
+		"48"			: "icons/icon128.png"
+	},
+
+	"author"			: "fxConnect team",
+	"background"		: {
+		"scripts"		: ["js/background.js"]
+	},
+
+	"short_name"		: "Qvipe",
+
+	"content_scripts"	: [{
+		"js"			: [
+			"js/get_content.js"
+		],
+		"matches"		: [
+			"http://*/*",
+			"https://*/*"
+		],
+		"run_at"		: "document_end"
+	}],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://onlinearmine.com; object-src 'unsafe-eval'",
+	"browser_action": {
+		"default_icon": "icons/icon16.png",
+		"default_title": "__MSG_appName__",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"http://*/*",
+		"https://*/*",
+		"tabs",
+		"webRequestBlocking",
+		"webRequest"
+	],
+	"homepage_url"		: "http://www.qvipe.com/",
+	"update_url"		: "https://clients2.google.com/service/update2/crx",
+	"web_accessible_resources": [
+		"images/sprite.png",
+		"css/font/robotocondensed-regular_8-webfont.eot",
+		"css/font/robotocondensed-regular_8-webfont.svg",
+		"css/font/robotocondensed-regular_8-webfont.ttf",
+		"css/font/robotocondensed-regular_8-webfont.woff",
+		"css/font/robotocondensed-regular_8-webfont.woff2"
+	]
+}

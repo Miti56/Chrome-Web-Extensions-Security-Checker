@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Gymsystem Proxy",
+  "description": "",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "app": {
+    "background":{
+      "scripts": ["public/js/init.js"]
+    }
+  },
+  "sockets": {
+    "tcp": {
+      "connect" : "*:*"
+    }
+  },
+
+  "permissions": [
+    "alwaysOnTopWindows",
+    "*://*.gymsystem.se/*",
+    "notifications",
+    "system.network",
+    "storage"
+  ],
+
+  "icons": {
+    "16":  "public/img/icon_16x16.png",
+    "128": "public/img/icon_128x128.png"
+  }
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Clear Local Storage",
+  "short_name": "Clear LocalStorage",
+  "description": "This extension lets you clear local storage and then reloads the page",
+  "version": "0.0.1.2",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "icons": {
+    "128": "icon_128.png",
+    "286": "icon_286.png"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "description": "Clear LocalStorage",
+      "suggested_key": {
+        "windows": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L",
+        "chromeos": "Ctrl+Shift+L",
+        "linux": "Ctrl+Shift+L"
+      }
+    }
+  },
+  "browser_action": {
+    "default_icon": "icon_286.png",
+    "default_popup": "clear-ls.html",
+    "default_title": "Clear Local Storage"
+  },
+  "permissions": ["storage", "activeTab"]
+}

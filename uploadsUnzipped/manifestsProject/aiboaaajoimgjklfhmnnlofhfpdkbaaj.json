@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Multi Tab",
+  "short_name": "Multi Tab",
+  "description": "Multi Tab",
+  "version": "2.2",
+  "manifest_version": 2,
+  "permissions": ["webview", "fileSystem", "http://*/", "https://*/"],
+  "app": {
+    "background": {
+      "scripts": ["js/jquery.js","js/jquery-ui.js", "js/in.js", "js/main.js", "js/tools.js","js/model.js","js/view.js","js/controller.js","js/background.js"]
+    }
+  },
+  "icons": { "16": "img/multitab-16.png", "128": "img/multitab-128.png" }
+}

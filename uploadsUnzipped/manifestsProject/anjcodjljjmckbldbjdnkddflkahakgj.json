@@ -1,0 +1,44 @@
+{
+   "description": "Theme Unofficial Tomorrowland 2011",
+   "name": "Tomorrowland 2011",
+   "manifest_version": 2,
+   "theme": {
+      "colors": {
+         "frame": [ 76,184,201 ],
+         "bookmark_text":[ 0,0,0 ],
+         "toolbar": [ 76,184,201 ],
+         "button_background":[ 255,255,255,0 ],
+         "ntp_link": [ 44, 51, 66 ],
+         "ntp_header": [ 102, 102, 102, 1 ],
+         "ntp_section": [ 194, 217, 122 ],
+         "ntp_section_link": [ 194,217,122 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+         "ntp_text": [ 32, 32, 32 ],
+         "ntp_section":[76,184,201],
+         "ntp_background":[ 0, 0, 0 ],
+         "tab_background_text": [ 0, 0, 0 ],
+         "tab_text": [ 31, 31, 31 ]
+
+      },
+      "images": {
+         "theme_frame": "images/theme_frame_overlay.png",
+         "theme_toolbar": "images/theme_toolbar.png",
+         "theme_ntp_attribution": "images/theme_ntp_attribution.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_tab_background_incognito": "images/theme_tab_background_incognito.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom center",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 2
+      },
+      "tints": {
+         "background_tab": [ 0.5, 0.5, 0.15 ],
+         "frame_inactive": [ 0.5, 0, 0.65 ],
+         "frame_incognito_inactive": [ 0.5, 0, 0.45 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.3.0"
+}

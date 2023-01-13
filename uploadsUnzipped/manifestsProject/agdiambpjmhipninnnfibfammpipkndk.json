@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "VisionBoard.cc",
+  "description": "VisionBoard.cc",
+  "version": "1.0",
+  "description": "The VisionBoard.cc Chrome extension helps you create an amazing online Vision Board!",
+  "author": "VisionBoard.cc",
+  "short_name": "VisionBoard.cc",
+
+"background": {
+      "persistent": true,
+      "scripts": [ "/js/background.js", "/js/jquery-1.7.min.js" ]
+   },
+
+"chrome_url_overrides" : {
+    "newtab": "redirectonly.html#newTab"
+  },
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Open My Vision Board!"
+    
+  },
+
+  "icons": { "16": "16.png",
+           "48": "48.png",
+           "128": "128.png" },
+
+
+  "permissions": [
+    "activeTab"
+	
+  ]
+}
+

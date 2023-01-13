@@ -1,0 +1,99 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "AMT Tools",
+    "description": "This extension provides a set of helper tools for Amazon Mechanical Turk that helps in increasing productivity.",
+    "version": "0.1.8",
+
+    "icons": {
+        "16": "img/16.png",
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.mturk.com/mturk/*"
+            ],
+            "css": ["css/tools.css"],
+            "js": [
+                "js/jquery.js",
+                "js/tools.js",
+                "js/toolsAccountBalanceID.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://www.mturk.com/mturk/dashboard*"
+            ],
+            "js": [
+                "js/toolsChangeNotifier.js",
+                "js/toolsHITStatusLinks.js",
+                "js/toolsTodaysEarnings.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://www.mturk.com/mturk/status*"
+            ],
+            "js": [
+                "js/toolsHITStatusLinks.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://www.mturk.com/mturk/accept*",
+                "https://www.mturk.com/mturk/continue*",
+                "https://www.mturk.com/mturk/preview*",
+                "https://www.mturk.com/mturk/return*"
+            ],
+            "js": [
+                "js/toolsAutoAcceptCheck.js",
+                "js/toolsCaptchaAlert.js",
+                "js/toolsConfirmReturnHIT.js",
+                "js/toolsHITExpander.js",
+                "js/toolsQualsWrapper.js",
+                "js/toolsQueueCount.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://www.mturk.com/mturk/findhits*",
+                "https://www.mturk.com/mturk/preview*",
+                "https://www.mturk.com/mturk/searchbar*",
+                "https://www.mturk.com/mturk/sorthits*",
+                "https://www.mturk.com/mturk/sortsearchbar*",
+                "https://www.mturk.com/mturk/viewhits*",
+                "https://www.mturk.com/mturk/viewsearchbar*"
+            ],
+            "js": [
+                "js/toolsHITExport.js",
+                "js/toolsPreviewAccept.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "http://*.qualtrics.com/*",
+                "https://*.qualtrics.com/*",
+                "http://*.surveymonkey.com/*",
+                "https://*.surveymonkey.com/*",
+                "http://*.surveygizmo.com/*",
+                "https://*.surveygizmo.com/*"
+            ],
+            "js": [
+                "js/jquery.js",
+                "js/tools.js",
+                "js/toolsAccountBalanceID.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+
+    "manifest_version": 2
+}

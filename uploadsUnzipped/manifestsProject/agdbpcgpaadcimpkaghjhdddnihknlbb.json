@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "clearBrowserData",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Link for removing browser data",
+    "permissions": [
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "icons/clean_48.png",
+        "default_title": "Clear browser data"
+    },
+	"background": {
+		"scripts": ["scripts.js"]
+	},
+    "icons": {
+        "48": "icons/clean_48.png",
+		"64": "icons/clean_64.png",
+        "128": "icons/clean_128.png"
+    }
+}

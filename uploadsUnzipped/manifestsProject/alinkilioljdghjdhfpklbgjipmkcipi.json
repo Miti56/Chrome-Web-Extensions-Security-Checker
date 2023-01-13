@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Цены за килограмм",
+  "version": "1.1",
+  "description": "Цены за килограмм",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "myscript.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Цены за килограмм",
+    "default_icon": "icon_38.png",
+    "default_popup": "popup.html"
+  }
+}

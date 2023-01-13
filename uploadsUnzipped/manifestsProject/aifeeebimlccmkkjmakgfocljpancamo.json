@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Atlas-2 Plug-in",
+  "short_name": "Atlas-2 Plug-in",
+  "author": "JSC Atlas-2",
+  "description": "Расширение браузера, позволяющее использовать ЭЦП для сервисов Атлас-2. Для работы требуется приложение Atlas-2 Plug-in Host.",
+  "version": "2.0.0.0",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "nativeMessaging", "https://lk.atlas-2.ru/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "\u003Call_urls>" ],
+      "js": [ "content_script.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": false
+  }
+}

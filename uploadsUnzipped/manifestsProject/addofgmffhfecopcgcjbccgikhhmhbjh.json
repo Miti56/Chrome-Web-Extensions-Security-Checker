@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "BLACKPINK 갤러리 애드온",
+  "description": "BLACKPINK 갤러리 추가기능 - 이용자메모, 한줄글작성, 랜덤짤",
+  "version": "0.34",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background":
+  {
+    "scripts":["background.js"]
+  },
+  "content_scripts": [{
+    "js": [
+      "jquery.js", "content.js"
+    ],
+    "run_at": "document_start",
+    "matches": ["http://gall.dcinside.com/*","https://gall.dcinside.com/*"]
+  },{
+    "css": [
+      "style.css"
+    ],
+    "js": [
+      "ad.js"
+    ],
+    "run_at": "document_start",
+    "all_frames": true,
+    "matches": ["http://gall.dcinside.com/*","https://gall.dcinside.com/*"]
+  }],
+
+  "permissions": [
+    "tabs",
+    "windows",
+    "storage",
+    "http://gall.dcinside.com/*",
+    "https://gall.dcinside.com/*",
+    "http://blping.mooo.com/*",
+    "https://blping.mooo.com/*"
+  ]
+}

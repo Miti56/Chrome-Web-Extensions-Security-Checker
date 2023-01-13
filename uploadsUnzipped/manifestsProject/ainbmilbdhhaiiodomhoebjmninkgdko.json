@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "medical bridge share",
+    "description": "この拡張機能は、メディカルブリッジ画面共有用拡張機能です。 \r\n※この拡張機能は、medibri.comでのみ機能します。",
+    "version": "1.0.0",
+    "minimum_chrome_version": "34",
+    "icons": {
+        "16": "mcube16.png",
+        "48": "mcube48.png",
+        "128": "mcube128.png"
+    },
+    "background": {
+        "scripts": [ "background.js" ]
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "externally_connectable": {
+        "matches": [
+            "*://*.medibri.com/*"
+        ]
+    },
+    "content_scripts": [ {
+        "js": ["content.js"],
+        "all_frames": true,
+        "run_at": "document_end",
+        "matches": [
+            "*://*.medibri.com/*"
+        ]
+    }]
+}

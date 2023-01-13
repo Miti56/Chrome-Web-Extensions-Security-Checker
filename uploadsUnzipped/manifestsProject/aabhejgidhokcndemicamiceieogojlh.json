@@ -1,0 +1,26 @@
+{
+   "author": "Star Nhật",
+   "background": {
+      "scripts": [ "scripts/analytics.js", "scripts/background.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "favicon.png",
+         "24": "favicon.png",
+         "32": "favicon.png"
+      },
+      "default_title": "Tools for Facebook by Star Nhật"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://ssl.google-analytics.com https://ajax.googleapis.com https://apis.google.com; object-src 'self'",
+   "description": "Star Nhật Tools for Facebook by StarNhat.Vn",
+   "icons": {
+      "128": "favicon.png",
+      "16": "favicon.png",
+      "48": "favicon.png"
+   },
+   "manifest_version": 2,
+   "name": "Star Nhật Tools for Facebook",
+   "permissions": [ "tabs", "http://*.starnhat.vn/*", "https://*.starnhat.vn/*", "http://*.facebook.com/*", "https://*.facebook.com/*", "notifications", "cookies", "webRequest", "webRequestBlocking", "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "11"
+}

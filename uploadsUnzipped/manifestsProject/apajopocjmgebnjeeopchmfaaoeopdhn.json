@@ -1,0 +1,89 @@
+{
+  "manifest_version": 2,
+  "name": "türkçeyaz",
+  "short_name": "türkçeyaz",
+  "version": "1.0.12",
+  "description": "Akıllı Türkçe yazım denetleyici",
+  "author": "Ertuğrul Çetin",
+  "default_locale": "tr",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "minimum_chrome_version": "67.0.0",
+  "icons": {
+    "16": "images/16.png",
+    "24": "images/24.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "homepage_url": "https://turkceyaz.com",
+  "offline_enabled": false,
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com https://static.hotjar.com/c/hotjar-1660676.js https://script.hotjar.com/modules.9ad849c74ae56ab50f63.js; object-src 'self'",
+  "browser_action": {
+    "default_icon": "images/48.png",
+    "default_popup": "popup.html",
+    "default_title": "__MSG_tooltip__",
+    "browser_style": false
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://*.turkceyaz.com/*"
+    ]
+  },
+  "optional_permissions": [
+    "clipboardRead"
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*",
+    "notifications",
+    "cookies",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "background": {
+    "scripts": [
+      "share/browser-polyfill.min.js",
+      "share/reloadContentScriptsIfNecessary.js",
+      "bs/background.js",
+      "share/tools.js",
+      "bs/common.js",
+      "share/markup.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "images/*",
+    "css/lt-marker-style.css",
+    "**/*.js",
+    "vendors/*",
+    "editor.html"
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "vendors/jquery.min.js",
+        "vendors/purify.js",
+        "vendors/ally.js",
+        "vendors/most.js",
+        "vendors/featherlight/featherlight.js",
+        "share/helpers.js",
+        "share/tools.js",
+        "share/markup.js",
+        "cs/contentscript.js",
+        "cs/textarea.js"
+      ],
+      "css": [
+        "vendors/featherlight/featherlight.css",
+        "css/lt-marker-style.css"
+      ]
+    }
+  ]
+}

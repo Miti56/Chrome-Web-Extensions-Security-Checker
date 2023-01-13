@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Veba Stock Watch",
+  "version": "1.1.2",
+  "short_name": "VSW",
+  "description":
+    "Show desktop notifications for the current stock prices of selected securities from the Philippine Stock Market Exchange.",
+  "icons": {"16": "images/16.png", "48": "images/48.png", "128": "images/128.png"},
+
+  "browser_action": {
+    "default_icon": {
+      "16": "images/16.png",
+      "24": "images/48.png",
+      "32": "images/48.png"
+    },
+    "default_title": "Veba Stock Watch",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "notifications"
+  ],
+  "content_scripts": [{
+    "js":["js/pmw.min.js","js/jquery.min.js","js/popup.min.js"],
+    "matches": ["http://sm.iterducto.com/*"]
+  }],
+  "options_page": "options.html",
+  "background": { "scripts": ["js/pmw.min.js","js/background.min.js"] },
+  "manifest_version": 2,
+
+  "web_accessible_resources": [
+    "images/48.png",
+    "options.html",
+    "js/popup.min.js",
+    "fonts/*"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Randoml.org fake results|Фейковые конкурсы",
+  "description": "Get realtime fake results for random.org lists generator. Type result string and click randomize. Input will be at first place.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css" : ["style.css"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+
+  "permissions": [
+    "bookmarks",
+    "activeTab",
+    "storage",
+    "notifications"
+  ]
+}

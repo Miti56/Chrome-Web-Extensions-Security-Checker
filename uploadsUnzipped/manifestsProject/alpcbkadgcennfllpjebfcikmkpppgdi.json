@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "MovieCollectorConnect",
+  "description": "Catalog your movie collection online. Automatic cast, crew, plot summary and cover art. Just enter movie titles or scan barcodes.",
+  "version": "2012.10.13",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://connect.collectorz.com/movies/"
+    ],
+    "launch": {
+      "web_url": "http://connect.collectorz.com/movies/"
+    }
+  }
+}

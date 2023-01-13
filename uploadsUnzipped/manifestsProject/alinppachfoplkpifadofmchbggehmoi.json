@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "TabTab - New tab page",
+    "description": "Boost your new tab page with Google Calendar\u2122, Speed Dial, Weather & more and increase your productivity",
+    "default_locale": "en",
+    "version": "2.1.4",
+    "background": {
+        "page": "background.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "dashboard.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.wips.com/robots.txt*"
+            ],
+            "js": [
+                "libs/oauth/oauth2_inject.js"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "https://www.google.com/calendar/render?action=TEMPLATE&trp=false&sf=true&output=xml"
+            ],
+            "js": [
+                "libs/jquery.js",
+                "js/widgets/widget_calendar_cs.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        "libs/oauth/oauth2.html"
+    ],
+    "content_security_policy": "script-src 'self'  https://*.facebook.com  https://*.twitter.com  https://*.google.com  https://*.gstatic.com   https://*.googleapis.com  https://*.google-analytics.com https://ssl.google-analytics.com; object-src 'self'",
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "history",
+        "webRequest",
+        "geolocation",
+        "management",
+        "unlimitedStorage"
+    ],
+    "optional_permissions": [
+        "background"
+    ],
+    "icons": {
+        "19": "images/icons/ico19.png",
+        "32": "images/icons/ico32.png",
+        "48": "images/icons/ico48.png",
+        "128": "images/icons/ico128.png"
+    }
+}

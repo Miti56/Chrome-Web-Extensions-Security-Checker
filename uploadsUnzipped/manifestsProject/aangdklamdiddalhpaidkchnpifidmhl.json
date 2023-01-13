@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js", "ping.js" ]
+   },
+   "browser_action": {
+      "default_icon": "Logo_48.png"
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "is_default": true,
+         "prepopulated_id": 3,
+         "search_url": "http://www.bing.com/search?FORM=U344DF&PC=U344&q={searchTerms}",
+         "suggest_url": "http://www.bing.com/osjson.aspx?FORM=U344DF&PC=U344&query={searchTerms}"
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_ExtnDescription__",
+   "icons": {
+      "128": "Logo_128.png",
+      "16": "Logo.png",
+      "48": "Logo_48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_ExtnName__",
+   "permissions": [ "http://g.ceipmsn.com/*", "http://*.bing.com/*", "https://*.bing.com/*", "cookies", "management" ],
+   "short_name": "__MSG_ExtnName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0.16"
+}

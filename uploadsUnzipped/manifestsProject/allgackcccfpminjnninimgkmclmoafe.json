@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Wordpress Site Manager",
+  "description": "This extension stores Wordpress sites. It also brings more functionality to the theme editor.",
+  "version": "1.5",
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": { "16": "images/wordpress.png",
+           "48": "images/wordpress.png",
+          "128": "images/wordpress.png" },
+  "browser_action": {
+    "default_icon": "images/wordpress.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*"],
+    "js": ["codemirror-compressed.js","jwerty.js","jquery.js","jquery-ui-1.10.0.custom.js","contentscript.js"],
+    "css": ["codemirror-dialog.css","codemirror.css"]
+  }]
+}

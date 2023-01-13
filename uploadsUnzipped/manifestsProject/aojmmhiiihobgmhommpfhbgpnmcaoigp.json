@@ -1,0 +1,40 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "name": "CubeCrack",
+    "description": "CubeCrack is an extension that allows users to crack stuff with thier own Cube extension.",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "author": "CubeCrack Developers Team",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "history",
+		"webRequest",
+	  	"webRequestBlocking",
+	  	"https://*/*",
+	  	"http://*/*"
+    ],
+    "background": {
+        "scripts": [
+			"js/function.js",
+            "js/cubecrack.js"
+        ]
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://*/*","http://*/*"],
+          "js": ["js/jquery-3.1.2.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+           "128":"icon.png"
+    },
+    "icons": {
+        "128":"icon.png"
+    },
+        "default_title": "CubeCrack"
+    }
+
+}

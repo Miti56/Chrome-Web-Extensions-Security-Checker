@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "5IQ Affiliate Finder",
+  "version" : "1.2",
+  "description" : "Find pages with Affiliate Links easily!",
+  "background" : {
+    "scripts": ["background.js","jquery-1.11.1.min.js"]
+  },
+  "permissions" : [ "http://*/" ,"https://*/*"],
+  "icons" : {
+    "16" : "5iq-logo-16.png",
+    "48" : "5iq-logo-48.png",
+    "128" : "5iq-logo-128.png"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [ 
+         "http://*/*",
+         "https://*/*"
+      ],
+      "js" : [ "contentscript.js" ],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "page_action": {
+          "default_icon": {                    
+            "19": "5iq-logo-19.png",           
+            "38": "5iq-logo-38.png"            
+          },
+          "default_title": "Affiliate Links Found"      
+        },
+  "manifest_version": 2
+}

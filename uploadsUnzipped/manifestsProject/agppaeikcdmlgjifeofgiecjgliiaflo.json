@@ -1,0 +1,16 @@
+{
+    "name": "Joe Lopez Law",
+    "description": "Joe Lopez proudly fights for injury victims throughout Texas.",
+    "app": {
+        "urls": ["http://www.joelopezlaw.com/"],
+        "launch": {
+            "web_url": "http://www.joelopezlaw.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Webový odpad",
+    "description": "Jednoduché nahlášení webového odpadu.",
+    "version": "1.0.3",
+    "applications": {
+        "gecko": {
+            "id": "eu.michalvasicek.webovyodpad"
+        }
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/",
+        "http://odpad.michalvasicek.eu/"
+    ]
+}

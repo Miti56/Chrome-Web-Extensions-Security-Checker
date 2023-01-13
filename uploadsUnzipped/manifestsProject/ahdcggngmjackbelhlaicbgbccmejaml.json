@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Личная касса",
+  "short_name": "ЛК",
+  "description": "«Личная Касса» — Ваш помощник по оплате различных услуг. Используя «Личную Кассу», Вы дарите себе свободное время!",
+  "version": "1.2",
+  "app": {
+    "launch": {
+      "web_url": "http://my.kassa24.kz?usp=chrome_app"
+    }
+  },
+  "author": "ТОО «Astana-Plat»",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

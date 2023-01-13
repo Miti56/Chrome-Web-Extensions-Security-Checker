@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Disable Reddit Modal Comments",
+  "description": "Disables Reddit's comment overlay feature.",
+  "version": "1.1",
+  "author": "Robby King",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.reddit.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "icons":	{
+  			"16": "icon16.png",
+           	"48": "icon48.png",
+          	"128": "icon128.png"
+          	}
+}

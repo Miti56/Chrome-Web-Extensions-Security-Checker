@@ -1,0 +1,78 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Music Player",
+   "short_name" : "Music Player",
+  "version": "1.1.5",
+  "manifest_version": 2,
+  "description": "Free Music Player,no ads. Powered by Youtube. Scrobble your favorite music.",
+  "background": {"page": "background.html"},
+  
+
+  "homepage_url": "http://musicaplayer.net",
+
+  
+ "browser_action": {
+    "default_title": "Musica Player",
+    "default_icon": "images/extension_icon_80x80.png",
+    "default_popup": "web/index.html"
+	
+  },
+  
+  "commands": {
+	  "next_track": {
+		"suggested_key": {
+		  "default": "MediaNextTrack"
+		},
+		"description": "Next Track"
+	  },
+	  "prev_track": {
+		"suggested_key": {
+		  "default": "MediaPrevTrack"
+		},
+		"description": "Previous Track"
+	  },
+	  "play_pause": {
+		"suggested_key": {
+		  "default": "MediaPlayPause"
+		},
+		"description": "Play/Pause Track"
+	  },
+	  "volume_up": {
+		
+		"description": "Volume Up"
+	  },
+	  "volume_down": {
+		
+		"description": "Volume Down"
+	  }
+	},
+  
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://mobile.grupochiado.net/ https://localhost:8443/ https://curyous.com https://connect.facebook.net https://musicaplayer.net https://graph.facebook.com/ https://192.168.1.33:8443/;  object-src 'self'",
+
+	"permissions": [
+        "webRequest",
+        "webRequestBlocking",
+		"notifications",
+        "*://*.youtube.com/*",
+        "http://curyous.com/*",
+		"http://192.168.1.33:8080/",
+		"tabs",
+        "http://*/",
+        "https://*/"
+    ],
+  "web_accessible_resources": [
+    "icon.png"
+  ],
+  
+  "icons" : {
+    "16" : "images/extension_icon_80x80.png",
+	"19" : "images/extension_icon_80x80.png",
+    "48" : "images/extension_icon_80x80.png",
+    "128" : "images/extension_icon_80x80.png"
+  }
+  
+}
+ 
+
+

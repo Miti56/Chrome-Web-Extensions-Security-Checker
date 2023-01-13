@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "FamiliCircle",
+    "description": "Keeping every family connected",
+    "version": "0.1",
+
+    "permissions": [
+        "tabs", "http://*/*"
+    ],
+
+    "content_scripts" : [{
+        "matches" : [ "*://mail.google.com/*"],
+        "js" : ["grandmabook.js"],
+        "css": ["grandmabook.css"]
+    }],
+
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+
+    "browser_action": {
+        "default_icon": "icon128.png",
+        "default_title": "Grandmabook!",
+        "default_popup": "popup.html"
+    },
+
+    "manifest_version": 2,
+
+    "homepage_url": "http://www.familicircle.com"
+}

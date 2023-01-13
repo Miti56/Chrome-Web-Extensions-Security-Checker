@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Blockchain Explorer",
+  "short_name": "Block Info",
+  "version": "1.0.7",
+  "manifest_version": 2,
+  "description": "Easy blockchain explorer and crypto price tracker in an extension!",
+  "icons":{
+    "16":"icons/icon.png",
+	"48":"icons/icon.png",
+    "128":"icons/icon.png"
+  },
+  
+  
+  "browser_action": {
+    "default_popup":"src/browser_action/browser_action.html",
+    "default_icon": "icons/icon.png",
+    "default_title": "Blockchain Explorer"
+  },
+  "permissions": [ "webNavigation", "webRequest", "webRequestBlocking", "cookies", "tabs", "activeTab", "storage", "https://*.google.com/*"],
+  "background": {
+      "persistent": true,
+      "scripts": ["js/jquery.min.js", "src/bg/background.js"]}
+    }

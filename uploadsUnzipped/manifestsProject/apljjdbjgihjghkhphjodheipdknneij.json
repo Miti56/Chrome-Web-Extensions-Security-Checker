@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "IMABMopub",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Create line itme automatically in Mopub",
+  "browser_action": {
+    "default_icon": "./images/im_icon.png",
+    "default_title": "IMABMopub",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "https://*/*",
+    "http://*/*",
+    "contextMenus",
+    "notifications",
+    "storage"
+  ],
+  "icons": {
+    "16": "./images/icon16.png",
+    "48": "./images/icon48.png",
+    "128": "./images/icon128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mopub.com/*"],
+      "js": ["./js/jquery-3.3.1.min.js","./js/bililiteRange.js","./js/jquery.sendkeys.js","./js/alasql.min.js","./js/xlsx.core.min.js", "./js/im_mopub.js"]
+    }
+  ]
+}

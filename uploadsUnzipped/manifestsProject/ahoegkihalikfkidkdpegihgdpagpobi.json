@@ -1,0 +1,43 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+    "default_icon": "logotype.png",
+    "default_popup": "popup.html",
+    "default_title": "View table"
+  },
+  "background": {
+    "scripts": ["background.js", "vendor.bundle.js", "background.bundle.js"]
+  },
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["vendor.bundle.js", "content.bundle.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["icon-8.png"],
+  "description": "This extension for view list of last downloads. Test version.",
+  "icons": {
+    "128": "icon-128.png",
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png"
+  },
+  "manifest_version": 2,
+  "name": "View table",
+  "short_name": "View table",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "storage",
+    "<all_urls>",
+    "alarms",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "version": "0.3"
+}

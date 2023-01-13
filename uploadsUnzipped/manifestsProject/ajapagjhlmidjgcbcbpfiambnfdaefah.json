@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "La Barbe !",
+  "short_name": "la barbe extension",
+  "version": "0.0.1",
+  "author": "Claire Zuliani",
+  "description": "Extension highlighting male-dominated assemblies spotted by La Barbe, a French direct action feminist group",
+  "homepage_url": "https://beardy-website.herokuapp.com",
+  "icons": {
+    "19": "icons/icon-19.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+    },
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+   ],
+   "content_scripts": [
+     {
+       "matches":  ["*://*/*"],
+       "css": ["css/styles.css"]
+     },
+     {
+       "matches":  ["*://*/*"],
+       "js": ["content.js"]
+     }
+  ],
+  "web_accessible_resources": [ "img/*.png" ],
+  "manifest_version": 2
+}

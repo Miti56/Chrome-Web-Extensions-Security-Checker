@@ -1,0 +1,42 @@
+{
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "img/iconNOBG.png",
+    "default_popup": "panel.html",
+    "default_title": "Quizy"
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "css": [],
+      "js": [
+        "lib/jquery-3.2.0.min.js",
+        "js/core.js"
+      ],
+      "matches": [
+        "*://quizygame.com/escape-room*",
+        "file:///*escape-room*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "Remote control plugin.",
+  "icons": {
+    "64": "img/iconNOBG.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhk+soJzaH/+uLNvfepl1YX0WyN9zIbyc0yu7g1ZVbfDvkfJ3XMFwa6yl7ECPVBGNKGeoOtuFrOrFvv8S/c0K1b2VLBZ2g668XSZu0Kf7GPtXjzt5sXih7HmztjDf2vgJaxFI0ln9kQFmzQ/zkEYMfWHG8qdsZrSg8DG0nS9ptkubukNetw+GpiozCteJLtqn2BvCcrY5hRssYi5fiqKSWhn01Mh1yGVbzHhXGpIpjIOyhfvYv+P11ITVgoLBrdB7NRR/6RtUTPzvvkV5xUcRf0oisIABvIbhGruhG89kM3Z78377DUugxWgVKUMFBnqYXUQDDIcpWelyte5xGkmqEwIDAQAB",
+  "manifest_version": 2,
+  "name": "QuizyPlugin",
+  "permissions": [
+    "nativeMessaging",
+    "tabs",
+    "activeTab"
+  ],
+  "short_name": "QuizyPlugin",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.13"
+}

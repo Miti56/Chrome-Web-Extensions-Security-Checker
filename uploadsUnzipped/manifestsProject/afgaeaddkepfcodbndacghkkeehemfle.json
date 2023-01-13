@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "ForIP Tecnologia - Extensão",
+	"short_name": "ForIP",
+	"version": "1.6.9",
+	"description": "Extensão onde o usuário poderá ver: Histórico de ligações, Escutar gravações, Rediscagem, Agenda, Desvio e Callcenter",
+	"icons": {
+		"16": "icons/forip-16.png",
+		"32": "icons/forip-32.png",
+		"64": "icons/forip-64.png"
+	},
+	"browser_action": {
+		"default_title": "ForIP Chat",
+		"default_icon": "icons/forip-16.png",
+		"default_popup": "popup/hub.html"
+	},
+	"background": {
+		"scripts": ["popup/notificacao.js"],
+		"persistent": true
+	},
+    "permissions": [
+        "storage",
+        "alarms",
+        "notifications",
+        "tabs",
+        "https://*/*",
+        "<all_urls>"
+    ],
+	"minimum_chrome_version": "23",
+	"content_security_policy": "script-src 'self' 'unsafe-eval' ; object-src 'self'"
+}

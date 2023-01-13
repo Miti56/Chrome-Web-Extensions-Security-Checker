@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Amazon Orders",
+  "version": "1",
+  "icons": { "16": "icon-16.png",
+           "48": "icon-48.png",
+          "128": "icon.png" },
+  "content_scripts": [
+    {
+        "matches": ["https://*.amazon.co.uk/*order-history*"],
+        "js": ["content_script.js"]
+    }
+  ]
+}

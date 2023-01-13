@@ -1,0 +1,63 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "__MSG_extName__",
+    "description": "__MSG_extDescription__",
+	"version": "1.1",
+	"default_locale": "en",
+	"browser_action": {
+		"default_icon": {
+			"128": "images/icon_128.png"
+		}
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+	"icons": { 
+		"128": "images/icon_128.png"
+	},
+	"permissions": [
+		"cookies",
+		"*://*.instagram.com/*",
+		"notifications",
+		"<all_urls>",
+		"contextMenus",
+		"unlimitedStorage",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+        "tabs",
+        "management"
+	],
+	"content_scripts" : [
+		{
+			"matches" : [ "*://*.instagram.com/*"],
+			"js" : [
+				"js/jquery.min.js",
+				"js/toastr.min.js",
+				"i18n.js",
+				"js/i18n.js",
+				"js/intro.min.js",
+				"js/material-components-web.min.js",
+				"js/jquery.contextMenu.min.js",
+				"js/jquery.ui.position.min.js",
+				"js/FileSaver.min.js",
+				"utils.js",
+				"inject.js",
+				"inject-instagram-dm.js"
+			],
+			"run_at": "document_start",
+			"all_frames" : false
+		},
+		{
+			"matches" : [ "*://*.instagram.com/*"],
+			"js" : ["inject-instagram-badge.js"],
+			"run_at": "document_end",
+			"all_frames" : true
+		}
+	],
+	"web_accessible_resources": ["images/*", "js/*", "onInstalled/*", "options/*", "css/*", "html/*"],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

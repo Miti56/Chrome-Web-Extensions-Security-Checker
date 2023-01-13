@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "Was Pluto Just Vindicated?",
+  "short_name": "Was Pluto Just Vindicated?",
+ 	"version": "1.8",
+	"description": "Pluto once reigned not only as the chthonic figure of Greek and Roman mythology.",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Was Pluto Just Vindicated?"
+  },
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

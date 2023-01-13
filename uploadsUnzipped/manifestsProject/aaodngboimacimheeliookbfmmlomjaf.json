@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Barbie Puppy Rescue",
+
+  "short_name": "Barbie Puppy Rescue",
+
+  "version": "1.0.2",
+  "description": "Play Barbie Puppy Rescue Now!",
+
+  "homepage_url": "https://appmgr.pw/c/juegos-de-decoracion/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Barbie Puppy Rescue",
+
+      "default_popup": "popup.html"
+  }
+}

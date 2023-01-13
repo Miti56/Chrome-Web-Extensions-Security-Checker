@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+"short_name": "MyAps",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "name": "Cookie Cooking Jam Online Blast Games",
+  "container": "GOOGLE_DRIVE",
+  "description": "Candy Crush Saga, Clash of clans, gta v, minecraft, subway surfers, temple run 2, pokemon go, clash royale the sims",
+     "permissions": [ "webview", "power", "storage", "videoCapture", "geolocation", "pointerLock", "system.display", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "accessibilityFeatures.read", "accessibilityFeatures.modify" ],
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "1.1",
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["skript.js"],
+      "persistent": false
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

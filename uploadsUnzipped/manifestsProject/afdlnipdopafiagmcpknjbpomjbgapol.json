@@ -1,0 +1,20 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "description": "Navigates to an instragram users' page by typing i <space> username into the omnibox",
+   "icons": {
+      "128": "img/icons/128.png",
+      "16": "img/icons/16.png",
+      "48": "img/icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkVovDpawpsCcjT3dlvseXon/V7BX/prd99lxkzRr7Ill6T/pWgxH19VbCfPVd30bmSxionIsFJPSQddboX8TOvCf+6Ee5Y+iN6ZrtQ0+PxXLW2gpBGo+ba/PTcw1BCyxLettEwNr+xdWCuekm7+MeaQVgdw8VXBU5t0hMaFqXUGHaHmFDQ7hUSWPbN+QeMyt/lbkLDEU0jc4dSqki9WK44+5K7IIjKout+PuR3FfZLe0FynWjg/4aEMtwSNjsL8GvE8geePUk0vfvDRZPakXIzByC1v7T7nny1AlE2tOtSEx49r2z5d84u55DIlXm9CFNvmKCbQbc/tkw63cvRXHLwIDAQAB",
+   "manifest_version": 2,
+   "name": "Omnibox Instagram",
+   "omnibox": {
+      "keyword": "i"
+   },
+   "permissions": [ "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

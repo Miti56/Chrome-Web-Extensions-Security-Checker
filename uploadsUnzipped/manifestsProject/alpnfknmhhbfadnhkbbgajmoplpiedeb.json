@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "offline_enabled": true,
+  "version": "1.0.8",
+  "manifest_version": 2,
+  "app": {
+    "launch": {
+      "local_path": "main.html",
+	  "container": "panel",
+	  "width": 800,
+	  "height": 700
+    }
+  },
+  "icons": {
+  	"16": "thumb_16x16.png",
+    "128": "thumb_128x128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

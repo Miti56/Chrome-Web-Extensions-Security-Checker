@@ -1,0 +1,25 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "blocks the facebook newsfeed",
+  "background": {"scripts": [
+    "jquery-1.9.1.min.js",
+    "background.js"
+  ]},
+  "name": "fb control",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "http://www.facebook.com/*",
+      "https://www.facebook.com/*"
+    ],
+    "js": [
+      "jquery-1.9.1.min.js",
+      "fb_control.js"
+    ]
+  }],
+  "manifest_version": 2,
+  "version": "0.22"
+}

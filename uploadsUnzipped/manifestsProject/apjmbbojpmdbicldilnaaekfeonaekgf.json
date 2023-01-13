@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "BirthDays",
+  "description": "Copy Your Content On Single Click",
+  "version": "2.0",
+
+  "browser_action": {
+	"default_icon":"common/icon-64.png",     
+    "default_popup": "common/popup.html"
+  },
+
+
+  "background": { "scripts": ["common/jquery.min.js","common/jquery-ui.min.js","background.js","common/sample.js","common/common.js"] },
+
+  "permissions": [
+	"contextMenus",	
+    "clipboardWrite",
+	"storage",
+    "https://secure.flickr.com/",	
+ "http://*/",
+ "https://*/",
+ "activeTab" ,
+ "tabs",
+ "webNavigation",
+    "privacy"],
+
+ "content_scripts": [ {
+      "all_frames": true,
+      "css": ["common/helper.css"],
+      "js": ["common/jquery.min.js","common/jquery-ui.min.js","common/classlib.js"],
+      "matches": [ "http://*/*", "https://*/*", "file:///*","<all_urls>" ],
+      "run_at": "document_end",
+       "content_security_policy": "script-src 'self'"
+   } ],
+   "web_accessible_resources": ["common/icon-64.png"]
+ 
+}
+
+
+

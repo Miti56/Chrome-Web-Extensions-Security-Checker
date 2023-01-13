@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "アフリカTV配信通知",
+    "description": "アフリカTVの配信通知ツール。お気に入り登録しているBJの配信開始時に通知を受け取ることができます。",
+    "version": "0.0.0.4",
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_title": " アフリカTV配信通知",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+      "128": "images/notification_icon.jpg"
+   },
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "externally_connectable":{
+  		"matches": [ "*://accounts.afreecatv.jp/*"]
+	},
+    "permissions": [
+        "background",
+        "tabs",
+        "<all_urls>",
+		"storage",
+		"gcm",
+		"management",
+    	"notifications",
+    	"webRequest",
+    	"webRequestBlocking"
+    ]
+}

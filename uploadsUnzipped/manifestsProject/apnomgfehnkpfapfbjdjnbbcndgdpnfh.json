@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "GzGaRun",
+	"version" : "1.2.6",
+	"description" : "平台扩展程序，用来进行数据通信",
+	"incognito" : "split",
+	"background" : {
+		"scripts" : ["background.js"]
+	},
+	"externally_connectable" : {
+		"matches" : ["*://10.160.25.240/*", "*://paip.gz/*",
+				"*://wuchao.rpsoft/*", "*://10.160.27.113/*",
+				"*://10.161.82.60/*", "*://119.29.181.140/*"]
+	},
+	"icons" : {
+		"16" : "瑞普友信.png",
+		"48" : "瑞普友信.png",
+		"128" : "瑞普友信.png"
+	},
+	"browser_action" : {
+		"default_icon" : "瑞普友信.png",
+		"default_title" : "页面数据通讯应用"
+	},
+	"permissions" : ["nativeMessaging", "tabs", "*://*/*", "activeTab"],
+	"minimum_chrome_version" : "40",
+	"manifest_version" : 2
+}

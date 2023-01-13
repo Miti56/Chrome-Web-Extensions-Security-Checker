@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "SiteMon",
+    "description":
+        "SiteMon is a Google Chrome extension that monitors user behavior in web surfing.",
+    "version": "1.0.1",
+    "manifest_version": 2,
+    "icons": {
+        "128": "icon.png",
+        "48": "icon.png",
+        "16": "icon.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "options_page": "options.html",
+    "background": {
+        "scripts": ["background.min.js"],
+        "persistent": true
+    },
+    "permissions": ["storage", "notifications", "tabs", "idle"]
+}

@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "BOO! the bad web.",
+  "description": "一起抵制爛網站!",
+  "version": "1.2",
+  "icons": {
+    "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "credentials.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "identity"
+  ],
+  "content_scripts" : [{  
+    "matches" : ["https://www.google.com/*"],  
+    "css" : ["css/content.css"],  
+    "js" : ["js/jquery.min.js","content.js"]  
+  }],
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "1058022719696-f5e889eociaolhom5tnai9t5kqg81u1n.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApCE2XaZja+XWOF5b4PYL2YIvk7pe4V5m75zkd9KONN1qNDa39/nPuxN6xbkRNVKRBd0g5GS+lNqCd/DXSkehQo7bS87GYb/MTA0sHR7ocUP3LVL+fVp2zdeML3QidzQ5ovnPayO4CGHN7jmovgz0gYjki17lNSeDNHDCj8YPJg2Pb8LnD08Q20LK1GB31qi4w8/DIn540dueQbuAzu0heC05/HXGnB4RePZmXJBFet8MLaG2ZvQqDmrro4+UuY1hSgrV5acqcVM8w5c1g05SEtFsdDvmEA/EWsLGerSWgdbTOrvHah4KJsu2P7ifilPEem+h+0I1nrX07WWNx+VgdQIDAQAB",
+  "web_accessible_resources": [
+    "img/*.png"
+  ]
+}

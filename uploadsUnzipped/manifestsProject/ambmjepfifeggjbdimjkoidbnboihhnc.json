@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Jogos de Beleza",
+ "manifest_version": 2,
+ "short_name": "Jogos de Beleza",
+ "description": "Você gosta de jogos de beleza?",
+ "version": "1",
+ "icons": {
+	"128": "icone.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://vectoide.xyz/c/beleza/"
+	}
+  }
+}

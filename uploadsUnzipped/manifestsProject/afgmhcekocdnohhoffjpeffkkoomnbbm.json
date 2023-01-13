@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Home Recipe Manager",
+  "short_name": "Home Recipe Manager",
+  "description": "Manage all your recipes, sync them with google drive, keep them safely with you! It's that simple!",
+  "version": "1.1.9",
+  "minimum_chrome_version": "46",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqhNmHXoy15IHm12/26IjUZsU2lHA35BjbKzLVDOeQEeoJTucqDJ2nbnNVoFC+WV/sI5zV5AGhDAIVKF4wfuXaFKdjfk5fDn4PwrB5oyVGb2TXnSQgUT1eebTidNP4XcKJdUOrPi/v4VK/bbCnhK/2US6E/ERIPCYymmsCf7seYeC1RDLLZGe7+bKlWE3NHt7U6W7839n+mmhmKLCRaVeC0dqVmFNyEvZmBAVfr69j6zL+Tx7cMIHlh3LfHvfZHqUtHgdkqXZNPB8P7Cqbe2GOJyIf3eoBJppAMcDRdY22QMBysFPgcYOlIJVLSMs5xNByU+JJUHEzaMPIzbC0hsD9wIDAQAB",
+  "permissions": [
+    "storage",
+    "webview"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [ "background.js"]
+    }
+  }
+}

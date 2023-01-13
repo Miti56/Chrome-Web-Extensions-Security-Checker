@@ -1,0 +1,31 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Vocaloid: Meiko",
+  "version": "1.0",
+  "description": "a vocaloid chrome theme of Meiko ",
+  "icons": { "128": "MeikoIcon.png" },
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/MeikoThemeToolbar.png",
+      "theme_toolbar" : "images/MeikoThemeToolbar2.png",
+      "theme_ntp_background" : "images/MeikoBG.png",
+      "theme_tab_background" : "images/MeikoUnusedTab.png"
+    },
+    "colors" : {
+      "frame" : [71, 105, 91],
+      "toolbar" : [207, 221, 192],
+      "ntp_text" : [20, 40, 0],
+      "ntp_link" : [36, 70, 0],
+      "ntp_section" : [207, 221, 192],
+      "button_background" : [255, 255, 255]
+    },
+    "tints" : {
+      "buttons" : [0.33, 0.5, 0.47]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom"
+      
+    }
+  }
+}
+

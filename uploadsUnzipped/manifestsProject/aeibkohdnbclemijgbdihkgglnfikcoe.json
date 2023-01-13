@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name":"[Beta] Anqlave Cloud File Protection",
+   "short_name": "ACFP",
+   "description":"ACFP protects your sensitive data in the cloud.",
+   "version":"0.0.0.3",
+   "manifest_version":2,
+   "container": ["DOMAIN_INSTALLABLE","GOOGLE_DRIVE"],
+   "api_console_project_id": "648639967039",
+   "icons":{
+      "128":"icon_128.png"
+   },
+   "app":{
+      "urls":[
+         "https://agfp.anqlave.net/"
+      ],
+      "launch":{
+         "web_url":"https://agfp.anqlave.net/"
+      }
+   }
+}

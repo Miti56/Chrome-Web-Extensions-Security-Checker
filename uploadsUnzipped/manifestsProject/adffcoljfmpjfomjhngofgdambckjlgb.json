@@ -1,0 +1,28 @@
+  {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "calc-ptt-words",
+    "version": "1.0.3",
+    "description": "Calcuate words of a post on PTT",
+    "permissions": ["declarativeContent", "https://www.ptt.cc/bbs/*"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "icons":{
+      "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "manifest_version": 2
+  }

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ServBasic",
+  "version": "0.0.0.1",
+  "description": "Free & Mobile-Friendly Pest Control Software",
+  "icons": {
+    "128": "icons/128.png",
+	"16": "icons/16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "407661611664",
+  "app" : {
+    "launch" : {
+      "web_url" : "http://servbasic.servsuite.net/"
+    }
+  }
+}

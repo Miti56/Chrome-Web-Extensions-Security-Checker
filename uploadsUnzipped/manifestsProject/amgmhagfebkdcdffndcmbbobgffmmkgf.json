@@ -1,0 +1,5 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"container": ["DOMAIN_INSTALLABLE"],
+"api_console_project_id": "160021678790",
+"name":"Goobric Web App","description":"","version":"2","manifest_version":2,"app":{"urls":["https://script.google.com/a/macros/newvisions.org/s/AKfycby4mwRwQEwtecDQbD5vrA2opzkC8W0v9MfQbrWBPLUPvjTWero/exec"],"launch":{"web_url":"https://script.google.com/a/macros/newvisions.org/s/AKfycby4mwRwQEwtecDQbD5vrA2opzkC8W0v9MfQbrWBPLUPvjTWero/exec"}},"icons":{"128":"script-icon_128.png"}}

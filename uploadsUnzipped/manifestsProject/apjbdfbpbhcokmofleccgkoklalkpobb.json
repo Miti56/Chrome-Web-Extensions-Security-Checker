@@ -1,0 +1,46 @@
+{
+   "background": {
+      "scripts": [ "ext/common.js", "ext/background.js", "lib/compat.js", "lib/adskiller.js", "lib/punycode.js", "lib/publicSuffixList.js", "lib/sha1.js", "lib/jsbn.js", "lib/rsa.js", "lib/zepto.min.js", "lib/adskillerLib.js", "modules/utils.js", "webrequest.js", "messageResponder.js", "popupBlocker.js", "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "ext/common.js", "ext/content.js", "cssProperties.js", "include.preload.js" ],
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "include.postload.js" ],
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "Ads Killer+: Blocks banners, text ads, video ads, pop-UPS, pop-up Windows and advertising tracking systems.",
+   "devtools_page": "devtools.html",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "64": "icons/icon64.png"
+   },
+   
+   "manifest_version": 2,
+   "name": "Ads Killer+",
+   "options_page": "options/options.html",
+   "page_action": {
+      "default_icon": "icons/icon19-whitelisted.png",
+      "default_popup": "popup.html",
+      "default_title": "Ads Killer+"
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "contextMenus", "webRequest", "webRequestBlocking", "webNavigation", "storage", "unlimitedStorage", "notifications", "management", "tabs", "\u003Call_urls>"],
+   "short_name": "Ads Killer+",
+   "storage": {
+      "managed_schema": "managed-storage-schema.json"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.99.70",
+   "web_accessible_resources": [ "block.html", "select.html" ]
+}

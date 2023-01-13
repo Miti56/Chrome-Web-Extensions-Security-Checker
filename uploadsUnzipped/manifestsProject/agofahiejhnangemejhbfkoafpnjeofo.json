@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name": "École Mother Teresa Catholic School",
+	  "short_name": "EMTS",
+	  "description": "École Mother Teresa Catholic School",
+	  "version": "2",
+	  "icons": { "128": "icon.png" },
+	  "app": {
+	    "urls": [
+	      "http://motherteresa.rdcrs.ca/"
+	    ],
+	    "launch": {
+	      "web_url": "http://motherteresa.rdcrs.ca/"
+	    }
+	  },
+	  "permissions": ["geolocation"],
+	  "manifest_version": 2
+	}

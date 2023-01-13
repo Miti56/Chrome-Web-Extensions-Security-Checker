@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "WithSmilies",
+	"version": "0.7",
+	"description": "Accès rapide aux smilies du WithSmilies",
+	"manifest_version": 2,
+	"icons": {
+		"16": "icones/icone16.png",
+		"48": "icones/icone48.png",
+		"128": "icones/icone128.png"
+	},
+	"browser_action": {
+		"default_icon": "icones/icone19.png",
+		"default_popup": "pages/popup.html"
+	},
+	"permissions": [
+		"tabs", 
+		"unlimitedStorage",
+		"http://withsmilies.net"
+	]
+}

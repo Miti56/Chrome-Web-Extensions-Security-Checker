@@ -1,0 +1,21 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "Last Tab",
+    "description": "Opens a new tab when the last tab is closed instead of closing the window.",
+    "version": "1.0",
+    "icons": {
+        "128": "icon-project.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "options_page": "options.html",
+    "content_security_policy": "script-src 'self' 'unsafe-eval';  object-src 'self'",
+    "permissions": [
+        "storage",
+        "<all_urls>",
+        "activeTab",
+        "tabs"
+    ]
+}

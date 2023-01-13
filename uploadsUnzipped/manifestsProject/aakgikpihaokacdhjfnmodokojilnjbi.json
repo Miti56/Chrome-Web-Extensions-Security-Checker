@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Atv Traffic",
+
+  "short_name": "Atv Traffic",
+
+  "version": "1.0.2",
+  "description": "Play Atv Traffic on your browser",
+
+  "homepage_url": "https://appstatus.pw/c/juegos-multijugador/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Atv Traffic",
+
+      "default_popup": "popup.html"
+  }
+}

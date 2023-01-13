@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Planning : suivi d’activité pour l’entreprise",
+  "short_name ": "Planning",
+  "description": "Suivi de l'activité des collaborateurs par demi-journée avec synthèse hebdomadaire. L’utilisation est très simple, sans paramétrage.",
+  "version": "1.18",
+  "manifest_version": 2,
+  "author": "Marc Bordessoule",
+  "icons": {
+    "128": "planning128v3.png",
+    "16" : "planning16v3.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "130950613613",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://planning-frontend.appspot.com/"
+    }
+  }    
+}

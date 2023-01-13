@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "main.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "dialog.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self';",
+   "description": "Фильтр - родительский контроль ограничит доступ Ваших детей к нежелательным сайтам.",
+   "icons": {
+      "128": "128.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "16",
+   "name": "Доступ 18+",
+   "short_name": "Доступ 18+",
+   "permissions": [ "http://*/*", "https://*/*", "tabs", "webNavigation", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.4.6"
+}

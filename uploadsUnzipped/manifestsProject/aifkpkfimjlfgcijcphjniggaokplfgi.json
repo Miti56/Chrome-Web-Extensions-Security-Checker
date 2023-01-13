@@ -1,0 +1,16 @@
+{
+  "app": {
+    "urls": ["*://www.coffeedoggames.com/games/luckysevenstars/html5/"],
+    "launch": {"web_url": "http://www.coffeedoggames.com/games/luckysevenstars/html5/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "An addictive start bursting puzzle game.",
+  "name": "Lucky 7 Stars",
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "icons": {"128": "128.png"},
+  "manifest_version": 2,
+  "version": "1.0.2"
+}

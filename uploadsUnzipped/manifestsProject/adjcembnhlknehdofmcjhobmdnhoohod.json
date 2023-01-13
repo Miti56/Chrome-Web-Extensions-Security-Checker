@@ -1,0 +1,9 @@
+{"browser_action": {"default_icon": "128-img.png", "default_title": "Flowers Extension"},
+
+ "icons": {"128": "128-img.png"},
+
+ "default_locale": "en", "background": {"scripts": ["main.js"]},
+
+ "name": "__MSG_extTitle__", "description": "__MSG_locDesc__", "version": "3.0.8", "chrome_url_overrides": {"newtab": "newtab.html"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", "permissions":["bookmarks"], "manifest_version": 2}

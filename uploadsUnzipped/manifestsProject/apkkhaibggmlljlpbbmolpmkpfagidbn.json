@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "uTabs",
+    "manifest_version": 2,
+    "version": "1.2",
+    "description": "Save your open tabs so you can re-open them in the future.",
+    "browser_action": {
+        "default_title": "Click to open ",
+        "default_icon": "images/uTabs.png",
+		"default_popup": "html/popup.html"
+    },
+    "icons": { "16": "images/uTabs.png",
+           "48": "images/uTabs.png",
+          "128": "images/uTabs.png" },
+ "background": {
+        "scripts": ["JS/background.js"]
+    },
+  "permissions": [
+        "tabs", "http://*/*", "https://*/*", "storage","chrome://favicon/url", "activeTab"
+    ]
+}

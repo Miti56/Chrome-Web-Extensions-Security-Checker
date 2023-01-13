@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Find A Part",
+  "version": "1.0.0.2",
+"icons": { 
+           "48": "48.png",
+          "128": "128.png" },
+  "manifest_version": 2,
+  "description": "Find Used Car Parts quickly from our car part suppliers, simply fill in the form.",
+  "browser_action": {
+    "default_icon": "24.png", 
+    "default_title": "Find A Part",
+    "default_popup": "form.html"       
+  },
+  "permissions": [
+    "http://www.find-a-part.com/"
+  ]
+,
+"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

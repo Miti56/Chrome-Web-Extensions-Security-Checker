@@ -1,0 +1,4 @@
+{"icons": {"128": "128-main_logo.png"},
+ "update_url": "https://clients2.google.com/service/update2/crx", "description": "__MSG_info__", "name": "__MSG_localeAddTitle__", "version": "0.5.9", "browser_action": {"default_icon": "128-main_logo.png", "default_title": "Skull Trooper Fortnite New Tab & Images"},
+ "background": {"scripts": ["background_js.js"]},
+ "default_locale": "en", "manifest_version": 2, "chrome_url_overrides": {"newtab": "my_new_tab.html"}}

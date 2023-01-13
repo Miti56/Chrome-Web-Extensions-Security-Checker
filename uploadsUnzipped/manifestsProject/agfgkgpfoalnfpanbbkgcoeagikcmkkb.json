@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Panda Back",
+    "description": "Extension activates Panda Back cashback on eligible stores.",
+
+    "version": "1.3.0",
+
+    "icons": {
+        "48": "icon-48px.png",
+        "128": "icon-128px.png"
+    },
+
+    "web_accessible_resources": ["icon-*px.png", "css/*.css", "img/*.svg"],
+
+    "permissions" : [
+        "storage",
+        "activeTab",
+        "<all_urls>"
+    ],
+
+    "content_security_policy": "script-src 'self' https://my.pandaback.co/; object-src 'self'",
+
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["js/cashback.js"],
+            "run_at": "document_idle"
+        }
+    ],
+
+    "browser_action": {
+        "default_popup": "pages/popup.html"
+    },
+
+    "homepage_url": "https://pandaback.co/"
+}

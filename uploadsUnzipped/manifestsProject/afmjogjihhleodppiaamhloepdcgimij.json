@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+     "name":  "Zoho Assist - 1 Technician, 5 Computers FREE!",
+     "description" :  "Instantly support customers located anywhere using Zoho Assist, a remote support and remote access software.",
+     "version":"1.2",
+     "manifest_version":2,
+     "container": ["DOMAIN_INSTALLABLE"],
+     "api_console_project_id":"115738514853",
+     "app":  {
+         "urls"  :   [
+               "https://assist.zoho.com/"  
+               ],
+               "launch":{
+               "web_url":"https://assist.zoho.com/"
+               }
+               },
+               "icons" :  {
+               "128":"assist_icon_128.png"
+               }
+               }
+    

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Blocky Challenge",
+  "description": "A block collapse type game where achieve your target by removing same type blocks. ",
+  "version": "1.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://netfreedomgames.com/chrome_apps/blocky_challenge/index.html"
+    ],
+    "launch": {
+      "web_url": "http://netfreedomgames.com/chrome_apps/blocky_challenge/index.html"
+    }
+  }
+}

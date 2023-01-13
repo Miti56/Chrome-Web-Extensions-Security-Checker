@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Acervo Docentes FIA",
+	"version": "2.6",
+	"description": "Adiciona opção para anexar documento ao currículo Lattes para os professores da Fundação Instituto de Administração - FIA",
+	"icons": {
+		"128" : "icon128.png",
+		"48" : "icon48.png",
+		"16" : "icon16.png"
+	},
+	"page_action": {
+		"default_icon" : "icon16.png",
+		"default_popup": "popup.html",
+		"default_title": "AcervoDocentesFIA"
+	},
+	"background":{
+		"scripts": ["js/eventPage.js"]
+	},
+	"content_scripts": [
+		{
+			"matches" : ["https://wwws.cnpq.br/cvlattesweb/*"],
+			"js": [ "js/jquery-3.3.1.min.js", "js/jquery-ui.min.js", "js/content.js"],
+			"css": ["css/content.css","css/jquery-ui.min.css"],
+        	"all_frames": true
+		}
+
+	],
+	"permissions": [
+		"storage",
+		"tabs",
+		"contextMenus",
+		"webNavigation",
+		"declarativeContent",
+		"cookies",
+		"webRequest",
+		"contentSettings",
+		"https://wwws.cnpq.br/cvlattesweb/*",
+		"https://acervofia.websiteseguro.com/*",
+		"https://acervodocentes.fia.com.br/*",
+		"https://ajax.googleapis.com/*"
+	]
+}

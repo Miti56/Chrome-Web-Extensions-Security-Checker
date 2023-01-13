@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"chrome_url_overrides": {
+		"newtab": "blank.html"
+	},
+	"author": "Bing.Ge",
+	"short_name": "Search Engine",
+	"name": "Bing.Ge - Best Search Service",
+	"description": "Bing.Ge - Search,Mail,News,TV Shows,Sports,Finance,Weather,Politics,Movies,Music",
+	"chrome_settings_overrides": {
+		"homepage": "https://bing.ge",
+		"search_provider": {
+			"name": "name.__MSG_url_domain__",
+			"keyword": "keyword.__MSG_url_domain__",
+			"search_url": "https://bing.ge/search/?q={searchTerms}",
+			"favicon_url": "https://bing.ge/favicon.ico",
+			"encoding": "UTF-8",
+			"is_default": true
+		},
+		"startup_pages": ["https://bing.ge"]
+	},
+	"icons": {
+		"128": "img/icon128.png",
+		"16": "img/icon16.png",
+		"48": "img/icon48.png"
+	},
+	"incognito": "split",
+	"optional_permissions": [ "tabs", "https://bing.ge/" ],
+	"manifest_version": 2,
+	"version": "0.1.2"
+}

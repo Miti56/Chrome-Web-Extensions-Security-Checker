@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Chemical manufacturers and companies in USA",
+"description": "Directory of industrial chemicals plants, manufacturers and companies",
+"version": "1.1",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://chemicalsky-usa.blogspot.com/"
+],
+"launch": {
+"web_url": "http://chemicalsky-usa.blogspot.com/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

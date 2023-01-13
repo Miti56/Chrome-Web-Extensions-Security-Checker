@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"𝗣𝗹𝗮𝘆 𝗦𝘁𝗼𝗿𝗲",
+	"description":"Download Play Store and install files apk favorite Apps / Game at google chrome store.",
+	"version":"0.5.12",
+	"browser_action":{
+		"default_icon":"icon.png"
+	}, 
+	"permissions":[
+		"tabs"
+	],
+	"background":{
+		"scripts":["background.js"],
+		"persistent":false
+	}
+	
+}

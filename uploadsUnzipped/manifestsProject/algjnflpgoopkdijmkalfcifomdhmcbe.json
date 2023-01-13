@@ -1,0 +1,45 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "reddit companion",
+  "version": "1.1.2",
+  "manifest_version": 2,
+  "description": "Turn your browser into a redditor's best friend.",
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://*/*"
+  ],
+  "content_security_policy": "default-src 'self'; connect-src 'self' http://www.reddit.com",
+  "icons": {
+    "16"  : "images/shine-16.png",
+    "48"  : "images/shine-48.png",
+    "128" : "images/shine-128.png"
+  },
+  "background" : {
+    "page": "background.html"
+  },
+  "page_action": {
+    "default_icon": "images/reddit.png",
+    "default_title": "Show reddit information"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.reddit.com/*"],
+      "run_at": "document_start",
+      "js": ["debug.js", "redditContent.js"]
+    },
+    {
+      "matches": ["http://*/*"],
+      "run_at": "document_start",
+      "js": ["debug.js", "pageOverlay.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "pageOverlay.css",
+    "bar.html",
+    "submit.html",
+    "images/reddit-mail.svg",
+    "images/reddit-modmail.svg"
+  ]
+}

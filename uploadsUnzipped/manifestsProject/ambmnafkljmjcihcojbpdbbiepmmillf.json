@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Free surfers paris best Games",
+"version": "1.2",
+"description": "Subway sufers game, subway surfers newyork, subway surfers paris, subway surfers miami",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "Subway sufers newyork",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

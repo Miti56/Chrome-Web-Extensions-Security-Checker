@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Paywall remover",
+  "description": "Disable paywall on DN.se and DI.se",
+  "version": "1.5",
+  "icons": {
+    "128": "wall.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*:\/\/www.di.se\/*"
+      ],
+      "css": [
+        "di.css"
+      ]
+    },
+    {
+      "matches": [
+        "*:\/\/www.dn.se\/*"
+      ],
+      "css": [
+        "dn.css"
+      ]
+    }
+  ]
+}

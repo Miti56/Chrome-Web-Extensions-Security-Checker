@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "Такси в Израиле",
+	"description": "Заказ такси для встречи или проводов в аэропорт Бен-Гурион, поездок в Иерусалим, Эйлат, Хайфу, на Мертвое Море, иные места Израиля.",
+	"version": "1.0.0",
+	"app": {
+		"urls": [
+			"http://taxiemun.com/",
+			"http://www.taxiemun.com/"
+		],
+		"launch": {
+			"web_url": "http://taxiemun.com/taxi-from-ben-gurion",
+			"container": "tab"
+		}
+	},
+	"icons": {
+		"128": "icon_128.png"
+	}
+ }

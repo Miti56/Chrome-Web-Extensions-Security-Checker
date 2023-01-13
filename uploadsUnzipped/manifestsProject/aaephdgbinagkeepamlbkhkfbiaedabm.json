@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "default_locale": "en",
+  "version": "1.5",
+  "app": {
+    "urls": [
+      "*://qr.zeemind.com/"
+    ],
+    "launch": {
+      "web_url": "http://qr.zeemind.com/?s=app"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+	"manifest_version": 2,
+	"web_accessible_resources": [
+		"icon_128.png"
+	]
+}

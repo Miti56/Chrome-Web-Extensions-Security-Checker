@@ -1,0 +1,31 @@
+{
+   "background": {
+      "scripts": [ "js/jquery.js", "js/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/f128.png",
+      "default_popup": "popup.html",
+      "default_title": "Авторизатор www.famio.ru"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.js","js/fio.js" ],
+      "css": [ "css/css.css" ],
+      "matches": [ "*://www.famio.ru/*" ]
+   }, {
+      "js": [ "js/jquery.js","js/avito.js" ],
+      "matches": [ "*://www.avito.ru/*/*/*" ]
+   } ],
+   "description": "Авторизатор www.famio.ru",
+   "icons": {
+      "256": "icons/f256.png",
+      "128": "icons/f128.png",
+      "16": "icons/f16.png",
+      "32": "icons/f32.png",
+      "64": "icons/f64.png"
+   },
+   "manifest_version": 2,
+   "name": "Авторизатор www.famio.ru",
+   "permissions": [ "alarms", "tabs", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.1"
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "Salesview.io Keyword Research Extension",
+   "version": "1.0.4",
+   "manifest_version": 2,
+   "description": "Keyword Research Extension for Google Chrome",
+   "background": {
+       "page": "core.html"
+   },
+   "permissions": [
+       "*://*.amazon.com/",
+	   "*://*.amazon.co.uk/",
+       "*://*.salesview.io/"
+   ],
+   "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ https://fonts.googleapis.com/; object-src 'self'",
+ 
+   "content_scripts": [{
+     "matches":    ["*://salesview.io/salesview/index.php/home/discover_keywords"],
+     "js":         ["content.js"]
+   }],
+   "icons": {
+     "128": "icon.png"
+   }
+}

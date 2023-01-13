@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "default_locale": "de",
+  "name": "Sage One",
+  "short_name": "Sage One DE",
+  "version": "1.0",
+  "description": "__MSG_appdesc__",
+  "icons": {
+    "128": "icons/128x128.png",
+    "16": "icons/16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "508591366862"
+}

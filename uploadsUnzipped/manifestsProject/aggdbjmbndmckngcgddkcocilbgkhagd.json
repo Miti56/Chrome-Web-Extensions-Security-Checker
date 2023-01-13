@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "SmsManager.cz",
+  "description": "Plugin pro odesílání SMS zpráv z webových administračních rozhraní / SmsManager plugin for sending SMS from custom webadmin",
+  "version": "1.1",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_end",
+      "js": ["design/js/jquery.js","inject.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon_32.png",
+    "default_popup": "settings.html"
+  },
+  "permissions": [
+    "storage",
+    "tabs", 
+    "http://*/*",
+    "https://*/*"    
+  ],
+  "icons": { 
+    "32": "icon_32.png",
+    "128": "icon_128.png"
+  }
+}

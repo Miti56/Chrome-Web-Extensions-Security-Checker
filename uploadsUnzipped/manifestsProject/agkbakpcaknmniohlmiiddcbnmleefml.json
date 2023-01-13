@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "ISO 9001 Kosten ",
+  "description": "ISO 9001 Zertifizierung Kosten berechnen",
+  "manifest_version": 2,
+  "version": "0.0.0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://qm-guru.de/appkosten/"
+    ],
+    "launch": {
+      "web_url": "http://qm-guru.de/appkosten/"
+    }
+  }
+}

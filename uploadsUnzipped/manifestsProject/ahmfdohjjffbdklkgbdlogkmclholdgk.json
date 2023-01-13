@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Middle School Spelling Words",
+  "description": "Spelling word grouped by grade 6, 7, and 8, including lists, exercises, and printable cards/quizzes.",
+  "version": "6.2.2",
+  "app": {
+    "urls": [
+      "https://www.examword.com/middle-school-word/"
+    ],
+    "launch": {
+      "web_url": "https://www.examword.com/middle-school-word/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+  ]
+}

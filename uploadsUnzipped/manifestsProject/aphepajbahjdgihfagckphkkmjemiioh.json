@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Family-Online-Guy-Play-Freaking-Mobile Game",
+  "description": "Family Feud, Family Guy Freakin Mobile Game, Fastlane: Road to Revenge, Boom Beach, Buff Knight Advanced, Can You Escape",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

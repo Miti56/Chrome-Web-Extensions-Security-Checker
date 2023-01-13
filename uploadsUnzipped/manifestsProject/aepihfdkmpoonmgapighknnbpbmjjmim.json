@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Gfycats Links To Embeds",
+	"version": "1.0",
+	"description": "Turns gfycat links in your active tab to embedded videos.",
+	"icons": { "128": "icon.png" },
+	"content_scripts": [
+		{ "matches": ["http://*/*"], "js": ["gfystoembed.js"] }
+	],
+	"permissions": [
+		"tabs"
+	],
+	"manifest_version": 2
+}

@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Water Tracker",
+  "description": "Approximately 2 liters (6 to 7 glasses) of water daily is the minimum to maintain proper hydration.",
+  "version": "0.9.9",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://i.strive.to/track/drink-water"
+    ],
+    "launch": {
+      "web_url": "http://i.strive.to/track/drink-water"
+    }
+  }
+}

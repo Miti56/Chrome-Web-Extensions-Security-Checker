@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Freshdesk Gmail Gadget",
+  "description": "Freshdesk Gmail Gadget lets you quickly check into ticket and requestor information right from your email",
+  "version": "0.0.0.3",
+  "manifest_version": 2,
+  "app": {
+    "launch": {
+      "web_url": "http://login.freshdesk.com/auth/google_gadget",
+      "container": "panel",
+      "width": 300,
+      "height": 300
+    }
+  },
+  "icons": {
+    "128": "128.png",
+    "32": "32.png",
+    "48": "48.png",
+    "96": "96.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "287551691553"
+}

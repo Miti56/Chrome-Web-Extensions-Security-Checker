@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ニコニコ・オート・エコノミー",
+  "short_name": "NAE",
+  "version": "1.1",
+  "manifest_version": 2,
+  "description": "ニコニコ動画の動画再生ページを自動的ににエコノミー（低画質）にします",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.nicovideo.jp/watch/*"],
+      "js": ["run.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_title": "NAE",
+    "default_popup": "nae.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

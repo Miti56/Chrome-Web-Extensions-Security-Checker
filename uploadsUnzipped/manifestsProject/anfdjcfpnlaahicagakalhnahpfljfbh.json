@@ -1,0 +1,22 @@
+{
+   "browser_action": {
+      "default_icon": "icons/icon.png",
+      "default_title": "HaiTau.VN"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "matches": [ "http://*.1688.com/*", "https://*.1688.com/*", "https://*.1688.com/*", "http://*.taobao.com/*", "https://*.taobao.com/*", "http://*.tmall.com/*", "https://*.tmall.com/*", "http://*.vip.com/*", "https://*.vip.com/*", "http://*.vipshop.com/*", "https://*.vipshop.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Công cụ đặt(order) hàng trên hệ thống Haitau.vn.",
+   "icons": {
+      "512": "icons/icon.png"
+   },
+   "manifest_version": 2,
+   "name": "HAITAU.VN",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "short_name": "HAITAUVN",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.3"
+}

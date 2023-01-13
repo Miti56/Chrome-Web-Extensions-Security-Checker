@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Bitcoin Rate",
+  "description": "The cost of bitcoin in real time",
+  "version": "0.2",
+
+  "permissions": [ "http://*/*" , "https://*/*", "storage"],
+
+  "background": {
+    "scripts": ["/js/jquery-3.2.1.min.js","/js/background.js"],
+    "persistent": false
+  },
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+
+  "options_page": "/html/options.html",
+  "browser_action": {
+    "default_title": "Bitcoin Rate",
+    "default_popup": "/html/popup.html"
+  }
+}

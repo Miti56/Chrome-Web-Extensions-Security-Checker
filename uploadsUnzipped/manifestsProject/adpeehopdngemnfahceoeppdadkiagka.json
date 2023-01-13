@@ -1,0 +1,20 @@
+{
+   "manifest_version": 2,	
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "32.png",
+      "default_title": "Dex",
+      "popup": "search.html"
+   },
+   "description": "dexonline.ro Search",
+   "icons": {
+      "16": "16.png",
+      "32": "32.png",
+      "48": "48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDyt3Xjh5ES/ob/fvxzuH2hXPfUPGNjugrGyCZ8L22SVAdnC6yaiMY/elHHXjhuxgQ5U3WtYU8Y3glGp2hM0BBwIIT2vZAnG+uyeRvZ6lWNk1OeXzniVbgEC1rO8csYMqqU9VNLU+YjBhr5wYF2PB/PhEmDGvJO8BRXWabj696o5wIDAQAB",
+   "name": "Dex Online Search",
+   "permissions": [ "contextMenus", "tabs", "http://*.dexonline.ro/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.3.3"
+}

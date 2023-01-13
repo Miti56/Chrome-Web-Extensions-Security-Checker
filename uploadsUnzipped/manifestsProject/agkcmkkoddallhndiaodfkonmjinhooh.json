@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"name": "Auttogram",
+	"description": "Auttogram is a service which will help you to attract attention to your Instagram account and get more followers, likes, comments.",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"app": {
+		"urls": [
+			"https://auttogram.com/"
+		],
+		"launch": {
+			"web_url": "https://auttogram.com/"
+		}
+	},
+	"icons": {
+		"16": "img/i16.png",
+		"48": "img/i48.png",
+		"128": "img/i128.png",
+		"256": "img/i256.png"
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	]
+}

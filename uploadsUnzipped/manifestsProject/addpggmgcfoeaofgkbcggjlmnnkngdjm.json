@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "High Heavens - Diablo 3 Act 4",
+"version": "1.0.1",
+"short_name": "High Heavens",
+"author": "Thunderclaww",
+"manifest_version": 2,
+"theme": {
+"images" : {
+"theme_frame" : "images/frame.png",
+"theme_toolbar" : "images/toolbar.png",
+"theme_ntp_background" : "images/background.png",
+"theme_tab_background" : "images/tab.png",
+"theme_ntp_attribution" : "images/theme_ntp_attribution.png",
+"theme_window_control_background": "images/window_control_background.png"
+},
+
+"colors" : 
+{
+"ntp_text": [255,255,255],
+"ntp_header": [76,51,32],
+"ntp_background": [8,15,16],
+"frame": [10,17,27],
+"toolbar": [209,187,158],
+"tab_text": [10,10,11],
+"tab_background_text": [200,198,195],
+"bookmark_text": [54,50,47]
+},
+
+"tints" : 
+{
+"buttons" : [0.05, 0.5, 0.4],
+"frame_inactive" : [-1,0.4,0.6]
+},
+
+"properties" : 
+{
+"ntp_background_alignment" : "top",
+"ntp_background_repeat" : "repeat-x"
+}
+
+}
+
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Calmydar",
+  "description": "A Great Way To Know What Day It Is, the 'Calmydar' Calender.",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "version": "3.1.35",
+  "permissions": [
+    "http://*/*",
+    "webRequest",
+    "tabs",
+    "webRequestBlocking",
+    "webNavigation",
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "id.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

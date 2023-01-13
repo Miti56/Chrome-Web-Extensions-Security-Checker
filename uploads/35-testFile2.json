@@ -1,0 +1,123 @@
+{
+
+  "manifest_version": 2,
+  "name": "Test Extension",
+  "version": "1.943",
+  "description": "This extension has a very important purpose...",
+
+  "action": "dont know",
+  "author": "The Big Guy",
+  "automation": "dont know",
+
+
+  "background": {
+      "scripts": [
+        "backgroundContextMenus.js",
+        "backgroundOmniBox.js",
+        "backgroundOauth.js"
+      ],
+      "persistent": false
+    },
+  "chrome_settings_overrides": {"homepage": "http://www.homepage.com",
+    "search_provider": {
+        "name": "name.__MSG_url_domain__",
+        "keyword": "keyword.__MSG_url_domain__",
+        "search_url": "http://www.foo.__MSG_url_domain__/s?q={searchTerms}",
+        "favicon_url": "http://www.foo.__MSG_url_domain__/favicon.ico",
+        "suggest_url": "http://www.foo.__MSG_url_domain__/suggest?q={searchTerms}",
+        "instant_url": "http://www.foo.__MSG_url_domain__/instant?q={searchTerms}",
+        "image_url": "http://www.foo.__MSG_url_domain__/image?q={searchTerms}",
+        "search_url_post_params": "search_lang=__MSG_url_domain__",
+        "suggest_url_post_params": "suggest_lang=__MSG_url_domain__",
+        "instant_url_post_params": "instant_lang=__MSG_url_domain__",
+        "image_url_post_params": "image_lang=__MSG_url_domain__",
+        "alternate_urls": [
+          "http://www.moo.__MSG_url_domain__/s?q={searchTerms}",
+          "http://www.noo.__MSG_url_domain__/s?q={searchTerms}"
+        ],
+        "encoding": "UTF-8",
+        "is_default": true
+    },
+	"startup_pages": ["http://www.startup.com"]
+	   },
+
+  "chrome_url_overrides" : {
+    "bookmarks": "myPage.html",
+    "history": "myPage.html",
+    "newtab": "myPage.html"
+  },
+
+  "content_scripts": [
+   {
+     "matches": ["http://*.nytimes.com/*","http://*.nytimesTEST.com/*"],
+     "css": ["myStyles.css"],
+     "js": ["contentScript.js"],
+     "run_at": "document_idle",
+     "all_frames": true
+   }
+ ],
+  "content_security_policy": "policyString",
+
+  "event_rules": [{
+    "event": "declarativeContent.onPageChanged",
+    "actions": [{
+      "type": "declarativeContent.ShowPageAction"
+    }],
+    "conditions": [{
+      "type": "declarativeContent.PageStateMatcher",
+      "css": ["video"]
+    }]
+  }],
+  
+  "homepage_url": "http://path/to/homepage",
+  "import": {
+    "id": ["cccccccccccccccccccccccccccccccc"]
+  },
+  "export": {
+      "allowlist": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      ]
+    },
+  "incognito": "spanning",
+  "key": "19s28a731f928s37f87",
+  "minimum_chrome_version": "12.5",
+  "offline_enabled": true,
+  "omnibox": {
+    "keyword": "aString"
+  },
+  "optional_permissions": ["tabs"],
+  "permissions":["all_urls","bookmarks","storage","contextMenus","unlimitedStorage","fontSettings","chrome://favicon/"],
+  "short_name": "little Extension",
+  "storage": {
+    "managed_schema": "schema.json"
+  },
+  "tts_engine": {
+    "voices": [
+      {
+        "voice_name": "Alice",
+        "lang": "en-US",
+        "event_types": ["start", "marker", "end"]
+      },
+      {
+        "voice_name": "Pat",
+        "lang": "en-US",
+        "event_types": ["end"]
+      }
+    ],
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  }
+  },
+
+  "version_name": "build rc2",
+
+  "web_accessible_resources": [
+    "images/*.png",
+    "style/double-rainbow.css",
+    "script/double-rainbow.js",
+    "script/main.js",
+    "templates/*"
+  ]
+}

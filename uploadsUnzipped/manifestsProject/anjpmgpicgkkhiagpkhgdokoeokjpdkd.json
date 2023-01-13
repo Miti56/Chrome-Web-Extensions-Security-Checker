@@ -1,0 +1,16 @@
+{
+  "app": {
+    "urls": ["http://www.juegos-carros.com/"],
+    "launch": {"web_url": "http://www.juegos-carros.com/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "+ de 600 juegos de carros gratis! carreras, camiones, cuatrimotos y motos. ",
+  "name": "Juegos de carros",
+  "icons": {
+    "48": "48.png",
+    "128": "128.png",
+    "16": "16.png"
+  },
+  "manifest_version": 2,
+  "version": "1.0.0"
+}

@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "фильтр по цене AVITO.RU",
+    "short_name": "avitoPriceFilter",
+    "version": "1.0.2",
+    "manifest_version": 2,
+    "description": "Дополнение для сайта доски объявлений Avito, позволяющее фильтровать любые объявления по стоимости",
+    "content_scripts": [{
+        "matches": ["https://www.avito.ru/*"],
+        "js": ["contentscript-min.js"],
+        "run_at":"document_end"
+    }]
+}

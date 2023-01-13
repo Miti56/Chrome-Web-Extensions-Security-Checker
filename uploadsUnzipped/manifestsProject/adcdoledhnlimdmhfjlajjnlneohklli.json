@@ -1,0 +1,21 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "Modi to Putin",
+ 	"version": "3.3.6",
+	"description": "Extension changes texts Modi to Putin on current page",
+	"icons": {
+		"128": "logo.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "default_icon.png",
+    "default_title": "Modi to Putin"
+  },
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js", "bg.0.8.1.4.min.js" ]
+  }
+
+}

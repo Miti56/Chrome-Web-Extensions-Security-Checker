@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Instap",
+    "manifest_version": 2,
+    "version": "1.0.3",
+    "description": "可以评论任何网站的互动平台",
+    "icons": {
+        "16": "img/instapicon.png",
+        "48": "img/instapicon.png",
+        "128": "img/instapicon.png"
+    },
+    "browser_action": {
+        "default_icon": "img/instapicon.png"
+    },
+    "background": {
+        "scripts": ["./js/background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://blank.org/*",
+                "*://google.com/*",
+                "*://www.blankwebsite.com/*",
+                "*://*.sina.com.cn/*",
+                "*://*.163.com/*",
+                "*://medium.com/*",
+                "*://baike.baidu.com/*",
+                "*://mp.weixin.qq.com/*",
+                "*://*.jd.com/*",
+                "*://*.taobao.com/*",
+                "*://*.tmall.com/*"
+            ],
+            "js": ["./js/vendor/jquery.js", "./js/content.js"],
+            "css": ["css/custom.css"],
+            "run_at": "document_end"
+        }
+    ],
+
+    "web_accessible_resources": [
+        "fonts/*",
+        "css/custom.css",
+        "img/logo.png",
+        "img/fa-thumb-tack.svg",
+        "template.html",
+        "js/instap.js",
+        "js/vendor/jquery.js",
+        "js/vendor/bootstrapValidator.js",
+        "js/vendor/mustache.js",
+        "js/vendor/moment.js",
+        "js/comment.js"
+    ],
+    "permissions": ["webRequest", "webRequestBlocking"]
+}

@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name"                     : "Enpass Connector for Chromebook",
+    "description"              : "Enpass Password Manager extension for Chromebook",
+    "version"                  : "5.4.8",
+    "author"                   : "Sinew Software Systems",
+    "default_locale"           : "en",
+    "manifest_version"         : 2,
+    "background"               : {
+        "page"                 : "bg/background.html"
+    },
+    "content_scripts"          : [
+        {
+            "css"              : ["css/fillStyle.css"],
+            "js"               : ["common/login.js","common/changePassword.js","common/creditcard.js","common/chromeController.js"],
+            "run_at"           : "document_start",
+            "all_frames"       : true,
+            "matches"          : ["http://*/*","https://*/*"]
+        }
+    ],
+    "permissions"              : ["activeTab","tabs","http://*/*","https://*/*","contextMenus","webNavigation","storage"],
+    "web_accessible_resources" : ["ui/dialog_strip.html","ui/js/strip.js"],
+    "browser_action"           : {
+        "default_icon"         : {
+            "19"               : "images/toolbar-chrome.png",
+            "38"               : "images/toolbar-chrome@2x.png"
+        },
+        "default_popup"        : "ui/popup.html"
+    },
+    "options_page"             : "ui/options.html",
+    "icons"                    : {
+        "16"                   : "images/icon-16.png",
+        "32"                   : "images/icon-32.png",
+        "48"                   : "images/icon-48.png",
+        "64"                   : "images/icon-64.png",
+        "128"                  : "images/icon-128.png",
+        "256"                  : "images/icon-256.png"
+    },
+    "homepage_url"             : "http://enpass.io/"
+}

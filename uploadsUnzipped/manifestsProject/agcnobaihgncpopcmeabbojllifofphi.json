@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "packex",
+  "version": "0.2.1",
+  "description": "Inline package.json dependency information on GitHub and Gitlab, or open them in packex.app",
+  "manifest_version": 2,
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://github.com/*",
+        "https://gist.github.com/*",
+        "https://gitlab.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": ["images/packex-logo.svg"]
+}

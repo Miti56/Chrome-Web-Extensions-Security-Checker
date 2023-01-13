@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Imenso Software Development Company in India",
+  "short_name": "ImensoSoftware.com",
+  "version": "1.0",
+  "description": "Imenso Software is an offshore software development company in India. Web Applications using PHP and .NET technologies.",
+  "browser_action":
+  {
+    "default_icon": "Imenso-Software-logo.jpg"
+  },
+  "background":{
+  "scripts": ["background.js"]
+  },
+  "permissions": ["tabs"],
+  "manifest_version": 2
+}

@@ -1,0 +1,23 @@
+{"background": {"scripts": ["my_js.js"]}, 
+
+"name": "DBZ Backgrounds & New Tab", 
+
+"chrome_url_overrides": {"newtab": "index_page.html"}, 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"manifest_version": 2, 
+
+"browser_action": {"default_icon": "128-icons.png", 
+
+"default_title": "DBZ Backgrounds & New Tab"}, 
+
+"version": "3.3.10", 
+
+"default_locale": "en", 
+
+"description": "__MSG_addinfo__", 
+
+"version_name":"time 11", 
+
+"icons": {"128": "128-icons.png"}}

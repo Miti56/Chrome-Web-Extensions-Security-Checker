@@ -1,0 +1,21 @@
+{
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "background": {
+      "page": "background.html"
+   },
+
+   "browser_action": {
+      "default_icon": "icon128.png",
+      "default_popup": "popup.html",
+      "default_title": "火车票云抢票"
+   },
+
+   "description": "全自动抢火车票，验证码自动识别，智能选择最快服务器，成功率超过手动200%！云端抢票。自动提醒。填写12306账号，验证码自动识别填写登录。、登录成功后，即可抢票。还可以购买汽车票。短信提醒开票",
+   "icons": {
+      "128": "icon128.png"
+   },
+     "manifest_version": 2,
+   "name": "火车票云抢票",
+   "permissions": [ "storage","http://*/*", "tabs", "webRequest", "webRequestBlocking","webNavigation", "browsingData", "*://*/*", "unlimitedStorage",  "https://*/*","contextMenus","\u003Call_urls>"],
+   "version": "2.3"
+}

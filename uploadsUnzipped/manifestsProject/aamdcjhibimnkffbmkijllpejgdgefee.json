@@ -1,0 +1,24 @@
+{
+	"description": "__MSG_description__",
+	"icons": {
+		"48": "imgs/icon-48.png",
+		"128": "imgs/sausage-rush-128.png"
+	},
+	"browser_action": {
+		"default_icon": "imgs/icon-48.png",
+		"default_popup": "micron.html"
+	},
+	"background": {
+		"scripts": [
+			"js/background.js"
+		]
+	},
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "0.0.1",
+	"default_locale": "en",
+	"name": "__MSG_name__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

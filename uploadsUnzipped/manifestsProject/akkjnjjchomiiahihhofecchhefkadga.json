@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "灼眼のシャナ 封絶バトル for Chrome Apps",
+    "short_name": "封絶バトル",
+    "description": "シリーズ累計1080万部の人気アニメが戦略型マルチバトルで登場!!",
+    "version": "1.0.1",
+    "icons": {
+        "16": "images/icons/16x16.png",
+        "36": "images/icons/36x36.png",
+        "48": "images/icons/48x48.png",
+        "57": "images/icons/57x57.png",
+        "72": "images/icons/72x72.png",
+        "76": "images/icons/76x76.png",
+        "96": "images/icons/96x96.png",
+        "114": "images/icons/114x114.png",
+        "120": "images/icons/120x120.png",
+        "128": "images/icons/128x128.png",
+        "144": "images/icons/144x144.png",
+        "152": "images/icons/152x152.png",
+        "512": "images/icons/512x512.png",
+        "1024": "images/icons/1024x1024.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "scripts/background.js"
+            ]
+        }
+    },
+    "permissions": [
+        "webview",
+        "browser"
+    ],
+    "externally_connectable": {
+        "matches": [
+            "*://*.mobage.jp/*"
+        ]
+    }
+}

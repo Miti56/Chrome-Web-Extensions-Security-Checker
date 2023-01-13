@@ -1,0 +1,22 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "name": "Justice League Watch Online",
+    "version": "4.3",
+    "manifest_version": 2,
+    "description": "Justice League Full Movie(HD)!",
+    "icons": {
+        "128": "128.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "128.png",
+        "default_title": "NMW HD"
+    }
+}

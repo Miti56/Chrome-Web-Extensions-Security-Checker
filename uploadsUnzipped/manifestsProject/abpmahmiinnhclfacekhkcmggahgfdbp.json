@@ -1,0 +1,13 @@
+{	"description": "If you want to find discounts site you can do it with Saved by Discount. It search for discount sites by your choosing.",
+	"icons": {
+		"128": "logo/ico128.png",
+		"16": "logo/ico16.png",
+		"19": "logo/ico19.png",
+		"48": "logo/ico48.png"
+	},
+	"manifest_version": 2,
+	"name": "Saved by Discount",
+	"permissions": [ "http://*/*", "https://*/*" ],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "4.0.0.4"
+}

@@ -1,0 +1,17 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "dobreprogramy.pl-ignore",
+	"description": "Ukryj komentarze okreslonych, zarejestrowanych uzytkownikow serwisu dobreprogramy.pl.",
+	"version": "0.1.2",
+	"homepage_url": "http://pawelk.pl/tags/dobreprogramy.pl-ignore/",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": ["http://www.dobreprogramy.pl/*"],
+			"js": ["ignore.js"]
+		}
+	],
+	"permissions": [
+		"storage"
+	]
+}

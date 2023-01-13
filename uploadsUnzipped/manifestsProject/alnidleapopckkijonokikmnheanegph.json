@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Solitaire Mania",
+  "description": "Solitaire Mania - Solitaire in a variety of over 30 styles.",
+  "version": "1.5",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.ebhasin.com/games/Solitaire/index.html"
+    ],
+    "launch": {
+      "web_url": "http://www.ebhasin.com/games/Solitaire/index.html"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

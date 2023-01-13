@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Multi Find",
+  "version": "3.1.0",
+  "description": "Highlight text, links, and images across tabs.",
+  "browser_action": {
+    "default_title": "Click to reset Multifind",
+    "default_icon": {
+      "16": "assets/icon-on-16-7f592257.png"
+    }
+  },
+  "background": {
+    "scripts": [
+      "assets/background-42b7c796.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "assets/icon-on-16-7f592257.png",
+    "48": "assets/icon-on-48-865d137a.png",
+    "128": "assets/icon-on-128-f12e0c64.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content-08fe5714.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "assets/styles-b7e75b27.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "options.html",
+    "state-38901017.js",
+    "index-esm-e483a428.js",
+    "content.js"
+  ]
+}

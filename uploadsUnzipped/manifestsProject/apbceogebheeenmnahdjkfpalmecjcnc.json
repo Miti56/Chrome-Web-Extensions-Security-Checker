@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Image Downloader for PDW",
+  "description": "Download Tadpole Images for Primrose Duluth West",
+  "version": "0.1",
+  "minimum_chrome_version": "16.0.884",
+  "content_scripts": [
+    {
+      "matches": ["*://www.tadpoles.com/*"],
+      "js": ["send_links.js"]
+    }
+  ],
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "storage"
+  ], 
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {                    
+      "16": "icon128.png",           
+      "48": "icon128.png",           
+      "128": "icon128.png"            
+    }
+  },
+  "manifest_version": 2
+}
+
+
+

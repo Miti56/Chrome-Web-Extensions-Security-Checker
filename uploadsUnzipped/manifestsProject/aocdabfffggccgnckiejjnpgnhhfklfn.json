@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Stickman Archer 4",
+
+  "short_name": "Stickman Archer 4",
+
+  "version": "1.0.2",
+  "description": "Play Stickman Archer 4 now",
+
+  "homepage_url": "http://appwords.xyz/c/fashion-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Stickman Archer 4",
+
+      "default_popup": "popup.html"
+  }
+}

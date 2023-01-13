@@ -1,0 +1,26 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.2",
+  "name": "Simple theme",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/theme_frame.png",
+      "theme_frame_overlay" : "images/theme_frame_overlay.png",
+      "theme_ntp_background" : "images/theme_ntp_background.png"
+    },
+    "colors" : {
+      "frame" : [71, 105, 91],
+      "toolbar" : [207, 221, 192],
+      "ntp_text" : [20, 40, 0],
+      "ntp_link" : [36, 70, 0],
+      "ntp_section" : [207, 221, 192],
+      "button_background" : [255, 255, 255]
+    },
+    "tints" : {
+      "buttons" : [0.33, 0.5, 0.47]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "top"
+    }
+  }
+}

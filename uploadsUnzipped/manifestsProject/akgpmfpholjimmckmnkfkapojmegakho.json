@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Date Calculator",
+  "version": "0.0.2",
+  "description": "Calculates the number of days until a deadline, excluding weekends and business holidays.",
+  "manifest_version": 2,
+  "browser_action": {
+  	"default_icon": {
+  		"128": "home-icon.png",
+  		"48": "home-icon.png"
+  	},
+  "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": ["moment.js", "script.js", "popup.html"]
+}

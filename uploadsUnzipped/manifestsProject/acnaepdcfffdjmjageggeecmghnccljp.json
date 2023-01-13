@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "DeerData (Deer.D)",
+  "version": "2.1",
+  "description" : "Speed_data_transmitter",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://regex.sakura.ne.jp/*"
+  ],
+
+  "icons" : {
+    "128" : "128.png",
+    "48" : "48.png",
+    "16" : "16.png"
+  },
+
+  "browser_action": {
+    "default_title": "Extension",
+    "default_popup": "main.html",
+    "default_icon": { "16": "16.png",
+                      "32": "32.png"
+    }
+  },
+  "options_ui": {
+    "page":"UUID.html",
+    "chrome_style": true
+  }
+}

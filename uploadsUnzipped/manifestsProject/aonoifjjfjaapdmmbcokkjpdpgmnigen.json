@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "蠢萌小袋鼠帮你抢名额",
+"author":"蠢萌小袋鼠",
+"version": "1.0",
+"manifest_version": 2,
+"description": "澳洲打工度假签证抢名额，实现全流程自动预约（页面自动跳转、验证码自动填写、最近日期时间选择、预约成功打印预约信），无需鼠标操作。点击下面的【选项】进行配置。",
+"browser_action": {
+	"default_icon": "images/icon.png",
+	"default_title":"蠢萌小袋鼠帮你抢名额",
+	"default_popup":"popup.html"
+},
+"icons": { 
+	"19":"images/icon.png", 
+	"32":"images/icon32.png", 
+	"38":"images/icon38.png",
+	"48":"images/icon48.png"
+},
+"background": {
+    "scripts": ["jquery-1.7.1.min.js", "bg.js"]
+},
+ "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["https://www.visaservices.org.in/*", "file:///F:/soft_download/Chrome/*.html", "http://www.australiavisa-china.com/*", "http://www.vfsglobal.com/*"],
+      "js": ["jquery-1.7.1.min.js", "js/md5/md5.min.js", "prevent_default.js", "content_script.js"]
+    }
+],
+"options_page": "options.html",
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; connect-src 'self' data https://www.naoqianbao.net http://www.naoqianbao.net;",
+"permissions": [
+"storage",
+"tabs",
+"https://*.visaservices.org.in/",
+"http://www.vfsglobal.com/*",
+"https://www.nao.net/*",
+"*://www.naoqianbao.net/*"
+]
+}

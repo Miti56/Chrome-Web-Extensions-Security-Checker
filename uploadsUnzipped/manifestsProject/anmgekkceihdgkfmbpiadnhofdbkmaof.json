@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "icon128.png",
+      "default_popup": "genco.html"
+   },
+   "description": "Bu eklenti GencoBahis'e en hızlı şekilde güvenle ve kesintisiz olarak ulaşmanızı sağlamaktadır.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+
+   "manifest_version": 2,
+   "name": "GencoBahis Chrome Eklentisi",
+   "version": "1.1"
+}

@@ -1,0 +1,24 @@
+{
+	"name": "__MSG_name__",
+	"description": "__MSG_description__",
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"version": "0.0.1",
+	"browser_action": {
+		"default_icon": "images/dumb-ways-to-die-2-48.png",
+		"default_popup": "batch.html"
+	},
+	"manifest_version": 2,
+	"default_locale": "en",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"icons": {
+		"48": "images/dumb-ways-to-die-2-48.png",
+		"128": "images/dumb-ways-to-die-2-128.png"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

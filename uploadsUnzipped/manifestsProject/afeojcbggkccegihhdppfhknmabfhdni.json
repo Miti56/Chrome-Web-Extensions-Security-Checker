@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "brick サイトレビュー",
+  "version": "1.1.2",
+  "manifest_version": 2,
+  "description": "Webサイトを構築、リニューアルする際に行われるデザイン案やユーザビリティー（UI/UX）に対するレビューやフィードバックをブラウザ上でかんたんに管理することができます。",
+  "homepage_url": "https://www.brick.tools",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19-off.png",
+    "default_title": "brick サイトレビュー"
+  },
+  "permissions": [
+    "*://*/*",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "js/inject.js"
+      ]
+    }
+  ]
+}

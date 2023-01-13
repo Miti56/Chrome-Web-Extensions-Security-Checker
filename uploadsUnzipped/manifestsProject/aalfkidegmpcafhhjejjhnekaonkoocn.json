@@ -1,0 +1,12 @@
+{
+  "app": {
+    "urls": ["http://mirage.ticedu.fr/"],
+    "launch": {"web_url": "http://mirage.ticedu.fr/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Le projet Mirage a pour but de creer des activites pedagogiques tirant parti des atouts de la realite augmentee.",
+  "name": "Mirage - realite augmentee",
+  "icons": {"128": "favicon.png"},
+  "manifest_version": 2,
+  "version": "1.2.1.0"
+}

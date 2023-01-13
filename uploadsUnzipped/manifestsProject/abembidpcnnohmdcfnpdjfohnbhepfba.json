@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Course Smarts SFU",
+  "version": "1.0.0",
+  "description": "Extension that displays relevant RateMyProf and Coursedigger info for an SFU course web page",
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["*://www.sfu.ca/students/calendar/*/courses/*/*.html"],
+      "js": ["content/content.js"]
+    }],
+  "background": {
+    "page": "background/background.html",
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "content/main.js",
+    "content/pageDetails.js",
+    "content/displayData.js"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

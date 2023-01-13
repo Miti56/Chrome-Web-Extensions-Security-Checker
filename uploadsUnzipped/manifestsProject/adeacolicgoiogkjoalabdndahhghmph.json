@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"version": "1.4",
+  "manifest_version": 2,
+  "name": "Night Time in New York City",
+  "description": "New York City as viewed from the Rockefeller Building at night.",
+  "icons": {
+    "128": "icon_128.png"
+},
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/frame.png",
+      "theme_toolbar" : "images/toolbar.png",
+      "theme_ntp_background" : "images/background.png",
+      "theme_tab_background" : "images/tab.png",
+      "theme_ntp_attribution" : "images/Logo.png"      
+    },
+    "colors" : {
+      	"ntp_link": [255,255,255], 
+	"ntp_text": [255,255,255], 
+	"ntp_section_link": [255,255,255], 
+	"ntp_section_text": [10 , 17 , 27],
+	"ntp_background": [0,0,0], 
+	"frame": [10 , 17 , 27], 
+	"toolbar": [10 , 17 , 27], 
+	"tab_text": [0,136,253], 
+	"tab_background_text": [26,39,49], 
+	"bookmark_text": [0,136,253]
+    },
+    "tints" : {
+                "buttons" : [0.58, 0.95, 0.55],
+                "frame_inactive": [0.50, 0.50, 0.50], 
+                "frame_incognito_inactive": [0.50, 0.50, 0.50] 
+    },
+    "properties" : {
+     	"ntp_background_alignment" : "middle",
+		"ntp_background_size" : "fit",
+	"ntp_background_repeat": "no-repeat"
+    }
+  }
+}

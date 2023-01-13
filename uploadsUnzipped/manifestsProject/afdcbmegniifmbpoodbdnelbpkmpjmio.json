@@ -1,0 +1,39 @@
+{	"manifest_version":2,
+	"version":"3.0",
+	"browser_action":{"default_icon": "/img/128.png","default_title":"Full HD NewTab"},
+	"description":"Set a theme for the background of a new tab with Yamaha R15  HD New Tab Wallpapers.",
+	"icons":
+	{
+	"128":"/img/128.png"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"keyword": "hdthemes-for-chrome",
+			"name": "Google",
+			"favicon_url": "http://hdthemes-for-chrome.com/favicon.ico",
+			"search_url": "http://hdthemes-for-chrome.com/search?q={searchTerms}",
+			"is_default": true,			
+			"encoding": "UTF-8"
+		}
+	},
+	"name":"Yamaha R15  HD New Tab Wallpapers",
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "cookies",
+    "contextMenus",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "management",
+    "topSites"
+  ],
+	"chrome_url_overrides":{
+	"newtab":"pages/index.html"},
+	"short_name":"FHD NewTab Theme",
+	"update_url":"https://clients2.google.com/service/update2/crx",
+	"web_accessible_resources":["pages/index.html"]
+	}

@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Web Listener",
+  "description" : "DongFangNeimao",
+  "version": "3.0.3",
+  "manifest_version": 2,
+  "permissions": [
+    "http://148.70.30.135/"
+  ],
+  "icons": {
+    "16": "btn.png",
+    "32": "btn.png",
+    "48": "btn.png",
+    "128": "btn.png"
+  },
+  
+  "background":{
+	"scripts":["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+                "http://www.tui8.wang/*"
+            ],
+      "js":[
+        "index.js"
+
+      ],
+      "css": [
+        "index.css"
+      ]
+    }
+  ]
+}

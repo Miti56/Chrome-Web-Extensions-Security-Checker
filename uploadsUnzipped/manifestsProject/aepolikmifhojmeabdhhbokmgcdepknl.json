@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Clarify",
+  "description": "Clarify is a free, high quality dictionary app for all your devices.",
+  "version": "0.9",
+  "manifest_version": 2,
+  "permissions" : [
+    "tabs",
+    "activeTab",
+    "contextMenus",
+    "https://www.clarifylanguage.com/"
+  ],
+  "icons" : {
+    "16" : "logo-16.png",
+    "48" : "logo-48.png",
+    "128" : "logo-128.png"
+  },
+  "background" : { "scripts": ["script.js"] },
+  "browser_action": {
+    "default_icon": {
+      "19": "logo-19.png",
+      "38": "logo-38.png"
+    },
+    "default_title": "Clarify"
+  } 
+}

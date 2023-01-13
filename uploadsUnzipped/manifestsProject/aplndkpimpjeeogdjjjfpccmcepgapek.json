@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Auto Repair Bill",
+  "description": "Easy Auto repair invoicing and bookings",
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://www.autorepairbill.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.autorepairbill.com/chrome/"
+    }
+  },
+  "icons": {
+    "128": "128.png"
+  },
+  "permissions": [
+  "notifications"
+  ]
+}

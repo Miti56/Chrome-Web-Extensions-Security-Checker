@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Downloads-File",
+  "description": "Downloads-File",
+  "version": "1.0.1",
+
+  "browser_action": {
+    "default_icon": "images/icon_grey38.png",
+    "default_title": "Downloads-File",
+    "default_popup": "views/popup.html"
+  },
+  "permissions": [
+    "notifications",
+    "unlimitedStorage",
+    "activeTab",
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "downloads",
+    "downloads.open",
+    "webRequest",
+    "alarms",
+    "background",
+    "webNavigation", 
+    "cookies",
+    "webRequestBlocking"
+  ],
+  "options_page": "views/options.html",
+  "icons": { 
+    "16": "images/icon19.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png" 
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+  "content_scripts" : [{
+    "matches" : [
+        "<all_urls>"
+      ],
+    "js" : ["js/page.js"]
+    }],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

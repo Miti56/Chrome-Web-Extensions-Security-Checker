@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "gottafix.it",
+  "version": "0.0.5",
+  "manifest_version": 2,
+  "description": "Proofread the web for fun and glory.",
+  "homepage_url": "http://gottafix.it",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources":["icons/*.png"],
+  "default_locale": "en",
+  "permissions" : ["storage", "activeTab", "tabs"],
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "gottafix.it",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "background":{
+    "scripts":[
+      "js/jquery.min.js",
+      "js/bower_components/ddp.js/src/ddp.js",
+      "js/bower_components/q/q.js",
+      "js/bower_components/asteroid/dist/asteroid.chrome.js",
+      "js/bower_components/asteroid/dist/plugins/facebook-login.js",
+      "js/bower_components/asteroid/dist/plugins/google-login.js",
+      "js/bower_components/asteroid/dist/plugins/github-login.js",
+      "src/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*"
+      ],
+      "css":["src/inject/gfi_extension.css"],
+      "js": [
+        "js/jsdiff.js",
+        "js/jquery.min.js",
+        "js/get_selector.js",
+        "js/bower_components/ddp.js/src/ddp.js",
+        "js/bower_components/q/q.js",
+        "js/bower_components/asteroid/dist/asteroid.chrome.js",
+        "js/bower_components/asteroid/dist/plugins/facebook-login.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

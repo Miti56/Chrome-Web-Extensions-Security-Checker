@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Circle CI Scroll",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Automatically scroll to bottom when view circle ci logs, provide button to scroll to top/bottom with one click",
+  "icons": {
+    "16": "icon/16.png",
+    "32": "icon/32.png",
+    "48": "icon/48.png",
+    "128": "icon/128.png"
+  },
+  "browser_action": {
+    "default_title": "Circle CI Scroll"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://circleci.com/*"
+      ],
+      "js": [
+        "jQuery.min.js",
+        "content_script.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "images/down.png",
+    "images/up.png"
+  ],
+  "permissions": [
+    "tabs",
+    "webRequest"
+  ]
+}

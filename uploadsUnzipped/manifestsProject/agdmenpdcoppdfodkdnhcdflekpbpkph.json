@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Bitcoin Faucet",
+ "manifest_version": 2,
+ "short_name": "Bitcoin Faucet",
+ "description": "Free information about Bitcoin Faucet",
+ "version": "1",
+ "icons": {
+	"128": "icon.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://bitcoin.hekoru.lol"
+	}
+  }
+}

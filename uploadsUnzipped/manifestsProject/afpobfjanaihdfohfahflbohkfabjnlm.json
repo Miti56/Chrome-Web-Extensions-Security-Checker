@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/lib/jquery.min.js" ],
+      "matches": [ "*://laruchequiditoui.fr/*" ]
+   }, {
+      "js": [ "js/initial.js" ],
+      "matches": [ "*://laruchequiditoui.fr/fr/assemblies/*/collections" ]
+   } ],
+   "description": "Ameliore les outils du site de la Ruche qui dit Oui",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQytRRFvXhweI883NbiViwp9DHnaw6b10k9Z3RCwgYbg+Hnvmavh/62I8W1cRA5gYeVMYv89Q/kj85RPZu/MqTROWTE0j8Kul0rVLT8Tsi43BkT6qNJHZi5tqwfR8TCxD5cJCDQKXlvIEMmebIJnnt0NRz3NTt43uDyAX35ebqQvI/VBS8jnAF8U5np7L+eahL8dfE+HfAtCR25phTXomGAee77VpowkENCxf/1PJ7FIhahZhTUA1winFPFZydPb3nJisgOYWUV8Y7eYUy3htBqWCsfO1uNKqYuIhzELHTdQU9+aguwtsvGj7feWKh6KsYhpkVwAVvmxP9N10UsMuQIDAQAB",
+   "manifest_version": 2,
+   "name": "Extension Ruche de La Madeleine (59110)",
+   "permissions": [ "*://laruchequiditoui.fr/fr/assemblies/*", "tabs", "webNavigation" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2.5",
+   "web_accessible_resources": [ "img/rloader.gif" ]
+}

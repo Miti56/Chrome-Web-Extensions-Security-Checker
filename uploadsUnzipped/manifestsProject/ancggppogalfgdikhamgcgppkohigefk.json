@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "JIRA Drag&Drop",
+  "version": "1.1.0",
+  "manifest_version": 2,
+  "description": "Allows to drag&drop JIRA subtasks",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [{
+      "matches": ["*://*.atlassian.net/*"],
+      "js": ["jquery-1.9.1.js", "jquery-ui-1.10.3.custom.min.js", "content.js"]
+  }]
+}

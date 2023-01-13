@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/eventpage.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon19.png",
+      "default_popup": "src/options.html",
+      "default_title": "Rinble Click-2-Call"
+   },
+   "default_locale": "en",
+   "description": "Click on web page phone numbers to call from your Rinble desktop phone.",
+   "homepage_url": "https://www.rinble.com",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Rinble Click-2-Call",
+   "options_page": "src/options.html",
+   "permissions": [ "webNavigation",
+                    "*://*/*",
+                    "storage",
+                    "activeTab"
+                  ],
+   "short_name": "Rinble Click-2-Call",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.7"
+}

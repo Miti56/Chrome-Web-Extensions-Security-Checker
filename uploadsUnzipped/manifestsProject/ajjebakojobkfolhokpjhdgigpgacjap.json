@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "name":"LBRY Credits (LBC) Price Ticker",
+  "short_name": "LBRY Credits (LBC) Price",
+  "description":"LBRY Credits (LBC) Price Ticker and other utilities around LBRY",
+  "version":"1.0.3",
+  "background":{
+    "page":"background.html"
+  },
+  "browser_action":{
+    "default_icon":"icon.png",
+    "default_popup":"popup.html"
+  },
+  "author":"Taha Tawfik <microtaha@gmail.com>",
+  "icons":{
+    "128":"icon.png"
+  },
+  "web_accessible_resources":[
+    "icon.png"
+  ],
+  
+  "permissions":[
+    "background",
+    "notifications",
+    "storage",
+    "https://api.coinmarketcap.com/",
+    "http://www.ecb.europa.eu/"
+  ]
+}

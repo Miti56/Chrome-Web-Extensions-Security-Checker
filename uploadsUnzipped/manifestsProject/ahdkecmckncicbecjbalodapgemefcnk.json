@@ -1,0 +1,36 @@
+{
+   "update_url" : "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version" : 2,
+
+   "name" : "Maxildan Extension",
+   "author" : "Thiladon | Alexis Marchand",
+   "description" : "Viens jouer un max !",
+   "version" : "1.0.0",
+
+   "background" : {
+      "scripts" : [
+         "libs/jquery-1.11.2.js",
+         "libs/background.js"
+      ],
+      "persistent" : true
+   },
+   
+   "icons" : {
+      "256" : "icons/max_logo256.png",
+      "128" : "icons/max_logo128.png",
+      "64" : "icons/max_logo64.png",
+      "48" : "icons/max_logo48.png",
+      "32" : "icons/max_logo32.png"
+   },
+
+   "permissions" : [
+         "https://api.twitch.tv/",
+         "notifications"
+      ],
+
+   "browser_action" : {
+      "default_title" : "Maxildan - Offline",
+      "default_icon" : "icons/max-off.png"
+   }
+}

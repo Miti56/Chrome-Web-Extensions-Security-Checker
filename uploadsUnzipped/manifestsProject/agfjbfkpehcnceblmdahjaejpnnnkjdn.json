@@ -1,0 +1,20 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "256": "icons/icon-256.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "Connect Ledger"
+   },
+   "description": "Manage your Ledger Devices on the fly using Ledger Live extension for Chrome.",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "64": "icons/icon-64.png"
+   },
+   "manifest_version": 2,
+   "name": "Ledger Live",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.0.9"
+}

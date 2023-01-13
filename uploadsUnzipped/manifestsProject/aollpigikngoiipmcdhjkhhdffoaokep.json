@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TDK Türkçe Sözlük",
+  "description": "TDK Türkçe Sözlük Tarayıcı Eklentisi",
+  "version": "0.9.0",
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "TDK Türkçe Sözlük Tarayıcı Eklentisi",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

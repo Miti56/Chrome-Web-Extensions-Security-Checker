@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "author": "Journey, updated by Vu",
+  "name": "Youtube Video Blocker",
+  "short_name": "Video Filter",
+  "version": "1.0.79",
+  "description": "Basic filter offensive words, user name, unwanted videos and channels from YouTube (1.0.79)!",
+  "web_accessible_resources": ["images/*", "views/*"],
+  "homepage_url": "https://github.com/JourneyOver/Youtube-Video-Blocker",
+  "manifest_version": 2,
+  "icons": {
+    "16": "images/icons/icon16.png",
+    "19": "images/icons/icon19.png",
+    "32": "images/icons/icon32.png",
+    "38": "images/icons/icon38.png",
+    "48": "images/icons/icon48.png",
+    "64": "images/icons/icon64.png",
+    "128": "images/icons/icon128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["js/utilities.js", "js/background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://www.youtube.com/*"],
+    "run_at": "document_start",
+    "js": ["js/utilities.js", "js/videoblocker.js"],
+    "css": ["css/videoblocker.css"]
+  }],
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icons/icon19.png",
+      "38": "images/icons/icon38.png"
+    },
+    "default_title": "Youtube Video Blocker. Updated by Vu.",
+    "default_popup": "views/pageaction.html"
+  },
+  "default_locale": "en",
+  "options_ui": {
+    "page": "views/options.html",
+    "chrome_style": true
+  }
+}

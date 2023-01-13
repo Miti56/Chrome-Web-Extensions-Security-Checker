@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Gerbil Time Tracker",
+  "version": "1.1.3",
+  "manifest_version": 2,
+  "description": "",
+  "homepage_url": "http://www.opacus.co.uk",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/js/background/background.js",
+      "src/js/background/notifications.js",
+      "src/js/background/core.js",
+      "vendor/jquery-3.2.1.min.js"
+    ],
+    "persistant": false
+  },
+  "options_ui": {
+    "page" : "src/base_pages/options.html"
+  },
+  "browser_action": {
+    "default_icon": "icons/16.png",
+    "default_title": "Gerbil Time Tracker",
+    "default_popup": "src/base_pages/browser_action.html"
+  },
+  "permissions": [
+    "cookies",
+    "notifications",
+    "tabs",
+    "storage",
+    "alarms",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "src/html/*"
+  ]
+}

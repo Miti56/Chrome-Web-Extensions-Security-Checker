@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Twitch AdBlock",
+  "version": "1.3",
+  "description": "Blocks advertisement in VODs on twitch.tv when using the HTML5 player",
+  "permissions": [ "webRequest", "webRequestBlocking", "https://*.twitchcdn.net/", "https://*.twitch.tv/" ],
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "twitchscript.js"
+  ],
+  "externally_connectable": {
+    "matches": [ "*://*.twitch.tv/*" ]
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 2
+}

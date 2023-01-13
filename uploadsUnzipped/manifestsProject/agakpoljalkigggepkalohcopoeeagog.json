@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "JNE HYBRID",
+  "description": "JNE HYBRID add on by Agen JNE Pucang, Magelang",
+  "version": "1.1",
+  "permissions": ["tabs", "http://*/*", "https://*/*", "storage"],
+  "browser_action": {
+    "default_icon": "128.png"
+  },
+  "icons": { "16": "16.png",
+  			"32": "32.png",
+  			"64": "64.png",
+           "48": "48.png",
+          "128": "128.png" },
+  "web_accessible_resources": ["img/logo.png","img/shipwarn.png"],
+  "content_scripts": [
+    
+    {
+      "matches": ["*://*/apex/f?p=113:7*"],
+      "css": ["style.css"],
+      "permissions": ["tabs", "http://*/*", "https://*/*", "storage"],
+      "js": ["jq.js","js.js"]
+    },   
+    {
+      "matches": ["*://*/apex/jneconnote.print_connote_label*"],
+      "css": ["style.css"],
+      "permissions": ["tabs", "http://*/*", "https://*/*", "storage"],
+      "js": ["jq.js","copylaporan.js"]
+    },
+    {
+      "matches": ["*://*/apex/f?p=113:9:*"],
+      "css": ["style.css"],
+      "permissions": ["tabs", "http://*/*", "https://*/*", "storage"],
+      "js": ["jq.js","copylaporanfromreport.js"]
+    },
+	{
+      "matches": ["*://*/apex/f?p=113:*"],      
+      "permissions": ["tabs", "http://*/*", "https://*/*", "storage"],
+      "js": ["jq.js","laporan.js","hapusreport.js"]
+      
+    },
+	{
+      "matches": ["*://10.1.1.2/rekap/resi*"],      
+      "permissions": ["tabs", "http://*/*", "https://*/*", "storage"],
+      "js": ["jq.js","getconnoteserver.js"]
+      
+    }
+  ]
+}

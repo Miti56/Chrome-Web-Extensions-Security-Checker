@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "fernsehsuche.de",
+  "description": "Programmübersicht für die Mediatheken deutscher Fernsehsender.",
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://fernsehsuche.de/"
+    ],
+    "launch": {
+      "web_url": "http://fernsehsuche.de/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+  ]
+}

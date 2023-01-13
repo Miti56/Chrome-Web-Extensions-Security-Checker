@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Screenshoter",
+  "description": "Take screenshot of current tab.",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "static/128.png",
+    "default_title": "Take Screenshot"
+  },
+  "icons": {
+        "48": "static/48.png",
+        "128": "static/128.png"
+    },
+    "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "jquery.js", "t.js" ],
+    "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab", "downloads"],
+  "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Alt+P"
+            }
+        }
+    },
+  "options_ui": {"page": "options.html", "chrome_style": true},
+  "web_accessible_resources": [
+    "/i.js"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "description": "FaceApp - Free Neural Face Transformation Filters",
+   "manifest_version": 2,
+   "name": "FaceApp for PC",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.0.2"
+}

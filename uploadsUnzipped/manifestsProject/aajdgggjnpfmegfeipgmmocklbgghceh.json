@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Buzzlamp for Chrome",
+  "short_name" : "Buzzlamp for Chrome",
+  "description": "The free Chrome companion to Buzzlamp",
+  "version": "1.0.3",
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "32": "32.png",
+    "96": "96.png",
+    "128": "128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "blank.html"
+  },
+  "background":{
+    "scripts":["crypto-js/core.js","crypto-js/md5.js","background.js","alive_ping.js"],
+    "perisistent":false
+  },
+  "content_scripts":[{
+    "matches": ["*://*.webinstall.com/*","*://*.buzzlamp.com/*"],
+    "js": ["installation_check.js"],
+    "run_at": "document_start"
+  }],
+  "permissions": ["http://*/*", "https://*/*", "cookies", "storage", "unlimitedStorage", "webRequest", "webRequestBlocking", "system.cpu","downloads","tabs"],
+  "content_security_policy": "script-src https://ajax.googleapis.com https://buzzlamp.com 'self'; object-src 'self';child-src http://*/*;",
+  "manifest_version": 2
+}

@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Activity Remover",
+  "description": "This extension removes all your fb activities. Can customize the time span from which you want activities to be deleted.",
+  "version": "4.0.0",
+
+  "background": {
+      "scripts": ["main.js"],
+      "persistent": true
+  },
+
+  "content_scripts": [
+  {
+    "matches": [
+      "https://www.facebook.com/*", 
+      "http://www.facebook.com/*"
+    ],
+    "js": ["content.js"]
+  }],
+
+  "permissions": [
+    "https://www.facebook.com/*",
+    "https://www.activityremover.com/*",
+    "https://activityremover.com/*",
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_popup": "panel.html",
+    "default_icon": "tinylogo.png"
+  },
+  
+  "icons": {
+       "16": "tinylogo.png",
+       "48": "tinylogo.png",
+       "128": "tinylogo.png"
+  }
+}

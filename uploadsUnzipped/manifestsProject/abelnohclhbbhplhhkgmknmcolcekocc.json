@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "2",
+  "name": "Call of Duty Black Ops III Zombies",
+  "theme": {
+    "images" : {
+	"theme_tab_background" : "images/theme_tab_inactive.png",
+      "theme_frame" : "images/theme_frame_black.png",
+      "theme_toolbar" : "images/theme_toolbar_black.png",
+      "theme_ntp_background" : "images/theme_ntp_background_norepeat.png"
+    },
+    "colors" : {
+      "frame" : [248,58,32],
+	  "frame_inactive" : [30,15,10],
+      "toolbar" : [248,58,32],
+	  "tab_text":[248,58,32],
+	  "tab_background_text":[30,15,10],
+	  "bookmark_text":[248,58,32],
+      "ntp_text" : [248,58,32],
+      "ntp_link" : [248,58,32],
+      "ntp_section" : [30,15,10],
+      "button_background" : [30,15,10],
+	  "ntp_background":[248,58,32]
+    },
+	"icons": { "16": "images/icon16.png",
+           "48": "images/icon48.png",
+          "128": "images/icon128.png" },
+    "tints" : {
+      "buttons" : [30,15,10]
+    }
+  }
+}

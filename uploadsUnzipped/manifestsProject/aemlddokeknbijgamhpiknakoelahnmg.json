@@ -1,0 +1,14 @@
+{
+  "app": {
+    "urls": ["http://yokel.us/"],
+    "launch": {"web_url": "http://yokel.us/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "container": "GOOGLE_DRIVE",
+  "description": "Group chat with Google Drive integration for slackjawed-yokels",
+  "name": "Yokel",
+  "icons": {"128": "chat-icon.png"},
+  "manifest_version": 2,
+  "api_console_project_id": "761917360771",
+  "version": "0.0.0.3"
+}

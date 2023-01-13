@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "FaceServiceEX",
+  "description": "Facebook service extension",
+  "version": "1.0",
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "js/background/background.js",
+      "lib/js/jquery.js",
+      "js/common.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/*",
+        "https://api.facebook.com/*",
+        "https://business.facebook.com/*"
+      ],
+      "js": [
+		"lib/js/jquery.js",
+        "lib/js/savefile.js",
+        "js/common.js",
+		"js/content/content_logic.js",
+		"js/content/content.js"
+      ],
+	  "run_at": "document_idle",
+	  "css":[
+		"css/content.css",
+        "css/layout.css"
+	  ]
+    }
+  ],
+  "icons": { "16": "drawable/gcfs-16.png",
+			"48": "drawable/gcfs-24.png",
+          "128": "drawable/gcfs-128.png" },
+  "browser_action": {
+    "default_icon": "drawable/gcfs-128.png",
+	"default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs","<all_urls>","cookies",
+    "*://*/*", "webRequest", "webRequestBlocking", "<all_urls>",
+    "storage", "cookies"
+  ]
+}

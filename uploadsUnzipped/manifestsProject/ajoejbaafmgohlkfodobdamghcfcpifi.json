@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	
+	"name": "Searcher",
+	"version": "0.2.626",
+	
+	"icons": {
+        "128": "icons/icon128.png"
+	},
+	"options_page": "options.html",
+	
+	"permissions": [
+		"tabs","storage","activeTab",
+		"<all_urls>"
+	],
+	"content_scripts": [{
+		"matches": ["*://www.bing.com/*","*://bing.com/*","*://www.google.com/*","*://www.google.ru/*","*://www.google.by/*","*://yandex.ru/*","*://yandex.by/*"],
+		"js": ["js/jquery.js","js/local_storage.js","js/main.js"]
+		},{
+		"matches": ["*://vk.com/*","*://youtube.com/*","*://youtu.be/*"],
+		"js": ["js/jquery.js","js/requests_handler.js"]
+		}
+		
+	],
+	"background": {
+		"scripts": ["js/local_storage.js"]
+	},
+	"browser_action": {
+		"default_icon": "icons/icon128.png",
+		"default_popup": "main_popup.html"
+	}
+}

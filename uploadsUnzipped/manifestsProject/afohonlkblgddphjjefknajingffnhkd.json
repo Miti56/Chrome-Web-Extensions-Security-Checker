@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Giveaway+",
+  "short_name": "Giveaway+",
+  "description": "Find new Amazon Giveaways to enter and win every day.",
+  "version": "1.4.47",
+  "background": {
+    "scripts": [
+      "js/lib/jquery-1.11.3.min.js",
+      "js/common.js", 
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "images/logo_16.png",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": false
+  },
+  "icons": {
+    "16": "images/logo_16.png",
+    "48": "images/logo_48.png",
+    "128": "images/logo_128.png"
+  },
+  "permissions": [
+    "storage", 
+    "background", 
+    "alarms", 
+    "notifications",
+	  "activeTab"
+  ],
+  "optional_permissions": [
+    "tabs",
+    "http://*/*",
+	  "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://d3p7ayyimgvr9t.cloudfront.net https://www.amazon.com https://connect.facebook.net https://giveaway.click; object-src 'self'"
+}

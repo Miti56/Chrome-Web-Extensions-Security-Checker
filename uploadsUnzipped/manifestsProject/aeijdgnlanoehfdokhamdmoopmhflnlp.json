@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+	"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "3 words a day",
+	"version": "2.2",
+	"description": "Aprende 3 palabras en ingles cada dia",
+	"background": {
+		"scripts": ["js/script.js", "js/background.js"],
+		"persistent": true
+	},
+	"options_page": "options.html",
+	"app": {
+		"launch": {
+			"local_path": "index.html"
+		}
+	},
+
+	"permissions": [
+		"alarms",
+		"notifications",
+		"tts"
+	],
+	"icons": {
+		"16": "img/icon_16.png",
+		"128": "img/icon_128.png"
+	},
+	"offline_enabled": true,
+	"content_security_policy": "default-src 'self' https://themes.googleusercontent.com/static/fonts/; script-src 'self'; connect-src: 'self'; img-src: 'self'; style-src: 'self' https://fonts.googleapis.com;"
+}

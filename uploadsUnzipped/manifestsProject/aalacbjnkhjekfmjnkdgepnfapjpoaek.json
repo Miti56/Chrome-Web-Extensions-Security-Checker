@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "vkPublicMessenger",
+    "version": "0.0.3.1",
+    "manifest_version": 2,
+    "description": "vk.com adding chat to every public/group page.",
+    "content_security_policy": "script-src 'self'; object-src 'self';style-src 'self';",
+    "permissions": [
+        "https://vk.com/*",
+        "http://evium.ru/"
+    ],
+    "icons": {
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+    "author": "Petr Ivanov",
+    "short_name": "vkpublicmess",
+    "content_scripts": [
+        {
+            "matches": ["http://vk.com/*"],
+            "js": [
+                "plugins/jquery-1.11.1.min.js",
+                "plugins/swfobject.js",
+                "plugins/web_socket.js",
+                "plugins/jquery-ui.min.js",
+                "plugins/jquery.cookie.js",
+                "plugins/evium.js",
+                "vk.js"
+            ],
+            "css": [
+                "css/vkMessager.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "getvkvariable.js",
+        "plugins/jquery-1.11.1.min.js",
+        "plugins/swfobject.js",
+        "plugins/web_socket.js",
+        "plugins/evium.js"
+    ]
+}

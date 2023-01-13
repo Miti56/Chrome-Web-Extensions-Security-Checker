@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "IAGENTEmail",
+  "version": "1",
+  "manifest_version": 2,
+  "description": "Email Marketing e Pesquisas Online",
+  "icons": { 
+   "128": "128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.iagentemail.com.br/login/"
+    ],
+    "launch": {
+      "web_url": "http://www.iagentemail.com.br/login/"
+    }
+  }
+}

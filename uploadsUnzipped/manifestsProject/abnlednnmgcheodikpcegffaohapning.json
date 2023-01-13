@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "version": "1.3.2",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/logo-O-16.png",
+    "48": "images/logo-O-48.png",
+    "128": "images/logo-O-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+  ],
+  "browser_action": {
+    "default_icon": "images/logo-O-48.png"
+  },
+  "content_scripts": [ {
+    "matches": ["https://www.forrester.com/reg/briefing.xhtml*","https://www.gartner.com/analyst/vendor-briefing*"],
+    "js": ["content.js"]
+  },
+    {
+      "matches": ["http://*.27global.net/*","http://oz.spotlightar.com/*", "https://oz.spotlightar.com/*", "http://localhost:3000/*"],
+      "js": ["extensionInstalled.js"]
+    }
+  ]
+}

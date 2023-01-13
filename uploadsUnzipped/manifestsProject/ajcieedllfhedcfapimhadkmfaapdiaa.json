@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "manifest_version": 2,
+  "permissions": [
+    "unlimitedStorage",
+    "http://*/*",
+    "https://*/*",
+    "cookies",
+    "tabs"
+  ],
+  "default_locale": "ru",
+  "background": {
+    "scripts": [
+      "background/backend.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "logo/*",
+    "includes/*"
+  ],
+  "icons": {
+    "16": "logo/ru/16.png",
+    "48": "logo/ru/48.png",
+    "128": "logo/ru/128.png"
+  },
+  "minimum_chrome_version": "36",
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "__MSG_searchName__",
+      "keyword": "yandex.ru",
+      "search_url": "https://yandex.ru/search/?from=chromesearch&clid=2224314&text={searchTerms}",
+      "image_url": "https://yandex.ru/images/search?rpt=imageview&cbird=5&clid=2224315",
+      "image_url_post_params": "upfile={google:imageThumbnail},original_width={google:imageOriginalWidth},original_height={google:imageOriginalHeight},prg=1",
+      "favicon_url": "https://yastatic.net/islands/_/aKnllxm-gQhidpzbZqub7qe641g.ico",
+      "suggest_url": "https://suggest.yandex.net/suggest-ff.cgi?uil=ru&part={searchTerms}",
+      "encoding": "UTF-8",
+      "is_default": true,
+      "prepopulated_id": 15
+    },
+    "startup_pages": [
+      "https://yandex.ru?clid=2224313"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "logo/browser_action/ru/19.png",
+      "38": "logo/browser_action/ru/38.png"
+    }
+  },
+  "version": "8.22.703"
+}

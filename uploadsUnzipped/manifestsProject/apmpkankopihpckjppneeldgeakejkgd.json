@@ -1,0 +1,41 @@
+{
+	"manifest_version": 2,
+	"chrome_url_overrides": {
+		"newtab": "sigma.html"
+	},
+	"name": "__MSG_name__",
+	"icons": {
+		"48": "icons/exo-48.png",
+		"128": "icons/exo-128.png"
+	},
+	"version": "9.15.18",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"background": {
+		"scripts": [
+			"scripts/exo.js"
+		]
+	},
+	"optional_permissions": [
+		"management"
+	],
+	"description": "__MSG_description__",
+	"browser_action": {
+		"default_title": "EXO"
+	},
+	"default_locale": "en",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

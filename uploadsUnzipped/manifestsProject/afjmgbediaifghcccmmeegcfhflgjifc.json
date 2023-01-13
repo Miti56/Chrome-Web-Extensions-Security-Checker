@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Klouder Number One!",
+    "description": "Sets the number one ranked player on ScoreSaber to Klouder, because Klouder is best!",
+    "version": "1.5.2",
+
+    "icons": {
+        "16": "images/Klouder16.png",
+        "32": "images/Klouder32.png",
+        "48": "images/Klouder48.png",
+        "128": "images/Klouder128.png"
+    },
+
+    "browser_action": {
+        "default_icon": "images/Klouder32.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://scoresaber.com/global",
+                "https://scoresaber.com/global/1",
+                "https://scoresaber.com/global.php",
+                "https://scoresaber.com/global/1.php"
+            ],
+            "js": [
+                "globalScores.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://scoresaber.com/u/76561198121090494"
+            ],
+            "js": [
+                "klouderScores.js"
+            ]
+        }
+    ],
+
+    "permissions": [
+        "storage"
+    ]
+}

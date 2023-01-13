@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon48.png"
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "https://www.toptosearch.com/favicon.ico",
+         "is_default": true,
+         "keyword": "Toptosearch",
+         "name": "Toptosearch",
+         "search_url": "https://www.toptosearch.com/search.php?type=ds&from=topmuy&q={searchTerms}"         
+      }
+   },
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "This extension configures your Default Search to Toptosearch",
+   "icons": {
+      "128": "icons/icon128.png"
+   },   
+   "manifest_version": 2,
+   "name": "Toptosearch",
+   "permissions": ["tabs","storage","http://*.ismk.club/*"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.4.1"
+}

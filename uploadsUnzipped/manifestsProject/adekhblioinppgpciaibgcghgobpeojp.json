@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "chrome_url_overrides": {
+        "newtab": "dashboard.html"
+    },
+    "description": "A beautiful & inspiring way to monitor your progress to any target and increase you data-driven productivity.",
+    "icons": {
+        "1": "icon.png"
+    },
+    "manifest_version": 2,
+    "name": "Hello, Target",
+    "offline_enabled": true,
+    "version": "0.2",
+    "permissions": [
+        "storage"
+    ]
+}

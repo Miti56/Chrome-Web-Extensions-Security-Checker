@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "battle pupil",
+  "version": "1.4.5",
+  "manifest_version": 2,
+  "description": "battle pupil - Chrome",
+  "content_scripts": [
+    {
+      "matches": ["http://www.erepublik.com/en", 
+        "http://www.erepublik.com/*/citizen/profile/*",
+        "http://www.erepublik.com/*/citizen/change-residence",
+        "http://www.erepublik.com/*/military/battlefield/*",
+        "http://www.erep1.lindasc.tk/*/military/battlefield/*",
+        "http://www.erep2.lindasc.tk/*/military/battlefield/*"],
+      "js" : ["jquery-2.0.3.min.js", "contentscript.js"]
+    }
+  ],
+  "permissions": [
+    "http://cmc.erep-newsmth.com/*"
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  }
+}

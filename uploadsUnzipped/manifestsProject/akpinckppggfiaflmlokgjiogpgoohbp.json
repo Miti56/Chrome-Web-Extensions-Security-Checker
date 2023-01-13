@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "logo19.png",
+      "default_popup": "popup.html",
+      "default_title": "Radio Chrome - World Radio in your chrome browser."
+   },
+   "default_locale": "ru",
+   "icons": {
+      "128": "logo128.png",
+      "19": "logo19.png",
+      "48": "logo48.png",
+      "96": "logo96.png"
+   },
+"content_scripts": [ {
+      "js": [ "js/jquery.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "manifest_version": 2,
+   "name": "__MSG_chrome_extension_name__",
+   "description": "__MSG_chrome_extension_description__",
+   "default_locale": "ru",
+   "permissions": ["management", "tabs", "*://*/*", "storage"],
+   "version": "1.0.0.3"
+}

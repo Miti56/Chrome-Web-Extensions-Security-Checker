@@ -1,0 +1,28 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/config.js", "js/store.js", "js/utility.js", "js/log.js", "js/search.js", "central.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icon.png"
+      },
+      "default_popup": "html/bAction/newtabpage.html",
+      "default_title": "Open NewTab"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtabhtml/newtabpage.html"
+   },
+   "default_locale": "en",
+   "description": "__MSG_ProductDescription__",
+   "icons": {
+      "128": "icon.png"
+   },
+   "incognito": "split",
+   "manifest_version": 2,
+   "name": "__MSG_ProductName__",
+   "permissions": [ "tabs", "storage", "cookies", "*://*.monconvertisseur.com/*", "alarms", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3",
+   "web_accessible_resources": [ "*.json" ]
+}

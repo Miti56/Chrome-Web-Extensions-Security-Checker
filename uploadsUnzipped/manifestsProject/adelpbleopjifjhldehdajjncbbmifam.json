@@ -1,0 +1,26 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "installer.js" ]
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "default_locale": "en",
+   "locale code": "en_US",
+   "description": "New 2017 youtube unblocked free download. Populer web online unblocker vpn play games guide hack pc program.",
+   "file_handlers": {
+      "text": {
+         "types": [ "application/javascript", "application/json", "application/x-shellscript", "application/xml", "text/*" ]
+      }
+   },
+   "icons": {
+      "128": "icon-128.png"
+   },
+   "manifest_version": 2,
+   "name": "Online Youtube Unblocked",
+   "permissions": [ "clipboardRead", "clipboardWrite", "browser", "alarms", "contextMenus", "storage", "notifications", "syncFileSystem", "app.window.fullscreen.overrideEsc", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   } ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.5.1"
+}

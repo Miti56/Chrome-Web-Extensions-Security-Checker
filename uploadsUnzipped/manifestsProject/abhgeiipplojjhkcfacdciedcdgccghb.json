@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Online Sims best games",
+"version": "1.1",
+"description": "sims 4 , sims 3, gta v, gta san andreas, clash of clans, plants zombies ",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "sims free",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

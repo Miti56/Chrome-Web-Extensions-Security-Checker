@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Polarr Photo Editor 2 (Deprecated)",
+  "short_name": "Polarr",
+  "description": "Professional Photo Editor Made for Everyone.",
+  "version": "2.1.7",
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "minimum_chrome_version": "36.0",
+  "requirements": {
+    "3D": {
+      "features": ["webgl"]
+    }
+  },
+  "permissions": [
+    "https://v2.polarr.co/",
+    "https://www.polarr.co/",
+    "https://www.google-analytics.com/",
+    "fileSystem",
+    {"fileSystem": ["write","retainEntries"]},
+    "notifications",
+    "unlimitedStorage",
+    "storage",
+    "system.display",
+    "system.memory",
+    "system.storage",
+    "system.cpu",
+    "app.window.fullscreen"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": {"128": "favicon-128x128.png" }
+}

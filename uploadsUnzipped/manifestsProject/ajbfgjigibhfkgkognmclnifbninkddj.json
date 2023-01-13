@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Douroosi Screen Sharing",
+  "short_name": "Douroosi",
+  "author": "Douroosi",
+  "version" : "1.0.1",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "40",
+  "description" : "Douroosi is a tutoring platform. This extension allows screen-sharing functionality during tutoring sessions.",
+  "homepage_url": "http://app.douroosi.com/",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://*.douroosi.com/*"
+    ]
+  },
+  "icons": {
+    "16": "logo-16x16.png",
+    "32": "logo-32x32.png",
+    "48": "logo-48x48.png",
+    "128": "logo-128x128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ],
+  "browser_action": {
+    "default_icon": "logo-32x32.png"
+  }
+}

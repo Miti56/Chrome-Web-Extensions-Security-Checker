@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "ENT Auto-connexion",
+	"version": "1.0.0", 
+	"description": "Auto-connexion à l'ENT de l'INSA de Rennes",
+
+	"icons": {
+		"16": "icon16.png",
+        "48": "icon48.png"
+    },
+
+    "content_scripts": [ {
+		"js": ["jquery.js", "autoconnect.js"],
+		"css": ["bootstrap.min.css"],
+		"matches": [ "https://cas.insa-rennes.fr/*" ],
+		"run_at" : "document_start"
+	} ],
+
+	"browser_action": {
+		"default_icon": "icon48.png",
+		"default_title": "Options",
+		"default_popup": "popup.html"	
+	},
+
+	"permissions": [
+		"storage"
+	]
+}

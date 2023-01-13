@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "おしゃべりたしざん",
+    "description": "おしゃべりしながら足し算を楽しもう。",
+    "short_name": "Ohaberi+",
+    "version": "1.0.0",
+
+    "browser_action": {
+   "default_title": "Ohaberi+",
+  "default_icon": {
+    "default_icon": {"38":"icon_38.png"}
+  }
+},
+"background": {
+"scripts": [ "icon_clicked.js" ],
+"persistent": false
+},
+    "icons": {
+        "128": "icon_128.png",
+        "16": "icon_16.png"
+    },
+ "permissions": [
+    "tabs"]
+}

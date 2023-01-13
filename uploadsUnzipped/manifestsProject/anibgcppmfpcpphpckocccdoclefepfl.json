@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "BNK48 Vote Summary",
+    "version": "1.0",
+    "description": "สรุปผลโหวตของคุณ แบบแยกเมมเบอร์",
+    "content_scripts": [
+        {
+          "matches": ["https://election.bnk48.com/history*"],
+          "js": ["jquery-3.3.1.min.js", "start.js"]
+        }
+    ],
+    "manifest_version": 2,
+    "web_accessible_resources": ["votesummary.js"],
+    "icons": { "128": "icon_bnk48_128.png" },
+    "browser_action": {
+        "default_icon": "icon_bnk48_19.png",
+        "default_title": "BNK48 Vote Summary (Developed by Phonecyber.NET)"
+    }
+}

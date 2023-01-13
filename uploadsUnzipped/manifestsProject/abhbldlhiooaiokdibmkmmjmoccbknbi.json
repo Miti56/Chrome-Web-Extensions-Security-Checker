@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Dream Dinners",
+	"description": "Dream Dinners provides everything you need to assemble and serve healthy dinners for your family in the weeks ahead.",
+	"version": "1.0",
+	"icons": {
+		"128": "images/dreamdinners.png"
+	},
+	"app": {
+		"urls": [
+			"http://dreamdinners.com/"
+		],
+		"launch": {
+			"web_url": "http://dreamdinners.com/"
+		}
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	]
+}

@@ -1,0 +1,93 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "__MSG_eval_app_name__",
+    "description": "__MSG_app_description__",
+    "version": "2.2020.310.1250",
+    "default_locale": "en_US",
+    "background" : {
+        "page": "html/background.html",
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": {
+            "16" : "images/logo16.png",
+            "24" : "images/logo24.png",
+            "32" : "images/logo32.png"
+        },
+        "default_title": "__MSG_app_name__",
+        "default_popup": "html/popup.html"
+    },
+
+    "icons" : {
+        "16" : "images/logo16.png",
+        "48" : "images/logo48.png",
+        "128" : "images/logo128.png"
+    },
+
+    "options_page": "html/options.html",
+
+    "permissions": [
+        "activeTab",
+        "notifications",
+        "storage",
+        "proxy",
+        "http://localhost/*",
+        "tabs",
+        "webNavigation",
+        "downloads",
+        "downloads.shelf"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://localhost/*", "*://127.0.0.1/*", "file://*/*"],
+            "js": [
+                "main/action_recording/Debug.js",
+                "main/action_recording/BrowserDetect.js",
+                "main/action_recording/StringUtil.js",
+                "main/action_recording/Util.js",
+                "main/action_recording/JSBasedBrowserUtil.js",
+                "main/action_recording/ChromeUtil.js",
+                "main/action_recording/ChromePageDOMUtil.js",
+                "main/action_recording/ScriptDialogManager.js",
+                "main/action_recording/Constants.js",
+                "main/action_recording/MessageContents.js",
+                "main/action_recording/Communicator.js",
+                "main/action_recording/ChromeDOMEngineCommunicator.js",
+                "main/action_recording/ChromeDOMEngine.js",
+                "main/action_recording/HTMLUtil.js",
+                "main/action_recording/WindowController.js",
+                "main/action_recording/PageController.js",
+                "main/action_recording/CommandHandlers.js",
+                "main/action_recording/OptionLocatorFactory.js",
+                "main/action_recording/BrowserDriver.js",
+                "main/action_recording/WindowContentsExecutor.js",
+                "main/action_recording/ChromeDOMEngineWindowContentsExecutor.js",
+                "main/action_recording/LocatorBuilders.js",
+                "main/action_recording/Recorder.js",
+                "main/action_recording/RecorderHandlers.js",
+                "main/action_recording/UserCustomizableOptions.js",
+                "main/action_recording/OptionsDependentSettings.js",
+                "main/action_recording/xmltoken.js",
+                "main/action_recording/misc.js",
+                "main/action_recording/dom.js",
+                "main/action_recording/xpath.js",
+                "main/action_recording/wgxpath.js",
+                "main/locator/AttributeIndexLocatorBuilder.js",
+                "main/locator/AttributeLocatorBuilder.js",
+                "main/locator/ButtonLocatorBuilder.js",
+                "main/locator/ClassNameLocatorBuilder.js",
+                "main/locator/IdLocatorBuilder.js",
+                "main/locator/LinkImageLocatorBuilder.js",
+                "main/locator/NameLocatorBuilder.js",
+                "main/locator/PositionLocatorBuilder.js",
+                "main/locator/TableLocatorBuilder.js",
+                "main/locator/TextLocatorBuilder.js"
+            ],
+            "all_frames": true
+        }
+    ],
+    "web_accessible_resources": ["/options.html", "locator_weights.json"]
+}

@@ -1,0 +1,92 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.22",
+  "name": "达购海淘助手",
+  "permissions": ["tabs", "alarms", "notifications", "http://www.dagobuy.com/current.version"],
+  "content_scripts": [
+      {
+        "matches": [
+        	"https://*.amazon.com/gp/offer-listing/*", 
+        	"https://*.amazon.ca/gp/offer-listing/*", 
+        	"https://*.amazon.de/gp/offer-listing/*", 
+        	"https://*.amazon.in/gp/offer-listing/*", 
+        	"https://*.amazon.es/gp/offer-listing/*", 
+        	"https://*.amazon.nl/gp/offer-listing/*", 
+        	"https://*.amazon.it/gp/offer-listing/*", 
+        	"https://*.amazon.fr/gp/offer-listing/*",
+        	"https://*.amazon.co.uk/gp/offer-listing/*",
+        	"https://*.amazon.co.jp/gp/offer-listing/*",
+
+        	"https://*.amazon.com/dp/*", 
+        	"https://*.amazon.ca/dp/*", 
+        	"https://*.amazon.de/dp/*", 
+        	"https://*.amazon.in/dp/*", 
+        	"https://*.amazon.es/dp/*", 
+        	"https://*.amazon.nl/dp/*", 
+        	"https://*.amazon.it/dp/*", 
+        	"https://*.amazon.fr/dp/*", 
+        	"https://*.amazon.co.uk/dp/*",
+        	"https://*.amazon.co.jp/dp/*",
+
+        	"https://*.amazon.com/*/dp/*", 
+        	"https://*.amazon.ca/*/dp/*", 
+        	"https://*.amazon.de/*/dp/*", 
+        	"https://*.amazon.fr/*/dp/*",
+        	"https://*.amazon.in/*/dp/*",
+        	"https://*.amazon.es/*/dp/*",
+        	"https://*.amazon.nl/*/dp/*",
+        	"https://*.amazon.it/*/dp/*",
+        	"https://*.amazon.co.uk/*/dp/*",
+        	"https://*.amazon.co.jp/*/dp/*",
+
+        	"https://*.amazon.com/gp/product/*", 
+        	"https://*.amazon.ca/gp/product/*", 
+        	"https://*.amazon.de/gp/product/*", 
+        	"https://*.amazon.fr/gp/product/*", 
+        	"https://*.amazon.in/gp/product/*", 
+        	"https://*.amazon.es/gp/product/*", 
+        	"https://*.amazon.nl/gp/product/*", 
+        	"https://*.amazon.it/gp/product/*", 
+        	"https://*.amazon.co.uk/gp/product/*",
+        	"https://*.amazon.co.jp/gp/product/*",
+
+        	"https://*.amazon.com/gp/customer-reviews/*", 
+        	"https://*.amazon.ca/gp/customer-reviews/*", 
+        	"https://*.amazon.de/gp/customer-reviews/*", 
+        	"https://*.amazon.fr/gp/customer-reviews/*", 
+        	"https://*.amazon.in/gp/customer-reviews/*", 
+        	"https://*.amazon.es/gp/customer-reviews/*", 
+        	"https://*.amazon.nl/gp/customer-reviews/*", 
+        	"https://*.amazon.it/gp/customer-reviews/*", 
+        	"https://*.amazon.co.uk/gp/customer-reviews/*",
+        	"https://*.amazon.co.jp/gp/customer-reviews/*",
+
+        	"https://*.amazon.com/*/product-reviews/*", 
+        	"https://*.amazon.ca/*/product-reviews/*", 
+        	"https://*.amazon.de/*/product-reviews/*", 
+        	"https://*.amazon.fr/*/product-reviews/*", 
+        	"https://*.amazon.in/*/product-reviews/*", 
+        	"https://*.amazon.es/*/product-reviews/*", 
+        	"https://*.amazon.nl/*/product-reviews/*", 
+        	"https://*.amazon.it/*/product-reviews/*", 
+        	"https://*.amazon.co.uk/*/product-reviews/*",
+        	"https://*.amazon.co.jp/*/product-reviews/*"
+        ],
+        "js": ["jquery-3.2.1.min.js", "script.js"],
+        "run_at": "document_start"
+      }
+  ],
+  "background":{
+  	"scripts": ["jquery-3.2.1.min.js", "background.js"],
+  	"persistent": false
+  },
+  "browser_action": {
+      "default_title": "达购海淘助手",
+      "default_icon": "icon.png"
+  },
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" }
+}

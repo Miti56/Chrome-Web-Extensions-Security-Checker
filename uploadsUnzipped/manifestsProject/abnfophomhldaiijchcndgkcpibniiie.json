@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "TrilbyTV",
+	"version": "4.0",
+	"description": "Enhancing your Digital Signage",
+	"author": "Trilby Multimedia Ltd",
+	"app": 
+	{
+		"urls": 
+		[
+			"*://app.trilbytv.co.uk/"
+		],
+		"launch": 
+		{
+			"web_url": "https://app.trilbytv.co.uk"
+		}
+	},
+  	"icons": {
+		"16": "Icon_16.png",
+		"48": "Icon_48.png",
+		"128": "Icon_128.png",
+		"256": "Icon_256.png",
+		"512": "Icon_512.png",
+		"1024": "Icon_1024.png"
+  	} 	
+}

@@ -1,0 +1,24 @@
+
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "Amazon Spain",
+    "short_name": "Amazon Now Shopoing More interesting",
+    "description": "Never Miss Any Deals Just One Click We Will Notifies You Latest Deals Every Hour ",
+"version": "1.0.0",
+"icons": {
+        "128": "icon_128.jpg"
+    },
+
+    "app": {
+    "background": {
+        "persistent": false,
+        "scripts": ["bg/OneSignal.js", 
+                    "bg/background.js"]     
+   }
+},     
+"permissions": ["webview", "gcm", "storage", "notifications", "identity", "browser"]
+
+}
+
+  

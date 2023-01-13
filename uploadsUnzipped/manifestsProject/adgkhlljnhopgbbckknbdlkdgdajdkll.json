@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "QueryRider-BBB",
+  "description": "Append/Modify Query Parameters in URL",
+  "version":"1.0.1",
+  "default_locale": "en",
+  "content_scripts" : [
+    {
+      "matches": [
+        "*://*.bbbycaapp.com/*",
+        "*://*.bbbabyapp.com/*",
+        "*://*.bbbyapp.com/*"
+      ],
+      "js": ["popup.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": { "128": "extension_icon.png" },
+  "browser_action": {
+    "default_icon" : "extension_icon.png",
+    "default_popup":"popup.html"
+  },
+  "author": "Satyam Mishra",
+  "short_name": "Query Strings for BBB",
+  "permissions": ["storage", "activeTab"]
+}

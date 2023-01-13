@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Zix Message Encryption for Apps",
+  "version": "1.0.0.2",
+  "description": "Instantly get access to the world’s only shared email encryption community: 46 million strong and growing every day.",
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "595323935593",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://www.zix-message-encryption-for-apps.com"
+    }
+  }
+}

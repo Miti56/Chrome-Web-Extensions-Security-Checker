@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "PayBack",
+  "description": "PayBack berechnet Verpflegungspauschalen für Vielreisende und Finanzabteilungen kleiner und grosser deutscher Unternehmen.",
+  "version": "1.31",
+  "default_icon": { "16": "img/icon16.png",
+             "48": "img/icon48.png",
+            "128": "img/icon128.png" },
+  "options_page": "options.html",
+  
+  "browser_action": {
+    "icon": "img/icon19.png",
+    "title": "PayBack",
+    "popup": "popup.html"
+  }
+}

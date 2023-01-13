@@ -1,0 +1,16 @@
+{
+    "name": "sd25 Tech Time",
+    "description": "This blog for sd25 teachers is for technology resources, teacher highlights, and more.",
+    "app": {
+        "urls": ["http://sd25techpd.blogspot.com/"],
+        "launch": {
+            "web_url": "http://sd25techpd.blogspot.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

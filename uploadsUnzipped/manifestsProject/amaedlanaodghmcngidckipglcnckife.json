@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "brand.js", "bgscript.js" ]
+   },
+   "description": "Get custom search for gamers",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "GamerSearch",
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "cookies", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.5"
+}

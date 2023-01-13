@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "FlutterFly",
+	"description": "Flutter the Butterfly just wants to go out for the day to flutter around but she quickly runs into a few hungry animals.",
+	"version": "1.21",
+	"manifest_version": 2,
+	"homepage_url": "http://www.eighthwonderlabs.com/apps/flutterfly/",
+	"app": {
+		"launch": {
+			"web_url": "https://flutterfly.5apps.com/"
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Invite fans in Facebook (PRO fully automated)",
+  "version": "1.0.4",
+  "manifest_version": 2,
+  "description": "Automatically opens every post and invites everyone to like the page. All in automatic!",
+  "homepage_url": "http://invitetofbpage.phoenixstyle.com/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+"browser_action": {
+        "name": "__MSG_start_inv__"
+        },
+        "background":{
+            "scripts":["background.js"]
+        },
+        "permissions":["https://*.facebook.com/*"]
+ }

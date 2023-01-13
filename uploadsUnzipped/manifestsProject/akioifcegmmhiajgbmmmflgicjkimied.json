@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Clothing Size Conversion",
+  "description": "Clothing Size Conversion is a web application to convert clothing sizes between different measurement systems. It is awesome!",
+  "version": "1.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://clothing.sizeconversion.net/clothing"
+    ],
+    "launch": {
+      "web_url": "http://clothing.sizeconversion.net/clothing"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "DAC_UI",
+  "short_name": "DAC",
+  "description":  "Data Access Control : 19-Oct-2016",
+  "version": "1.7",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+
+  "page_action": {
+    "default_icon": "icon16.png",
+    "default_title": "Data Access Control UI"
+  },
+
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+
+  
+  "content_scripts":[
+    {		
+	  "matches": ["http://bo42_prod:8080/BOE/*", "http://bo42_qa:8080/BOE/*", "http://bo42_dev:8080/BOE/*", "http://bo42_dr:8080/BOE/*", "http://fblprdbowebsvr:8080/BOE/*", "http://fbldevboappsvr:8080/BOE/*", "http://fblqaboappsvr:8080/BOE/*", "http://fbldrboappsvr:8080/BOE/*", "http://10.179.100.120/*", "http://bo-server2:8080/businessobjects/enterprise115/*", "http://fbldevboappsvr:8080/*", "http://10.179.142.194:8080/*"],
+      "js": ["modScript.js","jquery-3.1.0.min.js"],
+      "css": ["webContent.css"],
+      "all_frames": true
+    }
+  ],
+
+  "permissions": [
+    "tabs", 
+	"http://bo42_prod:8080/BOE/*", 
+	"http://bo42_qa:8080/BOE/*",
+	"http://bo42_dev:8080/BOE/*",
+	"http://bo42_dr:8080/BOE/*",
+	"http://fblprdbowebsvr:8080/BOE/*", 
+	"http://fbldevboappsvr:8080/BOE/*", 
+	"http://fblqaboappsvr:8080/BOE/*", 
+	"http://fbldrboappsvr:8080/BOE/*",  
+	"http://10.179.100.120/*",
+	"http://bo-server2:8080/businessobjects/enterprise115/*",
+	"http://fbldevboappsvr:8080/*", 
+	"http://10.179.142.194:8080/*"
+        ],
+
+  "web_accessible_resources": [
+      "*.eot", "*.otf", "*.ttf" , "*.html", "*.woff", "*.woff2", "*.css", "*.txt", "*.png",
+      "fonts/*"
+      ]
+
+}

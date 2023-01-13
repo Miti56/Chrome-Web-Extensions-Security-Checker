@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "ThoughtWorks Chengdu Library",
+	"description": "This extension shows you if ThoughtWorks Chengdu Office Library has this book",
+	"version": "0.1",
+
+	"icons": {
+		"128": "images/book.png",
+		"64": "images/book.png",
+		"32": "images/book.png",
+		"16": "images/book.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://book.douban.com/subject/*"],
+			"js": ["js/jquery.js", "js/inject.js"]
+		}
+	],
+
+	"permissions": [
+		"tabs",
+		"http://book.douban.com/",
+		"https://api.douban.com/",
+		"http://libr.herokuapp.com/"
+	],
+
+	"page_action": {
+		"default_icon" : {
+			"32": "images/books.png"
+		},
+		"default_title": "ThoughtWorks Chengdu"
+	}
+}

@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "js/background.js", "js/jquery.1.8.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Отслеживание посылок с aliexpress по номеру отправления с уведомлением о доставке"
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.1.8.min.js", "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Отслеживание посылок с aliexpress по номеру отправления с уведомлением о доставке",
+   "icons": {
+      "128": "images/icon.png"
+   },
+   "manifest_version": 2,
+   "name": "AliExpress Tracker from Chabr.ru",
+   "permissions": [ "http://chabr.ru/track.php", "http://chabr.ru/plugin.php", "tabs", "cookies" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.26"
+}

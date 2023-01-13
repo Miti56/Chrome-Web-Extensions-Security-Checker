@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "RTV theme",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 200, 200, 204 ],
+         "button_background": [ 0, 0, 0 ],
+         "frame": [ 0, 0, 0 ],
+         "frame_inactive": [ 0, 0, 0 ],
+         "frame_incognito": [ 0, 0, 0 ],
+         "frame_incognito_inactive": [ 0, 0, 0 ],
+         "ntp_background": [ 0, 0, 0 ],
+         "ntp_header": [ 0, 0, 0 ],
+         "ntp_link": [ 255, 51, 0 ],
+         "ntp_link_underline": [ 255, 51, 0 ],
+         "ntp_section": [ 255, 255, 255, 0.05 ],
+         "ntp_section_link": [ 255, 51, 0 ],
+         "ntp_section_link_underline": [ 255, 51, 0 ],
+         "ntp_section_text": [ 200, 200, 204 ],
+         "ntp_text": [ 200, 200, 204 ],
+         "tab_background_text": [ 153, 153, 153 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 35, 35, 50 ]
+      },
+      "icons": {
+         "128": "img/icon128.png",
+         "16": "img/icon16.png",
+         "48": "img/icon48.png"
+      },
+      "images": {
+         "theme_frame": "img/theme_frame.png",
+         "theme_frame_inactive": "img/theme_frame.png",
+         "theme_frame_incognito": "img/theme_frame.png",
+         "theme_frame_incognito_inactive": "img/theme_frame.png",
+         "theme_ntp_attribution": "img/theme_ntp_attribution.png",
+         "theme_ntp_background": "img/ntp_background.png",
+         "theme_tab_background": "img/theme_tab_background.png",
+         "theme_toolbar": "img/theme_toolbar.png",
+         "theme_window_control_background": "img/theme_window_control_background.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "top",
+         "ntp_background_repeat": "repeat-x",
+         "ntp_logo_alternate": 1
+      },
+      "tints": {
+         "buttons": [ 1, 0, 0.8 ],
+         "frame_inactive": [ 0, 0, 0 ]
+      }
+   }
+}

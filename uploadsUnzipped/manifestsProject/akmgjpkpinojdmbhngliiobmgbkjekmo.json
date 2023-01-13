@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Sagah - Info",
+  "short_name": "Sagah info",
+  "description": "Teste de coleta de dados de dispositivos",
+  "version": "1.42",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Sagah - Info"
+    },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+    },
+  "minimum_chrome_version": "46",
+  "permissions": [
+    "identity",
+    "identity.email",
+    "enterprise.deviceAttributes"
+    ],
+  "storage": {
+    "managed_schema": "schema.json"
+    }
+}

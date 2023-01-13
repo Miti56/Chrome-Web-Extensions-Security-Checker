@@ -1,0 +1,68 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Favorize",
+	"version": "0.7.3",
+	"description": "Favorize App. ©2016 Favorize Inc.",
+	"homepage_url": "https://favorize.com/",
+	"icons": {
+		"16": "img/icon-16.png",
+		"48": "img/icon-48.png",
+		"128": "img/icon-128.png"
+	},
+	"content_scripts": [{
+		"matches": ["http://*/*", "https://*/*"],
+		"exclude_matches": [
+			"*://localhost/*"
+		],
+		"js": [
+			"lib/jquery.min.js",
+            "shared/js/vendor/mustache.jquery.js",
+			"lib/jquery.webui-popover.js",
+			"lib/md5.min.js",
+            "lib/sweet-alert.js",
+			"common.js",
+			"notifications.js",
+			"content.js"
+		],
+		"run_at": "document_end",
+		"css": [
+            "css/content.css",
+            "css/notifications.css",
+			"css/favorize-icons.css",
+            "css/vendor/sweet-alert.css",
+			"css/vendor/jquery.webui-popover.css"
+        ]
+		
+	}],
+	"background": {
+		"scripts": [
+			"lib/jquery.min.js",
+            "shared/js/vendor/mustache.jquery.js",
+            "lib/mixpanel.js",
+			"common.js",
+            "api.js",
+			"background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": {
+            "19": "img/icon-19.png",
+            "38": "img/icon-38.png"
+        },
+		"default_title": "Favorize",
+		"default_popup": "templates/popup.html"
+	},
+	"web_accessible_resources": ["img/*", "templates/*", "font/*", "config.json"],
+    "externally_connectable": {
+        "matches": ["*://*.favorize.com/*", "*://favorize.com/*"]
+    },
+	"permissions": [
+		"*://*.favorize.com/*",
+		"clipboardWrite",
+		"storage",
+		"tabs"
+	],
+    "content_security_policy": "script-src 'self' https://cdn.mxpnl.com; object-src 'self'",
+    "manifest_version": 2
+}

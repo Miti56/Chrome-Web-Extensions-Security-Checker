@@ -1,0 +1,16 @@
+{
+    "name": "Phone cards",
+    "description": "We invite You to find the LOWEST prepaid phone card rates and purchase Your card ONLINE.",
+    "app": {
+        "urls": ["http://conectcards.pushline.com/"],
+        "launch": {
+            "web_url": "http://conectcards.pushline.com//"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.2",
+    "icons": {
+        "128": "icon.png"
+    }
+}

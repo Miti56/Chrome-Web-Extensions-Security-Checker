@@ -1,0 +1,22 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Gerenciador -  Defensoria Pública",
+  "description": "Permite identifizar e redirecionar o usuário para a página de edição do conteúdo",
+  "version": "1.0",
+  "author": "Defensoria Pública do Estado do Tocantins",
+  "permissions": [
+  "activeTab"
+  ],
+  "icons": { "16": "16.png",
+  "48": "48.png" },
+  "background": {
+    "scripts": ["jquery-2.1.3.min.js", "background.js"],
+    "persistent": false
+    },
+    "browser_action": {
+        "default_title": "Editar essa notícia"
+  },
+  "manifest_version": 2
+}

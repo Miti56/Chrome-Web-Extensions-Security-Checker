@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Haxball Colors",
+	"description": "Change color of the haxball background map!",
+	"version": "2.4",
+	"manifest_version": 2,
+	"permissions": ["background", "tabs", "webRequest", "webRequestBlocking", "*://*.haxball.com/*"],    
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+	"browser_action": {  
+		"default_popup": "index.html" 
+	},
+	"icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+	"web_accessible_resources": ["scripts.js"]
+}

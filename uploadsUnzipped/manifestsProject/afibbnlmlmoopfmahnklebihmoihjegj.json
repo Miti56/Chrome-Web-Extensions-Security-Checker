@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Social Media Icons",
+  "short_name": "Social Media Icons",
+  "description": "Icons for Instagram, Facebook, Twitter, LinkedIn, and a million more!",
+  "version": "1.1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128x128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.powr.io/plugins/social-media-icons/"
+    ],
+    "launch": {
+      "web_url": "https://www.powr.io/plugins/social-media-icons/standalone?platform=chrome"
+    }
+  }
+}

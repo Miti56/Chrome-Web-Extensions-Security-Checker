@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+	"name": "T97Z",
+    "description": "aplicacion de muestra, destinada para el sector publico",
+    "version": "1.0",
+    "icons": {
+        "128": "Icono.jpg"
+    },
+    "app": {
+        "urls": [
+            "http://triviumdigital.net/"
+        ],
+        "launch": {
+            "web_url": "http://triviumdigital.net/"
+        }
+    },
+    "permissions": [
+        "unlimitedStorage",
+        "notifications"
+    ]
+}

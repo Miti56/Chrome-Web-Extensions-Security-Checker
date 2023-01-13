@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.2.3",
+  "name": "界图-图片下载插件",
+  "description": "一款简洁全能的图片下载插件，即便网页禁止右键或下载，只要能看到的图片都会自动提取，另外此插件还有智能分类功能，对网页设计师非常友好",
+  "browser_action": {
+    "default_icon": "image/128.png"
+  },
+  "icons":
+  {
+    "16": "image/16.png",
+    "48": "image/48.png",
+    "128": "image/128.png"
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "downloads",
+    "http://*/*",
+    "https://*/*" 
+  ],
+  "content_scripts": 
+  [    
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/jquery.min.1.8.js","js/douban.js"],
+      "css":["css/css.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "background":
+  {
+    "scripts": ["js/jquery.min.1.8.js","js/background.js"],
+    "persistent": true
+  }
+}

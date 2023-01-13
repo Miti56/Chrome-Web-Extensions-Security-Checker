@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Hatena Bookmark Search",
+    "description": "Search your hatena bookmarks",
+    "version": "0.2",
+    "icons": {
+        "16": "icons/16.png",
+        "128": "icons/128.png"
+    },
+    "permissions": [
+        "tabs", "http://b.hatena.ne.jp/*"
+    ],
+   "manifest_version": 2,
+    "omnibox": {
+        "keyword": "b"
+    },
+   "background": {
+      "scripts": [ "background.js" ]
+   }
+}

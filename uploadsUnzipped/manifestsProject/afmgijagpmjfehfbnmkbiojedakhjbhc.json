@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "English Cards",
+
+  "author": "ipergenitsa",
+  "description": "Приложение показывает различные слова на английском языке и их перевод на русский язык.",
+  "version": "0.0.0.4",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js", "js/jquery-2.1.3.min.js"]
+    }
+  },
+  "icons": { "16": "image/main-icon.png" , "128": "image/main-icon.png", "256": "image/main-icon.png"},
+  "permissions": [
+    "alwaysOnTopWindows",
+    "http://ipergenitsa.url.ph/*"
+  ]
+}

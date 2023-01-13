@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+   "browser_action": {
+      "default_icon": "icons/ju-16.png",
+      "default_title": "Юлмарт",
+      "default_popup": "popup.html"
+   },	
+   "manifest_version": 2,
+   "description": "расширение для Юлмарта",
+   "icons": {
+      "128": "icons/ju-128.png",      
+      "16": "icons/ju-16.png",
+	  "48": "icons/ju-48.png"
+   },
+   "content_scripts": [ {
+	  "all_frames": false,
+      "js": [ "jquery-2.0.3.min.js", "content_script.js" ],
+      "matches": [ "http://www.ulmart.ru/*","http://mxp.ulmart.ru/*","http://corp.ulmart.ru/*" ],
+      "run_at": "document_end"
+   }],   
+   "name": "Юлмарт",
+   "version": "2.1",
+   "permissions": [ "activeTab", "tabs", "http://www.ulmart.ru/*","http://mxp.ulmart.ru/*","http://corp.ulmart.ru/*" ]
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Zenya Choice Advantage Guest Info Import",
+  "icons": { "128": "Zenya.png" },
+  "version": "1.3",
+  "permissions": [
+   "activeTab", "storage", "tabs"
+   ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.choiceadvantage.com/choicehotelsHead/*", "http://127.0.0.1:8020/management_application/*", "http://localhost:8020/management_application/*", "http://54.88.200.80/*", "http://54.172.3.193/*", "http://d.zenya.io/*", "http://management.zenya.io/*"],
+      "js": ["jquery-1.11.1.min.js", "jquery.session.js", "jquery-ui.min.js","content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+   "default_icon": "Zenya.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
+}

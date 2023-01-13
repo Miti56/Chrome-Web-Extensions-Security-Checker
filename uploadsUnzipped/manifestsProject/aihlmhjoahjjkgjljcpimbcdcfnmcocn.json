@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Speed Racer Game",
+  "description": "Play online Speed Racer Game, You have to run your car and safe from Carsh This is a racing game full to fun.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.gameppoint.com/speed-racer/"
+    ],
+    "launch": {
+      "web_url": "http://www.gameppoint.com/speed-racer/"
+    }
+  }
+}

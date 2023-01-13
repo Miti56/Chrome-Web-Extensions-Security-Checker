@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "衣服尺码计算器-标准尺码表计算器",
+    "short_name": "衣服尺码计算器",
+    "description": "选购时请综合参考尺码表中的各项参数，这有助您选择到更好的尺码。计算公式是根据经验得到的数据参数，适用于绝大多数人群，不适用于特殊体型。",
+    "version": "1.0.0.10",
+
+    "permissions": ["storage"],
+    "browser_action": {
+        "default_icon": "static/img/logo48.png",
+        "default_popup": "popup.html",
+        "default_title": "衣服尺码计算器"
+    },
+
+    "content_scripts": [{
+        "js": ["static/js/jquery-3.1.1.min.js",
+            "static/js/insert.js"
+        ],
+        "matches": ["http://*/*", "https://*/*"],
+        "run_at": "document_end"
+    }],
+
+    "background": {
+        "page": "background.html"
+    },
+
+    "icons": {
+        "128": "static/img/logo128.png",
+        "48": "static/img/logo48.png"
+    },
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LeetCode Keeper",
+  "version": "1.1",
+  "manifest_version": 2,
+  "description": "A leetcode time keeper.",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "images/favicon.png",
+    "32": "images/favicon.png",
+    "48": "images/favicon.png",
+    "128": "images/favicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*/"],
+      "js": ["clock/insertClock.js"]
+    }
+  ]
+}

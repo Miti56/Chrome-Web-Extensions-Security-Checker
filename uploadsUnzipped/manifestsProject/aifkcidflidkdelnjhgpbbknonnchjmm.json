@@ -1,0 +1,91 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [
+         "js/db.js",
+         "js/gsUtils.js",
+         "js/background.js",
+         "js/lib/synk/cs_interaction.js",
+         "js/lib/synk/cs_storage.js",
+         "js/lib/synk/cs_main.js"
+      ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon19.png",
+      "default_popup": "html/popup.html",
+      "default_title": "Control your tab"
+   },
+   "chrome_url_overrides": {
+      "newtab": "html/redirect.html"
+   },
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "name": "Findster search",
+            "keyword": "Findster",
+            "search_url": "https://findster.co/search?ext=tm&q={searchTerms}",
+            "favicon_url": "https://findster.co/favicon.ico",
+            "encoding": "UTF-8",
+            "is_default": true   
+        }
+    },
+   "commands": {
+      "1-suspend-tab": {
+         "description": "Suspend active tab",
+         "suggested_key": {
+            "default": "Ctrl+Shift+S"
+         }
+      },
+      "2-unsuspend-tab": {
+         "description": "Unsuspend active tab",
+         "suggested_key": {
+            "default": "Ctrl+Shift+U"
+         }
+      },
+      "3-suspend-active-window": {
+         "description": "Suspend all tabs in active window"
+      },
+      "4-unsuspend-active-window": {
+         "description": "Unsuspend all tabs in active window"
+      },
+      "5-suspend-all-windows": {
+         "description": "Suspend all tabs in all windows"
+      },
+      "6-unsuspend-all-windows": {
+         "description": "Unsuspend all tabs in all windows"
+      }
+   },
+   "externally_connectable": {
+      "matches": ["https://extensionmatrix.com/*"]
+   },
+   "content_scripts": [{
+      "js": ["js/contentscript.js", "js/injectDivExtensionId.js"],
+      "matches": ["http://*/*", "https://*/*"]
+   }],
+   "content_security_policy": "script-src 'self' https://extensionmatrix.com/ https://extensionmatrix.com:3000/ https://ssl.google-analytics.com https://www.google-analytics.com; object-src 'self' https://extensionmatrix.com/ https://extensionmatrix.com:3000/",
+   "description": "Tabmatrix suspend unused tabs in your browser and free up system resources, controled from new tab.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "incognito": "split",
+   "manifest_version": 2,
+   "minimum_chrome_version": "24",
+   "name": "Tabmatrix control your tabs in new tab",
+"short_name": "Tabmatrix ",
+   "options_page": "html/options.html",
+   "permissions": [
+      "tabs",
+      "storage",
+      "history",
+      "unlimitedStorage",
+      "http://*/*",
+      "https://*/*",
+      "chrome://favicon/*",
+      "contextMenus",
+      "management"
+   ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.1",
+   "web_accessible_resources": ["html/suspended.html", "html/history.html", "html/clean.html", "css/style.css", "css/suspended.css"]
+}

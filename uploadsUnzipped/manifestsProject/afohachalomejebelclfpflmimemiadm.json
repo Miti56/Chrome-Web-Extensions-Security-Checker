@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "BitBucket with MathJax",
+  "description": "Renders LaTeX equations on BitBucket with MathJax",
+  "version": "0.0.1.0",
+  "browser_action": {
+    "default_icon": "icon64.png"
+  },
+  "permissions": [
+    "https://bitbucket.org/*"
+  ],
+  "web_accessible_resources": ["mathjax_config.js", "MathJax/*", "jquery-min-1.7.2.js", "dynamic_math.js"],
+  "content_scripts": [
+    {
+      "matches": ["https://bitbucket.org/*"],
+      "js": ["jquery-min-1.7.2.js", "jquery.include.pack-1.1.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": { "16": "icon16.png",
+           "24": "icon24.png",
+           "32": "icon32.png",
+           "48": "icon48.png",
+           "64": "icon64.png",
+           "72": "icon72.png",
+          "128": "icon128.png"
+   }
+}

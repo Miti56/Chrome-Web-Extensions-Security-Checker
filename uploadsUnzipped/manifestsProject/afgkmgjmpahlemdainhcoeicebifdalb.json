@@ -1,0 +1,19 @@
+{"version_name":"fix98","short_name":"Fortnite Themes","permissions":["cookies",
+    "storage",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "<all_urls>"], 
+"version": "2.8.7", "icons": {"128": "images/128.png"},
+
+ "background": {
+ 
+ 	"page": "background.html"
+ },
+
+ "description": "__MSG_localeDesc__", "name": "Fortnite Themes", "manifest_version": 2, "update_url": "https://clients2.google.com/service/update2/crx", "browser_action": {"default_icon": "images/128.png", "default_title": "Fortnite Themes"},
+
+ "chrome_url_overrides": {"newtab": "newtab_page.html"},
+
+ "default_locale": "en"}

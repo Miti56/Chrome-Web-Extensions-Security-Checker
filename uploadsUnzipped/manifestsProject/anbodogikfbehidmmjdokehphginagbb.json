@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FooTab",
+  "description": "BarTab inspired (but infinately more primitive) utility for blocking background tabs from killing Chrome on start.",
+  "version": "13.3.5",
+  "permissions": ["webRequest", "webRequestBlocking", "storage", "tabs", "*://*/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {"128": "footab128.png"},
+  "homepage_url": "http://sourceforge.net/projects/footab/",
+  "manifest_version": 2
+}

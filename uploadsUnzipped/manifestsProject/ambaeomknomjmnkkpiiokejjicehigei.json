@@ -1,0 +1,23 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "js/script.js" ]
+      }
+   },
+   "author": "g.chlaidze@myphone.ge",
+   "description": "მინი ვიდეო ფლეიერი, რომელიც ყოველთვის ჩანს.",
+   "externally_connectable": {
+      "matches": [ "*://*.imovies.ge/*", "*://*.imovies.cc/*"]
+   },
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "23",
+   "name": "iMOVIESTV - Always On Top",
+   "permissions": [ "storage", "app.window", "alwaysOnTopWindows", "webview" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.5"
+}
+

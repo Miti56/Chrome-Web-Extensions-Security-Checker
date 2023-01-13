@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tassels",
+  "description": "Replace new tab with a inspirational image",
+  "version": "0.1",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "inspiration.html"
+  },
+  "manifest_version": 2
+}

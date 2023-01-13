@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Konnecto-Panel",
+  "description" : "Konnecto extension",
+  "version": "1.21",
+  "browser_action": {
+    "default_icon": "konnecto.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+       "background.js"
+    ]
+  },
+  "permissions": [
+    "alarms", "storage", "tabs", "topSites", "history"
+  ],
+  "manifest_version": 2
+}

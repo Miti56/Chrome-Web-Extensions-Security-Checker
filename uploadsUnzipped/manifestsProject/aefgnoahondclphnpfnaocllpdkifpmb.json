@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "0.1.2.1",
+  "minimum_chrome_version": "16.0.884",
+  "permissions": ["<all_urls>"],
+  "browser_action": {"default_popup": "popup.html"},
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "manifest_version": 2
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Facebook Trash Dove Extension",
+	"description": "Change your facebook images to Trash Dove!",
+	"version":"0.5",
+	"manifest_version": 2,
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+
+	"content_scripts": [{
+    	"js": ["jquery.min.js", "content.js"],
+    	"matches": ["https://www.facebook.com/*"]
+  	}],
+
+  	"web_accessible_resources": ["popup.js"],
+
+	"permissions": [
+      "tabs"
+    ]
+}

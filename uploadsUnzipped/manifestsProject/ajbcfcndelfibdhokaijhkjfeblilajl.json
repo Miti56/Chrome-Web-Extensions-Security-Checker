@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Wholemeaning Panel Ejecutivos BBVA",
+  "version": "0.24",
+  "description": "Wholemeaning Extension - Panel de Ejecutivos ",
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*", "https://pocmail.bbva.cl:9998/*"],
+	  "css": ["css/bootstrap.css","css/wm.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "jquery-1.10.2.min.js",
+    "gmail.js",
+    "main.js",
+    "template.js",
+	"wholemeaning.html",
+  "panel.html",
+	"img/*",
+	"css/*"
+  ],
+  "permissions": [
+    "http://www.google.com/",
+    "http://mail.google.com/*",
+    "https://mail.google.com/*",
+    "http://93.16.237.197:7778/*",
+    "http://localhost/",
+    "http://localhost:7778/plugin",
+    "https://pocmail.bbva.cl:9998/plugin",
+    "http://pocmail.bbva.cl:9998/plugin"
+  ],
+  "manifest_version": 2
+}
+
+

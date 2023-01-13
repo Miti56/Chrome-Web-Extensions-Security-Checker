@@ -1,0 +1,78 @@
+{
+  "manifest_version": 2,
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "version": "1.5",
+
+
+  "browser_action": {
+    "default_icon": "icons/game.png"
+  },
+  "icons": {
+    "128": "icons/128.png",
+    "24": "icons/game.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://www.id.net/*",
+    "https://unblockedgames.sfo2.digitaloceanspaces.com/*",
+    "https://search.yahoo.com/*",
+    "https://www.bing.com/*",
+    "https://www.google.com/*",
+    "https://www.google.fr/*",
+    "https://www.google.co.in/*",
+    "https://www.google.pt/*",
+    "https://www.google.ca/*",
+    "https://www.google.es/*",
+    "https://www.google.de/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' https://top.weebly.com/uploads/3/4/9/1/3491544/dagobah_tetris.swf https://top.weebly.com/uploads/4/5/8/9/4589043/new_snake.swf https://top.weebly.com/uploads/1/1/9/7/119729653/run-3.swf https://top.weebly.com/uploads/1/1/9/7/119729653/______dagobah_happy_wheels_demo.swf",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/unblocked-893450897582345"
+      ],
+      "js": [
+        "js/slope-google.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://sites.google.com/site/soenixs/basketball-legends"
+      ],
+      "js": [
+        "js/basketball-google.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://unblockeds-games.weebly.com/masked-forces-3-unblocked.html"
+      ],
+      "js": [
+        "js/masked-forces-3.js"
+      ],
+      "css": [
+        "webgl.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "js/http.js",
+      "js/background.js"
+    ]
+  }
+}

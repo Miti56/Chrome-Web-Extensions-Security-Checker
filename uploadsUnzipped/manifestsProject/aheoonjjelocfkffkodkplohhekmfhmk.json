@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Classical",
+   "version": "0.1",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 16, 16, 16 ],
+         "frame": [ 255, 255, 255 ],
+         "tab_text": [ 16, 16, 16 ],
+         "tab_background_text": [ 72, 72, 72 ],
+         "ntp_background": [ 255, 255, 255 ],
+         "toolbar": [ 255,255,255 ],
+
+         "ntp_header": [ 157, 88, 46, 1 ],
+
+         "ntp_link": [ 0, 0, 204 ],
+         "ntp_section": [ 234, 221, 202, 1 ],
+         "ntp_section_link": [ 135, 83, 4 ],
+         "ntp_section_text": [ 132, 122, 107 ],
+         "ntp_text": [ 58, 10, 91 ]
+
+      },
+      "images": {
+         "theme_button_background": "i/agxjaHJvbWV0aGVtZXNyDAsSBEZpbGUYyPECDA",
+         "theme_frame": "i/theme_frame.png",
+         "theme_tab_background": "i/agxjaHJvbWV0aGVtZXNyDAsSBEZpbGUYzPECDA",
+         "theme_toolbar": "i/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_logo_alternate" : 1
+      },
+      "tints": {
+         "buttons": [ 0.1, 0.1, 0.5 ]
+      }
+   }
+}

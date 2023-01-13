@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "BLCS",
+  "version": "1.0.1.0",
+  "author": "andit business and consulting",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": {
+      "20": "assets/icon_20.png",
+      "40": "assets/icon_40.png",
+      "48": "assets/icon_48.png",
+      "96": "assets/icon_96.png"
+    },
+    "default_title": "Pesquisar na BLCS"
+  },
+  "description": "Extensão que permite procurar qualquer texto no catálogo da BLCS",
+  "permissions": [
+    "*://*/*",
+    "notifications",
+    "cookies",
+    "tabs",
+    "storage",
+    "contextMenus",
+    "background"
+  ],
+  "background": {
+    "scripts": [ "assets/code.js" ],
+    "persistent": true
+  },
+  "icons": {
+    "128": "assets/icon_128.png",
+    "96": "assets/icon_96.png",
+    "16": "assets/icon_16.png",
+    "48": "assets/icon_48.png"
+  },
+  "web_accessible_resources": [ "assets/icon_48.png" ]
+
+} 

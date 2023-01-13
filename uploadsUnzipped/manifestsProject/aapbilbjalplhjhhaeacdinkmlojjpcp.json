@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "name": "XMLDocReader",
+  "manifest_version": 2,
+  "version": "1.9",
+  "description": "Автозаповнення полiв сторiнки з файлу обмiну в особистому кабiнетi \"Електроннi сервiси Держгеокадастру\"",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "XMLDocReader@ocinka.lviv.ua",
+      "strict_min_version": "52.0"
+    }
+  },
+
+  "browser_action": {
+    "default_popup": "popup/popup_mnu.html",
+    "default_icon": {                 
+            "16": "data/edit-16.png",
+            "24": "data/edit-24.png",
+            "32": "data/edit-32.png", 
+            "64": "data/edit-64.png" 
+          },
+    "default_title": "XMLDocReader - by R.Parkhuts"
+  },
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "http://*/*", "https://*/*", "file://*/*"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://e.land.gov.ua/*"],
+      "js": ["js/jszip.min.js","js/asn1.js","js/proj4.js","js/xml.js","borderify.js"]
+    }
+  ]
+
+}

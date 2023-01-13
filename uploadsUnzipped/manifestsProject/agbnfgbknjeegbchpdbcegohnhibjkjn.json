@@ -1,0 +1,13 @@
+{
+  "app": {
+    "urls": ["http://www.duckiedeck.com/play/pit-stop?ref\u003dcws"],
+    "launch": {"web_url": "http://www.duckiedeck.com/play/pit-stop?ref\u003dcws"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Test your skills on the Formula 1 race track. Change the tires of the racing car that has just pulled over at the pit-stop.",
+  "name": "Hand Eye Coordination Games - Pit Stop",
+  "permissions": ["notifications"],
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "1.1"
+}

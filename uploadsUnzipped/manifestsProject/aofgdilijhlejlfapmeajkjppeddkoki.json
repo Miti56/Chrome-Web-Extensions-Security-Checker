@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Glass WhatchDog",
+	"description": "WhtachDog printer and ballance",
+	"version": "0.3",
+	"app": {
+		"background": {
+			"scripts": [
+				"main.js"
+			]
+		}
+	},
+	"externally_connectable": {
+		"matches": ["*://*.biblue.com.br/*","http://localhost:8080/*","http://celialoja.ddns.net:8080/*"]
+	},
+	"icons": { 
+		"128": "icon-128.png" 
+	},
+	"permissions": [
+		"nativeMessaging"
+	]
+}

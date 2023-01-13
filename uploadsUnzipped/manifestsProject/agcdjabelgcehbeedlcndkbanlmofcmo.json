@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "E14 Fix",
+  "short_name": "E14 Fix",
+  "version": "0.4.3",
+  "description": "Fixes the availability column",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "icon225.png",
+	"default_popup": "popup.html"
+  },
+  "options_ui": {
+	"page": "popup.html",
+	"chrome_style": true
+  },
+  "content_scripts": [
+  {
+	"matches": ["http://au.element14.com/*","https://au.element14.com/*","http://uk.farnell.com/*","https://uk.farnell.com/*"],
+	"js": ["E14Fix.js"]
+  }
+  ],
+  "permissions": ["storage"]
+}

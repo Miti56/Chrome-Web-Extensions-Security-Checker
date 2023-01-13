@@ -1,0 +1,50 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Stream VPN - Safe and secure locations",
+  "description": "Access any content for free",
+  "version": "0.0.15",
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Stream VPN - Safe and secure locations",
+    "default_popup":"popup.html",
+    "default_icon": "icon-disabled-72.png"
+  },
+  "icons": {
+    "128": "icon-app-128.png"
+  },
+  "externally_connectable": {
+    "matches": ["*://*.mothervpn.com/*", "*://localhost/*"]
+  },
+  "content_scripts": [
+    {
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "content.js"
+        ],
+        "run_at": "document_end"
+    }
+],
+"web_accessible_resources": ["yk2.js"],
+  "permissions": [
+    "tabs",
+    "notifications",
+    "contextMenus",
+    "history",
+    "background",
+    "proxy",
+    "storage",
+    "management",
+    "webRequest",
+    "webRequestBlocking",
+    "identity",
+    "cookies"
+  ],
+  "content_security_policy": "default-src 'self' https://api.mothervpn.com https://www.google-analytics.com; script-src 'self' https://www.google-analytics.com/analytics.js https://fonts.googleapis.com; img-src 'self' https://stats.g.doubleclick.net https://www.google.com 'unsafe-inline' data: https://www.google-analytics.com; style-src 'unsafe-inline' https://fonts.googleapis.com;font-src https://fonts.gstatic.com;"
+
+}

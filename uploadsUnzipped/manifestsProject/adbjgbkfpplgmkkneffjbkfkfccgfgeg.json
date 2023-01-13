@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/icon_16.png",
+      "default_popup": "popup.html",
+      "default_title": "Zaycev.FM"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "js/lib/jquery.min.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Онлайн радио Зайцев.FM",
+   "homepage_url": "https://www.zaycev.fm",
+   "icons": {
+      "128": "images/icon_128.png",
+      "16": "images/icon_16.png",
+      "48": "images/icon_48.png",
+      "96": "images/icon_96.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgK+K4AgEQNOFXoamNONlSO/fDEe2dbCOuAXQgC9mvlJ2sg/t6IkrYFlSG5lxNB9C4SQjgvtwXeKCbF/CFG+cdL1gQJXmwzbGh10k89cwhR64fuypVl9M9LqPpNMJ+vd7iPO6a8dKZyQc71SL1oSIym5Nm5dVmpo+A8SrBPfq08wIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "24",
+   "name": "Zaycev.FM Player",
+   "options_page": "options.html",
+   "permissions": [ "notifications", "*://*.zaycev.fm/*", "storage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.9"
+}

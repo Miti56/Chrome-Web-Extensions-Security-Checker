@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "Pakibooks",
+ "description": "Urdu Books and Novels Online",
+ "version": "1",
+ "author": "Anas Akram",
+"browser_action": {
+   "default_title": "PakiBooks"
+ },
+"chrome_url_overrides" : {
+  "newtab": "newtab.html"
+},
+ "permissions": ["activeTab"]
+}

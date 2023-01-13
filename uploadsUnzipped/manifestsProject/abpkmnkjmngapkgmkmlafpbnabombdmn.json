@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Q4S SmartStream Cowboys",
+  "description": "Multiplayer cowboys using Q4S protocol for measuring network quality",
+  "minimum_chrome_version": "23",
+  "version": "0.5",
+  "manifest_version": 2,
+  "permissions": [{"socket": ["udp-send-to","udp-bind","tcp-connect","tcp-listen"]}],
+  "app": {
+         "background": {
+           "scripts":["main.js"]
+          }
+        },
+  "icons": {
+    "128": "images/128COWBOYS.png",
+    "16": "icon_16.jpg"
+  }
+}

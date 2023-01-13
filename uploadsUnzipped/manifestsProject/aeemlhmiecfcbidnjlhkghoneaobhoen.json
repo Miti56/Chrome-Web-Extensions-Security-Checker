@@ -1,0 +1,47 @@
+{
+   "background": {
+      "page": "lib/chrome/background.html"
+   },
+   "browser_action": {
+      "default_icon": "code/icons/16.png",
+      "default_popup": "code/content/panel.html",
+      "default_title": "WhatsMessenger"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "code/content/inject.js" ],
+      "matches": [ "*://*.web.whatsapp.com/*", "*://web.whatsapp.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Use WhatsApp on Chrome, receive notifications of incoming messages.",
+   "icons": {
+      "128": "code/icons/128.png",
+      "16": "code/icons/16.png",
+      "32": "code/icons/32.png",
+      "48": "code/icons/48.png",
+      "64": "code/icons/64.png"
+   },
+   "manifest_version": 2,
+   "name": "WhatsMessenger: WhatsApp™ for Desktop",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "code/options/options.html"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+   "permissions": [
+      "tabs",
+      "*://*/*",
+      "storage",
+      "notifications",
+      "\u003Call_urls>",
+      "webNavigation",
+      "webRequest",
+      "webRequestBlocking",
+      "unlimitedStorage"
+   ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "web_accessible_resources": ["code/content/*.*", "code/icons/*.*"],
+
+   "version": "1.0.0"
+
+}

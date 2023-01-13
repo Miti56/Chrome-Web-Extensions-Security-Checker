@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "version":"1.1.0.3280",
+  "name":"SearchApp - Entertainment",
+  "description":"Search the web!",
+  "icons":{
+      "128":"icons/icon-128.png"
+    },
+  "browser_action": {
+      "default_icon":"icons/icon-128.png",
+      "default_title":"Search the web!"
+    },
+  "background":{
+      "scripts":[
+          "js/brand.js",
+          "js/background.js"
+        ]
+    },
+  "chrome_settings_overrides" : {
+    "search_provider": {
+      "name"          : "SearchApp - Entertainment",
+      "instant_url"   : "http://www.blpsearch.com/search?sid=750&aid={APPID}&itype=u&src=ds&p={searchTerms}&tm=0",
+      "search_url"    : "http://www.blpsearch.com/search?sid=750&aid={APPID}&itype=u&src=ds&p={searchTerms}&tm=0",
+      "favicon_url"   : "http://www.blpsearch.com/images/favicon.ico",
+      "keyword"       : "BLPSearch",
+      "encoding"      : "UTF-8",
+      "alternate_urls":[],
+      "search_url_post_params":"",
+      "instant_url_post_params":"",
+      "is_default"    : true
+    }
+  },
+  "permissions":[
+      "<all_urls>",
+      "webRequest",
+      "webRequestBlocking",
+      "cookies"
+  ]
+}

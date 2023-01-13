@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Diseño Web Valladolid",
+	"description": "Con esta extensión tendrás accesos directo a la agencia que ofrece diseño web, seo, adwords, tiendas online.. en Valladolid",
+	"version": "1.0",
+	"icons": {
+		"16": "icono16.png",
+		"19": "icono19.png",
+		"48": "icono48.png",
+		"128": "icono128.png"
+	},
+	"browser_action": {
+    "default_title": "Diseño Web Valladolid",
+    "default_icon": "icono16.png",
+    "default_popup": "isanlab.html"
+  }
+}

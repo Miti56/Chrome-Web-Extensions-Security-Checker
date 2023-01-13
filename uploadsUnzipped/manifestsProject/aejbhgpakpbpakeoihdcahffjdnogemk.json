@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "PhotoSafari - a beautiful Google experience",
+  "short_name": "PhotoSafari",
+  "version": "0.0.6",
+  "description": "Beautiful, rich Google results",
+  "author": "Andreas Pizsa",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "include_globs": [
+      "*://www.google.??/*",
+      "*://www.google.???/*",
+      "*://www.google.co.??/*",
+      "*://www.google.com.??/*"
+    ],
+    "run_at": "document_end",
+    "js": [
+      "google.js"
+    ],
+    "css": [
+      "src/google.css",
+      "lib/animate.min.css"
+    ]
+  }],
+  "web_accessible_resources": [
+    "*",
+    "dist/*",
+    "src/*"
+  ],
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ]
+}

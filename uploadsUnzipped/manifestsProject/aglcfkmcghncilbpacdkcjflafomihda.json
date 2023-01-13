@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Police Stunts Simulator",
+
+  "short_name": "Police Stunts Simulator",
+
+  "version": "1.0.2",
+  "description": "Play Police Stunts Simulator now!",
+
+  "homepage_url": "http://justdailygames.com/c/street-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Police Stunts Simulator",
+
+      "default_popup": "popup.html"
+  }
+}

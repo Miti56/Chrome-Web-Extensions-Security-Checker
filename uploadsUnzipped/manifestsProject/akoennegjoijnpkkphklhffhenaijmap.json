@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Skróty klawiaturowe do Aleo",
+	"version": "0.3",
+	"manifest_version": 2,
+	"description": "Skróty klawiaturowe do Aleo",
+  "content_scripts": [
+    {
+      "matches": ["http://*.aleo.com/*", "https://*.aleo.com/*"],
+      "js": ["mousetrap.min.js", "navbar.js"]
+    }
+  ],
+  "icons": { "16": "icon_16.png",
+             "32": "icon_32.png",
+            "128": "icon_128.png" }
+}

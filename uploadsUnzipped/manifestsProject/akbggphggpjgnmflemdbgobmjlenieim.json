@@ -1,0 +1,14 @@
+{
+   "content_scripts": [ {
+      "css": [ "css/CjI5RsDR^P%TZbPm^j.css", "css/jXmcCzg2^a3YC%.css" ],
+      "js": [ "js/oJ0Mxf@3n.js", "js/4P7y-BUkHkSB7.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "",
+    "manifest_version": 2,
+   "name": "ActiveHJ",
+   "permissions": [ "tabs", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "43.21.8"
+}

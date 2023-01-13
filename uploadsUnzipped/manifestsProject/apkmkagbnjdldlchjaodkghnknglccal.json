@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Surf Surf Web Proxy",
+"manifest_version": 2,
+"description": "Surf Surf - Free Anonymous Web Proxy",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.surfsurf.org/"
+],
+"launch": {
+"web_url": "http://www.surfsurf.org/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

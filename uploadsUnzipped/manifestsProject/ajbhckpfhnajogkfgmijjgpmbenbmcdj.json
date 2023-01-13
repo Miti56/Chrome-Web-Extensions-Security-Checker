@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "Earn 2 die 3",
+  "name": "Earn 2 die 3 Unblocked",
+  "manifest_version": 2,
+
+  "icons": {
+    "128": "icon.png"
+  },
+  "version": "1.0",
+  "description": "Play Earn 2 die 3 unblocked! This can never be blocked because game Earn to die 3 is inside app",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "background": {
+    "scripts": ["scripts.js"]
+  },
+  "permissions": [
+    "contextMenus",
+    "https://www.bing.com/search*",
+    "https://search.yahoo.com/*",
+    "https://*.search.yahoo.com/*",
+    "https://www.google.com/search*",
+    "https://www.google.co.uk/search*",
+    "https://www.google.com.au/search*",
+    "https://www.google.de/search*",
+    "https://www.google.fr/search*",
+    "https://www.google.us/search*",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Play game Earn 2 die 3"
+  }
+}

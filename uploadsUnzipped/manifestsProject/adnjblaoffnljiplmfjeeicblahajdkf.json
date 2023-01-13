@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Unique Turf Zones",
+  "version": "1.2",
+  "manifest_version": 2,
+  "description": "Download your unique Turf zones as a KML file when you visit http://www.warded.se/turf/unique.php",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "<all_urls>"]
+}

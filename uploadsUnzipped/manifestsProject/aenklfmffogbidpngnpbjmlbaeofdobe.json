@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "阿拉丁调试器",
+  "description": "模拟native功能,利于开发测试",
+  "version": "1.0",
+  "web_accessible_resources": [
+    "/page/*",
+    "/assets/*"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "background/background.js"
+    ]
+  },
+
+  "content_security_policy": "default-src 'self'  chrome-extension-resource: ; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval';  connect-src *; frame-src *;",
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "file:///*/*",
+        "http://*/*",
+        "https://*/*"],
+      "css": ["content/aladdin.web.css"],
+      "js": [
+        "content/content.js"
+      ]
+    }
+  ],
+
+  "devtools_page": "devtool/devtool.html",
+  "browser_action": {
+    "default_icon": "popup/logo.png",
+    "default_popup": "popup/popup.html"
+  },
+
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "debugger",
+    "background",
+    "downloads",
+    "contentSettings",
+    "clipboardRead",
+    "clipboardWrite",
+    "history",
+    "topSites",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "cookies",
+    "http://*/*",
+    "https://*/*",
+    "file:///*/*"
+  ]
+}

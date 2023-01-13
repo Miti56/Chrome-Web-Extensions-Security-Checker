@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Тлен",
+  "version": "1.1",
+  "background": {
+    "persistent": false,
+    "scripts": ["plugin.js"]
+  },
+  "permissions": [
+    "tabs", "*://*/*"
+  ],
+  "browser_action": {
+    "default_title": "Тлен",
+    "default_icon": "icon.png"
+  }
+}

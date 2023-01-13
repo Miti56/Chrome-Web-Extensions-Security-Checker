@@ -1,0 +1,13 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "extension.html"
+   },
+   "description": "The Channel Sketchbook",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhWRIboNceAsjXEzAf8aAHgww08+LBzu54E5wYo8kXkVUEBlynlysipM3B/SKPoBhN9iRkvcf1SclqEH7RJERnCB90StA0IBG3kINvPO871gYderldAFXc39E4rUbKsazvt8g+gc+CistcW/q9onsB0hYhsgYwfLMhz88W1ZVLXbiajvihfLy+FvkourM51vmRghjmGWwNRROMNNIdqNCN9s770l4Jrhluuj6SNf0um+8yTjOs7LsHcwIVD/aI9E+iV59lbtfRpJk+ooT3mBpkVVKpQay+NHvRi4MIcHODwNKjXRtSG4AidUjJryNJdXZeIiF4Cn6ZlAb+skLBtVZKQIDAQAB",
+   "manifest_version": 2,
+   "name": "The Channel Sketchbook",
+   "permissions": [ "https://images.chromeextension.britishart.yale.edu/images" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.2",
+   "web_accessible_resources": [ "backup.json", "images/*.jpg" ]
+}

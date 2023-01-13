@@ -1,0 +1,113 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "default_locale": "ja",
+  "name": "Tanuwork for Chatwork",
+  "short_name": "Tanuwork",
+  "description": "__MSG_extDescription__",
+  "version": "0.2.2",
+  "author": "monpoco <develop@monpoco.tokyo>",
+  "manifest_version": 2,
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://www.chatwork.com/*"
+                  , "https://kcw.kddi.ne.jp/*" ],
+      "js": ["js/jquery.js"
+            , "js/util.js"
+            , "js/easyChromeStorage.js"
+            , "js/common.js"
+            , "js/main.js"],
+      "css": ["css/style.css"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "options_page": "option.html",
+  "permissions": [ "storage", "tabs", "\u003Call_urls>"
+                  , "https://www.chatwork.com/*"
+                  , "https://kcw.kddi.ne.jp/*" ],
+  "web_accessible_resources": [
+                            "option.html"
+                            ,"js/locales.js"
+                            , "js/main.js"
+                            , "js/content.js"
+                            , "js/marked.js"
+                            , "js/highlight.js"
+                            , "js/jquery.textcomplete.js"
+                            , "css/tanu.css"
+                            , "css/fa/tanu.eot"
+                            , "css/fa/tanu.svg"
+                            , "css/fa/tanu.ttf"
+                            , "css/fa/tanu.woff"
+                            , "css/markdown/github.css"
+                            , "css/highlight/agate.css"
+                            , "css/highlight/androidstudio.css"
+                            , "css/highlight/arta.css"
+                            , "css/highlight/ascetic.css"
+                            , "css/highlight/atelier-cave.dark.css"
+                            , "css/highlight/atelier-cave.light.css"
+                            , "css/highlight/atelier-dune.dark.css"
+                            , "css/highlight/atelier-dune.light.css"
+                            , "css/highlight/atelier-estuary.dark.css"
+                            , "css/highlight/atelier-estuary.light.css"
+                            , "css/highlight/atelier-forest.dark.css"
+                            , "css/highlight/atelier-forest.light.css"
+                            , "css/highlight/atelier-heath.dark.css"
+                            , "css/highlight/atelier-heath.light.css"
+                            , "css/highlight/atelier-lakeside.dark.css"
+                            , "css/highlight/atelier-lakeside.light.css"
+                            , "css/highlight/atelier-plateau.dark.css"
+                            , "css/highlight/atelier-plateau.light.css"
+                            , "css/highlight/atelier-savanna.dark.css"
+                            , "css/highlight/atelier-savanna.light.css"
+                            , "css/highlight/atelier-seaside.dark.css"
+                            , "css/highlight/atelier-seaside.light.css"
+                            , "css/highlight/atelier-sulphurpool.dark.css"
+                            , "css/highlight/atelier-sulphurpool.light.css"
+                            , "css/highlight/brown_paper.css"
+                            , "css/highlight/codepen-embed.css"
+                            , "css/highlight/color-brewer.css"
+                            , "css/highlight/dark.css"
+                            , "css/highlight/darkula.css"
+                            , "css/highlight/default.css"
+                            , "css/highlight/docco.css"
+                            , "css/highlight/far.css"
+                            , "css/highlight/foundation.css"
+                            , "css/highlight/github-gist.css"
+                            , "css/highlight/github.css"
+                            , "css/highlight/googlecode.css"
+                            , "css/highlight/grayscale.css"
+                            , "css/highlight/hopscotch.css"
+                            , "css/highlight/hybrid.css"
+                            , "css/highlight/idea.css"
+                            , "css/highlight/ir_black.css"
+                            , "css/highlight/kimbie.dark.css"
+                            , "css/highlight/kimbie.light.css"
+                            , "css/highlight/magula.css"
+                            , "css/highlight/mono-blue.css"
+                            , "css/highlight/monokai_sublime.css"
+                            , "css/highlight/monokai.css"
+                            , "css/highlight/obsidian.css"
+                            , "css/highlight/paraiso.dark.css"
+                            , "css/highlight/paraiso.light.css"
+                            , "css/highlight/pojoaque.css"
+                            , "css/highlight/railscasts.css"
+                            , "css/highlight/rainbow.css"
+                            , "css/highlight/school_book.css"
+                            , "css/highlight/solarized_dark.css"
+                            , "css/highlight/solarized_light.css"
+                            , "css/highlight/sunburst.css"
+                            , "css/highlight/tomorrow-night-blue.css"
+                            , "css/highlight/tomorrow-night-bright.css"
+                            , "css/highlight/tomorrow-night-eighties.css"
+                            , "css/highlight/tomorrow-night.css"
+                            , "css/highlight/tomorrow.css"
+                            , "css/highlight/vs.css"
+                            , "css/highlight/xcode.css"
+                            , "css/highlight/zenburn.css"]
+}

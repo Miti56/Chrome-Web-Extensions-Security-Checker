@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "__MSG_extName__",
+  "version": "4.2",
+  "description": "__MSG_extDescription__",
+
+  "background": {
+
+    "scripts": [
+
+      "js/config.js",
+      "js/background.js",
+      "js/lib/jquery.js",
+      "js/lib/jquery.md5.js",
+      "js/xtsetting.js"
+
+    ]
+
+  },
+
+  "browser_action": {
+
+    "default_icon": "images/icon19.png",
+    "default_title": "Downloads"
+
+  },
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "default_locale": "en",
+
+  "permissions": [
+
+    "tabs",
+    "storage",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*/*",
+    "http://*/*",
+    "webNavigation",
+    "unlimitedStorage",
+	"\u003Call_urls>"
+
+  ]
+}

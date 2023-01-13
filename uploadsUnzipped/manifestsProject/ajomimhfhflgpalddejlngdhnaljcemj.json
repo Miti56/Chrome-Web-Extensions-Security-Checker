@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+ "version": "1.5",
+ "name": "Taylor Hicks 01 v1_5",
+ "theme":{
+     "images": {"theme_ntp_background":"Images/TH1.png",
+                "theme_toolbar":"Images/TH_toolbar.png",
+                "theme_frame":"Images/frame_inactive.png" 
+     },
+     "colors": {"ntp_background": [ 224, 190, 54 ]
+     },
+     "tints": {
+     },
+     "properties": {"ntp_background_alignment":"left",
+     "ntp_background_repeat":"repeat-y"
+     }
+ }  
+}

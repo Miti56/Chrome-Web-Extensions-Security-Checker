@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "STEAM-BOT",
+  "version": "1.0.6",
+  "description": "Расширение добавляет кнопку в магазине STEAM для упрощения покупок на сайте http://steam-bot.ru/",
+  "author": "Евгений Мнацаканов",
+  "homepage_url": "http://steam-bot.ru/",
+  "content_scripts": [
+     {
+        "js": ["content_script.js"],
+        "matches": ["*://store.steampowered.com/*"]
+     }
+  ],
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "icons": { "32":"img/icon32.png",
+             "48": "img/icon48.png",
+             "128": "img/icon128.png" }
+}

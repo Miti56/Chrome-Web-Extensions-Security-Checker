@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Invoco Dialler",
+  "version": "1.8",
+  "description": "Let your Invoco phone dial a number with the click of a button.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "https://*.infusionsoft.com/*",
+    "https://*.capsulecrm.com/*",
+    "https://*.pipedrive.com/*",
+    "https://*.activehosted.com/*",
+    "https://*.autotask.net/*",
+    "https://*.slack.com/*",
+    "https://*.salesforce.com/*",
+    "https://*.kaseya.com/*",
+    "https://*.agilecrm.com/*",
+    "https://crm.zoho.com/*",
+    "https://app.hubspot.com/*",
+    "https://*.freshdesk.com/*",
+    "https://*.invoco.net/*",
+    "https://*.insightly.com/*",
+    "https://*.lessannoyingcrm.com/*",
+    "https://*.infusionsoft.app/*",
+    "https://app.onepagecrm.com/*",
+    "https://contacts.google.com/*"
+  ],
+  "options_page": "web/options.html",
+  "background": {
+    "scripts": [ "scripts/background.min.js" ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "images/invoco16.png",
+    "32": "images/invoco32.png",
+    "48": "images/invoco48.png",
+    "128": "images/invoco128.png"
+  },
+  "browser_action": {
+    "default_title": "Activate Invoco Dialler",
+    "default_icon": {
+      "16": "images/invoco16-off.png",
+      "32": "images/invoco32-off.png",
+      "48": "images/invoco48-off.png",
+      "128": "images/invoco128-off.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.infusionsoft.com/*",
+        "https://*.capsulecrm.com/*",
+        "https://*.pipedrive.com/*",
+        "https://*.activehosted.com/*",
+        "https://*.autotask.net/*",
+        "https://*.slack.com/*",
+        "https://*.salesforce.com/*",
+        "https://*.kaseya.com/*",
+        "https://*.agilecrm.com/*",
+        "https://crm.zoho.com/*",
+        "https://app.hubspot.com/*",
+        "https://*.freshdesk.com/*",
+        "https://*.invoco.net/*",
+        "https://*.insightly.com/*",
+        "https://*.lessannoyingcrm.com/*",
+        "https://app.onepagecrm.com/*",
+        "https://*.zendesk.com/*",
+        "https://contacts.google.com/*"
+      ],
+      "js": [ "scripts/jquery-3.3.1.min.js", "scripts/content.min.js" ],
+      "all_frames": true
+    }
+  ],
+  "incognito": "not_allowed"
+}

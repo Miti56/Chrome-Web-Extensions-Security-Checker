@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "new-tab.html"
+   },
+   "description": "Install Fortnite HD Wallpapers New Tab Theme and enjoy.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "incognito": "split",
+   "manifest_version": 2,
+   "name": "Fortnite Wallpapers & New Tab",
+   "page_action": {
+      "default_popup": "start-page.html",
+      "default_title": "Fortnite HD Wallpapers New Tab Theme"
+   },
+   "permissions": ["tabs"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.0"
+}

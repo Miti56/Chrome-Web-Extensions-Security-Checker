@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "author": "London Games",
+		"name" : "__MSG_appName__",
+  "description" : "__MSG_appDesc__",
+		"default_locale": "en",
+		"background": {
+     "scripts": [ "assets/js/background.js" ]
+  },
+  "browser_action": {
+					 "default_icon": {
+         "19": "assets/icons/19.png",
+         "38": "assets/icons/38.png"
+      },
+     "default_title": "__MSG_appName__"
+  },
+  "icons": {
+     "128": "assets/icons/128.png",
+     "32": "assets/icons/32.png",
+					"38": "assets/icons/38.png",
+					"48": "assets/icons/48.png",
+					"19": "assets/icons/19.png",
+     "64": "assets/icons/64.png"
+  },
+  "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+										  "default": "Alt+A",
+            "chromeos": "Alt+A",
+            "linux": "Alt+A",
+            "mac": "Alt+A",
+            "windows": "Alt+A"
+         }
+      }
+   },
+			"options_page": "app.html",
+			"offline_enabled": true,
+   "permissions": [  
+			"storage"
+		 ],
+			"manifest_version": 2,
+   "version": "1.0"
+}

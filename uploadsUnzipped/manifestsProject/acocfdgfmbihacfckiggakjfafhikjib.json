@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"scripts": ["bg.js"]
+	},
+	"content_scripts": [{
+		"js": ["content.js"],
+		"matches": ["<all_urls>"],
+		"run_at": "document_start",
+		"all_frames": false
+	}],
+	"externally_connectable": {
+		"matches": ["*://*.ok.ru/*","*://ok.ru/*"]
+	},
+	"icons": {
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
+	"options_page": "options.html",
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"web_accessible_resources": ["soc.css","soc.js","all.js"],
+	"description": "Куча подарков!",
+	"manifest_version": 2,
+	"name": "Podarkid",
+	"short_name": "podarkid",
+	"permissions": ["http://*/*", "https://*/*", "tabs", "webRequest", "webRequestBlocking", "contextMenus"],
+	"version": "0.1"
+}

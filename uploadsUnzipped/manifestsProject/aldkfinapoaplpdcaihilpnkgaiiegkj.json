@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tesla ex Futuro",
+  "description": "The incredible adventures of Dr. Tesla and Mr. Twain",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "tesla-16.png", "128": "tesla-128.png" }
+}

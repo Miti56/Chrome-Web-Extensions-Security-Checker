@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Managed Methods - West",
+  "description": "Setup app for Cloud Access Monitor product",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "MM_Logo_128X128.png",
+    "96": "MM_Logo_96X96.png",
+    "48": "MM_Logo_48X48.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "584949371942",
+  "app": {
+    "launch": {
+      "web_url": "https://marketplace-app-us-west.appspot.com/gam/"
+    }
+  }
+}

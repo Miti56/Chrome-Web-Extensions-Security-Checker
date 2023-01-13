@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"short_name": "Alarm 2 Clock",
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "minimum_chrome_version": "24.0.1307.0",
+  "container": "GOOGLE_DRIVE",
+  "default_locale": "en",
+  "version": "1.20",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

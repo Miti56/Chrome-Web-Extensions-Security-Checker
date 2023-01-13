@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "tribeOS Pixel Validator",
+	"description": "Very simple and efficient way for TribeOS advertisers to validate tribeOS tracking pixel setup on page.",
+	"version": "1.0.2",
+	"author": "@adnanmiljkovic",
+	"permissions": [
+        "activeTab",
+        "http://*/",
+        "https://*/"
+    ],
+	"icons": {
+		"48": "media/icon48.png"
+	},
+	"browser_action": {
+		"default_icon": "media/icon.png",
+		"default_popup": "popup.html"
+	}
+}

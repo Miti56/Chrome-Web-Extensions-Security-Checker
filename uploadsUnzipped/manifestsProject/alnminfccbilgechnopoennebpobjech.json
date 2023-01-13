@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.jpeg","theme_toolbar":"images\/theme_toolbar.jpeg","theme_tab_background":"images\/theme_tab_background.jpeg","theme_ntp_background":"images\/theme_ntp_background.jpeg"},"colors":{"frame":[16,23,18],"toolbar":[16,13,10],"tab_text":[221,217,214],"tab_background_text":[221,217,214],"bookmark_text":[221,217,214],"ntp_background":[255,255,255],"ntp_text":[183,152,123],"button_background":[0,0,0,0]},"tints":{"buttons":[0,0,0.5]},"properties":{"ntp_background_alignment":"top","ntp_background_repeat":"no-repeat"}},"name":"Green Arrow-Theme","version":"2.1","description":""}

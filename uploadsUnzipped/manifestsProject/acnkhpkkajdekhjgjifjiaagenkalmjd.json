@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Turck Stock Viewer",
+  "version": "0.2.5",
+  "manifest_version": 2,
+  "description": "Extension to view Stock in results table",
+  "permissions":["activeTab", "declarativeContent", "runtime"],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "View Stock Levels"
+  },
+  "permissions": [
+    "https://connect.turck.us/*"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Baby Namester",
+  "description": "Jumpstart your baby name search with our powerful baby name generator, compromise tool, and other fun features.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.babynamester.com/"
+     ],
+     "launch": {
+       "web_url": "http://www.babynamester.com/"
+     }
+   },
+   "icons": { "16": "babynamester-16.png", "128": "babynamester-128.png" }
+}

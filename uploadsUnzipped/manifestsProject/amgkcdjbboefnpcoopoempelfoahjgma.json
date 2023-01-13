@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Test",
+    "author": "Tester",
+    "short_name": "Test",
+    "description": "bla bla bla",
+    "version": "0.5",
+    "offline_enabled": true,
+    "icons": {
+        "16": "/assets/images/icon_16.png",
+        "48": "/assets/images/icon_48.png",
+        "128": "/assets/images/icon_128.png"
+    },
+    "background": {
+        "scripts": [
+            "/background/logic.js"
+        ]
+    },
+    "optional_permissions": [],
+    "permissions": [
+        "background",
+        "notifications"
+    ]
+}

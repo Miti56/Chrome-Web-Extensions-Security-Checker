@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+		"browser_action": {
+		"default_popup":"html/window.html"
+	},
+	"name": "Old memories to free lopper",
+
+
+	"background": {
+		"scripts": [ "js/background.js"]
+	},
+
+	"permissions": [ "activeTab", "\u003Call_urls>", "tabs", "storage"],
+
+
+	"version": "1.0", 
+	"description": "How many memories but forgot about it. We'll refresh your memory",
+	"options_page": "html/settings.html"
+}

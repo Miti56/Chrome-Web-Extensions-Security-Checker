@@ -1,0 +1,35 @@
+{
+  "name": "Bonopon | کد تخفیف بن و پن",
+  "short_name": "Bonopon",
+  "version": "2.1.0",
+  "description": "با بن و پن همه چیز ارزون تره! معرفی کد تخفیف و بن تخفیف فروشگاه های آنلاین و خدمات آنلاین",
+  "author": "bonopon.com",
+  "homepage_url": "https://bonopon.com",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "32": "assets/icons/32.png",
+    "48": "assets/icons/48.png",
+    "128": "assets/icons/128.png"
+  },
+  "content_scripts": [ {
+      "js": ["assets/js/script.js"],
+      "matches": ["*://*.iranserver.com/*","*://*.hostiran.net/*","*://*.shab.ir/*","*://*.zoodroom.com/*","*://*.pelak.com/*","*://*.poolticket.org/*","*://*.mci.ir/*","*://*.rightel.ir/*","*://*.cinemamarket.ir/*","*://*.cinematicket.org/*","*://*.taaghche.ir/*","*://*.paklean.com/*","*://*.kadocard.ir/*","*://*.tezolmarket.com/*","*://*.dolichi.com/*","*://*.tagmond.com/*","*://*.bazargam.com/*","*://*.basalam.com/*","*://*.blitbin.com/*","*://*.30book.com/*","*://*.netafraz.com/*","*://*.banimode.com/*","*://*.7mive.com/*","*://*.navaar.ir/*","*://*.bimebazar.com/*","*://*.mamanpaz.ir/*","*://*.flightio.com/*","*://*.mrbilit.com/*","*://*.bimito.com/*","*://*.namava.ir/*","*://*.okala.com/*","*://*.tibf.ir/*","*://*.carboy.ir/*","*://*.eghamat24.com/*","*://*.irancell.ir/*","*://*.otaghak.com/*","*://*.delino.com/*","*://*.filimo.com/*","*://*.mootanroo.com/*","*://*.ostadkar.pro/*","*://*.fidibo.com/*","*://*.khooger.com/*","*://*.axprint.com/*","*://*.achareh.ir/*","*://*.faradars.org/*","*://*.maktabkhooneh.org/*","*://*.faranesh.com/*","*://*.digistyle.com/*","*://*.modiseh.com/*","*://*.chilivery.com/*","*://*.alopeyk.com/*","*://*.tap30.ir/*","*://*.dinnng.ir/*","*://*.touchsi.org/*","*://*.digikala.com/*","*://*.snapptrip.com/*","*://*.snapp.market/*","*://*.snappfood.ir/*","*://*.snapp.ir/*","*://*.reyhoon.com/*","*://*.changal.com/*"],
+      "run_at": "document_idle"
+   } ],
+  "browser_action": {
+      "default_icon": {
+         "16": "assets/icons/16.png",
+         "32": "assets/icons/32.png",
+         "48": "assets/icons/48.png",
+         "128": "assets/icons/128.png"
+      },
+      "default_title": "بن و پن - با مراجعه به سایت های فروشگاهی و خدمات آنلاین، کدتخفیف های فعال به صورت خودکار نمایش داده می شود."
+   },
+  "background":{
+    "scripts":["background.js"]
+  },
+  "permissions": ["storage", "https://bonopon.com/*"],
+  "web_accessible_resources": [ "assets/*" ],
+  "manifest_version": 2,
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

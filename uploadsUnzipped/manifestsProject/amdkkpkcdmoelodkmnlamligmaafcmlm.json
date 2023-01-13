@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Give Hope",
+    "description": "Bidra till Barncancerfondens viktiga arbete varje gång du shoppar online.",
+    "browser_action": {
+        "default_title": "Give Hope"
+    },
+    "icons": {
+        "16": "organizations/give-hope/assets/icons/default16x16.png",
+        "32": "organizations/give-hope/assets/icons/default32x32.png",
+        "128": "organizations/give-hope/assets/icons/default128x128.png"
+    },
+    "content_scripts": [{
+        "css": ["assets/content_give-hope.css"],
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["assets/contentScript.js"],
+        "run_at": "document_start"
+    }],
+    "background": {
+        "page": "index.html",
+        "persistent": true
+    },
+
+    "author": "Savey",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "<all_urls>",
+        "storage"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://widget.intercom.io https://js.intercomcdn.com; object-src 'self'",
+    "manifest_version": 2,
+    "version": "1.1.1"
+}

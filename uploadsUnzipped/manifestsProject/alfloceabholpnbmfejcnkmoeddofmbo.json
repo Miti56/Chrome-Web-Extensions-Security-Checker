@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Roblox sniper v3",
+    "version": "3.0.0",
+    "manifest_version": 2,
+    "description": "A new limited sniper snipes every limited for you", 
+    "browser_action": {
+        "default_icon": "icon.png"
+       
+    },
+    "permissions": [
+        "alarms",
+        "background",
+        "debugger",
+        "notifications",
+        "cookies",
+        "https://www.roblox.com/" 
+    ],
+    "background": {
+        "scripts": ["bgWork.js", "jQuery-ver3.js"]
+    },
+    "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" }
+}

@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "short_name": "Insert",
+  "version": "1.3.0.0",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "static/insert-16.png",
+    "32": "static/insert-32.png",
+    "48": "static/insert-48.png",
+    "128": "static/insert-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "content_scripts" : [
+    {
+      "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"],
+      "js": [
+        "scripts/google-analytics-bundle.js",
+        "scripts/zepto.min.js",
+        "scripts/underscore.min.js",
+        "scripts/inboxsdk.js",
+        "scripts/app.js",
+        "static/js/manifest.js",
+        "static/js/vendor.js",
+        "static/js/app.js"
+      ],
+      "css": ["static/css/app.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "static/*",
+    "static/media/*",
+    "view/*"
+  ],
+  "permissions": [
+    "https://www.google-analytics.com/",
+    "https://*.dribbble.com/*",
+    "https://*.indiefolio.com/*",
+    "https://mail.google.com/",
+    "https://inbox.google.com/",
+    "https://*.chromiumapp.org/*",
+    "background",
+    "contentSettings",
+    "identity",
+    "storage"
+  ]
+}

@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"version":"4.0","name":"Eco Museo Campello","manifest_version":2,"description":"Informazioni turistiche Campello sul Clitunno, Tempietto Patrimonio Unesco, ricettivit\u00e0 turistica, percorsi per passeggiate a pie","app":{"urls":["http:\/\/www.apps-builder.com\/597764"],"launch":{"web_url":"http:\/\/www.apps-builder.com\/597764"}},"icons":{"128":"icon128.png"},"permissions":["unlimitedStorage","notifications"]}

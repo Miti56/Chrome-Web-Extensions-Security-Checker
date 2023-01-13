@@ -1,0 +1,20 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://apps4chrome.site/freeantivirus/"
+      },
+      "urls": [ "http://apps4chrome.site/freeantivirus/" ]
+   },
+   "default_locale": "en_US",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "128.png"
+   },
+   "manifest_version": 2,
+   "permissions": [ "unlimitedStorage", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "offline_enabled": true,
+   "container": "GOOGLE_DRIVE",
+   "version": "1.0.2.7"
+}

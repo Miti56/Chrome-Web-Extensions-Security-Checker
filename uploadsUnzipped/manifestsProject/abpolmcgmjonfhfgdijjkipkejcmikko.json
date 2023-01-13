@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Drone Cuiabá Affiliation-Plugin",
+  "version": "1.1.0",
+  "homepage_url": "https://www.dronecuiaba.com.br",
+  "icons": {
+	"128": "icons/iconV2.png"
+  },
+  "description": "Este plug-in substitui partes do seu URL pelo código de afiliação da Drone Cuiabá. Ele não recarrega o site duas vezes.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.banggood.com/*.html*"],
+      "js": ["banggood-ref.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": ["storage"]
+}

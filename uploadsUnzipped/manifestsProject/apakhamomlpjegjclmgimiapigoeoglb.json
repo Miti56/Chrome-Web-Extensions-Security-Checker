@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"description" : "BeastPansy Theme: Moonlit Reflection",
+"manifest_version" : 2,
+"version" : "1.0",
+"name": "Moonlit Reflection",
+
+"theme":
+{
+	"images" : 
+	{
+		"theme_frame" : "images/Island Tree and Moon.png",
+		"theme_ntp_background" : "images/Island Tree and Moon.png",
+		"theme_toolbar" : "images/Island Tree and Moon.png",
+		"theme_tab_background" : "images/Island Tree and Moon.png",
+		"theme_tab_background_incognito" : "images/Island Tree and Moon.png",
+		"theme_tab_background_v" : "images/Island Tree and Moon.png",
+		"theme_ntp_attribution" : "images/attribution.png"
+	},
+	
+	"colors":
+	{
+		"frame" : [47,47,47],
+		"frame_inactive" : [81,83,106],
+		"frame_incognito" : [47,47,47],
+		"frame_incognito_inactive" : [81,83,106],
+		"tab_text" : [222,222,222],
+		"tab_background_text" : [100,100,100],
+		"toolbar" : [50,50,100],
+		"bookmark_text" : [222,222,222],
+		"ntp_section_text" : [222,222,222],
+		"ntp_section_link" : [222,222,222],
+		"ntp_section_link_underline" : [47,47,47],
+		"ntp_text" : [222,222,222],
+		"ntp_link" : [222,222,222],
+		"npt_link_underline" : [0,0,0],
+		"ntp_header" : [0,0,0],
+		"ntp_section" : [0,0,0],
+		"ntp_background" : [0,0,0],
+		"control_background" : [47,47,47]
+	},
+	
+	"properties": {
+         "ntp_background_alignment": "top",
+         "ntp_background_repeat": "no-repeat"
+      },
+	
+	"tints":
+	{
+		"buttons" : [1,1,1]
+
+	}
+}
+}

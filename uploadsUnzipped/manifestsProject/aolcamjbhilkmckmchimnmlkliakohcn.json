@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Water Reminder",
+  "version": "1.1",
+  "description":
+    "Shows the reminder message on desktop",
+  "icons": {"16": "assets/16.png", "48": "assets/48.png", "128": "assets/128.png"},
+  "permissions": [
+    "notifications"
+  ],
+  "options_page": "html/options.html",
+  "background": { "scripts": ["js/background.js"] },
+  "manifest_version": 2,
+
+  "web_accessible_resources": [
+    "assets/128.png"
+  ],
+
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}

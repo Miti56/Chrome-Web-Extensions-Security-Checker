@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Iterika Plus",
+  "version": "0.5.4",
+  "description": "Всякие твики-хуики для родной итерики <3.",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["script.js"]
+  },
+  
+  "permissions": [
+	"tabs", "*://*.allnorilsk.ru/*"
+  ],
+  
+  "content_security_policy": "script-src 'self' object-src 'self'",
+  
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+	  "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    "blabla.html",
+    "video.html"
+  ],
+  "content_scripts": [{
+    "matches": ["*://*.allnorilsk.ru/*"],
+	"js": ["jquery.js", "main.js"],
+	"run_at": "document_end",
+	"all_frames": false
+  }]
+}

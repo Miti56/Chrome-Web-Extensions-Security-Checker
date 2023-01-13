@@ -1,0 +1,45 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"version":"1.0",
+"name":"My iPad Got a Virus",
+"homepage_url": "http://www.facebook.com/toxicthemes",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_attribution": "images/attribution_toxic",
+"theme_ntp_background":"images/background.jpg"
+},
+"colors":
+{
+"ntp_link": [ 70 , 61 , 6 ],
+"ntp_text": [ 70 , 61 , 6 ],
+"ntp_section_link": [ 70 , 61 , 6 ],
+"ntp_section_text": [ 70 , 61 , 6 ],
+"ntp_background": [ 251 , 245 , 211 , 0.5 ],
+"ntp_header": [ 253 , 244 , 213 , 0.15 ],
+"ntp_section": [ 253 , 244 , 213 , 0.15 ],
+"frame": [ 253 , 244 , 213 ],
+"toolbar": [ 251 , 245 , 211 ],
+"tab_text": [ 70 , 61 , 6 ],
+"tab_background_text": [ 70 , 61 , 6 ],
+"bookmark_text": [ 70 , 61 , 6 ]
+},
+"tints":
+{
+"buttons": [ 0.141666666666667 , 0.833333333333333 , 0.705882352941176 ],
+"frame_incognito": [ 0.12156862745098 , 0.855614973262033 , 0.85997693194925 ],
+"frame_inactive": [ 0.141666666666667 , 0.833333333333333 , 0.15 ],
+"frame_incognito_inactive": [ 0.141666666666667 , 0.833333333333333 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

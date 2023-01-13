@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png"
+   },
+   "description": "RAssetDownloader - Roblox Asset Downloader",
+   
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "RAssetDownloader - Roblox Asset Downloader",
+   "short_name": "RAssetDownloader",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}
+

@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "AnkiSoup",
+  "version": "0.5",
+  "description": "A sentences management system for learning languages.",
+  "browser_action": {
+    "default_title": "AnkiSoup",
+    "default_icon": "coffee.png"
+  },
+  "icons": {
+    "128": "coffee.png",
+    "16": "coffee.png"
+  },
+  "web_accessible_resources": [
+    "jquery-2.0.3.min.map"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["jquery.growl.css"],
+      "js": ["jquery.min.js", "jquery.growl.js", "contents.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions":[
+    "background",
+    "notifications",
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/"
+  ]
+}

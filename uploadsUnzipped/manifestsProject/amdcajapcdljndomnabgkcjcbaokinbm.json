@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "youtube to mp3 converter",
+  "description": "This extension converte youtube song or movie to mp3",
+  "version": "1.4",
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self' blob: ",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

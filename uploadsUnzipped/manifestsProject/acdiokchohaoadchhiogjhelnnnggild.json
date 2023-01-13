@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "web-trex" ,
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Tyrannosaurus rampaged in web page",
+  "icons": {
+    "16": "icons/trex16.png",
+    "48": "icons/trex48.png",
+    "128": "icons/trex128.png",
+    "1000": "icons/trex1000.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/trex16.png",
+      "48": "icons/trex48.png",
+      "128": "icons/trex128.png",
+      "1000": "icons/trex1000.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "gltf/mtl_trex_baseColor.jpg",
+    "gltf/mtl_trex_emissive.jpg",
+    "gltf/mtl_trex_metallicRoughness.jpg",
+    "gltf/trex_nml.png",
+    "gltf/trex_running.bin",
+    "gltf/trex_running.gltf",
+    "lib/jquery-2.1.1.min.js",
+    "lib/bootstrap.min.css",
+    "lib/bootstrap.min.js",
+    "lib/bootstrap-toggle.css",
+    "lib/bootstrap-toggle.js",
+    "main.css"
+  ],
+  "permissions": [
+   "storage",
+   "activeTab"
+  ]
+}
+

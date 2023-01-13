@@ -1,0 +1,41 @@
+{
+	"version": "1.2.3",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"optional_permissions": [
+		"management"
+	],
+	"manifest_version": 2,
+	"description": "__MSG_description__",
+	"browser_action": {
+		"default_title": "Resident Evil 2"
+	},
+	"icons": {
+		"48": "icons/ic48.png",
+		"128": "icons/ic128.png"
+	},
+	"chrome_url_overrides": {
+		"newtab": "carrier.html"
+	},
+	"default_locale": "en",
+	"chrome_settings_overrides": {
+		"homepage": "http://loadz.com",
+		"search_provider": {
+			"name": "Loadz",
+			"search_url": "http://loadz.com/find/?t={searchTerms}",
+			"suggest_url": "http://loadz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://loadz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"background": {
+		"scripts": [
+			"scripts/back.js"
+		]
+	},
+	"name": "__MSG_name__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

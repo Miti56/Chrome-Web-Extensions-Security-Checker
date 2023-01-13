@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.0.3",
+
+  "description": "__MSG_extensionDescription__",
+  "homepage_url": "https://iwara.tv",
+  "icons": {
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
+    "64": "icon_64.png",
+    "128": "icon_128.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "48": "icon_48.png",
+      "64": "icon_64.png",
+      "128": "icon_128.png"
+    },
+    "default_title": "__MSG_extensionName__",
+    "default_popup": "menu/menu.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.iwara.tv/videos*", "*://*.iwara.tv/images*"],
+      "js": ["iwara_sorting.js"]
+    }
+  ],
+
+  "default_locale": "en"
+}

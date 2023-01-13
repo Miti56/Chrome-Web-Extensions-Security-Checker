@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "__MSG_strExtName__",
+	"short_name": "__MSG_strExtShortName__",
+	"description": "__MSG_strExtDesc__",
+	"version": "1.1.0",
+	"author": {
+		"name": "Oliver Findl",
+		"url": "http://www.findl.sk/",
+		"mail": "inbox@findl.sk",
+		"ext_id": "ext010"
+	},
+	"homepage_url": "http://extensions.findl.sk/ext010/",
+	"default_locale": "en",
+	"icons": {
+		"16": "images/icons/icon16.png",
+		"32": "images/icons/icon32.png",
+		"48": "images/icons/icon48.png",
+		"96": "images/icons/icon96.png",
+		"128": "images/icons/icon128.png"
+	},
+	"options_page": "html/options.html",
+	"browser_action": {
+		"default_popup": "html/popup.html",
+		"default_title": "__MSG_strBrowserActionTitle__",
+		"default_icon": {
+ 			"19": "images/icons/icon19.png",
+			"38": "images/icons/icon38.png"
+		}
+	},
+	"background": {
+		"persistent": false,
+		"scripts": [
+			"javascript/background.js"
+		]
+	},
+	"permissions": [
+		"idle",
+		"tabs",
+		"alarms",
+		"storage",
+		"*://*.google.com/*"
+	]
+}

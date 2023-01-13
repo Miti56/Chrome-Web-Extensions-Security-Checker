@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "1.0.6",
+	"manifest_version": 2,
+	"name": "OpenLaw NZ Legislation helper",
+	"description":
+		"Access the OpenLaw NZ database from within legislation.govt.nz",
+	"icons": {
+		"16": "logo.png",
+		"128": "logo.png"
+	},
+	"permissions": [],
+    "web_accessible_resources": [
+		"logo.png"
+	],
+	"minimum_chrome_version": "22",
+
+	"content_scripts": [
+		{
+			"matches": ["http://legislation.govt.nz/act/private/*", "http://legislation.govt.nz/act/public/*", "http://www.legislation.govt.nz/act/public/*", "http://www.legislation.govt.nz/act/private/*"],
+			"js": ["inject.js"],
+			"css": ["inject.css"]
+		}
+	]
+}

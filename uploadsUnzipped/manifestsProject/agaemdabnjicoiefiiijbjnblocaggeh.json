@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Uforse Screen Sharing",
+  "author": "William Li.",
+  "version" : "2.1",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "This Chrome extension is developed for uforse instructors to share screen while teaching.",
+  "homepage_url": "http://www.uforseportal.com/",
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://*.uforseportal.com/*"
+    ]
+  },
+  "icons": {
+    "128": "logo.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Next URL Distinguisher",
+  "description": "Distinguishes the next/previous URL and opens it via CTRL + Right/Left Arrow",
+  "version": "0.2",
+  "author": "sneJ p.",
+
+  "commands": {
+	"next-page": {
+		"suggested_key": {
+			"default": "Ctrl+Right",
+			"mac": "Command+Right"
+		},
+		"description": "key to distinguish and open the next page"
+	},
+	"previous-page": {
+		"suggested_key": {
+			"default": "Ctrl+Left",
+			"mac": "Command+Left"
+		},
+		"description": "key to distinguish and open the previous page"
+	}
+  },
+  
+  "background": {
+    "scripts": ["background.js"],
+	"persistent": false
+  },
+  
+  "permissions": [
+    "activeTab"
+  ]
+}

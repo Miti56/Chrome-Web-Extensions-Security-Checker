@@ -1,0 +1,72 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.jpeg",
+      "theme_tab_background": "images/theme_tab_background.jpeg",
+      "theme_ntp_background": "images/theme_ntp_background.jpeg",
+      "theme_frame_overlay": "images/theme_frame_overlay.png",
+      "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+    },
+    "colors": {
+      "frame": [
+        4,
+        4,
+        4
+      ],
+      "toolbar": [
+        4,
+        4,
+        4
+      ],
+      "tab_text": [
+        241,
+        250,
+        255
+      ],
+      "tab_background_text": [
+        59,
+        209,
+        255
+      ],
+      "bookmark_text": [
+        59,
+        209,
+        255
+      ],
+      "ntp_background": [
+        0,
+        0,
+        0
+      ],
+      "ntp_text": [
+        59,
+        209,
+        255
+      ],
+      "button_background": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "tints": {
+      "buttons": [
+        0.54,
+        1,
+        0.62
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "top",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "name": "DC LOGO Theme 1600 x 900",
+  "version": "1",
+  "description": "Simple DC LOGO Theme"
+}

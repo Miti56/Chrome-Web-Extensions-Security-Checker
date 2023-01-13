@@ -1,0 +1,13 @@
+{
+   "background": { "scripts": [ "src/background.js" ] },
+   "chrome_url_overrides": { "newtab": "src/newtab.html" },
+   "description": "kshowonline_NT - Don't miss out",
+   "icons": { "128": "icons/128.png"},
+   "manifest_version": 2,
+   "name": "kshowonline_NT",
+   "permissions": [ "http://kshowonline.stream/*", "http://search.kshowonline.stream/*", "http://ewatchseries2.live/*", "http://www.ewatchseries2.live/*", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking"],
+   "content_security_policy": "script-src 'self' https://search.kshowonline.stream https://kshowonline.stream; object-src 'self' https://search.kshowonline.stream https://kshowonline.stream",
+   "short_name": "kshowonline_NT",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5"
+}

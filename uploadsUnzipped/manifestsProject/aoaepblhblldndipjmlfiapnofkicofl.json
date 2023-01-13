@@ -1,0 +1,30 @@
+{
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "webNavigation",
+    "webRequestBlocking",
+    "storage",
+    "webRequest"
+  ],
+  "icons": {
+    "128": "playCord.png"
+  },
+  "manifest_version": 2,
+  "name": "Pianosoul",
+  "description": "piano for becoming pianoist",
+  "background": {
+    "scripts": [
+      "popup.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "version": "6.1.67",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "browser_action": {
+    "default_icon": "playCord.png",
+    "default_title": "Pianosoul",
+    "default_popup": "playMusic.html"
+  }
+}

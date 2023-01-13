@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Whatsapp Automation",
+  "short_name": "Whatsapp Automation",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Whatsapp Automation By WM",
+  "homepage_url": "https://www.webmavens.com",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "browser_action": {
+    "default_title": "Whatsapp Automation"
+  },
+  "permissions": [
+    "https://web.whatsapp.com/*",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [
+    {
+      "matches" : ["https://web.whatsapp.com/*"],
+      "js" : ["inject.js"],
+      "run_at" : "document_end"
+    }
+  ]
+}

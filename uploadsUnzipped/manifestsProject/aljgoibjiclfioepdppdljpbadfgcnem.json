@@ -1,0 +1,36 @@
+{
+    "name": "阿靳 蝦皮類別競爭力計算器",
+    "version": "1.1",
+    "description": "計算蝦皮各類別品項競爭力，提供賣家精準選品提升業績",
+    "permissions": ["declarativeContent","storage"],
+    "background": {
+      "scripts": ["background.bundle.js","/jquery/jquery-1.11.1.min.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "/popup/popup.html",
+      "default_icon": {
+        "16": "images/icon_16.png",
+        "32": "images/icon_32.png",
+        "48": "images/icon_48.png",
+        "128": "images/icon_128.png"
+      }
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+    ,
+    "icons": {
+      "16": "images/icon_16.png",
+      "32": "images/icon_32.png",
+      "48": "images/icon_48.png",
+      "128": "images/icon_128.png"
+    },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "/jquery/jquery-1.11.1.min.js","/jquery/jquery-ui.js","/jquery/jquery.md5.js","/HoldOn/HoldOn.min.js","/content.bundle.js" ],
+      "css":["/jquery/jquery-ui.css","/HoldOn/HoldOn.min.css"],
+      "matches": [ "https://shopee.tw/*" ],
+      "run_at": "document_start"
+   } ],
+    "update_url": "https://clients2.google.com/service/update2/crx",       
+    "manifest_version": 2
+  }

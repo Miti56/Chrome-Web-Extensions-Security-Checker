@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Dylanstuff.com",
+  "description": "Bob Dylan music,t-shirts,books plus more available at the best prices.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://dylanstuff.com/"
+    ],
+    "launch": {
+      "web_url": "http://dylanstuff.com/"
+    }
+  }
+}

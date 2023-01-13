@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "js/lib/zepto.min.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "imgs/icons/icon-48.png",
+      "default_popup":"popup.html"
+   },
+   "default_locale": "zh_CN",
+   "description": "__MSG_ext_description__",
+   "icons": {
+      "128": "imgs/icons/icon-128.png",
+      "16": "imgs/icons/icon-16.png",
+      "48": "imgs/icons/icon-48.png"
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "externally_connectable": {
+      "matches": ["https://wemock.cn/*","https://www.wemock.cn/*","http://fed-mocker.hipac.cn/*","https://fed-mocker.hipac.cn/*","http://127.0.0.1:8084/*"]
+    },
+   "manifest_version": 2,
+   "name": "__MSG_ext_name__",
+   "offline_enabled": true,
+   "permissions": [ "webRequest", "webRequestBlocking", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.5"
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"Android Apk Downloader Online",
+	"description":"Download apk file from google play for your Android device for free. Apk downloader free online 2019",
+	"version":"1.0",
+	"chrome_url_overrides":{
+		"newtab":"newpage.html"
+	},
+	"browser_action":{
+		"default_icon":"icon.png"
+	}, 
+	"permissions":[
+		"tabs"
+	],
+	"background":{
+		"scripts":["background.js"],
+		"persistent":false
+	}
+	
+}

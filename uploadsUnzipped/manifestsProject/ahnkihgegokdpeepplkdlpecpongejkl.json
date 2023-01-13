@@ -1,0 +1,66 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "1.3.6",
+    "manifest_version": 2,
+    "background": {
+        "page": "background.html"
+    },
+    "sandbox": {
+        "pages": ["sandbox.html"]
+    },
+    
+    "content_scripts": [{
+        "matches": ["*://www.instagram.com/*"],
+        "js": ["js/log.js", "js/jquery-3.1.0.js", "js/instagram-main.js"],
+        "css": ["css/instagram-main.css"],
+        "run_at": "document_end",
+        "all_frames": true
+    }, {
+        "matches": ["*://www.instagram.com/"],
+        "js": ["js/log.js", "js/jquery-3.1.0.js", "js/underscore.js", "js/photoswipe.js", "js/photoswipe-ui-default.js", "js/moment.js", "js/story-tray.js", "js/direct.js"],
+        "css": ["css/story-main.css", "css/owl.theme.css", "css/photoswipe.css", "css/default-skin/default-skin.css"],
+        "run_at": "document_end",
+        "all_frames": true
+    },
+    {
+        "matches": ["*://www.instagram.com/"],
+        "js": ["js/setnavigator.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    }
+    ],
+    "web_accessible_resources": [
+        "icon16.png",
+        "js/*",
+        "img/*",
+        "css/*",
+        "html/*"
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Instagram",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "idle",
+        "tabs",
+        "storage",
+        "notifications",
+        "background",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.instagram.com/*",
+        "cookies",
+        "unlimitedStorage"
+    ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com https://*.instagram.com ;  object-src 'self'"
+}

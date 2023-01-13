@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Recruition",
+  "description": "This extension will analyze Recruition pages",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "images/icons/256/grey.png",
+    "default_popup": "views/popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+      "scripts": [
+        "js/vendor/jquery-3.4.1.min.js",
+        "js/vendor/lockr.js",
+        "js/components/functions.js",
+        "js/components/api.js",
+        "js/components/auth.js",
+        "js/components/app.js",
+        "js/background.js"
+      ],
+      "persistent": false
+  },
+  "content_scripts": [{
+    "run_at" :"document_end",
+    "matches": ["https://*/*"],
+    "js": [
+      "js/vendor/jquery-3.4.1.min.js",
+      "js/vendor/lockr.js",
+      "js/components/functions.js",
+      "js/components/api.js",
+      "js/components/auth.js",
+      "js/components/app.js",
+      "js/content.js"
+    ]
+  }]
+}

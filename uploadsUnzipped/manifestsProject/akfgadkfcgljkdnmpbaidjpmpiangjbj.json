@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Acceptio Financial Lease",
+  "version": "1.12",
+  "description": "Zie in realtime uw maandbedrag op elke autowebsite.",
+  "permissions": [
+    "notifications",
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [{
+    "matches": ["*://*.autotrader.nl/*"],
+    "js": ["autotrader.js"]
+  },
+  {
+    "matches": ["*://*.marktplaats.nl/*"],
+    "js": ["marktplaats.js"]
+  }
+  
+  ],
+  "browser_action": {
+      "default_title": "Acceptio",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}

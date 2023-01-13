@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"__MSG_extName__","description":"__MSG_extDesc__","version":"2.3.1","default_locale":"en","icons":{"16":"16.png","128":"128.png"},"app":{"urls":["http://pogoh.info/game/963/Wheely-7"],"launch":{"web_url":"http://pogoh.info/game/963/Wheely-7"}},"permissions":["unlimitedStorage","notifications"], "manifest_version": 2}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "SAPParser",
+    "version": "0.3",
+    "manifest_version" : 2,
+    "description": "Converts to SAP",
+    "background" : {
+      "scripts" : ["converter.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.xlitemprod.pearsoncmg.com/*"],
+        "js": ["makecopyable.js"],
+        "all_frames": true
+      }
+    ],
+    "browser_action": {
+      "default_icon": "logo.png"
+    },
+    "permissions": ["tabs", "clipboardWrite", "clipboardRead"]
+  }

@@ -1,0 +1,30 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Mark Counter",
+    "description" : "Подсчет числа отметок в журнале",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons":{
+    	"16" : "mark_counter_16.png",
+    	"32" : "mark_counter_32.png",
+    	"48" : "mark_counter_48.png",
+    	"128" : "mark_counter_128.png"
+    },
+    "browser_action": {
+      "default_popup": "hello.html",
+      "default_icon": "mark_counter_16.png"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+   	"content_scripts": [
+        {
+            "matches": [ "https://schools.school.mosreg.ru/journals/journalclassical.aspx*" ],
+            "js": [ "mark.js" ],
+            "css": [ "style.css" ],
+            "run_at": "document_idle",
+            "all_frames": true
+        }
+    ]
+  }

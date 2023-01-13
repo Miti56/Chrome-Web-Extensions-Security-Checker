@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Cut The Rope 2 Install",
+  "version": "2.0.3.1",
+  "manifest_version": 2,
+  "description": "Play the popular game Cut The Rope 2 Install online!",
+  "homepage_url": "http://cuttherope2.101bestgamesonline.com/",
+  "icons": {
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/22x22.png",
+    "default_title": "Cut The Rope 2 Install",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://cuttherope2.101bestgamesonline.com/"
+  ]
+}

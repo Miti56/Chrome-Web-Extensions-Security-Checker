@@ -1,0 +1,19 @@
+{
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "background.js" ]
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "description": "It's the popular mobile app that allows you to send videos and pictures.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Snapchat for Chrome",
+   "permissions": [ "notifications", "storage", "browser", "alarms" ],
+   "short_name": "App",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.5"
+}

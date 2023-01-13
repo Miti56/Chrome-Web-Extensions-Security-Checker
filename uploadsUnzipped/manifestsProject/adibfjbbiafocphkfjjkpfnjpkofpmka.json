@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Screen Shooter",
+  "description": "Get screenshoots on the go",
+  "version": "1.0",
+  "permissions": [
+    "tabs" ,"activeTab", "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["FileSaver.js", "jszip.js", "background.js"]
+  },
+  "devtools_page": "dev.html"
+}

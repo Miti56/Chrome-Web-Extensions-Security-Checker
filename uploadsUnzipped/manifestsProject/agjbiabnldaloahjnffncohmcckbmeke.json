@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Powr of You",
+  "description": "Rewarding you for being You!",
+  "icons": {
+    "128": "images/icon-128.png"
+  },
+  "version": "2.5.1",
+  "author": "powrofyou.com",
+  "homepage_url": "https://www.powrofyou.com/",
+  "browser_action": {
+    "default_icon": "images/icon-off-38.png",
+    "default_title": "Powr of You - please login",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "vendor/jquery-3.2.1.min.js",
+      "vendor/tld.min.js",
+      "config.js",
+      "extension.js",
+      "eventPage.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["vendor/jquery-3.2.1.min.js", "content.js"]
+    },
+    {
+      "matches": ["*://*.powrofyou.com/*"],
+      "js": ["vendor/jquery-3.2.1.min.js", "config.js", "js/powrofyou.js"]
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["*://*.powrofyou.com/*"]
+  },
+  "permissions": [
+    "*://*/*",
+    "alarms",
+    "history",
+    "storage",
+    "tabs",
+    "notifications",
+    "idle",
+    "bookmarks",
+    "cookies"
+  ],
+  "incognito": "split"
+}

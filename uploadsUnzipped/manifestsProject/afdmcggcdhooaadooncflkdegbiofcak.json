@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Newsblock",
+  "version": "0.3",
+  "permissions": ["webview"],
+  "icons": {
+    "16": "NB-favicon-16.png",
+    "128": "NB-favicon-128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  }
+}

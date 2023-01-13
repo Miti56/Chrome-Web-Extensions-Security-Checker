@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+ "manifest_version": 2,
+  "name": "Grampa Grumble™ Skeet Shoot",
+  "description": "Unleash Grampa's full arsenal on multiple targets! Play the new time mode, save high-score to leader-boards and unlock achievements!",
+  "version": "0.0.0.4",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "launch": {
+      "web_url": "http://ap2.gigglestick.com/grampa/skeetmm.html"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Home Greeting",
+  "short_name": "Greeting",
+  "version": "2.0",
+
+  "browser_action": {
+    "default_icon": "greeting.png",
+    "default_title": "Home Greeting"
+  },
+
+  "options_page": "options.html",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "description": "No one deserves loneliness :)",
+
+  "author": "Sam Lee",
+
+  "offline_enabled": true,
+
+  "permissions": [
+    "storage"
+  ],
+
+  "icons": {
+    "128": "greeting.png",
+    "64": "greeting.png",
+    "48": "greeting.png",
+    "32": "greeting.png",
+    "16": "greeting.png"
+  }
+}

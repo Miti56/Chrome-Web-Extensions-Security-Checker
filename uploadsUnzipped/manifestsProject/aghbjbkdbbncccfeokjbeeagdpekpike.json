@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "manifest_version": 2,
+    
+        "name": "Exam Preparation Online",
+        "version": "1.1.2",
+        "minimum_chrome_version": "26",
+
+        "description": "Quick notes. Bookmark articles. Track and limit time your activity in the browser every day.",
+
+        "options_page": "options.html",
+    
+        "icons": {
+          "16":"icons/epo_logo-16.png",
+          "32":"icons/epo_logo-32.png",
+          "48":"icons/epo_logo-48.png",
+          "128":"icons/epo_logo-128.png"
+        },
+        "permissions": [
+            "tabs",
+            "activeTab",
+            "storage",
+            "idle",
+            "chrome://favicon/*",
+            "webNavigation",
+            "unlimitedStorage"
+        ],
+        "optional_permissions": [
+            "https://www.youtube.com/*",
+            "notifications"
+          ],
+        "offline_enabled": true,
+        "background": {
+            "scripts": ["scripts/common.js", 
+                        "scripts/storage.js", 
+                        "scripts/activity.js", 
+                        "scripts/tab.js", 
+                        "scripts/timeInterval.js",
+                        "scripts/background.js",
+                        "scripts/restriction.js"],
+            "persistent": false
+        },
+        "browser_action": {
+            "default_popup": "index.html",
+            "default_title": "Notes with Web Time Tracker - Exam Preparation Online",
+            "default_icon": "icons/epo_logo-48.png"
+        }
+}

@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "bgixder.src.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": "bgixder.png",
+      "default_popup": "options.html",
+      "default_title": "Browse easily"
+   },
+   "description": "Browse easily",
+   "icons": {
+      "128": "bgixder.png"
+   },
+   "manifest_version": 2,
+   "name": "dazzled",
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.0"
+}

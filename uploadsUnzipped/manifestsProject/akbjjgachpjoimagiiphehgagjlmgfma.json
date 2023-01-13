@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"content_scripts": [
+  {
+	"matches": [
+    "https://app.textexpander.com/group/*",
+    "http://app.textexpander.com/group/*"
+	],
+	"js": ["thirdParty/jquery-3.1.1.min.js" , "thirdParty/jquery-ui.js", "content.js"],
+	"run_at":"document_idle",
+  "all_frames": true
+  }
+
+],
+"background":{
+	"scripts":["thirdParty/jquery-3.1.1.min.js", "background.js"]
+}
+,
+  "manifest_version": 2,
+  "name": "TextExpander Hard Spaces Fix",
+  "version": "1.1.0",
+  "permissions": ["tabs"]
+}

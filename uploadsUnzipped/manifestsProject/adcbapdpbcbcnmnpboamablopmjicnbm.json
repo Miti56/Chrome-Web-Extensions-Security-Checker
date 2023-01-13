@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Mini Browser",
+    "short_name": "MiniBrowser",
+    "description": "Panel Browser tool for quick web access.",
+    "version": "0.0.9",
+    "minimum_chrome_version": "38",
+    "options_page": "options.html",
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+    "icons": {
+        "32": "assets/Chrome-32.png",
+        "64": "assets/Chrome-64.png"
+    },
+    "browser_action": {
+        "default_icon": "assets/Chrome-64.png",
+        "default_popup": "bookmark_popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    }
+}

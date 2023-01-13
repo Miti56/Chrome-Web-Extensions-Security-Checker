@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Legislation_Plus",
+    "manifest_version": 2,
+    "version": "0.0.18",
+    "description": "Supplement Westlaw UK legislation documents with additional content",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": [
+        "http://*/*"
+    ],
+    "background": {},
+    "icons": {
+        "16": "images/logo.png",
+        "48": "images/logo.png",
+        "128": "images/logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*docguid=*"
+            ],
+            "js": [
+                "bower_components/jquery/dist/jquery.min.js",
+                "bower_components/lodash/lodash.min.js",
+                "bower_components/q/q.js",
+                "bower_components/mustache.js/mustache.min.js",
+                "bower_components/jquery-ui/jquery-ui.min.js",
+                "bower_components/moment/min/moment.min.js",
+                "bower_components/featherlight/release/featherlight.min.js",
+                "js/mappings.js",
+                "js/salvage.js",
+                "js/aop.js"
+            ],
+            "css": [
+                "bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css",
+                "bower_components/featherlight/release/featherlight.min.css",
+                "css/legiplus.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "/mst/*.mst"
+    ]
+}

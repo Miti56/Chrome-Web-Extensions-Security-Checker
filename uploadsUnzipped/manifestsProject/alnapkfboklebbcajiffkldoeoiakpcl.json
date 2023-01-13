@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"name":"StudentVUE GPA & Average Grade","description":"this extension will calculate your gpa and average grade from the data provided from the table values","version":"1.0","browser_action":{"default_icon":"icon.png","default_popup":"popup.html"},"content_scripts":[{"matches": ["*://sis.powayusd.com/PXP_Gradebook.aspx?*"],"js":["main.js"],"run_at":"document_end"}],"background":{"scripts":["background.js"]},"permissions":["tabs","http://*/*","https://*/*"],"offline_enabled":true,"short_name":"gpa&avg. grade","incognito":"not_allowed"}

@@ -1,0 +1,24 @@
+{
+	"background": {
+		"scripts": [
+			"assets/bg.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "monster-trucks-challenge-icons/icon48.png",
+		"default_popup": "newtab.html"
+	},
+	"name": "__MSG_name__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"default_locale": "en",
+	"manifest_version": 2,
+	"description": "__MSG_description__",
+	"version": "0.0.1",
+	"icons": {
+		"48": "monster-trucks-challenge-icons/icon48.png",
+		"128": "monster-trucks-challenge-icons/monster-trucks-challenge-128.png"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

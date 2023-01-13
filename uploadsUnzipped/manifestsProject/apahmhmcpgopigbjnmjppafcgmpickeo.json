@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "name": "Lightning Helper",
+  "version": "1.1",
+  "description": "Lightning Utilities",
+
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "icons": { 
+	 "16": "images/cloud_16.png",
+     "48": "images/cloud_48.png",
+	 "128": "images/cloud_128.png" 
+   },
+  
+  "content_scripts": [
+  {
+	"matches": ["https://*.salesforce.com/*","https://*.force.com/*"],
+    "css": [],
+    "js": ["js/script.js"]
+  }
+  ],
+  "commands": {
+	  "toggle-feature-launcher": {
+		"suggested_key": {
+		  "default": "Ctrl+Shift+A",
+		  "mac": "Command+Shift+A"
+		},
+		"description": "Open App Launcher"
+	  }
+	},
+  "permissions": ["https://*.salesforce.com/*", "https://*.force.com/*"]
+}

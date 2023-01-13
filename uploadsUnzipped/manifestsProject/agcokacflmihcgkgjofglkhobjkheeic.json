@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "launch": {
+      "web_url": "http://plarium.com/play/en/sparta/top_g/?plid=61648&pxl=chrom_store"
+    },
+	"urls": [ "http://plarium.com/play/en/sparta/top_g/?plid=61648&pxl=chrom_store" ]
+  },
+  "icons": {
+    "128": "SP_icon.png"
+  },
+  "default_locale": "en",
+  "description": "__MSG_app_description__",
+  "manifest_version": 2,
+  "name": "Sparta: War of Empires",
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "version": "1.0.2"
+}

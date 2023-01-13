@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Embed GitHub Issue Badges",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "",
+  "permissions": ["https://github.com/*", "webRequest", "webRequestBlocking"],
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [{
+    "matches": ["https://github.com/*"],
+    "js": ["js/inject.js"]
+  }]
+}

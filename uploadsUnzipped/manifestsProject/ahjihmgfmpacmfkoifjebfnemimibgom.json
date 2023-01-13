@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "The W.A.R. Lords Theme",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "The official Chrome theme of Team 2485, the W.A.R. (We Are Robot) Lords, a FIRST robotics team.",
+  "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+   },
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_stripe.png",
+      "theme_frame_incognito": "images/theme_stripe_inverse.png",
+      "theme_frame_overlay": "images/theme_frame_overlay.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_goldnoise_dark.png",
+      "theme_tab_background_incognito": "images/theme_goldnoise_dark.png",
+      "theme_ntp_background": "images/theme_stripe.png",
+      "theme_ntp_attribution": "images/logo.png"
+    },
+    "colors": {
+      "frame": [17, 17, 17],
+      "toolbar": [203, 161, 53],
+      "tab_text": [17, 17, 17],
+      "tab_background_text": [40, 40, 40],
+      "bookmark_text": [17, 17, 17],
+      "ntp_background": [17, 17, 17],
+      "ntp_text": [255, 255, 255],
+      "ntp_link": [203, 161, 53],
+      "ntp_header": [255, 255, 255],
+      "ntp_section": [255, 255, 255],
+      "ntp_section_text": [255, 255, 255],
+      "ntp_section_link": [203, 161, 53],
+      "button_background": [40, 40, 40]
+    },
+    "tints": {
+      "frame_inactive": [0, 0, 0.57]
+    },
+    "properties": {
+      "ntp_background_repeat": "repeat",
+      "ntp_logo_alternate": 1
+    }
+  }
+}

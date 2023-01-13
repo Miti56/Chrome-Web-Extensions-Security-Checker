@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "DesignMantic",
+"short_name": "The Easiest, Fastest Way to Design a Logo for Your Business!",
+"description": "The Best Logo Design Tool Available.",
+"version": "1.1",
+
+"chrome_url_overrides" : {
+"newtab": "background.html"
+},
+
+"icons": {
+"128": "icon_128.png"
+},
+
+"permissions": [
+"tabs",
+"activeTab",
+"http://www.designmantic.com/",
+"https://ajax.googleapis.com/"
+]
+
+}

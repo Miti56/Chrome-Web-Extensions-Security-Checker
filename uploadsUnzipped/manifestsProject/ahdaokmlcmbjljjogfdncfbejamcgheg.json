@@ -1,0 +1,37 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Easypocket",
+  "version": "1.1",
+ 
+  "description": "Manage your Pocket items with this awesome extension",
+  "icons": { "16": "store_icon.png",
+    "48": "store_icon.png",
+   "128": "store_icon.png" },
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+    "content_scripts": [ {
+    
+    "css":["style.css"],
+    "js": [ "jquery.min.js","contentscript.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+
+  "background": {
+    "scripts": ["jquery.min.js","popup.js","helpers.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "*.png"
+  ],
+  "permissions": [
+  "https://getpocket.com/v3/oauth/request/*",
+  "https://getpocket.com/v3/get/*",
+  "identity",
+  "storage"
+   ]
+}

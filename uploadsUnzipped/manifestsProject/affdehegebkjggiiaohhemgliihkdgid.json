@@ -1,0 +1,55 @@
+{
+  "content_scripts": [
+    {
+      "js": [
+        "js/jquery-1.6.1.min.js",
+        "js/jquery.cluetip.js",
+        "js/blocket.js"
+      ],
+      "matches": [
+        "http://*.blocket.se/*",
+        "https://*.blocket.se/*"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "js": [
+        "js/jquery.js",
+        "js/Init.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "Visar en större bild för en annons utan att behöva gå in på själva annonsen. Det räcker att föra muspekaren ovanför bilden i listan.",
+  "icons": {
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "BlocketZoom",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.7",
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "js/jquery.js",
+      "js/bg.js"
+    ]
+  },
+  "permissions": [
+    "contextMenus",
+    "cookies",
+    "history",
+    "management",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self'  'unsafe-eval' https://google.com; object-src 'self'"
+}

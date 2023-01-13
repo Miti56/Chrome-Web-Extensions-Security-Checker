@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Commentim",
+    "version": "1.0",
+    "description": "Enables comments on every website.",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "declarativeContent",
+        "storage"
+    ],
+    "browser_action": {
+        "default_title": "commentim.com",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content-script.js",
+                "commentim-com-extension.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "background":{
+        "scripts":["background.js"]
+    },
+    "web_accessible_resources":[
+        "resizable.js",
+        "dnd.js",
+        "comments.js",
+        "comments.css",
+        "commentim-com-extension.js",
+        "iframe.css",
+        "iframe.js",
+        "iframe.html",
+        "web-store-assets/wingrip.png",
+        "web-store-assets/menu-dots.svg"
+    ],
+    "manifest_version": 2
+}

@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Paper io Play Hack zoom",
+    "description" : "Paper IO the games play at the click of a button!",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "hello.html",
+      "default_icon": "icon.png"
+    },
+	"background" : { "scripts" : ["add.js"]
+	},	
+	"permissions": [
+    "activeTab"
+    ],
+	"icons" :{
+		"16"	:	"icon-16.png",
+		"48"	:	"icon-48.png",
+		"128"	:	"icon-128.png"
+	},
+    "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+        "description": "Opens hello.html"
+      }
+    }
+  
+  }

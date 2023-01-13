@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Field flint - ICI",
+	"short_name": "ff",
+	"description": "fieldflint - Is a very useful contact management system",
+	"version": "3.2.11",
+	"homepage_url": "https://fieldflint.hydrophis.cn/web",
+	"browser_action": {
+		"default_icon": "static/imgs/48.png",
+		"default_title": "open field flint"
+	},
+	"icons": {
+		"16": "static/imgs/16.png",
+		"48": "static/imgs/48.png",
+		"128": "static/imgs/128.png"
+	},
+	"web_accessible_resources": [
+		"https://maps.google.cn/maps/api*",
+		"https://ici-public.oss-cn-hongkong.aliyuncs.com/*",
+		"dist/*"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://at.alicdn.com/ https://ici-public.oss-cn-hongkong.aliyuncs.com/ https://maps.googleapis.com/ https://maps.google.cn https://ditu.google.cn https://www.google.cn https://www.googleapis.com/ https://www.google.com/; object-src 'self'",
+	"background": {
+		"scripts": ["dist/js/vendors.js","dist/js/background.js"],
+		"persistent": true
+	},
+
+	"permissions": [
+		"*://*.hydrophis.cn/*",
+		"*://*.baidu.com/*",
+		"*://*.aliyuncs.com/*",
+		"*://*.google.com/*",
+		"*://*.linkedin.com/*",
+		"*://*.licdn.com/*",
+		"*://*.facebook.com/*",
+		"*://*.twitter.com/*",
+		"*://twitter.com/*",
+		"*://*.twimg.com/*",
+		"*://*.webflow.com/*",
+		"*://*.youtube.com/*",
+		"*://*.google.cn/*",
+		"*://*.googleapis.com/*",
+		"*://*.ggpht.com/*",
+		"*://*.xx.fbcdn.net/*",
+		"webNavigation",
+		"background",
+		"activeTab",
+		"desktopCapture",
+		"cookies",
+		"unlimitedStorage",
+		"notifications",
+		"contextMenus",
+		"webRequest",
+		"webRequestBlocking",
+		"history",
+		"tabs",
+		"storage"
+	]
+}

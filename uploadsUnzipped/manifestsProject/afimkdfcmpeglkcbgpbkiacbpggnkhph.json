@@ -1,0 +1,24 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "0.0.1",
+	"background": {
+		"scripts": [
+			"scripts/back.js"
+		]
+	},
+	"name": "__MSG_name__",
+	"manifest_version": 2,
+	"icons": {
+		"48": "image/icon-48.png",
+		"128": "image/nova-billiard-128.png"
+	},
+	"default_locale": "en",
+	"description": "__MSG_description__",
+	"browser_action": {
+		"default_icon": "image/icon-48.png",
+		"default_popup": "micron.html"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

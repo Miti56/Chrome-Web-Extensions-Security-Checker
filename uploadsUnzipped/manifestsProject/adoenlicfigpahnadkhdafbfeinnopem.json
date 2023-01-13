@@ -1,0 +1,155 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "manifest_version": 2,
+    "version": "2.4.0",
+    "default_locale": "en",
+    "icons": {
+        "128": "icon.png"
+    },
+    "theme": {
+        "colors": {
+            "toolbar": [
+                255,
+                255,
+                255
+            ],
+            "tab_text": [
+                255,
+                255,
+                255
+            ],
+            "frame_incognito": [
+                230,
+                230,
+                230
+            ],
+            "frame_incognito_inactive": [
+                230,
+                230,
+                230
+            ],
+            "frame": [
+                230,
+                230,
+                230
+            ],
+            "frame_inactive": [
+                230,
+                230,
+                230
+            ],
+            "omnibox_background": [
+                235,
+                238,
+                242
+            ],
+            "bookmark_text": [
+                66,
+                66,
+                66
+            ],
+            "tab_background_text": [
+                66,
+                66,
+                66
+            ],
+            "tab_background_text_inactive": [
+                168,
+                168,
+                168
+            ],
+            "tab_background_text_incognito": [
+                66,
+                66,
+                66
+            ],
+            "tab_background_text_incognito_inactive": [
+                168,
+                168,
+                168
+            ],
+            "omnibox_text": [
+                66,
+                66,
+                66
+            ],
+            "ntp_background": [
+                255,
+                255,
+                255
+            ],
+            "ntp_text": [
+                0,
+                0,
+                0
+            ],
+            "background_tab": [
+                191,
+                191,
+                191
+            ],
+            "background_tab_inactive": [
+                191,
+                191,
+                191
+            ],
+            "background_tab_incognito": [
+                191,
+                191,
+                191
+            ],
+            "background_tab_incognito_inactive": [
+                191,
+                191,
+                191
+            ]
+        },
+        "images": {
+            "theme_toolbar": "theme_toolbar.png",
+            "theme_frame": "theme_frame.png",
+            "theme_frame_incognito": "theme_frame_incognito.png",
+            "theme_frame_inactive": "theme_frame_inactive.png",
+            "theme_frame_incognito_inactive": "theme_frame_incognito_inactive.png",
+            "theme_ntp_background": "theme_ntp_background.png"
+        },
+        "tints": {
+            "frame_incognito": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_incognito_inactive": [
+                -1,
+                -1,
+                -1
+            ],
+            "buttons": [
+                0,
+                0,
+                0.49019607843137253
+            ],
+            "background_tab": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_inactive": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame": [
+                -1,
+                -1,
+                -1
+            ]
+        },
+        "properties": {
+            "ntp_background_repeat": "repeat",
+            "ntp_logo_alternate": 0
+        }
+    }
+}

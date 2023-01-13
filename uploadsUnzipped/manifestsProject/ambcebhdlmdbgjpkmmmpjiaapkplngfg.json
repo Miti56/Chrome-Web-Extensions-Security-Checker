@@ -1,0 +1,39 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AI Website Blocker - www.cleverm.com",
+  "short_name": "www.cleverm.com",
+  "description": "Website blocker extending web application www.cleverm.com",
+   "version": "1.41",
+   "permissions": [
+     "tabs", "webNavigation", "storage"
+   ],
+   "browser_action": {
+     "default_title": "cleverm.com | Chrome Extension 1.41",
+     "default_icon": "icon.png"
+    },
+    "icons": {
+          "16": "icon.png",
+          "48": "icon.png",
+          "128": "icon.png"
+    },
+    "externally_connectable": {
+      "ids": [
+      "ambcebhdlmdbgjpkmmmpjiaapkplngfg"
+    ],
+    "matches": [
+      "https://cleverm.com/*"
+    ]
+  },
+   "content_scripts": [
+   {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["core.js"],
+      "run_at": "document_start"
+   }
+ ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+ "manifest_version": 2
+}

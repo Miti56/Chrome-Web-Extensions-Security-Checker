@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ulla - Water Drinking Reminder",
+  "short_name": "Ulla",
+  "version": "1.6.8",
+  "manifest_version": 2,
+  "description": "Ulla is a lovely water drinking reminder for your Chrome.",
+  "homepage_url": "https://ulla.io",
+  "author": "ulla.io",
+  "minimum_chrome_version": "22",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "js/notify.js",
+      "src/bg/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon128.png",
+    "default_title": "Ulla",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "notifications",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "icons/icon128.png"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "oTranscribe",
+  "description": "A free HTML5 app to take the pain out of transcribing interviews.",
+  "version": "1.1",
+  "app": {
+    "urls": [
+      "http://otranscribe.com/"
+    ],
+    "launch": {
+        "web_url": "http://otranscribe.com"        
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "manifest_version": 2
+}

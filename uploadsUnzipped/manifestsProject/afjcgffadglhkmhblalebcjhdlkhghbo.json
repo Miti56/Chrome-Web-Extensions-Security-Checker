@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Glassdoor - Visit without login",
+  "version" : "0.2",
+  "manifest_version": 2,
+  "description" : "Extension allows you to visit Glassdoor content without login.",
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "permissions": [
+      "tabs",
+      "cookies",
+      "https://*/",
+      "http://*/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Visit site without Login"
+  },
+  "options_page": "options.html",
+  "author": "R77tf"
+}

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Job Search Engine UK",
+ "manifest_version": 2,
+ "short_name": "Best Job Search Engines Site Online",
+ "description": "Best Job Search Engines Site Online - UK - job openings, jobs vacancies",
+ "version": "1",
+ "icons": {
+	"128": "128.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://www.jobsearch-engine.com/GB/#jobresults"
+	}
+  }
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Clash of Crystal - coc.o4games.com",
+  "short_name": "Clash of Crystal",
+  "description": "Bring your team and join this magic fairy world during passionate 2016 summer, really eager to explore and adventure now!",
+  "version": "1.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://coc.o4games.com/",
+	"http://coc.o4games.com/topup/"
+    ],
+    "launch": {
+      "web_url": "http://coc.o4games.com/"
+    }
+  }
+}

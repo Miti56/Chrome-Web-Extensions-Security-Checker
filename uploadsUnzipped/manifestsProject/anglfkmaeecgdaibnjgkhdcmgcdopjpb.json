@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Море слов",
+"version": "1.2",
+"icons": { "128": "icon128.png" },
+"app": {
+  "urls": [
+    "http://minigames.mail.ru/moreslov"
+  ],
+  "launch": {
+    "web_url": "http://minigames.mail.ru/moreslov"
+  }
+},
+"permissions": ["notifications"],
+"manifest_version": 2
+}

@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Youbeatz - Online YouTube To MP3 Converter", 
+    "icons": {
+        "128": "icons/icon128.png", 
+        "48": "icons/icon48.png", 
+        "16": "icons/button.png"
+    }, 
+    "web_accessible_resources": [
+        "res/*", 
+        "assets/*", 
+        "icons/*"
+    ], 
+    "description": "Konvertieren Sie Ihre Lieblings Online Videos und Audio in MP3, MP4, WebM F4V- und 3GP", 
+    "background": {
+        "page": "background.html"
+    }, 
+    "homepage_url": "http://www.Youbeatz.biz", 
+    "version": "1.0.0", 
+    "manifest_version": 2, 
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'", 
+    "browser_action": {
+        "default_popup": "popup.html", 
+        "default_icon": "icons/button.png", 
+        "default_title": "Convert it!"
+    }, 
+    "permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*", 
+        "contextMenus", 
+        "webNavigation"
+    ]
+}

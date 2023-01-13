@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "description": "Autonomiq (Dev) - A  smart automated web application testing tool",
+    "manifest_version": 2,
+    "name": "Autonomiq (Dev) - Ranjith",
+    "version": "2.3.24",
+    "homepage_url": "https://www.mindnervestech.com/",
+    "icons":
+    {
+        "48": "icons/icons-48-dev.png",
+        "96": "icons/icons-96-dev.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "webRequest",
+        "contextMenus",
+        "downloads",
+        "webNavigation",
+        "notifications",
+        "storage"
+    ],
+
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content/atoms.js", "content/utils.js", "content/selenium-browserbot.js",
+                   "common/escape.js", "content/selenium-api.js", "content/locatorBuilders.js",
+                   "content/recorder.js", "content/recorder-handlers.js", "content/command-receiver.js",
+                   "content/targetSelecter.js", "content/sizzle.js"],
+            "match_about_blank": true,
+            "all_frames": true
+        },
+        {
+            "matches": ["<all_urls>"],
+            "js": ["common/browser-polyfill.js", "content/prompt-injecter.js", "content/runScript-injecter.js"],
+            "match_about_blank": true,
+            "all_frames": true,
+            "run_at": "document_start"
+        },
+        {
+            "matches": ["http://autonomiq-ui.s3-website.us-east-2.amazonaws.com/*"],
+            "js": ["content/testfile.js"]
+        }
+    ],
+
+    "externally_connectable": {
+        "matches": ["http://autonomiq-ui.s3-website.us-east-2.amazonaws.com/*"]
+    },
+
+    "background":
+    {
+        "scripts": ["common/browser-polyfill.js", "background/background.js"]
+    },
+
+    "browser_action":
+    {
+        "default_icon": "icons/icons-48-dev.png",
+        "default_title": "Autonomiq-Dev"
+    },
+
+    "web_accessible_resources": ["page/prompt.js", "page/runScript.js"]
+}

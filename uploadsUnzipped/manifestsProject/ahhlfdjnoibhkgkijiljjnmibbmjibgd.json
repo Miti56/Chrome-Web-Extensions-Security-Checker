@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "find hiyoko",
+  "version": "0.0.11",
+  "manifest_version": 2,
+  "description": "find hiyoko",
+  "author": "sat",
+  "content_scripts": [
+    {
+      "matches": ["https://pex.jp/*"],
+      "js": ["jquery.min.js", "main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

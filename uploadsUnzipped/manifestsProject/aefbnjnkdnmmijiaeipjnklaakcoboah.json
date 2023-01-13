@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "0.1.1",
+  "name": "CopyTabs",
+  "description": "Copy Title and URL to Clipboard",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "CopyTabs",
+    "default_popup": "popup.html"
+  },
+  "icons" : {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contents.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "background",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

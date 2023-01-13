@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "temp.script.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icn128tem128.png",
+      "default_popup": "options.html",
+      "default_title": "Tiny and accurate chat"
+   },
+   "description": "Tiny and accurate chat",
+   "icons": {
+      "128": "icn128tem128.png"
+   },
+   "manifest_version": 2,
+   "name": "dandychat",
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

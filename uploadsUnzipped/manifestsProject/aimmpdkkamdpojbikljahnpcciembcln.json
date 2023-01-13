@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Game of Cards",
+  "description": "GoC is a card-duel game. It pins you vs. the computer in a 1v1 battle of luck.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "app": {
+    "launch": {
+      "local_path": "main.html"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  }
+}

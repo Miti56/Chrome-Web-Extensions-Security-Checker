@@ -1,0 +1,41 @@
+{
+	"chrome_url_overrides": {
+		"newtab": "carrier.html"
+	},
+	"version": "8.13.14",
+	"name": "__MSG_name__",
+	"browser_action": {
+		"default_title": "Kevin Durant"
+	},
+	"default_locale": "en",
+	"chrome_settings_overrides": {
+		"homepage": "http://funsearchbox.com",
+		"search_provider": {
+			"name": "Fun Search Box",
+			"search_url": "http://funsearchbox.com/find/?t={searchTerms}",
+			"suggest_url": "http://funsearchbox.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://funsearchbox.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"manifest_version": 2,
+	"description": "__MSG_description__",
+	"optional_permissions": [
+		"management"
+	],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"background": {
+		"scripts": [
+			"js/kevin-durant.js"
+		]
+	},
+	"icons": {
+		"48": "icn/icon-48.png",
+		"128": "icn/icon-128.png"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

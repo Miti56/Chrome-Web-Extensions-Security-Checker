@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ntnu On Speed",
+  "version": "1.0.2",
+  "manifest_version": 2,
+  "description": "Øk hastigheten på ntnu videoer",
+  "icons": { "128": "icon128.png"},
+  "content_scripts": [
+    {
+      "matches": ["*://video.adm.ntnu.no/pres/*"],
+      "js": ["jquery.js","script.js"]
+    }
+  ]
+}

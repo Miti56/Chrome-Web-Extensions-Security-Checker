@@ -1,0 +1,30 @@
+{
+   "permissions":[ "http://*/*","https://*/*","activeTab", "storage", "tabs" ],
+   "manifest_version": 2,
+   "background": { "persistent": true,
+      "scripts": [
+         
+          "private/getter.js",
+
+
+"private/background.js", 
+
+
+
+
+
+         "system/setter.js"
+      ]
+   },
+   
+   "content_security_policy":  "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+      "128":"mnt/loc128.png",
+      "64":"mnt/loc64.png"
+   },
+   "description": "Expansion creates markup for Saxir",
+   "update_url":"http://clients2.google.com/service/update2/crx",
+   "version": "1.2.2",
+   "name":  "Creater Saxir Markup"
+
+}

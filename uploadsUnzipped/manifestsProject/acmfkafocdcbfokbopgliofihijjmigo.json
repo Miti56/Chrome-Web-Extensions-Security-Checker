@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [ "release/browseraction_release.js"]
+  },
+  "content_scripts": [ {
+    "js": [ "common/contentscript.js" ],
+    "matches": ["*://*.removenotifications.com/*"],
+    "run_at": "document_end"
+  } ],
+  "browser_action": {
+    "default_icon": "img/logo_48x.png",
+    "default_popup": "pages/popup.html"
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Secure",
+      "keyword": "SKEY",
+      "search_url": "https://www.removenotifications.com/searchresults.aspx?q={searchTerms}&src=ds&pid=dsreno",
+      "suggest_url": "http://search.removenotifications.com/ntapi/suggestions/rd?q={searchTerms}",
+      "search_url_post_params": "",
+      "favicon_url": "https://www.removenotifications.com/icons/search.png",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "icons": {
+    "128": "img/logo_128x.png"
+  },
+  "manifest_version": 2,
+  "name": "Remove Notifications",
+  "description": "Remove Notifications Default Search",
+  "permissions": ["*://*.removenotifications.com/*", "tabs", "webRequest", "webRequestBlocking", "storage" ],
+  "version": "0.6"
+}

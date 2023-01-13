@@ -1,0 +1,20 @@
+{
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "apptoforback.js" ]
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "description": "Online unblock youku video sites.Unblock youku tudou bilibili plus proxy populer letv.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "25.1.1480.2",
+   "name": "Online Unblock To Youku",
+   "permissions": [ "notifications", "storage", "browser", "alarms" ],
+   "short_name": "apptofor",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.15"
+}

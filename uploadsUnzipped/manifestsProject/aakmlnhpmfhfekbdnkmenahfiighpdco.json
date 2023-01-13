@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "Why Do We Yawn?",
+  "short_name": "Why Do We Yawn?",
+ 	"version": "1.1",
+	"description": "According to some very attentive researchers, human beings tend to yawn about eight times per day. ",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Why Do We Yawn?"
+  },
+  "permissions": [ "management", "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

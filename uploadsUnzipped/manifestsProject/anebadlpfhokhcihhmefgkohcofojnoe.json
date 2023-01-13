@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "JPNews",
+  "version": "3.0.0",
+  "manifest_version": 2,
+  "description": "Chrome Extension for accessing News from different sources easily.",
+  "browser_action": {
+    "default_icon": "assets/qw.png",
+    "default_popup": "pop.html"
+  },
+  "chrome_url_overrides" : {
+    "newtab": "tab.html"
+  },
+  "icons":{
+    "64" : "assets/qw.png",
+    "32" : "assets/qw.png",
+    "16" : "assets/qw.png",
+    "128" : "assets/qw.png"
+  },
+   "permissions": ["tabs", "<all_urls>",
+          "http://*/*",
+          "https://*/*",
+          "http://*/",
+          "https://*/",
+          "storage",
+          "http://ff.search.yahoo.com/gossip/*"]
+ 
+}

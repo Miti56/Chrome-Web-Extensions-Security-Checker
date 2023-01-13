@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "AskReddit Euphorizer",
+  "description": "Adds \"M'lady\" at the beginning of every AskReddit post, and \"*tips fedora*\" at the end.",
+  "version": "1.0",
+  "icons": { "128": "icon128.png" },
+  
+  "content_scripts": [
+    {
+      "matches": ["http://www.reddit.com/*"],
+      "js": ["askreddit_euphoria.js"]
+    }
+  ]
+  
+  
+}

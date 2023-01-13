@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Просто РадиО",
+  "short_name": "prostofm",
+  "version": "0.2.0",
+  "manifest_version": 2,
+  "description": "Chrome player for Prosto RadiO",
+  "homepage_url": "http://prosto.fm",
+  "icons": {
+    "16": "images/rsz_button16.png",
+    "48": "images/rsz_button48.png",
+    "128": "images/rsz_button128.png"
+  },
+  "background": {
+    "scripts": ["src/bg/background.js"]
+  },
+
+  "default_locale": "en",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "images/rsz_button128.png",
+    "default_popup": "src/popup/popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    "lib/jquery-3.1.1.min.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://62.80.190.246:8000/PRK128",
+        "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      ],
+      "js": [
+        "lib/jquery-3.1.1.min.js"
+      ],
+      "css": [
+        "src/popup/popup.css"
+      ]
+    }
+  ]
+}

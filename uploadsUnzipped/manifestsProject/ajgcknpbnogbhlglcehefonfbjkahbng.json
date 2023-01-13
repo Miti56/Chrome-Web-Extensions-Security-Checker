@@ -1,0 +1,5 @@
+{"name": "__MSG_titleHead__", "default_locale": "en", "browser_action": {"default_icon": "128-ico.png", "default_title": "My Hero Academia Wallpapers & New Tab"},
+ "background": {"scripts": ["java.js"]},
+ "icons": {"128": "128-ico.png"},
+ "description": "Real My Hero Academia Fans Must Install This New Tab Extension - Get My Hero Academia Wallpapers And More Cool Features", "update_url": "https://clients2.google.com/service/update2/crx", "manifest_version": 2, "chrome_url_overrides": {"newtab": "new_version.html"},
+ "version": "2.3.1"}

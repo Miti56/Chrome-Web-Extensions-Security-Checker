@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MU",
+  "description": "MU：大天使之劍",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.gm99.com/mu/"
+    ],
+    "launch": {
+      "web_url": "http://www.gm99.com/login?forward=/mu/server_list&cid=155&scid=gg_store"
+    }
+  }
+}

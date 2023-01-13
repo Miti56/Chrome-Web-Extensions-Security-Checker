@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "APP Calc",
+  "short_name": "APP Calc",
+  "description": "Air physical properties calculator ...",
+  "version": "1.8.3",
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "app": {
+      "background": {
+          "scripts":  ["background.js"]
+    }
+  },
+  "icons": { "128": "icon_128.png" }
+}

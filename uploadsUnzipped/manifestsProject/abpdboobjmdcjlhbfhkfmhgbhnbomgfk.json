@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Ministerio da Tecnologia",
+    "description": "Ministerio da Tecnologia",
+    "manifest_version" : 2,
+    "version" : "0.1",
+	"icons": {
+		"16":"logo.png", "48": "logo.png", "128": "logo.png"
+	},
+	"browser_action": {
+		"default_icon": "logo.png"
+	},
+    "permissions" : ["tabs","activeTab"],
+	"background" : {
+		"scripts" : ["nuvemsoft.js"]
+	}
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "version": "0.2",
+    "name": "Djordan",
+    "short_name": "DD",
+    "description": "Спортивные новости от Djordan.",
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/64.png",
+        "128": "icons/128.png"
+    },
+    "browser_action": {
+        "default_title": "Djordan",
+        "default_icon": {"32": "icons/32.png"}
+    },
+    "background": {
+        "scripts": ["js/bg.js"],
+        "persistent": true
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/cnt.js"],
+        "run_at": "document_end"
+    }],
+    "permissions": ["http://*/*", "https://*/*", "tabs"]
+}

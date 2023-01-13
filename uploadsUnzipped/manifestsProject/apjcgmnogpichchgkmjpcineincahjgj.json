@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "PD-Redirect",
+    "version": "2",
+    "description": "Redirects you to/from Procurement Operations Desk",
+    "icons": {
+        "128": "ico/windows-4.png",
+        "64": "ico/windows-4.png",
+        "48": "ico/windows-4.png",
+        "32": "ico/windows-4.png",
+        "24": "ico/windows-4.png",
+        "16": "ico/windows-4.png"
+    },
+    "browser_action": {
+        "default_icon": "ico/windows-4.png"
+    },
+    "permissions": [
+        "activeTab",
+        "https://*.ariba.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "author": "Renars Rozitis"
+}

@@ -1,0 +1,37 @@
+{
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icon38.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "checkInstalled.js"
+            ],
+            "matches": [
+                "*://newtvworld.in/*",
+                "*://mylivetv.net/*"
+            ]
+        }
+    ],
+    "description": "Live Tv with Catch-Up",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "manifest_version": 2,
+    "name": "MyLiveTv.Net",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs"
+    ],
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "2.5"
+}

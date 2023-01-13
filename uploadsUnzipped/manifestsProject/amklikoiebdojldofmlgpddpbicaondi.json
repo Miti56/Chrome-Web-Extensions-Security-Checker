@@ -1,0 +1,73 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+   "name":"DwREC",
+   "short_name":"DwREC",
+   "author":"DirectWeb",
+   "version":"16.0",
+   "manifest_version":2,
+   "minimum_chrome_version":"49",
+   "description":"Grava sua apresentação envolvendo todo o escopo da sua tela + camera.",
+   "homepage_url":"https://dw360.com.br",
+   "background":{  
+      "scripts":[  
+         "background/background.common.js",
+         "background/background.js",
+         "background/background.desktopCapture.js",
+         "background/background.tabCapture.js",
+         "background/background.badgeText.js",
+         "background/background.getUserMedia.js",
+         "background/background.messaging.js",
+         "background/background.players.js",
+         "RecordRTC/MediaStreamRecorder.js",
+         "RecordRTC/MultiStreamRecorder.js",
+         "RecordRTC/StereoAudioRecorder.js",
+         "RecordRTC/DiskStorage.js"
+      ],
+      "persistent":false
+   },
+   "content_scripts":[  
+      {  
+        "matches":[  
+          "https://dwvideorec.com.br/*",
+		  "https://www.dwvideorec.com.br/*"
+        ],
+        "js":[  
+            "background/background.contentScript.js"
+        ],
+        "all_frames": true,
+        "run_at": "document_start"
+      }
+    ],
+   "browser_action":{  
+      "default_icon":"images/main-icon.png",
+      "default_title":"GRAVAR!",
+      "default_popup": "dropdown.html"
+   },
+   "icons":{  
+      "16":"images/main-icon.png",
+      "22":"images/main-icon.png",
+      "32":"images/main-icon.png",
+      "48":"images/main-icon.png",
+      "128":"images/main-icon.png"
+   },
+   "permissions":[  
+      "desktopCapture",
+      "storage",
+      "tabs",
+      "tabCapture",
+      "https://dwvideorec.com.br/*",
+      "https://www.dwvideorec.com.br/*",
+      "identity",
+      "https://www.googleapis.com/*"
+   ],
+   "web_accessible_resources": [
+    "test.png"
+  ],
+   "options_ui":{  
+      "page":"options.html",
+      "chrome_style":false,
+      "open_in_tab": true
+   }
+   
+}

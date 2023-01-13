@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Hot as Hades High and Low",
+	"description": "A new take on casino wars, with the same character from the popular online casino game series Hot as Hades Online Slot.",
+	"version": "1.9",
+	"manifest_version": 2,
+	"homepage_url": "www.thegamesfinder.com",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"storage",
+		"unlimitedStorage",
+         "https://www.google-analytics.com/"
+	],
+	"offline_enabled": false
+}

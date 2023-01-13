@@ -1,0 +1,29 @@
+{
+	"author": "Colin James",
+	"short_name": "Riverdale Themes",
+	"permissions": [
+		"storage",
+		"cookies",
+		"storage",
+		"<all_urls>"
+	],
+	"manifest_version": 2,
+	"version": "0.8.9",
+	"background": {
+		"scripts": ["main.js", "jquery.js"]
+	},
+	"default_locale": "en",
+	"chrome_url_overrides": {
+		"newtab": "main_page.html"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"name": "__MSG_locHead__",
+	"description": "Get 4K Backgrounds each time you open a new tab with this wonderful product that will change your chrome look forever!",
+	"browser_action": {
+		"default_icon": "128.jpg",
+		"default_title": "Riverdale Themes"
+	},
+	"icons": {
+		"128": "128.jpg"
+	}
+}

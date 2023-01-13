@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name":"Trailex",
+	"version": "1.0",
+	"description":"Trailex shows previews and trailers as you are deciding what you are going to get your binge on.",
+	"short_name":"Trailex",
+
+	"content_scripts":[
+		{
+			"matches":["http://www.netflix.com/*"],
+			"css":["styles.css"],
+			"js":["jquery.js","firebase.js","script.js"],
+			"run_at":"document_end"
+		}
+	],
+	"permissions":[
+		"tabs",
+		"activeTab",
+		"http://www.netflix.com/browse"
+	],
+	"background": {
+		"persistent":false,
+		"scripts":["empty.js"]
+	},
+	"page_action": {
+	}
+}

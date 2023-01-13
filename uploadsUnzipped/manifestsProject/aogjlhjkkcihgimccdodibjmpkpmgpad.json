@@ -1,0 +1,72 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Фейкогриз",
+    "short_name": "Фейкогриз",
+    "version": "0.0.12",
+
+    "description": "Попереджає про дезінформацію та збирає повідомлення про маніпулятивні матеріали на інформаційних сайтах",
+
+    "icons": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+
+    "permissions": [
+        "cookies",
+        "*://fgz.texty.org/*",
+        "webRequest",
+        "tabs"
+    ],
+
+    "web_accessible_resources": [
+        "icons/texty_logo.svg", "icons/telegram.svg",
+        "icons/messenger.svg", "icons/fakecrunch_logo.svg",
+        "fonts/*", "css/*", "icons/fakecrunch_logo_black.svg", "libs/*"
+    ],
+
+    "background": {
+        "scripts": ["libs/jquery-3.4.1.min.js", "back.js"],
+        "persistent": true
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*", "https://*/*"
+            ],
+            "exclude_matches": [
+                "*://aval.ua/*",
+                "*://privat24.ua/*",
+                "*://privatbank.ua/*",
+                "*://google.com/",
+                "*://facebook.com/*",
+                "*://youtube.com/*",
+                "*://olx.ua/*",
+                "*://google.com.ua/*",
+                "*://ukr.net/*",
+                "*://instagram.com/*",
+                "*://rozetka.com.ua/*",
+                "*://wikipedia.org/*",
+                "*://pornhub.com/*"
+            ],
+            "js": [
+                "libs/jquery-3.4.1.min.js",
+                "libs/popper.min.js",
+                "libs/tippy-bundle.iife.min.js",
+                "main.js"
+            ],
+            "css": [
+                "css/main.css"
+            ]
+        }
+    ],
+
+    "browser_action": {
+        "browser_style": true,
+        "default_popup": "popup/nomatch.html"
+    }
+
+}

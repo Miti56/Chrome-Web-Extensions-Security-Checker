@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "AmericanSearches",
+  "name": "AmericanSearches",
+  "version": "1.1",
+  "manifest_version": 2,
+  "background": {
+    "page": "app/background.html"
+  },
+  "icons": {
+    "128": "icon.png",
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "css": [
+        "app/main.css"
+      ],
+      "js": [
+        "app/jquery.js",
+        "static/js/content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.google.com/search?custom_key=browse-bot&type=*"
+      ],
+      "css": [
+        "app/main.css"
+      ],
+      "js": [
+        "app/jquery.js",
+        "app/content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "/static/css/content.css",
+    "/logo.png"
+  ],
+  "content_security_policy": "script-src 'self' https://raw.githubusercontent.com/AmericanSearches/Whitelist/master/whitelist-sites.js; object-src 'self'",
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
+}

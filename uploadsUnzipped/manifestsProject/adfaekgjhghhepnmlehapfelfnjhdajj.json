@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "iNet RN Scanner",
+    "version": "2.1",
+    "description": "This extension scan for a possible RN ticket number.",
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_title": "RN Scanner",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/rn-icon-16x16.png",
+        "48": "images/rn-icon-48x48.png",
+        "128": "images/rn-icon-128x128.png"
+    },
+    "permissions": [
+        "<all_urls>",
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": true
+    },
+    "options_page": "options.html",
+    "content_scripts": [{
+        "run_at": "document_end",
+        "matches": ["<all_urls>"],
+        "all_frames": false,
+        "css": ["css/style.css"],
+        "js": ["js/scan.class.js", "js/main.js"]
+    }]
+}

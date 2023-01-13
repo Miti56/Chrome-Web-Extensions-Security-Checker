@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+    "scripts": ["refresh.js"],
+    "persistent": false
+  },
+   "browser_action": {
+      "default_icon": "refresh-off.png",
+      "default_title": "Refresh",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [  ],
+      "js": [ "jquery-latest.pack.js", "jquery.dimensions.pack.js", "scrollTop.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Refreshes a page",
+   "name": "Chrome Refresh",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "background" ],
+   "version": "1.8",
+   "manifest_version": 2,
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

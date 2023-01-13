@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"Pixel G Mark",
+	"version":"1.0.2",
+
+"theme":{
+		"images":{
+		"theme_ntp_background": "images\/PixelGmark.png",
+		"theme_frame":"images\/theme_frame.png",
+		"theme_toolbar":"images\/theme_toolbar.png",
+		"theme_tab_background":"images\/theme_tab_background.png"},
+		
+
+      "colors": {
+         "bookmark_text": [ 232, 232, 232 ],
+         "button_background": [ 0, 0, 0 ],
+         "control_background": [ 0, 0, 0 ],
+         "frame": [ 0, 0, 0 ],
+         "frame_inactive": [ 71, 71, 71 ],
+         "frame_incognito": [ 0, 0, 0 ],
+         "frame_incognito_inactive": [ 71, 71, 71 ],
+         "ntp_background": [ 49, 33, 7 ],
+         "ntp_header": [ 0, 0, 0 ],
+         "ntp_link": [ 255, 255, 255 ],
+         "ntp_link_underline": [ 255, 255, 255 ],
+         "ntp_section": [ 74, 74, 74 ],
+         "ntp_section_link": [ 6, 55, 116 ],
+         "ntp_section_link_underline": [ 255, 255, 255 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 255, 255, 255 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 0, 0, 0 ]
+      },
+      
+		
+		"tints":{
+			"frame":                   [-1.0,-1.0,-1.0],
+			"frame_inactive":          [-1.0,-1.0,-1.0],
+			"frame_incognito":         [-1.0,-1.0,-1.0],
+			"frame_incognito_inactive":[-1.0,-1.0,-1.0],
+			"background_tab":          [-1.0,-1.0,-1.0],
+			"buttons":                 [ 0.0, 0.0, 1.0]
+		},
+		
+	      "properties": {
+			"ntp_background_alignment": "centor",
+			"ntp_logo_alternate":      1,
+			"ntp_background_repeat": "no-repeat"
+      }
+
+	}
+}

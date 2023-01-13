@@ -1,0 +1,23 @@
+{"manifest_version": 2, 
+
+"name": "__MSG_tit__", 
+
+"chrome_url_overrides": {"newtab": "newtab_page.html"}, 
+
+"description": "__MSG_addoninfo__", 
+
+"short_name":"Ant Man Wallpapers & New Tab", 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"icons": {"128": "128-img.png"}, 
+
+"version": "3.8.6", 
+
+"browser_action": {"default_icon": "128-img.png", 
+
+"default_title": "Ant Man Wallpapers & New Tab"}, 
+
+"background": {"scripts": ["my_script.js"]}, 
+
+"default_locale": "en"}

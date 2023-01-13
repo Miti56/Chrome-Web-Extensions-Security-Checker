@@ -1,0 +1,24 @@
+{
+	"version": "0.0.1",
+	"background": {
+		"scripts": [
+			"scripts/bg.js"
+		]
+	},
+	"default_locale": "en",
+	"manifest_version": 2,
+	"icons": {
+		"48": "images/icon-48.png",
+		"128": "images/umbrella-down-128.png"
+	},
+	"description": "__MSG_description__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"browser_action": {
+		"default_icon": "images/icon-48.png",
+		"default_popup": "home.html"
+	},
+	"name": "__MSG_name__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

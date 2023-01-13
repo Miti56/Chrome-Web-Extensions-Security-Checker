@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "CountyBounty",
+  "version": "0.0.0.1",
+  "description": "CountyBounty shows the length of each and every tweet in your Twitter feed.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "style.css"
+      ],
+      "js": [
+        "/node_modules/jquery/dist/jquery.min.js",
+        "/node_modules/mutation-summary/src/mutation-summary.js",
+        "/node_modules/twitter-text/twitter-text.js",
+        "content.js"
+      ],
+      "matches": [
+        "https://twitter.com/*"
+      ]
+    }
+  ]
+}

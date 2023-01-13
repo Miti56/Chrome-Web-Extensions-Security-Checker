@@ -1,0 +1,58 @@
+{
+   "author": "foamier",
+   "description": "A Dota 2 Silencer Theme for Google Chrome",
+   "manifest_version": 2,
+   "name": "Dota 2# Theme: Silencer",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "control_background": [ 0, 0, 0 ],
+		 
+         "frame": [ 0, 0, 0 ],
+         "frame_inactive": [ 102, 0, 0 ],
+         "frame_incognito": [ 102, 0, 0 ],
+         "frame_incognito_inactive": [ 102, 0, 0 ],
+		 
+         "ntp_background": [ 97, 0, 78 ],
+         "ntp_link": [ 0, 255, 0 ],
+         "ntp_link_underline": [ 0, 255, 0 ],
+         "ntp_section": [254, 222, 62],
+         "ntp_text": [ 97, 0, 78 ],
+		 "ntp_header":[ 97, 0, 78 ],
+		 "ntp_section_text": [ 97, 0, 78 ],
+		 "ntp_section_link": [ 97, 0, 78 ],
+		 
+         "tab_background_text": [ 255, 255, 255 ],
+         "tab_text": [254, 222, 62],
+		 
+         "toolbar": [ 97, 0, 78 ],
+		 "button_background": [254, 222, 62]
+      },
+      "icons": {
+         "128": "icons/silencer_icon.png"
+      },
+	  "tints": {
+         "buttons" : [0.050, 1.0, 0.62]
+      },
+      "images": {
+         "theme_frame": "images/silencer_frame.png",
+		 "theme_frame_incognito": "images/silencer_frame.png",
+		 
+         "theme_frame_inactive": "images/silencer_inactive.png",
+		 "theme_frame_incognito_inactive": "images/silencer_inactive.png",
+		 
+         "theme_ntp_background": "images/silencer_background.png",
+		 
+         "theme_tab_background": "images/silencer_active.png",
+		 "theme_tab_background_incognito": "images/silencer_active.png",
+		 
+         "theme_toolbar": "images/silencer_toolbar.png",
+         "theme_window_control_background": "images/silencer_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment" : "center"
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}

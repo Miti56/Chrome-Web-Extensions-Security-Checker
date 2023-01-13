@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Yarddiant",
+  "description": "Yarddiant is a web design & development company in India specializes in wordpress development services",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "logo.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}

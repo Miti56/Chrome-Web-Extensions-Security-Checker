@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "TabithaNaylor.com ROI Calculator",
+  "description": "This extension will load TabithaNaylor.com ROI Calculator",
+  "version": "1.1",
+  "author": "TabithaNaylor.com",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab",
+   "tabs"
+   ],
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "content_scripts": [{
+        "matches": ["*://tabithanaylor.com/Calculator/ROI/index.html/"],
+        "js": ["popup.js"]
+        }]
+}

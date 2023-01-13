@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "CDownload"
+   },
+   "background": {
+      "scripts": [
+         "scripts/background.js"
+      ],
+      "persistent": true
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "scripts/content.js" ],
+      "matches": [ "<all_urls>", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "CDownload your new superhero in downloading",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "32": "images/32.png",
+      "48": "images/48.png",
+      "64": "images/64.png"
+   },
+
+   "manifest_version": 2,
+   "name": "CDownload",
+   "permissions": [ "tabs", "activeTab", "*://*/*", "downloads", "downloads.open", "downloads.shelf", "storage", "notifications","<all_urls>", "webRequest", "webRequestBlocking" ],
+   "short_name": "CDownload",
+   "version": "1.0.3",
+   "web_accessible_resources": [ "images/*.png" ]
+}

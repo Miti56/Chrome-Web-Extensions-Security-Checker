@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hide YouTube watched videos",
+  "manifest_version": 2,
+  "version": "1.1",
+  "description": "Hide watched videos",
+  "permissions": ["background", "tabs"],
+  "icons": {"128": "icon.png"},
+  "page_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "background.js" ],
+    "matches": [ "http://*.youtube.com/*", "https://*.youtube.com/*"]
+  }]
+}

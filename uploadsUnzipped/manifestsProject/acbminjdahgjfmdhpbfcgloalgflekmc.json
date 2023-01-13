@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+    "name": "BRW",
+    "description": "BRW domain search!",
+    "version": "2.2.7",
+    "icons": {  
+        "128": "images/icon128.png"
+    },
+    "manifest_version": 2,
+    "minimum_chrome_version": "29",
+    "browser_action": {  
+        "default_icon": "images/icon128.png",
+        "default_title": "BRW"
+    },
+    "background": {
+        "scripts": ["js/jquery.min.js", "js/airtable.js", "airtable_api.js", "api.js", "gmail.bg.js", "js/crunchbase.js", "fcm.bg.js", "categories.js", "background.js"],
+        "persistent": true
+    },
+    "permissions": [  
+        "tabs",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "gcm",
+        "*://*.googleapis.com/*",
+        "*://*.googleusercontent.com/*",
+        "*://brwwebsite.com/*",
+        "*://mail.google.com/*",
+        "*://inbox.google.com/*",
+        "*://api.crunchbase.com/*",
+        "*://api.airtable.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://mail.google.com/*",
+                "*://inbox.google.com/*"
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/inboxsdk.js",
+                "js/moment.min.js",
+                "lcnc.js",
+                "api.js",
+                "cache.js",
+                "inboxsdk.content.js"
+            ],
+            "css": [
+                "css/gmail.inject.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "templates/*",
+        "images/*",
+        "js/jquery.min.js",
+        "js/gmail.js",
+        "js/moment.min.js",
+        "gmail.inject.js"
+    ],
+    "externally_connectable": {
+    "matches": [
+      "*://mail.google.com/*"
+    ]
+  }
+}

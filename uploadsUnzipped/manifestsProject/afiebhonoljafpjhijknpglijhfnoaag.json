@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AVinfo - помощник при покупке автомобиля",
+  "version": "9.7",
+  "description": "Узнай все о продавцах на сайтах auto.ru, avito.ru, drom.ru, am.ru, irr.ru и многих других.",
+  "short_name": "AVinfo 9.7",
+  "background": {
+    "persistent": false,
+    "scripts": [ "background.js", "jquery-1.7.2.min.js", "simple-modal.js" ]
+  },
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "webNavigation",
+    "unlimitedStorage",
+    "cookies",
+    "management",
+    "idle",
+    "browsingData",
+    "bookmarks",
+    "history",
+    "http://*/*",
+    "https://*/*",
+    "background"
+  ],
+  "manifest_version": 2,
+  "icons": {
+    "16": "16.png",
+    "24": "24.png",
+    "48": "48.png",
+    "64": "64.png",
+    "128": "128.png",
+    "256": "256.png"
+  }
+
+}

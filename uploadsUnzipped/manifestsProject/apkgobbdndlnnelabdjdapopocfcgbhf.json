@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.3.0",
+  "name": "Stacker",
+  "manifest_version": 2,
+  "description": "Stacked pull requests for Github",
+  "content_scripts": [{
+    "js": ["static/js/main.a0186027.js"],
+    "matches": ["*://*/*"]
+  }],
+  "browser_action": {
+    "default_title": "Stacker",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["*://*/*", "storage"],
+  "content_security_policy": "default-src 'self'; script-src 'self'; style-src * 'unsafe-inline'; connect-src *; img-src 'self' data:;"
+}
+

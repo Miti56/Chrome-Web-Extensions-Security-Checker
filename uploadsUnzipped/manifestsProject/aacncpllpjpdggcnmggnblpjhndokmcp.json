@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "博尔证券量化交易系统",
+    "description": "了不起的博尔量化交易系统，一切，重新开始。我们希望所有的投资者都能够体验到量化交易、从价格的概率量化到资金的动能量化，一切变得前所未有的简单，您只需片刻即可掌握。",
+    "version": "4.1.1",
+    "icons": {
+        "128": "logo(128px).png"
+    },
+    "app": {
+        "urls": [
+            "http://t4.bullcome.com/"
+        ],
+        "launch": {
+            "web_url": "http://t4.bullcome.com/"
+        }
+    },
+    "permissions": [
+        "unlimitedStorage",
+        "notifications"
+    ]
+}

@@ -1,0 +1,29 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "大文豪",
+  "description": "自媒体分发插件",
+  "version": "1.7",
+
+  "icons": { 
+    "128": "img/icon.png" 
+  },
+  "permissions": ["*://*/*","declarativeContent","tabs", "unlimitedStorage", "management"],
+  
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": [ "js/content.js"]
+    }
+  ],
+
+  "permissions": ["*://*/*","tabs","storage","activeTab"]
+}

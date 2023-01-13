@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Agenda2.0 - Ricerca documenti",
+  "version": "1.2",
+  "manifest_version": 2,
+  "description": "Agenda2.0 - Ricerca documenti",
+    "browser_action": {
+      "default_icon": "Ricerca.png",
+      "default_popup": "popup.html"
+    },
+  "short_name": "Agenda2.0_R",
+  "permissions": ["downloads","tabs", "<all_urls>","http://*/*","https://*/*","fileSystem"]
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Coupon and Deal Finder",
+    "description": "Find Coupons and Deals when you are surfing the web",
+    "version": "2",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_icon": {
+            "19": "deal.png",
+            "38": "deal.png"
+        },
+        "default_title": "New Deals found",
+        "default_popup": "deal.html"
+    },
+    "permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*"
+    ],
+	"content_scripts": [
+    {
+	  "run_at" : "document_end",
+      "matches": ["http://*/*","https://*/*"],
+        "js": ["content.js","jquery-1.8.2.min.js"]
+    }
+  ]
+    
+}

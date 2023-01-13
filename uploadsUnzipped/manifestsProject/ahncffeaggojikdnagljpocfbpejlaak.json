@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "undertale-scripts/undertale.js" ]
+   },
+   "browser_action": {
+      "default_icon": "image/undertale-48.png",
+      "default_popup": "default.html"
+   },
+   "description": "__MSG_description__",
+   "default_locale": "en",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.13.6"
+}

@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Hörby Yrkesgymnasium menu",
+	"version": "1.0.1",
+	"description": "Hörby Yrkesgymnasium menu - Gør det let at navigere rundt.",
+	"icons":	{	"48": "logo48.png",
+							"128": "logo128.png"	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_icon": "logo19.png"
+	},
+	"web_accessible_resources": ["logo19.png"],
+	"permissions": ["*://edulife.hyg.se/"],
+	"content_scripts": [
+		{
+			"matches": [
+			  "*://sites.google.com/a/hyg.se",
+			  "*://sites.google.com/a/hyg.se/*",
+				"https://plus.google.com/up/accounts/upgrade",
+				"https://plus.google.com/up/accounts/upgrade/*",
+				"https://groups.google.com/*",
+				"https://plus.google.com/u/*",
+				"https://mail.google.com/*",
+				"https://drive.google.com/*",
+				"https://calendar.google.com/",
+				"https://calendar.google.com/*",
+				"https://docs.google.com/*",
+				"https://maps.google.se/",
+				"https://maps.google.se/*",
+				"*://translate.google.com/",
+				"*://translate.google.com/*",
+			  "*://www.ordbogen.com/",
+			  "*://www.google.se/",
+			  "*://www.google.se/*",
+			  "*://www.google.com/",
+			  "*://www.google.com/*",
+			  "*://plus.google.com/",
+			  "*://plus.google.com/*"
+			],
+			"css": ["style.css"],
+			"js": ["content_script.js"],
+			"run_at": "document_start"
+		}
+	]
+}

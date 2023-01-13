@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"Thesearchmonkey",
+
+"version":"1.1.1",
+
+"description":"Install The Search Monkey Browser! - Open your new tab and see a beautiful new background, get the latest news update.",
+
+"browser_action": {
+ 		"default_icon": "monkey-logo.png",
+ 		"default_popup": "popup.html"
+ 	},
+
+"icons": {"128": "monkey-logo.png"},
+
+"homepage_url":"https://thesearchmonkey.com",
+
+"manifest_version":2,
+
+"permissions":["activeTab"],
+
+"content_security_policy": "script-src 'self' https://favicongrabber.com/api/grab/* https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js; object-src 'self'",
+
+
+"chrome_url_overrides":{"newtab":"search.html"},
+"background":{
+              "scripts":["background.js"]
+             }
+
+}

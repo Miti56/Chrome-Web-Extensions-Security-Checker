@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "GoTalents",
+  "description": "One click to all creative talents, projects and learning curated for you",
+  "version": "0.1",
+  "icons": { "16": "got-16.png",
+           "48": "got-48.png",
+          "128": "got-128.png" },
+  "homepage_url": "https://www.gotalents.net",
+  "browser_action": {
+    "default_title": "GoTalents | My Creative Platform"
+
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs"
+  ]
+
+}

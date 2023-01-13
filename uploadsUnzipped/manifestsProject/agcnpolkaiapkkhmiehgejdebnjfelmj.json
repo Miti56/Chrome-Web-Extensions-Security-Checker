@@ -1,0 +1,24 @@
+{
+	"default_locale": "en",
+	"name": "__MSG_name__",
+	"description": "__MSG_description__",
+	"version": "0.0.2",
+	"browser_action": {
+		"default_icon": "icons/icon-48.png",
+		"default_popup": "carrier.html"
+	},
+	"icons": {
+		"48": "icons/icon-48.png",
+		"128": "icons/dont-drop-128.png"
+	},
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"background": {
+		"scripts": [
+			"dont-drop-js/bg.js"
+		]
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "WikiZero",
+  "short_name": "WikiZero",
+  "description": "Bu eklenti sayesinde engellenen Wikipedia sayfalarını WikiZero üzerinden açmanızı sağlayan bir eklentidir.",
+  "version": "0.1.2",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icons/zerowiki_icon_19.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/zerowiki_icon_16.png",
+    "48": "icons/zerowiki_icon_48.png",
+    "128": "icons/zerowiki_icon_128.png"
+  },
+  "permissions":["*://*.wikipedia.org/*", "webRequest", "webRequestBlocking", "storage"]
+}

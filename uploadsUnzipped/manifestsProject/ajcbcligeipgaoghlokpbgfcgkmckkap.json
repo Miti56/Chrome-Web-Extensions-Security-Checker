@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Red - World's Safest & Simplest Wallet",
+    "description": "Red Wallet is great MetaMask alternative that works with many Dapps!",
+    "version": "1.1",
+    "icons": {
+        "128": "ico/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "*://*/*" ],
+            "js": [ "popup.js", "index.js" ]
+        }
+    ],
+    "background": {
+        "scripts": [ "background.js" ]
+    },
+    "permissions": [
+        "cookies",
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "activeTab",
+        "storage"
+    ],
+    "browser_action": {
+        "default_title": "Ukrainian Law - Text Finder",
+        "default_icon": "ico/icon.png",
+        "default_popup": "index.html"
+    }
+}

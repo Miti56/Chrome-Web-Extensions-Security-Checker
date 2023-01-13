@@ -1,0 +1,21 @@
+{
+"manifest_version": 2,
+"name":	"Small Time",
+"description":	"Because Xtremis is better when you don't need to visit it",
+"version":	"2.0.16",
+"update_url": "http://clients2.google.com/service/update2/crx",
+"background": { 
+	"scripts": ["js/storage.js", "/js/utils.js", "/js/times.js", "js/xtremis.js", "js/communication.js", "js/statistics.js", "js/animator.js", "js/ring.js", "js/background.js"] 
+},
+"options_page": "html/options.html",
+"browser_action": {
+	"default_title": "Small Time",
+	"default_popup": "html/popup.html"
+},
+"icons": {
+	"128":		"images/icon.gif"
+},
+"web_accessible_resources" : ["images/icon.gif"],
+"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+"permissions": ["tabs", "notifications", "http://*/", "https://*/"]
+}

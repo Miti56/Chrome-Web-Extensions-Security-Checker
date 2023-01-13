@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name":"EuroShare",
+    "version":"0.67",
+    "manifest_version":2,
+	"offline_enabled": true,
+	"short_name": "EuroShare",
+    "description": "EuroShare is File Hosting",
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "permissions":[
+        "https://www.imdb.com/title/*",
+        "https://www.csfd.cz/film/*",
+		"https://euroshare.eu/"
+        ],
+    "icons":{
+        "16":"images/icon_16.png",
+        "128":"images/icon_128.png"
+    },
+	"web_accessible_resources": ["sweetalert2.all.min.js"]
+}

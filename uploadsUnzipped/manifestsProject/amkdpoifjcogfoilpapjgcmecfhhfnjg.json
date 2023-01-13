@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Baby Bulldozer",
+  "version": "0.3",
+  "content_scripts": [
+    {
+      "matches": [
+		"<all_urls>"
+      ],
+      "js": ["bbybulldozer.js"]
+    }
+  ]
+}

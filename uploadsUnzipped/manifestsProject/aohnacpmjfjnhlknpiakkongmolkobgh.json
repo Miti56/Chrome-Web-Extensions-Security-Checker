@@ -1,0 +1,24 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"version": "1",
+"name": "barca",
+"theme":
+{
+	"images":
+	{
+		"theme_toolbar": "images/toolbar.png",		"theme_ntp_background": "images/ntp_background.png",		"theme_button_background": "images/button.png"
+	},
+	"colors":
+	{
+		"frame": [233 , 233 , 233],		"frame_inactive": [143 , 143 , 143],		"frame_incognito": [65 , 65 , 65],		"frame_incognito_inactive": [36 , 36 , 36],		"toolbar": [233 , 233 , 233],		"control_background": [233 , 233 , 233],		"ntp_background": [233 , 233 , 233],		"ntp_section": [233 , 233 , 233],		"ntp_header": [233 , 233 , 233],		"tab_text": [233 , 233 , 233],		"tab_background_text": [65 , 65 , 65],		"bookmark_text": [65 , 65 , 65],		"ntp_link": [65 , 65 , 65],		"ntp_link_underline": [65 , 65 , 65],		"ntp_text": [65 , 65 , 65],		"ntp_section_link": [65 , 65 , 65],		"ntp_section_link_underline": [65 , 65 , 65],		"ntp_section_text": [65 , 65 , 65],		"button_background": [0,0,0,0]
+	},
+	"tints":
+	{
+		"buttons": [0.000000 , 0.000000 , 0.917647],		"frame": [0.000000 , 0.000000 , 0.917647],		"frame_inactive": [0.000000 , 0.000000 , 0.917647],		"frame_incognito": [0.000000 , 0.000000 , 0.917647],		"frame_incognito_inactive": [0.000000 , 0.000000 , 0.917647],		"background_tab": [0.000000 , 0.000000 , 0.917647],		"background": [0.10, 0.50, 0.70]
+	},
+	"properties":
+	{
+		"ntp_background_alignment": "top center",		"ntp_background_repeat": "repeat",		"ntp_logo_alternate": 0
+	}
+}
+}

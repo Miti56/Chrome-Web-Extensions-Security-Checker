@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GaneshaSpeaks.com",
+  "description": "GaneshaSpeaks.com",
+  "version": "1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "ganeshaspeakslogo.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.ganeshaspeaks.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.ganeshaspeaks.com/"
+    }
+  }
+}

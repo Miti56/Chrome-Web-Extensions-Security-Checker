@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches" : ["*://*/*"],
+      "run_at": "document_idle"
+   } ],
+   "description": "highlight imagemaps and their active areas",
+   "icons": {
+      "38": "icon_38.png",
+      "64": "icon_64.png"
+   },
+   "manifest_version": 2,
+   "name": "image mapper",
+   "page_action": {
+      "default_icon": "icon_64.png",
+      "default_title": "image mapper"
+   },
+   "permissions": [ "tabs", "*://*/*" ],
+   "version": "0.0.4"
+}

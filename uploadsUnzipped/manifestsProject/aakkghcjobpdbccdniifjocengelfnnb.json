@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "memo",
+  "description": "google memo extensions",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "memo_extensions.png",
+    "default_title": "小型记事本"
+  },
+  "background": {
+    "scripts": ["js/store.js","js/background.js"],
+    "persistent": true
+  }
+}

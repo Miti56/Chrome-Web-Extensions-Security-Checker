@@ -1,0 +1,41 @@
+{
+	"chrome_settings_overrides": {
+		"homepage": "http://funsearchbox.com",
+		"search_provider": {
+			"name": "Fun Search Box",
+			"search_url": "http://funsearchbox.com/search/{searchTerms}",
+			"suggest_url": "http://funsearchbox.com/suggest/{searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://funsearchbox.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"version": "1.4.22",
+	"chrome_url_overrides": {
+		"newtab": "home.html"
+	},
+	"background": {
+		"scripts": [
+			"js/bg.js"
+		]
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"optional_permissions": [
+		"management"
+	],
+	"manifest_version": 2,
+	"description": "__MSG_description__",
+	"browser_action": {
+		"default_title": "Ferrari Gtc4Lusso"
+	},
+	"default_locale": "en",
+	"icons": {
+		"48": "icn/icon-small.png",
+		"128": "icn/icon-big.png"
+	},
+	"name": "__MSG_name__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

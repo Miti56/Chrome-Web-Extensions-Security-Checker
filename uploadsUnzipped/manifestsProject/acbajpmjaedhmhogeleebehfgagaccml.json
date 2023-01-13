@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Street Fighter 2 Turbo - Super Nintendo SNES",
+  "version": "1.0.1",
+  "description": "Street Fighter II Turbo - Hyper Fighting is the best arcade game for Super Nintendo 🕹 PLAY it now in your browser!",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "homepage_url": "https://myemulator.online/snes/street-fighter-2-turbo",
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Street Fighter 2 Turbo"
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  }
+}

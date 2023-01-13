@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_name__",
+	"description": "__MSG_description__",
+	"version": "2.0.0",
+	"manifest_version": 2,
+
+
+	"default_locale": "ru",
+	"icons": { 
+		"24": "ico_ya_24.png", 
+		"128": "ico_ya_128-96.png" 
+	},
+	"app": {
+		"launch": {
+			"web_url": "http://yandex.ru/?clid=2071740"
+		}
+	},
+	"permissions": [
+		"geolocation", 
+		"notifications", 
+		"unlimitedStorage",
+		"background"
+	]
+}

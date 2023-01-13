@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   
+   "name": "CrackBerry.com",
+   "description": "The #1 BlackBerry extension on Chrome.",
+   "version": "0.8",
+   "permissions": [ "tabs", "http://www.crackberry.com/*", "http://forums.crackberry.com/*", "http://www.google.com/*" ],
+   "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+   "icons": {
+      "128": "img/CB-128x128.png",
+      "48": "img/CB-48x48.png",
+      "16": "img/CB-16x16.png"
+   },
+   
+   "browser_action": {
+      "default_icon": "img/CB-48x48.png",
+      "default_popup": "popup.html"
+   }   
+}

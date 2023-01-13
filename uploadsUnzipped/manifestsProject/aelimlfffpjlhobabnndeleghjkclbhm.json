@@ -1,0 +1,41 @@
+{
+	"description": "__MSG_description__",
+	"chrome_settings_overrides": {
+		"homepage": "http://svgsearch.com",
+		"search_provider": {
+			"name": "Loadz",
+			"search_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"suggest_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://svgsearch.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"version": "3.1.19",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"chrome_url_overrides": {
+		"newtab": "batch.html"
+	},
+	"browser_action": {
+		"default_title": "Far Cry 4"
+	},
+	"name": "__MSG_name__",
+	"manifest_version": 2,
+	"background": {
+		"scripts": [
+			"far-cry-4-js/background.js"
+		]
+	},
+	"optional_permissions": [
+		"management"
+	],
+	"icons": {
+		"48": "far-cry-4-icons/icon-small.png",
+		"128": "far-cry-4-icons/icon-big.png"
+	},
+	"default_locale": "en",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

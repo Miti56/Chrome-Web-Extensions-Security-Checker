@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "UUID Generator",
+  "description": "This will generate UUID's that are lowercase without the hypens",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "identity",
+    "identity.email"
+  ],
+  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+}

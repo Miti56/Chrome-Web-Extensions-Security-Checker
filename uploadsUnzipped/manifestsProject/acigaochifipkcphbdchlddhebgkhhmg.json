@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "The official AC MILAN HOMEPAGE",
+  "description":"This extension sets your search engine and new tab to AC Milan page with the official photos, videos, links, updates and more",
+  "version": "2.4",
+  "manifest_version": 2,
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "acmilan.html"
+  },
+  "background":{
+	  "scripts": ["background.js"],
+	  "persistent": false
+  },
+  "permissions": [
+          "storage"
+        ],
+  "optional_permissions": [ "management" ],
+  "browser_action": {
+      "default_title": "ACMilan Home page.",
+      "default_icon": "img/logo.png"
+  },
+  "icons": { 
+  		"16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+  },
+	"chrome_settings_overrides": {
+	"homepage": "http://www.ac-milan-start.com",
+	"search_provider": {
+	    "name": "ACMilan Home page",
+	    "keyword": "ACMilan",
+	    "search_url": "http://www.ac-milan-start.com/?affID=970801318&babsrc=SP_&q={searchTerms}",
+	    "favicon_url": "http://www.ac-milan-start.com/demo/img/acmilan.ico",
+	    "suggest_url": "http://www.ac-milan-start.com/suggest?q={searchTerms}",
+	    "instant_url": "http://www.ac-milan-start.com/instant?q={searchTerms}",
+	    "image_url": "http://www.ac-milan-start.com/img?q={searchTerms}",
+	    "alternate_urls": [
+	      "http://www.ac-milan-start.com/?q={searchTerms}&affID=970801318&babsrc=SP_&tsp=5500",
+	      "http://www.ac-milan-start.com/?q={searchTerms}",
+	      "http://www.ac-milan-start.com/?q=keyword&affID=970801318&babsrc=SP_&tsp=5500"
+	    ],
+	    "encoding": "UTF-8",
+	    "is_default": true
+	},
+	"startup_pages": ["http://www.ac-milan-start.com"]
+	   }
+}

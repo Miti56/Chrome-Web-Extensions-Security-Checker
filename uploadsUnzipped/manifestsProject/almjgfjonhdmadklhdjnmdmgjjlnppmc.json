@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Duisburg New Tab",
+  "version": "0.3.167",
+  "description": "Jeden Tag Gutes tun mit der Duisburg New Tab!\nWerde Teil einer Bewegung, die die Welt positiv verändert.",
+  "icons": {
+    "16": "icons/icon-16px.png",
+    "32": "icons/icon-32px.png",
+    "48": "icons/icon-96px.png",
+    "128": "icons/icon-256px.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "startpage.html#newTab"
+  },
+  "browser_action": {
+    "default_title": "New Tab"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "topSites",
+    "history",
+    "bookmarks",
+    "chrome://favicon/"
+  ],
+  "optional_permissions": [],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

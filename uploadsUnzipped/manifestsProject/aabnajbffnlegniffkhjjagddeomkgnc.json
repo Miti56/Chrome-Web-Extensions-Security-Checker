@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "uWhisp",
+  "description": "Create and listen your custom radio, rec your own voice messages and share it on Twitter and Facebook",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://play.uwhisp.com/",
+      "https://play.uwhisp.com/new-whisp"
+    ],
+    "launch": {
+      "web_url": "https://play.uwhisp.com/"
+    }
+  }
+}

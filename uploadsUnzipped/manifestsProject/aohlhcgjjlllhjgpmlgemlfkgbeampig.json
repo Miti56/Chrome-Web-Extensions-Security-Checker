@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	
+	"name": "Domain Blacklist",
+	"version": "1.4",
+	"description": "Closes tabs that are on the following list of domains.",
+
+	"icons": {	"48": "icon48.png",
+				"128": "icon128.png"
+	},
+	"browser_action": {
+		"default_icon": "icon128.png",
+		"default_title": "Domain Blacklist",
+		"default_popup": "extension.html"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": [
+				"http://instantprivacyalert.com/*",
+				"http://zx1.november-lax.com/*",
+				"http://www.sportsmansguide.com/*",
+				"http://www.stack.com/*",
+				"http://go.bistroapi.com/*",
+				"http://www.adsupplyads.com/*",
+				"http://www.joo2ieb.bid/*",
+				"http://pipsol.net/*",
+				"http://www.isanalyze.com/*"
+		
+			],
+			"js": ["content.js", "jquery-3.0.0.min.js"]
+		}
+	],
+	
+	"background": {
+		"scripts": ["background.js", "jquery-3.0.0.min.js"]
+	},
+	 "permissions": [
+      "https://www.youtube.com/feed/subscriptions"
+  ]
+}

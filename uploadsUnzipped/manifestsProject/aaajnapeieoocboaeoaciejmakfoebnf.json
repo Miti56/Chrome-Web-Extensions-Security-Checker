@@ -1,0 +1,24 @@
+{
+	"name": "__MSG_name__",
+	"version": "4.7.0",
+	"browser_action": {
+		"default_icon": "monster-trucks-memory-icons/icon-48.png",
+		"default_popup": "batch.html"
+	},
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"manifest_version": 2,
+	"background": {
+		"scripts": [
+			"js/monster-trucks-memory.js"
+		]
+	},
+	"icons": {
+		"48": "monster-trucks-memory-icons/icon-48.png",
+		"128": "monster-trucks-memory-icons/monster-trucks-memory-128.png"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

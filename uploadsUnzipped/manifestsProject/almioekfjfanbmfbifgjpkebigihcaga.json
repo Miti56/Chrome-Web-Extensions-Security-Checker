@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.png","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.png","theme_frame_overlay":"images\/theme_frame_overlay.png"},"colors":{"frame":[190,168,119],"toolbar":[241,239,224],"tab_text":[0,0,0],"tab_background_text":[64,64,64],"bookmark_text":[14,84,52],"ntp_background":[255,255,255],"ntp_text":[17,6,33],"button_background":[218,217,255,0]},"tints":{"buttons":[0.11,0.68,0.3]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}},"name":"molang","version":"1","description":""}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	 "author": "http://splixplus.io",
+	 "background": {
+			"scripts": [ "background.js" ]
+	 },
+	 "content_scripts": [ {
+	        "matches": ["*://splix.io/", "*://splix.io/?*"],
+			"js": [ "inject.js" ],
+			"run_at": "document_start"
+	 } ],
+	 "browser_action": {
+			"default_title": "SplixPlus",
+			"default_icon": "img/btn/icon128.png",
+			"default_popup": "popup.html"
+	 },
+	 "description": "The Worlds Best Splix.io Mod; Zoom, Find Friends, Better Minimap! And More!",
+	 "icons": {
+			"128": "img/icon128.png",
+			"16": "img/icon16.png"
+	 },
+	 "manifest_version": 2,
+	 "name": "SplixPlus - Find Friends, Zoom, Minimap",
+	 "permissions": [ "webRequest", "*://splix.io/", "*://splix.io/?*", "tabs", "storage" ],
+	 "short_name": "S+",
+	 "version": "6.3",
+	 "web_accessible_resources": ["bootstrap.min.css", "jquery-1.12.3.min.js", "script.js"]
+}

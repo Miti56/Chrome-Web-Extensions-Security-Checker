@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "WebMakeup",
+  "description": "...",
+  "version": "0.2.7",
+  
+   
+  "permissions": [
+  	 "webRequest", "webRequestBlocking",
+     "contextMenus",
+     "storage", 	 
+     "unlimitedStorage", 
+     "tabs", "http://*/*", "https://*/*","*://*/*", 
+     "<all_urls>"
+  ],
+   
+  "background": {
+     "page": "background.html"
+   },
+     
+   "browser_action": {
+     "default_icon": "paletteTxiki.png",
+     "default_popup": "parts/popup.html"
+  },
+  
+  "web_accessible_resources": [
+    "js/*",
+    "parts/*",
+    "images/*",
+    "generationLibraries/*",    
+    "visualevent/*"   
+   ]
+}

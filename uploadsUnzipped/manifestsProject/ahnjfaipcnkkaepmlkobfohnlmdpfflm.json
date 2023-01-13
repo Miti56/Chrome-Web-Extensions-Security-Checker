@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "AccuRadio",
+  "description": "AccuRadio is a free personalizable Internet radio service, featuring more than 600 hand-crafted music radio stations!",
+  "version": "2.33",
+  "manifest_version": 2,
+  "app": {
+    "urls": [],
+    "launch": {
+      "web_url": "http://www.accuradio.com"
+    }
+  },
+  "icons": {
+    "16": "accuradio16.png",
+    "48": "accuradio48.png",
+    "128": "accuradio128.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "COMPUTTA (Bitcoin & Crypto Mining)",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Turn Your Computer into a 24X7 Money Generator with the Bitcoin & Cryptocurrency Smart Mining Software App. Runs on 100% Autopilot.",
+	"permissions": ["gcm", "storage", "notifications", "identity"],
+	"background": {
+  "persistent": false,
+  "scripts": ["OneSignal.js", "background.js"]
+},
+	"browser_action": {
+		"default_icon": "Chrome Ext Logo-Miner.png",
+		"default_title": "Turn Your Computer into a 24X7 Money Generator with the Bitcoin & Cryptocurrency Smart Mining Software App. Runs on 100% Autopilot.",
+		"default_popup": "extension.html"
+	},
+	"content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+	"icons": {
+		"128": "Chrome Ext Logo-Miner.png"
+	}
+}

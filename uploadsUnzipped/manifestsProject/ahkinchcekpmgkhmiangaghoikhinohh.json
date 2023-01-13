@@ -1,0 +1,65 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Creative HQ-New Zealand's Innovation Experts",
+  "description": "This extension allows the user to take useful actions.",
+  "version": "0.0.0.1",
+  "author":"Arindam Bhakta, arindambhakta@gmail.com",
+  "homepage_url": "https://creativehq.co.nz",
+
+
+  
+  "permissions": [
+  		"tabs",
+  		"activeTab",
+  		"notifications",
+  		"http://www.google.com/*",
+  		"https://script.google.com/",
+  		"https://script.google.com/*",
+  		"https://apis.google.com/*",
+  		"https://airtable.com/*",
+  		"https://airtable.com/api",  		
+  		"storage", 
+  		"alarms",
+  		"identity",
+  		"https://script.googleusercontent.com/macros/*",
+  		"https://script.googleusercontent.com/*",
+  		"https://accounts.google.com/*"
+  		
+  ],
+	
+	
+	
+	"background": {
+    "scripts": ["background.js"]
+   },
+  
+  
+  
+  
+  
+  "icons": {
+  		"16": "icons/icon16.png",           
+		"19": "icons/icon19.png",           
+      "32": "icons/icon32.png",
+      "64": "icons/icon64.png",
+  		"128":"icons/icon128.png",
+  		"256": "icons/icon256.png",
+  		"512": "icons/icon512.png",
+  		"1024": "icons/icon1024.png",
+  		"2028": "icons/icon2028.png"
+  }, 
+  
+  
+
+  "page_action": {
+  		"default_icon": "icons/icon128.png",
+  		"default_title": "Click to copy template."
+  }
+              
+        
+}
+
+

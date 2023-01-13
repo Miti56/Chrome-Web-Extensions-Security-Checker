@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon48.png",
+      "default_title": "Browser Compresor"
+   },
+   "content_scripts": [ {
+      "js": [ "main.js" ],
+	  "matches": [ "http://*/*", "https://*/*" ],
+      "run_at" : "document_idle", 
+      "all_frames" : false 
+
+   } ],
+   "description": "",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Browser Compresor",
+   "permissions": [ "tabs", "cookies", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "4.24",
+   "web_accessible_resources": [ "main.css", "compresor.html" ]
+}

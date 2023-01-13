@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Moto X3M 2 - Install Game",
+  "version": "2.0.0.12",
+  "manifest_version": 2,
+  "description": "Take a bike, strap on your helmet, surmount obstacles and beat the time on amazing off-road circuits!",
+  "homepage_url": "http://www.littlealchemyunblocked.net/moto-x3m-2/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Moto X3M 2",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://www.littlealchemyunblocked.net/moto-x3m-2/"
+  ]
+}

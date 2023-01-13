@@ -1,0 +1,4 @@
+{"default_locale": "en", "short_name":"Sailor Moon Backgrounds & New Tab", "version": "1.6.1", "update_url": "https://clients2.google.com/service/update2/crx", "manifest_version": 2, "chrome_url_overrides": {"newtab": "index.html"},
+ "description": "__MSG_des__", "name": "Sailor Moon Backgrounds & New Tab", "browser_action": {"default_icon": "128-logo.png", "default_title": "Sailor Moon Backgrounds & New Tab"},
+ "icons": {"128": "128-logo.png"},
+ "background": {"scripts": ["back_js.js"]}}

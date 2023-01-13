@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "ScrollSearch",
+  "description": "Endless scrolling for Google Search",
+  "version": "1.3.1",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/*",
+        "*://*.google.fr/*",
+        "*://*.google.co.uk/*",
+        "*://*.google.ca/*",
+        "*://*.google.es/*",
+        "*://*.google.de/*",
+        "*://*.google.it/*",
+        "*://*.google.gr/*",
+        "*://*.google.nl/*",
+        "*://*.google.pl/*"
+      ],
+      "js": ["jquery.js", "infinite.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+      "loading.gif",
+      "infinite.css"
+  ]
+}

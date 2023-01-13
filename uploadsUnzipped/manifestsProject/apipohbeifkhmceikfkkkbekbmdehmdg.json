@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "onPASSWORD One",
+  "version": "3",
+  "description": "Genera contraseñas realmente seguras y fáciles de recordar",
+  "api_console_project_id": "56736260962",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "128": "onpasswordone-favicon.png"
+    }
+  },
+  "icons": {
+    "128": "onpasswordone-favicon.png"
+  },
+  "manifest_version": 2
+}

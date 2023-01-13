@@ -1,0 +1,19 @@
+{
+   "app": {
+      "background": {
+         "page": "background.html"
+      }
+   },
+   "default_locale": "ru",
+   "description": "__MSG_description_ext__",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Gismeteo App",
+   "offline_enabled": true,
+   "permissions": [ "\u003Call_urls>", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.6"
+}

@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Auto Build",
+  "description": "Automate Everything !",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "images/icon.png",
+   "default_popup": "popup.html"
+  },
+  
+  "icons":  { "48": "images/icon.png" },
+  
+  "background": {
+    "scripts": ["js/controller.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+   "activeTab",
+   "tabs", 
+   "<all_urls>",
+   "storage"
+   ],
+   
+   "web_accessible_resources": [
+	"dialog.html",
+	"css/timesheet.css",
+	"js/timesheet.js",
+	"js/buildForge.js",
+	"js/util.js",
+	"js/jquery-1.11.2.min.js",
+	"js/fillTimesheet.js",
+	"js/fillTimesheetDone.js",
+	"attendanceDialog.html",
+	"js/attendance.js",
+	"css/attendance.css",
+	"js/goToAttendance.js",
+	"js/analyseAttendance.js"
+	]
+}

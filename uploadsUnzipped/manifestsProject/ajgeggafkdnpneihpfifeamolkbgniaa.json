@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "app": {
+      "launch": {
+         "web_url": "http://app.framebench.com/"
+      }
+   },
+   "description": "The new amazing way to share and discuss creative feedback",
+   "icons": {
+      "128": "128.png"
+   },
+   "manifest_version": 2,
+   "name": "Framebench",
+   "permissions": [ "unlimitedStorage", "notifications" ],
+   "version": "1.0.3"
+}

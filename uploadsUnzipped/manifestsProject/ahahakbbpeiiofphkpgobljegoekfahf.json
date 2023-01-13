@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "微软雅黑字体",
+	"version": "0.5.0",
+	
+	"short_name": "Yahei Font",
+	"description": "对所有网站使用微软雅黑字体渲染",
+	"author": "MikuFLK",
+	"content_scripts": [{
+		"css": ["font.css"],
+		"matches": ["http://*/*","https://*/*"]
+	}]
+}

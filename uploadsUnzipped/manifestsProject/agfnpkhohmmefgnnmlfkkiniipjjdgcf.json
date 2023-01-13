@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Unite",
+  "description": "Unite is the new addictive logic puzzle you brainiacs have been waiting for!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon128.png"
+  },
+  "app": {
+    "urls": [
+      "http://games.softgames.de/unite/?p=chromewebstore"
+    ],
+    "launch": {
+      "web_url": "http://games.softgames.de/unite/?p=chromewebstore"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "AVIA NG",
+    "version": "3.1",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "browser_action": { "default_icon": "icon_128.png" },
+    "permissions": ["tabs", "storage", "notifications"],   
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "minimum_chrome_version": "50"
+}

@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Sharo",
+  "author": "Nicholas O'Hara",
+  "version": "0.0.6",
+  "description": "",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/*",
+        "http://www.linkedin.com/*",
+        "https://login.seamless.ai/*",
+        "http://login.seamless.ai/*"
+      ],
+      "js": [
+        "app/content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "app/background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+  "permissions": [
+    "cookies",
+    "background",
+    "privacy",
+    "storage",
+    "tabs",
+    "activeTab",
+    "proxy",
+    "management"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "EuropaWorldParser",
+  "version": "2.1",
+  "description": "It parses the Europa World Website for you to use it faster!",
+  "permissions": [
+     "http://www.europaworld.com/"
+   ],
+   "icons": {
+    "16": "favicon.ico",
+    "128": "globe-128.png"
+  },
+  "app": {
+        "background": {
+            "scripts": [ "background.js" ]
+        }
+    }
+}

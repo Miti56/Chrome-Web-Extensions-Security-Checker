@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Norman Transcript paywall blocker",
+  "short_name": "Norman Transcript paywall blocker",
+  "description": "Get around the Norman Transcript paywall",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*.normantranscript.com/*"],
+      "css": ["style.css"]
+    }],
+
+  "manifest_version": 2
+}

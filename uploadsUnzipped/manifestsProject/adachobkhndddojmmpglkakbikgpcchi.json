@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+	"name": "365id Integrations - Demo (USB)",
+	"short_name": "365id - Demo",
+    "version": "0.0.0.2",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+        {
+          "matches": [
+            "*://*.365id.com/*"
+          ],
+		  "js": ["jquery-3.4.1.min.js", "content.js"],
+		  "css": ["content.css"],
+          "all_frames": true
+        }
+      ],
+      "browser_action": {
+        "default_title": "365id Integrations - Demo (USB)",
+        "default_icon": {
+          "16": "365id_16.png",
+          "32": "365id_32.png",
+          "48": "365id_48.png",
+          "128": "365id_128.png"
+        }
+      },
+      "icons": {
+        "16": "365id_16.png",
+        "32": "365id_32.png",
+        "48": "365id_48.png",
+        "128": "365id_128.png"
+      },
+      "permissions": [
+		"activeTab", "declarativeContent", "nativeMessaging"
+	  ],
+	  "web_accessible_resources": ["365id.png", "result1.png", "result2.png", "result3.png", "usb_off.png", "usb_on.png"]
+
+  }

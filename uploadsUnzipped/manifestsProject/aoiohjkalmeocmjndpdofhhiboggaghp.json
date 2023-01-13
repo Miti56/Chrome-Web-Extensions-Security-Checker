@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "__MSG_ExtName__",
+	"description": "__MSG_ExtDesc__",
+	"short_name": "Fansminer",
+	"default_locale": "en",
+	"version": "6.2.1",
+	"author": "fansminer.com",
+	"content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-bfWzfxE6viwRJzKroi9VJpG8JQm1iw3+o0Fc2fA3/jE=' https://www.paypal.com/ https://www.paypalobjects.com/ https://ssl.google-analytics.com/ https://www.google-analytics.com; object-src 'self'",
+	"permissions": [
+		"notifications",
+		"alarms",
+		"background",
+		"power",
+		"storage",
+		"tabs",
+		"cookies",
+		"identity",
+		"unlimitedStorage",
+		"webRequest",
+		"webRequestBlocking",
+		"*://*.instagram.com/"
+	],
+	"icons": {
+		"128": "./res/images/icon_128.png"
+	},
+	"web_accessible_resources": [
+		"res/*"
+	],
+	"browser_action": {
+		"default_title": "fansminer.com"
+	},
+	"background": {
+		"scripts": [
+			"main.js"
+		],
+		"persistent": true
+	}	
+}

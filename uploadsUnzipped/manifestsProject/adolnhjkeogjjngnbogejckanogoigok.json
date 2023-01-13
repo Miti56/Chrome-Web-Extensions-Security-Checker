@@ -1,0 +1,23 @@
+{"default_locale": "en", 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"manifest_version": 2, 
+
+"description": "__MSG_addinfo__", 
+
+"version_name":"extension number 35","short_name":"Overlord Wallpapers & New Tab", 
+
+"version": "3.0.4", 
+
+"icons": {"128": "128-icon.png"},
+
+ "background": {"scripts": ["bg_script.js"]},
+
+ "browser_action": {"default_icon": "128-icon.png", 
+
+"default_title": "Overlord Wallpapers & New Tab"},
+
+ "chrome_url_overrides": {"newtab": "index_page.html"},
+
+ "name": "Overlord Wallpapers & New Tab"}

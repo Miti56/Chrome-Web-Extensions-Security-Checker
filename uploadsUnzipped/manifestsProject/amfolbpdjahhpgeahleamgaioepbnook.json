@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Free Subway flash games online",
+  "description": "Subway sufers game, gta v, minecraft, candy crush saga, temple run, plants zombies",
+  "version": "1.8",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

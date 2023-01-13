@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "XmlToolBox",
+  "version": "8",
+  
+  "manifest_version": 2,
+  
+  "icons": {"128": "xmltoolboxicon.png"},
+  
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

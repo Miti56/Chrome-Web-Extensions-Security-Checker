@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "瞧窗外",
+  "description": "每一次打開新分頁都是一場冒險",
+  "version": "0.34",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "pm.htm"
+  },
+  "manifest_version": 2,
+  "permissions": ["http://api.500px.com/", "https://api.500px.com/","http://ppcdn.500px.org/","https://gp1.wac.edgecastcdn.net/"],
+  "web_accessible_resources": ["500px.js", "pm.htm", "jquery-2.0.3.min.js"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://stats.g.doubleclick.net https://ssl.google-analytics.com https://api.500px.com; object-src 'self'"
+}

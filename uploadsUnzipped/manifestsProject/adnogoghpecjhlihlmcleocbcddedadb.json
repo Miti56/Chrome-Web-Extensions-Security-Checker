@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Private Server Manager Extensions",
+  "version": "1.0",
+  
+  "description": "Launch Native Applications",
+  "icons": {
+    "48": "icon-48.png"
+  },
+  
+  "background": {
+	"page": "background.html"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["http://jobs.qs.oa.com/ps/*"],
+      "js": ["content.js"]
+    }
+  ],
+  
+  "permissions": [
+    "tabs",
+    "nativeMessaging",
+    "http://jobs.qs.oa.com/ps/*"
+  ]
+}

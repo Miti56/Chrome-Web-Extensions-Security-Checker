@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": " Honor Family and Culture",
+  "short_name": " Honor Family and Culture",
+ 	"version": "1.2",
+	"description": "Millions of African Americans and other members of the African diaspora ",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": " Honor Family and Culture"
+  },
+  "permissions": [ "management", "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

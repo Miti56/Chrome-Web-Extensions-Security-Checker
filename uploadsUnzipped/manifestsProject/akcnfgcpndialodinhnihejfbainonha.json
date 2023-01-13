@@ -1,0 +1,20 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.keogameszone.com/game/scooby-doo---ghost-in-the-cellar-7"
+      },
+      "urls": [ "http://www.keogameszone.com/game/scooby-doo---ghost-in-the-cellar-7" ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "128.png"	  
+   },
+
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "short_name": "Scooby Doo",
+   "permissions": [ "unlimitedStorage", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

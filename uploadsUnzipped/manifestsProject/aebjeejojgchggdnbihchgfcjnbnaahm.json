@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "BezahlScanner",
+  "version": "1.0.4",
+  "description": "Inserts payment data into transaction forms.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "3rdparty/jquery-2.1.4.min.js",
+        "3rdparty/jquery.csv-0.71.js",
+        "content.js"
+      ],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "right_arrow.png"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "identity",
+    "cookies",
+    "https://ssl.gstatic.com/",
+    "https://www.googleapis.com/",
+    "https://accounts.google.com/"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkWjCm/o3np9EqjDGiHKELxZvizIbxTN3HmFn+msIAOLlOgxwQvMJsM8Z3GQk6Ip1LfOyZo7Np6Bkqcb6ZeVWuxcKtbCyvI9DTyrUTQZ9/vjCi6FFN3/wOiRCxOXdPJtbSNuIS3bRQeCf7dHeAMpYgQtOtxIaAcELl4SRHvjzjsK02yZyFsuR7BsPLkPpSrwEihZxN1q+4AE/ty/F8Ty1xU97s2GRMq0xf3v2v6v0NRoFFcgr8/SzQMl6ZChPIizIbDTnyEzA3U4PLiJ/fLz96kGh90c7oqCJH1AUhQYa2amKhLNxgmI3uzFYQL84mzLLiMrL01ajV6Snk8hLJtwIXwIDAQAB",
+  "oauth2": {
+    "client_id": "534390396217-ms2tirs6bb98ro93759opq8r9h43ku93.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive"
+    ]
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

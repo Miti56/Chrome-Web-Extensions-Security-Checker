@@ -1,0 +1,20 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon48.png",
+      "default_title": "New Tab"
+   },
+
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "QxSearch configures your default search settings",
+   "icons": {
+      "128": "icons/icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "XQC",
+   "permissions": [ "storage", "unlimitedStorage", "tabs", "webRequest", "webRequestBlocking", "https://*.yahoo.com/*", "https://*.bing.com/*", "https://*.google.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.6"
+}

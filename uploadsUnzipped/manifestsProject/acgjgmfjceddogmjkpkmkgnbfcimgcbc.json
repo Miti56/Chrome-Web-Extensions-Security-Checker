@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"page": "background.html"
+	},
+	"content_scripts": [{
+		"all_frames": true,
+		"js": [ "content_pre.js" ],
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_start"
+	},{
+		"js": [ "content_post.js"],
+		"matches": [ "http://*/*","https://*/*" ],
+		"run_at": "document_end"
+	}],
+  "options_page": "popup.html",
+	"browser_action": {
+		"default_icon": "icons/main_128px.png",
+		"default_popup": "popup.html"
+	}, 
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com ; object-src 'self'",
+	"description": "无广告，还你干净上网体验!",
+	"icons": {
+		"48": "icons/main_48px.png",
+		"64": "icons/main_128px.png",
+		"128": "icons/main_64px.png"
+	},
+	"manifest_version": 2,
+	"name": "网页广告清除管家",
+	"permissions": ["http://*/*", "https://*/*","activeTab","notifications", "nativeMessaging", "tabs","webRequestBlocking","webRequest","cookies","management","storage","bookmarks","contextMenus","history","topSites"],
+	"version": "1.0.5"
+}

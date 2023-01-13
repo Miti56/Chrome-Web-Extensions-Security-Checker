@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "NotesManager",
+  "short_name": "NotesManager",
+  "description": "",
+  "version": "0.0.4",
+  "minimum_chrome_version": "38",
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+  "offline_enabled": true,
+  
+  "permissions": [
+  "storage",
+  "unlimitedStorage",
+  "power",
+  "clipboardWrite",
+    {"fileSystem": ["write", "retainEntries", "directory"]}
+    ],
+  
+  "app": {
+    "background": {
+      "scripts": ["js/noteslib/util.js","js/noteslib/DataManager.js","background.js"]
+    }
+     
+    
+  }
+}

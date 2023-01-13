@@ -1,0 +1,28 @@
+{
+   "author": "Nota inc.",
+   "background": {
+      "persistent": false,
+      "scripts": [ "main.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icons/128.png"
+      }
+   },
+   "default_locale": "en",
+   "description": "Grab any image on the web and share it instantly.",
+   "icons": {
+      "128": "icons/128.png"
+   },
+   "manifest_version": 2,
+   "name": "Gyazo",
+   "options_ui": {
+      "chrome_style": false,
+      "page": "option/options.html"
+   },
+   "permissions": [ "tabs","http://*/*","https://*/*","storage" ],
+   "short_name": "Gyazo",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.8.2",
+   "web_accessible_resources": [ "imgs/crop.svg", "imgs/cross.svg", "imgs/grid.svg", "imgs/selection.svg", "imgs/spinner.svg", "imgs/window-scroll.svg", "imgs/window.svg" ]
+}

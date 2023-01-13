@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_app_name__",
+  "version": "1.0.1",
+  "default_locale": "en",
+  "manifest_version": 2,
+  "description": "__MSG_app_descr__",
+  "short_name": "ThreePrice",
+  "icons": {
+    "128": "icons/128.png",
+    "64": "icons/64.png",
+    "32": "icons/32.png",
+    "16": "icons/16.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_end",
+      "js": [
+      	"scripts/config.js",
+      	"scripts/lib/jquery.js",
+      	"scripts/lib/react.js",
+      	"scripts/lib/react-dom.js",
+      	"scripts/lib/messages.js",
+      	"scripts/lib/analytics.js",
+        "scripts/toolbar.js",
+        "scripts/client.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "web_accessible_resources": [
+    "style/style.css",
+    "images/*"
+  ]
+}

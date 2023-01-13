@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"Spotitube",
+"description":"Open youtube music videos in spotify",
+"version":"1.0.0",
+"manifest_version":2,
+"content_scripts": [
+    {
+      "matches": ["http://youtube.com/watch?v=*","https://youtube.com/watch?v=*","http://www.youtube.com/watch?v=*","https://www.youtube.com/watch?v=*"],
+	  "css": ["basic.css"],
+      "js": ["spotify-web-api.js", "jquery-2.1.4.min.js", "jquery.simplemodal.js", "background.js"]
+    }
+  ],
+  "icons" : {
+    "16" : "19.png",
+    "48" : "48.png",
+    "128" : "128.png"
+  }
+}

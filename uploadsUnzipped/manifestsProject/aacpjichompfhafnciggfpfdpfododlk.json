@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Flowhub",
+  "description": "Peer-to-peer full-stack visual programming for your fingers",
+  "version": "0.15.0",
+  "app": {
+    "background": {
+      "scripts": ["app/background.js"]
+    }
+  },
+  "permissions": [
+    "https://flowhub-gate.herokuapp.com/",
+    "https://api.flowhub.io",
+    "https://api.github.com/",
+    "https://secure.gravatar.com/",
+    "storage",
+    "unlimitedStorage",
+    "serial",
+    "identity"
+  ],
+  "icons": {
+    "16": "app/flowhub-16.png",
+    "36": "app/flowhub-36.png",
+    "48": "app/flowhub-48.png",
+    "57": "app/flowhub-57.png",
+    "60": "app/flowhub-60.png",
+    "64": "app/flowhub-64.png",
+    "72": "app/flowhub-72.png",
+    "78": "app/flowhub-78.png",
+    "96": "app/flowhub-96.png",
+    "114": "app/flowhub-114.png",
+    "120": "app/flowhub-120.png",
+    "128": "app/flowhub-128.png",
+    "144": "app/flowhub-144.png",
+    "152": "app/flowhub-152.png",
+    "170": "app/flowhub-170.png",
+    "200": "app/flowhub-200.png",
+    "250": "app/flowhub-250.png"
+  }
+}

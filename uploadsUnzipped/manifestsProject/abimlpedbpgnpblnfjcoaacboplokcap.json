@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "Sous titre MyCanal et Canal+",
+ "description": "Gestion des sous-titres MyCanal et Canal+",
+ "version": "1.1.1",
+ "permissions": [
+  "tabs",
+  "storage",
+  "https://www.canalplus.com/*",
+  "https://wwww.mycanal.com/*"
+ ],
+ "browser_action": {
+  "default_icon" : "img/favicon-32x32.png",
+  "default_popup": "popin.html"
+ },
+ "icons": {
+  "32" : "img/favicon-32x32.png",
+  "16" : "img/favicon-16x16.png",
+  "192" : "img/android-chrome-192x192.png",
+  "512" : "img/android-chrome-512x512.png",
+  "180" : "img/apple-touch-icon.png",
+  "48" : "img/favicon.ico"
+ },
+ "background": {
+    "scripts": [
+      "jquery.js",
+      "bg.js"
+    ]
+  }
+}

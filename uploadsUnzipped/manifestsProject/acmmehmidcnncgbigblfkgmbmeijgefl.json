@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Grabbly",
+  "description": "A Free Web Extraction Tool That Allows You to Extract Data With a Single Click",
+  "version": "2.46",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "img/g-reverse.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": [
+        "library/jquery.js",
+        "library/select2.min.js",
+        "library/jszip.min.js",
+        "library/jquery.mention.input.js",
+        "library/jquery-ui.min.js",
+        "library/ace/ace.js",
+        "library/ace/theme-monokai.js",
+        "library/ace/mode-javascript.js",
+        "library/moment.js",
+        "library/stats.min.js",
+        "build/js/contentscript.js"
+      ],
+      "css": [
+        "library/jquery-ui.min.css",
+        "library/select2.min.css",
+        "css/contentscript.css"],
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "scripts": [
+      "library/jquery.js",
+      "library/jszip.min.js",
+      "library/moment.js",
+      "build/js/background.js"
+    ]
+  },
+  "web_accessible_resources": [
+        "img/switch.png",
+        "fonts/glyphicons-halflings-regular.eot",
+        "fonts/glyphicons-halflings-regular.ttf",
+        "fonts/glyphicons-halflings-regular.svg",
+        "fonts/glyphicons-halflings-regular.woff",
+        "fonts/glyphicons-halflings-regular.woff2",
+        "library/select2.min.js",
+        "library/select2.min.css",
+        "library/jquery.mention.input.js",
+        "library/jquery-ui.min.css",
+        "library/jquery-ui.min.js",
+        "library/jszip.min.js",
+        "library/bootstrap.min.js",
+        "library/moment.js",
+        "library/ga.gs",
+        "css/iframe.css",
+        "css/font-awesome.css",
+        "css/font-awesome.js",
+        "iframe.html",
+        "library/jquery.multi-select.js",
+        "library/multi-select.css",
+        "library/jquery.js",
+        "library/bootstrap.min.css",
+        "build/js/iframe.js",
+        "https://www.grabbly.io/*"
+  ],
+  "permissions": [
+    "downloads",
+    "tabs",
+    "unlimitedStorage",
+    "storage"
+  ]
+}

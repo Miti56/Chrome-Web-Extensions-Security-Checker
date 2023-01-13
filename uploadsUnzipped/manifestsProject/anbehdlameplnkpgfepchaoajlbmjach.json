@@ -1,0 +1,39 @@
+{
+   "background": {
+      "page": "home.html"
+   },
+   "browser_action": {
+      "default_icon": "icon48.png",
+      "default_popup": "home.html"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Alt+Shift+E",
+            "linux": "Alt+Shift+E",
+            "mac": "Alt+Shift+E",
+            "windows": "Alt+Shift+E"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "style.css" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Emoji Keyboard is a free extension that lets you to copy and paste emojis everywhere",
+   "icons": {
+      "128": "icon48.png",
+      "16": "icon.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "name": "Emoji Keyboard by ΔᎥяωεв",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "storage", "cookies" ],
+   "short_name": "Emoji Keyboard by ΔᎥяωεв",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4",
+      "web_accessible_resources": ["home.html" ]
+
+}

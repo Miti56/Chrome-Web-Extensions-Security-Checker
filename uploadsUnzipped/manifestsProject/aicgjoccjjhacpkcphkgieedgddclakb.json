@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "AlleMon",
+  "description": "Wtyczka dla użytkowników serwisu AlleMon.pl, umożliwiającego monitorowanie Allegro dla szybkich powiadomień o nowych aukcjach.",
+  "version": "1.2.0",
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["http://allegro.pl/*","https://allegro.pl/*"],
+      "js": ["native.showLoading.js", "main.js"],
+      "css" : ["allemon.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "loading.svg",
+    "loading.gif",
+    "button_icon_orange.png",
+    "button_icon_white.png"
+  ],
+  "icons":
+  {
+     "16": "icon16.png",
+     "32": "icon32.png",
+     "48": "icon48.png",
+     "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Kuro Vita Supply",
+  "description": "KURO VITA PROVIDES ON-TREND WOMEN'S APPAREL AT AFFORDABLE PRICES",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://kurovita.com/"
+    ],
+    "launch": {
+      "web_url": "http://kurovita.com/"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Grand Theft Auto GTA 5 Wallpapers",
+  "description": "Gta V wallpapers hd of Grand Theft Auto for similiar fan of GTA IV, GTA 5, GTA V Online, GTA Vice City, Gta San Andreas",
+  "version": "1.1",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

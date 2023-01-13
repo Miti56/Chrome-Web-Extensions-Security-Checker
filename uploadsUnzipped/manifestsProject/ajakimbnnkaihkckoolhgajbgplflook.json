@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Muting Hatenabookmark",
+  "version": "0.0.1",
+  "description": "はてなブックマークトップページの記事をミュートします",
+  "short_name": "MHB",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://b.hatena.ne.jp/*"
+      ],
+      "js": [  "js/jquery.min.js","js/background.js"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
+  "permissions": [ "tabs", "storage", "history", "system.memory", "contextMenus", "notifications"]
+
+}

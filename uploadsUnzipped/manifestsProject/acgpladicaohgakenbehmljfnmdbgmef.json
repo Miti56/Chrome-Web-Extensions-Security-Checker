@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ai Toolbox",
+  "description": "Aktif ileti araçlar menüsü",
+  "version": "0.6",
+  "permissions": ["contextMenus", "http://*/",
+        "https://*/", "storage","cookies","<all_urls>"],
+  "background": {
+    "persistent": false,
+    "scripts": ["jquery.min.js","background.js"]
+  },
+  "manifest_version": 2,
+   "icons": { "16": "ai-icon-small.png", "128": "ai-icon-big.png" },
+   "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],   
+      "js": ["jquery.min.js"]
+    }
+  ],
+  "options_page": "options.html"
+}

@@ -1,0 +1,66 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Shazoom Video Recorder & Messaging Tool",
+  "description": "Capture your screen or camera, share your video and track who's watching it!",
+  "version": "1.0.4",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_title": "Shazoom Video Recorder & Messaging Tool",
+    "default_popup": "window.html"
+  },
+  "icons": {
+    "16": "logo_16.png",
+    "48": "logo_48.png",
+    "128": "logo_128.png"
+  },
+  "background": {
+    "scripts": ["background.js", "RecordRTC.min.js", "DetectRTC.js"]
+  },
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["rectraceContent.js"],
+      "all_frames": false
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": false,
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": ["inboxsdk.js", "gmail.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs",
+    "tabCapture",
+    "desktopCapture",
+    "notifications",
+    "http://*/*",
+    "https://*/*",
+    "https://mail.google.com/",
+    "https://inbox.google.com/",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "/requestDeviceAccess.html",
+    "*.js",
+    "*.css",
+    "/content.js",
+    "/inject.js",
+    "/injected.js",
+    "/camera.html",
+    "*.png",
+    "/fonts/*.*",
+    "/assets/audios/shazoom-click.mp3"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

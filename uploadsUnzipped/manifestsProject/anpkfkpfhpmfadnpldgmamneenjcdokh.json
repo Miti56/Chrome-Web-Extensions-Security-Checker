@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Organizze",
+  "author": "Organizze",
+  "description": "Sistema online para controle financeiro. Fácil de usar e seguro.",
+  "version": "3.0",
+  "manifest_version": 2,
+
+
+  "icons": {
+    "128": "organizze-logo-128.png",
+    "24": "organizze-logo-24.png",
+    "16": "organizze-logo-16.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.organizze.com.br/login"
+    ],
+    "launch": {
+      "web_url": "https://www.organizze.com.br/login"
+    }
+  }
+}

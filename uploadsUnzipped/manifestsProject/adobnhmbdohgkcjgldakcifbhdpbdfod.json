@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "EduBrite LMS",
+  "description": "EduBrite Learning Management System",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "Icon-128@2x.png",
+    "48": "Icon-48@2x.png",
+    "32": "Icon-32@2x.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "421156836894",
+  "app": {
+    "launch": {
+      "web_url": "https://accounts.edubrite.com/oltpublish/google/launch.do?gdomain=${DOMAIN_NAME}"
+    }
+  }
+}

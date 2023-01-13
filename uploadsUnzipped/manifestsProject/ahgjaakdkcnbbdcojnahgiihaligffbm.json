@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Kirara Theme",
+	
+	"manifest_version": 2,
+	
+	"version": "1.3",
+	
+	"icons": {
+	
+		"16": "images/16icon.png",
+		"48": "images/48icon.png",
+		"128": "images/128icon.png"
+	},
+	
+	"short_name": "Kirara",
+	
+	"author": "John Boctor",
+	
+	"theme": {
+	
+		"colors": {
+		
+			"frame": [0,0,0],
+			"toolbar": [244,207,157],
+			"tab_background": [248,188,192]	
+			
+		},
+		
+		"images": {
+		
+			"theme_ntp_background": "images/kirara.png",
+			"theme_toolbar": "images/kirarabar.png",
+			"theme_frame": "images/kiraraframe.png",
+			"theme_tab_background": "images/kirarainactive.png",
+			"theme_ntp_attribution": "images/signature.png"
+			
+		},
+		
+		"tints": {
+		
+			"buttons": [116,0.0,0.40]
+			
+		},
+		
+		"properties": {
+			
+			"ntp_logo_alternate": 0
+		}
+		
+	}
+	
+}

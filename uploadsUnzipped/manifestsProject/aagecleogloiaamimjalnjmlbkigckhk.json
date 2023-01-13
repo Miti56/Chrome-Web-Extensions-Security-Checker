@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "scripts/background.js" ]
+   },
+
+   "manifest_version": 2,
+   "name": "Songs Search Player",
+   "permissions": ["https://*/*", "storage", "webRequest", "http://*/*", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1",
+   "web_accessible_resources": [ "assets/modal.css" ],
+   "browser_action": {
+      "default_icon": "images/icon16.png",
+      "default_title": "Songs Search Player"
+   },
+   "description": "Search songs easliy by configuring our default search method !",
+   "externally_connectable": {
+    "matches": ["*://www.xn----5hccebza6a1gejk.com/*"]
+   },
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   }
+}

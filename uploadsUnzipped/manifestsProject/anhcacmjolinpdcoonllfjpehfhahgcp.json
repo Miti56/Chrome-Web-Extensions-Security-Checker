@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Rulerr Google Drive Integration",
+  "version": "1.0.0.0",
+  "description": "Provides access for Rulerr to import Google Drive permission information.",
+  "icons": {
+    "128": "icons/icon-gold-128x128.png",
+    "96": "icons/icon-gold-96x96.png",
+    "48": "icons/icon-gold-48x48.png",
+    "32": "icons/icon-gold-32x32.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "1056952280835",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://app.rulerr.com/"
+    }
+  }
+}

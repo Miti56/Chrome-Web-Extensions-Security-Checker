@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "name": "Language Switcher",
+  "short_name": "language-switcher",
+  "background": {"page": "lib/chrome/background.html"},
+  "homepage_url": "http://mybrowseraddon.com/language-switcher.html",
+  "permissions": ["storage", "activeTab", "webRequest", "<all_urls>", "webRequestBlocking"],
+  "description": "Change the language header (accept-language) that websites see via toolbar popup",
+  "browser_action": {
+    "default_title": "Language Switcher",
+    "default_popup": "data/popup/popup.html",
+    "default_icon": {
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+    }
+  },
+  "content_scripts": [{
+    "all_frames": true,
+    "matches": ["<all_urls>"],
+    "run_at": "document_start",
+    "js": ["data/content_script/inject.js"]
+  }],
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png"
+  }
+}

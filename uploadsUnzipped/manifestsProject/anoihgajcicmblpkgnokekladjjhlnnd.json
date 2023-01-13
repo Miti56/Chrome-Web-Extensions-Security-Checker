@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "nhaphang168",
+   "background": {
+      "persistent": false,
+      "scripts": [ "data/js/background/background.js" ]
+   },
+   "browser_action": {
+      "default_badge": "0",
+      "default_icon": "data/icon/logo.png",
+      "default_popup": "data/index.html",
+      "default_title": "Nhập hàng 168"
+   },
+   "content_scripts": [ {
+      "js": [ "data/js/plugin/jquery/jquery.min.js", "data/js/plugin/utils/textutils.js", "data/js/conf/config.js", "data/js/conf/action.js", "lib/chrome.js" ],
+      "matches": [ "http://*.taobao.com/*", "https://*.taobao.com/*", "http://*.tmall.com/*", "https://*.tmall.com/*", "http://*.1688.com/*", "https://*.1688.com/*", "http://*.i28.com/*", "https://*.i28.com/*" ]
+   }, {
+      "js": [ "data/js/bin/taobao.js" ],
+      "matches": [ "http://*.taobao.com/*", "https://*.taobao.com/*" ]
+   }, {
+      "js": [ "data/js/bin/tmall.ladygo.js" ],
+      "matches": [ "http://ladygo.tmall.com/*", "https://ladygo.tmall.com/*" ]
+   }, {
+      "js": [ "data/js/bin/tmall.js" ],
+      "matches": [ "http://detail.tmall.com/*", "https://*.detail.tmall.com/*", "http://world.tmall.com/*", "https://*.world.tmall.com/*" ]
+   }, {
+      "js": [ "data/js/bin/web1688.js" ],
+      "matches": [ "http://*.1688.com/*", "https://*.1688.com/*" ]
+   }, {
+      "js": [ "data/js/bin/i28.js" ],
+      "matches": [ "http://*.i28.com/*", "https://*.i28.com/*" ]
+   } ],
+   "description": "Nhập hàng 168, Cho phép bạn đặt hàng, nhận báo giá trực tuyến tại các website thương mại điện tử",
+   "icons": {
+      "128": "data/icon/icon_128.png",
+      "16": "data/icon/icon_16.png",
+      "48": "data/icon/icon_48.png"
+   },
+   "manifest_version": 2,
+   "name": "Nhập hàng 168",
+   "permissions": [ "https://nhaphang168.vn/*" ],
+   "short_name": "nhaphang168",
+   "version": "1.0.8",
+   "web_accessible_resources": [ "data/js/plugin/bootstrap/css/*", "data/js/plugin/bootstrap/js/*" ]
+}

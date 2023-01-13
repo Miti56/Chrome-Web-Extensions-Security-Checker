@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Untrue - Secret Dating",
+  "description": "Chat, Flirt, Hook-Up...TONIGHT!",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "launch": {
+      "web_url": "http://www.mylocalihookup.info"
+    }
+  }
+}

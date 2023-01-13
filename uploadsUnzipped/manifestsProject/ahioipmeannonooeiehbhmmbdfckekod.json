@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tweet Control",
+  "version": "0.0.2",
+  "description": "Maybe you shouldn't... tweet... that??",
+  "web_accessible_resources": ["fire.gif"],  
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "css": ["twitter_buttons.css"],
+      "js": ["addbuttons.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": { 
+    "16": "kiwi.png",
+    "48": "kiwi32.png",
+   "128": "kiwi128.png" 
+  },
+  "manifest_version": 2
+}

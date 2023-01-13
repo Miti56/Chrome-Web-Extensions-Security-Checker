@@ -1,0 +1,30 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/16.png",
+      "default_popup": "popup.html",
+      "default_title": "EDAA Complaints Tool"
+   },
+   "content_scripts": [ {
+      "css": [ "css/style.css"],
+      "js": [ "js/jquery.min.js", "js/core.js", "js/popup.js"],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   
+   "description": "EDAA",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   },
+   "manifest_version": 2,
+   "name": "EDAA Complaints Tool",
+   "permissions": [ "tabs", "activeTab", "cookies", "http://*/*", "https://*/*", "contextMenus" ],
+   "short_name": "EDAA",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.34",
+   "web_accessible_resources": [ "images/cancel.png" ]
+}

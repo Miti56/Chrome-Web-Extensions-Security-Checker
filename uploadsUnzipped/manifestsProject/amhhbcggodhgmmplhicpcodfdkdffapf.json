@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.jpeg","theme_toolbar":"images\/theme_toolbar.jpeg","theme_tab_background":"images\/theme_tab_background.jpeg","theme_ntp_background":"images\/theme_ntp_background.jpeg"},"colors":{"frame":[226,150,76],"toolbar":[226,150,76],"tab_text":[35,24,19],"tab_background_text":[35,24,19],"bookmark_text":[35,24,19],"ntp_background":[255,255,255],"ntp_text":[35,24,19],"button_background":[0,0,0,0]},"tints":{"buttons":[0,0,0.5]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"repeat"}},"name":"The Dark Tower","version":"1","description":""}

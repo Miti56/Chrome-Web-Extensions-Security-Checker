@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "BOMACRM",
+	"short_name": "Приложение BOMACRM",
+	"description": "Приложение взаимодействия с BOMACRM (MANDARIN)",
+	"version": "0.5.5",
+	"minimum_chrome_version": "38",
+
+	"icons": {
+		"16": "images/icon.png",
+		"128": "images/icon.png"
+	},
+	
+	"app": {
+		"background": {
+			"scripts": ["js/jquery.js", "background.js"]
+		}
+	},
+	
+	"permissions": [
+		"background",
+		"storage",
+		"alwaysOnTopWindows",
+		"webview",
+		"http://mandarin.boma.by/*"
+	]
+}

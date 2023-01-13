@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "page": "html/background.html"
+  },
+  "browser_action": {
+    "default_icon": "img/icon48.png",
+    "default_popup": "html/route.html"
+  },
+  "content_scripts": [
+    {
+      "js": [ "js/jquery-2.1.4.min.js", "js/popup.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+    }
+  ],
+  "description": "Сервис отправки, трекинга и аналитики писем и коммерческих предложений.",
+  "icons": {
+    "16": "img/icon16.png",
+    "32": "img/icon32.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "B2BFamily - Bitrix 24",
+  "short_name": "B2BFamily",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com https://b2bfamily.com/; object-src 'self'",
+  "version": "1.1.7"
+}

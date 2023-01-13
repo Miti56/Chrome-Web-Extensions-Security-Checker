@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "lifes.com text copy",
+  "version": "5.0.5",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "description": "lets me copy content",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+
+"background": {
+        "page": "background.html"
+    },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.life.com.tw/*"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+	"cookies",
+	"http://*/*",
+	"https://*/*"
+  ]
+}

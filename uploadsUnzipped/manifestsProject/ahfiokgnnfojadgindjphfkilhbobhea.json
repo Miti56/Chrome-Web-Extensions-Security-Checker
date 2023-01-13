@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "سوق مصر",
+  "description": "أكبر موقع للتجارة الإلكترونية في العالم العربي، شراء وبيع المنتجات عبر منصة موثوق بها توفر مختلف خيارات الدفع وطرق تسليم مضمونة",
+  "version": "1",
+  "options_page": "http://egypt.sa-souq.com/",
+  "app": {
+    "urls": [
+      "http://egypt.sa-souq.com/"
+    ],
+    "launch": {
+      "web_url": "http://egypt.sa-souq.com/"
+    }
+  },
+  "icons": {
+    "128": "_logo/EG_logo_128.png"
+  },
+  "permissions": []
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Wedding Champs",
+  "description": "Wedding Champs",
+  "version": "0.2",
+  "manifest_version": 2,
+  "app": {
+    "urls": ["http://www.weddingchamps.com/"],
+	"launch" :{
+		
+	        "web_url" : "http://www.weddingchamps.com/"	
+		
+	
+    }
+  },
+  "icons": { "128": "wc-logo.png" }
+}

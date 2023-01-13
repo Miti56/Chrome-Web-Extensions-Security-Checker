@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "GoFinder",
+	"short_name": "gFind",
+	"version": "1.6",
+	"author": "Matt Krins",
+	"homepage_url": "https://github.com/mattkrins/",
+	"description": "Find GO Pokemon near you.",
+	"permissions": ["notifications","https://pokevision.com/"],
+	"browser_action": {
+		"default_icon": {
+			"16": "icon16.png",
+			"32": "icon32.png",
+			"48": "icon48.png",
+			"128": "icon128.png"
+		},
+		"default_title": "GoFinder",
+		"default_popup": "popup.html"
+	},
+	"manifest_version": 2,
+	"icons": {
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"options_page": "options.html",
+	"background": {
+		"scripts": ["jquery-3.1.0.min.js","background.js"]
+	}
+}

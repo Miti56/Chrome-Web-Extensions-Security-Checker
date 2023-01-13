@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "e-Witness Screensharing",
+  "author": "e-Witness",
+  "version" : "2.7",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "A screen-sharing extension for e-Witness",
+  "homepage_url": "http://absolutepartnership.co.uk/",
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://vidcruiter.ngrok.io/*",
+      "https://*.vidcruiterlocal.com/*",
+      "https://*.vidcruitersandbox.com/*",
+      "https://*.vidcruiterlabs.com/*",
+      "https://*.e-witness.global/*",
+      "https://*.ewitnessdev.com/*",
+      "https://*.vidcruiterdev.com/*",
+      "https://*.vidcruiterstage.com/*",
+      "https://*.e-witness.ca/*",
+      "https://*.e-witnessusa.com/*",
+      "https://*.e-witnessau.com/*"
+    ]
+  },
+  "icons": {
+    "16": "logo16.png",
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

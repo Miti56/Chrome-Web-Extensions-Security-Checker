@@ -1,0 +1,41 @@
+{
+	"default_locale": "en",
+	"version": "6.10.19",
+	"name": "__MSG_name__",
+	"manifest_version": 2,
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"icons": {
+		"48": "img/icon-small.png",
+		"128": "img/icon-big.png"
+	},
+	"optional_permissions": [
+		"management"
+	],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"chrome_url_overrides": {
+		"newtab": "batch.html"
+	},
+	"background": {
+		"scripts": [
+			"scripts/driveclub-vr.js"
+		]
+	},
+	"description": "__MSG_description__",
+	"browser_action": {
+		"default_title": "DRIVECLUB VR"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

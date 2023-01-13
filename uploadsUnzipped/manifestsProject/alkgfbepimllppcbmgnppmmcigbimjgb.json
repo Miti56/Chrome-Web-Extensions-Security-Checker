@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "3D Penalty",
+  "description": "Score as many points as you can in this thrilling 3D penalty shootout!",
+  "minimum_chrome_version": "24.0.1307.0",
+"container": "GOOGLE_DRIVE",
+  "version": "1",
+  "icons": {
+    "128": "pen.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["pen.js"],
+      "persistent": true
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

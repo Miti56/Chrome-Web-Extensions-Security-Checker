@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "ttop5的时钟",
+  "version": "1.02",
+  "description": "我的第一个Chrome拓展。",
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "index.html"
+  }
+}

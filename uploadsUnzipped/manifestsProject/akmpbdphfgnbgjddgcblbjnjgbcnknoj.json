@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Clock Tab",
+  "description": "This plugin will replace the default new tab with a customizeable clock and date.",
+  "version": "3.2",
+  "incognito": "split",
+    "chrome_url_overrides" : {
+    "newtab": "clockTab.html"
+  },
+  "web_accessible_resources": [ "*.png", "*.ttf" ],
+  "manifest_version": 2,
+  "icons": { "16": "Icon/Icon16.png",
+           "48": "Icon/Icon48.png",
+          "128": "Icon/Icon128.png" }
+}

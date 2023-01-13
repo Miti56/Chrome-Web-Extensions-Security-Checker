@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Leo Reactions",
+  "short_name": "Leo Reactions",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "Replaces Facebook Reactions with Leo's class.",
+  "default_locale": "en",
+  "icons": {
+    "64": "img/icon64.png",
+    "128": "img/icon128.png"
+  },
+  "permissions": [
+    "*://*.facebook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "css": ["replace-fb-reactions.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*.png"
+  ]
+}

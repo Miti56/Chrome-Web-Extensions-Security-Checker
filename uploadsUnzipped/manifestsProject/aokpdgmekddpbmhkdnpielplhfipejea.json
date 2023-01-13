@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Salespatron",
+  "version": "0.0.9",
+  "manifest_version": 2,
+  "description": "Salespatron chrome and gmail extension helps you share your documents as links and find your most engaged prospects ",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    },
+    "default_title": "Salespatron",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "https://app.salespatron.com/*",
+    "clipboardWrite",
+    "clipboardRead",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "http://mail.google.com/*"
+      ],
+      "js": [
+        "scripts/promise.js",
+        "scripts/inboxsdk.js",
+        "scripts/content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/salespatron_logo.png"
+  ]
+}

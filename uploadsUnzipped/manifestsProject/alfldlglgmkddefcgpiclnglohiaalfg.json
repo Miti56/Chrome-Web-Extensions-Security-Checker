@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+  "name": "Finger Fencer",
+  "description": "Foil, saber and épée. Drag to parry. Tap touché. Fence against computer in Round of 8 tournament.",
+  "version": "1.8.6",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  }
+}

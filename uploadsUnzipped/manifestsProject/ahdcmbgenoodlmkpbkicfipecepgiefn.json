@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "YouTube AdSkip",
+  "version": "2.1",
+  "description": "you know",
+  "icons": {
+    "16": "black_youtube.png",
+    "48": "black_youtube.png",
+    "128": "black_youtube.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["./jquery.min.js", "./main.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}

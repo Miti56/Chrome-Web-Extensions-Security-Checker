@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Tube Search Play",
+    "version": "1.5",
+    "description": "You can play videos while searching and choose the right one to watch in full.",
+    "permissions": [
+        "tabs", "http://*/*", "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["http://*.youtube.com/results?*"],
+            "js": ["jquery.min.js","content.js"]
+        }
+    ],
+    "manifest_version": 2
+}

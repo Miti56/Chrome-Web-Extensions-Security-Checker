@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "description": "GetGo Download Helper is a Chrome extension to help you to detect the Video and Download Video",
+    "manifest_version": 2,
+    "name": "GetGo Download Helper",
+    "short_name": "GetGo Download Helper",
+    "version": "1.3.4.272",
+    "default_locale": "en",
+    "homepage_url": "http://www.getgosoft.com",
+        
+    "background": {
+        "persistent": true,
+        "scripts": ["modules.js", "default-prefs.js", "sdk.js", "lib/commonData.js", "lib/pageParser.js", "lib/toolkit.js", "lib/log.js", "lib/domainnames.js", "lib/prefs.js", "lib/gallery.js", "lib/async.js", "lib/network.js", "lib/hit.js", "lib/action.js", "lib/alert.js", "lib/getgoParameter.js", "lib/cloudparser.js", "lib/twitch.js", "lib/BreakCom.js", "lib/Facebook.js", "lib/dailyMotion.js", "lib/ytdvideo.js", "lib/mediaStream.js", "lib/media.js", "lib/specialVideo.js",  "lib/tbvws.js", "lib/tfvws.js",  "lib/downloads.js", "lib/panels.js", "lib/bytes.js", "lib/hls.js", "lib/block.js", "lib/blockSet.js", "lib/main.js", "lib/about.js", "lib/settings.js"]
+    },
+    
+    "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "18": "icons/icon-18.png",
+      "36": "icons/icon-36.png",
+      "48": "icons/icon-48.png"
+   },
+    
+    "optional_permissions": [ "management" ],
+    
+    "permissions": ["contextMenus", "activeTab", "webRequest", "webRequestBlocking", "webNavigation", "nativeMessaging", "tabs", "downloads", "downloads.open", "downloads.shelf",  "clipboardWrite", "notifications", "http://*/*", "https://*/*", "http://www.getgo123.com/API/API.php", "\u003Call_urls>"],
+  
+    "browser_action": {
+       "default_icon": "icons/ggdm-icon2.png",
+        "default_title": "GetGo Download Helper",
+        "default_popup": "page/mainPanel.html"
+    }
+    
+}

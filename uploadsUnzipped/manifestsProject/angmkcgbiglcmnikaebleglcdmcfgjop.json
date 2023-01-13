@@ -1,0 +1,86 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Change Management Comparison",
+    "version": "0.0.0.5",
+    "description": "Importance Of Change Management",
+    "manifest_version": 2,
+    "theme": {
+        "images": {
+            "theme_frame": "images/theme_frame.jpeg",
+            "theme_toolbar": "images/theme_toolbar.png",
+            "theme_tab_background": "images/theme_tab_background.png",
+            "theme_ntp_background": "images/theme_ntp_background.png"
+        },
+        "colors": {
+            "frame": [
+                4,
+                123,
+                192
+            ],
+            "toolbar": [
+                4,
+                123,
+                192
+            ],
+            "tab_text": [
+                0,
+                0,
+                0
+            ],
+            "tab_background_text": [
+                0,
+                0,
+                0
+            ],
+            "bookmark_text": [
+                0,
+                0,
+                0
+            ],
+            "ntp_background": [
+                255,
+                255,
+                255
+            ],
+            "ntp_text": [
+                0,
+                0,
+                0
+            ],
+            "ntp_link": [
+                6,
+                55,
+                116
+            ],
+            "button_background": [
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "tints": {
+            "buttons": [
+                0,
+                0,
+                0.44
+            ]
+        },
+        "properties": {
+            "ntp_background_alignment": "bottom",
+            "ntp_background_repeat": "no-repeat"
+        }
+    },
+    "version_name": "1.0 alpha",
+    "short_name": "https://www.changecomparison.com/",
+    "author": "https://www.changecomparison.com/",
+    "app": {
+        "launch": {
+            "web_url": "https://www.changecomparison.com/"
+        },
+        "urls": [
+            "https://www.changecomparison.com/"
+        ]
+    }
+}

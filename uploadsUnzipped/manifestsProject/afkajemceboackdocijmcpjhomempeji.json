@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Dress By Weather | What to wear today?",
+  "version": "0.0.6",
+  "manifest_version": 2,
+  "description": "Get to know what to wear today based on the weather",
+  "homepage_url": "https://www.dressbyweather.com",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "src/override/override.html"
+  },
+  "permissions": [
+    "geolocation",
+    "http://*.dressbyweather.com/*"
+  ]
+}

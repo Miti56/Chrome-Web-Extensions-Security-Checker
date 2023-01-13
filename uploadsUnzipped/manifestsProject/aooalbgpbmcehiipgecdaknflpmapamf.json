@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Игровые автоматы от Casinorussia.com",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "Будьте всегда на расстоянии 1 клика от лучшей коллекции бесплатных игровых автоматов. Casinorussia.com - это более 1000 видеослотов",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+             "128": "icon128.png" },
+  "browser_action": {
+    "default_title": "Игровые автоматы от Casinorussia.com",
+    "default_icon": "icon16.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_page": "options.html",
+  "homepage_url": "http://www.casinorussia.com"
+}

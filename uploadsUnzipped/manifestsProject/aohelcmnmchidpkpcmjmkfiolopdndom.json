@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Apocalypsis Relooker",
+  "description": "This extension will relook apocalypsis site",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "logo.png"
+  },
+  "icons": { "16": "logo.png"},
+  "content_scripts": [ {
+    "css": [ "main.css" ],
+    "matches": [ "http://www.apocalypsis.org/*" ],
+    "js" : ["main.js"]
+  } ],
+  "permissions": [
+    "activeTab"
+  ]
+}

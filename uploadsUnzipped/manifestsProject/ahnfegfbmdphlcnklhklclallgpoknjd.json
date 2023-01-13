@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Connexus WebMail Recipients Search/Filter",
+    "short_name": "WebMail Recipients Filter",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Adds a case-insensitive searchbox that filters the available recipients list in WebMail.",
+    "permissions": ["activeTab","https://www.connexus.com/webmail/*"],
+    "icons": {
+        "16": "images/ccrCWS16.png",
+        "32": "images/ccrCWS32.png",
+        "48": "images/ccrCWS48.png",
+        "128": "images/ccrCWS128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.connexus.com/webmail/*"],
+            "js": [
+                "addRecipientSearch.js"
+            ]
+        }
+    ]
+}

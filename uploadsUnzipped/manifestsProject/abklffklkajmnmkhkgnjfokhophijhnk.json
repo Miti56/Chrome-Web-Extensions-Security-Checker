@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "CSS Dog",
+  "description": "Scrolls to page elements matching a CSS selector",
+  "version": "0.2.0",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "page_action": {
+   "default_icon": {
+     "16": "icon16.png",
+     "32": "icon32.png"
+   },
+   "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"], 
+      "css" : ["content.css"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab", 
+    "declarativeContent",
+    "storage"
+   ],
+
+   "icons": {
+     "16": "icon16.png",
+     "32": "logo32.png",
+     "64": "logo64.png"
+   },
+   "web_accessible_resources": [ "dog.png" ]
+}
+

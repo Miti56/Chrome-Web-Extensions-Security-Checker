@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SQFormat",
+  "description": "SQFormat.",
+  "version": "1.7",
+
+  "browser_action": {
+   "default_icon": "favicon32x32.png",
+   "default_popup": "index.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "downloads"    
+  ]	
+}

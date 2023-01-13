@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Dan's Ad Blocker",
+  "short_name": "d-block",
+  "version": "1.2",
+  "description": "Dan's own homemade ad blocker for Chrome",
+  "permissions": [ "webRequest", "webRequestBlocking", "<all_urls>" ],
+  "background": {
+    "scripts": [ "blocked_domains.js", "background.js" ]
+  },
+  "browser_action": {
+    "default_icon":  "d-shield-128x128.png",
+    "icons": {
+      "16": "d-shield-16x16.png",
+      "48": "d-shield-48x48.png",
+      "128": "d-shield-128x128.png",
+      "200": "d-shield-200x200.png"
+    },
+    "default_popup": "popup.html"
+  },
+    "manifest_version": 2
+  }

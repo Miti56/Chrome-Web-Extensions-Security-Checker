@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SISY@WEB",
+  "icons": { "48": "48.png"},
+  "description": "Make the current page red",
+  "version": "3.1",
+  "permissions": [
+    "activeTab",
+	"webNavigation", "*://*/*",
+	"tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+        {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+            ],
+        "js": ["jquery.js","alertify.min.js","contentscript.js"],
+        "run_at": "document_end"
+        }
+    ], 
+  "browser_action": {
+    "default_title": "SISY@WEB"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+      "scripts": [ "common/browser-polyfill.js", "background/background.js" ]
+   },
+   "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["\u003Call_urls>"],
+      "js": ["content/atoms.js", "content/utils.js", "content/selenium-browserbot.js",
+       "common/escape.js", "content/selenium-api.js", "content/locatorBuilders.js",
+       "content/recorder.js", "content/recorder-handlers.js", "content/command-receiver.js",
+       "content/targetSelecter.js"],
+      "match_about_blank": true
+    },
+    {
+      "all_frames": true,
+      "matches": ["\u003Call_urls>"],
+      "js": ["common/browser-polyfill.js", "content/prompt-injecter.js", "content/runScript-injecter.js"],
+      "match_about_blank": true,
+      "run_at": "document_start"
+    }
+  ],
+
+  "manifest_version": 2,
+  "name": "Panda King",
+  "description": "This extension allows the user to Record elements of the current page.",
+  "version": "2.7",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "options_page": "options.html",
+
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "Meowlomo Automation Recorder"
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "webRequest",
+    "contextMenus",
+    "downloads",
+    "webNavigation",
+    "notifications",
+    "storage"
+  ],
+  "icons": {
+    "103": "img/icon_103.png"
+  },
+
+  "web_accessible_resources": ["page/prompt.js", "page/runScript.js"]
+}

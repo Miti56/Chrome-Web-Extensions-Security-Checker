@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"Pos eso","description":"El hijo de una bailaora de flamenco ha sido poseido por un malevolo diablo.","version":"1.0.96","manifest_version":2,"permissions":["storage","fullscreen","webview"],"app":{"background":{"scripts":["background.js"]}},"webview":{"partitions":[{"name":"static","accessible_resources":["client/plugins/game.adsManager/src/adsProviders/ad4games/adscws.html","client/plugins/game.adsManager/src/adsProviders/adsense/adscws.html","client/plugins/game.adsManager/src/adsProviders/adsense/ads.js"]}]},"icons":{"16":"Icono_128.png","128":"Icono_128.png"}}

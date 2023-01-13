@@ -1,0 +1,38 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+ "manifest_version": 2,
+  "version": "1.0",
+  "name": "Under The Arc",
+  "description": "Some arc and some people in Kyiv",
+  "default_icons": { "128": "images\\logo.png" },
+  "theme": {
+    "images" : {
+      "theme_frame" : "images\\frame.png",
+      "theme_toolbar" : "images\\toolbar.png",
+      "theme_ntp_background" : "images\\bg.png",
+      "theme_tab_background" : "images\\tab.png",
+      "theme_ntp_attribution" : "images\\author.png",
+      "theme_frame_overlay" : "images\\frame.png"
+    },
+    "colors" : {
+	"ntp_text": [255 , 255 , 255], 
+	"ntp_section_text": [10 , 17 , 27],
+	"ntp_background": [0 , 0 , 0], 
+	"frame": [10 , 17 , 27], 
+	"toolbar": [255, 128, 64], 
+	"tab_text": [255,255,255], 
+	"tab_background_text": [255 , 255 , 255], 
+	"bookmark_text": [255,255,255],
+	"toolbar" : [137,103,33]
+    },
+    "tints" : {
+                "buttons" : [0.33, 0.5, 0.47],
+                "frame_inactive": [0.7, 0.7, 0.7], 
+                "frame_incognito_inactive": [0.50, 0.50, 0.50] 
+    },
+    "properties" : {
+     	"ntp_background_alignment" : "center",
+	"ntp_background_repeat": "no-repeat"
+    }
+  }
+}

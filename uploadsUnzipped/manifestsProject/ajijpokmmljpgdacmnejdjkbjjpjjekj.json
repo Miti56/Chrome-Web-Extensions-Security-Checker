@@ -1,0 +1,25 @@
+{
+   "api_console_project_id": "656990710877",
+   "app": {
+      "launch": {
+         "web_url": "https://www.geogebra.org/graphing/"
+      },
+      "urls": [ "https://www.geogebra.org/graphing/" ]
+   },
+   "author": "International GeoGebra Institute",
+   "container": "GOOGLE_DRIVE",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "graphing_128.png",
+      "16": "graphing_16.png",
+      "48": "graphing_48.png"
+   },
+   "manifest_version": 2,
+   "short_name":"__MSG_appShortName__",
+   "name": "__MSG_appName__",
+   "offline_enabled": true,
+   "permissions": [ "clipboardRead", "clipboardWrite" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.0.385.0"
+}

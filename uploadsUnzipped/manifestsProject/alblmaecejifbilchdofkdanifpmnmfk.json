@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "File Converter",
+"description": "Convert Any format to Any format: PDF, Doc, PNG, JPG, PSD, HTML, XLS, TEXT, EPS, GIF, PPT, CSV, BMP and more...",
+"version": "2.0.0.1",
+"icons": {
+"128": "logo.png"
+},
+"app": {
+"urls": [
+"http://file-convert.egedsoft.com/"
+],
+"launch": {
+"web_url": "http://file-convert.egedsoft.com/"
+}
+}
+}

@@ -1,0 +1,62 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "KiwiBack",
+	"description": "KiwiBack, který vrací zpět peníze z nákupu.",
+	"version": "0.2.7.4",
+	"icons": {
+		"128": "128.png"
+	},
+	"browser_action": {
+      "default_icon": "128.png",
+      "default_popup": "popup.html",
+      "default_title": "KiwiBack"
+   },
+	"background": {
+		"page": "background.html"
+	},
+	
+	"content_scripts": [
+		{
+			"js": [
+				"jquery-3.3.1.min.js","config.js"],
+			"css": ["theme_content.css"],
+			"matches": [
+				"*://www.google.com/*",
+				"*://search.seznam.cz/*",
+				"*://*.mozilla.org/*",
+				"*://www.kiwiback.cz/*",
+				"*://aliexpress.com/*",
+				"*://www.aliexpress.com/*",
+				"*://best.aliexpress.com/*",
+				"*://flashdeals.aliexpress.com/*",
+				"*://shoppingcart.aliexpress.com/*",
+				"*://trade.aliexpress.com/*",
+				"*://sale.aliexpress.com/*"
+			]
+		}
+	],
+	"content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+	"homepage_url": "https://www.kiwiback.cz/",
+	"permissions": [
+        "tabs",
+		"activeTab",
+		"storage",
+		"webNavigation",
+		"webRequest",
+		"contextMenus",
+		"*://www.google.com/*",
+		"*://search.seznam.cz/*",
+		"*://*.mozilla.org/*",
+		"*://www.kiwiback.cz/*",
+		"*://aliexpress.com/*",
+		"*://www.aliexpress.com/*",
+		"*://best.aliexpress.com/*",
+		"*://flashdeals.aliexpress.com/*",
+		"*://shoppingcart.aliexpress.com/*",
+		"*://trade.aliexpress.com/*",
+		"*://sale.aliexpress.com/*"
+    ],
+	"web_accessible_resources": ["logo.png","*.html","*.php"],
+	"manifest_version": 2
+}

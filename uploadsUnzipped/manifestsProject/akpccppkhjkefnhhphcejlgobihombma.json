@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "web performance",
+  "version": "1.1.0",
+  "description": "web performance extension",
+  "manifest_version": 2,
+  "icons": {
+    "128": "img/128.png"
+  },
+  "browser_action": {
+    "default_title": "web performance",
+    "default_popup": "pages/popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

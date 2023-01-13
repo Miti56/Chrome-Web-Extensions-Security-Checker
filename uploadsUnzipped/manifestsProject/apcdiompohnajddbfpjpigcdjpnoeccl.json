@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Sudden John Cena",
+    "short_name": "John Cena",
+    "author": "Baylor Norris",
+	"description": "JOHNNNN CENNNNNAAAAA",
+	"version": "2.0.2",
+	"manifest_version": 2,
+    
+    "icons": {
+        "128": "icon.png"
+    },
+
+	"permissions": ["http://*/*", "https://*/*", "activeTab", "tabs"],
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "John Cena"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["js/jquery.min.js", "js/lexer.js", "js/lexicon.js_", "js/POSTagger.js", "js/mlg-userscript.js"]
+		}
+	],
+
+	"background": {
+		"persistent": false,
+		"scripts": ["extensionListener.js","audio.js"]
+	},
+
+	"web_accessible_resources": ["sounds/*"]
+}

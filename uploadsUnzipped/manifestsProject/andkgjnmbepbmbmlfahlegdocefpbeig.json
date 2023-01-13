@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "StepsWeb",
+	"author": "The Learning Staircase Ltd",
+	"shortname" : "StepsWeb",
+	"description": "StepsWeb is an effective, easy-to-use, web-based literacy development program suitable for all levels, from early readers to adults",
+	"version": "1.0.1",
+	"icons": {
+		"128": "icon_128.png"
+	},
+	"app": {
+		"urls": [
+			"*://STEPSWEB.COM/",
+			"*://SUPPORT.STEPSWEB.COM/"
+		],
+		"launch": {
+			"web_url": "HTTPS://STEPSWEB.COM"
+		}
+	}
+}

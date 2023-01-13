@@ -1,0 +1,55 @@
+{
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icons/48.png",
+    "default_popup": "popup/popup.html",
+    "default_title": "Night Mode"
+  },
+  "commands": {
+    "toggle-onoff": {
+      "description": "Night mode on/off.",
+      "suggested_key": {
+        "default": "Alt+Shift+F"
+      }
+    },
+    "toggle-whitelist": {
+      "description": "Add/Remove the current site from whitelist.",
+      "suggested_key": {
+        "default": "Alt+Shift+W"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "css": ["default.css"],
+      "js": ["init.js"],
+      "matches": ["\u003Call_urls>"],
+      "run_at": "document_start"
+    },
+    {
+      "all_frames": true,
+      "js": ["changeColor.js", "sizzle.js"],
+      "matches": ["\u003Call_urls>"],
+      "run_at": "document_end"
+    }
+  ],
+  "description": "Dark Mode possible to shed eye strain significantly.",
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png"
+  },
+  "manifest_version": 2,
+
+  "default_locale": "en",
+  "name": "Night Mode",
+  "permissions": ["storage", "tabs", "activeTab", "\u003Call_urls>"],
+  "short_name": "nightmode",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.3.6"
+}

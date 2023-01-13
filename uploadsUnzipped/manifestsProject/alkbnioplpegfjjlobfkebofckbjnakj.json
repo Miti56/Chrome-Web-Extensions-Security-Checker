@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Juegos de Peine | AppDomain.pw",
+  "short_name": "Juegos de Peine",
+  "version": "1.0.2",  
+  "description": "Enlace directo a la categoria de Juegos de Peine en AppDomain.PW",
+  "homepage_url": "https://appdomain.pw/c/juegos-de-peinar/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Juegos de Peine | AppDomain.pw",
+      "default_popup": "popup.html"
+  }
+}

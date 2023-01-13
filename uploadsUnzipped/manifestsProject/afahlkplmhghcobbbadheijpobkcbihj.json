@@ -1,0 +1,70 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_ntp_background": "images/theme_ntp_background.jpg"
+    },
+    "colors": {
+      "frame": [
+        93,
+        6,
+        165
+      ],
+      "toolbar": [
+        93,
+        6,
+        165
+      ],
+      "tab_text": [
+        255,
+        255,
+        8
+      ],
+      "tab_background_text": [
+        255,
+        255,
+        8
+      ],
+      "bookmark_text": [
+        255,
+        255,
+        8
+      ],
+      "ntp_background": [
+       255,
+        255,
+        8
+      ],
+      "ntp_text": [
+        255,
+        255,
+        8
+      ],
+      "button_background": [
+        93,
+        6,
+        165,
+        1
+      ]
+    },
+    "tints": {
+      "buttons": [
+        255,
+        255,
+        8
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "center",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "name": "LeBron James Theme",
+  "version": "1.1",
+  "description": "Install This Cool Theme And Enjoy In Amazing Design Of Your Browser"
+}

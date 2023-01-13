@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "script.js" ]
+   },
+   "browser_action": {
+      "default_icon": "ectozoanperson.png",
+      "default_popup": "htmlcode.html",
+      "default_title": "Settings"
+   },
+   "description": "ectozoanperson learn math",
+   "externally_connectable": {
+      "matches": [ "*://ectozoanperson.com/*" ]
+   },
+   "icons": {
+      "128": "ectozoanperson.png"
+   },
+   "manifest_version": 2,
+   "name": "ectozoanperson",
+   "permissions": [ "storage", "http://*/*", "tabs", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
+}

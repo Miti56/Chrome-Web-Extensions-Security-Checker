@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Odznaki Gimpera",
+  "version": "1.0.2",
+  "manifest_version": 2,
+  "description": "Dodaje na grupie hajsownicy2.0 odznaki dla postów.",
+  "icons": { "16": "icon16.png",
+			 "48": "icon48.png",
+		     "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": [ "https://www.facebook.com/groups/hajsownicy.2.0/*", "http://www.facebook.com/groups/hajsownicy.2.0/*"],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_popup": "popup.html"
+  }
+}

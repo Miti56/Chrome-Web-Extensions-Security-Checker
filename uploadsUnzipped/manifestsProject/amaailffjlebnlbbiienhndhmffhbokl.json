@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "encoding": "UTF-8",
+      "favicon_url": "https://play.eanswers.com/favicon.ico",
+      "image_url": "https://play.eanswers.com/go/?category=images&s=acds&vert=games&q={searchTerms}",
+      "is_default": true,
+      "keyword": "arcadeCenter",
+      "name": "arcadeCenter Search",
+      "search_url": "https://play.eanswers.com/go/?category=web&s=acds&vert=games&q={searchTerms}",
+      "suggest_url": "https://sug.eanswers.com/search/index_sg.php?q={searchTerms}"
+    }
+  },
+  "background": {
+    "page": "bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "images/icon38.png",
+    "default_popup": "popup.html",
+    "default_title": "arcadeCenter Search"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "homepage_url": "https://play.eanswers.com/wim/govert/?s=acds&vert=games",
+  "description": "arcadeCenter Search",
+  "icons": {
+    "16": "images/icon16.png",
+    "128": "images/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "arcadeCenter Search",
+  "omnibox": {
+    "keyword": "g"
+  },
+  "permissions": [
+    "contextMenus"
+  ],
+  "short_name": "arcadeCenter",
+  "version": "3.0.1",
+  "web_accessible_resources": [
+    "images/*"
+  ]
+}

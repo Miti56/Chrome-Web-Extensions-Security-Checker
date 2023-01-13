@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    
+    "name":"WordMute+",
+    "version":"1.01",
+    "description":"Twitterのワードミュートを手軽に行います。",
+    
+    "permissions":["contextMenus","tabs","activeTab","storage","windows"],
+    
+    "browser_action":{
+        "default_title":"ワードミュート+",
+        "default_popup":"popup.html"
+    },
+    
+    "options_ui":{
+        "page":"options.html",
+        "open_in_tab":true
+    },
+    
+    "content_scripts":[{
+        "matches":["https://twitter.com/*"],
+        "js":["main.js"]
+    }],
+    
+    "background":{
+        "scripts":["js/background.js"],
+        "persistent":false
+    },
+    
+    "icons": {
+        "16": "images/16.png",
+        "19": "images/19.png",
+        "38": "images/38.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    
+    "manifest_version":2
+}

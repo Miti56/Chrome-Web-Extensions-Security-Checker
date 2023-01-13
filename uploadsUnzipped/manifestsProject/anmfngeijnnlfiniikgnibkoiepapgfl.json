@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "default_locale": "en",
+    "icons": {
+        "128": "img/128.png",
+        "64": "img/64.png",
+        "32": "img/32.png"
+    },
+    "browser_action": {
+        "default_icon": "img/64.png",
+        "default_title": "__MSG_name__"
+    },
+    "background": {"scripts": ["js/background.js"]},
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": ["js/analytics.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_end"
+        },
+        {
+            "js": ["js/content.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_idle"
+        },
+        {
+            "all_frames": true,
+            "js": ["js/contentHelper.js"],
+            "css": ["css/content.css"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "<all_urls>",
+        "tabs",
+        "storage",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "manifest_version": 2,
+    "version": "1.3.3"
+}

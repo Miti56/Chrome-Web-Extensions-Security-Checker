@@ -1,0 +1,14 @@
+{"name": "Twenty One Pilots New Tab Page", 
+	"icons": {
+		"64": "pictures/64pic.png","128": "pictures/128pic.png","256": "pictures/256pic.png"},
+	"description": "__MSG_description__", 
+"manifest_version": 2, 
+"background":{"scripts":["jsfile.js"]},
+
+"update_url": "https://clients2.google.com/service/update2/crx",
+	"chrome_url_overrides": {"newtab": "mytab.html"},
+	"browser_action": {
+		"default_icon": "pictures/128pic.png","author": "alfredo"},
+ "default_locale": "en",
+	"version": "7.0.1"
+}

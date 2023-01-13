@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "SwingTab",
+    "manifest_version" : 2,
+    "version": "1.0",
+    "description": "매일 새로운 브라우저를 만나보세요.",
+    "chrome_url_overrides": {
+        "newtab": "background.html"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "icons": {
+          "512": "flag.png" }
+}

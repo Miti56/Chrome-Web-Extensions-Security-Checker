@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Screensharing",
+  "description": "Screensharing utility sample for getscreenmedia",
+  "version": "0.0.11",
+  "manifest_version": 2,	  
+  "version": "0.1",
+  "default_locale": "de",
+  "permissions": [
+	"desktopCapture"
+  ],	  
+  "icons": {
+    "128": "icon128.png"
+  },
+  "background": {
+	"scripts": ["background.js"]
+  },
+  "content_scripts": [ {
+	"js": [ "content.js" ],
+    "matches": [ "https://creativeweb.company/*" ]
+  }],
+  "externally_connectable": {
+	"matches": [
+      "https://creativeweb.company/*"
+	]
+  }	  
+}

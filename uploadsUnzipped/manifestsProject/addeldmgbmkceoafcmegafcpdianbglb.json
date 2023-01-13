@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "comparez",
+    "description": "comparez",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "homepage_url": "http://comparez.in/",
+
+    "background": {
+        "scripts": ["lib/jquery-2.0.3.min.js", "background.js"]
+    },
+    "permissions": ["*://*/*", "tabs"],
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["lib/jquery-2.0.3.min.js", "main.js"],
+            "run_at": "document_start"
+        }
+    ],
+
+    "icons": {
+        "128": "logo.png",
+        "16": "logo.png"
+    },
+    "browser_action": {
+        "default_icon": "logo.png",
+        "default_title": "comparez",
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": ["logo_for_pop.jpg"]
+
+}

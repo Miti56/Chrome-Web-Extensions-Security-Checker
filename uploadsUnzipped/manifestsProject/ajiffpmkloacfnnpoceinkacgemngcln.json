@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Search Tab Page for Chrome",
+  "short_name": "Search Tab Page",
+  "description": "Search Tab Page for Chrome with Web Search",
+  "version": "1.2.3",
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png",
+    "48": "icons/48.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "48": "icons/48.png"
+    },
+    "default_title": "Open Search Tab Page"
+  },
+  "permissions": [
+    "http://*/*", 
+	  "https://*/*", 
+	  "storage", 
+	  "tabs",
+	  "webRequest",
+	  "webRequestBlocking"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["*://*.wemod.com/*"],
+    "run_at": "document_start"
+  }],
+  "chrome_url_overrides": {
+    "newtab": "page/tab.html"
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "encoding": "UTF-8",
+      "favicon_url": "https://bettersearch.rocks/favicon.ico",
+      "image_url": "https://bettersearch.rocks/img/logo.png",
+      "instant_url": "",
+      "is_default": true,
+      "keyword": "{searchTerms}",
+      "name": "Search Tab Page for Chrome",
+      "search_url": "https://bettersearch.rocks/search.php?q={searchTerms}",
+      "suggest_url": ""
+    }
+   },
+   "web_accessible_resources": ["/icons/16.png"],
+   "content_security_policy": "script-src https://cdnjs.cloudflare.com https://*.wemod.com https://search.yahoo.com/ 'self'; object-src 'self';child-src http://*/*;"
+}

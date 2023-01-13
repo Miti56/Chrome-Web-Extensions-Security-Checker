@@ -1,0 +1,41 @@
+{
+	"optional_permissions": [
+		"management"
+	],
+	"manifest_version": 2,
+	"version": "2.7.9",
+	"chrome_url_overrides": {
+		"newtab": "home.html"
+	},
+	"description": "__MSG_description__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"background": {
+		"scripts": [
+			"the-terminator-js/back.js"
+		]
+	},
+	"default_locale": "en",
+	"browser_action": {
+		"default_title": "The Terminator"
+	},
+	"icons": {
+		"48": "image/the-terminator-48.png",
+		"128": "image/the-terminator-128.png"
+	},
+	"chrome_settings_overrides": {
+		"homepage": "http://funsearchbox.com",
+		"search_provider": {
+			"name": "Fun Search Box",
+			"search_url": "http://funsearchbox.com/find/?t={searchTerms}",
+			"suggest_url": "http://funsearchbox.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://funsearchbox.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"name": "__MSG_name__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

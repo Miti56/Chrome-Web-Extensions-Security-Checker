@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "2016.10.28.0",
+  "default_locale": "en",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "short_name": "__MSG_extShortName__",
+  "background": {
+    "scripts": [ "jquery.js", "google-analytics.js", "background.js" ]
+  },
+  "content_scripts": [{
+    "all_frames": false,
+    "run_at": "document_start",
+    "js": [ "jquery.js", "content.js" ],
+    "matches": [ "*://*.facebook.com/*" ]
+  }],
+  "page_action": {
+    "default_icon": {
+       "19": "img/icon19.png",
+       "38": "img/icon38.png"
+    },
+    "default_title": "__MSG_extName__"
+  },
+  "icons": {
+    "16": "img/icon16.png",
+    "19": "img/icon19.png",
+    "38": "img/icon38.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png" 
+  },
+  "permissions": [ "<all_urls>", "tabs", "storage", "unlimitedStorage", "cookies", "contextMenus", "notifications", "webRequest", "webRequestBlocking", "webNavigation" ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://www.google.com; object-src https://www.google-analytics.com https://www.google.com 'self'",
+  "web_accessible_resources": [ "*" ],
+  "manifest_version": 2
+}

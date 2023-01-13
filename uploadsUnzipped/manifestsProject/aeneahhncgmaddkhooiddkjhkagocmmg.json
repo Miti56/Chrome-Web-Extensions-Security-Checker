@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Vuedb",
+  "description": "您的電影收藏書籤",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*","activeTab","webNavigation","contextMenus"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+      "default_title": "Vuedb",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

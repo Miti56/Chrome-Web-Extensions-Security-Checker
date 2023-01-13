@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "UNIPA File Downloader",
+    "version": "2.3",
+    "manifest_version": 2,
+    "description": "Scarica tutti i file dal portale unipa",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.unipa.it/*"
+            ],
+            "js": [
+                "jquery.js",
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Publisher Info",
+  "version": "2.0",
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "clipboardWrite",
+    "clipboardRead",
+    "https://*/*",
+    "http://*/*",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["publisherinfo.js", "jquery.min.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Publisher Info",
+    "default_icon": "pubinfo.png"
+  },
+  "manifest_version": 2
+}

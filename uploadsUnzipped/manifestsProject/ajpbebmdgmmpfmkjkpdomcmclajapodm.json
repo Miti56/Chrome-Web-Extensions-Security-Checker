@@ -1,0 +1,18 @@
+{
+    "background": {
+        "scripts": [ "background.js" ]
+    },
+    "browser_action": {
+        "default_icon": "16X16.png",
+        "default_popup": "index.html",
+        "default_title": "choose wallpapers"
+    },
+    "manifest_version": 2,
+    "name": "choose wallpapers",
+    "description": "choose wallpers which you like ",
+    "version": "1.0.0",
+    "short_name": "choose wallpapers",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "permissions": [ "http://*/*", "https://*/*",  "tabs", "cookies"]
+}

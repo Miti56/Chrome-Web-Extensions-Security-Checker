@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "20498",
+ "manifest_version": 2,
+  "name": "PlayEduSep",
+"short_name": "extension sep 24 Short Desc",
+  "description": "extension sep 24",
+
+"kiosk_enabled" : true,
+
+  "author": "chromegallery0811",
+  "author_email": "chromegallery0811@gmail.com",
+
+  "language": "en",
+  "country": "USA",
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "js": ["foo.js"]
+    }
+  ],
+
+  "permissions": [
+    "http://www.google.com/*",
+    "http://www.aerlongurl_to_test_that_this_gets_wrapped_properly.com/",
+    "bookmarks",
+    "chrome://favicon/",
+    "contextMenus",
+    "cookies",
+    "geolocation",
+    "history",
+    "idle",
+    "notifications",
+    "tabs",
+    "unlimitedStorage"
+  ]
+}

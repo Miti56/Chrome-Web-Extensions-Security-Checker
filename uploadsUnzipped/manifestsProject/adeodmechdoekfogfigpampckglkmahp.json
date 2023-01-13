@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Bye bye script",
+  "description": "This one by one deletes the elements on your page, good for April fools.",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self' 'sha256-WOdSzz11/3cpqOdrm89LBL2UPwEU9EhbDtMy2OciEhs='",
+  "browser_action": {
+    "default_icon": "bye.png",
+    "default_popup": "bye.html"
+  },
+  "permissions": [
+    "<all_urls>"
+  ]
+}

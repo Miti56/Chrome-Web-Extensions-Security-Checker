@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.png","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.png"},"colors":{"frame":[255,255,255],"toolbar":[227,252,238],"tab_text":[105,186,140],"tab_background_text":[115,203,153],"bookmark_text":[115,203,153],"ntp_background":[255,255,255],"ntp_text":[115,203,153],"button_background":[227,252,238,1]},"tints":{"buttons":[0,0,0.5]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"repeat"}},"name":"Green Pills","version":"2","description":""}

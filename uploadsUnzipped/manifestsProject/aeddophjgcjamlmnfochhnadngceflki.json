@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Check-it Italian Geo-Localized Social Network",
+  "description": "Discover Italy",
+  "version": "0.1",
+  "app": {
+    "urls": [
+      "http://www.check-it.it/"
+    ],
+    "launch": {
+      "web_url": "http://www.check-it.it/"
+    }
+  },
+  "icons": {
+    "128": "icona_check-it128.png"
+  },
+  "manifest_version": 2
+}

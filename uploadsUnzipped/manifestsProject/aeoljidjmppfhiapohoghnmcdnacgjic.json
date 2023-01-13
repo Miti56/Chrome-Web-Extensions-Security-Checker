@@ -1,0 +1,37 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "我要看直書！",
+  "version": "0.4.1",
+  "manifest_version": 2,
+  "description": "反白一篇文章，享受直書閱讀的舒適！",
+  "background": { "scripts": ["background.js"] },
+  "icons": {
+      "16": "cr-16.png",
+      "48": "cr-48.png",
+			"128": "cr-128.png"
+  },
+  "browser_action": {
+	"default_icon": "cr-16.png",
+    "default_title": "我要看直書！",
+	"default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "cr-48.png"
+  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : ["inject.js"],
+      "all_frames" : false
+    }
+  ],
+  "permissions" : [
+    "contextMenus"
+	, "tabs"
+	, "notifications"
+	, "http://vw.ensky.tw/*"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Getifity",
+  "version": "1.0.7",
+  "description": "Getify brings the ability to get direct download link from hundreds of popular hosting websites with only one click. Free!",
+  "icons": {
+    "48": "images/icon.png",
+    "96": "images/icon@2x.png"
+  },
+  "author": "Alexandra Topaf",
+  "background": {
+    "scripts": [ "js/getify.js", "background.js" ]
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js":      ["content.js"]
+  }],
+  "permissions": [
+    "contextMenus",
+    "cookies",
+    "downloads",
+    "notifications",
+    "tabs",
+    "http://*/*/*",
+	"https://*/*/*"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ThopTV",
+  "version": "21.1.1",
+  "manifest_version": 2,
+  "description": "ThopTV is one-stop solution for entertainment. Here you will get 5000+ TV channels and 3000+ movies",
+  "homepage_url": "https://www.apkbooth.com/thoptv-apk-download-latest-version-free?utm_source=google&utm_medium=referral&utm_campaign=thoptv",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  }
+}

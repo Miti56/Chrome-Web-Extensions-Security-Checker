@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Xoftsilicon",
+	"description": "Xoftsilicon. Simplicity, Swiftness and Creativity. Follow on Twitter @Xoftsilicon",
+	"version": "1.0",
+	"icons": {
+	"128": "128.png"
+	},
+	"app": {
+	"urls": 
+		[
+			"http://www.xoftsilicon.com/"
+		],
+	"launch": {
+		"web_url": "http://www.xoftsilicon.com/"
+		}
+		},
+		"permissions": 
+		[
+		"unlimitedStorage",
+		"notifications"
+	]
+}

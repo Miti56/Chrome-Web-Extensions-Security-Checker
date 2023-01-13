@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "version":"1.0.693.302",
+  "name":"Zip4NewTab",
+  "description":"Zip4NewTab is a Chrome extension that replace your current new tab and offers links to zipping and unzipping your files.",
+  "icons":{
+      "128":"icons/Zip4NewTab-128.png"
+    },
+  "background":{
+      "scripts":[
+          "js/brand.js",
+          "js/background.js"
+        ]
+    },
+  "browser_action": {
+      "default_icon":"icons/Zip4NewTab-128.png",
+      "default_title":"New Tab"
+    },
+  "content_scripts": [{ "matches": ["*://*.4newtab.com/zip/*"], "js": ["js/contentScript.js"], "run_at":"document_start"}],
+  "chrome_url_overrides" : {
+   "newtab" : "html/newtab.html"
+  },
+  
+  "web_accessible_resources": [
+    "icons/checker.gif"
+  ],
+  "permissions":[
+      "http://*/*",
+      "https://*/*",
+      "cookies"
+    ]
+}

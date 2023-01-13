@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"container":["GOOGLE_SPREADSHEET","DOMAIN_INSTALLABLE"],"app":{"background":{"scripts":["background.js"]}},"api_console_project_id":"792938201230","container_info":{"post_install_tip":"The add-on includes an easy setup sidebar to get you started in minutes.","help_url":"https://adformatic.com/en/merchant-center-alerts/","report_issue_url":"https://adformatic.com/en/merchant-center-alerts/","container_id":"M-pAOc4S5CXO0vYYkrJCUDWVzRM8sod7L","container_version":"11"},"manifest_version":2,"name":"Merchant Center alerts","description":"Easily track changes in active and disapproved products in the Google Merchant Center. ","icons":{"16":"script-icon_16.png","128":"script-icon_128.png"},"version":"9"}

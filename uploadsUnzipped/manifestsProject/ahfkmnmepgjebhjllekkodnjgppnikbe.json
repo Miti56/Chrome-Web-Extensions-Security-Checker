@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.1",
+  "manifest_version": 2,
+  "description": "Informing citizens of Corporate subsidies recieved by our representatives.",
+  "browser_action": {
+    "default_icon": "caveatLogo.png",
+    "default_title": "Caveat",
+    "default_popup": "index.html"
+  },
+  "icons": { "48": "CaveatIcon48.png" },
+  "content_security_policy": "script-src 'self'  https://caveat-f98cf.firebaseio.com https://s-usc1c-nss-235.firebaseio.com 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+  "short_name": "Caveat",
+  "name": "Caveat",
+    "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ]
+      ,
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*", "*://*/*"
+]
+}

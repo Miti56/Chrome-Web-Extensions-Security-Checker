@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "SWS Name Replacer",
+	"version": "1.5",
+	"description": "A victor's best friend. Does not work on new reddit.",
+	"permissions": [
+		"https://*.reddit.com/*",
+		"http://*.reddit.com/*"
+		],
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*.reddit.com/*"], 
+			"js": ["script.js"],
+			"run_at": "document_end"  
+		}
+	]
+}

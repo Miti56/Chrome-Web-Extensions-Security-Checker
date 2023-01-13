@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Kindle Trend Chrome",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "KT Chrome",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": []
+    },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    },
+    "default_title": "KT Chrome 2.0",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "management",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

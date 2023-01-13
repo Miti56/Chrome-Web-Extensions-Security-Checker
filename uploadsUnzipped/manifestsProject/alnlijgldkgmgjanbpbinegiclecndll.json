@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Sudoku",
+  "description": "Play the best sudoku game in different difficult. Sudoku is the most popular logical game in the world. ",
+  "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "sudoku1280.png",
+   
+      "default_title": "Click To Play!"
+  },
+    "background": {
+    "scripts": ["popup.js"],
+    "persistent": false
+},
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+    
+}

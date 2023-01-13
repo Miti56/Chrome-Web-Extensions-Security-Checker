@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Cammy - Street Fighter theme by toxic",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar_toxic",
+"theme_frame":"images/frame_toxic",
+"theme_tab_background":"images/tab_toxic",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 212 , 222 , 217 ],
+"ntp_text": [ 212 , 222 , 217 ],
+"ntp_section_link": [ 212 , 222 , 217 ],
+"ntp_section_text": [ 212 , 222 , 217 ],
+"ntp_background": [ 104 , 135 , 119 , 0.5 ],
+"ntp_header": [ 57 , 120 , 89 , 0.15 ],
+"ntp_section": [ 57 , 120 , 89 , 0.15 ],
+"frame": [ 57 , 120 , 89 ],
+"toolbar": [ 104 , 135 , 119 ],
+"tab_text": [ 0 , 0 , 0 ],
+"tab_background_text": [ 0 , 0 , 0 ],
+"bookmark_text": [ 0 , 0 , 0 ]
+},
+"tints":
+{
+"buttons": [ 0.413978494623656 , 0.129707112970711 , 0.468627450980392 ],
+"frame_incognito": [ 0.393401805166511 , 0.334995014955135 , 0.326643598615917 ],
+"frame_inactive": [ 0.413978494623656 , 0.129707112970711 , 0.85 ],
+"frame_incognito_inactive": [ 0.413978494623656 , 0.129707112970711 , 0.85 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

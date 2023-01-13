@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Dashboard",
+  "description": "A dashboard that shows currently playing spotify song and what steam friends are online",
+  "version": "1.2",
+
+    "browser_action": {
+    "default_icon": "icon.png"
+  },
+  
+    "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "storage",
+    "http://api.steampowered.com/",
+	"https://embed.spotify.com/",
+	"https://api.spotify.com/",
+	"https://steamcdn-a.akamaihd.net/",
+	"tabs"
+  ],
+  "icons": { "256": "icon.png" }
+}
+

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"background": {     
+      "page": "main.html" 
+   },
+   "browser_action": {
+           "default_icon": "/images/raido32off.png",
+           "default_popup": "/options/popup.html"
+        },
+	"name": "raido vpn",
+	"description": "set proxy settings",
+	"version": "0.200.1",
+	"manifest_version": 2,
+	"content_scripts": [{
+		"matches": ["*://*/*"],
+        "all_frames": true,
+		"run_at": "document_start",
+		"js": ["/service/inject_options.js"]
+	}, {
+		"matches": ["https://vk.com/*"],
+		"js": ["/service/vk_com_disable_block.js"]
+    }],
+	"icons": {
+      "16": "/images/detailed/raido16.png",
+      "48": "/images/detailed/raido48.png",
+	  "128": "/images/detailed/raido128.png"
+    },
+	"options_page": "/options/options.html",
+    "permissions": [
+                "tabs", "*://*/*", "cookies", "browsingData", "webRequestBlocking", "webRequest", "proxy", "notifications", "storage", "privacy"
+  ]
+}

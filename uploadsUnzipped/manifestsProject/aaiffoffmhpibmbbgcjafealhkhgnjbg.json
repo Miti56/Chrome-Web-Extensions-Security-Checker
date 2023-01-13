@@ -1,0 +1,39 @@
+{
+   "background": {
+      "scripts": [ "scripts/background.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/pcs-38.png",
+      "default_title": "Vai su PiuCodiciSconto"
+   },
+   "content_scripts": [ {
+      "css": [ "css/raleway.css", "css/pcs.css" ],
+      "js": [ "scripts/script_popup.min.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "scripts/script_serp.min.js" ],
+      "matches": [ "*://www.google.it/*", "*://www.google.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Estensione che ti notifica la presenza di codici sconto e offerte su oltre 1000 store online.",
+   "icons": {
+      "128": "images/pcs-128.png",
+      "16": "images/pcs-16.png",
+      "19": "images/pcs-19.png",
+      "32": "images/pcs-32.png",
+      "38": "images/pcs-38.png",
+      "48": "images/pcs-48.png"
+   },
+   "manifest_version": 2,
+   "name": "PiuCodiciSconto",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "pages/options.html"
+   },
+   "permissions": [ "http://*/*", "https://*/*", "storage", "unlimitedStorage", "alarms","cookies", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.10",
+   "web_accessible_resources": [ "images/close.png", "images/pcs-38.png", "images/pcs-38-success.png", "images/pcs-38-alert-1.png", "images/pcs-38-alert-2.png", "images/pcs-38-alert-3.png", "images/pcs-38-alert-4.png", "images/pcs-38-alert-5.png", "images/logo-pcs.png", "scripts/background.min.js", "scripts/load_popup.min.js","images/logo-pcs-2.png","images/logo-pcs-footer.png" ]
+}

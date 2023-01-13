@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Kuwait News Portal",
+  "description": "Get your news Fresh",
+  "short_name": "pmd-news",
+  "version": "2.0",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "images/icon.png"
+  },
+  "permissions": [
+    "debugger",
+    "storage",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'"
+}

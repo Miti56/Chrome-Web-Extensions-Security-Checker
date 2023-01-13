@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "RedLine ModuleWriter",
+  "version": "2.1.5",
+  "manifest_version": 2,
+  "permissions": [
+    "serial",
+    "http://www.g200kg.com/"
+  ],
+  "minimum_chrome_version": "23",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["launch.js"],
+      "transient": true
+    }
+  }
+}

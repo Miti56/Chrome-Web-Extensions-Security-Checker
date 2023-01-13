@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"description": "Новое добавленное видео канала +100500 на YouTube. Достаточно щелкнуть один раз на значок и выведет самое новое видео с канала.",
+	"name": "+100500 - самое новое видео с канала",
+	"short_name": "AdamThomasMoran (+100500) канал",
+	"version": "1.0",
+
+        "permissions": [
+		"https://www.youtube.com/*"
+	],	
+	
+	
+	
+ "icons": {
+    "16" : "images/icon16.png",
+    "48" : "images/icon48.png",
+    "64" : "images/icon64.png",
+    "128" : "images/icon128.png"
+  },
+
+	"browser_action": {
+		"default_title": "+100500",
+		"default_icon": "images/icon.png",
+		"default_popup": "popup.html"
+	}
+
+
+}

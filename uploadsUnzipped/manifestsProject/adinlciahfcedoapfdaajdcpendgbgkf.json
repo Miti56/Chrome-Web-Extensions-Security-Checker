@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Burger Clicker",
+
+  "short_name": "Burger Clicker",
+
+  "version": "1.0.2",
+  "description": "Play Burger Clicker now",
+
+  "homepage_url": "http://callo.xyz/c/platform-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Burger Clicker",
+
+      "default_popup": "popup.html"
+  }
+}

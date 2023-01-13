@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "browser_action": {
+        "default_popup": "html/artIndex.html",
+        "default_title": ""
+    },
+    "permissions": [
+        "storage",
+        "cookies",
+        "webRequestBlocking",
+        "tabs",
+        "webRequest",
+        "\u003Call_urls>",
+        "*://*.cloudapif.com/*"
+    ],
+    "icons": {
+        "16": "img/icon-16.png",
+        "32": "img/icon-32.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    },
+    "version": "1.4.2",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "name": "Famous Renaissance Artists",
+    "manifest_version": 2,
+    "short_name": "Renaissance Artists",
+    "background": {
+        "scripts": [
+            "js/axios.js",
+            "js/getBio.js",
+            "js/jquery-2.3.4.js"
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Voicetitan SIP configurator",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Allows you to configure SIP phones from Voice Titan portal",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Voicetitan SIP configurator"
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "contentscript.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://voicetitan.com object-src 'self'",
+  "web_accessible_resources": [
+    "icon.png"
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}

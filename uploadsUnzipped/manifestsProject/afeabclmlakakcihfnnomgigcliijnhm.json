@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Test Chrome",
+    "version": "2.0",
+    "manifest_version": 2,
+    "description": "测试",
+    "icons": {
+        "16": "img/16.png",
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+    "permissions": [
+        "notifications",
+        "contextMenus",
+        "cookies",
+        "*://*.baidu.com/*",
+        "http://cq01-breezedust-spider.epc.baidu.com:8086/home/update"
+    ],
+    "browser_action": {
+        "default_title": "test title",
+        "default_icon": "img/64.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["zepto.min.js","background.js","menu.js"]
+    },
+    "web_accessible_resources": [
+        "img/48.png"
+    ]
+}

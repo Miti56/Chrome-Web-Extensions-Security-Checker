@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version" : 2,
+  
+  "name" : "Hide tftv posts",
+  "description" : "This extension hides posts on teamfortress.tv",
+  "version" : "1",
+
+  "browser_action" : {
+    "default_icon" : "icon32.png"
+  },
+
+  "options_page" : "options.html",
+
+  "permissions" : [
+    "storage"
+  ],
+
+  "icons" : {
+    "16" : "icon16.png",
+    "32" : "icon32.png",
+    "48" : "icon48.png",
+    "128" : "icon128.png"
+  },
+
+  "content_scripts" : [
+    {
+      "matches": [
+        "https://www.teamfortress.tv/*",
+        "http://www.teamfortress.tv/*"
+      ],
+      "js" : [
+        "jquery-1.12.1.min.js",
+        "content.js"
+      ]
+    }
+  ]
+}

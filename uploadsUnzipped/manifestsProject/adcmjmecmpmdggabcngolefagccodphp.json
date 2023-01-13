@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Geometry Dash - FULL VERSION",
+"description": "Play the FULL VERSION of the amazing arcade game Geometry Dash!",
+"version": "2.2",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://run3unblocked.co/geometry-dash/"
+],
+"launch": {
+"web_url": "http://run3unblocked.co/geometry-dash/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

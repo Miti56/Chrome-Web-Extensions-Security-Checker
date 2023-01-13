@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Ciudad Primavera",
+	"description": "Ciudad Primavera",
+	"version": "1.0.17",
+	"manifest_version": 2,
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"storage",
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

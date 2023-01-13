@@ -1,0 +1,14 @@
+  {
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "InstaInstaGram: Instant Instagram 4 Twitter",
+  "manifest_version":2,
+  "version": "0.0.1",
+  "description": "I want my Instagram NOW!!!!",
+  "permissions": ["https://twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["jquery.js", "script.js"]
+    }
+  ]
+}

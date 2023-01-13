@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Zebra Helper",
+  "description": "A tool to help analysis Zebra page.",
+  "version": "4.0.6",
+  "permissions": [
+    "cookies",
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "background_launcher.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "zebra-helper",
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://gm.mmstat.com https://g.alicdn.com; object-src 'self'"
+}

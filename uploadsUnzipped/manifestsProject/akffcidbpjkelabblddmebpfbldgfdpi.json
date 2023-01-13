@@ -1,0 +1,45 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Facebook Token Plus",
+  "description": "Facebook Token Plus will help you get Facebook for Apple Token in a simple click. It's really powerfull.",
+  "version": "1.2.0",
+  "icons": {
+    "128": "icon/icon128.png",
+    "16": "icon/icon16.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icon/icon16.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Facebook Token Plus"
+  },
+
+  "background": {
+    "scripts": [ "script/ga.js", "script/jquery.js", "script/background.js" ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*.facebook.com/*" ],
+      "js": [ "script/first.js" ],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
+  "incognito": "split",
+
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "cookies",
+    "https://*.facebook.com/*",
+    "http://*.facebook.com/*"
+  ]
+}

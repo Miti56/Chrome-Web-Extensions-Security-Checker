@@ -1,0 +1,16 @@
+{
+    "name": "CMDann.ca",
+    "description": "CMDann.ca Tech, Programming, Computing",
+    "app": {
+        "urls": ["http://www.cmdann.ca/"],
+        "launch": {
+            "web_url": "http://www.cmdann.ca/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "1.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

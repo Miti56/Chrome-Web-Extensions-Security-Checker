@@ -1,0 +1,30 @@
+{
+  "description": "Classic To-Do List",
+  "name": "TO-DO List",
+  "manifest_version": 2,
+  "version": "5.5.38",
+  "background": {
+    "scripts": [
+      "popup.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "webNavigation"
+  ],
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "sun.png",
+    "default_popup": "communicate.html",
+    "default_title": "TO-DO List"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "icons": {
+    "128": "sun.png"
+  }
+}

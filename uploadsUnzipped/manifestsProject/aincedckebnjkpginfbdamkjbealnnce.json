@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Image for Word (Image Search)",
+    "version": "1.0.5",
+    "description": "Search Image for the Selected Word - Powered by GoogleAPI ! Search Image right onto the page at your finger point.",
+	"short_name": "Image Search",
+	"permissions": ["activeTab", "declarativeContent", "storage", "contextMenus",
+		"https://developer.chrome.com/*",
+		"https://*.google.com/"
+	],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/logo-16.png",
+        "32": "images/logo-32.png",
+        "48": "images/logo-48.png",
+        "128": "images/logo-128.png"
+      }
+    },
+    "icons": {
+      "16": "images/logo-16.png",
+      "32": "images/logo-32.png",
+      "48": "images/logo-48.png",
+      "128": "images/logo-128.png"
+    },
+	"options_page": "options.html",
+    "manifest_version": 2,
+	
+	"offline_enabled": false
+}	

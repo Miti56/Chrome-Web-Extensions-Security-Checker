@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "1.2.0.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://viloud.tv/",
+      "http://viloud.tv/#plans",
+      "http://viloud.tv/terms-conditions/",
+      "http://viloud.tv/privacy-policy/",
+      "http://viloud.tv/help/",
+      "http://viloud.tv/contact/",
+      "http://viloud.tv/blog/",
+      "http://viloud.tv/?utm_source=chrome&utm_medium=install&utm_campaign=en_chrome_web_store",
+      "http://viloud.tv/es/",
+      "http://viloud.tv/es/#plans",
+      "http://viloud.tv/es/terminos-y-condiciones/",
+      "http://viloud.tv/es/politica-de-privacidad/",
+      "http://viloud.tv/es/ayuda/",
+      "http://viloud.tv/es/contacto/",
+      "http://viloud.tv/es/?utm_source=chrome&utm_medium=install&utm_campaign=es_chrome_web_store",
+      "https://app.viloud.tv/",
+      "https://app.viloud.tv/signup",
+      "https://app.viloud.tv/order?plan=pro",
+      "https://app.viloud.tv/order?plan=business",
+      "https://app.viloud.tv/login",
+      "https://app.viloud.tv/dashboard",
+      "https://app.viloud.tv/channels",
+      "https://app.viloud.tv/content",
+      "https://app.viloud.tv/settings"
+     
+    ],
+    "launch": {
+      "web_url": "http://app.viloud.tv/?utm_source=chrome&utm_medium=install&utm_campaign=chrome_web_store"
+    }
+  }
+}

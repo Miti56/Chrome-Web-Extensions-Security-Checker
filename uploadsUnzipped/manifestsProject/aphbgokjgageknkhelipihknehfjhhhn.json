@@ -1,0 +1,40 @@
+{
+ "name": "Rainbow Six Siege Wallpaper HD Tab Theme",
+ "manifest_version": 2,
+ "short_name": "Rainbow",
+ "description": "Download this wallpaper and you have only one task and it is to enjoy incredible backgrounds",
+ "version": "2.2",
+ "update_url": "https://clients2.google.com/service/update2/crx",
+ "chrome_url_overrides": {
+    "newtab": "detail/index.html"
+  },
+ "browser_action": {
+    "default_title": "Rainbow Six Siege Wallpaper HD Tab Theme",
+    "default_icon": {
+      "16": "detail/icon16.png",
+      "48": "detail/icon48.png",
+      "128": "detail/icon128.png"
+    }
+  },
+ "offline_enabled": true,
+ "offline_enabled": true,
+
+    "content_scripts": [{
+      "matches": [
+      "http://www.jd.com/*",
+      "https://www.jd.com/*"
+    ],
+    "js": ["detail/additional.js"]
+  }],
+ "incognito": "split",
+ "permissions": [ "unlimitedStorage", "storage", "contextMenus", "notifications", "bookmarks", "management"],
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "icons": {
+	"16": "icon16.png"
+  },
+ "icons": {
+	"128": "icon128.png"
+  }
+}

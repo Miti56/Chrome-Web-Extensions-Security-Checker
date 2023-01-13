@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Bitbucket octothorpe as link",
+    "version": "0.0.1",
+    "description": "Marked up commit messages with octothorpe as link. Worked only on commit page",
+    "icons": { "128": "icon.png" },
+    "manifest_version": 2,
+    "content_scripts": [
+    {
+        "matches": ["https://bitbucket.org/*/commits/*", "https://bitbucket.org/*/commits/*"],
+        "js": ["content.js"]
+    }
+]
+}

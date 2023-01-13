@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "My Stock(내 주식)",
+  "description": "내 관심 주식을 간편하게 보기",
+  "version": "1.5.4",
+  "content_security_policy": "script-src 'self' http://ac.finance.naver.com:11002/ http://polling.finance.naver.com/; object-src 'self'",
+  "browser_action": {
+    "default_icon": "images/icon128.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "24": "images/icon24.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "tab",
+    "http://*/*"
+  ]
+}

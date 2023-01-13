@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "page": "html/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "images/head.png",
+    "default_popup": "html/popup.html"
+  },
+  "icons": { "16": "images/head.png", "48": "images/head.png", "128": "images/head.png" },
+  "web_accessible_resources": ["*.png"],
+  "homepage_url": "https://search.patentmonk.com",
+  "manifest_version": 2,
+  "name": "Patent Monk",
+  "short_name": "Patent Monk",
+  "description": "Read patents like never before...",
+  "content_security_policy": "script-src 'self'  chrome-extension://abalkhoblmjkcheempmkfhbphbghnagk/lib/google-analytics.js;  object-src 'self'",
+  "permissions": ["webNavigation","storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+        "js": ["js/content-script.js"]
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["https://search.patentmonk.com/*"]
+  },
+  "version": "0.0.5.7"
+}

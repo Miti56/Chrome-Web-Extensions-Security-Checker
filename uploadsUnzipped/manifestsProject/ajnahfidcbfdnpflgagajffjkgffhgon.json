@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PDL",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "description": "Personal Data Locker",
+  "browser_action": {
+   "default_title": "PDL",
+    "default_icon": "logo-main.png",
+    "default_popup": "popup.html"
+  },
+   "icons": {
+      "128": "PDL_128_128.png",
+      "16": "PDL_16_16.png",
+      "48": "PDL_48_48.png"
+   },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs", "<all_urls>",    "activeTab", "webNavigation", "*://*/*", "storage",
+  "http://www.google.com/",
+  "https://www.google.com/"
+]
+}

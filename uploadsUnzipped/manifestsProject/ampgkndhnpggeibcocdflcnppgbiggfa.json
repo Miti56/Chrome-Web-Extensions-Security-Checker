@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "1000km Fund Status",
+  "description": "This extension will check specified 1000km 'kom op tegen kanker' Team fund status",
+  "version": "1.7",
+
+  "options_ui" : {
+    "page": "options.html"
+  },
+
+  "browser_action": {
+   "default_icon": { "16":  "favicon-16x16.png",
+                     "32":  "favicon-32x32.png",
+                     "96":  "favicon-96x96.png",
+		     "194": "favicon-194x194.png" },
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+     "storage",
+     "tabs",
+     "activeTab",
+     "http://www.1000km.be/*"  ]
+}
+

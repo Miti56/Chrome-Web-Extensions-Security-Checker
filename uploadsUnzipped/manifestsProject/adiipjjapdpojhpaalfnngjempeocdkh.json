@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Victoria Retro Real Makeover",
+
+  "short_name": "Victoria Retro Real Makeover",
+
+  "version": "1.0.2",
+  "description": "Play Victoria Retro Real Makeover now!",
+
+  "homepage_url": "http://flashcub.xyz/c/logic-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Victoria Retro Real Makeover",
+
+      "default_popup": "popup.html"
+  }
+}

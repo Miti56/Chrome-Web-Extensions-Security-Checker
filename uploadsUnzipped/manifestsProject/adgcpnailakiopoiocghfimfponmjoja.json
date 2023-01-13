@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Build a Globe",
+
+  "description": "Build and share custom snow globes with your family and friends!",
+
+  "version": "1.2",
+
+  "icons": {
+
+    "128": "128.png"
+
+  },
+
+  "app": {
+
+    "urls": [
+
+      "http://www.phasethreeapps.com/apps/2013/snow/app.html"
+
+    ],
+
+    "launch": {
+
+      "web_url": "http://www.phasethreeapps.com/apps/2013/snow/app.html"
+
+    }
+
+  },
+
+  "permissions": [
+
+    "unlimitedStorage",
+
+    "notifications"
+
+  ]
+
+}

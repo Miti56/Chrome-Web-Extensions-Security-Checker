@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Twitch Randomizer",
+  "version": "0.2.2",
+  "description": "Twitch Randomizer a simple extension that takes you to a random live twitch stream.",
+  "options_page": "options.html",
+
+  "content_scripts": [
+  {
+    "matches": [
+      "*://*.twitch.tv/*"
+    ],
+    "js": ["jquery-3.4.1.min.js", "content.js"]
+  }
+
+],
+  "browser_action": {
+  	"default_icon": "icon.png"
+  },
+  "background": {
+  	"scripts": ["background.js", "jquery-3.4.1.min.js", "twitch_api.js"]
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "KIO Link",
+  "version": "3.1.1",
+  "description": "The complete app for KIO Networks.",
+  "icons": {
+    "128": "icons/logo-link128.png",
+    "16": "icons/logo-link16.png"
+  },
+  "short_name": "KIO Link",
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "354461832337",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://kiolink.kioapps.com/"
+    }
+  }
+}

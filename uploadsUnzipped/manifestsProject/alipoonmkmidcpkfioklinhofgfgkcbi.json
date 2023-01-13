@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.2",
+  
+  "name": "Mahjong Game 2016",
+  "short_name": "Mahjong",
+  "description": "New 2016 mahjong game play free",
+  "app": {
+    "urls": [
+      "http://aslaft.com/"
+    ],
+    "launch": {
+      "web_url": "http://aslaft.com/mahjong-game.html",
+      "container": "panel",
+      "height": 570,
+      "width": 760
+
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

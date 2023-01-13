@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+	"name": "Moo Moo IO Play",
+	"author": "http://www.gamesxland.com",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Chrome extensions io games with free game list.",
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"icons" :{
+		"16"	:	"icon-16.png",
+		"48"	:	"icon-48.png",
+		"128"	:	"icon-128.png"
+	},
+	"background" : { "scripts" : ["add.js"]
+	}	
+}

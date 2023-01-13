@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "協訊國際ERP專案報價系統",
+    "description": "協訊國際ERP專案報價系統",
+    "version": "2",
+    "version_name": "1.2",
+    "manifest_version": 2,
+    "kiosk_enabled" : true,
+    "icons": { "16": "mobile_16.png", "128": "mobile_128.png" },
+    "app": {
+      "background": {
+        "scripts": ["background.js"]
+      }
+    },
+    "externally_connectable": {
+      "ids": ["*"],
+      "matches": ["*://*.ss3c.com.tw/*",
+                 "*://127.0.0.1/*",
+                 "*://*.google.com/*"]
+    },
+    "permissions": [
+      "http://ss3cerp.ss3c.com.tw/",
+      "http://*.ss3c.com.tw/*",
+      "http://*.google.com/",
+      "https://*.google.com/",
+      "https://ajax.googleapis.com/",
+      "http://*.youtube.com/",
+      "*://*.mozilla.com/*",
+      "*://*.bootstrapcdn.com/*",
+      "http://*/*",
+      "<all_urls>",
+      "alarms",
+      "clipboardRead",
+      "clipboardWrite",
+      "desktopCapture",
+      "gcm",
+      "geolocation",
+      "identity",
+      "fileSystem",
+      "syncFileSystem",
+      "nativeMessaging",
+      "notifications",
+      "storage",
+      "serial",
+      "tts",
+      "unlimitedStorage",
+      "usb",
+      "webview"
+    ]
+    }

@@ -1,0 +1,15 @@
+{
+  "name" : "GrowSoci.al Connector",
+  "version" : "0.5",
+  "description" : "It is a connector for GrowSoci.al",
+  "permissions": [ "tabs", "\u003Call_urls>", "cookies", "contextMenus", "unlimitedStorage", "notifications", "storage", "clipboardWrite" ],
+  "update_url": "http://clients2.google.com/service/update2/crx", 
+  "icons": { "16": "cookie.png", "48": "cookie.png", "128": "cookie.png" },
+  "browser_action": {
+    "default_icon": "cookie.png"
+  },
+  "background": {
+    "scripts": ["jquery.js","background.js"]
+  },   
+  "manifest_version": 2
+}

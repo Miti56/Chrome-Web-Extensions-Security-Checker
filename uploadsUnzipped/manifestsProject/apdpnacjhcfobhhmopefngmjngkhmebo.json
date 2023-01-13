@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "img/128x128.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Automatic Instagram Liker Extension by Wolf Global ORG",
+   "icons": {
+      "128": "img/128x128.png",
+      "16": "img/16x16.png",
+      "48": "img/48x48.png"
+   },
+      "content_scripts": [ {
+       "css": [ "bootstrap.min.css" ],
+      "js": ["jquery.js", "content-instagram.js"],
+      "matches": [ "*://www.instagram.com/*", "*://instagram.com/*" ]
+   }],
+
+   
+   "manifest_version": 2,
+   "name": "Wolf Global - Auto Liker",
+   "offline_enabled": true,
+   "permissions": [ "activeTab","tabs","notifications","http://*/","https://*/","storage", "*://www.instagram.com/*", "*://www.likeitall.com/*" ],
+   "version": "2.7"
+}

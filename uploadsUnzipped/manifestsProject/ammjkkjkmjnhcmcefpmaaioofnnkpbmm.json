@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Search Helper",
+  "version": "2.0.1",
+  "manifest_version": 2,
+  "description": "Perform fine-grained web search using Google advanced search.",
+  "browser_action": {
+    "default_icon": "images/search.png",
+    "default_popup": "search.html"
+  },
+  "icons":{
+  	"512":"images/search.png"
+  }
+}

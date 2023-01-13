@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Chatwork Stamp",
+  "version": "1.1.1",
+  "manifest_version": 2,
+  "description": "チャットワークにスタンプ機能を追加します。各ルームにアップ済みの画像をスタンプとして手軽に貼り付けられます。",
+  "content_scripts": [
+    {
+      "matches": ["https://*.chatwork.com/*"],
+      "css": ["cwstamp.css"],
+      "js": ["jquery-2.1.4.min.js", "exec.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "background",
+    "https://*.chatwork.com/*",
+    "storage"
+  ]
+}

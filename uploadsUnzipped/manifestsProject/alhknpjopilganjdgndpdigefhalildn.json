@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"RazorWire Energy RASPBERRY - 1366",
+"description":"RazorWire Energy Player 1 Gaming Fuel >>> Grab an awesome discount here>> http://tinyurl.com/razorwireenergy ",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background.jpg"
+},
+"colors":
+{
+"ntp_link": [ 217 , 217 , 217 ],
+"ntp_text": [ 217 , 217 , 217 ],
+"ntp_section_link": [ 217 , 217 , 217 ],
+"ntp_section_text": [ 217 , 217 , 217 ],
+"ntp_background": [ 108 , 108 , 108 , 0.5 ],
+"ntp_header": [ 0 , 0 , 0 , 0.15 ],
+"ntp_section": [ 0 , 0 , 0 , 0.15 ],
+"frame": [ 0 , 0 , 0 ],
+"toolbar": [ 108 , 108 , 108 ],
+"tab_text": [ 217 , 217 , 217 ],
+"tab_background_text": [ 217 , 217 , 217 ],
+"bookmark_text": [ 217 , 217 , 217 ]
+},
+"tints":
+{
+"buttons": [ 0.001 , 0.001 , 0.423529411764706 ],
+"frame_incognito": [ 0 , 0 , 0 ],
+"frame_inactive": [ 0.001 , 0.001 , 0.85 ],
+"frame_incognito_inactive": [ 0.001 , 0.001 , 0.85 ]
+},
+"properties":
+{
+"ntp_background_alignment":"middle",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

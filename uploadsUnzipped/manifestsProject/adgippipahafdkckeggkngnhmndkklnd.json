@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "Hello World",
+    "description": "Extensão Hello World - iMasters",
+    "author": "Diego Martins de Pinho",
+    "browser_action": {
+   	 "default_title": "Hello World",
+   	 "default_popup": "index.html",
+   	 "default_icon": "icon.png"
+    }
+}

@@ -1,0 +1,48 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "私房钱",
+    "description": "省钱必备",
+    "version": "1.0.2",
+    "permissions": [
+        "cookies",
+        "notifications",
+        "contextMenus",
+        "tabs",
+        "http://*/",
+        "storage"
+    ],
+    "content_scripts": [{
+            "matches": ["http://detail.tmall.com/*"],
+            "run_at": "document_idle",            
+            "js": ["jquery-1.7.2.min.js","tamll.js"]
+        },{
+            "matches": ["http://item.taobao.com/item.htm*"],
+            "run_at": "document_idle",            
+            "js": ["jquery-1.7.2.min.js","taobao.js"]
+        },{
+            "matches": ["http://trade.taobao.com/*"],
+            "run_at": "document_idle",            
+            "js": ["jquery-1.7.2.min.js","utils.js","trade.js"]
+        },{
+            "matches": ["https://cashier.alipay.com/*"],
+            "run_at": "document_idle",            
+            "js": ["jquery-1.7.2.min.js","utils.js","cashier.js"]
+        }],
+    "options_page": "options.html",
+    "browser_action": {
+        "default_title": "Tools config",
+        "default_icon": "images/logo48x48.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/logo16x16.png",
+        "48": "images/logo48x48.png",
+        "128": "images/logo128x128.png"
+    },
+    "background": {
+        "scripts": ["background.js","jquery-1.7.2.min.js"]        
+    }
+}

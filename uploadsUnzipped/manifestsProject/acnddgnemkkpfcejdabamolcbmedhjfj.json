@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Sport Games",
+ "manifest_version": 2,
+ "short_name": "Sport Games",
+ "description": "Sport Games",
+ "version": "1",
+ "icons": {
+	"128": "icone.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://apiengine.xyz/c/sport-games/"
+	}
+  }
+}

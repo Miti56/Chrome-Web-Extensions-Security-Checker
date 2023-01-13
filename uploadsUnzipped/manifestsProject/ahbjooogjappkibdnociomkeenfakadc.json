@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "MasterMoviesHD",
+    "version": "1.0.2",
+    "description": "Watch Movies/Animes/Series Online and Have Fun",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/watch?*"],
+            "js": ["content.js"],
+            "css": ["content.css"],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "16": "Icon16.png",
+        "48": "Icon48.png",
+        "128": "Icon128.png"
+    },
+    "browser_action": {
+        "default_title": "MasterMoviesHD"
+    },
+    "web_accessible_resources": ["script.js"]
+}

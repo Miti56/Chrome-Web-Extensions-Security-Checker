@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Best Vines",
+  "description": "Best Vines",
+  "background": 
+  {
+    "page":"background.html"
+  },
+  "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{ 
+      "matches": ["http://*/*","https://*/*"], 
+      "js": ["jquery.min.js", "content_script.js"], 
+      "all_frames": false
+  }], 
+  "permissions": [
+    "tabs",
+     "contextMenus",
+    "https://secure.flickr.com/",
+    "https://ssl.google-analytics.com/",
+    "https://www.facebook.com/",
+    "https://connect.facebook.net/"
+  ]
+}

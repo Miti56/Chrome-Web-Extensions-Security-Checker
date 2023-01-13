@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Lucky Life",
+
+  "short_name": "Lucky Life",
+
+  "version": "1.0.2",
+  "description": "Play Lucky Life on your browser",
+
+  "homepage_url": "https://chromeo.pw/c/juegos-de-restaurantes/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Lucky Life",
+
+      "default_popup": "popup.html"
+  }
+}

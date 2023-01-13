@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Name.com DNS Export",
+  "description": "Export DNS entries for domains registered with Name.com",
+  "version": "0.1",
+  "icons": {
+    "64": "icon-64.png",
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.name.com/account/domain/details/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "https://www.name.com/"
+  ]
+}

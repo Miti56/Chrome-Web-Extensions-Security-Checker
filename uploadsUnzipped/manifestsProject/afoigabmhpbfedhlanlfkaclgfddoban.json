@@ -1,0 +1,25 @@
+{
+   "description": "Tools for Quantum Studies in Science",
+   "permissions":[ "http://*/*","https://*/*","activeTab", "storage", "tabs" ],
+   "manifest_version": 2,
+   
+   "background": {
+       "persistent": true,
+      "scripts": [
+         "bg_script.js",
+         "scripts/quant_getter.js"
+      ]
+   },
+   
+   "content_security_policy":  "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  
+  "icons": {
+      "48": "images_f/az48.png",
+      "128":"images_f/az128.png",
+      "64":"images_f/az64.png"
+   },
+   "name":  "Tools Quant Getter",
+
+   "update_url":"http://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}

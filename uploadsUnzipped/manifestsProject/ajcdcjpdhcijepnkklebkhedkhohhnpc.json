@@ -1,0 +1,16 @@
+	{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name":"SpongeBob Adventure",
+	"description":"Best SpongeBob Adventures Selection! Enjoy the best SpongeBob Free Games Online Now!",
+	"version":"0.0.0.3",
+	"manifest_version":2,
+	"icons":{"128":"128.png"},
+	"app":{
+		"urls":["http://bestspongebobgames.blogspot.com/"],
+		"launch":{"web_url":"http://bestspongebobgames.blogspot.com/"}
+	},
+	"permissions":[
+		"unlimitedStorage"
+		]
+	}

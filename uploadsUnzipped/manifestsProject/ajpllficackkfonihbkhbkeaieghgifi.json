@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FlashIt",
+  "description": "FlashIt default search provider",
+  "version": "0.3",
+  "manifest_version": 2,
+  "permissions": [ "*://*.flashit.xyz/*", "notifications", "tabs", "webRequest", "webRequestBlocking", "storage" ],
+  "content_scripts": [ {
+    "js": [ "common/contentscript.js" ],
+    "matches": ["*://*.flashit.xyz/*"],
+    "run_at": "document_end"
+  } ],
+  "background": {
+    "scripts": [ "release/browseraction_release.js"]
+  },
+  "browser_action": {
+    "default_icon": "img/logo_48x.png"
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Flashit",
+      "keyword": "https://www.flashit.xyz/search.aspx",
+      "search_url": "https://www.flashit.xyz/search.aspx?q={searchTerms}&src=ds&pid=flashit",
+      "suggest_url": "https://www.flashit.xyz/ntapi/suggestions/rd?q={searchTerms}",
+      "search_url_post_params": "",
+      "favicon_url": "https://www.flashit.xyz/favicon.ico",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "icons": {
+    "128": "img/logo_128x.png"
+  }
+}

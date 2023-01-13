@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "common/kissy-1.2.0-min.js", "common/kissy-component.js", "js/tools.js" ,"bgparsedom.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/icon19.png",
+      "default_popup": "popup.html",
+      "default_title": "Icebear白熊求职助手, 闪填简历, 轻松网申"
+   },
+   "content_scripts": [ {
+	  "js": [ "common/kissy-1.2.0-min.js", "common/kissy-component.js", "common/md5.js" , "common/jquery.js","common/jquery.Jcrop.js", "js/drag.js", "js/supportsite.js", "js/34taologin.js", "js/web-init.js", "jm.js", "js/cookies.js"],
+      "css":["extra/animated-notifications.css","extra/animate.css","extra/jobsminer.css"],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self' 'unsafe-eval' https://www.icebear.me/; ",
+   "description": "Icebear白熊求职助手, 专为企业网申设计，省去繁杂填写，支持多种浏览器， 适配各类网申页面，让offer来得更轻松！",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "manifest_version": 2,
+   "options_page": "popup.html",
+   "name": "Icebear白熊求职助手",
+   "permissions": [ "management", "proxy", "idle", "tabs", "cookies", "notifications", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*",   "unlimitedStorage" ],
+   "homepage_url":"http://www.icebear.me",
+   "version": "1.0.3.2",
+   "web_accessible_resources": [ "/extra/jobsminer.css", "/extra/popup.css", "popup.html" ]
+}

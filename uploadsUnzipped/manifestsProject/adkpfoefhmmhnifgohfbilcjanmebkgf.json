@@ -1,0 +1,25 @@
+{
+
+	"name": "Redon Extension",
+	"version": "0.0.5",
+	"description": "Download Files with Redon ",
+	"homepage_url"             : "http://www.diodecode.com/",
+    "default_locale"           : "en",
+	"icons": {"16": "icon16.png", "128": "icon128.png"},
+	"background": {"persistent": true, "page": "background.html"},
+	"web_accessible_resources": [   "images/icon16.png",   "images/close.png"   ],
+	
+	"permissions": ["tabs", "activeTab",  "contextMenus", "downloads", "downloads.open", "downloads.shelf", "webRequestBlocking", "webRequest", "*://*/*" ],
+ 	
+	"manifest_version": 2,
+	"minimum_chrome_version"   : "18.0",
+    "offline_enabled"          : false,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"content_scripts": [  {  "matches": ["<all_urls>"], "css": ["styles.css"], "js": [ "content.js"] } 	]
+   
+}
+
+
+
+

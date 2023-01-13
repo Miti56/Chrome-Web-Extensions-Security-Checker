@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Copy2Cloud",
+  "description": "Copy & Paste Anywhere",
+  "version": "1.0",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "permissions": [
+	"tabs",
+    "contextMenus",
+	"identity",
+    "http://www.google.com/buzz/api/buzzThis/buzzCounter"
+  ],
+  "background": {
+    "scripts": ["script.js"]
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,80 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.linkedin.com/*", 
+                "https://resumes.indeed.com/resume/*", 
+                "https://hiring.monster.com/*", 
+                "https://www.careerbuilder.com/*", 
+                "https://employer.dice.com/*", 
+                "https://www.indeed.com/*", 
+                "http://inlook.internal/*", 
+                "http://www.jobsite.co.uk/*", 
+                "https://glandore-pipeline.vsource.io/*"
+            ], 
+            "all_frames": true, 
+            "run_at": "document_start", 
+            "js": [
+                "includes/content.js"
+            ]
+        }
+    ], 
+    "name": "vSource Pipeline", 
+    "default_locale": "en", 
+    "icons": {
+        "128": "icons/icon128.png", 
+        "48": "icons/icon48.png", 
+        "16": "icons/button.png"
+    }, 
+    "web_accessible_resources": [
+        "css/main.css", 
+        "css/submission_history.css", 
+        "css/linkedin_search_page.css", 
+        "css/linkedin_sales_navigator_search_page.css", 
+        "css/careerbuilder_search_page.css", 
+        "icons/button.png", 
+        "icons/button_disabled.png", 
+        "icons/icon32.png", 
+        "icons/icon48.png", 
+        "icons/icon100.png", 
+        "icons/icon128.png", 
+        "icons/like.png", 
+        "icons/close.png", 
+        "icons/loading.gif", 
+        "icons/breadcrumbs_icon32.png", 
+        "icons/scoop_thumb.png", 
+        "icons/scoop_thumbed.png", 
+        "lib/jquery-ui/jquery-ui.min.css", 
+        "lib/jquery-ui/jquery-ui.min.js", 
+        "lib/jquery-ui/images/ui-icons_444444_256x240.png", 
+        "lib/jquery-ui/images/ui-icons_555555_256x240.png", 
+        "lib/jquery-ui/images/ui-icons_777777_256x240.png", 
+        "lib/jquery-ui/images/ui-icons_ffffff_256x240.png"
+    ], 
+    "description": "Extension for vsource pipeline", 
+    "background": {
+        "page": "background.html"
+    }, 
+    "homepage_url": "https://chrome.google.com/webstore/detail/vsource-pipeline/amnbnhabnpcpjegbelaknhfkohkdfjdl?authuser=1", 
+    "version": "3.3.3", 
+    "manifest_version": 2, 
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'", 
+    "browser_action": {
+        "default_icon": "icons/button_disabled.png", 
+        "default_title": "vSource"
+    }, 
+    "permissions": [
+        "activeTab", 
+        "https://breadcrumbs.vsource.io/*", 
+        "https://breadcrumbs-staging.vsource.io/*", 
+        "https://bcs.local/*", 
+        "https://api.vsource.io/*", 
+        "https://glandore-pipeline.vsource.io", 
+        "http://inlook.internal/*", 
+        "https://inlook-consumer.vsource.io/*", 
+        "contextMenus", 
+        "webNavigation"
+    ]
+}

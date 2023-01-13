@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "Autolavista",
+  "name": "Autolavista",
+  "description": "Autolavista",
+  "version": "0.1",
+  "manifest_version": 2,
+  "homepage_url": "http://www.autolavista.com/",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "app/background.js"
+    ]
+  },
+  "permissions": [
+    "https://*.mobile.de/*",
+    "https://*.autoscout24.de/*"
+  ],
+  "browser_action": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mobile.de/*",
+        "https://*.autoscout24.de/*",
+        "https://*.ecb.europa.eu/*",
+        "https://cors-anywhere.herokuapp.com/*",
+        "https://api.sendgrid.com/*"
+      ],
+      "css": [
+        "/static/css/app.css"
+      ],
+      "js": [
+        "/static/js/content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "/static/css/content.css"
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+}

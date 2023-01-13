@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "VinoCities Manager",
+  "description": "Console d'administration des sites Internet hébergés sur la plate-forme VinoCities.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "*://admin.vinocities.com/admin/"
+    ],
+    "launch": {
+      "web_url": "http://admin.vinocities.com/admin/"
+    }
+  },
+  "icons": {
+    "128": "vinocities-128x128.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Eksistats Redditify",
+  "version": "0.0.10",
+  "manifest_version": 2,
+  "description": "Eksisozluk goruntusu redditimsi bir havaya burundurur.",
+  "homepage_url": "https://eksistats.co",
+  "icons": {
+    "16": "icons/my_logo_16.png",
+    "48": "icons/my_logo_48.png",
+    "128": "icons/my_logo_128.png"
+  },
+  "default_locale": "tr",
+  "background": {
+    "scripts": [
+      "js/firebase.js",
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "options_page": "src/options_custom/index.html",
+  "permissions": [
+    "identity",
+    "contentSettings",
+    "https://eksisozluk.com/*"
+  ],
+  "browser_action": {
+    "default_icon": "icons/my_logo_128.png",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://eksisozluk.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css",
+        "css/bootstrap.min.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://eksisozluk.com/*"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ],
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "990958380380-qitmc08t9af127lkjrqt2539b817tg5v.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  }
+}

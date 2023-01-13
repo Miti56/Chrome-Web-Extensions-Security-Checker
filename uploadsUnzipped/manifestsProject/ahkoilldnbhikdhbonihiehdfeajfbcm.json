@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Keeley Hazell London's Angel",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar_toxic",
+"theme_frame":"images/frame_toxic",
+"theme_tab_background":"images/tab_toxic",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 0, 0, 0 ],
+"ntp_text": [ 0, 0, 0 ],
+"ntp_section_link": [ 224 , 217 , 209 ],
+"ntp_section_text": [ 224 , 217 , 209 ],
+"ntp_background": [ 141 , 119 , 96 , 0.5 ],
+"ntp_header": [ 159 , 115 , 70 , 0.15 ],
+"ntp_section": [ 159 , 115 , 70 , 0.15 ],
+"frame": [ 159 , 115 , 70 ],
+"toolbar": [ 141 , 119 , 96 ],
+"tab_text": [ 0, 0, 0 ],
+"tab_background_text": [ 0, 0, 0 ],
+"bookmark_text": [ 0, 0, 0 ]
+},
+"tints":
+{
+"buttons": [ 0.0851851851851851 , 0.189873417721519 , 0.464705882352941 ],
+"frame_incognito": [ 0.0793126239259749 , 0.365784741844336 , 0.422606689734717 ],
+"frame_inactive": [ 0.0851851851851851 , 0.189873417721519 , 0.85 ],
+"frame_incognito_inactive": [ 0.0851851851851851 , 0.189873417721519 , 0.85 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

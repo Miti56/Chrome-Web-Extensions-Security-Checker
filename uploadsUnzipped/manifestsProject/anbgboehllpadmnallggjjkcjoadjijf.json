@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "AutoClose Blacklisted",
+	"short_name" : "AutoClose Blacklisted",
+	"version": "1.1.0",
+	
+	"description": "Will automatically close tabs\"websites\"(POPUPS) you add to Blacklist",
+
+	"icons": {
+		"48": "icons/ACB-48.png",
+		"96": "icons/ACB-96.png"
+	},
+	"permissions" : [
+		"tabs",
+		"storage",
+		"<all_urls>"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"options_ui": {
+		"page": "popup/options.html",
+		"browser_style": true
+	  },
+	"browser_action": {
+		"chrome_style": true,
+		"default_popup": "popup/main.html",
+		"default_icon": {
+		  "16": "icons/ACB-16.png",
+		  "32": "icons/ACB-32.png"
+		},
+		"default_title": "AutoClose Blacklisted"
+	}
+}

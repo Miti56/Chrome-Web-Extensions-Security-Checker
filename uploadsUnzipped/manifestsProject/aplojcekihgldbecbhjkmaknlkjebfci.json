@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+    "manifest_version": 2,
+    "name": "Dtool",
+    "version": "1.0.7",
+    "description": "用于采集各大电商平台数据(企业专用).",
+    "browser_action": {
+        "default_icon": "icon/carrot_48.png",
+        "default_title": "正式版",
+        "default_popup": "popup.html"
+    }, 
+    "icons": { 
+		"16": "icon/carrot_16.png",
+    	"48": "icon/carrot_48.png",   
+   		"128": "icon/carrot_128.png"
+	 },
+    "permissions": [
+        "*://*/*",
+        "bookmarks",
+        "tabs",
+    	"webNavigation",
+    	"webRequestBlocking",
+        "cookies",
+        "storage",
+        "notifications",
+        "history"
+    ],
+    "background": {
+    	"persistent": false,
+    	"scripts": ["js/libs/angular.min-1.4.6.js","js/app.js"]
+    }, 
+    "content_scripts": [{
+         "matches": ["http://*/*","https://*/*"],
+         "js": ["js/content/jquery-2.1.1.min.js", "js/content/content.js"],   
+         "run_at": "document_end",
+         "all_frames": true
+    }] 
+}

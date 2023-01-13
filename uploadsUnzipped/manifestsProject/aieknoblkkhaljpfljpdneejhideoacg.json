@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Fitbolt for Google Chrome\u2122",
+  "homepage_url": "http://www.fitbolt.com",
+  "version": "1.4",
+  "description": "Integrate the Fitbolt workday health & wellness platform into your browser. User guide: http://www.fitbolt.com/guides/chrome",
+  "icons":{
+    "16":"img/icon.png",
+    "48":"img/48x48.png",
+    "128":"img/128x128.png"
+  },
+  "background": {
+    "page": "background_page.html"
+  },
+  "browser_action":{
+    "default_icon": "img/tb_icon.png",
+    "default_title": "FitBolt",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://*/*",
+    "notifications",
+    "background",
+    "tabs"
+  ],
+  "offline_enabled": false,
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.fitbolt.com http://localhost; object-src 'self' 'unsafe-eval' https://www.fitbolt.com http://localhost"
+}

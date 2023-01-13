@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Ristoranti.it Dashboard",
+  "version": "0.5.1",
+  "minimum_chrome_version": "25",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "sockets": {
+    "tcp": {
+      "connect": "*"
+    }
+  },
+  "permissions": ["usb", "webview", "fullscreen", "storage"],
+  "bluetooth": {
+    "profiles": [
+      "00001101-0000-1000-8000-00805f9b34fb"
+    ],
+    "uuids": [
+      "00001101-0000-1000-8000-00805f9b34fb"
+    ],
+    "socket": true
+  },
+  "optional_permissions": [
+    {
+      "usbDevices": [
+        { "vendorId": 1046, "productId": 20497 },
+        { "vendorId": 1659, "productId": 8965 },
+        { "vendorId": 1208, "productId": 3587 },
+        { "vendorId": 1137, "productId": 85 }
+      ]
+    }
+  ]
+}

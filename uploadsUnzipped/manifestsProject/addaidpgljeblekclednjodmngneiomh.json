@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "daypo tests online",
+  "description": "Create, publish, print and visualize tests with lot of options. Methods of memorization and fast learning. Your e-learning site.",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.daypo.net/"
+    ],
+    "launch": {
+      "web_url": "http://www.daypo.net/create.php"
+    }
+  }
+}

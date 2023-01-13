@@ -1,0 +1,66 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Ourdata - the best free ad blocker",
+    "version": "1.10.4.8",
+    "default_locale": "en",
+    "description": "The free Ourdata adblocker, based on uBlock Origin, is built to value privacy plus choice.",
+    "icons": {
+        "16": "img/ourdata_16.png",
+        "128": "img/ourdata_128.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "19": "img/ourdata_toolbar1_19.png",
+            "38": "img/ourdata_toolbar1_38.png"
+        },
+        "default_title": "Ourdata",
+        "default_popup": "popup.html"
+    },
+
+    "author": "All uBlock Origin contributors, and Ourdata, PBC",
+    "background": {
+        "page": "background.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["js/vapi-client.js", "js/contentscript.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["js/scriptlets/subscriber.js", "js/scriptlets/ourdata-detect.js"],
+            "run_at": "document_idle",
+            "all_frames": false
+        }
+    ],
+    "incognito": "split",
+    "minimum_chrome_version": "26.0",
+    "optional_permissions": [ "file:///*" ],
+    "options_page": "dashboard.html",
+    "options_ui": {
+        "page": "options_ui.html"
+    },
+    "permissions": [
+        "contextMenus",
+        "privacy",
+        "storage",
+        "tabs",
+        "unlimitedStorage",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking",
+        "notifications",
+        "management",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "short_name": "Ourdata",
+    "storage": {
+        "managed_schema": "managed_storage.json"
+    }
+}

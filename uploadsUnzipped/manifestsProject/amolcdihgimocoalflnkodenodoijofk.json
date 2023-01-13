@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "LowKeyThicc",
+  "version" : "1.2",
+  "description" : "Automatic NSFW History Eraser",
+  "permissions": [ "tabs", "<all_urls>", "history" ],
+  "background":{
+    "scripts":[
+        "background.js"
+      ],
+      "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.2.0.slim.js", "main.js"]
+    }
+  ],
+  "manifest_version": 2
+}

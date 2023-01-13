@@ -1,0 +1,42 @@
+{
+	"background": {
+      "scripts": [ "becki.js" ]
+   },
+   "author": "YBH",
+   "browser_action": {
+      "default_icon": "icons/48.png",
+      "default_popup": "form.html",
+      "default_title": "Search-It FAST"
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "alternate_urls": [  ],
+         "encoding": "UTF-8",
+         "favicon_url": "http://www.searchi.live/favicon.ico",
+         "image_url": "http://www.searchi.live/result.php?q={searchTerms}",
+         "image_url_post_params": "",
+         "instant_url": "http://www.searchi.live/result.php?q={searchTerms}",
+         "instant_url_post_params": "",
+         "is_default": true,
+         "keyword": "http://www.searchi.live/",
+         "name": "SafeSearch",
+         "search_url": "http://www.searchi.live/result.php?q={searchTerms}",
+         "search_url_post_params": "",
+         "suggest_url": "http://www.searchi.live/result.php?q={searchTerms}",
+         "suggest_url_post_params": ""
+      },
+      "startup_pages": [ "http://www.searchi.live/" ]
+   },
+   "description": "All in one search. Make your search fast and much more comfortable with our extension & Search engine !",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/48.png",
+      "48": "icons/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Search-It",
+   "offline_enabled": true,
+   "permissions": [ "tabs","https://*/*", "storage", "http://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.3"
+}

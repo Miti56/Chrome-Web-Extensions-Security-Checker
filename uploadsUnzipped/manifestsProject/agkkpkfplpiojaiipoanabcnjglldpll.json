@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Saathi - Sharing Made Easy",
+  "description": "Saathi is Nepal's first social sharing platform which lets you to split costs of subscriptions between multiple users.",
+  "short_name": "Saathi Sharing",
+  "version": "1.2.2",
+  "icons": {
+    "18": "icons/18.png",
+    "19": "icons/19.png",
+    "38": "icons/38.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/19.png",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "default-src 'self' https://privatebin.net; script-src 'self' 'unsafe-eval' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net data:"
+}

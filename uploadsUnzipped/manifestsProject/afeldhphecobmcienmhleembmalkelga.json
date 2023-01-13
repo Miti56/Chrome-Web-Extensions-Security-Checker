@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Contable Chrome Extension",
+  "description": "Para cargar datos desde contable",
+  "version": "1.0.7",
+  "manifest_version": 2,
+  "permissions": [
+    "background",
+    "https://back.contablechile.com/*"
+  ],
+  "icons": {
+    "16": "icons/get_started16.png",
+    "32": "icons/get_started32.png",
+    "48": "icons/get_started48.png",
+    "128": "icons/get_started128.png"
+  },
+  "browser_action": {
+    "default_title": "Contable Chrome Extension",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "jquery.min.js",
+        "content.js"
+      ],
+      "matches": [
+        "https://app.rocketbots.io/*"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true
+  },
+  "web_accessible_resources": [
+    "popup/popup.html"
+  ]
+}

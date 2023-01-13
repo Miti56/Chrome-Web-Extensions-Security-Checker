@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "enHack Policy",
+  "description": "enHackサイトからのHTTP(S)リクエストにおいて、同一生成元ポリシーの適用を免除します。",
+  "icons": {
+    "16": "16x16.png",
+    "48": "48x48.png",
+    "128": "128x128_circle.png"
+  },
+  "version": "1.1",
+  "background": {
+     "scripts": [ "background.js" ]
+  },
+  "permissions": [ "tabs", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*" ]
+}

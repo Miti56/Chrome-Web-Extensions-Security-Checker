@@ -1,0 +1,10 @@
+{
+  "app": {"launch": {"web_url": "http://www.systools.in/products/pen-drive-recovery/"}},
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "container": "GOOGLE_DRIVE",
+  "description": "Pen Drive Data Recovery - Recovers and Restore USB drive multimedia files, documents, and any other file types.",
+  "name": "Pen Drive Data Recovery",
+  "icons": {"128": "pen_drive.png"},
+  "manifest_version": 2,
+  "version": "1.1"
+}

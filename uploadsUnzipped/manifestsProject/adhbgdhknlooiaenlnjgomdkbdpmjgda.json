@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_extName__",
+	"description": "__MSG_extDesc__",
+	"version": "1.4.7",
+	"permissions": [
+		"tabs",
+		"contentSettings",
+		"*://newtab.one/*",
+		"*://newtabs.pro/*",
+		"*://*.newtabs.pro/*"
+	],
+	"background": {
+	"scripts": [
+		"background.js"
+		],
+	"persistent": true
+	},
+	"chrome_url_overrides": {
+		"newtab": "newtab.html"
+	},
+	"content_scripts": [
+	{
+	"matches": [
+		"*://newtab.one/*"
+		],
+	"all_frames": true,
+	"css": [
+		"contentStyles.css"
+	],
+	"js": [
+		"theme.js",
+		"contentScript.js"
+	]
+	}, {
+	"matches": [
+		"*://newtabs.pro/*"
+		],
+	"all_frames": true,
+	"css": [
+		"webstore.css"
+		]
+	}
+	],	
+	"externally_connectable": {
+		"matches": [
+		"*://*.newtabs.pro/*"
+		]
+	},	
+	"web_accessible_resources": [
+		"*.jpg"
+	],
+	"icons": {
+	"128": "128.png"
+	},
+	"browser_action": {},
+	"default_locale": "en",
+	"manifest_version": 2
+}

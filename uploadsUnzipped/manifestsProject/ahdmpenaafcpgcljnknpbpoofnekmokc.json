@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name":"instagram picture picker",
+  "short_name":"picture picker",
+  "description":"Break through, download favorite pictures in instagram, automatically compare resources, download the clearest one.",
+  "background":{"page":"home.html"},
+  "version":"1.1",
+  "manifest_version":2,
+  "icons": {
+    "16": "./icon/icon16x16.png",
+    "32": "./icon/icon32x32.png",
+    "64": "./icon/icon64x64.png",
+    "128": "./icon/icon128x128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "css": ["style/style.css"],
+      "js": ["jsaction/search.js"]
+
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["https://www.instagram.com/*"]
+  },
+
+  "permissions": [
+    "contextMenus",
+    "downloads",
+    "tabs"
+  ]
+}

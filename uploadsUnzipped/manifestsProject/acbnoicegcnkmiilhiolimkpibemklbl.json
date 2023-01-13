@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tiled Screenshare",
+  "description": "Used to enable screensharing in Tiled",
+  "author": "Tiled",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "34",
+  "icons": {
+    "128": "128.png",
+    "256": "256.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [ {
+    "js": [ "content.js" ],
+    "matches": ["*://localhost/*","https://*.tiled.co/*"]
+  }],
+  "externally_connectable": {
+    "matches": ["*://localhost/*","https://*.tiled.co/*"]
+  }
+}

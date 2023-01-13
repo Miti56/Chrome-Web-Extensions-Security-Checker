@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Select HyperLink's Text",
+	"description": "This extension enables you to easyly select Link's Text. *HOLD CTRL TO SELECT*",
+	"version": "0.4",
+	"permissions": ["http://*/*", "https://*/*"],
+	"content_scripts": [{
+		"js": ["select-anchor-text.js"],
+		"matches": ["*://*/*"],
+		"run_at": "document_end",
+		"all_frames": true
+	}],
+	"manifest_version": 2
+}

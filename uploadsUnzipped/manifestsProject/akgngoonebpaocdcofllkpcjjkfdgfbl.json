@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Inkdit",
+    "description" : "Ultra light e-signatures",
+    "version": "0.8",
+    "icons": {
+        "128": "Inkdit-Icon-128.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "https://inkdit.com/?utm_source=Chrome&utm_medium=App&utm_campaign=Chrome%2BApp"
+        }
+    }
+}

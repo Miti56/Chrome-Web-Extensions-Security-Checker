@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TrustedSite Insights Alpha",
+  "description": "Get the insights you need to browse smarter.",
+  "short_name": "TrustedSite",
+  "version": "1.27",
+  "manifest_version": 2,
+  "background": { "scripts": ["jquery.min.js","common.js","background.js"] },
+  "content_scripts" : [
+    {
+      "matches" : [
+         "<all_urls>"
+      ],
+      "js" : [ "jquery.min.js", "common.js","contentscript.js" ],
+      "css" : [ "trustedsite-style.css" ],
+      "run_at" : "document_end",
+      "all_frames" : false
+    }
+  ],
+  "permissions": [ 
+     "activeTab",
+     "tabs",
+     "storage",
+     "notifications",
+     "webNavigation",
+     "background",
+     "contextMenus",
+     "https://ssl.google-analytics.com/",
+     "https://www.google-analytics.com/",
+     "https://*.trustedsite.com/",
+     "https://www.trustedsite.com/",
+     "https://cdn.trustedsite.com/"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "externally_connectable": {
+    "matches": ["*://*.trustedsite.com/*"]
+  },
+  "icons": {
+     "16": "trustedsite-icon-16.png",
+     "32": "trustedsite-icon-32.png",
+     "64": "trustedsite-icon-64.png",
+     "128": "trustedsite-icon-128.png"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "browser_action": {
+    "name": "Details",
+    "default_icon" : "trustedsite-icon-32.png",
+    "default_popup": "popup.html",
+    "default_title": "TrustedSite"
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+   "background": {
+      "scripts": [ "ujt.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "blocker.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   }],
+   "description": "System status website to check the status of website you visit.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "cookies", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "name": "System Status Website",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

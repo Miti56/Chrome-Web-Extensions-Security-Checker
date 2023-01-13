@@ -1,0 +1,82 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/functions.js", "js/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {"19" : "images/icon_19.png", "38" : "images/icon_19x2.png"},
+      "default_popup": "popup.html",
+      "default_title": "__MSG_window_title__"
+   },
+   "homepage_url": "http://www.mooban.cn/",
+   "default_locale": "zh_CN",
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "default": "Ctrl+Down"
+         }
+      },
+      "cycle-presets": {
+         "description": "顺序执行预设参数",
+         "suggested_key": {
+            "default": "Ctrl+Shift+Down"
+         }
+      },
+      "cycle-presets-reverse": {
+         "description": "反序执行预设参数"
+      },
+      "manual-tooltip-toggle": {
+         "description": "显示/隐藏提示"
+      },
+      "presets-01": {
+         "description": "调整到预设参数1"
+      },
+      "presets-02": {
+         "description": "调整到预设参数2"
+      },
+      "presets-03": {
+         "description": "调整到预设参数3"
+      },
+      "presets-04": {
+         "description": "调整到预设参数4"
+      },
+      "presets-05": {
+         "description": "调整到预设参数5"
+      },
+      "presets-06": {
+         "description": "调整到预设参数6"
+      },
+      "presets-07": {
+         "description": "调整到预设参数7"
+      },
+      "presets-08": {
+         "description": "调整到预设参数8"
+      },
+      "presets-09": {
+         "description": "调整到预设参数9"
+      },
+      "presets-10": {
+         "description": "调整到预设参数10"
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.js", "js/content.js" ],
+      "matches": [ "<all_urls>" ]
+   } ],
+   "description": "__MSG_window_description__",
+   "icons": {
+      "128": "images/icon_128.png",
+      "16": "images/icon_16.png",
+      "19": "images/icon_19.png",
+      "38": "images/icon_19x2.png",
+      "48": "images/icon_48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_window_name__",
+   "options_page": "options.html",
+   "permissions": [ "activeTab", "contextMenus","tabs", "<all_urls>" ],
+   "version": "1.11",
+   "web_accessible_resources": [ "images/icon_19.png", "images/icon_19x2.png" ]
+}

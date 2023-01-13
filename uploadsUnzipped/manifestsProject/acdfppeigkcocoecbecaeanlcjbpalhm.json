@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background":
+      {
+         "scripts": [ "js/bg.js" ],
+         "persistent": true
+      },
+   "content_scripts": [
+      {
+         "js": ["js/content.js" ],
+         "matches": [ "http://*/*", "https://*/*" ],
+         "run_at": "document_start"
+      }
+   ],
+   "name": "Стоп спам",
+   "icons": {
+      "64": "res/ico.png"
+   },
+   "description": "Уведомляет пользопателя о посещении потенциально опасной страницы",
+   "manifest_version": 2,
+   "permissions": [ "tabs", "activeTab", "http://*/*","https://*/*","notifications"],
+   "version": "1.0"
+}

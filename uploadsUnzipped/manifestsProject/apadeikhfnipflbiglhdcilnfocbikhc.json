@@ -1,0 +1,30 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Hackerspace Bremen",
+  "version": "1.2.2",
+  "manifest_version": 2,
+  "description": "Shows the status of the Space in Bremen, Germany",
+  "browser_action": {
+    "default_icon": "images/hackerspace_icon.png", 
+    "default_title": "Hackerspace Bremen",      
+    "default_popup": "popup.html"
+  },
+  "options_page": "fancy-settings/source/index.html",
+  "icons": {
+		"16": "images/hackerspace_icon_16.png",
+        "48": "images/hackerspace_icon.png",
+		"128": "images/hackerspace_icon_128.png"
+  },
+  "permissions": [
+    "https://hackerspacehb.appspot.com/*",
+	"notifications"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "web_accessible_resources": [
+    "images/status_auf_48px.png",
+    "images/status_zu_48px.png",
+	"css/style.css"
+  ]
+}

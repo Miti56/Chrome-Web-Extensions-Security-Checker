@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "thx2THX",
+    "description": "thx is too boring. Why not THX?",
+    "version": "0.1",
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+	"js": ["cs.js"],
+	"run_at": "document_end"
+    }]
+}
+

@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "知卖工具",
+  "version": "2.0.2",
+  "description": "生意参谋指数转换，数据分析，数据导出；直通车数据优化；淘宝辅助；",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon19.png"
+    },
+    "default_title": "知卖工具",
+    "default_popup": "popup.html"
+  },
+  "homepage_url": "http://www.zm-tool.com",
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.taobao.com/*", "https://*.tmall.com/*"],
+      "js": ["js/jquery.min.js", "js/init.js","js/layer.js" ,"js/contentscript.js"],
+      "css": ["css/layer.css", "css/init.css"]
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*.taobao.com/*",
+	"https://*.aliyuncs.com/*",
+	"https://*.taeapp.com/*",
+    "https://*.taobao.com/*"
+  ],
+  "web_accessible_resources": ["css/*", "js/*", "images/*", "debug/*", "layui/*"]
+}

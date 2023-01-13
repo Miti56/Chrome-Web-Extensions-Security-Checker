@@ -1,0 +1,30 @@
+{
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webRequestBlocking",
+    "webRequest"
+  ],
+  "version": "4.7.18",
+  "background": {
+    "scripts": [
+      "canvas.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+    "128": "favicon.png"
+  },
+  "description": "Move all cards of the same suit from Ace, 2, 3, ... up to ..., Queen, King to the 4 home piles.",
+  "manifest_version": 2,
+  "name": "YukonKlondike",
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_title": "YukonKlondike",
+    "default_popup": "yukon.html"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

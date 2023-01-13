@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Allego Screen Recorder",
+	"description": "Lets you record screen and audio",
+	"version": "1.0.1",
+	"minimum_chrome_version": "34",
+	"icons": {
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [{
+		"matches": ["https://*.allego.com/*"],
+		"include_globs": ["*://*/screenCapture.do*", "*://*/home.do*", "*://*/play.do*", "*://*/sf.do*", "*://*/osc.do*"],
+		"js": ["contentscript.js"],
+		"run_at": "document_start",
+		"all_frames": true
+	}],
+	"permissions": [
+		"https://*.allego.com/*",
+		"declarativeContent",
+		"desktopCapture"
+	],
+	"homepage_url": "http://www.allego.com/"
+}

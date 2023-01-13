@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Bloons Adventure SuperMonkey 2 Online Games",
+  "description": "Bloons Supermonkey 2, Boom Beach, Buff Knight Advanced, Can You Escape Prison Pro, Card Wars Adventure Time",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

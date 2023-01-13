@@ -1,0 +1,5 @@
+{"short_name":"New Orleans Saints New Tab Page", "browser_action": {"default_icon": "128-logo.png", "default_title": "New Orleans Saints New Tab Page"},
+ "update_url": "https://clients2.google.com/service/update2/crx", "description": "__MSG_locDesc__", "name": "New Orleans Saints New Tab Page", "icons": {"128": "128-logo.png"},
+ "default_locale": "en", "manifest_version": 2, "background": {"scripts": ["script.js"]},
+ "chrome_url_overrides": {"newtab": "newtab_index.html"},
+ "version": "2.1.3"}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Servicios Web - OEContinental",
+  "description": "Organización Educativa Continental - Servicios Web",
+  "version": "3.0.0.1",
+  "app": {
+    
+    "launch": {
+      "web_url": "http://serviciosweb.continental.edu.pe/"
+    }
+  },
+  "icons": {
+    "128": "icons/128x128-icon.png",
+    "16": "icons/16x16-icon.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

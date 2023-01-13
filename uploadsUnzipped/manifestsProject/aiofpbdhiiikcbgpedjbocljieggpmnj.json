@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "Tumblr Feed Reader",
+   "description": "Tumblr Feed Reader",
+   "version": "2.5",
+   "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+   },
+   "browser_action": {
+      "default_icon": "icon19.png",
+	  "default_title": "Tumblr Feed Reader",
+      "default_popup": "search.html"
+   },
+   "options_page": "options.html",
+   "content_security_policy": "script-src 'self'; connect-src *; object-src 'self'",
+   "permissions": [
+      "tabs",
+      "<all_urls>",
+      "storage",
+      "bookmarks",
+      "unlimitedStorage"
+   ]
+}

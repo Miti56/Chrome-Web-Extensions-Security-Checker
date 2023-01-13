@@ -1,0 +1,9 @@
+{"author":"Rey Hopper","version_name":"ver 53","permissions":["alarms"], "name": "__MSG_localeAddTitle__", "browser_action": {"default_icon": "128-icons.png", "default_title": "Classic Sports Cars Wallpapers"},
+
+ "description": "__MSG_addinfo__", "chrome_url_overrides": {"newtab": "my_index.html"},
+
+ "manifest_version": 2, "update_url": "https://clients2.google.com/service/update2/crx", "default_locale": "en", "background": {"scripts": ["bgscript.js"]},
+
+ "icons": {"128": "128-icons.png"},
+
+ "version": "0.2.0"}

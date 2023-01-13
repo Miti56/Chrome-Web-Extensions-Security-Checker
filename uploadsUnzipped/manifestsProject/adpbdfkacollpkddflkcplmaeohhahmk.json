@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Rate My Page",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Brand Safety Scores",
+  "homepage_url": "http://integralplatform.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js", "src/browser_action/jquery.min.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/scores_browser_action.html"
+  },
+  "permissions": [
+    "tabs",
+    "https://*/*",
+    "http://*/*",
+    "storage",
+    "activeTab",
+    "background"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/browser_action/jquery.min.js",
+        "src/inject/lang.js",
+        "src/inject/scores_inject.js",
+        "src/inject/svg.js"
+      ],
+      "run_at": "document_idle"
+    },
+
+    {
+      "matches": [
+        "https://api.adsafeprotected.com/db/client/1/sc?adsafe_url=*"
+      ],
+      "js": [
+        "src/inject/format_scores.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

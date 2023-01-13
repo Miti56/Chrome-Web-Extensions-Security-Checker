@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Click-to-Console",
+  "description": "Extension to open links in Salesforce Console.",
+  "version": "0.9.0",
+  "permissions": ["tabs","http://*/", "https://*/","webRequest","webNavigation","cookies","storage"],
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "128": "click-to-console-logo.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "options_page": "options.html",
+  "manifest_version": 2
+}

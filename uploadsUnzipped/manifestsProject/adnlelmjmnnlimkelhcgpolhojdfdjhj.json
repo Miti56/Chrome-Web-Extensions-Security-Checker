@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "wackMod PC viewer",
+  "description": "view to pc",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+"content_scripts": [
+  {
+    "matches": ["https://wackmods.com/*"],
+    "js": ["jquery.js", "myscript.js"]
+  }
+]
+
+}

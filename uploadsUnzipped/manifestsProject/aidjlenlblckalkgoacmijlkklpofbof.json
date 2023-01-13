@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "nooQ Screen Sharing",
+  "author": "nooQ",
+  "version" : "1.0",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "This Chrome extension is developed to enable screen sharing functionality in nooQ application.",
+  "homepage_url": "http://www.nooq.co/",
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
+  "content_scripts": [ {
+   "js": [ "content-script.js" ],
+   "all_frames": true,
+   "matches": ["https://nooq.local/*", "https://*.nooq.it/*", "https://*.nooq.co/*"]
+  }],
+  "icons": {
+    "16": "logo16.png",
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "short_name": "nooQ Screen Sharing",
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

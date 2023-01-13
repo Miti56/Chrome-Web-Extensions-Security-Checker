@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Gitshots on Github",
+    "icons": {
+        "128": "icon128.png"
+    },
+    "description": "View your gitshots inline on github!",
+    "version": "0.2",
+    "permissions": [
+        "https://github.com/*",
+        "http://github.com/*"
+    ],
+    "content_scripts": [
+        {
+            "js": ["gitshots.js"],
+            "matches": ["*://github.com/*/commit/*"],
+            "run_at": "document_end"
+        }
+    ]
+}

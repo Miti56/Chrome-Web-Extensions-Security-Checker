@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+      "launch": {
+	     "container": "panel",
+         "web_url": "https://park.qsidentalweb.com/",
+		 "height": 680,
+		 "width": 1100
+      },
+      "urls": [ "https://park.qsidentalweb.com/" ]
+   },
+   
+  "icons": { "16": "QSI_Logo_Small.png", "128": "QSI_Logo_Small.png" },
+  "name": "QDW app test",
+  "description": "Simple way to open QSIDentalWeb",
+  "version": "0.3",
+  "manifest_version": 2
+}

@@ -1,0 +1,22 @@
+{
+      "launch": {
+         "web_url": "https://mystartpage.net/"
+
+},
+   "chrome_url_overrides": {
+      "newtab": "tab.html"
+   },
+   "content_security_policy": "script-src 'self'; object-src 'self';",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "128.png",
+      "24": "24.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCoAaexYWvMNS4pbMEwyjvi20zdn90cgUe/UWs2HmfSNzDHWomgNxyrgByKIZHer2Wv2y46+s8GPxMnRNSoKhQizH55lB0jb1PMmFWhdTk68657q3yCtzRwmGQPFiSl0YFfSN6S+PT8FuL9C7bEbn3t8duOFmvPMs8KPe9YehUrCwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "3.0.1",
+   "web_accessible_resources": [ "tab.html" ]
+}

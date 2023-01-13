@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version":2,
+   "name":"¿Que Comprar?",
+   "short_name":"QueComprar",
+   "homepage_url":"https://quecomprar.org/",
+   "description":"Los mejores productos elegidos para vosotros",
+   "version":"1",
+   "background":{
+      "scripts":[
+         "event.js"
+      ],
+      "persistent":false
+   },
+   "icons":{
+      "16":"icon-16.png",
+      "48":"icon-48.png",
+      "128":"icon-128.png"
+   },
+   "browser_action":{
+      "default_icon":"icon.png",
+      "default_title":"Que Comprar",
+      "default_popup":"popup.html"
+   },
+   "permissions":[
+      "tabs",
+      "https://quecomprar.org/*"
+   ]
+}

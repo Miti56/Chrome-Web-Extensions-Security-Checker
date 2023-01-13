@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Content Security Policy (CSP) Generator",
+    "short_name": "CSP Generator",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "stuart@csper.io",
+            "strict_min_version": "57.0"
+        }
+    },
+    "version": "0.6",
+    "description": "Automatically generate content security policy headers online for any website.",
+    "icons": {
+        "128": "assets/csper_128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "128": "assets/csper_128.png"
+        },
+        "default_title": "Content Security Policy (CSP) Generator",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "webRequestBlocking",
+        "webRequest",
+        "tabs",
+        "storage"
+    ],
+    "content_security_policy": "default-src 'self'; script-src 'self' blob: filesystem: 'unsafe-eval'; style-src 'unsafe-inline'; connect-src wss://csper.io wss://csper.club https://csper.io https://csper.club",
+    "author": "Stuart Larsen",
+    "homepage_url": "https://csper.io",
+    "background": {
+        "scripts": [
+            "./background.js"
+        ],
+        "persistent": true
+    }
+}

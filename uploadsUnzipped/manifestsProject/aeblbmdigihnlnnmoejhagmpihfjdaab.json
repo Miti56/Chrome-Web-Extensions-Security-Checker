@@ -1,0 +1,32 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/jquery.js", "context_menu.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "256": "images/icon_256.png",
+         "128": "images/icon_256.png",
+         "48": "images/icon_256.png",
+         "19": "images/icon_256.png",
+         "16": "images/icon_256.png"
+      },
+      "default_popup": "index.html"
+   },
+   "content_security_policy": "default-src 'self' *; script-src 'unsafe-eval' 'self'; object-src 'unsafe-eval' 'self'; connect-src 'self' *; img-src 'self' *; style-src 'self' *;",
+   "description": "GifMe makes saving, sharing & organizing gifs easier.",
+   "icons": {
+      "256": "images/icon_256.png",
+      "128": "images/icon_256.png",
+      "48": "images/icon_256.png",
+      "19": "images/icon_256.png",
+      "16": "images/icon_256.png"
+   },
+   "manifest_version": 2,
+   "name": "GifMe",
+   "short_name": "GifMe",
+   "permissions": [ "contextMenus", "tabs", "clipboardWrite", "clipboardRead", "http://*/*", "https://*/*", "downloads", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.2.2",
+   "web_accessible_resources": [ "ga.js" ]
+}

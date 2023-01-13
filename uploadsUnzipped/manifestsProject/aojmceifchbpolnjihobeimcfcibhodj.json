@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+
+	"name": "סמיילים לפורום סיירים",
+	"short_name": "סמיילים לפורום סיירים",
+	"description": "יציג לכם סמיילים בפורום סיירים",
+	"version": "1.2",
+
+	"permissions": ["tabs", "*://*.web3.ekoloko.com/*"],
+	"content_scripts": [{
+		"matches": ["*://*.web3.ekoloko.com/*"],
+		"js": ["smile.js"]
+	}]
+}

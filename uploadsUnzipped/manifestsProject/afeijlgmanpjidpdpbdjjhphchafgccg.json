@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "icons": { "128": "icon_128.png" },
+   "content_scripts": [ {
+      "exclude_globs": [  ],
+      "exclude_matches": [  ],
+      "include_globs": [ "https://read.amazon.com/*", "http://read.amazon.com/*" ],
+      "js": [ "ejdic-kindle.user.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "converted_from_user_script": true,
+   "description": "Kindle Cloud Readerで、Dictionary.comの代わりにWeblioのリンクを表示するようになります。",
+   "name": "EJDic Script for Kindle Cloud Reader",
+   "version": "1.1"
+}

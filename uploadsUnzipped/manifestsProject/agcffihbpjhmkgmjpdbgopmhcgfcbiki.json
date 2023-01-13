@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Juegos BMX | Icono.xyz",
+  "short_name": "Juegos BMX",
+  "version": "1.0.2",
+  "description": "Enlace directo a la categoria de Juegos BMX del sitio Icono.xyz",
+  "homepage_url": "http://icono.xyz/c/bmx-games/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Juegos BMX | Icono.xyz",
+      "default_popup": "popup.html"
+  }
+} 

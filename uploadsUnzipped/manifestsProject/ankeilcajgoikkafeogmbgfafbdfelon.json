@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Whats Wrong",
+  "description": "Whats Wrong: by goDiversis. A web guide for 5 complimentary therapies, with over 60 remedies, treating over 100 symptoms!",
+  "version": "1.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://whatswrong.godiversis.com/"
+    ],
+    "launch": {
+      "web_url": "http://whatswrong.godiversis.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}

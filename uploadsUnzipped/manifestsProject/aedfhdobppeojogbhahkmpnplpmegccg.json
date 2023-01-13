@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Wait List",
+  "version": "1.0.4",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "app": {
+    "background": {
+      "scripts": [
+      	"main.js"
+      ]
+    }
+  },
+  "icons": {
+    "128": "icon_128.png",
+    "16": "icon_16.png"
+  },
+  "sandbox": {
+    "pages": ["sandboxed.html"]
+  },
+  "permissions": ["tts", "tabs", "http://*/*", "https://*/*", "storage"]
+}

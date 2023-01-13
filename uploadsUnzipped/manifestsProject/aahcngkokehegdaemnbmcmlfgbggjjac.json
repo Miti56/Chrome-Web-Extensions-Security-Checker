@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Coaching Lobby",
+  "version": "0.0.0.2",
+  "description": "An application for life and business coaches where they can organize their clients and automate their business.",
+  "icons": {
+    "128": "CoachingLobby-128.png",
+    "96": "CoachingLobby-96.png",
+    "16": "CoachingLobby-16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "149034390686",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://coachinglobby.com/index.php/gsuite/"
+    }
+  }
+}

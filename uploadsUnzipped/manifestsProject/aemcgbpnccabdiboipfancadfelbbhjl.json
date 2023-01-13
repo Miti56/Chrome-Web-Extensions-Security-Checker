@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "popup.js" ]
+   },
+   "browser_action": {
+
+   },
+   "description": "Kik is way more than just messaging.",
+   "icons": {
+      "128": "icons/green/icon128.png",
+      "16": "icons/green/icon16.png",
+      "19": "icons/green/icon19.png",
+      "38": "icons/green/icon38.png",
+      "48": "icons/green/icon48.png",
+      "96": "icons/green/icon96.png"
+   },
+   "manifest_version": 2,
+   "name": "Kik Messenger Chrome",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.4"
+}

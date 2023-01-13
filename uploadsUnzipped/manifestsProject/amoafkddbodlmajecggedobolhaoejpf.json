@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "bigT_show",
+	"version": "0.3.6",
+	"description": "__Kandian_bigT_Check__",
+	"icons":
+	{
+		"16": "img/gman.png",
+		"48": "img/gman.png",
+		"128": "img/gman.png"
+	},
+	"browser_action":
+	{
+		"default_icon": "img/gman.png",
+		"default_title": "看点大T验收工具",
+		"default_popup": "popup.html"
+	},
+	"permissions":
+	[
+		"contextMenus",
+		"tabs",
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+	"content_scripts": [
+		{"js":["js/jquery/jquery-3.3.1.js","js/bootstrap/js/bootstrap-table.js","js/background.js"],
+			"matches":["https://kandiandata.oa.com/union_turtle","http://kandiandata.oa.com/union_turtle","http://127.0.0.1:8080/union_turtle"]}
+	]
+}

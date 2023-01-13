@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "V2Ext",
+  "description": "V2EX 社区功能增强扩展",
+  "version": "1.0.3",
+  "icons": {
+    "16": "assets/images/icon_16.png",
+    "48": "assets/images/icon_48.png",
+    "128": "assets/images/icon_128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "assets/scripts/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "assets/images/icon_16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.v2ex.com/*"
+      ],
+      "js": [
+        "assets/scripts/jquery-3.1.1.min.js",
+        "assets/scripts/main.js"
+      ],
+      "css": [
+        "assets/styles/main.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "assets/images/*.png",
+    "assets/scripts/se/*.js"
+  ]
+}

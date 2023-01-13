@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extension_name__",
+  "version": "2.0.0",
+  "manifest_version": 2,
+  "description": "__MSG_extension_description__",
+  "author": "__MSG_extension_author__",
+  "icons": {
+    "16": "app-icons/icon-16.png",
+    "32": "app-icons/icon-32.png",
+    "48": "app-icons/icon-48.png",
+    "64": "app-icons/icon-64.png",
+    "128": "app-icons/icon-128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "javascript/background-script.bundle.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "app-icons/icon-128.png",
+    "default_title": "__MSG_extension_name__",
+    "default_popup": "html/browser-action-index.html"
+  }
+}

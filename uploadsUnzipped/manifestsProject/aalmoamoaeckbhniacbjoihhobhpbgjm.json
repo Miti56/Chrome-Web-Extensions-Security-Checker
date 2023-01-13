@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Email Remediator",
+  "version": "0.0.2",
+  "description": "Report phising and malicious with a single click",
+  "icons": {
+    "128": "logo.svg"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "785478125414",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://www.emailremediator.com"
+    }
+  }
+}

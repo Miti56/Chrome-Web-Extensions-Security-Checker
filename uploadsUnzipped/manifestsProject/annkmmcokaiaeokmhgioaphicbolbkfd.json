@@ -1,0 +1,73 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "short_name": "Lusha",
+  "author": "Lusha",
+  "description": "Lusha is the easiest way to find B2B contact information with just one click.",
+  "version": "9.5.26",
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "20": "images/icon20.png",
+      "24": "images/icon24.png",
+      "25": "images/icon25.png",
+      "30": "images/icon30.png",
+      "32": "images/icon32.png",
+      "40": "images/icon40.png",
+      "48": "images/icon48.png"
+    },
+    "default_title": "Lusha",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "20": "images/icon20.png",
+    "24": "images/icon24.png",
+    "25": "images/icon25.png",
+    "30": "images/icon30.png",
+    "32": "images/icon32.png",
+    "40": "images/icon40.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png",
+    "176": "images/icon176.png"
+  },
+  "name": "Lusha for Enterprise",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://dashboard.lusha.co/*",
+        "https://*.linkedin.com/*",
+        "https://*.salesforce.com/*"
+      ],
+      "exclude_matches": [
+        "https://www.lusha.co/*",
+        "https://www.salesforce.com/*",
+        "https://*.lightning.force.com/*"
+      ],
+      "js": [
+        "content.js",
+        "assets.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "https://*.lusha.co/*",
+    "https://*.linkedin.com/*",
+    "https://*.salesforce.com/*",
+    "storage"
+  ],
+  "optional_permissions": [
+    "https://*.lightning.force.com/*"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "minimum_chrome_version": "55",
+  "content_security_policy": ""
+}

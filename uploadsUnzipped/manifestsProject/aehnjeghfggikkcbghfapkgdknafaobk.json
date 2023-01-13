@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "ScoutBeta extension",
+	"short_name": "ScoutBeta extension",
+	"description": "This is ScoutBeta extension.",
+	"version": "1.0.0",
+	"minimum_chrome_version": "72",
+	"browser_action": {
+		"default_icon": {
+			"19": "icons/stiristaicon.19.png",
+			"38": "icons/stiristaicon.38.png"
+		},
+		"default_popup": "Extension.html"
+	},
+
+	"permissions": [
+		"contextMenus",
+		"storage",
+		"tabs",
+		"cookies",		
+		"\u003Call_urls>",
+		"notifications",
+		"webNavigation",
+		"webRequest",
+		"activeTab"
+	],
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://*.pusher.com; object-src 'self'",
+
+	"icons": {
+		"128": "icons/stiristaicon.128.png",
+		"16": "icons/stiristaicon.16.png",
+		"48": "icons/stiristaicon.48.png"
+	},
+
+	"background": {
+		"scripts": [
+			"js/lib/jquery-3.4.0.min.js",
+			"js/lib/underscore.js",
+			"js/background.js"
+		]
+	},
+
+	"content_scripts": [
+		{
+			"js": [
+				"js/helper.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			]
+		}
+	],
+	"web_accessible_resources": [		
+		"css/style.css",
+		"icons/stiristaicon.128.png",
+		"css/jquery.wysiwyg.css",
+		"img/add.png",
+		"img/added.png"
+	]
+}

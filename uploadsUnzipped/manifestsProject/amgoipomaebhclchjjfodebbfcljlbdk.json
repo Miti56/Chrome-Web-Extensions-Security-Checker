@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Salesbrain",
+  "manifest_version": 2,
+  "version": "1.1.2",
+  "description": "Salesbrain extension allows you to access the website. ",
+
+  "browser_action": {
+    "default_popup": "page/dashboard.html",
+    "default_icon": "assets/images/favicon.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "css": ["assets/css/style2.css"],
+      "js": ["assets/js/vendor/jquery.min.js","assets/js/vendor/jdrupal.js", "assets/js/vendor/jdrupal.min.js", "assets/js/common.js", "assets/js/dashboard.js",  "assets/js/extension.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions": ["activeTab"],
+  "icons": {"16": "assets/images/favicon.png", "48": "assets/images/favicon.png", "128": "assets/images/favicon.png"},
+  "web_accessible_resources":["assets/images/favicon.png"]
+}

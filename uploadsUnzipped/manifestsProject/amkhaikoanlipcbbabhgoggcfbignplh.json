@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Dark Blue Theme",
+  "version": "1.0.0",
+  "description": "A dark blue, slightly grey, theme!",
+  "author": "Jacob O'Toole",
+
+  "icons": {
+    "512": "icon.png",
+    "128": "icon128.png",
+    "64": "icon64.png",
+    "32": "icon32.png" 
+  },
+
+  "theme": {
+    "colors" : {
+      "frame" : [60, 58, 79],
+      "frame_incognito": [0, 0, 0],
+      "frame_inactive": [60, 58, 87],
+      "frame_incognito_inactive": [0, 0, 0],
+      "background_tab": [60, 58, 79],
+      "bookmark_text": [239, 239, 239],
+      "button_background": [60, 58, 79],
+      "tab_background_text": [239, 239, 239],
+      "tab_background_text_inactive": [239, 239, 239],
+      "tab_text": [239, 239, 239],
+      "toolbar": [60, 58, 79],
+      "toolbar_button_icon": [239, 239, 239],
+      "omnibox_text": [239, 239, 239],
+      "omnibox_background": [27, 25, 50],
+      "ntp_background": [60, 58, 79],
+      "ntp_header": [60, 58, 87],
+      "ntp_link": [239, 239, 239],
+      "ntp_text": [239, 239, 239]
+    }
+  }
+}

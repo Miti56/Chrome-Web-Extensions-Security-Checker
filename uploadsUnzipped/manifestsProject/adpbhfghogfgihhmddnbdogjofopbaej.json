@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "El Rol de los Medios",
+    "description": "Reemplaza volantas por \"El rol de los medios\" en algunos sitios de noticias",
+    "icons": {
+      "128": "icon.png"
+    },
+    "version": "1.0",
+    "content_scripts": [{
+        "matches": [
+            "*://www.lanacion.com.ar/*",
+            "*://www.infobae.com/*",
+            "*://www.minutouno.com/*",
+            "*://www.pagina12.com.ar/*",
+            "*://www.telam.com.ar/*"
+        ],
+        "js": [
+            "content.js"
+        ],
+        "run_at": "document_end"
+    }]
+}

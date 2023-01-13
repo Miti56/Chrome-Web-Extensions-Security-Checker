@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+"name":"SAM Mail Absent",
+"description":"Adds a mail absent students buttons to SAM at UCLan",
+"author":"Martin Bateman",
+"version":"1.51",
+"manifest_version":2,
+"content_scripts": [
+    {
+      "matches": ["https://sam.uclan.ac.uk/sam-ws-splus/samlive/listStudents?*"],
+      "js": ["mailabsent.js"]
+    },
+    {
+      "matches": ["https://sam.uclan.ac.uk/sam-ws-splus/samlive/listEvents?*"],
+      "js": ["selectemail.js"]
+    }
+  ]
+}

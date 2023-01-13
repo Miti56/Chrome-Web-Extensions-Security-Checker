@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name":"BookCrypt",
+  "description":"Encrypt your bookmarks from others on your computer.  Add extra security to your bookmarking needs.",
+  "version":"1.0",
+  "manifest_version":2,
+  "icons": {
+    "16": "/img/key.png",
+    "48": "/img/key.png",
+    "128": "/img/key.png"
+  },
+  "browser_action": {
+    "default_icon": "/img/key.png",
+    "default_title": "Bookcrypt",
+    "default_popup": "popup.html"
+ },
+ "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+ "permissions": [
+   "storage",
+   "unlimitedStorage",
+   "activeTab"
+ ]
+}

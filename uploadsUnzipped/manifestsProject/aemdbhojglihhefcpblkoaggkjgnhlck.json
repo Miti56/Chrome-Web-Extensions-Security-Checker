@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Standing-meetings extension",
+    "description": "Extension to edit view of google calendar",
+    "version": "1",
+    "manifest_version": 2,
+    "permissions": [
+      "webNavigation",
+      "tabs",
+      "activeTab",
+      "notifications"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://calendar.google.com/calendar/*"],
+        "js": ["myscript.js"]
+      }
+    ],
+    "background":{
+      "scripts":["background.js"]
+    },
+    "browser_action":{
+    }
+}

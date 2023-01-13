@@ -1,0 +1,33 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "TwitchTagRemover",
+	"description": "Twitch.tv Tag selector",
+	"version": "1.01",
+	
+	"icons": {
+		"128": "Language128.png"
+	},
+	"page_action": {
+		"default_popup":"popup.html"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+        {
+            "matches": ["https://twitch.tv/directory/all"],
+			"run_at": "document_idle",
+            "js": ["script.js"]
+        }
+    ],
+	"permissions": [
+		"activeTab",
+		"storage",
+		"declarativeContent"
+	],
+	"homepage_url": "https://github.com/e406hsy/TwitchTagRemover"
+}

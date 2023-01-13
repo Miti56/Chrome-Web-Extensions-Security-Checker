@@ -1,0 +1,43 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "oxygenlike-cold",
+  "version": "0.9.1",
+  "theme":
+  {
+    "images" :
+     {
+      "theme_frame" : "images/frame.png",
+      "theme_toolbar" : "images/navigation.png",
+      "theme_button_background" : "images/button_bg.png",
+      "theme_ntp_background" : "images/bg.png",
+      "theme_frame_incognito" : "images/frame.png",
+      "theme_button_background_incognito" : "images/button_bg.png"
+    },
+    "colors" :
+    {
+      "frame": [ 224, 223, 222 ],
+      "frame_incognito": [ 224, 223, 222 ],
+      "ntp_header": [145, 180, 225],
+      "ntp_link" : [0, 6, 57],
+      "ntp_section" : [219, 232, 249, 0.7],
+      "ntp_text" : [0, 6, 57],
+      "tab_background_text": [ 62, 56, 44 ],
+      "tab_text": [0, 6, 57],
+      "bookmark_text": [0, 6, 57],
+      "toolbar" : [219, 232, 249]
+    },
+    "tints":
+    {
+      "frame": [ -1, -1, -1 ],
+      "frame_inactive": [ -1, -1, -1 ],
+      "frame_incognito": [ -1, -1, -1 ],
+      "buttons" : [0.6, 0.3, 0.5]
+    },
+    "properties":
+    {
+      "ntp_background_alignment": "top",
+      "ntp_background_repeat": "repeat-x",
+      "ntp_logo_alternate": 1
+    }
+  }
+}

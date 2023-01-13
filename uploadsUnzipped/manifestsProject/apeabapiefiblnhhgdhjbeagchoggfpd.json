@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Vivacity",
+  "description": "Vivacity - Chrome extensions to check your Vitality points",
+  "version": "0.9.4",
+
+  "browser_action": {
+    "default_popup": "html/popup.html"
+  },
+
+  "icons": { "48": "48x48white.png",
+          "128": "128x128white.png" },
+
+  "options_ui": {
+    "page": "html/options.html",
+    "chrome_style": true
+  },
+
+  "permissions": ["activeTab", "https://member.vitality.co.uk/*", "storage"]
+
+}

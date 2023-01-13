@@ -1,0 +1,44 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.0.4",
+	"name": "Community",
+	"manifest_version": 2,
+	"theme": {
+	"images" : {
+	"theme_frame" : "images/frame.png",
+	"theme_frame_incognito" : "images/frame_incognito.png",
+	"theme_toolbar" : "images/toolbar.png",
+	"theme_tab_background" : "images/tab.png",
+	"theme_tab_background_incognito" : "images/tab.png",
+	"theme_ntp_background" : "images/background.png",
+	"theme_ntp_attribution" : "images/theme_ntp_attribution.png",
+	"theme_window_controvl_background": "images/window_control_background.png"
+},
+
+"colors" : 
+{
+	"frame": [206,209,204],
+	"toolbar": [65,65,65],
+	"tab_text": [222,222,222],
+	"tab_background_text": [151,151,151],
+	"bookmark_text": [183,183,183],
+	"ntp_background": [235,235,235],
+	"ntp_text": [0,0,0],
+	"ntp_link": [0,0,0]
+},
+
+"tints" : 
+{
+"buttons" : [0.6, 1, 0.85],
+"frame_inactive" : [-1,0.4,0.6]
+},
+
+"properties" : 
+{
+"ntp_background_alignment" : "bottom",
+"ntp_background_repeat": "no-repeat"
+}
+
+}
+
+}

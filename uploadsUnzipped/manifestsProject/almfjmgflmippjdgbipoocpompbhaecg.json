@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "Soda PDF: Create, Convert, Edit & Merge PDFs",
+   "description": "Create, Convert, Merge, Split, Compress and Protect freely your PDF document without having to download any additional software.",
+   "short_name": "Soda PDF Chrome Extension",
+   "default_locale": "en",
+   "version": "1.0.1.10",
+   "author": "LULU Software",  
+
+   "icons": {
+   	"128": "images/soda_icon_128x128.jpg",
+	"16": "images/soda_icon_16x16.jpg",
+	"32": "images/soda_icon_16x16.jpg",
+	"48": "images/soda_icon_48x48.jpg" 
+   },
+   "browser_action": {
+       "default_title": "Soda PDF Chrome Extension",
+       "default_icon": "images/soda_icon_16x16.jpg",
+       "default_popup": "popup.html"
+   },
+   "permissions": ["tabs","contextMenus"],
+   "background": {
+       "scripts": ["js/background.js"]
+   },
+   "chrome_url_overrides" : {
+		"newtab": "home.html"
+	},
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

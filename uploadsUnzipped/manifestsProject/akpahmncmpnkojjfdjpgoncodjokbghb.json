@@ -1,0 +1,34 @@
+{
+    "update_url": "https:\/\/clients2.google.com\/service\/update2\/crx",
+    "manifest_version": 2,
+    "name": "SearchSafe",
+    "description": "Use SearchSafe as your new default Search Engine on Chrome.",
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "name": "Web Search",
+            "keyword": "findwebsearch",
+            "search_url": "http:\/\/thetabsearch.com\/searchex?fgfq={searchTerms}&orig=omni",
+            "suggest_url": "http:\/\/thetabsearch.com\/complete\/search?client=chrome&q={searchTerms}",
+            "favicon_url": "http:\/\/thetabsearch.com\/ex\/images\/omnibox-icon-16.ico",
+            "alternate_urls": [],
+            "encoding": "UTF-8",
+            "is_default": true
+        }
+    },
+    "icons": {
+        "16": "icons\/icon-16.png",
+        "128": "icons\/icon-128.png"
+    },
+    "version": "1.0",
+    "permissions": [
+        "topSites",
+        "cookies",
+        "management",
+        "storage",
+        "tabs",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ]
+}

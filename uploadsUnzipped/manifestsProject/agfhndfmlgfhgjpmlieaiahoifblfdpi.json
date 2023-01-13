@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HangoutAutoJoin",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://hangouts.google.com/*"],
+      "js": ["jquery.js", "content.js"]
+    }
+  ],
+  "icons": { "128": "icon128.png" }
+}

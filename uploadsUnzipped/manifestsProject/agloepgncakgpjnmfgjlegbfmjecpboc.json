@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Nadex Platform Integration",
+    "version": "1.9",
+    "description": "Integrates Nadex's web trading platform with ApexInvesting tools.",
+    "author": "Apex Investing Institute LLC",
+    "icons": {
+		"48": "images/icon48.png",
+		"64": "images/icon64.png"
+	},
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "externally_connectable": {
+        "matches": ["*://*.apexinvesting.com/*", "*://localhost:*/*"]
+    },
+    "permissions": ["background", "cookies", "debugger", "*://*.nadex.com/*", "*://nadex.com/*", "*://signalsapi.apexinvesting.com/*"],
+    "manifest_version": 2
+}

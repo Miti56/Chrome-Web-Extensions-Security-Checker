@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Kindle Cloud Reader",
+  "description": "Kindle Cloud Reader - Read Kindle books in your browser, and shop on Amazon.co.uk.",
+  "version": "1.7.0.22",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://read.amazon.co.uk/" 
+    ],
+    "launch": {
+      "web_url": "https://read.amazon.co.uk/?ref_=kcr_app_chrome_link" 
+    }
+  },
+  "offline_enabled" : true,
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "manifest_version" : 2
+}

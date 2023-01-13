@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Computes",
+  "description": "Donate CPU cycles to the computes.io super computer",
+  "version": "0.1.10",
+  "background": {
+    "page": "background.html"
+    },
+  "browser_action" : {
+    "default_icon" : "logo-32.png",
+	  "default_title" : "Computes",
+	  "default_popup" : "popup.html"
+  },
+  "web_accessible_resources": [
+    "logo-48.png"
+  ],
+  "icons" : {
+    "16" : "logo-16.png",
+    "48" : "logo-48.png",
+    "128" : "logo-128.png"
+  },
+	"permissions": [
+	],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

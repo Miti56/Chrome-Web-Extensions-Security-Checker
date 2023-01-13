@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "vMee by Velocity Ops",
+  "short_name": "vMee",
+  "description": "This extension allows you to share your desktop into meetings with Velocity Ops vMee.",
+  "version": "1.10",
+  "minimum_chrome_version": "62",
+  "icons": {
+    "16": "vops-logo-16x16.png",
+    "48": "vops-logo-48x48.png",
+    "128": "vops-logo-128x128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+	"16": "vops-logo-128x128.png",
+	"24": "vops-logo-128x128.png",
+	"32": "vops-logo-128x128.png"
+    },
+    "default_title": "vMee by Velocity Ops"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://vmee.velocityops.com/*",
+          "*://vmee.me/*"
+      ]
+  }
+}

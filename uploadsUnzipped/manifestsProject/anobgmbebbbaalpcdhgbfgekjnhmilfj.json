@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+     "name": "Gdzie Jest Dziecko",
+     "description": "Lokalizator rodzinny Gdzie Jest Dziecko",
+     "version": "3.0.0",
+     "app": {
+          "urls": [
+               "https://gdziejestdziecko.pl/public/sc01-mobileApplication.jsf"
+          ],
+          "launch": {
+               "web_url": "https://gdziejestdziecko.pl/public/sc01-localize.jsf"
+          },
+          "container": "panel",
+          "height": 300,
+          "width": 500
+     },
+     "icons": {
+          "128": "gdziejestdziecko-128.png",
+          "16": "gdziejestdziecko-16.png"
+     },
+     "manifest_version": 2
+}

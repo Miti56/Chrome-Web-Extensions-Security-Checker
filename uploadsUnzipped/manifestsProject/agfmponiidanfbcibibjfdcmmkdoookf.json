@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Gigg",
+  "description": "Highlight what people are saying online about your brand.",
+  "version": "1.0.7",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Gigg",
+    "default_icon": "./icons/logo-small-disabled.png"
+  },
+  "icons": {
+    "16": "./icons/logo-small.png",
+    "48": "./icons/logo-small.png",
+    "128": "./icons/logo-small.png"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-5As4+3YpY62+l38PsxCEkjB1R4YtyktBtRScTJ3fyLU='; object-src 'self'",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

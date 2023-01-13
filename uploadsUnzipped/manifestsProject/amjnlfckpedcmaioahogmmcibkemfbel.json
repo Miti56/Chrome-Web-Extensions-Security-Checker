@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "iTel Screen Sharing Extension",
+  "short_name": "iTel",
+  "author": "iTel, Inc.",
+  "version" : "1.0.4",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "This chrome extension is developed primary for iTel Companies, Inc. It is for capturing content of your screen.",
+  "homepage_url": "https://itelcompanies.com/",
+  "background": {
+    "scripts": [ "background-script.js" ],
+    "persistent": false
+  },
+  "content_scripts": [ {
+   "js": [ "content-script.js" ],
+   "all_frames": true,
+   "matches": [ "https://*.itelcompanies.com/*","https://*.itelepsych.com/*","https://*.itelecoach.com/*", "http://*/*", "https://*/*" ]
+  } ],
+  "icons": {
+    "16": "iTel-logo-16.png",
+    "48": "iTel-logo-48.png",
+    "128":"iTel-logo-128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

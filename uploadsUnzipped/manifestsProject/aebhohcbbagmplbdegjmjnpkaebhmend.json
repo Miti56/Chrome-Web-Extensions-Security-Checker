@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Agile Extension Municipalidad de Limache",
+"short_name": "Agile Extension MuniLimache",
+"version": "1.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"description": "Agile Extension Ilustre Municipalidad de Limache",
+"permissions": ["nativeMessaging","webNavigation"],
+"content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+ ],
+"background": {
+"scripts": ["background.js"]
+},
+"minimum_chrome_version": "26"
+}

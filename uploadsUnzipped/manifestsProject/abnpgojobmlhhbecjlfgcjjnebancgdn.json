@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "OfficeClip Google Apps",
+  "version": "0.5.1.1",
+  "description": "OfficeClip Google Apps",
+  "icons": {
+    "128": "icons/128x128-icon.png",
+    "16": "icons/16x16-icon.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "218735536617",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://www.officeclip.com/General/OAuth2/Google/Login.aspx"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Laptop Pyramid",
+   "icons": { "16": "images/icon16.png",
+           "48": "images/icon48.png",
+          "128": "images/icon128.png" },
+   "description": "Pyramid theme for laptop computers. DigiArea Group",
+   "theme": {
+      "colors": {
+         "frame": [ 0, 0, 0 ],
+         "toolbar": [ 26, 6, 62],
+         "tab_text": [ 255, 255, 255, 0.5 ],
+         "tab_background_text": [ 0, 0, 0 ],
+         "bookmark_text": [ 255, 255, 255 ],
+         "ntp_background": [ 31, 2, 36 ],
+         "ntp_text": [ 30, 3, 35 ],
+         "ntp_link": [ 30, 3, 35 ],
+         "ntp_header": [ 80, 26, 91, 0.5 ],
+         "ntp_section": [ 255, 255, 255],
+         "ntp_section_text": [ 30, 3, 35 ],
+         "ntp_section_link": [ 255, 255, 255 ],
+         "ntp_section_link_underline": [ 255, 255, 255 ],
+         "button_background": [ 80, 26, 91 ],
+         "control_background": [ 255, 255, 255 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_toolbar": "images/theme_toolbar.png",
+         "theme_ntp_background": "images/Pyramid.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+      },
+      "tints": {
+         "background_tab": [ -1.0, 0.5, 0.75 ],
+         "buttons": [ 1.0, 1.0, 1.0 ],
+         "frame": [ -1.0, -1.0, -1.0 ],
+         "frame_inactive": [ -1.0, -1.0, 0.75 ],
+         "frame_incognito": [ -1.0, 0.2, 0.35 ],
+         "frame_incognito_inactive": [ -1.0, 0.3, 0.6 ]
+      },
+      "properties": {
+         "ntp_background_alignment": "top"
+      }
+   },
+   "version": "1.0"
+}

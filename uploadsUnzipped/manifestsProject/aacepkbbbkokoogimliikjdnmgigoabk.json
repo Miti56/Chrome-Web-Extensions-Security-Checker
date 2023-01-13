@@ -1,0 +1,85 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PourCeSoir NZB",
+  "description": "Permet d'enrichir le site PourCeSoir.in en ajoutant un lien de téléchargement pointant sur les moteurs générateurs de fichiers NZB.",
+  "version": "1.4",
+  "manifest_version": 2,
+  "browser_action": {
+  "default_icon": "favicon.png"
+  },
+   "web_accessible_resources": [
+        "jquerybubblepopup-themes/azure/bottom-left.png",
+        "jquerybubblepopup-themes/azure/bottom-middle.png",
+        "jquerybubblepopup-themes/azure/bottom-right.png",
+        "jquerybubblepopup-themes/azure/top-left.png",
+        "jquerybubblepopup-themes/azure/top-middle.png",
+        "jquerybubblepopup-themes/azure/top-right.png",
+        "jquerybubblepopup-themes/azure/middle-left.png",
+        "jquerybubblepopup-themes/azure/middle-right.png",
+        "jquerybubblepopup-themes/azure/tail-bottom.png",
+        "ampoule.png",
+        "binsearch.png",
+        "binsearch2.png",
+        "nzbindex.png",
+        "nzbclub.png",
+		"nzbking.png"
+    ],
+    "content_scripts": [
+        {
+			"matches": [
+                "http://pourcesoir.in/details/*",
+                "http://*.pourcesoir.in/details/*",
+                "https://pourcesoir.in/details/*",
+                "https://*.pourcesoir.in/details/*"
+            ],
+            "js": [
+                "jquery-1.7.2.js",
+                "jquerybubblepopup-themes/jquery-bubble-popup-v3.min.js",
+                "myscript2.js"
+            ]
+        },
+        {
+			"matches": [
+                "http://pourcesoir.in/browse*",
+                "http://*.pourcesoir.in/browse*",
+                "https://pourcesoir.in/browse*",
+                "https://*.pourcesoir.in/browse*"
+            ],
+            "js": [
+                "jquery-1.7.2.js",
+                "jquerybubblepopup-themes/jquery-bubble-popup-v3.min.js",
+                "myscript3.js"
+            ]
+        },
+        {
+			"matches": [
+                "http://pourcesoir.in/console*",
+                "http://*.pourcesoir.in/console*",
+                "https://pourcesoir.in/console*",
+                "https://*.pourcesoir.in/console*",
+				"http://pourcesoir.in/movies*",
+				"http://*.pourcesoir.in/movies*",
+				"https://pourcesoir.in/movies*",
+				"https://*.pourcesoir.in/movies*",
+				"http://pourcesoir.in/music*",
+				"http://*.pourcesoir.in/music*",
+				"https://pourcesoir.in/music*",
+				"https://*.pourcesoir.in/music*",
+				"http://pourcesoir.in/book*",
+				"http://*.pourcesoir.in/book*",
+				"https://pourcesoir.in/book*",
+				"https://*.pourcesoir.in/book*",
+				"http://pourcesoir.in/tvs*",
+				"http://*.pourcesoir.in/tvs*",
+				"https://pourcesoir.in/tvs*",
+				"https://*.pourcesoir.in/tvs*"
+            ],
+            "js": [
+                "jquery-1.7.2.js",
+                "jquerybubblepopup-themes/jquery-bubble-popup-v3.min.js",
+                "myscript.js"
+            ]
+        }
+    ]
+}

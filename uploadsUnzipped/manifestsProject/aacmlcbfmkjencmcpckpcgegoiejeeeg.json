@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Fuck Shit Up",
+  "description": "Sprinkle some 'fucks' into whatever you're reading.",
+  "version": "1.0.1",
+
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "background": {
+    "scripts": ["scriptchain.js", "background.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "fuck-shit-up-icon-19.png",
+      "38": "fuck-shit-up-icon-38.png"
+    }
+  },
+
+  "icons": {
+    "16": "fuck-shit-up-icon-16.png",
+    "48": "fuck-shit-up-icon-48.png",
+    "128": "fuck-shit-up-icon-128.png"
+  }
+}

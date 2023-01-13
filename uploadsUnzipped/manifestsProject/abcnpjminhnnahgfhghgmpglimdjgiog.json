@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Circle Space",
+  "description": "A Simple Colorful Game of Circles",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://circularbit.com/circlespace/index.html",
+      "http://circularbit.com/circlespace/game.html",
+	  "http://circularbit.com/circlespace/options.html",
+	  "http://circularbit.com/circlespace/inst.html",
+	  "http://circularbit.com/circlespace/about.html"
+    ],
+    "launch": {
+      "web_url": "http://circularbit.com/circlespace/index.html"
+    }
+  }
+}

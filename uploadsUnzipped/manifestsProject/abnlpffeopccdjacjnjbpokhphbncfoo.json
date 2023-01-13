@@ -1,0 +1,96 @@
+{
+  "background": {
+    "scripts": [
+      "js/localStorage.js",
+      "js/CheckAuth.js",
+      "js/Background.js",
+      "js/jquery.min.js",
+      "js/Common.js",
+      "js/limitationLI.js",
+      "js/background/task.js",
+      "js/background/autoSearch.js",
+      "js/background/parserSN.js",
+      "js/background/parserDefault.js",
+      "js/background/autosearchEngine.js"
+    ]
+  },
+  "browser_action": {
+    "default_popup": "html/Popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["js/jquery.min.js", "js/Content.js"],
+      "matches": ["\u003Call_urls>"]
+    },
+    {
+      "js": ["js/salescampcrm.js"],
+      "matches": [
+        "https://dashboard.salescamp.app/*",
+        "http://dashboard.salescamp.app/*"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/jquery.min.js", "js/presence.js"],
+      "matches": ["https://salescamp.app/"],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/jquery.min.js", "js/presence.js"],
+      "matches": ["https://dashboard.salescamp.app/*"],
+      "run_at": "document_idle"
+    },
+    {
+      "js": [
+        "js/jquery.min.js",
+        "js/insQ.min.js",
+        "js/Constants.js",
+        "js/Common.js",
+        "js/RestService_Content.js",
+        "js/localStorage.js",
+        "js/LinkedInSearch.js",
+        "js/LinkedInSearchParser.js",
+        "js/LinkedInPersonParser.js",
+        "js/LinkedInPersonParser_R.js",
+        "js/LinkedInSearchParser_S.js",
+        "js/LinkedInSearchParser_R.js",
+        "js/LinkedInPersonParser_S2.js",
+        "js/search_script.js"
+      ],
+      "css": ["css/plugin.css"],
+      "matches": ["*://*.linkedin.com/search/*"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.segment.com https://*.mxpnl.com https://*.amplitude.com; object-src 'self'",
+  "default_locale": "en",
+  "description": "__MSG_appDesc__",
+  "icons": {
+    "128": "img/128.png",
+    "19": "img/19.png",
+    "48": "img/48.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvhdXaWHv9vNJfLBf/An9Gfir0d7OmW7+7uUMGD5ccjjxPNagpf4T7Oqig26X6IivKkP5GiTi2+JqO9jN2anjxmG9InEr45UO/9KdB4kgil75GYry9u0JYx8uCGltOUIu/8kidzTQbIfgCXoLQRh5mcFIsLM6ARfEO2E4azkhJBN2RVzlJD9QR3wfcGdUMMFp4eV30SvXowHz1WdnPH7I8F4qUDX4xf+G6Hkd+fxts+GktqpuSYWZDjM+9Qf6lQSxfOKnhPAotjPegkUqkCNEOF0+CGNGwqbGeRvYsxqNytPIEgBS10/SEW5DGtn4RJodE7sMjLLBFSMeUV9DZKuM7QIDAQAB",
+  "manifest_version": 2,
+  "name": "Salescamp",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "*://*.linkedin.com/*",
+    "*://*.salescamp.app/*",
+    "cookies",
+    "notifications",
+    "storage",
+    "webRequest",
+    "contextMenus"
+  ],
+  "short_name": "__MSG_appShortName__",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0.1",
+  "web_accessible_resources": [
+    "img/19.png",
+    "img/add_new_plus.svg",
+    "img/open_link.svg",
+    "img/loading_img.svg",
+    "css/plugin.css"
+  ]
+}

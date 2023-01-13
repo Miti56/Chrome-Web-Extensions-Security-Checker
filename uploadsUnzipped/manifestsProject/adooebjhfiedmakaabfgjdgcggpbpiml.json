@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Watsh",
+  "short_name" : "Watsh",
+  "description": "Watch your favorite videos together, Share your emotions live",
+  "version": "2.70",
+  "manifest_version": 2,
+  "homepage_url": "https://www.watsh.tv",
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+      "default_title": "Watsh me!",
+      "default_icon": {                    
+            "19": "images/19.png",           
+            "38": "images/38.png"
+          }
+  },
+ "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": [
+    "/images/64.png"
+  ],
+ "offline_enabled": false,
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "desktopCapture"
+  ]
+}

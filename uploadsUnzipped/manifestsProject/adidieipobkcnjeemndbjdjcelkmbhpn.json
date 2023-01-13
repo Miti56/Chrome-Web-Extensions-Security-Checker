@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Bossur",
+    "description": "Bossur is watching you~",
+    "version": "0.0.0.2",
+
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": ["eventPage.js"],
+        "persistent": true
+    },
+    "web_accessible_resources": ["bossur.jpg"] ,
+    "permissions": [
+        "tabs",
+        "*://*/*"
+    ]
+}

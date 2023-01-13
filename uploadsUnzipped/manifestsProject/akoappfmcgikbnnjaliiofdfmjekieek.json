@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Brick Link Item Search",
+  "description": "Basta selecionar o código da peça ou set para que seja feita a pesquisa no banco de dados do Bricklink.com",
+  "version": "0.0.2",
+  "permissions": ["contextMenus"],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "browser_action":{
+      "default_icon": "bricklink16.png"
+	  },
+  "icons": {
+          "16": "bricklink16.png",
+          "48": "bricklink48.png",
+          "128": "bricklink128.png"
+        },
+		
+  "manifest_version": 2
+}

@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Workspace",
+  "description": "..",
+  "version": "1.1",
+
+  "browser_action": {
+
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+
+    {
+      "matches":[
+        "https://c3.twinfield.com/input/default.aspx*",
+        "https://c4.twinfield.com/input/default.aspx*",
+        "https://c5.twinfield.com/input/default.aspx*",
+        "https://accounting.twinfield.com/input/default.aspx*",
+        "https://accounting2.twinfield.com/input/default.aspx*"
+      ],
+      "js": [
+        "jquery-3.1.1.js",
+        "general.js",
+        "booking/booking.js"
+      ],
+      "css": [
+        "booking/booking.css",
+        "general/groups.css",
+        "general/blocks.css",
+        "general/table.css"
+      ]
+    },
+
+    {
+      "matches": [
+        "https://accounting.twinfield.com/UI/"
+      ],
+      "all_frames": true,
+      "js": [
+        "jquery-3.1.1.js",
+        "general.js",
+        "menu/menu.js"
+      ],
+      "css": [
+        "menu/menu.css"
+      ]
+    }
+
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

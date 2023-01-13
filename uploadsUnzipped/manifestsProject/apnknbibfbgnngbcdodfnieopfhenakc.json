@@ -1,0 +1,29 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "allinoneoffice_browser_icon-16px.png",
+         "38": "allinoneoffice_browser_icon-32px.png"
+      },
+      "default_title": "All-in-One Office"
+   },
+   "content_security_policy": "script-src 'self';object-src 'self'",
+   "description": "New tab page with quick access to your web office inventory and the weather forecast",
+   "icons": {
+      "128": "allinoneoffice_icon-256px.png",
+      "16": "allinoneoffice_icon-16px.png",
+      "32": "allinoneoffice_icon-32px.png",
+      "48": "allinoneoffice_icon-96px.png"
+   },
+   "chrome_url_overrides" : {
+      "newtab": "newtab.html"
+   },
+   "manifest_version": 2,
+   "name": "All-in-One Office - New Tab",
+   "permissions": [ "storage", "activeTab", "tabs", "notifications", "management", "*://allinoneoffice.net/*"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

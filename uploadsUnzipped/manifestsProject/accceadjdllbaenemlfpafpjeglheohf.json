@@ -1,0 +1,13 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "LangageEcrit.com",
+	"description": "Accès direct à LangageEcrit.com",
+	"version": "2.0.0",
+	"icons": { "16": "Icon_16.png", "48": "Icon_48.png", "128": "Icon_128.png" },
+	"app": {
+		"launch": {
+			"web_url": "http://www.langageecrit.com/?Source=GoogleWebApp&utm_source=Chrome&utm_medium=Hyperlink&utm_campaign=GoogleWebApp"
+			}
+		}
+}

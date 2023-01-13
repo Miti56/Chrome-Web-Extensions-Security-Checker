@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LessonUp Leerling",
+  "short_name": "LessonUp",
+  "description": "Doe mee met de les op het digibord en bekijk de lessen die met jou gedeeld zijn.",
+  "version": "0.4.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png",
+    "512": "icon_512.png",
+    "1024": "icon_1024.png"
+  },
+  "app": {
+    "urls": [
+      "https://student.lessonup.io/"
+    ],
+    "launch": {
+      "web_url": "https://student.lessonup.io/"
+    }
+  }
+}

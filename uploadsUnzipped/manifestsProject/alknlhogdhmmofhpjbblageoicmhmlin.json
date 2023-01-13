@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"version":"1.0.0","manifest_version":2,"name":"Solo Agua Verde","theme":{"images":{"theme_frame":"theme_frame.png","theme_tab_background":"theme_tab_background.png","theme_toolbar":"theme_toolbar.png","theme_ntp_background":"theme_ntp_background.png"},"colors":{"ntp_background":[204,204,204],"ntp_text":[106,106,106],"tab_text":[0,0,0],"tab_background_text":[11,0,35],"toolbar":[86,255,0],"bookmark_text":[12,0,39]},"tints":{"buttons":[-1,-1,-1]},"properties":{"ntp_background_alignment":"top left","ntp_background_repeat":"no-repeat"}}}

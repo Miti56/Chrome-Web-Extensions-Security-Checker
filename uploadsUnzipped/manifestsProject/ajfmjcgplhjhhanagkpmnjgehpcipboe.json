@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Think Conveyancing",
+"description": "A trusted local conveyancer in Melbourne, Brisbane and Sydney..",
+"version": "0.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"https://www.thinkconveyancing.com.au/"
+],
+"launch": {
+"web_url": "https://www.thinkconveyancing.com.au/"
+}
+}
+}

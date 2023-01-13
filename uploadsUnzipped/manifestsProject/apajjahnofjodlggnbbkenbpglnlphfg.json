@@ -1,0 +1,43 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"name": "ICBC Chrome Extension from Mingwah",
+	"version": "1.0.1.1",
+	"description": "Chrome Extension of ICBC Internet Banking for Mingwah USB-Shield",
+	"background":
+	{
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+    "content_scripts":
+	[{
+		"matches": ["*://*.icbc.com.cn/*",
+					"*://*.icbc.com/*",
+					"*://*.dccnet.com.cn/*",
+					"*://*.dccnet.com/*"
+					],
+		"js": ["content.js"],
+		"all_frames": true
+	}],
+	"externally_connectable":
+	{
+		"matches": ["*://*.icbc.com.cn/*",
+					"*://*.icbc.com/*",
+					"*://*.dccnet.com.cn/*",
+					"*://*.dccnet.com/*"
+					]
+	},	
+	"page_action":
+	{
+		"default_title": "ICBC Chrome Extension from Mingwah",
+		"default_icon" : "icon-128.png"
+	},
+	"permissions": ["declarativeContent","nativeMessaging"],
+	"icons":
+	{
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	},
+	"web_accessible_resources": ["icon-128.png"],
+	"manifest_version": 2
+}

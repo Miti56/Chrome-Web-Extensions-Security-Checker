@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Huawei Meeting Extension",  
+  "version": "1.1.15",  
+  "manifest_version": 2,  
+  "description": "Send a message to a native application.",  
+  "browser_action": {  
+    "default_icon": "icon72.png"  
+  },  
+  "icons": {  
+    "16": "icon72.png",  
+    "48": "icon128.png",  
+    "128": "icon128.png"  
+  },  
+  "permissions": [  
+    "nativeMessaging", "management", "tabs", "http://*/*", "https://*/*"  
+  ],  
+  "content_scripts": [  
+    {  
+      "matches": ["*://*/*"],  
+      "js": ["content.js"]   
+    }  
+  ],  
+  "background" : { "scripts": ["background.js"] },
+  "web_accessible_resources":  [
+  "icon72.png",
+  "icon128.png"
+  ]
+}  

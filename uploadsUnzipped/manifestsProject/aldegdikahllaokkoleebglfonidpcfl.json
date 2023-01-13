@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "引用文 Maker",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "貼り付けた文章の先頭に「> 」をつけるよ！",
+  "icons": {
+    "48": "icon_48.png",
+    "128": "icon_128.png",
+    "32": "icon_48.png"
+  },
+  "browser_action": {
+    "default_icon": "icon_48.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/libs/jquery-2.2.2.min.js", "js/libs/clipboard/clipboard.min.js", "js/libs/toast/jquery.toast.min.js", "js/content.js"],
+      "css": ["js/libs/toast/jquery.toast.min.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

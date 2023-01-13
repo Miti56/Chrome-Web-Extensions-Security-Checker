@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Nixplay",
+  "description": "Nixplay",
+  "version": "1.0.5",
+  "minimum_chrome_version": "57.0.2987",
+
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+
+  "icons": {
+    "16": "images/nixplay-icon-color.png",
+    "32": "images/nixplay-icon-color.png",
+    "64": "images/nixplay-icon-color.png",
+    "128": "images/nixplay-icon-color.png"
+  },
+
+  "browser_action": {
+    "default_icon": "images/nixplay-icon-color.png",
+    "default_popup": "html/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": [
+        "*://app.nixplay.com/*",
+        "*://app.rnd.nixplay.com/*",
+        "*://app.qa.nixplay.com/*",
+        "*://signage.nixplay.com/*",
+        "*://signage.rnd.nixplay.com/*",
+        "*://signage.qa.nixplay.com/*"
+      ],
+      "js": ["js/content.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["js/background.js"]
+  }
+}

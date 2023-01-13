@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "description": "Facturaci\u00f3n Electr\u00f3nica CFDI F\u00e1cil - Proveedor Autrorizado por el SAT M\u00e9xico", 
+  "icons": {
+    "128": "logo.png"
+  }, 
+  "app": {
+    "urls": [
+      "https://portalweb.iofacturo.mx/"
+    ], 
+    "launch": {
+      "web_url": "https://portalweb.iofacturo.mx/"
+    }
+  }, 
+  "version": "1.0.4", 
+  "manifest_version": 2, 
+  "permissions": [
+    "unlimitedStorage", 
+    "notifications", 
+    "cookies", 
+    "*://*.iofacturo.mx/*"
+  ], 
+  "name": "ioFacturo CFDI SAT"
+}

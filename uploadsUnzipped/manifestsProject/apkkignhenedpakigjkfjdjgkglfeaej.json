@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Facebook Sponsored Post Remover",
+  "description": "Removes sponsored posts from Facebook.",
+  "version": "0.1",
+  "author":"George Walker",
+  
+  "icons":{"128":"icon.png"},
+  
+  "content_scripts": [
+	{
+	  "runs_at": "document_end",
+	  "matches": ["https://www.facebook.com/*"],
+	  "js": ["script.js"]
+	}
+  ],
+  "options_page": "options.html",
+  "permissions": [
+	"tabs"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Facebook - Obriši sve poruke 1 klikom",
+  "version": "1.0",
+  "author": "Kevin Radošević",
+  "manifest_version": 2,
+  "description": "Dodaje radnju stranice pod Facebook Messages tab kako biste obrisali sve poruke 1 klikom.",
+  "icons": { "16": "img/1icon16.png",
+             "48": "img/1icon48.png",
+             "128": "img/1icon128.png" },
+  "background": { "scripts": ["background.js"] },
+  "page_action": {
+	"default_icon": "img/1icon48.png",
+	"default_title": "Facebook - Obriši sve poruke 1 klikom"
+  },
+  "permissions" : [
+    "tabs",
+	"*://*.facebook.com/messages*"
+  ]
+}

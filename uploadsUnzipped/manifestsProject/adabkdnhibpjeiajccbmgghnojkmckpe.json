@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Quiclean",
+	"description": "Quickly Clean Your Chrome",
+	"version": "1.0.0",
+
+	"background": {
+		"page": "background.html",
+		"persistent": true
+	},
+
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"css": ["css/dialog.css"],
+		"js": ["js/content.js"]
+	}],
+
+	"browser_action": {
+		"default_icon": "icons/quiclean_browser_icon-128px.png",
+		"default_popup": "popup.html",
+		"default_title": "Quickly Clean Your Chrome"
+	},
+
+   	"content_security_policy": "script-src 'self' 'unsafe-eval';object-src 'self'",
+
+	"options_page": "background.html",
+
+	"icons": {
+		"16": "icons/quiclean_icon-16px.png",
+		"32": "icons/quiclean_icon-32px.png",
+		"48": "icons/quiclean_icon-96px.png",
+		"96": "icons/quiclean_icon-96px.png",
+		"128": "icons/quiclean_icon-128px.png",
+		"256": "icons/quiclean_icon-128px.png"
+	},
+
+	"permissions": [ "tabs", "activeTab", "browsingData", "storage",  "<all_urls>", "webRequest", "webRequestBlocking", "management", "notifications"]
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "AppStreaming Domain Chrome App",
+  "description": "Connect to our Apps from anywhere.",
+  "version": "0.0.0.10",
+  "app": {
+    "background": {
+      "scripts": [
+        "background.js"
+      ]
+    }
+  },
+  "icons": {
+    "16": "icons/ps_streaming_beta_appicon_16.png",
+    "128": "icons/ps_streaming_beta_appicon_128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhbr1S3ddcjxjTGNrHb514CIZ05+LipMtp3WYhjpGCT+OHzh8g5uxXzATJDp8EBdPgOQEzc1lIFdsYSpP1nL6daMMAxXHR8dAXhHBAsB0ov87nt9myR9odSATz5pILot20gCenFS8gn/UagYT/KWetI58oLdmUH+zDD9RwLOgJIODFAQ/cmpKHX3xsVYvHWCiCTwTxRD+r49JKjhZxnNKEuFdDsj5Cxhe1lzfsw7i7t6fyafl0NpzeXNVdipf5Q9KhR0UCiduhl+UgAezLlAdbZgLLF2T8M9zeWC137OEytXwbEMncImV/Zxfu5AihhnLm7AYi0PK4l+ZYQD1dV7e6QIDAQAB",
+  "permissions": [
+    "storage",
+    "webview",
+    "identity",
+    "identity.email",
+    "<all_urls>"
+  ]
+
+}

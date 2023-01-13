@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "2.3.34",
+  "name": "Huntool 2",
+  "manifest_version": 2,
+  "description": "Chassez sur les réseaux sociaux",
+  "browser_action": {
+    "default_title": "Huntool",
+    "default_popup": "small-popup.html"
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "web_accessible_resources": [
+    "inject.html",
+    "container.html",
+    "background.html",
+    "main.html",
+    "popup.html",
+    "small-popup.html"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [ {
+    "matches": ["*://*.linkedin.com/*",
+      "*://*.mail.google.com/*",
+      "*://*.facebook.com/*",
+      "*://*.viadeo.com/*",
+      "*://*.huntool.in/*" ],
+    "js": [
+      "jquery.min.js",
+      "selectors/facebook.js",
+      "selectors/gmail.js",
+      "selectors/linkedin.js",
+      "selectors/viadeo.js",
+      "selectors/huntool.js",
+      "background.js"
+    ]
+  }],
+  "permissions": [ "contextMenus",
+                  "management",
+                  "tabs",
+                  "storage",
+                  "*://*.mail.google.com/*",
+                  "*://*.facebook.com/*",
+                  "*://*.linkedin.com/*",
+                  "*://*.huntool.in/*",
+                  "*://*.viadeo.com/*",
+                  "*://*.huntool.herokuapp.com/*",
+                  "*://*.huntool2.herokuapp.com/*",
+                  "notifications" ],
+  "content_security_policy": "default-src 'self'; ; font-src *; script-src 'self' https://huntool.herokuapp.com https://huntool2.herokuapp.com 'unsafe-eval'; connect-src https://huntool2.herokuapp.com https://huntool.herokuapp.com; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' * data:;"
+}

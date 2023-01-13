@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"Sequoia Kings Canyon: Chimani","description":"Chimani Outdoor Destination Guide","version":"1.6","author":"Chimani, Inc.","manifest_version":2,"icons":{"128":"icon_128.png","192":"icon_192.png","40":"icon_40.png"},"app":{"urls":["https://www.chimani.com/park.html?park=19-sequoia_kings","https://www.chimani.com/park/poi.html?park=19-sequoia_kings","https://www.chimani.com/park/ranger_event.html?park=19-sequoia_kings"],"launch":{"web_url":"https://www.chimani.com/park.html?park=19-sequoia_kings"}}}

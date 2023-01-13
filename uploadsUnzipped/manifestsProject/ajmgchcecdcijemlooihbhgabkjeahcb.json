@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "פסוקים, תנך ותהילים.",
+   "short_name": "פסוקים",
+  "description": "תנך און ליין הכולל מגוון רחב של אפשרויות כגון: חיפוש, גימטריה, פסוק לפי שם, דילוג אותיות, כלי להסרת ניקוד, תהילים חברתי ועוד...", 
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128x.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.psokim.co.il/"
+    ],
+    "launch": {
+      "web_url": "http://www.psokim.co.il/"
+    }
+  }
+}

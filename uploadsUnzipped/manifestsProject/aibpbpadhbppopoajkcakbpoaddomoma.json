@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "BoopTube",
+	"description": "Improve YouTube comments by distilling their true meaning and depth.",
+	"version": "1.0",
+	"permissions": [
+		"tabs", "http://www.youtube.com/*", "https://www.youtube.com/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://www.youtube.com/*", "https://www.youtube.com/*"],
+			"js": ["jquery-2.2.1.min.js", "boop.js"]
+		}
+	],
+	"icons": { 
+		"16": "assets/boop_16.png",
+		"48": "assets/boop_48.png",
+		"128": "assets/boop_128.png"
+	}
+}

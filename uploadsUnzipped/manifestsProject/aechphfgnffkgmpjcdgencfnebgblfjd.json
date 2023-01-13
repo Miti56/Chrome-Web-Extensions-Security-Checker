@@ -1,0 +1,41 @@
+{
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "128.png",
+      "32": "32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["\u003Call_urls>"],
+      "js": ["bootstrap/js/sizzle.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+  "description": "Stores tabs and saves RAM",
+  "icons": {
+    "128": "128.png",
+    "32": "32.png"
+  },
+  "key":
+    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnu8C1WEsgruixEI88uGT10NJHDlEQyBuYc9zTdOLhxeDZ5TY+o7ilmZmQENHWkUBBuhp+r4EXps4GW1QVBRf1/+uy3odjxL49G05/7qCF0OL/Q/GJPHcZcuZ2dSqkCIrUZvgLaQ7JtKlovVIgDUKrJytcePKAqCUEOcSbflr+44p29MS8cBC6BlYfK394VPgHlxtWjy9B50+r9x64aRxorYjrDq7MLE9l8ucadWseP77RlEAKLpsv3SHkZEFYTOhVvBJ5YVZtyw7DuRs91aFbZkPIysHTFu7fDywE85+lxyT4I7os1TThicJK4wxS1AVOkxxOKKDMTaXXwbf1rLdhwIDAQAB",
+  "manifest_version": 2,
+  "name": "Tab manager",
+  "permissions": [
+    "tabs",
+    "\u003Call_urls>",
+    "webRequest",
+    "webRequestBlocking",
+    "contextMenus",
+    "storage"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.4",
+  "web_accessible_resources": ["tab.html"]
+}

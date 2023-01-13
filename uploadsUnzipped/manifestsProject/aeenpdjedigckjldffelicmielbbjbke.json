@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "RTM Shortcut: Duplicate Task",
+	"version": "1.2",
+	"author": "Kidon Chu(http://github.com/kidonchu)",
+
+	"description": "Duplicate Task with shortcut intead of mouse interaction",
+
+	"content_scripts": [
+		{
+			"matches": ["http://www.rememberthemilk.com/home/*", "https://www.rememberthemilk.com/home/*"],
+			"js": ["contentScript.js"]
+		}
+	],
+
+	"web_accessible_resources": ["js/rtmsfdt.js"]
+}

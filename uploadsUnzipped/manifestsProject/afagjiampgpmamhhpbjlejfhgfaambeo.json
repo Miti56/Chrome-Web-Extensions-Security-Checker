@@ -1,0 +1,82 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "web_accessible_resources": [
+        "icons/*",
+        "font/*",
+        "js/*",
+        "extension_info.json",
+        "searchEngines.json"
+    ],
+    "homepage_url": "http://tab.getpdftotal.com",
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "browser_action": {
+        "default_icon": "icons/digicogs16x16.png",
+        "default_title": "PDFTotal"
+    },
+    "description": "Convert all your documents to PDF files - DOC, DOCX, RTF, TXT and many more",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.getpdftotal.com/*",
+                "https://*.getpdftotal.com/*",
+                "https://*.bing.com/*",
+                "https://*.yahoo.com/*",
+                "https://*.google.com/*",
+                "http://*.bing.com/*",
+                "http://*.yahoo.com/*",
+                "http://*.google.com/*",
+                "https://mail.google.com/*",
+                "https://youtube.com/*",
+                "https://www.facebook.com/*",
+                "https://twitter.com/*"
+                    ],
+            "all_frames": true,
+            "js": [
+                "js/lib/require.js",
+                "js/lib/require-cs.js",
+                "js/content-init.js",
+                "js/newtab.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "manifest_version": 2,
+    "icons": {
+        "128": "icons/digicogs128x128.png",
+        "48": "icons/digicogs48x48.png",
+        "16": "icons/digicogs16x16.png"
+    },
+    "version": "3.36.7.5",
+    "background": {
+        "page": "background.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": [
+        "tabs",
+        "http://*.getpdftotal.com/*",
+        "https://*.getpdftotal.com/*",
+        "https://*.bing.com/*",
+        "https://*.yahoo.com/*",
+        "https://*.google.com/*",
+        "http://*.bing.com/*",
+        "http://*.yahoo.com/*",
+        "http://*.google.com/*",
+        "https://mail.google.com/*",
+        "https://youtube.com/*",
+        "https://www.facebook.com/*",
+        "https://twitter.com/*",
+        "contextMenus",
+        "webNavigation",
+        "topSites",
+        "management",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "identity",
+        "notifications"
+    ],
+    "name": "PDFTotal"
+}

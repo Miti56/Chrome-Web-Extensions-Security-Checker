@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Spigot Plagins",
+    "version": "1.1.1",
+    "description": "Plug-in? Plugin? Plogin? NO! Plagin!",
+    "content_scripts": [
+        {
+            "matches": ["https://spigotmc.org/*", "https://*.spigotmc.org/*"],
+            "js": ["jquery331.js", "always-watching.js"]
+        }
+    ],
+    "manifest_version": 2
+}

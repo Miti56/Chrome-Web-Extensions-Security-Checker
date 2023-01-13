@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "author": "Oracle America, Inc.",
+    "version": "17.2.2",
+    "incognito": "split",
+    "icons": {
+        "16": "img/icon16.png",
+        "32": "img/icon32.png",
+        "48": "img/icon48.png"
+    },
+    "default_locale" : "en",
+    "browser_action" : {
+        "default_title" : "__MSG_appTitle__",
+        "default_popup" : "html/popup.html"
+    },
+    "content_scripts" : [{
+             "matches" : [
+                 "http://*/*",
+                 "https://*/*"
+             ],
+             "js" : [
+                 "scripts/PortWrapper.js",
+                 "scripts/contentScripts/utils.js",
+                 "scripts/contentScripts/localclient.js",
+                 "scripts/contentScripts/detect.js"
+             ],
+             "run_at" : "document_start",
+             "all_frames" : true
+         }
+    ], 
+    "permissions" : [
+        "webNavigation",
+        "cookies",
+        "http://*/*",
+        "https://*/*",
+        "background",
+        "unlimitedStorage"
+    ],
+    "background": {
+        "page": "html/background.html"
+    },
+	"web_accessible_resources": [
+  ]
+}

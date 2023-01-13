@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Soundcloud Hide",
+	"short_name" : "SC Hide",
+	"manifest_version": 2,
+	"version":"1.3",
+	"description": "Hide songs in your Soundcloud Stream",
+	"icons": 
+	{
+		"16": "images/schidelogo16.png",
+		"48": "images/schidelogo48.png",
+		"128": "images/schidelogo128.png" 
+	},
+	"content_scripts": 
+	[{
+		"matches": ["*://soundcloud.com/*"],
+		"js": ["js/jquery-1.11.1.min.js","js/schide.js"],
+		"run_at": "document_start"
+	}],
+	"background": {
+	    "scripts": ["js/backgroud.js"],
+	    "persistent": true
+  	},
+  	"page_action":{
+  		"default_icon": {              
+  			"19": "images/schidelogo19.png",                  
+            "38": "images/schidelogo38.png"            
+          },
+          "default_title": "Soundcloud Hide",
+          "default_popup": "popup.html"
+  	},
+	"permissions": 
+	[
+		"webRequest",
+      "storage",
+      "https://soundcloud.com/*",
+		"https://api-v2.soundcloud.com/*",
+		"https://api.soundcloud.com/*",
+		"https://eventlogger.soundcloud.com/*"
+    ]
+}

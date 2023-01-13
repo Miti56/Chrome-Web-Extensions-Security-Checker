@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Yuppr",
+  "description": "Your ultimate place for saving and sharing everything you love!",
+  "short_name": "Yuppr",
+  "author": "Yuppr, Inc.",
+  "version": "0.1.7",
+  "icons": {
+    "16": "img/icon16.png",
+    "32": "img/icon32.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [{
+    "matches": [
+        "https://www.yuppr.com/*"
+    ],
+    "js": [
+      "lib/jquery.min.js",
+      "js/content.js"
+    ]
+  }],
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "index.html",
+    "default_title": "Yuppr"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    "websites/*"
+  ]
+}

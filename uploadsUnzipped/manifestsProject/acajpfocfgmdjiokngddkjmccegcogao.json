@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tăng tương tác Facebook TUONGTAC.ORG",
+  "description": "Phần mềm tăng tương tác Facebook, tự động thả tim, bình luận. Tương tác theo nhóm bạn bè trên Facebook . Tính năng vượt trội",
+  "version": "1.5.3",
+  "icons": {"16": "icon_16.png",
+           "48": "icon_48.png",
+          "128": "icon_128.png"},
+  "permissions": [
+    "tabs","storage","https://*/*","http://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Tăng tương tác Facebook TUONGTAC.ORG",
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html"
+  },
+   "background": {
+    "scripts": ["background.js"]
+  },
+  "manifest_version": 2
+}

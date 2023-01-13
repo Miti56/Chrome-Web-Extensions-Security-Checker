@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Plurk logo to profile",
+  "version": "1.0",
+  "description": "像以前一樣按噗浪 Logo 就回到個人頁面",
+  "icons": {"48": "icon_48.png"},
+  "permissions": ["http://www.plurk.com/*", "http://plurk.com/*"],
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://www.plurk.com/*", "http://plurk.com/*"],
+      "js": ["main.js"]
+    }
+  ]
+}

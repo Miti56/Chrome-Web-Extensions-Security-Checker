@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Run Panda Run",
+
+  "short_name": "Run Panda Run",
+
+  "version": "1.0.2",
+  "description": "Play Run Panda Run directly on your browser",
+
+  "homepage_url": "https://appfront.pw/c/juegos-de-zoologico/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Run Panda Run",
+
+      "default_popup": "popup.html"
+  }
+}

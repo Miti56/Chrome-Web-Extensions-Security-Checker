@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Gophr",
+  "version": "2.1.0",
+  "description": "Have your documents and search results organized so you can share and even reuse existing ones, saving your time and effort.",
+  "icons": {
+    "19": "icon.png",
+    "38": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_title": "Save this page to your Gophr",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": [
+      "bInlineInstall.js",
+      "event.js"
+    ],
+    "persistent": true
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://localhost/*",
+      "*://127.0.0.1/*",
+      "*://gogophr.com/*",
+       "*://www.gogophr.com/*",
+      "*://gophr.tgpstage1.com/*"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "webRequestBlocking",
+    "background",
+    "activeTab",
+    "webNavigation",
+    "*://*.www.gogophr.com/",
+    "cookies",
+    "http://www.gogophr.com/",
+    "http://*/*",
+    "https://*/*",
+    "http://localhost/"
+  ]
+}

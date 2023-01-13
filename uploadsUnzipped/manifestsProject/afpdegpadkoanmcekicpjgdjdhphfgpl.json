@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"description": "The music of a jazz musician playing the saxophone.",
+  "version": "1.1","manifest_version": 2,
+  "name": "Midnight-Blues",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/frame.png",
+      "theme_toolbar" : "images/toolbar.png",
+      "theme_ntp_background" : "images/eyes.png",
+      "theme_tab_background" : "images/tab.png",
+      "theme_ntp_attribution" : "images/logo.png"
+       },
+    "colors" : {
+      	"ntp_link": [255,255,255], 
+	"ntp_text": [255,255,255], 
+	"ntp_section_link": [255,255,255], 
+	"ntp_section_text": [10 , 10 , 10],
+	"ntp_background": [255 , 255 , 255], 
+	"frame": [255 , 255 , 255], 
+	"toolbar": [10 , 25 , 75], 
+	"tab_text": [255,255,255], 
+	"tab_background_text": [255 , 255 , 255], 
+	"bookmark_text": [255,255,255]
+    },
+    "tints" : {
+                "buttons" : [0.99, 0.99, 0.99],
+                "frame_inactive": [0.00, 0.00, 0.00], 
+                "frame_incognito_inactive": [0.00, 0.00, 0.00] 
+    },
+    "properties" : {
+     	"ntp_background_alignment" : "bottom",
+	"ntp_background_repeat": "no-repeat"
+    }
+  }
+}

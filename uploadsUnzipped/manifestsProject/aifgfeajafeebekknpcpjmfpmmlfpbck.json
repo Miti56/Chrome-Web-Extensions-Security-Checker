@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MathFights",
+  "description": "Become a Math Champion!",
+  "manifest_version": 2,
+  "version": "0.0.6",
+  "app": {
+    "urls": [
+      "http://mathfights.com/"
+    ],
+    "launch": {
+      "web_url": "http://mathfights.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

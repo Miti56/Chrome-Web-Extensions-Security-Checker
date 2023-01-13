@@ -1,0 +1,129 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "short_name": "ZenMate VPN Professional",
+  "description": "__MSG_appDesc__",
+  "version": "10.0.5.7",
+  "icons": {
+    "16": "icons/standard-16.png",
+    "48": "icons/standard-48.png",
+    "64": "icons/standard-64.png",
+    "128": "icons/standard-128.png"
+  },
+  "permissions": [
+    "*://*/*",
+    "chrome://favicon/",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "proxy",
+    "unlimitedStorage",
+    "background",
+    "management",
+    "storage",
+    "notifications",
+    "cookies"
+  ],
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/Bacon.min.js",
+      "scripts/vendor/ciuvo-whitelist.min.js",
+      "scripts/locales.js",
+      "scripts/index.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": [
+      "*://*.zenmate.com/*",
+      "*://*.zenmate.ae/*",
+      "*://*.zenmate.ma/*",
+      "*://*.zenmate.dk/*",
+      "*://*.zenmate.at/*",
+      "*://*.zenmate.ch/*",
+      "*://*.zenmate.de/*",
+      "*://*.zenmate.li/*",
+      "*://*.zenmate.ca/*",
+      "*://*.zenmate.co.uk/*",
+      "*://*.zenmate.ie/*",
+      "*://*.zenmate.co.nz/*",
+      "*://*.zenmate.com.ar/*",
+      "*://*.zenmate.cl/*",
+      "*://*.zenmate.co/*",
+      "*://*.zenmate.es/*",
+      "*://*.zenmate.mx/*",
+      "*://*.zenmate.com.pa/*",
+      "*://*.zenmate.com.pe/*",
+      "*://*.zenmate.com.ve/*",
+      "*://*.zenmate.fi/*",
+      "*://*.zenmate.fr/*",
+      "*://*.zenmate.co.il/*",
+      "*://*.zenmate.in/*",
+      "*://*.zenmate.hu/*",
+      "*://*.zenmate.co.id/*",
+      "*://*.zenmate.is/*",
+      "*://*.zenmate.it/*",
+      "*://*.zenmate.jp/*",
+      "*://*.zenmate.kr/*",
+      "*://*.zenmate.lu/*",
+      "*://*.zenmate.lt/*",
+      "*://*.zenmate.lv/*",
+      "*://*.zenmate.my/*",
+      "*://*.zenmate.be/*",
+      "*://*.zenmate.nl/*",
+      "*://*.zenmate.pl/*",
+      "*://*.zenmate.com.br/*",
+      "*://*.zenmate.pt/*",
+      "*://*.zenmate.ro/*",
+      "*://*.zenmate.com.ru/*",
+      "*://*.zenmate.se/*",
+      "*://*.zenmate.sg/*",
+      "*://*.zenmate.com.ph/*",
+      "*://*.zenmate.com.tr/*",
+      "*://*.zenmate.pk/*",
+      "*://*.zenmate.vn/*",
+      "*://*.zenmate.hk/*"
+    ],
+    "js": [
+      "scripts/page_api.js"
+    ],
+    "run_at": "document_start"
+  }, {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": [
+      "scripts/free.js"
+    ],
+    "run_at": "document_end"
+  }, {
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": [
+      "scripts/ciuvo.js"
+    ]
+  }],
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com https://ssl.google-analytics.com https://googletagmanager.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/standard-16.png",
+      "19": "icons/standard-19.png",
+      "38": "icons/standard-38.png",
+      "48": "icons/standard-48.png",
+      "64": "icons/standard-64.png",
+      "128": "icons/standard-128.png"
+    },
+    "default_popup": "",
+    "default_title": "ZenMate"
+  },
+  "minimum_chrome_version": "22.0",
+  "web_accessible_resources": [
+    "widget.html",
+    "images/check.gif",
+    "scripts/vendor/ciuvo-contentscript.min.js"
+  ]
+}

@@ -1,0 +1,21 @@
+{"version": "3.6.9", 
+
+"name": "Overwatch Mercy Backgrounds & New Tab", 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"manifest_version": 2, 
+
+"browser_action": {"default_icon": "128-test_logo.png", 
+
+"default_title": "Overwatch Mercy Backgrounds & New Tab"}, 
+
+"description": "__MSG_addinfo__", 
+
+"default_locale": "en", 
+
+"icons": {"128": "128-test_logo.png"}, 
+
+"background": {"scripts": ["script_main.js"]}, 
+
+"chrome_url_overrides": {"newtab": "newtab_index.html"}}

@@ -1,0 +1,58 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+ "name": "Phone Book",
+ "version": "0.4.3",
+ "description": "",
+
+"background": {
+    "scripts": ["js/ga.js", "js/background.js"],
+    "persistent": true
+},
+
+"options_page": "options.html",
+
+"content_scripts": [
+    {
+      "all_frames": true,  
+      "matches":["http://*/*", "https://*/*"],  
+      "exclude_matches" : ["http://phones.rul/*", "http://phones.webentry.ru/*", "https://mail.google.com/*"],
+      "css": ["css/styles.css"],
+      "js": ["js/ga.js", "js/lib/underscore-min.js", "js/lib/jquery-1.7.2.min.js", "js/content_script.js", "js/phones.js"],
+      "run_at": "document_start"
+    }
+],
+
+"incognito": "spanning",
+
+"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; 'unsafe-eval'; object-src 'self'",
+
+"icons": { 
+    "128": "icon/logo-128.png", 
+    "48" : "icon/logo-48.png", 
+    "16" : "icon/logo-16.png" 
+},
+
+"manifest_version": 2,
+
+"permissions": [
+  "tabs",
+  "http://*/*", 
+  "https://*/*",
+  "notifications",
+  "storage",
+  "contextMenus", 
+  "webNavigation", 
+  "cookies"
+],
+
+"browser_action": {
+	"default_title": "Phone Book",
+	"default_icon": "icon/logo-20.png"
+},
+
+"web_accessible_resources": [
+    "img/close.gif"
+] 
+  
+ 
+}

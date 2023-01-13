@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [{
+      "js": [ "content.js" ],
+      "matches": [ "https://*.google.com/*", "https://*.bing.com/*", "https://*.ebay.com/*", "https://*.ebay.co.uk/*", "https://*.ebay.ca/*" ]
+   }],
+  "name": "Get Free eBay Gift Cards",
+  "description": "Get Free eBay Gift Cards",
+  "version": "1.0.3",
+  "permissions": ["background", "tabs", "https://*.google.com/*", "https://*.bing.com/*", "https://*.ebay.com/*", "https://*.ebay.co.uk/*", "https://*.ebay.ca/*" ],
+  "browser_action": {
+      "default_title": "Get Free eBay Gift Cards",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "icons": {
+      "128": "icon.png"
+  },
+  "web_accessible_resources": [ "script.js", "ecommerce.js" ],
+  "manifest_version": 2
+}

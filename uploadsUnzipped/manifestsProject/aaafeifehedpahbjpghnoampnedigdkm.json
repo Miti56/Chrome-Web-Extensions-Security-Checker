@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "Graphite",
+   "version": "0.99.4",
+   "manifest_version": 2,
+   "author": "GKing",
+   "description": "Modern. Gray. Simple.",
+   "theme": {
+		"images": {
+            "theme_tab_background" : "tab_background.png",
+	    "theme_frame" : "frame.png"
+		},
+		"colors": {
+			"frame" : [ 42, 44, 46 ],
+			"frame_inactive" : [ 100, 102, 104 ],
+			"frame_incognito" : [ 42, 44, 46 ],
+			"frame_incognito_inactive" : [ 100, 102, 104 ],
+			"toolbar" : [ 184, 186, 188 ],
+			"tab_text" : [ 8, 8, 8 ],
+			"tab_background_text" : [ 18, 18, 18 ],
+			"bookmark_text" : [ 8, 8, 8 ],
+			"button_background" : [ 0, 0, 0, 0 ]
+		},
+		"tints": {
+			"buttons" : [ 0, 0, 0.25 ],
+			"frame_inactive" : [ 0, 0, 0.6 ]
+		},
+		"properties" : {
+			"ntp_background_alignment" : "center",
+			"ntp_background_repeat" : "no-repeat",
+			"ntp_logo_alternate" : 0
+		}
+	}
+}

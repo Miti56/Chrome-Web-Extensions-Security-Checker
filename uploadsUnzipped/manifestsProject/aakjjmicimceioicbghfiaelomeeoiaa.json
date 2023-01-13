@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version":"2.0.1",
+    "manifest_version":2,
+    "name":"Just Black",
+    "theme":{
+        "images":{
+            "theme_frame":"theme_frame.png",
+            "theme_tab_background":"theme_tab_background.png",
+            "theme_toolbar":"theme_toolbar.png"
+        },
+        "colors":{
+            "ntp_link": [255, 255, 255],
+            "ntp_text":[255,255,255],
+            "ntp_section": [255, 255, 255],
+            "ntp_section_link": [255, 255, 255],
+            "ntp_section_text": [255, 255, 255],
+            "ntp_background": [0, 0, 0],
+            "frame": [0, 0, 0],
+            "toolbar":[0,0,0],
+            "tab_text": [255, 255, 255],
+            "tab_background_text": [200, 200, 200],
+            "bookmark_text": [255, 255, 255],
+            "button_background": [0, 0, 0]
+            },
+            "tints": {
+                "buttons": [-1, -1, -1]
+            },
+            "properties": {
+                "ntp_background_alignment": "bottom"
+        }
+    }
+}

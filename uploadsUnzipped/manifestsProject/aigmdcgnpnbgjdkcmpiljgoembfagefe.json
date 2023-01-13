@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Snoost Cloud Gaming",
+  "short_name": "Snoost",
+  "description": "Through cloud gaming you can install and play any game you own on high graphics - no matter how bad your computer is.",
+  "version": "0.0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "icons": {
+    "128": "icons/icon_512x512.png",
+    "128": "icons/icon_256x256.png",
+    "128": "icons/icon_128x128.png",
+    "32": "icons/icon_48x48.png",
+    "32": "icons/icon_32x32.png",
+    "16": "icons/icon_16x16.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.snoost.com/"
+    ],
+    "launch": {
+      "web_url": "https://www.snoost.com/"
+    }
+  }
+}

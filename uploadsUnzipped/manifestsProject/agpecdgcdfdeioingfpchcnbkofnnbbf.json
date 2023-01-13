@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Didacting.com Screen Capturing",
+    "externally_connectable": {
+		"matches": ["*://*.didactinglabs.com/*","*://*.didacting.com/*"]
+    },
+    "author": "Leandro Lopez-guerrero Hirsch based on Muaz Khan extension",
+    "version" : "1.8",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Extension for screen sharing in didacting.com virtual rooms.",
+    "homepage_url": "https://www.didacting.com",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_start",
+       "matches": ["*://*.didactinglabs.com/*",
+       				"*://*.didacting.com/*"]
+    }],
+    "icons" : {
+	    "16" : "ico-16.png",
+        "48" : "icon.png",
+        "128": "ico-128.png"
+    },
+    "permissions": [
+	    "tabs",
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Force Facebook Most Recent",
+  "version": "1.0",
+  "description": "Forcing Facebook to show most recent stories by default.",
+  "icons": {
+    "16":  "icon16.png",
+    "48":  "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["force.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["https://www.facebook.com/*"]
+}

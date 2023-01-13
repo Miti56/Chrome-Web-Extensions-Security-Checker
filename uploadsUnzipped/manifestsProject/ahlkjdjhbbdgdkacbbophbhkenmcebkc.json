@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "ITZ backup",
+  "description": "backup",
+  "version": "0.1.3",
+  "icons": { "128": "icon128.png" },
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "background": {
+    "scripts": ["jquery.js", "background.js"]
+  },
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "storage",
+   "unlimitedStorage",
+   "https://koon.io/*",
+   "https://koon.io/"
+   ]
+   
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"Homeo Planning",
+"version": "1.2",
+"manifest_version": 2,
+"description":"Réaliser un planning Homéopathique",
+"author": "Grégory FEBVRE",
+"icons":
+	{       "16": "icones/icone16.png",
+          "48": "icones/icone48.png",
+          "128": "128.png"
+	},
+"browser_action":
+	{
+		"default_icon": "icones/icone19.png",
+		"default_popup":"pages/popup.html"
+	},
+	
+"permissions":["unlimitedStorage","downloads"]
+   
+}
+

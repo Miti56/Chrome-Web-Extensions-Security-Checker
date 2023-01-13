@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Layer Distributor for Figma",
+  "description": "Distribute layers with consistent spacing in Figma. Accessible via the alignment tools or keyboard shortcut (Ctrl/Cmd + Shift + D).",
+  "author": "jachui@microsoft.com",
+  "version": "1.2.3",
+  "permissions": ["declarativeContent"],
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+   {
+    "run_at": "document_end",
+    "matches": [
+      "https://www.figma.com/file/*",
+      "http://www.figma.com/file/*",
+      "https://www.figma.com/files/*",
+      "http://www.figma.com/files/*"
+    ],
+    "all_frames": true,
+     "js": ["js/contentScript.js"]
+   }
+ ],
+  "web_accessible_resources": [
+    "js/chunk-vendors.js",
+    "js/app.js",
+    "css/app.css"
+  ],
+  "js": [
+    "https://rawgit.com/jachui/figma-distributor-desktop/master/dist/js/chunk-vendors.js",
+    "https://rawgit.com/jachui/figma-distributor-desktop/master/dist/js/app.js"
+  ],
+  "css": ["https://rawgit.com/jachui/figma-distributor-desktop/master/dist/css/app.css"]
+}

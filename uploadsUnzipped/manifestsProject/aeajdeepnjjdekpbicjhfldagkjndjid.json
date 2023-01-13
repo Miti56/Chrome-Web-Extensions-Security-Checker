@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CR HLS Player",
+  "version": "1.5.0.6",
+  "description": "A test for video js",
+  "manifest_version": 2,
+  "permissions": [
+    "webRequest","webRequestBlocking","storage","http://*.crunchyroll.com/","https://*.crunchyroll.com/","http://*.btrll.com/*","http://*.fwmrm.net/*","cookies","https://*.vrv.co/*","https://*.dlvr1.net/*"
+  ],
+  "background": {
+    "scripts": ["jquery.min.js","bgp.js"],
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "content_scripts":[
+    {
+      "matches": ["http://www.crunchyroll.com/*/*episode-*","http://www.crunchyroll.com/*/*-ova-*","http://www.crunchyroll.com/*/*-part-*","http://www.crunchyroll.com/*/*-classic-*","http://www.crunchyroll.com/*/*-special-*","http://www.crunchyroll.com/one-piece/one-piece-*","http://www.crunchyroll.com/momokuri/momokuri*","http://www.crunchyroll.com/shelter/shelter*","http://www.crunchyroll.com/a-certain-magical-index/a-certain-magical-index-movie*"],
+      "exclude_matches": ["http://www.crunchyroll.com/news*","http://www.crunchyroll.com/comics*","http://www.crunchyroll.com/store*","http://www.crunchyroll.com/forum*"],
+	  "js":["jquery.min.js","video.min.js","videojs.hls.min.js","videojs.persistvolume.js","videojs-seek.min.js","videojs.cuepoints.js","videojs.hotkeys.min.js","videojs_5.vast.vpaid.min.js","videojs.ads.js","hlsplayer.js"],
+	  "css":["video-js.min.css","videojs.vast.vpaid.min.css","videojs.ads.css"]
+	}
+  ],
+  "web_accessible_resources": [
+    "VPAIDFlash.swf"
+  ]
+}

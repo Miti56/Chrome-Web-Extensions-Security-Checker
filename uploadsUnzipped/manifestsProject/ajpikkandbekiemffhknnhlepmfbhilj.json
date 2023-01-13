@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Keyless-Trillo",
+	"description": "Keyless-Trillo",
+	"author": "Keyless Inc.",
+	"version": "0.0.2",
+	"icons": {
+		"16": "assets/icon/icon16.png",
+		"48": "assets/icon/icon48.png",
+		"128": "assets/icon/icon128.png"
+	},
+	"permissions": [
+		"<all_urls>",
+		"storage"
+	],
+	"browser_action": {
+	    "default_icon": "assets/icon/icon48.png"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"externally_connectable": {
+		"matches": [
+            "*://*.trillo.io/*"
+		]
+	},
+	"background": {
+		"scripts": [
+			"vendor/jsrsasign/jsrsasign-all-min.js",
+			"vendor/cryptico/cryptico.min.js",
+			"token.js"
+		],
+		"persistent": true
+	},
+	"manifest_version": 2
+}

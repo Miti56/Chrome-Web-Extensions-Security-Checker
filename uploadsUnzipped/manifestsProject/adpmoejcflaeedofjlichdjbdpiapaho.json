@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "音乐设备搜索",
+  "description": "中国音乐设备资料及购物搜索",
+  "version": "0.1",
+   
+  "permissions": ["tabs", "bookmarks", "*://*.ingping.com/*"],
+  "icons" : {
+    "16" : "19X19.png",
+    "28" : "28X28.png",
+    "48" : "48X48.png",
+    "128" : "128X128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.ingping.com/*"],
+      "js": ["js/jquery.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "19X19.png",
+    "default_title": "中国音乐设备搜索",
+    "default_popup": "popup.html"
+  }
+}

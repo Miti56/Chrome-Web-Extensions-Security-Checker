@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Christi Collins Design",
+  "description": "Educational Technology Site",
+  "version": "1.0.1",
+  
+  "browser_action": {
+    "default_icon": "ccdesign128.png",
+    "default_title": "Christi Collins Educational Technology Resources"
+  },
+  "permissions": [
+    "activeTab",
+    "http://www.christicollinsdesign.com/"
+  ],
+    "icons":{
+        "128":"ccdesign128.png"
+    },
+    "background": {
+	    "scripts": ["background.js"]
+	  }
+}

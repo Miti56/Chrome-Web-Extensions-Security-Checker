@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "hwplugin",
+    "version" : "1.0.3",
+    "description" : "communicate with hid dev",
+    "background" : { "scripts": ["background.js"] },
+    "icons": {
+        "16": "16.png",
+        "128": "128.png"
+    },
+    "permissions" : [
+    "nativeMessaging",
+    "contextMenus",
+    "tabs",
+    "http://192.168.132.60/*", 
+    "*://*.jsnj.cyuanwang.com/*", 
+    "*://*.cyuanwang.com/*", 
+    "*://*.jsnjjl.org/*", 
+    "*://*.jsnjjl.gov.cn/*"
+    ],
+	"content_scripts":[
+{
+"matches":["http://192.168.132.60/*", 
+	   "*://*.jsnj.cyuanwang.com/*", 
+           "*://*.cyuanwang.com/*", 
+           "*://*.jsnjjl.org/*",            "*://*.jsnjjl.gov.cn/*"],
+"all_frames" : true,
+"js":["content.js"]
+}
+],
+    "minimum_chrome_version" : "6.0.0.0",
+    "manifest_version": 2
+}

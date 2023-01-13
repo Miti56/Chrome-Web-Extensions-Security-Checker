@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "한기대 el 동영상 다운로드 링크",
+  "description": "한기대 el 동영상 다운로드 링크",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+      "https://el.koreatech.ac.kr/*"
+  ]
+}

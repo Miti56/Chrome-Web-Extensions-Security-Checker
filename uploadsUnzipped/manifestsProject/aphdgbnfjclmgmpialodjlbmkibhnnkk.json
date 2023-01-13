@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "content_scripts": [ {
+      "exclude_globs": [  ],
+      "include_globs": [ "https://mail.google.com/mail/*" ],
+      "js": [ "checkAttachment.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "converted_from_user_script": true,
+   "description": "",
+   "name": "Gmail添付ファイルチェック",
+   "version": "1.0.1"
+}

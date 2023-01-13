@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "NanoTweaker",
+	"description": "__MSG_manifest_description__",
+	"author": "Miguel Ángel Prosper",
+	"minimum_chrome_version": "50",
+	"manifest_version": 2,
+	"version": "3.7.7",
+	"default_locale": "en",
+	"page_action": {
+		"default_popup": "/popup/page.html"
+	},
+	"icons": {	
+		"32": "/common/image/icon_32.png",
+		"64": "/common/image/icon_64.png",
+		"128": "/common/image/icon_128.png"
+	},
+	"permissions": [
+		"alarms",
+		"storage",
+		"notifications"
+	],
+	"content_scripts": [{
+		"run_at": "document_start",
+		"all_frames": true,
+		"matches": [
+			"*://www.youtube.com/*",
+			"*://gaming.youtube.com/*"
+		],
+		"js": [
+			"/common/script.js",
+			"/content/script.js"
+		],
+		"css": [
+			"/content/style.css"
+		]
+	}],
+	"background": {
+		"persistent": false,
+		"scripts": [
+			"/common/script.js",
+			"/event/script.js"
+		]
+	},
+	"commands": {
+		"play_and_pause": {
+			"suggested_key": "Ctrl+Shift+0",
+			"description": "__MSG_command_play_and_pause__",
+			"global": true
+		}
+	},
+	"options_ui": {
+		"page": "/config/page.html",
+		"chrome_style": true
+	}
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FAR7-HELPER (stable)",
+  "version": "1.6",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "description": "FAR7-helper - Помощник для браузерной игры FAR7",
+  "content_scripts": [
+    {
+      "matches": ["http://game.far7.by/*"],
+      "js": ["FAR7.plugin.js"],
+      "run_at" : "document_start"
+    }
+  ],
+  "permissions": [
+    "<all_urls>"
+  ],
+   "web_accessible_resources": ["FAR7.source.js"]
+}

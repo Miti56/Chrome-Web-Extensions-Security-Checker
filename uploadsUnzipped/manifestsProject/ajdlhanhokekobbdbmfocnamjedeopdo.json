@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Price Fix",
+	"description": "Round all prices up to the nearest unit.",
+	"version": "1.0.0",
+	"homepage_url": "https://github.com/jacobbearden/price-fix",
+
+	"icons": {
+		"128": "icon.png"
+	},
+
+	"permissions": [
+		"storage",
+		"<all_urls>"
+	],
+
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": [
+				"<all_urls>"
+			],
+			"css": [
+				"content.css"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	]
+}

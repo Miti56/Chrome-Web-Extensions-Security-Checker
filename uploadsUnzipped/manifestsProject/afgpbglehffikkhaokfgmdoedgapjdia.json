@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":	2,
+	"name":				"__MSG_appName__",
+	"description":		"__MSG_appDesc__",
+	"version":			"1.0.0.0",
+	"default_locale":	"en",
+
+	"icons":			{
+							 "16": "imgs/icon_016.png",
+							 "24": "imgs/icon_024.png",
+							 "32": "imgs/icon_032.png",
+							 "48": "imgs/icon_048.png",
+							 "64": "imgs/icon_064.png",
+							"128": "imgs/icon_128.png"
+						},
+
+	"browser_action":	{
+							"default_title": "__MSG_appName__",
+							"default_icon": {
+								"16": "imgs/icon_016.png",
+								"24": "imgs/icon_024.png",
+								"32": "imgs/icon_032.png"
+							}
+						},
+
+	"background":		{
+							"scripts": [ "background.js" ]
+						},
+
+	"content_scripts": [ {
+							"js":			[ "content.js" ],
+							"css":			[ "crosshair.css" ],
+							"matches":		[ "<all_urls>" ],
+							"all_frames":	true
+						} ],
+
+	"options_page": 		"options.html",
+
+	"permissions":		[
+							"activeTab",
+							"storage"
+						],
+
+	"commands": 		{
+							"inspect-image": {
+								"suggested_key": {
+									"default": "Alt+I",
+									"mac": "Command+I"
+								},
+								"description": "__MSG_cmdLabel_selectImg__"
+							}
+						}
+}

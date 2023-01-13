@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ "manifest_version": 2,
+  "name": "Simple Encryption",
+  "version": "1.2",
+  "author": "SIMPLEWARES",
+  "minimum_chrome_version": "23",
+  "icons": {"16": "encrypt16.png", "256": "encrypt256.png"},
+  "app": 
+   {"background": {"scripts": ["main.js", "se.js"]}
+   }
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name" : "NanoSignage Player",
+	"version" : "1.1",
+	"description" : "NanoSignage Player",
+	"app" : {
+		"launch" : {
+			"web_url" : "http://ccds3-receiver.appspot.com/"
+		}
+	},
+	"icons": {
+		"128" : "NanoSignage.png"
+	},
+	"permissions": [
+        "background"
+    ],
+    "kiosk_enabled": true
+}

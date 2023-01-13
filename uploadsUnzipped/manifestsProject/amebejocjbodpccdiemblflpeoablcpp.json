@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_extName__",
+	"version": "0.0.0.39",
+	"description": "MuziTube",
+	"icons": {
+		"128": "icons/icon128.png",
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png"
+	},
+	"default_locale": "zh_TW",
+	"browser_action": {
+		"default_icon": "icons/icon.png",
+		"default_title": "MuziTube",
+		"default_popup": "popup2.html"
+	},
+	"background": {
+		"page": "bg.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": [
+				"js/libs/jquery/jquery-1.7.2.min.js",
+				"js/libs/jqueryui/jquery-ui-1.8.19.custom.min.js",
+				"js/libs/encoder.js",
+				"js/libs/date.js",
+				"js/libs/indbg.js",
+				"js/contentscript/ajax.js",
+				"js/contentscript/ajax2.js",
+				"js/contentscript/btn.js",
+				"js/contentscript/btn2.js",
+				"js/contentscript/card.js",
+				"js/contentscript/card2.js",
+				"js/contentscript/quality.js",
+				"js/contentscript/watch7.js",
+				"js/contentscript/watch8.js",
+				"js/contentscript/contentscript.js"
+			],
+			"css": [
+				"css/contentscript.css"
+			]
+		}
+	],
+	"permissions": [
+		"*://*/*",
+		"tabs",
+		"notifications",
+		"cookies",
+		"contextMenus"
+	],
+	"web_accessible_resources": [
+		"/icons/icon.png",
+		"/icons/QG-04.png",
+		"/icons/QG-05.png",
+		"/icons/icon48.png",
+		"/icons/icon_Download_Status.png",
+		"/css/contentscript.css",
+		"/js/libs/jquery/jquery-1.7.2.min.js",
+		"/js/libs/jqueryui/jquery-ui-1.8.19.custom.min.js",
+		"/js/libs/encoder.js",
+		"/js/libs/date.js",
+		"/js/libs/indbg.js",
+		"/js/contentscript/contentscript.js",
+		"/js/contentscript/ajax.js",
+		"/js/contentscript/btn.js",
+		"/js/contentscript/btn2.js",
+		"/js/contentscript/card.js",
+		"/js/contentscript/card2.js",
+		"/js/contentscript/quality.js"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com https://www.youtube.com https://s.ytimg.com; object-src 'self';",
+	"manifest_version": 2,
+	"minimum_chrome_version": "37"
+}

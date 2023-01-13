@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "GTA Vice City Online games",
+  "description": "gta vice city , plants zombies, gta v, candy crush, sims 4,minecraft, clash royale",
+  "version": "1.4",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

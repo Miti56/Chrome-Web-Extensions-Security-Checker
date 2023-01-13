@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"short_name": "App",
+  "manifest_version": 2,
+  "name": "idm integration for Chrome",
+  "container": "GOOGLE_DRIVE",
+  "description": "Internet Download Manager: the fastest download accelerator",
+     "permissions": [ "webview", "power", "storage", "videoCapture", "geolocation", "pointerLock", "system.display", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "accessibilityFeatures.read", "accessibilityFeatures.modify" ],
+  "version": "1.4.1",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

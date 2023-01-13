@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Prodoscore",
+	"version": "6.0.1",
+	"description": "Establish sales process improvement goals by measuring sales activity, identifying a baseline, and improving sales performance.",
+	"icons": {
+		"128": "icons/128.png",
+		"96": "icons/96.png",
+		"48": "icons/48.png",
+		"32": "icons/32.png"
+	},
+	"container": ["DOMAIN_INSTALLABLE"],
+	"api_console_project_id": "500114080071",
+	"app" : {
+		"launch" : {
+			"web_url" : "http://app.prodoscore.com/#dashboard"
+		}
+	}
+}

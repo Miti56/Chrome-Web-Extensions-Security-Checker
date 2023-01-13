@@ -1,0 +1,138 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "__MSG_extName__",
+    "description": "__MSG_extDescription__",
+    "author": "drederyou",
+    "version": "3",
+    "default_locale": "en",
+    "icons": {
+        "16": "img/16.png",
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+    "background": {
+        "scripts": [
+            "js/mono.js",
+            "js/utils.js",
+            "js/background.js",
+            "js/vimeo_com_embed.js",
+            "js/dailymotion_com_embed.js",
+            "js/soundcloud_com_embed.js",
+            "js/vkontakte_ru_embed.js",
+            "js/odnoklassniki_ru_embed.js",
+            "js/facebook_com_embed.js",
+            "js/mail_ru_embed.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "tabs",
+        "downloads",
+        "<all_urls>",
+        "clipboardWrite"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.vimeo.com/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/vimeo_com.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "include_globs": [
+                "http://dailymotion.*/*",
+                "http://*.dailymotion.*/*",
+                "https://dailymotion.*/*",
+                "https://*.dailymotion.*/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/dailymotion_com.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "*://*.soundcloud.com/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/soundcloud_com.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "*://*.vk.com/*",
+                "*://*.vkontakte.ru/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/vkontakte_ru.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "*://*.ok.ru/*",
+                "*://*.odnoklassniki.ru/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/odnoklassniki_ru.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "*://my.mail.ru/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/mail_ru.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "*://*.facebook.com/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/facebook_com.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "*://*.rutube.ru/*"
+            ],
+            "js": [
+                "js/mono.js",
+                "includes/components.js",
+                "includes/rutube_ru.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ]
+}

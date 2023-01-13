@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "browser_action": {
+    "default_icon": {
+       "19": "images/square-logo.png",
+       "38": "images/square-logo.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "TABNWORD"
+  },
+
+  "icons": {
+    "128": "images/square-logo.png",
+    "16": "images/square-logo.png",
+    "32": "images/square-logo.png",
+    "48": "images/square-logo.png",
+    "64": "images/square-logo.png"
+  },
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
+    
+  "version": "0.3.3",
+
+  "permissions": ["storage"],
+  
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  
+  "options_page": "options.html",
+
+  "default_locale": "en",
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}

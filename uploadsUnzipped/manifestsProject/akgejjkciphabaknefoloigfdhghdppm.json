@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "bbes - Bedre Blackboard",
+    "short_name": "bbes",
+    "author": "Kristian Andersen Hole",
+    "version": "0.1.2",
+    "description": "Improve NTNU blackboard",
+
+    "icons": {
+        "48": "icons/bbes-48.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://ntnu.blackboard.com/webapps/portal*", "*://ntnu.blackboard.com/webapps/blackboard/execute/modulepage/view?course_id*"],
+            "js": ["cactus/cactus.js", "script/helper.js", "script/dashboard.js", "script/course.js", "script/index.js"],
+            "css": ["style/bbes.css"],
+            "run_at": "document_end"
+        }
+    ]
+}

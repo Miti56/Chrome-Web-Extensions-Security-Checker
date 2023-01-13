@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Tabliner",
+  "description": "Fast, keyboard-driven Chrome tab manager",
+  "version": "0.0.3",
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Open"
+  },
+  "commands": {
+    "open": {
+      "suggested_key": {
+        "default": "Ctrl+Period"
+      },
+      "description": "Open Tabliner"
+    }
+  },
+  "permissions": ["tabs", "windows"]
+}

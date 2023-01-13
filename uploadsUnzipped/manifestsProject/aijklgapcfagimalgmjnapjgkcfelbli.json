@@ -1,0 +1,32 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Оповещения Outlook.com",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+	"description": "Показывает количество непрочитанных писем в вашем ящике на Outlook.com",
+	"browser_action": {
+		"default_icon": "browser-action-icon-inactive.png" 
+	},
+	"background": {
+		"page": "background.html"
+	},
+	"options_page": "options.html",
+	"permissions": [
+		"cookies",
+		"webRequest",
+		"webRequestBlocking",
+		"notifications",
+		"tabs",
+		"*://signout.live.com/",
+		"*://login.live.com/",
+		"*://*.mail.live.com/",
+		"*://*.outlook.com/"
+	],
+	"web_accessible_resources" : [
+		"app.png",
+		"browser-action-icon-active.png" 
+	]
+}

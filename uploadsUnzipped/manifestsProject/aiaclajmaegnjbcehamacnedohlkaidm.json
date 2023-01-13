@@ -1,0 +1,151 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Honor Flipkart Flash Sale Helper (Verified)",
+    "description": "Buy Honor 9 Lite phones in Flash sales on Flipkart",
+    "icons": {"16": "xffsh_small_icon.png", "48": "xffsh_small_icon.png", "128": "xffsh_icon.png"},
+    "version": "1.1",
+    "browser_action": {
+        "default_icon": "xffsh_icon.png",
+        "default_popup": "popupHonor.html"
+    },
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "notifications",
+        "storage",
+		"gcm",
+		"storage",
+		"notifications",
+		"identity"
+		],
+	"background": {
+  "persistent": false,
+  "scripts": ["OneSignal.js", "background.js"]
+},
+"content_scripts": [
+	{
+		"matches": [
+			"http://www.flipkart.com/redmi-3s*"
+		],
+		"js": [
+			"/js/jquery.min.js",
+			"/js/redmi3s.js"
+		]
+	},{
+	"matches": [
+		"https://www.flipkart.com/redmi-3s*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/httpsredmi3s.js"
+	]
+	},{
+	"matches": [
+		"http://www.flipkart.com/redmi-note-4*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/redmi3s.js"
+	]
+	},{
+	"matches": [
+		"https://www.flipkart.com/redmi-note-4*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/httpsredmi3s.js"
+	]
+	},
+	{
+	"matches": [
+		"https://www.flipkart.com/redmi-note-4*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/httpsredmi5.js"
+	]
+	},
+	{
+	"matches": [
+		"https://www.flipkart.com/redmi-note-5*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/redmi3s.js"
+	]
+	},
+	{
+	"matches": [
+		"https://www.flipkart.com/redmi-note-5*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/httpsredmi3s.js"
+	]
+	},
+
+{
+	"matches": [
+		"https://www.flipkart.com/redmi-note-5*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/httpsredmi5.js"
+	]
+	},
+
+{
+	"matches": [
+		"https://www.flipkart.com/mobiles/~honor-9-lite*"
+	],
+	"js": [
+		"/js/jquery.min.js",
+		"/js/httpsredmi5.js"
+	]
+	},
+
+	{
+		"matches": [
+			"http://www.flipkart.com/leeco-le-max2/*"
+		],
+		"js": [
+			"/js/jquery.min.js",
+			"/js/lemax.js"
+		]
+	},
+	{
+		"matches": [
+			"http://www.flipkart.com/yu-yunicorn/*"
+		],
+		"js": [
+			"/js/jquery.min.js",
+			"/js/yunicorn.js"
+		]
+	},
+	{
+		"matches": [
+			"http://www.amazon.in/b/*",
+			"https://www.amazon.in/b/*"
+		],
+		"js": [
+			"/js/jquery.min.js",
+			"/js/amazon.js"
+		]
+	},
+	{
+		"matches": [
+			"http://www.mi.com/in/hdindex/openbuy/*"
+		],
+		"js": [
+			"/js/jquery.min.js",
+			"/js/mi.js"
+		]
+	}
+],
+    "web_accessible_resources": [
+        "letv.jpeg"
+    ]
+}

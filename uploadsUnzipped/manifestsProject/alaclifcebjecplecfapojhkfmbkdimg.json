@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Facebook Notifications Highlighter",
+  "description": "Highlights your interesting notifications, with an option to hide the unimportant ones.",
+  "version": "2.3",
+  "icons": { 
+    "128": "FBHighlighterIcon128.png", 
+    "48": "FBHighlighterIcon48.png", 
+    "16": "FBHighlighterIcon16.png" 
+  },
+  "permissions": [
+    "*://*.facebook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "FBHighlighterIcon16.png"
+  }
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Eksi Sözlük Entry Silici",
+  "manifest_version": 2,
+  "version": "0.2",
+  "author": "Serdar Cevher",
+  "description": "Ekşi Sözlük girdilerinizi otomatik olarak silmenize yardımcı olur",
+  "browser_action": {
+    "name": "Ekşi Sözlük Entry Silici",
+    "icons": ["icon.png", "off.png"],
+    "default_icon": "off.png"
+  },
+  "icons": { "16": "icon16.png",
+         "48": "icon48.png",
+        "128": "icon.png" },
+  "background":{
+         "scripts":[ "background.js" ]
+     },
+  "permissions":["https://eksisozluk.com/*", "storage"]
+}

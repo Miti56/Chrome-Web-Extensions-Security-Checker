@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Vym",
+	"version": "0.1.12",
+	"author": "vym",
+	"short_name": "A slide deck for your GitHub PR",
+	"manifest_version": 2,
+	"description": "Vym Chrome extension",
+	"icons": {
+		"16": "images/icon-16.png",
+		"48": "images/icon-48.png",
+		"128": "images/icon-128.png"
+	},
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon-19.png",
+			"38": "images/icon-38.png"
+		},
+		"default_title": "Vym",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://github.com/*",
+				"https://vym.io/*"
+			],
+			"js": [
+				"bower_components/jquery/dist/jquery.min.js",
+				"scripts/content_script.js"
+			],
+			"css": [
+				"styles/main.css"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"permissions": [
+		"https://vym.io/*",
+		"storage"
+	]
+}

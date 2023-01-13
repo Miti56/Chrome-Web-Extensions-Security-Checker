@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "name": "MindYourPass on the fly password generator",
+  "description": "MindYourPass makes authentication safe and easy.",
+  "version": "2.2.1",
+  "version_name": "2.2.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "29",
+  "author": "MindYourPass",
+  "browser_action": {
+    "default_icon": {
+      "20": "assets/MindYourPassIcon.png",
+      "40": "assets/MindYourPassIcon.png"
+    },
+    "default_popup": "index.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+P"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": [ "content_script.js", "js/jquery.min.js" ],
+      "all_frames": false,
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "128": "assets/MindYourPassIcon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "storage",
+    "https://login.mindyourpass.io/",
+    "https://api.mindyourpass.io/"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Vacation Deals & Coupons",
+  "version": "0.1",
+  "app": {
+    "urls": [ "http://www.niagarafreefun.com/niagara-great-deals-coupons/" ],
+    "launch": {
+      "web_url": "http://www.niagarafreefun.com/niagara-great-deals-coupons/"
+    }
+  },
+  "permissions": ["background", "notifications"],
+  "icons": { "16": "logo-16.png", "128": "logo-128.png" },
+  "manifest_version": 2
+}

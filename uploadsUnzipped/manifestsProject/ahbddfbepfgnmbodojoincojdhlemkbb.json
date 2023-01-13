@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.0.0.24",
+
+  "default_locale": "ru",
+
+  "description": "__MSG_extensionDescription__",
+
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+   "128": "images/icon128.png"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "images/icon16-grey.png",
+      "32": "images/icon32-grey.png"
+    },
+    "default_title": "AGM clipper"
+  },
+
+  "background": {
+    "scripts": [
+      "dist/background.js"
+    ]
+  },
+
+  "externally_connectable": {
+    "ids": [ "*" ],
+    "matches": [
+      "https://*.agm1.com/*",
+      "https://*.agmsoft.net/*",
+      "https://*.agmsoft.com/*"
+    ]
+  },
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "\u003Call_urls>",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "short_name": "AGM clipper"
+
+}

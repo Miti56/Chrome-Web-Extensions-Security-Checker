@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Heads Arena: Euro Soccer",
+  "description": "Compete against big-headed soccer champions! This sports game lets you play in 1-on-1 and 2-vs-2 matches and tournaments!",
+  "version": "1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://games.poki.com/781350/headsarenaeurosoccer"
+    ],
+    "launch": {
+      "web_url": "http://games.poki.com/781350/headsarenaeurosoccer"
+    }
+  }
+}

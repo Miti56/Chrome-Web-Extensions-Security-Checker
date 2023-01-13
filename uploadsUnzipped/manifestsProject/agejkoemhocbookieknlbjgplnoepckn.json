@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Ewise AA Chrome Extension",
+  "description": "This extension is the Chrome connector for Ewise Account Aggregation",
+  "version": "1.0.1.378",
+  "icons": {
+  	"16": "icon16.png",
+  	"48": "icon48.png",
+  	"128": "icon128.png"
+  },
+  "background": {
+    "scripts": ["popup.js"],
+	"persistent": false
+  },
+  "content_scripts": [ { "all_frames": true,
+                          "js":         [ "jquery2.1.js","inject.js" ],
+                          "matches":    [ "http://*/*" ],
+                          "run_at":     "document_start"
+                        }
+                      ],
+  "permissions": [
+	"nativeMessaging", "http://*//", "https://*//"
+  ],
+  "web_accessible_resources": ["ewise.txt"]
+  
+}

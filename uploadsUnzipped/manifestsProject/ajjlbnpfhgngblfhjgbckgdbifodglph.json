@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+    "name": "Alexerizer",
+    "description": "Articles by Alex MacPherson can be a little dull. So I have kicked them up a notch.",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://thestarphoenix.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

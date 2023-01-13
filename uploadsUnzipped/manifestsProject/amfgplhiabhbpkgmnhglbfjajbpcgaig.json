@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "BetterFC2Video",
+  "description": "あなたの FC2 Video ライフを地味に改善。",
+  "version": "0.1.3",
+
+  "icons": {  "16": "bfcv16.png",
+              "48": "bfcv48.png",
+              "128": "bfcv128.png" },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://video.fc2.com/*"
+      ],
+      "js": [
+        "lib/jquery-1.11.1.min.js",
+        "js/better_search.js"
+      ],
+      "run_at": "document_end"
+    }],
+
+  "options_page": "html/options.html"
+}

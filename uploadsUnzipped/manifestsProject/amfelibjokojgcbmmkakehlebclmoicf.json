@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "buyitnow.club membership",
+  "version": "0.0.8",
+  "manifest_version": 2,
+  "description": "this extension is made for the buyitnow.club",
+  "homepage_url": "http://buyitnow.club",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "chrome_url_overrides": {
+    "newtab": "src/override/override.html"
+  },
+  "permissions": [
+    "http://buyitnow.club/*"
+  ]
+}

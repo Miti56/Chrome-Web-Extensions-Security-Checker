@@ -1,0 +1,35 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Buy Localized",
+
+  "description": "This extension will tag Amazon.com products with their country of origin ",
+  "icons": {
+    "16": "buylocalizedicon16_darker.png",
+    "48": "buylocalizedicon48.png",
+    "128": "buylocalizedicon.png"
+  },
+  "version": "0.0.1.19",
+  "background": {
+                "scripts": ["jquery-3.4.1.min.js", "background.js"],
+                "persistent": false
+  }         ,
+  "content_scripts": [
+    {
+      "matches":  ["*://*.amazon.com/*","*://*.amazon.ca/*", "https://api.buylocalized.com/"],
+      "css": [ "slick/slick.css", "slick/slick-theme.css" ],
+      "js": [ "jquery-3.4.1.min.js", "slick/slick.js", "content.js"],
+      "run_at": "document_idle"}
+  ],
+   "web_accessible_resources": ["USA.svg", "slideritem.html", "ajax-loader.gif",  "buylocalizedicon.png", "icon2.png", "icon3.png"],
+   "browser_action": {
+          "default_title": "Buy Localized!"
+   },
+  "permissions": [
+                "activeTab",  "storage"
+   ]
+
+}

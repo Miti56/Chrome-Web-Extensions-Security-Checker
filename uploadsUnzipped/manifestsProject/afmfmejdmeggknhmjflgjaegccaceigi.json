@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Jinx",
+  "short_name": "Jinx",
+  "version": "1.1.1",
+  "manifest_version": 2,
+  "description": "Makes Your life easier",
+  "browser_action": {
+    "default_title": "Jinx"
+  },
+  "permissions": [
+    "notifications"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "persistent": true,
+    "page": "background.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-Wf9MlqLyvQhtxTTzbiQ3mMqkhAfzVF+lXvf3NRg/duw=' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk=' https://www.gstatic.com/ ; object-src 'self'"
+}

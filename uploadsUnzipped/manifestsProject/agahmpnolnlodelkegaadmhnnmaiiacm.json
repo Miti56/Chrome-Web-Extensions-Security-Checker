@@ -1,0 +1,43 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "/content/images/icons/128.png",
+         "16": "/content/images/icons/16.png",
+         "48": "/content/images/icons/48.png"
+      }
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://www.doc2pdf.live/?favicon",
+         "image_url": "",
+         "is_default": true,
+         "keyword": "doc2pdf",
+         "name": "Doc2PDF",
+         "params": "__PARAM__",
+         "search_url": "http://search.doc2pdf.live/search.php?src=chdsgo&q={searchTerms}"
+      }
+   },
+   "content_security_policy": "script-src 'self' https://www.youtube.com https://www.googletagmanager.com/ https://www.googleadservices.com/ https://s.ytimg.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "Doc2Pdf allows you to easily convert your files into PDF format without any application, directly from your browser action button.",
+   "icons": {
+      "128": "/content/images/icons/128.png",
+      "16": "/content/images/icons/16.png",
+      "48": "/content/images/icons/48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "32",
+   "name": "Doc2PDF",
+   "permissions": ["activeTab", "management", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking", "unlimitedStorage", "contextMenus", "bookmarks", "topSites","https://*.online-convert.com/*","http://www.doc2pdf.live/*","http://search.doc2pdf.live/","https://trends.google.com/*","https://api.zamzar.com/*","https://s3.amazonaws.com/*"],
+   "sandbox": {
+      "pages": [  ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.5",
+   "web_accessible_resources": [ "/content/images/icons/16.png", "/skin/icons/16.png" ]
+}

@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Bitcoin-2-Icee Points",
+	"short_name": "Bitcoin-2-Icee Points",
+	"description": "Tired of Bitcoins? Try Icee Points! (Thanks Matt)",
+	"version": "1.0.1",
+
+	"icons": {
+		"16": "a-logo-16.png",
+		"32": "a-logo-32.png",
+		"48": "a-logo-48.png",
+		"128": "a-logo-128.png"
+	},
+
+	"background": {
+		"page": "background.html",
+		"persistent": false
+	},
+
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"<all_urls>"
+	]
+}

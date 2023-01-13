@@ -1,0 +1,34 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version" : "1.0",
+	"name" : "Tema UTFPR",
+	"theme" : {
+		"images" : {
+			"theme_frame" : "img/frame.png",
+			"theme_tab_background" : "img/bg_tab.png",
+			"theme_toolbar" : "img/toolbar.png",
+			"theme_ntp_background" : "img/new_tab.png",
+			"theme_ntp_attribution" : "img/cleber_labs.png"
+		},
+		"colors" : {
+			"frame" : [147,141,105],
+			"toolbar" : [203,191,141],
+			"tab_text" : [255,255,255],
+			"tab_background_text" : [0,0,0],
+			"bookmark_text" : [0,0,0],
+			"button_background" : [147,141,105],
+			"ntp_background" : [237,228,194],
+			"ntp_text" : [0,0,0],
+			"ntp_link" : [0,0,0],
+			"ntp_header" : [147,141,105],
+			"ntp_section" : [147,141,105,0.7],
+			"ntp_section_text" : [255,255,255],
+			"ntp_section_link" : [255,255,255]
+		},
+		"properties" : {
+			"ntp_background_alignment" : "bottom",
+			"ntp_background_repeat" : "repeat-x",
+			"ntp_logo_alternate" : 0
+		}
+	}
+}

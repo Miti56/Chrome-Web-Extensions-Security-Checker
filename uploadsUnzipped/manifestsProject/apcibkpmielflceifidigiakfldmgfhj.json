@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Řazení online jídelníčku VUT",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Automaticky seřadí online jídelníček VUT podle ceny.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.kam.vutbr.cz/?p=menu*"],
+      "js": ["jquery-1.4.2.min.js", "jquery.sortElements.js", "main.js"]
+    }
+  ]
+}

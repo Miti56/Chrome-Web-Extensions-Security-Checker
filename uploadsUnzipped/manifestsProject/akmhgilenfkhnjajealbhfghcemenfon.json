@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Github Differ",
+  "description": "This extension adds checkboxes to the Github Pull Request 'Commits' view, making arbitrary commit diffing easier",
+  "version": "1.1",
+
+  "permissions": [
+          "tabs", "*://github.com/*",
+          "webRequest", "*://github.com/*"
+        ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*"],
+      "js": ["differ.js"],
+      "run_at" : "document_end"
+    }
+  ]
+}

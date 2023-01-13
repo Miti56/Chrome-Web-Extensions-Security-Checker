@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.png","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.jpeg"},"colors":{"frame":[193,198,204],"toolbar":[204,0,0],"tab_text":[81,116,255],"tab_background_text":[31,145,44],"bookmark_text":[218,223,78],"ntp_background":[255,255,255],"ntp_text":[43,46,93],"button_background":[0,0,0,0]},"tints":{"buttons":[0,0,0.76]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}},"name":"The Lunch Theme","version":"1","description":""}

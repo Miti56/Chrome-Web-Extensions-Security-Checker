@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Scroll Bar 1 (Blue)",
+	"version": "1.2",
+	"description": "A Blue color rounded corner scroll bar.",
+	"icons": { 
+		"16": "img/icon16.png",		
+		"19": "img/icon19.png",		
+		"32": "img/icon32.png",		
+		"48": "img/icon48.png",		
+		"128": "img/icon128.png"	
+	},
+	"background": {"page":"background.htm"},
+	"options_page": "options.htm",
+	"permissions": [ 
+		"contextMenus",
+		"unlimitedStorage"
+	],
+	"web_accessible_resources": [
+		"css/scroll-bars.css"
+	],
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"css": ["css/scroll-bars.css"],
+		"run_at": "document_idle",
+		"all_frames": true
+	}],
+	"manifest_version": 2,
+	"homepage_url": "http://tejji.com/"
+}

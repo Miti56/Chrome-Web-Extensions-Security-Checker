@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "author": "By Koray Ay",
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "img/browsericons/icon19.png",
+            "38": "img/browsericons/icon38.png"
+        },
+        "default_popup": "popup.html",
+        "default_title": "uBlock Plus"
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": [
+                "js/vapi-client.js",
+                "js/contentscript.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "all_frames": false,
+            "js": [
+                "js/scriptlets/subscriber.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "default_locale": "en",
+    "description": "__MSG_extShortDesc__",
+    "icons": {
+        "128": "img/icon_128.png",
+        "16": "img/icon_16.png"
+    },
+    "incognito": "split",
+    "manifest_version": 2,
+    "minimum_chrome_version": "26.0",
+    "name": "Adblocker GEREZ",
+    "optional_permissions": [
+        "file:///*"
+    ],
+    "options_page": "dashboard.html",
+    "options_ui": {
+        "page": "options_ui.html"
+    },
+    "permissions": [
+        "contextMenus",
+        "privacy",
+        "storage",
+        "tabs",
+        "unlimitedStorage",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/*",
+        "https://*/*",
+        "cookies"
+    ],
+    "storage": {
+        "managed_schema": "managed_storage.json"
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://apis.google.com https://www.fonexcode.com https://ajax.googleapis.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-src *; object-src 'self' ",
+    "short_name": "Adblock",
+    "version": "1.0.0.2"
+}

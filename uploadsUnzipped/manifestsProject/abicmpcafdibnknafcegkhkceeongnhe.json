@@ -1,0 +1,21 @@
+{
+   "background": {
+      "scripts": [ "./background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "assets/icon-128.png"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Records a narrated video of your computer screen. FilmIt automatically saves your recording to your computer as a .webm file.",
+   "icons": {
+      "128": "assets/icon-128.png",
+      "16": "assets/icon-16.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "49",
+   "name": "FilmIt - Lightweight Screen Recorder",
+   "options_page": "options.html",
+   "permissions": [ "desktopCapture" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

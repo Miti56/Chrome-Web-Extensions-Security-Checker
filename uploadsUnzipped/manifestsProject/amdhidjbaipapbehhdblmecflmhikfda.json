@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkW7nsOUqWl+aQ9jI2HtNA8ZIBvx8ChG3jJ8He2SU9i3OqStOK87ZZKVb9lANH3gizH8k2jPSH1aNaz/XY1rg0drwN9OpCQmrL9IbaL/Uhpdr60YO9ziXo9BUmRwYlv/oHcNyIsN0QQ1n1e3HU5JMW/+zlqpAUCl6vlhvj7KST5C68zWERTBIxW0a81uS0QTKysPAuUmNoXAJMVehavjrhzfnuteU0lGGTYGG2U+u2+jHoYXvDCo5OhrB3joGYE7NxFqLet2xFNDehi4S/Wa7hCHaveHQsZ38Y/hzlJ7eCvCiTEq/2LRck1eEXuIV01aR8xReLWtwAcR4VlCy2b5lbQIDAQAB",
+  "manifest_version": 2,
+  "name": "Safa Archiving System",
+  "short_name": "SafaArchiving1438",
+  "description": "Safa Archiving System,you have to login via your safa account",
+  "version": "1.38.0.2",
+  "minimum_chrome_version": "38",
+  
+	
+  "icons": {
+    "16": "assets/16.png",
+    "32": "assets/32.png",
+    "64": "assets/64.png",
+    "128": "assets/128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  
+  "offline_enabled": true,
+ "permissions": [
+        "storage","unlimitedStorage" ,"fileSystem","fileSystem.write","webview",	"nativeMessaging",	"alwaysOnTopWindows",
+        {
+            "socket": [
+                "resolve-host",
+                "tcp-connect:*:*",
+                "tcp-listen::*"
+            ]
+        },
+        {
+            "fileSystem": ["write","directory","retainEntries"]
+        },"http://mot.hajj.gov.eg/*"
+    ]
+	, "sockets": {
+        "tcp": {
+            "connect": "*"
+        }
+    },
+    "webview" :{
+            "partitions": 
+            [
+             {
+                "name": "static","accessible_resources": ["webview.html"]
+             }
+            ]
+    }  
+}

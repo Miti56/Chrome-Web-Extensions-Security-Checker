@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "name":"getCsrf",
+  "version":"0.0.2",
+  "description":"获取dashboard平台的csrf-token",
+  "browser_action": {
+    "default_icon": "images/code-128.png"
+  },
+  "icons": {
+    "16": "images/code-16.png",
+    "48": "images/code-48.png",
+    "128": "images/code-128.png"
+  },
+  "content_scripts":[{
+    "matches": ["http://dashboard.native.baidu.com/realtime/channel/index"],
+    "js":["js/jquery-1.9.0.min.js","js/cooder.js"],
+    "run_at": "document_end",
+    "all_frames":true
+  }],
+  "optional_permissions":["storage"],
+  "background": {
+    "scripts":[
+      "js/background.js"
+    ]
+  }
+}

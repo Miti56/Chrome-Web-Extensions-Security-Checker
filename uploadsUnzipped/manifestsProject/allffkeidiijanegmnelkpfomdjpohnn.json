@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "Email Analysis",
+  "name": "Email Analysis",
+  "manifest_version": 2,
+  "icons": {
+    "16": "images/16email.png",
+    "48": "images/48email.png",
+    "128": "images/128email.png"
+  },
+  "browser_action": {
+
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmTKRNAItQpvursYHL/r1PUVM2ifNtzQp10wjomPUPzikXtD5sn/48dDl6jOTlYCOdbkWGheZDa6vgwKm4OZxTP1+ca4Rlx6btCeDxXnFPb71ULYa1vFBwutlCoPx41AlWp3J9SJc6Jx0A+r1a0Y/luUAlMXf6dpFZAGxEpvaLWavBe32j5Q8wfdIsJC0ZXd/4sOcvmXeoiAyqqBL95hR+qCVV7zjosy6FEEj8wzEnPaamdONN3kb4A1UY+vcoUh+zahI2xlhFDfFdZbxWIdETJMXA142Y6nnDqZWC16ONu1+hjD4u7anXImhq4ZoM3AO7dTyS/z7apsa0LgNisgYTQIDAQAB",
+  "version": "1.2",
+  "permissions": [
+      "tabs"
+  ],
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "web_accessible_resources": ["index.html"],
+  "content_scripts": [
+      {
+          "matches": [
+              "<all_urls>"
+          ],
+          "js": ["content.js"]
+      }
+  ],
+  "oauth2": {
+    "client_id": "505532977879-vi2mcb65v9viq6tbcdngvf3qa7v9otc9.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/gmail.readonly", "https://www.googleapis.com/auth/userinfo.profile"]
+  },
+  "permissions": [
+    "identity",
+    "http://*/",
+    "https://*/"
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com https://maps.googleapis.com; object-src 'self'"
+}

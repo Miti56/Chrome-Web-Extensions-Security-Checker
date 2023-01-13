@@ -1,0 +1,41 @@
+{
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"optional_permissions": [
+		"management"
+	],
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_name__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"background": {
+		"scripts": [
+			"assets/background.js"
+		]
+	},
+	"browser_action": {
+		"default_title": "Sniper Elite 4"
+	},
+	"version": "4.5.9",
+	"icons": {
+		"48": "images/icon-small.png",
+		"128": "images/icon-big.png"
+	},
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

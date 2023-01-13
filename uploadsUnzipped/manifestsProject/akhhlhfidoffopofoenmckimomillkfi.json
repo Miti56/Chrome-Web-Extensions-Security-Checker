@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Calendclear",
+  "version" : "1.2",
+  "description" : "Deselect all 'Other Calendars' in a single click",
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "page_action" :
+  {
+    "default_icon" : "calendclear16.png",
+    "default_title" : "Calendclear"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : ["contentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "icons" : {
+    "16" : "calendclear16.png",
+    "48" : "calendclear48.png",
+    "128" : "calendclear128.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*"
+  ],
+  "web_accessible_resources": ["script.js"],
+  "manifest_version": 2
+}

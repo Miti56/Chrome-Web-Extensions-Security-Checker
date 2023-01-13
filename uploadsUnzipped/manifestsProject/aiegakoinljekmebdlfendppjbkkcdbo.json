@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Read Time",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "display article read time on hungarian news sites",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": ["src/bg/background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "icons/icon16.png",
+    "default_title": "Read Time"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.index.hu/*",
+        "http://*.index.hu/*",
+        "https://*.444.hu/*",
+        "http://*.444.hu/*",
+        "https://*.24.hu/*",
+        "http://*.24.hu/*"
+      ],
+      "js": ["src/inject/inject.js"]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "BaseCRM",
+  "version": "1.0",
+  "permissions": [    
+    "storage",
+    "https://www.gstatic.com/*",
+    "https://basecrm-ecd05.firebaseio.com/*",
+    "https://basecrm-ecd05.firebaseapp.com/*",
+    "https://basecrm-ecd05.appspot.com/*",
+    "https://ext.crm.srv.br/*",
+    "*://*.google.com/*"
+  ],
+  "content_scripts" : [
+    {
+      "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"],
+      "js": ["inboxsdk.js", "react.js", "loader.js"]
+    }
+  ],
+  "icons": { 
+    "16": "icon16x16.png",
+    "32": "icon32x32.png",
+    "48": "icon48x48.png",
+    "128": "icon128x128.png" 
+  },
+  "content_security_policy": "script-src https://*.google.com 'unsafe-eval'; object-src 'self'"  
+}

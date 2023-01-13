@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "淘宝京东买家秀助手",
+    "version": "1.0",
+    "manifest_version":2,
+    "description": "一键查看淘宝京东商品详情页，宝贝评价里的所有买家秀图片",
+    "icons": {
+		"16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+		"128": "icon/icon128.png"
+    },
+	"browser_action": {
+      "default_icon": "icon/icon48.png",
+	  "default_popup": "html/popup.html"
+    },
+	"background": {
+	  "page": "html/background.htm"
+	},
+	"content_scripts": [{
+        "matches":["*://item.taobao.com/*","*://detail.tmall.com/*","*://chaoshi.detail.tmall.com/*","*://detail.yao.95095.com/*","*://detail.tmall.hk/*"],
+         "js": ["js/jquery.min.js","js/couponshow.js"],
+         "run_at": "document_start",
+		 "css": ["css/counponDetail.css"]
+    },{
+        "matches":["*://item.taobao.com/*","*://detail.tmall.com/*","*://chaoshi.detail.tmall.com/*","*://detail.yao.95095.com/*","*://detail.tmall.hk/*","*://item.jd.com/*"],
+        "js": ["js/jquery.min.js","js/mjxInsert.js"],
+        "run_at": "document_start"
+    },{
+        "matches":["*://s.taobao.com/*","*://search.jd.com/*"],
+        "js": ["js/jquery.min.js","js/couponlistshow.js"],
+        "css": ["css/rateItemHover.css"],
+        "run_at": "document_start"
+    },{
+        "matches":["*://item.detail.jingzhewang.com/cj/*"],
+        "js": ["js/jquery.min.js","js/config.js"],
+        "all_frames":true,
+        "run_at": "document_start"
+    },{
+        "matches" : ["*://uland.taobao.com/coupon/*"],
+        "js" : ["js/jquery.min.js", "js/juanDetail.js"],
+        "all_frames" : true,
+        "run_at" : "document_start"
+    }],
+    "permissions": ["*://*.taobao.com/*","*://*.jd.com/*","*://*.taokezhushou.com/*","*://api.dataoke.com/*","*://*.taoqueqiao.com/*","*://pub.alimama.com/*","storage"]
+}

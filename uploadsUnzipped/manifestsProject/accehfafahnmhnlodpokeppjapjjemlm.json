@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "DealWall",
+  "short_name": "DealWall",
+  "description": "DealWall on Web and Apple App Store",
+  "version": "1.4",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.a2omobile.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.a2omobile.com/"
+    }
+  },
+  "icons": {
+    "128": "A2O-logo-128x128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "browser_action": {
+    "default_icon": "icons/19.png",
+    "default_popup": "index.html"
+  },
+  "description": "Extension to search any media files",
+  "icons": {
+    "128": "icons/128.png",
+    "19": "icons/19.png"
+  },
+  "manifest_version": 2,
+  "name": "Personal Finder",
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [{
+    "matches": ["\u003Call_urls>"],
+    "js": ["js/sizzle.js"],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "short_name": "Personal Finder",
+  "version": "2.1.0"
+}

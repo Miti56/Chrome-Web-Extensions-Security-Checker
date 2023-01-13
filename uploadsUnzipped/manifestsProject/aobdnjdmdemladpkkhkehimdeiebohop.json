@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Paperspace Monitor",
+  "short_name": "Paperspace Monitor",
+  "description": "Alerts you once an hour if you have Paperspace instances active. Never accidentally leave your Paperspace instances on.",
+  "version": "1.0.0",
+  "author": "@zachcaceres",
+  "icons": {
+    "64": "assets/icon64.png",
+    "128": "assets/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "64": "assets/icon64.png"
+    },
+    "default_title": "Open Paperspace"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; child-src blob: ; img-src data: blob: ;",
+  "background": {
+    "persistent": true,
+    "scripts": ["main.js"]
+  },
+  "permissions": [
+    "*://*.paperspace.com/*",
+    "webRequest",
+    "cookies",
+    "alarms",
+    "notifications"
+  ]
+}

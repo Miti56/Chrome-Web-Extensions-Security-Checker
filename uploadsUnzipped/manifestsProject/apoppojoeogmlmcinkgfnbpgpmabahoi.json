@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app":
+  {
+    "background":
+    {
+      "scripts": ["background.js"]
+    }
+  },
+  "manifest_version": 2,
+  "name": "Alarm Clock",
+  "version": "0.6.1",
+
+  "description": "Create alarms to get notified of your tea, pizza, laundry, or anything else.",
+  "icons":
+  {
+    "256": "images/icon256.png"
+  },
+
+  "author": "Aaron Krämer",
+  "minimum_chrome_version": "42",
+  "offline_enabled": true,
+  "permissions": ["notifications", "storage", {"mediaGalleries": ["read", "allAutoDetected"]}]
+}

@@ -1,0 +1,148 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "",
+  "theme": {
+    "tints": {
+      "frame_incognito": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_inactive": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_incognito_inactive": [
+        -1,
+        -1,
+        -1
+      ],
+      "buttons": [
+        0.6,
+        0.39,
+        0.82
+      ]
+    },
+    "colors": {
+      "ntp_section_text": [
+        200,
+        200,
+        204
+      ],
+      "ntp_text": [
+        228,
+        234,
+        248
+      ],
+      "toolbar": [
+        206,
+        207,
+        209
+      ],
+      "tab_text": [
+        82,
+        86,
+        99
+      ],
+      "tab_background_text": [
+        113,
+        121,
+        135
+      ],
+      "frame_inactive": [
+        0,
+        1,
+        8
+      ],
+      "ntp_section": [
+        0,
+        0,
+        255,
+        0.05
+      ],
+      "ntp_header": [
+        0,
+        0,
+        0
+      ],
+      "button_background": [
+        26,
+        29,
+        36,
+        0
+      ],
+      "ntp_link_underline": [
+        255,
+        0,
+        153
+      ],
+      "frame": [
+        26,
+        29,
+        36
+      ],
+      "bookmark_text": [
+        69,
+        73,
+        84
+      ],
+      "ntp_background": [
+        21,
+        9,
+        49
+      ],
+      "ntp_link": [
+        255,
+        0,
+        153
+      ],
+      "frame_incognito": [
+        26,
+        29,
+        36
+      ],
+      "frame_incognito_inactive": [
+        0,
+        1,
+        8
+      ],
+      "ntp_section_link": [
+        255,
+        0,
+        153
+      ],
+      "ntp_section_link_underline": [
+        255,
+        0,
+        153
+      ]
+    },
+    "images": {
+      "theme_ntp_attribution": "img/theme_ntp_attribution.png",
+      "theme_frame_overlay_inactive": "img/theme_frame_overlay_inactive.png",
+      "theme_frame_incognito_inactive": "img/theme_frame_inactive.png",
+      "theme_ntp_background": "img/theme_ntp_background.png",
+      "theme_toolbar": "img/theme_toolbar.png",
+      "theme_frame_incognito": "img/theme_frame.png",
+      "theme_frame_inactive": "img/theme_frame_inactive.png",
+      "theme_tab_background": "img/theme_tab_background.png",
+      "theme_frame": "img/theme_frame.png",
+      "theme_window_control_background": "img/theme_window_control_background.png",
+      "theme_frame_overlay": "img/theme_frame_overlay.png"
+    },
+    "icons": {
+      "48": "img/icon48.png",
+      "128": "img/icon128.png",
+      "16": "img/icon16.png"
+    },
+    "properties": {
+      "ntp_background_alignment": "top",
+      "ntp_background_repeat": "repeat-x",
+      "ntp_logo_alternate": 1
+    }
+  },
+  "name": "CosmicDust STD",
+  "manifest_version": 2,
+  "version": "1.22"
+}

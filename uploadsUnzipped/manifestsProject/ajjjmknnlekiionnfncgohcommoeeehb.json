@@ -1,0 +1,78 @@
+{
+    "name": "Secure MyWeb",
+    "description": "Secure MyWeb is the best tool to browse the Internet safely and quickly. It blocks ads, malware and trackers.",
+    "version": "1.0.8",
+    "short_name": "secureMyWeb",
+    "incognito": "split",
+
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://analytics.vmn.net; object-src 'self'",
+
+    "permissions": [
+        "chrome://favicon/",
+        "webNavigation",
+        "storage",
+        "nativeMessaging",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "unlimitedStorage",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "name": "Secure MyWeb",
+            "keyword": "securemyweb.co",
+            "favicon_url": "https://securemyweb.co/extensions/images/favicon.ico",
+            "encoding": "UTF-8",
+            "is_default": true,
+            "search_url": "http://search.brandthunder.com?q={searchTerms}"
+        }
+    },
+    "icons": {
+        "16": "./images/icons/16.png",
+        "48": "./images/icons/48.png",
+        "128": "./images/icons/128.png"
+    },
+
+    "browser_action": {
+        "default_icon": "./images/neutral-icon.png",
+        "default_popup": "./html/popup.html",
+        "default_title": "Secure MyWeb"
+    },
+
+    "background": {
+        "page": "./html/background.html"
+    },
+
+    "options_page": "./html/options.html",
+
+    "content_scripts": [{
+            "all_frames": true,
+            "js": ["js/contentscript.js"],
+            "matches": ["*://*/*"],
+            "run_at": "document_start"
+        },
+        {
+            "all_frames": false,
+            "js": [
+                "js/content.js",
+                "js/domparser.js"
+            ],
+            "matches": ["*://*/*"]
+        },
+        {
+            "matches": ["*://*.securemyweb.co.com/*"],
+            "js": ["./js/webpagehelper.js"]
+        }
+    ],
+    "externally_connectable": {
+        "matches": [
+            "*://*.securemyweb.co.com/*",
+            "*://*.mystart.com/*"
+        ]
+    },
+    "web_accessible_resources": ["css/content.css", "css/domparser.css", "html/img/download.gif"],
+    "manifest_version": 2,
+    "update_url": "https://clients2.google.com/service/update2/crx"
+}

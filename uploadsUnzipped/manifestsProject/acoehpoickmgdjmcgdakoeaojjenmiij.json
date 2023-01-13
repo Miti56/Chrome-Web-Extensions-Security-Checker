@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"content_scripts" : [ {
+				"js" : [
+					"javascripts/jquery-1.9.1.min.js",
+					"javascripts/deserialize.js",
+					"javascripts/content_script.js",
+					"javascripts/mousetrap.min.js" ],
+				"matches" : [ "http://*/*", "https://*/*", "file:///*" ],
+				"run_at" : "document_start"
+				} ],
+	"name": "Avonium",
+	"version": "2.0.1",
+	"icons" : { 
+			"16" :  "images/16x16.png",
+		    "48" :  "images/48x48.png",
+		    "128" : "images/128x128.png"},
+	"description": "Avonium",
+	"browser_action": {
+		"default_icon": "images/16x16.png",
+		"default_title": "Avonium",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"scripts": ["javascripts/bcg.js"],
+		"persistent": false
+	},
+	"permissions": [
+		"activeTab"
+	],
+	"manifest_version":2
+}

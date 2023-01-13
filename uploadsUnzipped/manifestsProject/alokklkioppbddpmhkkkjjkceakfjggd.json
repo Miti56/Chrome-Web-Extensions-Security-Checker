@@ -1,0 +1,28 @@
+{
+   "update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "折上折-自购省钱,分享赚钱",
+   "version": "6.3.1",
+   "description": "折上折致力于为网友提供高性比的商品信息推荐，此插件不仅能查找各大电商的优惠券信息,还能查询商品历史价格,分享还能赚钱哟!",
+   "homepage_url": "https://www.zheshangzhe.net",
+   "manifest_version": 2,
+   "minimum_chrome_version": "18",
+   "browser_action": {
+      "default_icon": "images/icon16.png",
+      "default_popup": "popup.html",
+      "default_title": "折上折-自购省钱,分享赚钱"
+   },
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "offline_enabled": true,
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts":[{"matches": ["*://*/*"],"js": ["js/jquery.js", "js/stock_tb.js", "js/echarts.js"],"run_at":"document_start"}],
+   "web_accessible_resources": ["*"],
+   "permissions": [ "https://*/*", "notifications","contextMenus","http://*/*"]
+}
+

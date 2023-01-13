@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "4th of July Backgammon",
+  "version": "1.0.0.1",
+  "manifest_version": 2,
+  "icons": { "128": "backgammon.png" },
+  "description": "Get Patriotic with 4th of July Backgammon - a classic backgammon board game with an Independence Day theme!",
+  "app": {
+    "urls": [
+      "http://www.4thofjulybackgammon.com/?chromestore=1"
+    ],
+    "launch": {
+      "web_url": "http://www.4thofjulybackgammon.com/?chromestore=1"
+    }
+  }
+}

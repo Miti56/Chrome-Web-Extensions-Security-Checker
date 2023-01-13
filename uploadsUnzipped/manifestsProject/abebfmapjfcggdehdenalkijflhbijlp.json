@@ -1,0 +1,124 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "adbuilder",
+  "version": "1.0.8",
+  "manifest_version": 2,
+  "description": "Yahoo! Publisher Ad Builder Tool",
+  "homepage_url": "http://www.yahoo.com",
+  "icons": {
+    "16": "icons/icon128.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": ["src/inject/js/pixels/pixels.js", "src/bg/background.js"]
+  },
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "<all_urls>",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    "src/inject/js/adbuilder/adbuilder.js",
+    "src/inject/js/adbuilder/extension.js",
+    "src/inject/img/adbuilder/placeholder.png",
+    "src/inject/img/adbuilder/icons.svg",
+    "src/inject/img/adbuilder/gemini_syndication.svg",
+    "src/inject/img/tutorial/toolbar.png",
+    "src/inject/img/tutorial/manual.png",
+    "src/inject/img/tutorial/adunit.png",
+    "src/inject/img/tutorial/adnumbers.png",
+    "src/inject/img/tutorial/adpreview.png",
+    "src/inject/img/tutorial/adselect.png",
+    "src/inject/img/tutorial/l-arrow.png",
+    "src/inject/img/tutorial/r-arrow.png",
+    "src/inject/img/tutorial/u-arrow.png",
+    "src/inject/img/tutorial/selection.jpg",
+    "src/inject/img/adbuilder/arrow.gif",
+    "src/inject/img/adbuilder/cross.gif",
+    "src/inject/img/adbuilder/hs.png",
+    "src/inject/img/adbuilder/hv.png",
+    "src/inject/img/ads/netflix.jpg",
+    "src/inject/img/ads/netflix_rect.jpg",
+    "src/inject/img/ads/netflix_secImg.jpg",
+    "src/inject/img/ads/compare.jpg",
+    "src/inject/img/ads/compare_rect.jpg",
+    "src/inject/img/ads/compare_secImg.jpg",
+    "src/inject/img/ads/gatorade.jpg",
+    "src/inject/img/ads/gatorade_rect.jpg",
+    "src/inject/img/ads/gatorade_secImg.jpg",
+    "src/inject/img/ads/nike.jpg",
+    "src/inject/img/ads/nike_rect.jpg",
+    "src/inject/img/ads/nike_secImg.jpg",
+    "src/inject/img/ads/starbucks.jpg",
+    "src/inject/img/ads/starbucks_rect.jpg",
+    "src/inject/img/ads/starbucks_secImg.jpg",
+    "src/inject/img/ads/tmobile.jpg",
+    "src/inject/img/ads/tmobile_rect.jpg",
+    "src/inject/img/ads/tmobile_secImg.jpg",
+    "src/inject/img/ads/chevy.jpg",
+    "src/inject/img/ads/chevy_rect.jpg",
+    "src/inject/img/ads/chevy_secImg.jpg",
+    "src/inject/img/ads/apple.jpg",
+    "src/inject/img/ads/apple_rect.jpg",
+    "src/inject/img/ads/apple_secImg.jpg",
+    "src/inject/img/ads/freedom.jpg",
+    "src/inject/img/ads/freedom_rect.jpg",
+    "src/inject/img/ads/freedom_secImg.jpg",
+    "src/inject/img/ads/lending.jpg",
+    "src/inject/img/ads/lending_rect.jpg",
+    "src/inject/img/ads/lending_secImg.jpg",
+    "src/inject/fonts/adsdata-icons.eot",
+    "src/inject/fonts/adsdata-icons.svg",
+    "src/inject/fonts/adsdata-icons.ttf",
+    "src/inject/fonts/adsdata-icons.woff",
+    "src/inject/fonts/glyphicons-halflings-regular.eot",
+    "src/inject/fonts/glyphicons-halflings-regular.svg",
+    "src/inject/fonts/glyphicons-halflings-regular.ttf",
+    "src/inject/fonts/glyphicons-halflings-regular.woff"
+  ],
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "css": [
+      "src/inject/css/yax.css",
+      "src/inject/css/yui.3_17_2.css",
+      "src/inject/css/codemirror.css",
+      "src/inject/css/adbuilder.css"
+    ]
+  },{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": [
+      "src/inject/js/adbuilder/adbpreloader.js"
+    ],
+    "run_at" : "document_start"
+  },{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": [
+      "src/inject/js/yui/yui.3_17_2.js",
+      "src/inject/js/codemirror/codemirror.js",
+      "src/inject/js/codemirror/mode/xml/xml.js",
+      "src/inject/js/beautify-html/beautify-html.js",
+      "src/inject/js/adbuilder/extension.js",
+      "src/inject/js/adbuilder/adbuilder.js"
+    ],
+    "run_at" : "document_start"
+  },{
+    "matches": [
+      "http://monetization.flurry.com/*",
+      "https://monetization.flurry.com/*"
+    ],
+    "js": ["src/communication/communication.js"],
+    "run_at": "document_end"
+  }],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

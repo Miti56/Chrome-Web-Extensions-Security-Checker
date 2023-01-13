@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Обходим блокировку wikipedia",
+  "short_name": "Обходим блокировку wiki",
+  "version": "0.4.5",
+  "description": "Обходим блокировку российской wikipedia",
+  "manifest_version": 2,
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "permissions": [
+    "tabs", "https://ru.wikipedia.org/*",
+	"storage"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+	"default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ru.wikipedia.org/*"],
+      "js": ["jquery.js", "redir.js"]
+    }
+  ]
+}

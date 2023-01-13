@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "RadarCupom.com.br",
+  "short_name": "RadarCupom.com.br",
+  "description": "Encontre no RadarCupom.com.br os mais recentes cupons e descontos das maiores lojas.",
+
+  "version": "1.0",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.radarcupom.com.br/"
+
+    ],
+    "launch": {
+      "web_url": "https://www.radarcupom.com.br/"
+    }
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

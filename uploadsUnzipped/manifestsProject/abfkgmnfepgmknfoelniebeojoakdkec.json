@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "InMail.io - get new prospects from LinkedIn",
+  "description": "Search through LinkedIn social profiles for leads. Capture emails directly from your LinkedIn search results.",
+  "version": "1.1.1",
+
+  "permissions": [
+    "http://inmail.io/*",
+    "tabs",
+    "https://www.linkedin.com/",
+    "activeTab",
+    "storage",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_title": "InMail.io e-mail finder",
+    "default_popup": "popup.html"
+  },
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+  "background": {
+    "scripts": ["cart.js", "background.js"],
+    "persistent": false
+  }
+}

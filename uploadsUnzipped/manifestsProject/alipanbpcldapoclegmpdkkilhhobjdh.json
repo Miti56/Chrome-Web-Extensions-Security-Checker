@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Traffic",
+  "description": "You have to move a chicken through the traffic.",
+  "version": "1.0",
+  "app": {
+    "urls": [
+      "http://www.gamehitzone.com/mobile/traffic/play.html"    ],
+    "launch": {
+      "web_url": "http://www.gamehitzone.com/play-online/traffic.html"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+  ]
+}

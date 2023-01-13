@@ -1,0 +1,17 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "app": {
+      "launch": {
+         "web_url": "http://www.minijuegosenlinea.com/juegos-de-habilidad/ekobasket/"
+      },
+      "urls": [ "http://www.minijuegosenlinea.com/juegos-de-habilidad/ekobasket/" ]
+   },
+   "description": "Ekobasket",
+   "icons": {
+      "128": "icon_128.png",
+      "24": "icon_24.png"
+   },   
+   "manifest_version": 2,
+   "name": "Ekobasket",   
+   "version": "1.0"
+}

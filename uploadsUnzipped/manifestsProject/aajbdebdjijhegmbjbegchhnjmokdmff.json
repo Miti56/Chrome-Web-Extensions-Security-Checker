@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Versammlung und Gebiete Screenshot",
+  "description": "Screenshottool für Gebietskarten",
+  "version": "7.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js":      ["content.js"]
+    }],
+  "permissions": [
+   "activeTab", "desktopCapture", "<all_urls>"
+   ]
+}

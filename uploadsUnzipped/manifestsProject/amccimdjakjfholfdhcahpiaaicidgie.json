@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Supreme Bot 9000",
+    "version": "0.0.2.8",
+    "author": "Javier Nieto",
+    "description": "Quickly Cop Supreme Items",
+    "options_page": "main/index.html",
+    "manifest_version": 2,
+    "permissions": [
+        "storage",
+        "alarms",
+        "http://www.supremenewyork.com/*",
+        "https://www.supremenewyork.com/*",
+        "https://checkmeout.pro/recaptcha",
+        "cookies"
+    ],
+    "browser_action": {},
+    "background": {
+        "scripts": ["main/js/background.js"],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches": ["*://www.supremenewyork.com/shop/*"],
+        "exclude_globs": ["*all*", "*cart*"],
+        "js": ["main/scripts/add.js"],
+        "run_at": "document_end"
+    }, {
+        "matches": ["*://www.supremenewyork.com/checkout"],
+        "js": ["main/js/bundles/cbundle.js"],
+        "run_at": "document_end"
+    }, {
+        "matches": ["*://checkmeout.pro/recaptcha"],
+        "js": ["main/scripts/captcha.js"],
+        "run_at": "document_end"
+    }],
+    "content_security_policy": "script-src 'self' https://www.supremenewyork.com/; object-src 'self'"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "LinguaLift",
+  "description": "The language learning site you'll actually use",
+  "version": "1.0",
+  "minimum_chrome_version": "23",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://lingualift.com/"
+    ],
+    "launch": {
+      "web_url": "https://lingualift.com/"
+    }
+  }
+}

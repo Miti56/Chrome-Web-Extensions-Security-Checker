@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "blog_search",
+  "version": "0.0.61",
+  "manifest_version": 2,
+  "description": "検索して再生するプラグインです。 無料",
+"permissions": ["management","tabs", "storage"],
+"options_page": "options.html",
+ "icons": { "16": "icon16.png",
+	   "19": "icon19.png",
+	   "48": "icon48.png",
+	  "128": "icon128.png" },
+
+"browser_action": {
+"default_icon": "icon19.png",
+"default_title": "blog_search",
+"default_popup": "popup.html"
+},
+"background": {
+  "page": "background.html"
+},
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css":["jquery.alerts.css","keyword_search.css"],
+      "js": ["jquery-1.7.2.min.js","code.js","blog_text.js"],
+      "run_at": "document_idle"
+    }
+  ],
+"web_accessible_resources":[
+"icon19.png",
+"images/help.png"
+]
+}

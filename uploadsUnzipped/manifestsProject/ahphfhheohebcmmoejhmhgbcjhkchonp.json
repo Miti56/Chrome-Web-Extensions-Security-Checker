@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Juegos de Miedo | AppFan.PW",
+  "short_name": "Juegos de Pintura",
+  "version": "1.0.2",
+  "description": "Enlace directo a la categoria de Juegos de Miedo de AppFan.PW",
+  "homepage_url": "https://appfan.pw/c/juegos-de-miedo/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Juegos de Miedo | AppFan.PW",
+      "default_popup": "popup.html"
+  }
+} 

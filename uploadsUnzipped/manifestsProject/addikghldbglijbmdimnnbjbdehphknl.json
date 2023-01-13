@@ -1,0 +1,84 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "CounterFake",
+  "version": "1.0.8",
+  "description": "An extension that will help us fight fake news.",
+
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+
+  "browser_action": {
+    "default_icon": "img/icon128.png"
+  },
+
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+
+      "exclude_matches":[
+        "https://www.messenger.com/*",
+        "https://chrome-plugin-9bce4.firebaseapp.com/*",
+        "https://www.facebook.com/*",
+        "https://twitter.com/*",
+        "https://www.google.com/*",
+        "https://www.youtube.com/*",
+        "https://firebase.google.com/*",
+        "https://stackoverflow.com/*",
+        "https://github.com/*",
+        "*://*/_/chrome/*",
+        "*://*/_/chrome/newtab*",
+        "https://console.firebase.google.com/*",
+		"https://counter-fake.firebaseapp.com/*",
+		"https://www.google.com.ph/*",
+		"https://web.facebook.com/*",
+        "https://accounts.google.com/*",
+        "https://mail.google.com/*",
+        "https://drive.google.com/*",
+        "file:///*",
+        "https://developer.chrome.com/*",
+        "https://app.schoology.com/*",
+        "https://docs.google.com/*",
+        "https://en.wikipedia.org/*"
+
+      ],
+      "js": [
+        "js/content.js"
+      ],
+
+      "run_at":
+        "document_end"
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "web_accessible_resources": [
+    "html/report.html",
+    "img/fab-bubble.png",
+    "img/fab-idle.png"
+],
+
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com  https://code.getmdl.io/ https://code.jquery.com/; object-src 'self'"
+
+}

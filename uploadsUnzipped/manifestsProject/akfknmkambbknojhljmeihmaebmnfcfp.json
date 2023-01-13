@@ -1,0 +1,20 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.riangames.com/game/cute-little-mermaid-64"
+      },
+      "urls": [ "http://www.riangames.com/game/cute-little-mermaid-64" ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "128.png"	  
+   },
+
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "short_name": "__MSG_appName__",
+   "permissions": [ "unlimitedStorage", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

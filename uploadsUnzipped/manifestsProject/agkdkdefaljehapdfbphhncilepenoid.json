@@ -1,0 +1,24 @@
+{
+   "browser_action": {
+      "default_icon": "icons/icon32.png",
+      "default_title": "Padlet"
+   },
+   "content_scripts": [ {
+      "js": [ "includes/bundle.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Complemento Google Chrome OpenSoucer.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/button.png",
+      "48": "icons/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Padlet",
+   "permissions": [ "tabs", "activeTab", "http://*/*", "https://*/*", "contextMenus", "storage", "webNavigation" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.7",
+   "web_accessible_resources": [ "icons/*" ]
+}

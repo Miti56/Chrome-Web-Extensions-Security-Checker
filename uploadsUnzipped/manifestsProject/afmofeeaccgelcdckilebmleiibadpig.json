@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"version":"4.0","name":"GIAPCON13","manifest_version":2,"description":"Developed for delegates who wish to attend Inadian Academy of Pediatrics Annual Conference (GIAPCON2013) to be held on 7th and 8th","app":{"urls":["http:\/\/www.apps-builder.com\/572238"],"launch":{"web_url":"http:\/\/www.apps-builder.com\/572238"}},"icons":{"128":"icon128.png"},"permissions":["unlimitedStorage","notifications"]}

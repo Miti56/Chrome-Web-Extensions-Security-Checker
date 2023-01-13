@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Instagram Image Downloader",
+    "version": "1.1",
+    "description": "",
+    "icons": {
+        "128": "128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.instagram.com/*"
+            ],
+            "js": [
+                "go.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "https://*.instagram.com/*"
+    ]
+}

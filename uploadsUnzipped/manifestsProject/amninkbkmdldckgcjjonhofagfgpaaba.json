@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Wordly",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "A lexicon to help you improve your english. You add words by a right-click action and once a week 5 of them are sent to your email",
+  "homepage_url": "https://wordsstorer.herokuapp.com",
+  "icons": {
+    "16": "icons/wordly16.png",
+    "32": "icons/wordly32.png",
+    "48": "icons/wordly32.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "js/jquery/jquery.min.js", "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "options_page": "src/options_custom/index.html",
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/wordly16.png",
+      "32": "icons/wordly32.png",
+      "48": "icons/wordly32.png",
+      "128": "icons/wordly128.png"
+    },
+    "default_title": "Wordly - create your own lexicon"
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardRead",
+    "contextMenus",
+    "commands",
+    "cookies",
+    "storage",
+    "https://wordsstorer.herokuapp.com/*"
+  ],
+  "omnibox": {
+    "keyword": "lexicon"
+  },
+  "commands": {
+     "send-to-pushToLexicon": {
+       "suggested_key": {
+         "default": "Ctrl+Shift+X"
+       },
+       "description": "Save to Lexicon",
+       "global": true
+     }
+  }
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "MydearNest Clipping",
+	"version" : "0.27",
+	"description" : "MydearNest Clipping Extension",
+	"browser_action" : {
+		"default_icon" : "icon.png",
+		"default_popup" : "popup.html"
+	},
+	"background" : {
+		"scripts" : ["jquery.min.js", "background.js"]
+	},
+	"sandbox": {
+		"pages":[
+			"photo_tagFrame.html"
+		] 
+	},
+	"content_scripts" : [
+		{
+			"matches" : ["http://*/*", "https://*/*"],
+			"js" : ["jquery.min.js", "content.js"],
+			"all_frames": true
+		}
+	],
+	"permissions" : [
+		"contextMenus", "http://*/*", "https://*/*", "tabs"
+	],
+	"web_accessible_resources": ["photo_tagFrame.html"],
+	"manifest_version": 2
+}

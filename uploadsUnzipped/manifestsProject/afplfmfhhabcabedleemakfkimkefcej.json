@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "0.0.7",
+    "manifest_version": 2,
+    "name": "Twitterテーマカラー疑似的復活",
+    "description": "Twitterのテーマカラーを疑似的に復活。(テーマカラーの適用まで若干のラグがある)",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*"
+            ],
+            "css": [
+                "color-picker.min.css"
+            ],
+            "js": [
+                "color-picker.js",
+                "cs.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "scripts": [
+            "bg.js"
+        ],
+        "persistent": false
+    },
+    "permissions":[
+        "tabs",
+        "webNavigation",
+        "storage",
+        "https://twitter.com/*",
+        "https://localhost/*"
+    ]
+}

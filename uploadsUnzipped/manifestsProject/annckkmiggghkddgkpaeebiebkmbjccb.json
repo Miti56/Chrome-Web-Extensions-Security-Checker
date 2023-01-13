@@ -1,0 +1,27 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.1",
+	"name": "Windows XP Luna Olive Green theme",
+	"theme": {
+		"images" : {
+			"theme_frame" : "images/frame_lunagreen.png",
+			"theme_toolbar" : "images/toolbar_xp.png",
+			"theme_tab_background" : "images/tab_background_xp.png",
+			"theme_tab_background_incognito" : "images/tab_background_xp.png",
+			"theme_ntp_background" : "images/ntp_background_xp.png"
+		},
+		"colors" : {
+			"frame" : [187, 201, 143],
+			"ntp_section" : [187, 201, 143],
+			"toolbar" : [236, 233, 216]
+		},
+		"tints" : {
+			"buttons" : [0.233, -1.0, -1.0],
+			"background_tab" : [-1.0, -1.0, -1.0]
+		},
+		"properties" : {
+			"ntp_background_alignment" : "right bottom",
+			"ntp_background_repeat" : "no-repeat"
+		}
+	}
+}

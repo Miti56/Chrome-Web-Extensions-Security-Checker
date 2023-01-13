@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Simple Online Invoice",
+  "description": "Fast and simple online invoice free for everyone, best for individuals like free-lancer and small businesses",
+  "version": "1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://app.greenmango.co.nz/invoice/"
+    ],
+    "launch": {
+      "web_url": "http://app.greenmango.co.nz/invoice/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Hakros PassGenerator",
+  "description": "Genera contraseñas aleatorias de forma rápida.",
+  "version": "1.0",
+  "app": {
+    "urls": [
+      "http://passgenerator.hakros.com/"
+    ],
+    "launch": {
+      "web_url": "http://passgenerator.hakros.com/"
+    }
+  },
+  "icons": {
+    "128": "passgenerator_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

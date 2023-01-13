@@ -1,0 +1,91 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Gfacility",
+  "description": "",
+  "version": "0.0.7",
+  "icons": {
+    "16": "icon/icon-16.png",
+    "32": "icon/icon-32.png",
+    "48": "icon/icon-48.png",
+    "128": "icon/icon-128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icon/icon-19.png",
+      "38": "icon/icon-38.png"
+    },
+    "default_popup": "html/popup.html",
+    "default_title": "Gfacility"
+  },
+  "options_ui": {
+    "page": "html/options.html",
+    "chrome_style": true
+  },
+  "background": {
+    "scripts": [
+      "js/library/jquery.min.js",
+      "js/library/axios.min.js",
+      "js/library/bootstrap.js",
+      "js/config.js",
+      "js/oauth.js",
+      "js/remote_api.js",
+      "js/shared.js",
+      "js/background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://calendar.google.com/*"
+      ],
+      "js": [
+        "js/library/jquery.min.js",
+        "js/library/axios.min.js",
+        "js/library/bootstrap.js",
+        "js/oauth.js",
+        "js/config.js",
+        "js/remote_api.js",
+        "js/cateringTab.js",
+        "js/generalTab.js",
+        "js/shared.js",
+        "js/content.js"
+      ],
+      "css": [
+        "css/library/bootstrap.css",
+        "css/library/material.css",
+        "css/content.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "oauth2": {
+    "client_id": "157036934282-n2l17jtikp92q2m79u371t4pur9en8fc.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/plus.login",
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "identity",
+    "identity.email",
+    "https://accounts.google.com/*",
+    "https://www.googleapis.com/*",
+    "https://accounts.google.com/o/oauth2/token",
+    "*://*.google.com/*",
+    "cookies"
+  ],
+  "web_accessible_resources": [
+    "img/*",
+    "html/cateringFull.html",
+    "html/guestPopup.html"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "app": {
+    "urls": ["http://geography-puzzles.pro700.com/"],
+    "launch": {"web_url": "http://geography-puzzles.pro700.com/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Computer jigsaw puzzles to familiarize yourself with geography",
+  "name": "geography puzzles",
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "2.4"
+}

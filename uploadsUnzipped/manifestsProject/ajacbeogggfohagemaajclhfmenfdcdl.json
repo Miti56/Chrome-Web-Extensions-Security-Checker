@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Paste encryption",
+  "description": "Encrypts Pastebin paste",
+  "version": "0.0.3",
+
+  "content_scripts": [{
+    "matches": [
+      "http://pastebin.com/",
+      "http://www.pastebin.com/"
+    ],
+
+    "js": ["alertify.js", "sjcl.js", "jquery.min.js", "encryptPB.js"],
+    "css": ["alertify.css"]
+  },
+    {
+      "matches": [
+      "http://pastebin.com/*",
+      "http://www.pastebin.com/*"
+      ],
+      "exclude_matches": [
+        "http://pastebin.com/",
+        "http://pastebin.com/trends/*",
+        "http://pastebin.com/api/*",
+        "http://pastebin.com/tools/*",
+        "http://pastebin.com/faq/*",
+        "http://pastebin.com/download/*",
+        "http://pastebin.com/embed/*",
+        "http://pastebin.com/index/*",
+        "http://pastebin.com/report/*",
+        "http://pastebin.com/print/*"
+      ],
+
+      "js": ["highlight.min.js", "alertify.js", "sjcl.js", "jquery.min.js", "decryptPB.js"],
+      "css": ["alertify.css", "default.min.css"]
+  }],
+
+
+  "permissions": [
+    "storage"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "c|api",
+    "description": "Use Any Web Resource in your Classroom",
+    "version": "1.7.0",
+    "icons": {
+        "16": "capi/icon_16.png",
+        "48": "capi/icon_48.png",
+        "128": "capi/icon_128.png"
+    },
+    "permissions": [
+        "tabs",
+        "cookies",
+        "http://*/*",
+        "https://*/*",
+        "storage"
+    ],
+    "browser_action": {
+        "default_title": "c|api"
+    },
+    "background": {
+        "scripts": [
+            "capi/build/chrome/background/index.js"
+        ],
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://127.0.0.1/*", "http://localhost/*", "https://www.classroomapi.com/*"],
+            "js": ["capi/build/chrome/content-script/installed.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "capi/libs/*",
+        "capi/build/*",
+        "capi/bower_components/*"
+    ],
+    "content_security_policy": "script-src 'self' https://*.filepicker.io https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'"
+}

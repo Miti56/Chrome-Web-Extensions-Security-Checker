@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Android Resource Navigator",
+  "description": "Enhanced resource navigation for GitHub hosted Android projects",
+  "homepage_url": "http://jgilfelt.github.com/android-resource-navigator",
+  "version": "0.1.7",
+  "background": { "scripts": ["background.js", "downloader.js", "jszip/jszip.js" ] },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "https://raw.githubusercontent.com/",
+    "https://github.com/",
+    "storage",
+    "contextMenus",
+    "notifications"
+  ],
+  "omnibox": {
+    "keyword": "arn"
+  },
+  "icons": {
+    "128": "images/logo-128.png"
+  },
+  "browser_action": {
+    "default_title": "Android Framework Resources",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/logo-16.png",
+      "19": "images/logo-19.png",
+      "38": "images/logo-38.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://github.com/*res/values*",
+        "*://github.com/*res/drawable*",
+        "*://github.com/*res/layout*",
+        "*://github.com/*res/anim*",
+        "*://github.com/*res/menu",
+        "*://github.com/*res/xml*"
+      ],
+      "js": [
+        "defaults.js",
+        "page-find-injected.js",
+        "resolver-injected.js",
+        "res-linkify.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": ["images/logo-38.png", "resolver-injected.js", "page-find-injected.js"]
+}

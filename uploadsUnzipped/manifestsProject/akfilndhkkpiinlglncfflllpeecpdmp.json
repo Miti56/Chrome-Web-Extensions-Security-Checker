@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Default Grey",
+   "theme": {
+      "colors": {
+      "frame": [ 0, 0, 0 ],
+      "frame_inactive": [ 255, 255, 255 ],
+      "frame_incognito": [ 255, 255, 255 ],
+      "frame_incognito_inactive": [ 0, 0, 0 ],
+      "toolbar": [ 111, 111, 111 ],
+      "tab_text": [ 111, 111, 111 ],
+      "tab_background_text": [ 150, 150, 150 ],
+      "bookmark_text": [ 111, 111, 111 ],
+      "ntp_background": [ 111, 111, 111 ],
+      "ntp_text": [ 111, 111, 111 ],
+      "ntp_link": [ 111, 111, 111 ],
+      "ntp_link_underline": [ 111, 111, 111 ],
+      "ntp_header": [ 111, 111, 111 ],
+      "ntp_section": [ 111, 111, 111 ],
+      "ntp_section_text": [ 0, 0, 0 ],
+      "ntp_section_link": [ 0, 0, 0 ],
+      "ntp_section_link_underline": [ 0, 0, 0 ]
+      },
+      "images": {
+      "theme_frame": "images/frame_normal.png",
+      "theme_frame_inactive": "images/frame_normal_inactive.png",
+      "theme_frame_incognito": "images/frame_incognito.png",
+      "theme_frame_incognito_inactive": "images/frame_incognito_inactive.png",
+      "theme_toolbar": "images/toolbar.png",
+      "theme_ntp_background": "images/background.png",
+	  "theme_tab_background": "images/tab_background.png",
+      "theme_ntp_attribution": "images/logo.png"
+      }
+   },
+   "version": "1.0"
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Mortgage Loan Prepayment Calculator",
+  "short_name": "Loan Prepayment Calculator",
+  "description": "Loan and mortgage calculator to determine money savings from extra payments.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.loanchop.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.loanchop.com/index.php"
+    }
+  }
+}

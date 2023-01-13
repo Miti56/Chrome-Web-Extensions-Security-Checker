@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "manifest_version": 2,
+  "name": "PAL Flashcards",
+  "short_name": "PAL",
+  "version": "0.0.1",
+  "description": "Flascards have never been easier",
+  "icons": {
+    "128": "pal-128.png"
+  },
+  "permissions": ["webview"]
+}

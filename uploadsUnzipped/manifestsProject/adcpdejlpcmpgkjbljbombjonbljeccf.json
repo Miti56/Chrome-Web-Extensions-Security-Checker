@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ponpetick",
+    "version": "1.0.0",
+    "description": "Animetickのアニメ管理画面からPonpeに飛びたい",
+    "icons": {
+        "48": "src/img/icon.48.png",
+        "128": "src/img/icon.128.png"
+    },
+    "permissions": [
+        "tabs",
+        "http://animetick.net/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://animetick.net/*"
+            ],
+            "js": [
+                "src/js/animetick.js"
+            ],
+            "css": [
+                "src/css/animetick.css"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "src/js/background.js"
+        ]
+    },
+    "options_page": "src/html/config.html"
+}

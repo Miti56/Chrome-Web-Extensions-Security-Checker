@@ -1,0 +1,52 @@
+{
+   "author": "Gilles Crettenand \u003Cgilles@crettenand.info> Edited By Chrys Oliveira",
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/extension.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/icon-19.png",
+         "38": "icons/icon-38.png"
+      },
+      "default_popup": "popin.html"
+   },
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "externally_connectable": {
+      "matches": [ 
+	  "*://bi-ceratti.azurewebsites.net/*", 
+	  "*://bi-dataexact.azurewebsites.net/*", 
+	  "*://bi-diniz.azurewebsites.net/*", 
+	  "*://bi-fabritech.azurewebsites.net/*", 
+	  "*://bi-laborimport.azurewebsites.net/*", 
+	  "*://bi-ober.azurewebsites.net/*", 
+	  "*://bi-oticaspb.azurewebsites.net/*", 
+	  "*://bi-provedor.azurewebsites.net/*", 
+	  "*://bi-rihappy.azurewebsites.net/*", 
+	  "*://bi-vetnil.azurewebsites.net/*", 
+	  "*://bi-audaxco.azurewebsites.net/*", 
+	  "*://bi-tvh.azurewebsites.net/*", 
+	  "http://localhost:5056/*", 
+	  "*://*.dataexact.com.br/*",
+	  "*://*.organizedados.com.br/*"
+	  ]
+   },
+   "homepage_url": "http://www.dataexact.com.br/",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "64": "icons/icon-64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo4g8YFE0nPWrqFst3hOeYq/a7Rbs7sAp2iLyTplLGsZMZTwSSryY9wkBTC08Jl4kutO8CPXIyvTSpfvV22CTIBHD18DsoNlxkKRuztvq/NaZfeCwGHBWRdCRpjBDH3OkHPrwWv/KUWok63rS2Seu5jUGDpxBPYdbyXE8QfZqYVnw2SI1Sbx0nrQE49ctOUgtO4Cz6o2rctG3jQwZn7TsANQv6vogaepnKuOfdyRaq5d/3cnm9F5WKhIc7XlDbbmNmGYl7fvRwixStE6qXBvxTIFH/kqXfr543l5huQ6tuuA5j5EwxQpv9hMs+cbF/GI6UDwVkX4DwNKui6f6fy5GCQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "offline_enabled": true,
+   "permissions": [ "webRequest", "webRequestBlocking", "storage", "tabs", "http://*/*", "https://*/*" ],
+   "short_name": "DataExact Access",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "10.0"
+}

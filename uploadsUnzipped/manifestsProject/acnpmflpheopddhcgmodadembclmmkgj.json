@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Mein-Deal.com",
+    "description": "Verpassen Sie keine Schn\u00E4ppchen mehr! Werden neue Artikel ver\u00F6ffentlicht, wird unser Icon neben der Adressleiste hervorgehoben.",
+    "version": "0.0.4",
+    "homepage_url": "http://www.mein-deal.com/",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/",
+        "https://*/",
+        "storage"
+    ],
+    "browser_action": {
+        "default_title": "Mein-Deal.com",
+        "default_icon": {
+            "19": "icon19.png",
+            "38": "icon38.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "offline_enabled": false
+}

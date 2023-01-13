@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Dogpile Private",
+    "version": "1.0.14.33",
+    "manifest_version": 2,
+    "description": "Search privately with Dogpile Private Search.",
+    "homepage_url": "http://www.dogpile.com/",
+    "icons": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "background": {
+      "scripts": ["scripts/stat.js"]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "icons/icon-19.png",
+            "38": "icons/icon-38.png"
+        }
+    },
+    "web_accessible_resources": [
+        "icons/checker.gif",
+        "icons/*.png"
+    ],
+    "chrome_url_overrides":{
+        "newtab":"html/newtab.html"
+    },
+    "chrome_settings_overrides" : {
+        "search_provider": {
+          "name"          : "Dogpile",
+          "instant_url"   : "http://private.dogpile.com/{REPLACE}/search/web?q={searchTerms}",
+          "search_url"    : "http://private.dogpile.com/{REPLACE}/search/web?q={searchTerms}",
+          "favicon_url"   : "http://private.dogpile.com/favicon.ico",
+          "keyword"       : "Dogpile",
+          "encoding"      : "UTF-8",
+          "alternate_urls":[],
+          "search_url_post_params":"",
+          "instant_url_post_params":"",
+          "is_default"    : true
+        }
+    },
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "cookies",
+        "webRequest",
+        "webRequestBlocking"
+    ]
+}
+

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"offline_enabled": true,
+    "manifest_version": 2,
+    "name": "Archillect New Tab Page",
+    "description": "Shows a live grid of images, discovered by the artifical intelligence Archillect, on the new tab page.",
+    "version": "1.0.2",
+    "author": "Ben Stanley",
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    },
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "48": "icon-48.png"
+   }
+ }

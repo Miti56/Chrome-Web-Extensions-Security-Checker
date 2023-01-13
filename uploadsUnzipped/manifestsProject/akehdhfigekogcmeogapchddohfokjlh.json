@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "mid",
+  "description": "mid",
+  "version": "1.0",
+  "shot_name": "mid plugin",
+  "description": "chrome plugin for mid",
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "permissions": [
+    "file://*/*",
+    "tabs",
+    "identity",
+    "identity.email"
+  ],
+
+  "browser_action": {
+    "default_title": "mid"
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*/*", "file://*/*"],
+    "js": ["injector.js"],
+    "all_frames": true
+  }]
+}

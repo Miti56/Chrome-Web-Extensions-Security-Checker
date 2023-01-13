@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "法语助手划词翻译",
+    "manifest_version": 2,
+    "version": "1.2",
+    "icons": {
+        "16": "16.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "description": "《法语助手划词翻译》为您提供权威的法汉-汉法翻译解释",
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "css": ["translated.css"],
+        "js": ["translator.js"],
+        "all_frames": true
+    }],
+    "web_accessible_resources": ["translator.jpg", "back.jpg"],
+    "permissions": [
+        "cookies", "<all_urls>"
+    ]
+}

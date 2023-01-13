@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "CWW Account Number CheckSum",
+	"version": "1.0",
+	"description": "CWW Account Number CheckSum",
+	"icons": {
+		"16": "icons/16.png",
+		"32": "icons/32.png",
+		"48": "icons/48.png",
+		"64": "icons/64.png",
+		"128": "icons/128.png"
+	},
+	"manifest_version": 2,
+	"content_scripts": [
+	  {
+		"matches": [
+		  "*://*.gliderpay.com/*"
+		],
+		"js": ["popup.js"]
+	  }
+	]
+}

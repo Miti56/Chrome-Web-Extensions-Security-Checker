@@ -1,0 +1,13 @@
+{
+  "app": {
+    "urls": ["http://www.duckiedeck.com/play/room-decorating?ref\u003dcws"],
+    "launch": {"web_url": "http://www.duckiedeck.com/play/room-decorating?ref\u003dcws"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Furnish and decorate your apartment. You can choose any elements you want to create your dream living space.",
+  "name": "Room Decorating Games at Duckie Deck",
+  "permissions": ["notifications"],
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "1.1"
+}

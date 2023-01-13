@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Properti Produktif",
+ "manifest_version": 2,
+ "short_name": "Properti Produktif",
+ "description": "Properti Produktif Deskripsi",
+ "version": "1.0",
+	"background": {
+  "persistent": false,
+  "scripts": ["OneSignal.js", "background.js"]
+},
+	"permissions": ["gcm", "storage", "notifications", "identity"],
+ "browser_action": {
+	"default_icon": "16-x-16.png",
+	"default_title": "Properti Produktif",
+	"default_popup": "chromiflash.html"
+  },
+ "icons": {
+	"128": "128-x128.png"
+  }
+}

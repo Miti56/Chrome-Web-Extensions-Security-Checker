@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "ARGO Athena DeptID Catcher",
+ "version": "1.0.9",
+ "description": "Finds the Athena Department ID and returns the current Tablespace and Department ID for the logged in user",
+ "background": {
+   "scripts": ["background.js"]
+ },
+  "content_scripts": [{
+    "matches": ["*://*.athenahealth.com/*"],
+    "js": ["content.js"]
+  }],
+ "browser_action": {
+   "default_title": "ARGO Athena DeptID Catcher"
+ },
+
+ "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+ "permissions": [
+    "nativeMessaging",
+	"tabs",
+    "*://*/*"
+ ],
+
+ "manifest_version": 2
+}

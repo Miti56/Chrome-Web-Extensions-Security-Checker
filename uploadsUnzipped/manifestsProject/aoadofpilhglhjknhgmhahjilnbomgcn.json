@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "version": "1.1.0",
+
+    "name": "Gochuumon wa Usagi Desu ka? Chiya Theme",
+    "theme": {
+        "images": {
+            "theme_frame":                    "images/theme_frame.png",
+            "theme_frame_inactive":           "images/theme_inactive.png",
+            "theme_frame_incognito":          "images/theme_secret.png",
+            "theme_frame_incognito_inactive": "images/theme_secret_inactive.png",
+            "theme_tab_background":           "images/theme_frame.png",
+            "theme_tab_background_incognito": "images/theme_secret.png",
+            "theme_ntp_background":           "images/theme_ntp_background.png",
+            "theme_toolbar":                  "images/theme_toolbar.png"
+        },
+        "colors": {
+            "frame":                    [ 255, 255, 255 ],
+            "frame_inactive":           [ 152, 188, 233 ],
+            "frame_incognito":          [  83, 106, 139 ],
+            "frame_incognito_inactive": [ 126, 139, 156 ],
+            "tab_text":                 [ 255, 255, 255 ],
+            "tab_background_text"  :    [   0,   0,   0 ],
+            "toolbar" :                 [ 153, 204, 255 ]
+        },
+        "tints": {
+            "frame":                    [ -1.0, -1.0, -1.0 ],
+            "buttons":                  [  150,  150,  150 ],
+            "frame_inactive":           [ -1.0, -1.0, -1.0 ],
+            "frame_incognito":          [ -1.0, -1.0, -1.0 ],
+            "frame_incognito_inactive": [ -1.0, -1.0, -1.0 ],
+            "background_tab":           [  255,  255,  255 ]
+        },
+        "properties": {
+            "ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "etab.js" ]
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "short_name": "__MSG_shortname__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.08.06.2",
+   "browser_action": {
+      "default_icon": "128.png",
+      "default_title": "__MSG_title__",
+      "default_popup": "popup.html",
+      "default_url": "https://google.com"
+   },
+   "chrome_url_overrides": {
+      "newtab": "etab.html"
+   },
+   "icons": {
+     "128": "128.png"
+   },
+   "homepage_url": "https://sites.google.com/view/promo-extensions-welcome",
+   "default_locale": "en_US",
+   "description": "__MSG_desc__"
+}

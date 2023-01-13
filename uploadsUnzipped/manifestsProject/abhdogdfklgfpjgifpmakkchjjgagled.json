@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "Olympic athletics",
+  "short_name": "Olympic athletics",
+ 	"version": "1.2",
+	"description": "Olympic athletics begins in Rio de Janeiro with the preliminary competitions.",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Olympic athletics"
+  },
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

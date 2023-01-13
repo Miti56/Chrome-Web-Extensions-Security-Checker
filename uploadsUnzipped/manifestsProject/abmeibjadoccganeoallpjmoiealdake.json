@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Internet Search Helper",
+
+  "description": "This app will help you search the largest web directory on Earth!",
+
+  "version": "1.1",
+
+  "icons": {
+
+    "128": "128.png"
+
+  },
+
+  "app": {
+
+    "urls": [
+
+      "http://www.taketwoapps.com/apps/other/web-search/app.html"
+
+    ],
+
+    "launch": {
+
+      "web_url": "http://www.taketwoapps.com/apps/other/web-search/app.html"
+
+    }
+
+  },
+
+  "permissions": [
+
+    "unlimitedStorage",
+
+    "notifications"
+
+  ]
+
+}

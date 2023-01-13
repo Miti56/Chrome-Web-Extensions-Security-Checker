@@ -1,0 +1,13 @@
+{
+  
+   "manifest_version": 2,
+   "name":"IH Plus",
+   "content_scripts": [ {
+      "css": [ "contentscript_bin_prod.css" ],
+      "js": [ "include.postload.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "permissions": [ "tabs", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

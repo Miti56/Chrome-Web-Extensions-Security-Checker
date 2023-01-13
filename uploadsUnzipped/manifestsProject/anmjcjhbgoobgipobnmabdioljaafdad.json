@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "uMeet Desktop Streamer",
+  "short_name": "uMeet",
+  "description": "A simple extension that allows you to stream your desktop into meetings with uMeet and Web Conference.",
+  "version": "1.5.0",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "umeet-logo-16x16.png",
+    "48": "umeet-logo-48x48.png",
+    "128": "umeet-logo-128x128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://umeet.scone.vn/*"
+      ]
+  }
+}

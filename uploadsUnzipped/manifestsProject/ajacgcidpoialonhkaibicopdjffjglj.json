@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "StreamChecker",
+	"version": "1.4.0",
+	"description": "youtubeやtwitch、ニコ生など複数の配信サイトの配信状況を取得するツール",
+	"browser_action": {
+		"default_icon": {
+			"16": "img/sc16.png",
+			"24": "img/sc24.png",
+			"32": "img/sc32.png"
+		},
+		"default_title": "StreamChecker",
+		"default_popup": "./html/popup.html"
+	},
+	"icons": {
+		 "16": "img/sc16.png",
+		 "48": "img/sc48.png",
+		"128": "img/sc128.png"
+	},
+	"options_page": "./html/options.html",
+	"background": {
+	  "scripts": ["js/jquery-3.4.1.min.js","js/common.js","js/background.js"],
+	  "persistent": false
+	},
+	"permissions": [
+		"alarms",
+		"storage",
+		"background",
+		"contextMenus",
+		"https://*.nicovideo.jp/*",
+		"https://sketch.pixiv.net/*",
+		"https://www.googleapis.com/youtube/v3/*",
+		"https://www.youtube.com/*",
+		"https://*.twitch.tv/*",
+		"https://twitcasting.tv/*"
+	],
+	"author": "kabu0404",
+	"homepage_url": "https://twitter.com/kabu0404"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "America Online Web Search",
+	"short_name": "aol Search",
+	"description" : "To use, type 'aol' & space, and a query term into the Omnibox. timothytocci.com",
+	"version" : "0.1",
+	"background" : {
+		"scripts" : ["background.js"]
+	},
+	"omnibox" : {
+		"keyword" : "aol"
+	},
+	"icons" : {
+		"16" : "aol_16.png",
+		"32" : "aol_32.png",
+		"48" : "aol_48.png",
+		"128" : "aol_128.png"
+	},
+	"manifest_version" : 2
+}

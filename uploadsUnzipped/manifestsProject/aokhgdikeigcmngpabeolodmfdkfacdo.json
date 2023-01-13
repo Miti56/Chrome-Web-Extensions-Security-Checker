@@ -1,0 +1,26 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/bg.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "js/app.js" ],
+      "matches": [ "http://*.youtube.com/*", "https://*.youtube.com/*" ]
+   } ],
+   "description": "Сделаем из ютуба телевизор",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "Y-Hide",
+   "page_action": {
+      "default_icon": {
+         "128": "icon128.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Сделаем из ютуба телевизор "
+   },
+   "permissions": [ "tabs", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

@@ -1,0 +1,90 @@
+{
+	"manifest_version": 2,
+	"name": "AntBuddy Click-to-Call Extension",
+	"short_name": "AntBuddy Click-to-Call",
+	"description": "A browser extension allow to dial any number on visited websites.",
+	"homepage_url": "https://antbuddy.com",
+	"version": "0.0.9",
+	"author": "Gilles Crettenand <gilles@crettenand.info>",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"default_locale": "vi",
+	"web_accessible_resources": [
+		"icons/icon-32.png",
+		"images/logo.svg"
+	],
+	"icons": {
+		"16": "icons/icon-16.png",
+		"32": "icons/icon-32.png",
+		"48": "icons/icon-48.png",
+		"64": "icons/icon-64.png",
+		"128": "icons/icon-128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "icons/icon-19.png",
+			"38": "icons/icon-38.png"
+		}
+	},
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"background": {
+		"scripts": [
+			"js/vendor/jquery/jquery.min.js",
+			"js/vendor/URI.js",
+			"js/bg/background.js",
+			"js/antbuddy.js"
+		],
+		"persistent": true
+	},
+	"permissions": [
+		"storage",
+		"tabs",
+		"cookies",
+		"http://*/*",
+		"https://*/*"
+	],
+	"externally_connectable": {
+		"ids": [
+			"idbejgmlldkhoiogoknpihhhbimbikdo"
+		],
+		"matches": [
+			"*://*.antbuddy.com/*",
+			"*://*.antbuddy.vn/*",
+			"*://*.beeiq.co/*"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*.antbuddy.loc:3001/app*",
+				"https://*.antbuddy.com/app*",
+				"https://*.beeiq.co/b/*"
+			],
+			"js": [
+				"js/inject/ab_injector.js"
+			]
+		},
+		{
+			"all_frames": true,
+			"css": [
+				"css/antbuddy.css"
+			],
+			"exclude_matches": [],
+			"js": [
+				"js/vendor/jquery/jquery.min.js",
+				"js/vendor/jquery/jquery-replace.js",
+				"js/antbuddy.js",
+				"js/inject/wildcard_injector.js",
+				"js/inject/wildcard_deep_injector.js",
+				"js/vendor/libphonenumber/phoneformat.min.js"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		}
+	],
+	"offline_enabled": true,
+	"content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}

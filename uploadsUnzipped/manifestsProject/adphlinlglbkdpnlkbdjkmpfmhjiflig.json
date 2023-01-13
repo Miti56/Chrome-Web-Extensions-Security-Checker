@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Keymosabe Extension for Chrome",
+  "short_name": "Keymosabe",
+  "version": "0.1.6",
+  "description": "Keymosabe Chrome Extension",
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/jquery-3.1.0.min.js",
+        "lib/jquery.caret.js",
+        "scripts/const.js",
+        "scripts/content.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": [
+      "lib/jquery-3.1.0.min.js",
+      "scripts/const.js",
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "nativeMessaging",
+    "tabs"
+  ],
+  "externally_connectable": {
+    "matches": ["*://127.0.0.1/*"]
+  }
+}

@@ -1,0 +1,67 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+
+"version": "1.0",
+
+"name": "The All Seeing Eye",
+
+"theme": {
+
+"images" : {
+
+"theme_frame" : "images/frame.png",
+
+"theme_toolbar" : "images/toolbar.png",
+
+"theme_ntp_background" : "images/background.png",
+
+"theme_tab_background" : "images/tab.png",
+
+"theme_ntp_attribution" : "images/theme_ntp_attribution.png"
+
+
+},
+
+"colors" : {
+
+"ntp_link": [0,0,0],
+
+"ntp_text": [0,0,0],
+
+"ntp_section_link": [0,0,0],
+
+"ntp_section_text": [10 , 17 , 27],
+
+"ntp_background": [10 , 17 , 27],
+
+"frame": [10 , 17 , 27],
+
+"toolbar": [10 , 17 , 27],
+
+"tab_text": [255, 255, 255],
+
+"tab_background_text": [255 , 255, 255],
+
+"bookmark_text": [255,255,255]
+
+},
+
+"tints" : {
+
+"buttons" : [0.33, 0.5, 0.47]
+
+},
+
+"properties" : {
+
+"ntp_background_alignment" : "center middle ",
+
+"ntp_background_repeat": "no-repeat",
+
+"ntp_logo_alternate" : 0
+
+}
+
+}
+
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Eggy Car",
+
+  "short_name": "Eggy Car",
+
+  "version": "1.0.2",
+  "description": "Play Eggy Car on your browser",
+
+  "homepage_url": "https://appdomain.pw/c/juegos-de-dibujo/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Eggy Car",
+
+      "default_popup": "popup.html"
+  }
+}

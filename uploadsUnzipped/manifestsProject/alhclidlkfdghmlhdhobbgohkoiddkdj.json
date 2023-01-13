@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "iMedia Start",
+  "description": "iMedia Start is fantastic new tab option: -Browse through obtainable media, or simply search in all your favorite search engines.",
+  "version": "1.0.0",
+  "short_name": "iMedia",
+  "icons": {
+    "128": "imgs/icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "browser_action": {
+    "default_icon": "imgs/icon128.png",
+    "default_popup": "about/index.html"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "/js/*"
+  ],
+  "permissions": [
+    "http://*/",
+    "tabs",
+    "storage",
+    "cookies",
+    "topSites",
+    "contextMenus"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "background": {
+    "scripts": [
+      "/js/background.js"
+    ]
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://*.ienjoyapps.com/*"
+    ]
+  },
+  "homepage_url": "http://www.ienjoyapps.com"
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+	"name": "Agar.io Play Hacks Mods",
+	"author": "http://www.iogamesplus.com",
+	"version": "0.2",
+	"manifest_version": 2,
+	"description": "Agar IO the games play at the click of a button!",
+	"browser_action": {
+		"default_popup": "hi.html",
+		"default_icon": "128x128.png"
+	},
+	"icons" :{
+		"16"	:	"16x16.png",
+		"48"	:	"48x48.png",
+		"128"	:	"128x128.png"
+	},
+	"background" : { "scripts" : ["add.js"]
+	}	
+}

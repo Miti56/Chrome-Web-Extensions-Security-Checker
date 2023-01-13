@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SIIIRTools",
+  "description": "This extension provides useful tools to work with the Romanian Education Integrated Informational System (SIIIR)",
+  "version": "0.4",
+  "icons": {"32":"icon.png"},
+  "content_scripts": [
+    {
+      "matches": ["https://www.siiir.edu.ro/siiir/*"],
+      "css": ["/static/css/main.css"],
+      "js": ["/static/js/main.js"]
+    }
+  ]
+}

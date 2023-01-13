@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Dolumar",
+	"version": "1.1",
+	"manifest_version": 2,
+	"homepage_url" : "http://www.dolumar.com/",
+
+	"description": "Create your own powerful kingdom in this vast, colorful, and fully explorable virtual World.",
+	"icons": {
+		"16": "icon.png",
+		"128": "logo128.png"
+	},
+	"app" : {
+		"urls": [
+			"http://www.dolumar.com/"
+		],
+		"launch": {
+			"web_url": "http://www.dolumar.com/"
+		}
+	}
+}

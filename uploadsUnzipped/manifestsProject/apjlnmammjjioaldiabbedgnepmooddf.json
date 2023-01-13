@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_appName__",
+    "manifest_version": 2,
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "5.2.5.0",
+    "app": {
+        "background": {
+            "scripts": [ "main.js" ]
+        }
+    },
+    "icons": {
+        "16": "Counter_16.png",
+        "24": "Counter_24.png",
+        "48": "Counter_48.png",
+        "128": "Counter_128.png"
+    }
+}

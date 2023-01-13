@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+        "scripts": [
+            "ga.js",
+            "background.js",
+            "proxy/Proxy.js",
+            "proxy/ProxyInit_chrome.js",
+            "newtabpromo_bg.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icons/unactive.png",
+        "default_popup": "index.html",
+        "default_title": "__MSG_appName__"
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "default_locale": "ru",
+    "description": "__MSG_appDesc__",
+    "icons": {
+        "128": "icons/active.png"
+    },
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "permissions": [
+        "storage",
+        "proxy",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/*",
+        "https://*/*",
+        "cookies"
+    ],
+    "version": "1.0.0.4"
+}

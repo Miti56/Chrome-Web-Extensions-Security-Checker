@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bitrix - VGG Extension",
+  "version": "1.6",
+  "description": "Chrome extension for VGG",
+  "permissions": ["tabs"],
+  "externally_connectable": {"matches": ["*://*.bitrix24-cdn.com/*"]},
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}

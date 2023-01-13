@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Lockify",
+  "short_name": "Lockify",
+  "version": "0.9.36.563",
+  "description": "Securely send private info to anyone. It's easy as sharing a Lockify Link using your existing email/chat/SMS/etc.",
+
+
+  "app": {
+    "background": {
+        "scripts": ["media/scripts/background.js"]
+    }
+  },
+
+  "permissions": [
+    "https://lockify.com/",
+    "clipboardWrite",
+    "storage",
+    "fileSystem",
+      "fileSystem.write",
+      "webview"
+  ],
+  "optional_permissions": [
+    "videoCapture"
+  ],
+  "icons": { 
+    "16": "icon16.png",
+    "128": "icon128.png"
+  }
+  
+
+}
+

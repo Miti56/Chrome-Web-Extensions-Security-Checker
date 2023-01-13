@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "version": "1.2",
+  "manifest_version": 2,
+  "icons": {
+    "16":  "icon.png",
+    "48":  "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*"],
+    "css": ["jquery-ui.structure-1.12.1.min.css","jquery-ui.theme-1.12.1.min.css"],
+    "js": ["jquery-3.3.1.min.js","jquery-ui-1.12.1.min.js","ChEx.js","content_script.js","content_script_main.js"]
+  }],
+  "default_locale": "ja",
+  "permissions": [
+    "https://mail.google.com/*"
+  ]
+}

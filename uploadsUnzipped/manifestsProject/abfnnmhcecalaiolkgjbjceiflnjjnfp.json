@@ -1,0 +1,12 @@
+{"icons": {"128": "128-img.png"},
+ "description": "__MSG_desc__", 
+"browser_action": {"default_icon": "128-img.png", 
+"default_title": "KonoSuba New Tab Page"},
+ "name": "__MSG_localeAddTitle__", 
+"manifest_version": 2, 
+"chrome_url_overrides": {"newtab": "newtab.html"},
+ "author":"Sammy Winters", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"background": {"scripts": ["back_js.js"]},
+ "version": "1.2.4", 
+"default_locale": "en"}

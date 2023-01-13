@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Принятия решений",
+	"description": "Рационализация принятия решений с помощью решающих матриц Поспелова",
+	"version": "0.1.2",
+	"icons": {
+		"48": "img/icon/48.png",
+		"128": "img/icon/128.png"
+	},
+	"manifest_version": 2,
+	"minimum_chrome_version": "30",
+	"offline_enabled": true,
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"permissions": [
+		"system.display"
+	]
+}

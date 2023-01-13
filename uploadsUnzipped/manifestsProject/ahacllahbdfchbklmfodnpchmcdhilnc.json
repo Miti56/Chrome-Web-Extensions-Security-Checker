@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TAYLOR SWIFT TRUE MAKE UP",
+  "description": "Become Taylor Swift personal stylist and use different a accessory, hairstyle, makeup or top with every look",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "logo.png"
+  },
+  "description": "",
+  "background": {
+    "scripts": [
+      "background.js"
+     ]
+  },
+  "browser_action": {
+    "default_icon": "logo.png"
+  }
+}
+

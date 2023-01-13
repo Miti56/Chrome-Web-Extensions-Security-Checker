@@ -1,0 +1,41 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Crysis 2 Theme",
+   "theme": {
+      "colors": {
+      "frame": [ 255, 255, 255 ],
+      "frame_inactive": [ 0, 0, 0 ],
+      "frame_incognito": [ 255, 255, 255 ],
+      "frame_incognito_inactive": [ 0, 0, 0 ],
+      "toolbar": [ 255, 255, 255 ],
+      "tab_text": [ 255, 255, 255 ],
+      "tab_background_text": [ 0, 0, 0 ],
+      "bookmark_text": [ 255, 255, 255 ],
+      "ntp_background": [ 0, 0, 0 ],
+      "ntp_text": [ 255, 255, 255 ],
+      "ntp_link": [ 255, 255, 255 ],
+      "ntp_link_underline": [ 255, 255, 255 ],
+      "ntp_header": [ 255, 255, 255 ],
+      "ntp_section": [ 0, 0, 0 ],
+      "ntp_section_text": [ 255, 255, 255 ],
+      "ntp_section_link": [ 255, 255, 255],
+      "ntp_section_link_underline": [ 255, 255, 255 ],
+      "control_background": [ 255, 0, 0 ],
+      "button_background": [ 255, 255, 255]
+      },
+      "images": {
+      "theme_frame": "images/frame_normal.png",
+      "theme_frame_inactive": "images/frame_normal_inactive.png",
+      "theme_frame_incognito": "images/frame_incognito.png",
+      "theme_frame_incognito_inactive": "images/frame_incognito_inactive.png",
+      "theme_toolbar": "images/toolbar.png",
+      "theme_tab_background": "images/tab_background.png",
+      "theme_ntp_background": "images/background.png",
+      "theme_ntp_attribution": "images/white.png"
+      },
+      "tints": {
+      "background_tab": [ 0, 0, 0 ]
+      }
+   },
+   "version": "1.2"
+}

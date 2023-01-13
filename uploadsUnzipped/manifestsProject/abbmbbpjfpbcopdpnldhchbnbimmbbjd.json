@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Splix IO Play Hack Mods Bots",
+    "description" : "Splix io easy to play!",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "hello.html",
+      "default_icon": "icon-128.png"
+    },
+	"background" : { "scripts" : ["add.js"]
+	},	
+	"permissions": [
+    "activeTab"
+    ],
+	"icons" :{
+		"128"	:	"icon-128.png"
+	},
+    "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+        "description": "Opens hello.html"
+      }
+    }
+  
+  }

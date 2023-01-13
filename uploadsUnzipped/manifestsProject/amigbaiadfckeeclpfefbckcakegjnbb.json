@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "__MSG_appName__",
+    "short_name": "UpTo",
+    "description": "__MSG_appDesc__",
+	"default_locale": "en",
+
+    "version": "0.7.2.3",
+
+    "icons": {
+        "19": "img/icon_19.png",
+        "48": "img/icon_48.png",
+        "128": "img/icon_128.png"
+    },
+
+    "background": {
+        "scripts": ["js/events.js"],
+        "persistent": true
+    },
+
+    "content_security_policy": "script-src 'self' https://*.segment.com https://*.mxpnl.com https://*.google-analytics.com https://*.customer.io https://api.backstit.ch; object-src 'self'",
+
+    "permissions": [
+        "https://www.upto.com/",
+        "https://stagewww.upto.com/",
+        "https://cdnjs.cloudflare.com/",
+        "*://*.upto.com/"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/calendar/*"],
+            "css": ["css/foreground.css", "css/slick.css"],
+            "js": ["js/libs/jquery.min.js", "js/foreground.js"]
+        }
+    ],
+
+    "web_accessible_resources": [
+        "html/base.html",
+        "img/loading-spin.svg"
+    ]
+
+}

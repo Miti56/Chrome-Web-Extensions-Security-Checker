@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Princess Tattoo Design",
+
+  "short_name": "Princess Tattoo Design",
+
+  "version": "1.0.2",
+  "description": "Play Princess Tattoo Design on your browser",
+
+  "homepage_url": "https://appdomain.pw/c/juegos-de-chicas/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Princess Tattoo Design",
+
+      "default_popup": "popup.html"
+  }
+}

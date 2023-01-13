@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Auto Create Lorikeet Seller Lazada Singapore",
+	"version": "4.2",
+	"description": "Make Lorikeet automatically for seller lazada Singapore Create SEO titles and keywords for product images seo to google",
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"short_name": "Make Lorikeet automatically for seller lazada Singapore Create SEO titles and keywords for product images seo to google",
+
+	
+	"author": "Nguyễn Vũ",
+
+
+	"browser_action": {
+		"default_icon": {
+			"16": "icon.png",
+			"24": "icon.png",
+			"32": "icon.png"
+		},
+		"default_title": "Auto Create Lorikeet Seller Lazada Singapore",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [{
+			"matches": ["*://my-test-11.slatic.net/*", "*://*.sellercenter.lazada.sg/*", "*://sellercenter.lazada.sg/*"],
+			"js": ["/js/jquery.js", "/js/Background.js"]
+		}
+	]
+}

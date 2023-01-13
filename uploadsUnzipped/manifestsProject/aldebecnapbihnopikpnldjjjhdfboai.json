@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "Momoifier",
+ "description": "Programmed and created by David Mora",
+ "icons": {"128": "momoicon.png"},
+ "version": "2.0",
+ "web_accessible_resources": [
+   "momojpgs/*.jpg"
+ ],
+ "content_scripts": [{
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["momo.js"]
+    }]
+
+
+
+}

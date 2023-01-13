@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "tchop Curator",
+  "description": "The tchop browser extension for curators and editors! The easiest, fastest way to capture articles and social posts.",
+  "version": "0.0.3",
+  "browser_action": {
+    "default_icon": "./assets/icon.png",
+    "default_popup": "./src/popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "*://*.tchop.io/"
+  ]
+}

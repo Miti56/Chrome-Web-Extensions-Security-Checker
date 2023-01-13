@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "Why Is Saffron So Expensive?",
+  "short_name": "Why Is Saffron So Expensive?",
+ 	"version": "1.4",
+	"description": "The ancient Greeks and Romans used saffron as perfume, and saffron is mentioned in the Chinese materia medica from the 1550s.",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Why Is Saffron So Expensive?"
+  },
+  "permissions": [ "management", "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

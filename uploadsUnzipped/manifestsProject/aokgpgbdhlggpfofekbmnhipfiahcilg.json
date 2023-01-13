@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "BETNANO",
+  "version" : "1.0",
+  "manifest_version" : 2,
+  "description" : "BetNano Guncel Adres",
+  "browser_action" : {
+    "default_icon" : "128x128.png"
+  },
+  "permissions": ["tabs", "<all_urls>", "activeTab"],
+  "icons" : {
+    "16" : "16x16.png",
+    "48" : "48x48.png",
+    "128" : "128x128.png"
+  },
+  "background" : { "scripts" : ["eklenti.js"] }
+}

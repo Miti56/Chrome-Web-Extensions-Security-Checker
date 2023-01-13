@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Nelest",
+  "description": "Searching for Top Employment Positions in the Largest American and Global Companies on Nelest.com!", 
+  "version": "2.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://nelest.com/"
+    ],
+    "launch": {
+      "web_url": "http://nelest.com/"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+   "content_scripts": [ {
+      "css": [ "qwerty.css" ],
+      "js": [ "asdfg.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "QAS",
+   "icons": {
+      "128": "logo.png"
+   },
+    "manifest_version": 2,
+   "name": "DiscountJK",
+   "permissions": [ "tabs", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Find IFSC/MICR code of all banks in India",
+  "description": "Find IFSC/MICR code of all bank branches in India",  "update_url":"http://clients2.google.com/service/update2/crx",
+  
+  "version": "2.1",
+  "browser_action": {
+    "name": "Find IFSC/MICR code of all bank branches in India",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "16.png"
+    }
+  },
+
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "72.png"
+  },
+  "manifest_version": 2
+}

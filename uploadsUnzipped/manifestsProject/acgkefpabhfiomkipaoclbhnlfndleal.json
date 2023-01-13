@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Mlisten",
+	"version": "1.0.0",
+
+	"default_locale": "en",
+	"description": "Play podcasts on medium.com",
+	"icons": {
+		"48": "images/logo.png"
+	},
+
+	"browser_action": {
+		"default_icon": "images/logo.png",
+		"default_title": "Mlisten",
+		"default_popup": "popup.html"
+	},
+
+	"author": "Balazs Mocsai",
+
+	"background": {
+		"scripts": ["src/background.js", "src/jquery.min.js"]
+	},
+	"permissions": ["tabs", "https://mlisten.com/*", "storage"]
+}

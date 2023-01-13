@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Dynamic QR",
+  "description": "Dynamic QR is an initiative taken up by Program Freaks to provide a service which allows you to create and manage QR Codes.",
+  "version": "1.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png",
+	"141": "icon_141x90.png"
+  },
+  "app": {
+    "urls": [
+    ],
+    "launch": {
+      "web_url": "http://www.pfdqr.com"
+    }
+  }
+}

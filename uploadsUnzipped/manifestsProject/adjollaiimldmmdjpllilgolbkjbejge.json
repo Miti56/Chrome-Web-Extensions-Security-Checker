@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Relatio",
+    "description": "Save Selection to Dashboard’",
+    "version": "1.0",
+    "browser_action": {      
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": [
+            "relat.js",
+            "search.js"
+        ]
+    },
+	"icons": { "16": "rel.png",
+               "48": "rel.png",
+               "128": "rel.png" },
+
+	"permissions": [
+        "storage",
+        "tabs",
+        "<all_urls>"
+
+    ],
+    "sandbox": {
+        "pages": ["relat.js"]
+    },
+    "content_security_policy":"script-src 'self' 'unsafe-inline' https://apis.google.com; object-src 'self'"
+}

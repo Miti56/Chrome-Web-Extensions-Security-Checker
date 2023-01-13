@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "altair",
+    "manifest_version": 2,
+    "version": "1.2.4",
+    "description": "markdown渲染插件",
+    "web_accessible_resources": [
+        "/*"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["file:///*.md"],
+        "js": ["markdownPlugin.js"]
+    }]
+}

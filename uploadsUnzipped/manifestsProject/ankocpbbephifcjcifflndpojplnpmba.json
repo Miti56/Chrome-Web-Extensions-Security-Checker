@@ -1,0 +1,26 @@
+{
+    "background": {
+        "persistent": true,
+        "scripts": ["js/jsencrypt.min.js", "js/proxy.js", "js/jquery.min.js", "js/system.js", "js/background.js"]
+    },
+    "browser_action": {
+        "default_icon": "img/logo.png",
+        "default_popup": "login.html",
+        "default_title": "鱼跃"
+    },
+    "description": "鱼跃是一款海外加速上网浏览器插件，专业为加速上外网而生，10秒装好，一键轻松番羽墙，无需任何麻烦设置，稳定秒开Youtube、Facebook、Twitter,Google等海量国外网站，是广大海外上网爱好者的不二之选！鱼跃，真正的互联网，只需一跃！",
+    "icons": {
+        "128": "img/icons/128.png",
+        "48": "img/icons/48.png",
+        "16": "img/icons/16.png"
+    },
+    "manifest_version": 2,
+    "name": "鱼跃",
+    "options_page": "popup.html",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlVPwLAqKkF6BHRk3k11l6bpAGxOg4t3i61CpjhsEI21JFs00NPNTFQz5lIw7ODn3D32IAUsvf3S5IKnXULYRYkFOR0HzNW/kUn6jm2HNtBTL8Bp/X0uJBYcQAzb/8n/G2RIsa189ZfPWvy7PTVaAPw88FU5IEhxUBW49vC2qrLk6a4wLAJWI5dnvi2rcgeOGoplJuSAeSHRQjYvTuHPX93NYkv+xmEEmJvjrVAZdTnnnOOSvBGXA2y8JLTXf6gSLgoNPtzpOJjfkcvrtZ+ol0KeUHi+hCuJwWN05ttMeTUl1mWjoUvSjL6jrsuyw5ldR9QsUEhz2P2x/sgG1s91CSwIDAQAB",
+    "permissions": ["storage", "management", "proxy", "idle", "tabs", "notifications", "alarms", "webRequest", "webRequestBlocking", "http://*/", "https://*/", "activeTab", "http://ss.com/", "http://yuyuecj.cc/", "http://wodeyy.cc/"],
+    "short_name": "鱼跃",
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "1.1.6",
+    "web_accessible_resources": ["img/logo.png"]
+}

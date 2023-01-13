@@ -1,0 +1,20 @@
+
+  {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+      "name": "sem.Absence",
+      "description": "",
+      "version": "0.0.0.1",
+      "manifest_version": 2,
+      "icons": {
+          "128": "icon128.png"
+      },
+      "app": {
+          "urls": [
+              "https://apps.semyou.com/semAbsence"
+          ],
+          "launch": {
+              "web_url": "https://apps.semyou.com/semAbsence"
+          }
+      }
+  }

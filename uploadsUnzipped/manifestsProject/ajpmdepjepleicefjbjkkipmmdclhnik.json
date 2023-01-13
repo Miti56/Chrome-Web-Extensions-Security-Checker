@@ -1,0 +1,13 @@
+{"version": "2.3.11", 
+"description": "__MSG_extDesc__", 
+"browser_action": {"default_icon": "icons/128.png", 
+"default_title": "Dragon Ball Super DBZ Wallpapers Themes HD"},
+ "default_locale": "en", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"chrome_url_overrides": {"newtab": "index.html"},
+ "background": {"scripts": ["background.js"]},
+ "manifest_version": 2, 
+"name": "__MSG_extName__", 
+"icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "offline_enabled": true}

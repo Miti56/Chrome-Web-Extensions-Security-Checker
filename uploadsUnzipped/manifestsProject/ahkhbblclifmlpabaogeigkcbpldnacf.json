@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Feed Notifier",
+  "description": "Get live feed notifications from any RSS feeds.",
+  "short_name": "Feed Notifier",
+  "version": "0.0.3",
+  "icons": {
+            "16": "feed_notifier/ico/icon16.png",
+            "48": "feed_notifier/ico/icon48.png",
+            "128": "feed_notifier/ico/icon128.png"
+  },
+  "permissions": [
+    "alarms",
+    "background",
+    "notifications",
+    "storage",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_icon": "feed_notifier/ico/icon128.png",
+    "default_popup": "feed_notifier/configure_feeder.html"
+  },
+  "author":"Lalu George, lalugeorge88@gmail.com",
+  "background": {
+    "scripts": [
+      "feed_notifier/kernel/kernel.js",
+      "feed_notifier/kernel/notifications/all_notifs.js",
+      "feed_notifier/kernel/feed/feed_controller.js",
+      "feed_notifier/kernel/feed/feed_reader.js"
+    ],
+    "persistent": false
+  }
+}

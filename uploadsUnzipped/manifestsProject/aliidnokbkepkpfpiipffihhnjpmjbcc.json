@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CloudServices Checker",
+  "short_name": "CloudServices Checker",
+  "description": "Find out if your favorite cloud service is down asap!",
+  "version": "0.0.6",
+  "browser_action": {
+    "default_title": "Checking"
+  },
+  "icons":{
+        "16":"csc_16.png",
+        "32":"csc_32.png",
+        "64":"csc_64.png",
+        "128":"csc_128.png",
+        "256":"csc_256.png"
+    },
+   "permissions": [
+    "storage",
+    "background",
+	  "notifications"
+  ],
+   "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "version": "1.0.7",
+  "name": "Aurora Minima: Bookmark Manager & Viewer",
+  "short_name": "Aurora Minima",
+  "description": "Native looking bookmark manager for Google Chrome has arrived. Protected bookmarks, Dropbox backup, synced tabs and more...",
+  "browser_action": {
+    "default_title": "Aurora Minima",
+    "default_popup": "aurora.html"
+  },
+  "icons": {
+    "16": "icons/app/icon-16.png",
+    "32": "icons/app/icon-32.png",
+    "48": "icons/app/icon-48.png",
+    "128": "icons/app/icon-store-128.png",
+    "512": "icons/app/icon-512.png"
+  },
+  "background": {
+    "scripts": ["scripts/vendors.js", "scripts/background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["https://auroralab.co/token*"],
+    "js": ["scripts/content/token.js"]
+  },{
+    "matches": ["https://www.dropbox.com/oauth2/authorize*"],
+    "js": ["scripts/content/dropbox.js"]
+  }],
+  "content_security_policy": "script-src 'self' https://*.google-analytics.com 'unsafe-eval'; object-src 'self'",
+  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking", "background", "bookmarks", "storage", "unlimitedStorage", "sessions", "tabs", "activeTab", "chrome://favicon/*"]
+}

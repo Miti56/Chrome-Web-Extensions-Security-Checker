@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Cooking And Baking Games",
+ "version": "1.0",
+"manifest_version": 2,
+ "description": "Cooking And Baking Games",
+  "app": {
+    "urls": [
+      "http://www.prettynicegames.com/category/11"
+    ],
+    "launch": {
+      "web_url": "http://www.prettynicegames.com/category/11"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

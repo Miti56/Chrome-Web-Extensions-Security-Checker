@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "fallout-76-js/fallout-76.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon48.png",
+      "default_popup": "batch.html"
+   },
+   "description": "__MSG_description__",
+   "default_locale": "en",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.12.4"
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Mountain Bike Uruguay",
+"description": "mtb.uy : Sitio uruguayo dedicado a las diferentes disciplinas de Mountain Bike",
+"version": "3.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://mtb.uy/"
+],
+"launch": {
+"web_url": "http://mtb.uy"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

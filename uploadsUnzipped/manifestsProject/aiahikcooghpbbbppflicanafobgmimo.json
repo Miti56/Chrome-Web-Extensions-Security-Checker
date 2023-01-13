@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Wipeout Pokie",
+    "short_name" : "Wipeout Pokie",
+    "description" : "Free Wipeoout pokie game from Slotbase.",
+    "version" : "0.0.0.2",
+    "manifest_version" : 2,
+    "icons" : {
+        "128" : "wipeoutslot-icon.png"
+    },
+    "app" : {
+        "urls" : [
+        "http://www.slotsbase.com/free-pokies/wipe-out.html"
+        ],
+    "launch" : {
+        "web_url" : "http://www.slotsbase.com/free-pokies/wipe-out.html"
+    }
+    }
+
+}

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://iheartquotes.com; object-src 'self'",
+   "description": "Custom New Tab Page with Quick Apps",
+   "icons": {
+      "16": "icon_256px.png",
+      "48": "icon_256px.png",
+      "128": "icon_256px.png"
+   },
+   "manifest_version": 2,
+   "name": "SimpleTab",
+   "permissions": ["storage", "unlimitedStorage", "webRequest", "webRequestBlocking", "<all_urls>", "tabs", "activeTab", "chrome://favicon/", "identity", "identity.email", "topSites"],
+   "version": "0.1",
+   "browser_action": {
+      "default_icon": {
+         "19": "icon_19px.png",
+         "38": "icon_38px.png"
+      },
+      "default_title": "New Tab"
+   },
+   "background": {
+      "scripts": ["resources/js/background.js"],
+      "persistent": true
+   }
+}

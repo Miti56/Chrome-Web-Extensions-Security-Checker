@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "1.2",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+     "http://www.youdagames.com/en/online-games/youda-sushi-chef//?utm_source=Chromestore&utm_medium=Chromestore&utm_content=SushiChef1&utm_campaign=DistrChromeStore"
+    ],
+    "launch": {
+      "web_url": "http://www.youdagames.com/en/online-games/youda-sushi-chef/?utm_source=Chromestore&utm_medium=Chromestore&utm_content=SushiChef1&utm_campaign=DistrChromeStore"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}
+
+
+

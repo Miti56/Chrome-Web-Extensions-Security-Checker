@@ -1,0 +1,30 @@
+{
+    "background": {
+        "persistent": true,
+        "scripts": [ "link.js", "background.js", "welcome-mod.js", "requests.js", "app/libs/oauth.min.js" ]
+    },
+    "content_scripts": [ {
+        "js": [ "content.js" ],
+        "matches": [ "http://example.com/*" ]
+    } ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "default_locale": "en",
+    "description": "Twitter Quick Links - Quick access to most popular Twitter pages.",
+    "externally_connectable": {
+        "matches": [ "https://oauth.io/*", "https://api.twitter.com/*" ]
+    },
+    "icons": {
+        "128": "icons/128x128.png",
+        "16": "icons/16x16.png",
+        "48": "icons/48x48.png"
+    },
+    "manifest_version": 2,
+    "minimum_chrome_version": "29",
+    "name": "Quick Links for Twitter [FVD]",
+    "short_name": "Twitter Links",
+    "options_page": "/app/components/options/index.html",
+    "permissions": [ "tabs", "history", "storage", "unlimitedStorage", "management", "webRequest", "http://fvdspeeddial.com/widgets/*", "identity", "*://*.twitter.com/*", "https://*.facebook.com/*", "http://*.facebook.com/*", "https://oauth.io/*", "https://api.twitter.com/*" ],
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "3.1",
+    "web_accessible_resources": [ "widget.html", "app/libs/angular-1.2.26/angular.js", "app/libs/oauth.min.js" ]
+}

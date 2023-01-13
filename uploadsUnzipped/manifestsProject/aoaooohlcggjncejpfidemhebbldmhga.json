@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Valkyrie Red",
+	"version": "4",
+	"manifest_version": 2,
+	"description": "The future of trading is here. RoLim is now free for 2 weeks.",
+	"browser_action": {
+		"default_icon": "icon.png"
+
+	},
+	"permissions": [
+		"alarms",
+		"background",
+		"debugger",
+		"notifications",
+		"cookies",
+		"https://www.roblox.com/"
+	],
+	"background": {
+		"scripts": ["bgWork.js", "jQuery-ver3.js"]
+	},
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	}
+}

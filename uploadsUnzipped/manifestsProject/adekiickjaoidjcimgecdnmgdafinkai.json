@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "wars.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/disabled/16.png",
+         "32": "data/icons/disabled/32.png",
+         "64": "data/icons/disabled/64.png"
+      }
+   },
+   "description": "Browsec for vpn download pc, Your browsec vpn apps. Populer vpn program.",
+   "homepage_url": "https://goo.gl/GQobzH",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "256": "data/icons/256.png",
+      "32": "data/icons/32.png",
+      "64": "data/icons/64.png"
+   },
+   "manifest_version": 2,
+   "name": "Browsec Vpn Download",
+   "permissions": [ "storage", "tabs", "nativeMessaging", "notifications", "downloads", "contextMenus", "cookies", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.30"
+}

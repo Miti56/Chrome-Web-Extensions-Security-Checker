@@ -1,0 +1,28 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "bg.js" ]
+      }
+   },
+   "default_locale": "en",
+   "description": "Capture and annotate screenshots and local pictures",
+   "icons": {
+      "128": "images/icons/128x128.png",
+      "16": "images/icons/16x16.png",
+      "32": "images/icons/32x32.png",
+      "48": "images/icons/48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk8cp2L1nujuEDsy4Mxt4fXwLhg1TXtkvxVMDnRHIrtAhHbdWuBfPPXHLsM152Zlbqb2PDuhvYV7G39vtWjMHkJG6Ld6Eq//oU9a3vLecX6ywKTFXbZMs/5DmolCeFaEvzGr3LESDgcgZMH1i1O39up6JXzmWgTYWKT5ag3Ia+I9kFziGQAKJ1Fa07CxhitHFOXSKchM8+Q41SL1BGpzLzja4YClBS2E8bAJEGiWOA4N6rB/CIpt4KTMmuawXha/HyndRMBZ1l2DUgvCpMsjOY1mzuO/v38VyneKMkdqne7jieGkv7nlP3v9WpdbMGc01bZBcWBgZ5Z18ryqgAGVHrQIDAQAB",
+   "manifest_version": 2,
+   "name": "Nimbus Screenshot App",
+   "oauth2": {
+      "client_id": "237222674181-q2hvqfkl8ni1232v35nhnq7acbnip7jk.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/drive.readonly.metadata", "https://www.googleapis.com/auth/drive.file" ]
+   },
+   "offline_enabled": true,
+   "permissions": [ "desktopCapture", "clipboardWrite", "clipboardRead", "storage", "unlimitedStorage", "contextMenus", "notifications", "\u003Call_urls>", "identity", {
+      "fileSystem": [ "write", "directory" ]
+   } ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.4"
+}

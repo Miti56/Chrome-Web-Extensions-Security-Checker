@@ -1,0 +1,81 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "2.0.9",
+  "manifest_version": 2,
+  "name": "Humble Till Receipt Printer Support",
+  "description": "Provides support for Epson USB and LAN/WIFI receipt printers.",
+  "icons": {
+    "128": "logo.png"
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "webview",
+    "usb",
+    "browser",
+    "storage",
+    "system.network",
+    "app.window.alwaysOnTop",
+    {
+      "usbDevices": [
+        {
+          "vendorId": 1208,
+          "productId": 3587
+        },
+        {
+          "vendorId": 1208,
+          "productId": 3605
+        },
+        {
+          "vendorId": 1208,
+          "productId": 514
+        },
+        {
+          "vendorId": 1305,
+          "productId": 3
+        },
+        {
+          "vendorId": 8137,
+          "productId": 8214
+        },
+        {
+          "vendorId": 483,
+          "productId": 5743
+        }
+      ]
+    }
+  ],
+  "kiosk_enabled": true,
+  "app": {
+    "background": {
+      "scripts": [
+        "background.js"
+      ]
+    }
+  },
+  "sockets": {
+    "tcp": {
+      "connect": "*:9100"
+    },
+    "udp": {
+      "send": [
+        "*"
+      ],
+      "bind": [
+        "*"
+      ],
+      "multicastMembership": [
+        ""
+      ]
+    }
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://localhost/*",
+      "https://*.dev/",
+      "https://*.staging.humble.co.za/",
+      "https://*.qa.humble.co.za/",
+      "https://*.humbletill.com/"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "background": {"scripts": ["background.js"]},
+ "browser_action": {
+ "default_icon": "icon-128.png",
+ "default_title": "ACS ChemWorx Importer (Unofficial)"
+ },
+ "name": "ACS ChemWorx Importer (Unofficial)",
+ "description": "ACS ChemWorx Importer Unofficial Chrome Extension",
+ "icons": {
+     "16": "icon-16.png",
+	 "22": "icon-22.png",
+	 "32": "icon-32.png",
+     "48": "icon-48.png",
+	 "64": "icon-64.png",
+     "128": "icon-128.png" },
+ "permissions": [
+     "tabs",
+     "http://*/*",
+     "https://*/*"
+ ],
+ "version": "1.0",
+ "manifest_version": 2
+}

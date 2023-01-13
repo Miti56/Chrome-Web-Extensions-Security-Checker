@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FacebookAdsRemover",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "description": "Blocks ads on a Facebook site.",
+  "background": {
+    "scripts": [
+      "bg.js"
+     ]
+  },
+  "content_scripts": [ 
+    {
+      "js": ["jquery.js", "waitForKeyElements.js", "content.js"],
+      "matches":["*://www.facebook.com/", "*://www.facebook.com/*", "*://www.fb.com/", "*://www.fb.com/*"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "<all_urls>"
+  ]
+}

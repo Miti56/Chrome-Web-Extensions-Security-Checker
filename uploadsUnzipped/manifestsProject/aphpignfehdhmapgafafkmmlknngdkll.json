@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "MVF Solutions partage d'écran EasyDrop",
+    "author": "MVF Solutions",
+    "version" : "1.0",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Extension pro EasyDrop sécurisée pour VIsio conférence",
+    "homepage_url": "https://www.visioconference.pro/",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content.js" ],
+       "all_frames": true,
+       "run_at": "document_start",
+       "matches": ["*://www.visioconference.org*","*://visioconference.test/*","*://visioconference.rtc/*"]
+    }],
+    "icons" : {
+        "64" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

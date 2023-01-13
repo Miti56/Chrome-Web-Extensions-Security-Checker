@@ -1,0 +1,38 @@
+{
+   "description": "Suicide Squad Theme for Google Chrome and FVD Speed Dial with 3D new tab page [FVD]",
+   "manifest_version": 2,
+   "name": "Suicide Squad [FVD]",
+   "short_name": "Suicide Squad [FVD]",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "button_background": [ 150, 24, 24 ],
+         "frame": [ 76, 94, 109 ],
+         "ntp_background": [ 0, 0, 0 ],
+         "ntp_header": [ 40, 40, 40 ],
+         "ntp_link": [ 255, 255, 255 ],
+         "ntp_section": [ 0, 0, 0, 0.5 ],
+         "ntp_section_link": [ 255, 255, 255 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 255, 255, 255, 0.9 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 57, 66, 95 ]
+      },
+      "images": {
+         "theme_frame": "img/frame.png",
+         "theme_ntp_background": "img/ntp_background.jpg",
+         "theme_toolbar": "img/toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "top",
+         "ntp_background_repeat": "no-repeat"
+      },
+	  "tints": {
+         "background_tab": [ 0, 0, 0.6 ],
+         "buttons": [ 1, 1, 1 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

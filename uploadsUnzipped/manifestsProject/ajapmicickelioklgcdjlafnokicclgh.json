@@ -1,0 +1,35 @@
+{
+   "author": "dinhmv",
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "images/icon.png",
+         "24": "images/icon.png",
+         "32": "images/icon.png"
+      },
+      "default_popup": "options.html",
+      "default_title": "Shopee Tools"
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Công cụ hỗ trợ đắc lực cho nhà bán hàng trên shopee.vn",
+   "icons": {
+      "128": "images/icon.png",
+      "16": "images/icon.png",
+      "48": "images/icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Shopee Tools 1.0",
+   "options_ui": {
+      "open_in_tab": false,
+      "page": "options.html"
+   },
+   "permissions": [ "storage", "tabs", "https://*/", "http://*/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2.4",
+   "web_accessible_resources": [ "js/shopeetools-script.js" ]
+}

@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Windows Store Screenshot Maximizer",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "description": "Maximize the apps and games screenshots for both desktop and PC in the windows store website",
+  "homepage_url": "http://umair.me",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Maximize screenshots"
+  },
+  "permissions": [
+    "http://www.microsoft.com/*",
+    "https://www.microsoft.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.microsoft.com/*",
+		"https://www.microsoft.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+		"src/inject/inject.js"
+      ]
+    }
+  ]
+}

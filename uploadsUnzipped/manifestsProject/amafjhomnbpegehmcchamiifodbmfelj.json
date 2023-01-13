@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name":"Convert Images or Videos to Animated GIF",
+	"version":"1.1",
+	"description": "Convert images or videos to GIF animations in a snap. Free online GIF maker. Upload images/videos from your computer or other URL.",
+		
+	 "icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+ 	 },	
+	
+	"background": {
+	        "scripts": ["background.js"]	
+        },
+
+	"browser_action": {
+    		"default_icon": "icon48.png", 
+   		"default_title": "Convert Images or Videos to Animated GIF"
+  	},
+
+	"permissions":["tabs"]
+}

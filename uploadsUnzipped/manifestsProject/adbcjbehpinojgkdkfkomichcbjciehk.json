@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "E&V Jira Comment Security Level",
+	"version": "0.1.1",
+	"description": "Saetter automatisk security level paa kommentarer til: Restricted to Consultants",
+		"content_scripts": [
+			{
+			  "matches": ["*://jira.elbek-vejrup.dk/*"],
+        "js": [ "jquery-1.7.2.min.js", "jiraComment.js" ]
+			}
+		],
+	"permissions": [
+		"tabs", "*://jira.elbek-vejrup.dk/*"
+	]
+}

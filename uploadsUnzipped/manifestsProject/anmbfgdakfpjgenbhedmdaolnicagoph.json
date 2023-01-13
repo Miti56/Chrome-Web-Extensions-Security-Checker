@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "version": "0.1.11",
+    "name": "Checklist WordPress",
+    "description": "O segredo para entregar seu WordPress com qualidade é o processo!",
+    "permissions": ["declarativeContent", "storage"],
+    "author": "James Moro",
+    "browser_action": {
+        "default_title": "Checklist WP",
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "128": "icons/128x128.png",
+        "48": "icons/48x48.png",
+        "16":"icons/16x16.png"
+    }
+}

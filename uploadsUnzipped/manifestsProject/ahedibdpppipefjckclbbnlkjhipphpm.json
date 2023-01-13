@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Pornhub Unblocker",
+  "description": "Решает проблему как использовать pornhub без авторизации через ВК",
+  "version": "1.2",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Unblock",
+      "default_icon": "icon_active.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+   {
+      "matches":    ["https://www.pornhub.com/*", "https://rt.pornhub.com/*"],
+      "css":        ["fix.css"]
+   }
+  ]
+}
+
+

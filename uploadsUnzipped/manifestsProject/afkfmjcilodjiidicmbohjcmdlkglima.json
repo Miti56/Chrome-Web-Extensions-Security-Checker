@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SocialProtect",
+  "version": "1.1",
+"manifest_version": 2,
+  "description": "Protect all your personal and social data around the web",
+   
+       "icons": {
+      "128": "128logo.png",
+	  "48": "128logo.png"
+	  },
+	 "background": {
+    "page": "background.html"
+  },
+"default_locale": "en",
+	     
+	
+   "options_page": "options.html",
+"minimum_chrome_version" : "4.0",
+  "content_scripts": [
+    {
+      "matches": ["http://*.facebook.com/*","https://*.facebook.com/*"],
+      "js": ["safe.js","scan.js","sha1.js","jquery/hopscotch-0.1.2.min.js"],
+	  "run_at" :"document_start"
+    },
+  {
+    "matches": ["*://*.twitter.com/*"],
+    
+    "js": ["twitter.js","scan.js","sha1.js"],
+	"run_at" :"document_start"
+  }
+  ],
+  "permissions": [
+  "tabs","management","http://*/*", "https://*/*", "webRequest", "webRequestBlocking"
+   
+  
+],
+"content_security_policy": "script-src 'self' https://graph.facebook.com https://connect.facebook.net https://s-static.ak.facebook.com/ https://ssl.google-analytics.com/; object-src 'self'",
+
+"web_accessible_resources": [
+"styler.css",
+"icon/ok.png",
+"icon/danger.png",
+"icon/blocked.png",
+"icon/load.gif",
+"128logo.png",
+"icon/protection.png",
+"block.html",
+"welcome_page/intro.js",
+"welcome_page/introjs.css"
+,"jquery/hopscotch-0.1.2.min.css","img/sprite-green-0.3.png"
+]
+
+
+}

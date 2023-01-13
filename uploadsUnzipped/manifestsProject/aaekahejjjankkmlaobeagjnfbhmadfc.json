@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "OfflineTwitchers",
+    "description": "twitch.tv Chrome Extensions - Shows offline channels on the following/channels page",
+    "version": "1.0",
+    "icons": { "16": "images/Icon16.png",
+               "48": "images/Icon48.png",
+               "128":"images/Icon128.png" },
+    "background": {
+        "persistent":true,
+        "page":"bg.html"
+    },
+    "content_scripts": [{
+        "matches": ["*://*.twitch.tv/*"],
+            "js": ["contentscript.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "*://*.twitch.tv/directory/*"
+    ],
+    "web_accessible_resources": ["images/*.png"]
+}

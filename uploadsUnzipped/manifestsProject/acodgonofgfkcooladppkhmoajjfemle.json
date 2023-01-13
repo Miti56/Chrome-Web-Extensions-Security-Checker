@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://gamesogood.com/puzzles/99"
+      },
+      "urls": [ "http://gamesogood.com/puzzles/99" ]
+   },
+   "description": "Machinarium is the award-winning independent adventure game developed by the makers of Samorost series and Botanicula.",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuYF0SXt+J+IxuCp6E01WwcbrNgB9il2sFZRFjY4214yuXYAbcfeW5SMoJA97Nf8tiJY/e+3SAzTygLw2tKcIWNnID9vrLZEHOAWDaeDjGr7z8wsJnw/wEnK+uuDdzNDFTMq5o5biSLs11yYjr70/jQA67Az3RqSTwkg+93BegK5n38kpkd9lMS4tZxzLBLQ6IzVij8nj0Fmkj+EdqTZiO1Bchbzijd1Lcmkt0mq2L8hV7nFZPg5TWZZHSkc3JvSUqkZvPYwXI/vLTPvWOQP4D2n7gxFV22EOwvix9IFDK6BQSAhd3w5H1khlkq0b4mfUwhiIJKDdGggzmC9i7k9+iQIDAQAB",
+   "manifest_version": 2,
+   "name": "Machinarium online (Full Version)",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

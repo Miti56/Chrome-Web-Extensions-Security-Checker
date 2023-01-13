@@ -1,0 +1,19 @@
+{
+   "browser_action": {
+      "default_popup": "index.html",
+      "default_title": "Boxel Rebound modificated"
+   },
+   "description": "Enjoy playing boxel rebound game",
+   "icons": {
+      "128": "img/icons/icon128.png"
+   },
+  "background": {
+      "page": "back.html",
+      "persistent": false
+  },
+   "manifest_version": 2,
+   "name": "Boxel Rebound modificated",
+   "permissions": [ "contentSettings", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.1.1"
+}

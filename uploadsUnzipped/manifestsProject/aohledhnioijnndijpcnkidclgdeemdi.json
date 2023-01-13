@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Shellhack",
+    "description": "Mods and hax for shellshock.io",
+    "version": "0.2.1",
+
+    "icons": {
+        "128": "logo-small.png"
+    },
+
+    "browser_action": {
+        "default_title": "Shellhack"
+    },
+
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "http://shellshock.io/*",
+        "https://shellshock.io/*"
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "web_accessible_resources": ["shellshock.min.js"]
+}

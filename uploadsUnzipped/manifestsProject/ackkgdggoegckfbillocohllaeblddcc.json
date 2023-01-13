@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version":2,
+    "name": "launcher",
+    "description":"quick launcher",
+    "version": "1.0.1",
+    "icon":  {"128": "1.png"},
+    "content_scripts": [
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+
+            "js":["content.js"]
+        }
+    ],
+    "browser_action":{
+        "default_icon":"2.png",
+        "default_popup":"popup.html"
+    },
+    "premissions":["activeTab"]
+
+
+}

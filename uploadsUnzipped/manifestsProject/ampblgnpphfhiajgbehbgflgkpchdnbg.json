@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Phone Number Formatter",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Format any unformatted phone number on the screen inline.",
+  "icons": { "128": "img/icon.png" },
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "css": [ "frame.css" ],
+    "js": [ "jquery-3.1.1.min.js", "lookup.js" ],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "permissions": [
+    "tabs",
+    "clipboardWrite"
+  ]
+}

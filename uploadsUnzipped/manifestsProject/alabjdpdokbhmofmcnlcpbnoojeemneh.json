@@ -1,0 +1,15 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "PULSRADIO_ico.png",
+      "default_popup": "popup.html",
+      "default_title": "PulsRadio.com"
+   },
+   "manifest_version": 2,
+   "name": "PulsRadio.com",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "background" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

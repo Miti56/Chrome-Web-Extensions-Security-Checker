@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "new Auction",
+    "description": "Добавляет некий функционал для более комфортного использования аукциона",
+    "version": "0.5.2",
+    "browser_action": {
+        "default_popup":"popup.html"
+    },
+
+    "content_scripts": [
+    {
+      "matches" : ["https://newauction.com.ua/offer/*", "https://newauction.com.ua/cabinet/listing/offer?flt_prp_offerstate=0&flt_prp_watchersids*"],
+      "js": ["js/contentscript.js", "js/favorite.js"]
+    }
+  ],
+
+  "icons": {
+    "16":"img/logo.png",
+    "48":"img/logo.png",
+    "128":"img/logo.png"
+  },
+  "permissions":["tabs", "storage"]
+}

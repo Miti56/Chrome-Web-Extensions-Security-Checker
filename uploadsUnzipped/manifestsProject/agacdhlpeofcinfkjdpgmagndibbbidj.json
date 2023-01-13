@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "Focusing On Wildlife",
+  "short_name": "Focusing On Wildlife",
+ 	"version": "1.7",
+	"description": "Celebrating biodiversity with leading articles from our global team of wildlife authors and photographers",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Focusing On Wildlife"
+  },
+  "permissions": [ "management", "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

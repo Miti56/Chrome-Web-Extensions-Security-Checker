@@ -1,0 +1,11 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",  
+  "name": "Planet Get Fit Ap",
+  "version": "1.7.1",
+  "manifest_version": 2,
+  "description": "This ap is designed to help people exercise with their family or friends while online.",
+  "icons": { "16": "aplogo16x16.png",
+  			 "48": "aplogo48x48.png",
+		    "128": "aplogo.png" }
+  
+}

@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Deflector: Scam & Phishing Protector",
+    "description": "Reflector Demo Extension",
+    "version": "0.47",
+    "version_name": "0.46",
+    "permissions": [
+        "identity",
+        "geolocation",
+        "identity.email",
+        "storage",
+        "management",
+        "alarms",
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ],
+    "browser_action": {
+        "default_icon": {
+          "16": "shield16.png",
+          "32": "shield32.png",
+          "64": "shield64.png",
+          "128": "shield128.png"
+        },
+        "default_title": "Deflector Protection"
+        
+      },
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "reflector_background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "reflector_contentscript.js"
+            ]
+        }
+    ]
+}

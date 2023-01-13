@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "applications": {
+    "gecko": {
+      "id": "datascrapper@rakot.ru"
+    }
+  },
+  "name": "DataScrapper",
+  "version": "0.0.5",
+  "manifest_version": 2,
+  "description": "Extension for FF and Chrome to extract data from web pages to csv.",
+  "homepage_url": "https://github.com/rakot/DataScrapper",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "DataScrapper"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "tabs",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "js/vendor/jquery.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

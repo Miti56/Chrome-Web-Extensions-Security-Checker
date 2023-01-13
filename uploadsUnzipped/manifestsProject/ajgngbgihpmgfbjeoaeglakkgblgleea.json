@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "东南大学校园网自动登陆",
+  "description": "SEU auto login",
+  "version": "3.1",
+  "icons":{"16":"icon_disable.png"},
+  "content_scripts":[
+	{
+		"matches":["https://w.seu.edu.cn/*"],
+		"js":["jquery-1.7.1.min.js"],
+		"all_frames":true
+	}
+  ],
+  "permissions": [
+    "activeTab",
+	"storage",
+	"nativeMessaging"
+  ],
+  "background": {
+    "page": "background.html",
+    
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon":"icon_disable.png",
+    "default_title": "SEU Login"
+  },
+  "manifest_version": 2
+}

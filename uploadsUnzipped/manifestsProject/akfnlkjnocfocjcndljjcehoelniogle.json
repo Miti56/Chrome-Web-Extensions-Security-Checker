@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Habit Tracker",
+  "version": "3.1",
+  "description": "This is a simple christian habit tracker for your chrome browser.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "browser_action": {
+    "default_popup": "structure.html",
+    "default_icon": {
+      "128": "logo.png"
+    }
+  },
+  "icons": {
+    "128": "logo.png"
+  },
+  "manifest_version": 2
+}

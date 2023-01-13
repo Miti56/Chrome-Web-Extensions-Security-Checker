@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Create Cookie",
+  "version" : "2",
+  "description" : "This is demonstration of Cookie API",
+  "permissions": [ "cookies","management","<all_urls>","webRequest","webRequestBlocking","tabs","proxy","storage"],
+
+  "content_scripts": [
+   {
+     "matches": [
+       "http://*/*",
+       "https://*/*"
+     ],
+     "js": [
+       "content.js"
+       ],
+    "run_at": "document_end"
+   }
+ ],
+  "browser_action": {
+    "default_popup":"popup.html"
+  },
+  "background": {
+    "scripts":["popup.js"]
+  },
+
+  "manifest_version": 2
+}

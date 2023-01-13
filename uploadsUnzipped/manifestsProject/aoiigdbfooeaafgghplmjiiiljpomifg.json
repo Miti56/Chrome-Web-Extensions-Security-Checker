@@ -1,0 +1,18 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version" : 2,
+  "name": "Реальный город",
+  "version": "0.1",
+  "icons": {
+    "24": "128.png",
+    "128": "128.png"
+  },
+  "permissions": [
+    "unlimited_storage",
+    "notifications"
+  ],
+"description": "Chromius Ping Pongus (by Gizmo I.D.V.)",
+  "launch": {
+    "local_path": "index.html"
+  }
+}

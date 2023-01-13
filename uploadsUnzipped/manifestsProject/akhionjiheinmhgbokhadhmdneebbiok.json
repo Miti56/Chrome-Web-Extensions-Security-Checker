@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Stallions Spirit",
+
+  "short_name": "Stallions Spirit",
+
+  "version": "1.0.2",
+  "description": "Play Stallions Spirit now",
+
+  "homepage_url": "http://sepomex.xyz/c/fight-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Stallions Spirit",
+
+      "default_popup": "popup.html"
+  }
+}

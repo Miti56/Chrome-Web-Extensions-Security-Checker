@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TD Antibrigade",
+  "manifest_version": 2,
+  "version": "1",
+  "description": "Fight back against ShariaBlue",
+  "browser_action": {
+    "name": "UPVOTE PEDES",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery-3.1.1.slim.min.js", "background.js" ],
+    "matches": [ "http://www.reddit.com/r/The_Donald/*", "https://www.reddit.com/r/The_Donald/*"]
+  }]
+}

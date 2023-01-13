@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Euro-Casino.ru - Колесо Удачи",
+  "version": "1.2",
+  "description": "Расширение для отслеживания Колеса Удачи на Euro-Casino.ru",
+  "options_page": "options.html",
+  "manifest_version": 2,
+  "icons": {
+    "48": "images/icon.png",
+    "128": "images/128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications",
+    "cookies",
+    "http://www.euro-casino.ru/*"
+  ],
+  "web_accessible_resources": [
+    "images/icon.png",
+    "images/128.png"
+  ],
+  "browser_action": {
+    "default_title": "Колесо Удачи (Euro-Casino.ru)",
+    "default_icon": "images/black.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["jquery.js", "background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.euro-casino.ru/igri/1030-koleso-fortuny.html"],
+      "js": ["jquery.js", "contentscript.js"]
+    }
+  ]
+}

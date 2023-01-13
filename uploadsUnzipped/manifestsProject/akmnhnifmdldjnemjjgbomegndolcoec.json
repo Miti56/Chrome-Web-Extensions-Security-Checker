@@ -1,0 +1,19 @@
+{
+   "content_scripts": [ {
+      "js": [ "js/montafeed.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Veja os trailers das últimas novidades online",
+   "icons": {
+      "128": "128x128.png"
+   },
+   "manifest_version": 2,
+   "name": "Quick MM Filmes ",
+   "options_page": "html/options.html",
+   "permissions": [ "http://*/*", "https://*/*", "tabs", "\u003Call_urls>", "storage" ],
+   "short_name": "Movie News",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3",
+   "web_accessible_resources": [ "html/*", "http://www.waycash.net/*", "js/*" ]
+}

@@ -1,0 +1,89 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name":"Ultron - Age of Ultron",
+   "version":"1.0",
+   "manifest_version":2,
+   "description":"Inspired from Marvel Avengers - Age of Ultron",
+   "theme":{
+      "images":{
+         "theme_ntp_background":"images/background.png",
+         "theme_ntp_attribution":"images/logo.png",
+         "theme_frame":"images/theme_frame.png",
+         "theme_toolbar":"images/theme_toolbar.png",
+         "theme_tab_background":"images/theme_tab_background.png",
+         "theme_frame_incognito":"images/incog_tab_background.png"
+      },
+      "colors":{
+         "tab_text":[
+            255,
+            28,
+            56
+         ],
+         "tab_background_text":[
+            84,
+            127,
+            151
+         ],
+         "bookmark_text":[
+            255,
+            28,
+            56
+         ],
+         "frame":[
+            230,
+            230,
+            230
+         ],
+         "ntp_text":[
+ 			255,
+            28,
+            56
+         ],
+         "ntp_link":[
+            255,
+            28,
+            56
+         ],
+         "ntp_link_underline":[
+            255,
+            28,
+            56
+         ],
+         "toolbar":[
+            33,
+            44,
+            51,
+            1
+         ],
+         "ntp_background":[
+           76,
+            102,
+            115
+         ]
+      },
+    "tints": {
+        "buttons": [
+                0.99,
+                0.99,
+                0.99
+            ],
+        "frame_inactive": [
+                0.99,
+                0.99,
+                0.99
+            ],
+        "frame_incognito_inactive": [
+                0.99,
+                0.99,
+                0.99
+            ]
+        },
+      "properties":{
+         "ntp_background_repeat":"no-repeat",
+         "ntp_background_alignment":"center"
+      }
+   }
+}
+
+

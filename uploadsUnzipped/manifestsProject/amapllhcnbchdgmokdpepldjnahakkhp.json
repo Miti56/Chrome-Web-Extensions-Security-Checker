@@ -1,0 +1,88 @@
+{
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "CVSpot plugin"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+T"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "libs/icons.js",
+        "libs/jquery.min.js",
+        "libs/url.js",
+        "includesContent/thSettings.js",
+        "content.js"
+      ],
+      "matches": [
+        "*://cvspot.net/*",
+        "*://cvspot.local/*"
+      ]
+    },
+    {
+      "css": [
+        "libs/popup-inline.css",
+        "libs/font_awesome/font-awesome.css",
+        "libs/tooltipster/tooltipster.bundle.min.css",
+        "libs/tooltipster/tooltipster-sideTip-borderless.min.css"
+      ],
+      "js": [
+        "libs/icons.js",
+        "libs/jquery.min.js",
+        "libs/tooltipster/tooltipster.bundle.min.js",
+        "libs/clipboard.min.js",
+        "li_content.js"
+      ],
+      "matches": [
+        "http://linkedin.com/*",
+        "https://linkedin.com/*",
+        "http://www.linkedin.com/*",
+        "https://www.linkedin.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "CVSpotPlugin shows contacts of candidates on their LinkedIn pages.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "32": "icons/icon32.png",
+    "38": "icons/icon38.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "CVSpotPlugin",
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "*://*/*",
+    "storage",
+    "cookies",
+    "declarativeContent",
+    "notifications"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "2.3",
+  "web_accessible_resources": [
+    "check.js",
+    "libs/font_awesome/fonts/*"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SplitBook Webapp",
+  "description": "SplitBook hilt dir, gemeinsame Ausgaben zu erfassen und auszugleichen.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "urls": [
+      "http://splitbook.de/"
+    ],
+    "launch": {
+      "web_url": "http://app.splitbook.de/"
+    }
+  }
+}

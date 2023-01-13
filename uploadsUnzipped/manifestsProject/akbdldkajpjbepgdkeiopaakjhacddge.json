@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+  "name": "Neebble Management Console",
+  "description": "By Neebble Ltd",
+  "version": "1.1.0",
+  
+ 
+  
+   "permissions": ["storage", "webview", "pointerLock", "geolocation", "fullscreen",
+   "identity","fileSystem","<all_urls>","http://default-environment-mmhvkfrmq8.elasticbeanstalk.com/", "https://www.google-analytics.com/"],
+   
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+	 
+    }
+	
+  },
+  "icons": { "16": "img/chef-16.png", "128": "img/chef-128.png" }
+}

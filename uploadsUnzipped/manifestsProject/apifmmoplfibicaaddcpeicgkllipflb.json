@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "main.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "images/naver_cdic128.png",
+         "16": "images/naver_cdic16.png",
+         "32": "images/naver_cdic32.png",
+         "48": "images/naver_cdic48.png"
+      }
+   },
+   "description": "마우스 오른쪽 클릭으로 네이버 중국어 사전 검색",
+   "icons": {
+      "128": "images/naver_cdic128.png",
+      "16": "images/naver_cdic16.png",
+      "32": "images/naver_cdic32.png",
+      "48": "images/naver_cdic48.png"
+   },
+   
+   "manifest_version": 2,
+   "name": "네이버 중국어 사전",
+   "permissions": [ "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

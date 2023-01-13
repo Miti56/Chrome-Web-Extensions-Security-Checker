@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Mr Toomuch - Tłumacz Definicji IT",
+    "version": "1.1.7",
+    "manifest_version": 2,
+    "description": "Aplikacja pomagająca rekruterom IT zrozumieć technologiczne definicje podczas weryfikacji kandydata na LinkedIn, Stack Overflow itp.",
+    "icons": {
+        "16": "icons/icon-16.png",
+        "128": "icons/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/contentscript.js",
+                "scripts/worker.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "all_frames": true,
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "19": "icons/icon-19.png",
+            "38": "icons/icon-38.png"
+        },
+        "default_title": "Mr Toomuch"
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "web_accessible_resources": [
+        "images/logo_mrtoomuch.png",
+        "icons/icon-16.png",
+        "images/round.svg",
+        "images/circles.svg",
+        "fonts/Rubik-Light.ttf",
+        "frame.html",
+        "scripts/pageScript.js",
+        "styles/main.css",
+        "scripts/worker.js"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Digitalstation.fr - Alert LIVE",
+	"description": "Grace a cette petite extension vous n'aurez plus aucun pretexte pour oublier une émission ! Téléchargez dès maintenant, 100% gratuit",
+	"version": "1.1",
+	"permissions": [
+	"http://*/*",
+	"https://*/*",
+	"notifications"
+	],
+	"background": {
+		"scripts": ["app.js"]
+	},
+	"browser_action": {
+		"default_icon": "icone.png"
+	},
+	"icons": {
+		"128": "icone2.png"
+	}
+}

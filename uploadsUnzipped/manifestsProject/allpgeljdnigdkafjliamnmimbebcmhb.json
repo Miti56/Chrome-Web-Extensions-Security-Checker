@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Facebook Image Download",
+    "version": "1.4.2",
+    "manifest_version": 2,
+    "description" : "Download facebook post images easily",
+    "icons": { "16": "assets/icons/16x16.png", "48": "assets/icons/48x48.png", "128": "assets/icons/128x128.png" },
+    "omnibox": { "keyword" : "FB Image Download" },
+    "browser_action": {
+        "default_icon": { "19": "assets/icons/19x19.png", "38": "assets/icons/38x38.png" },
+        "default_title": "FB Image Download"
+    },
+    "content_scripts": [{
+      "js": ["assets/js/content.js"],
+      "css": ["assets/css/app.css"],
+      "matches": ["http://*.facebook.com/*", "https://*.facebook.com/*"]
+    }],
+    "content_security_policy": "connect-src *; script-src 'self' https://www.google-analytics.com; object-src 'self'",
+    "permissions": [
+          "storage",
+          "tabs",
+          "http://plugins.fbvideodownloadplugin.com/*",
+          "https://plugins.fbvideodownloadplugin.com/*",
+          "downloads"
+    ],
+    "options_page": "options.html",
+    "web_accessible_resources": ["app.js"],
+    "background": {
+     "scripts": ["assets/js/background.js"],
+     "persistent": false
+   }
+}

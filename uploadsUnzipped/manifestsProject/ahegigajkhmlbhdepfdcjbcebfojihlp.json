@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"VK Downloader",
+	"description":"Free VK Downloader - Download VK videos to MP3, MP4 and HD without any software.",
+	"version":"1.0.1",
+	"chrome_url_overrides":{
+		"newtab":"newpage.html"
+	},
+	"browser_action":{
+		"default_icon":"icon.png"
+	}, 
+	"permissions":[
+		"tabs"
+	],
+	"background":{
+		"scripts":["background.js"],
+		"persistent":false
+	}
+	
+}

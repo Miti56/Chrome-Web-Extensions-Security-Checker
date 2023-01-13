@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Boom Strategy Beach Games",
+  "description": "Boom Beach, Buff Knight Advanced, Can You Escape Prison, Card Wars Adventure Time, Castle Clash, Cats: Crash Arena Turbo",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

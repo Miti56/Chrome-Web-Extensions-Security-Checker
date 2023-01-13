@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Chinese Horoscope",
+ "manifest_version": 2,
+ "short_name": "Chinese Horoscope",
+ "description": "Get your daily Chinese horoscope",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "if_cssi_douban_214731 (1).png"
+  },
+ "icons": {
+	"128": "if_cssi_douban_214731.png"
+  }
+}

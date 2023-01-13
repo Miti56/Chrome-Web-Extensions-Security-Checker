@@ -1,0 +1,19 @@
+{
+  "name": "1boon탭",
+  "version": "0.0.5",
+  "manifest_version": 2,
+  "description": "",
+  "homepage_url": "http://1boon.kakao.com",
+  "icons": {
+    "48": "icons/icon72.png"
+  },
+  "default_locale": "ko",
+  "chrome_url_overrides": {
+    "newtab": "html/tabs.html"
+  },
+  "content_security_policy": "script-src https://ssl.google-analytics.com 'self' 'unsafe-eval'; object-src 'self'",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "permissions": [
+    "tabs"
+  ]
+}

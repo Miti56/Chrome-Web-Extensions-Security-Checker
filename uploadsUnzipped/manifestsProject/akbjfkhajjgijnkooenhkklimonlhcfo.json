@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Durchgangsmelder vom Profi für Ihr Geschäft",
+  "description": "Auf der Suche nach einem wohlklingenden Durchgangsmelder, der unkompliziert in der Installation ist? Dann sind Sie bei uns richtig",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon128.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}

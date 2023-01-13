@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "IPSI Helper",
+    "version": "2.1",
+    "author": "Dominik Kressler",
+
+    "description": "Helps you to automatically create a ftp config for your favorite code editor.",
+
+    "permissions": [
+        "*://ipsiv3.euroweb.net/project/detailed/*",
+        "storage",
+        "clipboardWrite"
+    ],
+    "icons": {
+        "16": "icons/ipsi-16.png",
+        "32": "icons/ipsi-32.png",
+        "48": "icons/ipsi-48.png",
+        "96": "icons/ipsi-96.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://ipsiv3.euroweb.net/project/detailed/*"],
+        "js": ["lib/jquery-3.2.1.min.js", "index.js"]
+    }],
+    "options_ui": {
+        "page": "options.html"
+    }
+}

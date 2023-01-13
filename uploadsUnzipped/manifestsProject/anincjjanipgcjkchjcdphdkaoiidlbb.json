@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Infino - Assist",
+  "version": "1.23",
+  "description": "Infino Assist is an AI-powered system which suggests you the best offers, coupons and cashbacks for your cards.",
+  "permissions": [
+    "cookies",
+    "tabs",
+    "activeTab",
+    "storage",
+    "notifications",
+    "webNavigation",
+    "unlimitedStorage",
+    "https://*/*"
+  ],
+  "background": {
+    "page": "src/assets/html/background.html"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.flipkart.com/*",
+        "https://*.amazon.in/*",
+        "https://*.bookmyshow.com/*",
+        "https://*.makemytrip.com/*",
+        "https://*.myntra.com/checkout/*",
+        "https://*.snapdeal.com/*"
+      ],
+      "match_about_blank": false,
+      "exclude_globs": ["chrome://*", "chrome-search://"],
+      "run_at": "document_end",
+      "js": [
+        "get-amount.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "infino-monochrome.png",
+      "24": "infino-monochrome.png",
+      "32": "infino-monochrome.png"
+    },
+    "default_title": "Infino",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "infino.png",
+    "32": "infino.png",
+    "48": "infino.png",
+    "128": "infino.png"
+  },
+  "manifest_version": 2
+}

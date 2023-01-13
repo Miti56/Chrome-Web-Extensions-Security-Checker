@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "MecaGratis.com",
+"description": "Curso Gratis de Mecanografía con videos didácticos.",
+"version": "1.2",
+"icons": {
+"128": "bd_128x128_mg.png"
+},
+"app": {
+"urls": [
+"http://www.mecagratis.com/"
+
+],
+"launch": {
+"web_url": "http://www.mecagratis.com/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

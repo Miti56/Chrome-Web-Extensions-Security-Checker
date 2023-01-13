@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Extreme Bikers",
+
+  "short_name": "Extreme Bikers",
+
+  "version": "1.0.2",
+  "description": "Play Extreme Bikers now",
+
+  "homepage_url": "http://callo.xyz/c/puzzle-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Extreme Bikers",
+
+      "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Traduttore Italiano - Inglese",
+ "manifest_version": 2,
+ "short_name": "Traduttore Italiano - Inglese",
+ "description": "Tradotto rapidamente da Italiano a Inglese",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1480290409_United-States-Flag.png"
+  },
+ "icons": {
+	"128": "spain-flag.png"
+  }
+}

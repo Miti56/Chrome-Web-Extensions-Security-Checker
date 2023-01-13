@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"name": "Chiết khấu mua hàng 1688 Taobao Tmall" ,
+	"short_name" : "Chiết Khấu Taobao",
+    "version": "1.2.8",
+	"description": "Chiết khấu 1688 Taobao Tmall, chiết khấu 1688 taobao tmall cao nhất",
+    "background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+        "browser_action": {
+          "default_icon": {                  
+			"16": "icon.png", 
+			"48": "icon.png", 
+			"128": "icon.png"
+          }
+        },
+	"permissions": [
+			"http://chietkhau360.com/*",
+			"https://chietkhau360.com/*",
+			"https://*.item.taobao.com/*",
+			"https://*.world.taobao.com/*",
+			"https://*.m.intl.taobao.com/*",
+			"https://*.chaoshi.item.taobao.com/*",
+			"https://*.chaoshi.world.taobao.com/*",
+			"https://*.item.taobao.com/*",
+			"https://*.item.lp.taobao.com/*",
+			"https://*.item.beta.taobao.com/*",
+			"https://*.auction.taobao.com/*",
+			"https://*.detail.tmall.hk/*",
+			"https://*.detail.tmall.com/*",
+			"https://*.world.tmall.com/*",
+			"https://*.chaoshi.detail.tmall.hk/*",
+			"https://*.chaoshi.detail.tmall.com/*",
+			"https://*.chaoshi.world.tmall.com/*",
+			"https://*.detail.1688.com/*",
+			"https://*.detailp4p.1688.com/*",
+			"https://*.m.1688.com/*"
+	],
+	"web_accessible_resources": [
+		"css/font-awesome/fonts/*",
+		"template.html",
+		"icon.png"
+	],
+	"content_scripts": [
+		{
+			"css": ["css/style.default.css"],
+			"js": ["js/jquery.js", "js/script.js", "js/jquery.tmpl.js" ],
+      		"matches": ["*://chaoshi.detail.tmall.com/*", "*://chaoshi.item.taobao.com/*", "*://detail.1688.com/*", "*://detail.tmall.com/*", "*://item.taobao.com/*", "*://m.1688.com/*", "*://m.intl.taobao.com/*"]
+		}
+	],
+	"manifest_version": 2,
+	"icons": {"16": "icon.png", "48": "icon.png",  "128": "icon.png"}
+}

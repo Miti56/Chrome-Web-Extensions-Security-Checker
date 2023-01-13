@@ -1,0 +1,25 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "files/newtabpromo_bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon128.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_appButtonDesc__"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": ["\u003Call_urls>"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "files/*", "images/*" ]
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "GameStreams",
+  "version": "1.07",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "description": "Watch Live Game Streams and Videos From Your New Tab!",
+ 
+    "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "html/load.html"
+  },
+    "browser_action":{
+    "default_icon": {                    
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }  
+  }
+  }

@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Bloodborne - Hunter",
+"description":"resolution, 1366x768 Bloodborne PS4 game, see facebook.com/toxicthemesv2 for more.",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic",
+"theme_ntp_attribution":"images/attribution.png"
+},
+"colors":
+{
+"ntp_link": [ 215 , 218 , 219 ],
+"ntp_text": [ 215 , 218 , 219 ],
+"ntp_section_link": [ 215 , 218 , 219 ],
+"ntp_section_text": [ 215 , 218 , 219 ],
+"ntp_background": [ 117 , 127 , 129 , 0.5 ],
+"ntp_header": [ 21 , 34 , 42 , 0.15 ],
+"ntp_section": [ 21 , 34 , 42 , 0.15 ],
+"frame": [ 21 , 34 , 42 ],
+"toolbar": [ 117 , 127 , 129 ],
+"tab_text": [ 215 , 218 , 219 ],
+"tab_background_text": [ 215 , 218 , 219 ],
+"bookmark_text": [ 215 , 218 , 219 ]
+},
+"tints":
+{
+"buttons": [ 0.527777777777778 , 0.0487804878048781 , 0.482352941176471 ],
+"frame_incognito": [ 0.530345471521942 , 0.313725490196078 , 0.116262975778547 ],
+"frame_inactive": [ 0.527777777777778 , 0.0487804878048781 , 0.85 ],
+"frame_incognito_inactive": [ 0.527777777777778 , 0.0487804878048781 , 0.85 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

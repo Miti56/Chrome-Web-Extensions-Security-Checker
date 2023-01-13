@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "DuckDuckQuack",
+  "version": "1",
+  "manifest_version": 2,
+  "description": "Makes a quack sound whenever you search with DuckDuckGo",
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "background.js" ],
+    "matches": [ "http://duckduckgo.com/?q*", "https://duckduckgo.com/?q*"]
+  }]
+}

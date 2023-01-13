@@ -1,0 +1,74 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version" : 2,
+  "name"             : "AuntieTuna",
+  "version"          : "0.0.4.5",
+  "description"      : "Checks webpages for phish based on snapshots of known-good sites.",
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "24"  : "img/auntietuna-24.png",
+      "32"  : "img/auntietuna-32.png",
+      "64"  : "img/auntietuna-64.png",
+      "128" : "img/auntietuna-128.png",
+      "256" : "img/auntietuna-256.png"
+    },
+    "default_popup" : "popup.html",
+    "default_title" : "AuntieTuna"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "auntietuna@ant.isi.edu",
+      "update_url": "https://raw.githubusercontent.com/cardi/auntietuna/master/dist/firefox/updates.json"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches"    : ["http://*/*", "https://*/*"],
+      "js"         : ["lib/browser-polyfill.js"
+                    , "lib/sha256.min.js"
+                    , "lib/FileSaver.min.js"
+                    , "js/util.js"
+                    , "js/contentscript.js"],
+      "run_at"     : "document_end",
+      "all_frames" : true
+    }
+  ],
+
+  "icons": {
+    "48"  : "img/auntietuna-48.png",
+    "96"  : "img/auntietuna-96.png",
+    "128" : "img/auntietuna-128.png",
+    "256" : "img/auntietuna-256.png"
+  },
+
+  "options_ui": {
+    "page"          : "options.html",
+    "open_in_tab"   : true,
+    "browser_style" : false,
+    "chrome_style"  : false
+  },
+
+  "permissions": [
+    "activeTab"
+   ,"storage"
+   ,"tabs"
+   ,"unlimitedStorage"
+   ,"<all_urls>"
+  ],
+
+  "web_accessible_resources": [
+    "web_accessible_resources/hashes.paypal-2015-11-16.json"
+   ,"web_accessible_resources/hashes.usc-2019-08-23.json"
+   ,"web_accessible_resources/hashes.usc_login-2020-02-29.json"
+   ,"web_accessible_resources/hashes.eicar-test-1970-01-01.json"
+  ]
+
+}

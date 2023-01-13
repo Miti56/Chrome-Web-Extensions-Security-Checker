@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+   
+    "name": "Чистый VK",
+    "description": "Удаляет возможных друзей, рекомендуемые сообщества, другие видео, левый блок рекламы и многое другое.",
+    "short_name": "Чистый VK",
+    "manifest_version": 2,
+    "version": "0.3.2",
+
+    "icons": {        
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"    
+    },
+
+  "content_scripts": [{
+    "matches": ["*://*.vk.com/*"],
+    "js": ["jquery-3.1.1.min.js", "content.js"],
+    "run_at" : "document_start"
+  }],
+
+  "background": {
+    "scripts": ["jquery-3.1.1.min.js", "background.js"]
+  },
+
+  "permissions": ["tabs", "storage"],
+
+   "browser_action": {
+         "default_title": "VK",
+         "default_icon": "icon.png",
+         "default_popup": "popup.html"
+  },
+
+  "web_accessible_resources": ["css/ch_pr.css", "css/ch_nwsf.css",
+                "css/ch_msg.css", "css/ch_fr.css",
+                "css/ch_gr.css", "css/ch_ph.css",
+                "css/ch_aud.css", "css/ch_vid.css",
+                "css/ch_ap.css", "css/ch_mk.css",
+                "css/ch_fav.css", "css/ch_doc.css",
+                "css/ch_blog.css", "css/ch_inf.css",
+                "css/ch_apm.css", "css/ch_ads.css",
+
+                "css/ch_av_g.css", "css/ch_friend_g.css",
+                "css/ch_frOn_g.css", "css/ch_intPage_g.css",
+                "css/ch_video_g.css", "css/ch_audio_g.css", 
+                "css/ch_blName_g.css", "css/ch_blSub_g.css",
+                "css/ch_whatNew_g.css", "css/ch_addFhoto_g.css",
+                "css/ch_wall_g.css", "css/ch_info_g.css",
+                "css/ch_blName_g.css", "css/ch_g_av.css",
+                "css/ch_g_link.css", "css/ch_fhotoBook_g.css",
+                "css/ch_gift_g.css","css/ch_Commonfriend_g.css",
+                "css/ch_notAv_g.css", "css/ch_sp_fotoPeople.css",
+
+                "css/ch_g_attach.css", "css/ch_g_goods.css",
+                "css/ch_g_quiz.css", "css/ch_g_dis.css",
+                "css/ch_g_pict.css", "css/ch_g_audio.css", 
+                "css/ch_g_video.css", "css/ch_g_add.css",
+                "css/ch_g_wall.css", "css/ch_g_av.css",
+                "css/ch_g_link.css", "css/ch_g_cont.css",
+                "css/ch_g_follow.css", "css/ch_g_metting.css",
+                "css/ch_g_donAdmin.css", "css/ch_g_doc.css",
+                "css/ch_g_app.css",
+
+                "css/ch_sp_comment.css", "css/ch_sp_save.css",
+                "css/ch_sp_possFriend.css", "css/ch_sp_recomGr.css",
+                "css/ch_sp_notific.css", "css/ch_sp_firstHot.css", 
+                "css/ch_sp_videoCatalog.css", "css/ch_sp_clearGames.css",
+                "css/ch_sp_advertising.css", "css/ch_sp_likes.css",
+                "css/ch_sp_frImport.css", "css/ch_sp_audioFrList.css",
+                "css/ch_sp_mv_info.css", "css/ch_sp_fastChat.css",
+                "css/ch_sp_news.css", "css/ch_sp_fhOutCom.css",
+                "css/ch_sp_vdOutCom.css"
+]
+
+}

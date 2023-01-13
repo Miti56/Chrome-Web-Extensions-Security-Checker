@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+
+    "name": "Clien Tools",
+    "description": "클리앙 이용시 각종 체크(후방,호불호,스포,박x혜), 인기글 강조, 미리보기, 특정단어 강조, 검색강화, 작성자 이전글 보기 등의 기능을 제공합니다.",
+    "version": "1.7.1",
+    "permissions": [
+        "storage",
+        "tabs",
+        "notifications",
+        "activeTab",
+        "http://*.clien.net/*",
+        "https://*.clien.net/*"
+    ],
+    "background": {
+        "page": "background.html"
+    },
+    "icons": { 
+        "128": "logo.png"
+    },
+    "browser_action": {
+        "default_title": "Clien Tools"
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://*.clien.net/*",
+            "https://*.clien.net/*"
+        ],
+        "css": ["common.css","./lib/lightbox/lightbox.css"],
+        "js": [
+            "func.js",
+            "jquery-3.1.1.min.js", 
+            "content.js",
+            "./lib/lightbox/lightbox.js"
+            ],
+        "run_at": "document_end"
+    }],
+    "options_page": "options.html",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgu4zdIuN5abwbCmMm58Hh+Y9dKfra8L6qHzVMT/wPvdF3S04WMldyVEuoE9wMjAkHlxmdoL3jJ3x1uL13sAwG9SAEpAQ1LCu7montyiOqJdPkqj2dtWAYApYfvAGjDy5WotIG7i/oKQsbRk/xp+XfbACN2D0hnENiBkuLJdJ7smG1skmD+5vlm0YQcsP0wI4ABidldE+rXUm7wzydFgO4eDyMbg2jkRAG5jd5T+HyTBukttVs9MPpTpokfN9PSrZOE9L5WNTFSnqg+AyILEafG1MhF6caVAee/KVYCKjlrRfZwxb5tRgaFDN6tkccAah7iNKVAel2mVJMqjwbwA9VwIDAQAB",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "web_accessible_resources": ["img/*","injected_script.js","lib/*"]
+}

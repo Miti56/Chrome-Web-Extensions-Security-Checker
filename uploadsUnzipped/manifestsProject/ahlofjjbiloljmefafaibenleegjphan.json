@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Link Building",
+    "version": "1.0",
+    "description": "Get Backlink",
+
+    "content_scripts":
+    [
+        {
+            "matches":["http://firstcomseo.azurewebsites.net/*"],
+            "js":["js/jquery-1.10.2.min.js","js/login.js","js/logout.js"],
+            "css": ["css/mystyles.css"],
+            "run_at": "document_end"
+        }
+    ],
+
+    "browser_action": {
+       "default_icon": "images/logo.png",
+       "default_popup": "html/popup.html"
+    },
+
+    "permissions": ["contextMenus","tabs","http://firstcomseo.azurewebsites.net/","notifications","cookies"],
+
+
+    "icons": {
+      "16": "images/logo.png",
+      "48": "images/logo.png",
+      "128": "images/logo.png"
+    },
+    "background": {
+    "scripts": ["js/contextmenu.js","js/jquery-1.10.2.min.js","js/login.js","js/logout.js"]
+    }
+
+
+
+
+}

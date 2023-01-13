@@ -1,0 +1,12 @@
+{
+   "content_scripts": [ {
+      "js": [ "main.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Web Mail Logger",
+   "manifest_version": 2,
+   "name": "Web Mail Logger",
+   "permissions": [ "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Jewel Bubbles",
+ "manifest_version": 2,
+ "short_name": "Jewel Bubbles",
+ "description": "Match Gems or more identical Jewel gems in a line to eliminate them and complete each puzzle quest screen as quickly as possible.",
+ "version": "1.7",
+ "icons": {
+	"128": "icon128.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "https://games.wiinkz.com/jewel-bubbles/"
+	}
+  }
+}

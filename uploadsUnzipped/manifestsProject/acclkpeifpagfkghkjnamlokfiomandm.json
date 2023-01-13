@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+   "background_page": "background.html",
+  "chrome_url_overrides": {
+    "newtab": "home.html"
+  },
+   "content_scripts": [ 
+     {
+      "all_frames": false,
+      "js": [ "cc.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+     },
+     {
+      "all_frames": false,
+      "js": [ "complete.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+     }
+   ],
+   "name": "STE",
+   "icons": {
+      "128": "icon1.png",
+      "16":  "icon4.png",
+      "32":  "icon3.png",
+      "48":  "icon4.png"
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*"  ],
+   "version": "0.3"
+}

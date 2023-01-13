@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "slackLikeConsoler",
+  "author": "takayuki sonk",
+  "description": "slack dark theme ( css update like console )",
+  "version": "1.0.4",
+  "manifest_version": 2,
+  "web_accessible_resources": ["*"],
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.slack.com/*"],
+      "css": ["slack/style.css"],"js": ["slack/script.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

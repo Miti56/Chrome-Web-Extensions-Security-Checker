@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Pane",
+  "version": "1.1",
+
+  "description": "Shows a notification panel on the right",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "background": {
+      "scripts": [ "background.js" ]
+   },
+  "content_scripts": [ {
+      "all_frames": true,
+      "js": ["tweetpane.js" ],
+      "matches": ["*://*/*"],
+      "run_at" : "document_start"
+   } ],
+   "permissions": [
+        "http://*/","https://*/", "management",
+        "unlimitedStorage",
+        "storage",
+        "tabs",
+        "cookies",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "applications": {
+    "gecko": {
+      "id": "tweetpane@imnofox.com"
+    }
+  }
+
+}

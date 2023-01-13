@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "American truck simulator mods and news",
+  "description": "The newest and tested ATS mods every day. Fallow us and try first.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.ats-mod.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.ats-mod.com/"
+    }
+  },
+  "icons": {
+    "128": "128.png"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "DominoRally",
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webNavigation",
+    "<all_urls>",
+    "storage",
+    "webRequestBlocking"
+  ],
+  "description": "Play against your own computer in a game of Domino, match the right tiles to the ones already on the game board",
+  "manifest_version": 2,
+  "version": "7.2.17",
+  "background": {
+    "scripts": [
+      "uid.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_title": "DominoRally",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "128": "favicon.png"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'"
+}

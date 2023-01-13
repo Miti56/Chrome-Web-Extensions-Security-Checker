@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "WikiShrinker",
+	"description": "Shrink body of wikipedia articles",
+	"version": "0.3",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png"
+	},
+	"permissions": [
+		"tabs",
+		"declarativeContent",
+		"storage",
+		"*://*.wikipedia.org/*"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false
+	},
+	"page_action": {
+		"default_title": "WikiShrinker",
+		"default_icon": {
+			"19": "icons/icon19.png",
+			"38": "icons/icon38.png"
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.wikipedia.org/*"
+			],
+			"run_at": "document_start",
+			"js": [
+				"autoResize.js"
+			]
+		}
+	],
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"manifest_version": 2
+}

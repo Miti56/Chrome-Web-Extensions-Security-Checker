@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "fw-devtools",
+  "description": "FW开发辅助工具",
+  "version": "2.3.3",
+  "permissions": [
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "javascripts/background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_title": "devtoos for FW Company",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "javascripts/segment-mobx-stores.js",
+    "javascripts/segment-mobx-data.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://fe.9888.cn/static/*",
+        "https://fe.9888.cn/static/*",
+        "https://fe.gongchangp2p.com/static/*",
+        "https://fe.gongchangzx.com/static/*",
+        "https://fe.9888keji.com/static/*",
+        "https://m.easyloan888.com/*",
+        "https://m.9888.cn/static/*",
+        "https://www.gongchangp2p.com/static/*",
+        "https://www.gongchangzx.com/static/*",
+        "https://www.9888keji.com/static/*"
+      ],
+      "js": [
+        "javascripts/fix-viewport.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "homepage_url": "https://github.com/delongw/chrome-extensions",
+  "offline_enabled": true,
+  "short_name": "fw",
+  "manifest_version": 2
+}

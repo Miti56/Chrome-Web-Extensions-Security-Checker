@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "aeon-bank enable auto complete",
+	"description": "イオン銀行 ログインページのオートコンプリートを有効にする",
+	"version": "0.0.2",
+	"icons": {
+		"128": "icon128.png",
+		"48": "icon48.png"
+	},
+	"content_scripts": [ {
+		"js": [ "jquery-1.12.4.js", "content.js" ],
+		"matches": [ "https://ib.aeonbank.co.jp/*" ],
+		"run_at": "document_idle"
+	} ]
+}

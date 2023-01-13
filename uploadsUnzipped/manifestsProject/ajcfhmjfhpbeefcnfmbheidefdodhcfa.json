@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  
+  "manifest_version": 2,
+ 
+  "name": "Soundboard",
+
+  "short_name": "Soundboard",
+
+  "version": "1.4.3",
+
+  "description": "The smart way to connect on Facebook, Linkedin, and more.",
+
+  "icons": {
+    "16": "img/icon16.png",
+    "32": "img/icon32.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+
+  "content_scripts": [{
+    "js": [
+      "js/jquery/jquery-3.4.1.min.js",
+      "js/soundboard.js"
+    ],
+    "matches": [
+      "https://www.linkedin.com/*",
+      "https://www.facebook.com/*",
+      "https://app.teamzy.com/*"
+    ],
+    "css": [
+      "css/soundboard.css"
+    ]
+  }],
+
+  "background":{
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+
+  "browser_action":{
+    "default_popup": "popup.html",
+    "default_title": "Soundboard | Better business conversations start here"
+  },
+ 
+  "permissions":
+    [
+      "cookies",
+      "webRequest",
+      "https://share.soundboard.social/*",
+      "https://www.linkedin.com/in/*",
+      "https://www.facebook.com/*",
+      "https://app.teamzy.com/*"
+    ],
+
+  "web_accessible_resources": [
+    "img/*",
+    "data/*",
+    "tmpl/*"
+  ]  
+
+}

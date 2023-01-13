@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    	"manifest_version": 2,
+	"name" : "WSearch",
+	"description" : "Quickly search for highlighted text on Wikipedia via right-click",
+	"version" : "0.9.3",
+	"permissions" : [ "contextMenus", "tabs", "http://*/*", "https://*/*", "storage" ],
+	"content_security_policy": "script-src 'self'; object-src 'self';",  
+	"background" : {"scripts": ["jquery.min.js", "core.js"]},
+	"options_page" : "options.html",
+	"icons" : { "16" : "icon16.png", "48" : "icon48.png" }
+}

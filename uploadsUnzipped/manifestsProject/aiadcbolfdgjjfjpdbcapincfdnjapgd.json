@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "index.html"
+   },
+   "description": "Quick access Ben Gurion University services for students. (bha-dev)",
+   "manifest_version": 2,
+   "name": "BGU2GO",
+   "permissions": [ "activeTab", "tabs"],
+   "version": "1.0"
+}

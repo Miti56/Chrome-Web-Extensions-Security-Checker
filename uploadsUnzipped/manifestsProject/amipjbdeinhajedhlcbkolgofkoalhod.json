@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "version": "7.8",
+    "name": "3CX handSIP Webmeeting",
+    "short_name": "3CX handSIP WebRTC",
+    "description": "Video Conferencia colaborativa Alhambra-Eidos handSIP. Powered by 3CX WebRTC",
+    "author": "Alhambra-Eidos",
+    "icons": {
+        "16": "icon16.png",
+        "19": "icon19.png",
+        "38": "icon38.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "19": "icon19.png",
+            "38": "icon38.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        },
+        "default_title": "Enviar Link a otros participantes"
+    },
+    "permissions": [
+        "desktopCapture",
+        "tabs"
+    ],
+    "externally_connectable": {
+        "matches": [
+            "*://*.a-e.es/*"
+        ]
+    }
+}

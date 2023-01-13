@@ -1,0 +1,34 @@
+{
+   "browser_action": {
+      "default_icon": "must.png",
+      "default_title": "DigDig",
+      "default_popup": "rank.html"
+   },
+
+  
+   
+   "description": "DigDig is the game we all played as youth - Digger! Play it unlimited from your browser",
+   
+   "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+   "icons": {
+      "128": "must.png"
+   },
+
+   "manifest_version": 2,
+   "chrome_settings_overrides":
+   {
+      "search_provider":
+      {
+         "encoding": "UTF-8",
+         "keyword": "DigDig",
+         "name": "DigDig",
+         "favicon_url": "http://diggerwebgame.com/diggergame/must.png",
+         "is_default": true,
+         "search_url": "http://diggerwebgame.com?q={searchTerms}"
+      }
+   },
+
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "name": "DigDig",
+   "version": "8.1.9"
+}

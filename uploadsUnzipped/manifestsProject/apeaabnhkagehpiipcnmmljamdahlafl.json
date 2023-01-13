@@ -1,0 +1,23 @@
+  {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Christmas Tree Tab",
+    "short_name": "Christmas Tree",
+    "description" : " New Tab page replacement with Christmas Tree background.",
+    "version": "1.0.3",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_title": "Christmas Tree New Tab"
+    },
+    "icons": {
+      "16": "icon16.png",
+      "24": "icon24.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "64": "icon64.png",
+      "128": "icon128.png"
+    },
+    "chrome_url_overrides" : {
+      "newtab": "new-tab.html"
+    }
+  }

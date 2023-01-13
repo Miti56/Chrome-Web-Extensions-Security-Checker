@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Invite All Friends for Facebook FREE",
+  "description": "Check all friends checkbox in Facebook invite to event.",
+  "icons" : {"16":"icon16.png","32":"icon32.png","48":"icon48.png","128":"icon128.png"},
+  "version": "1.0",
+  "manifest_version": 2,
+  "background_page": "background.html",
+    "permissions": [
+    "tabs", "https://www.facebook.com/*", "http://www.facebook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*", "http://www.facebook.com/*"],
+      "js": ["jquery.js","check.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

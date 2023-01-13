@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Voice Input Everywhere",
+  "manifest_version": 2,
+  "version": "1.0",
+  "icons":{"128":"icons/icon128.png", "48": "icons/icon48.png"},
+  "description": "Enable Google Chrome's voice recognition for entering text anywhere.",
+  "background": {
+    "scripts": [
+      "lib/utils.js",
+      "background_scripts/settings.js",
+      "background_scripts/main.js"
+    ]
+  },
+  "options_page": "pages/options.html",
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {"matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "lib/utils.js",
+        "vimium_frontend.js"],
+      "run_at": "document_start",
+      "all_frames" : true
+  }],
+  "browser_action": {
+        "default_icon": "icons/browser_action_disabled.png",
+        "default_popup": "pages/popup.html"
+  }
+}

@@ -1,0 +1,62 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "jquery-3.2.1.min.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "jquery-3.2.1.min.js",
+        "scripts.js"
+      ],
+      "css": [
+        "tooltip.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://goo.gl/*",
+        "https://bitly.com/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "jquery-3.2.1.min.js",
+        "scraper.js"
+      ],
+      "css": []
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "description": "Get stats for the main short links services like bit.ly,goo.gl and tiny.url right into your page.",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "manifest_version": 2,
+  "name": "Short Links Insights",
+  "permissions": [
+    "*://*/*",
+    "tabs",
+    "webRequest",
+    "webNavigation",
+    "webRequestBlocking",
+    "contextMenus",
+    "storage"
+  ],
+  "version": "0.0.5",
+  "web_accessible_resources": [
+  ]
+}

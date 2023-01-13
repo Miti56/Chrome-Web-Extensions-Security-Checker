@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "description": "Scales for WGT golf",
+  "name": "WGT Toolkit",
+  "version": "0.9.3",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+            
+  "content_scripts": [ {
+    "js": [ "wgt.user.js", "matdom.js", "colorPicker.js", "bowser.js"],
+    "matches": [ "http://*.wgt.com/*gameclient.aspx*", "http://menotume.com/wgtutils/*",  "http://localhost/sites/*"  ],
+    "include_globs": [ "http://*.wgt.com/*gameclient.aspx*", "http://menotume.com/wgtutils/*" ],
+    "run_at": "document_idle"
+  } ],
+
+  "web_accessible_resources": [
+    "BallRuler.png",
+    "magGlassIcon.gif",
+    "scale25-3.png",
+    "scale10-1.png",
+    "SampleScale100.gif",
+    "Putt100.png",
+    "PuttArrows.gif",
+    "startupError.html",
+    "Clock01b.png",
+    "Clock02a.png",
+    "Clock02b.png",
+    "Clock04.png",
+    "Clock03.png"
+  ],
+
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  
+  "permissions": [
+  "tabs",
+    "webRequest",
+    "http://*.wgt.com/*"
+    ]
+}

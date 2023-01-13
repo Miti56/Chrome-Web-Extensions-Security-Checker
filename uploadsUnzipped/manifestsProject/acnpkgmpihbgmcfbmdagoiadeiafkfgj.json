@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Skypeface",
+  "description": "Simple app to call Skype from tabs",
+  "version": "1.1",
+  "app": {
+    "urls": [
+      "http://skypeface.co"
+    ],
+  "launch": {
+      "web_url": "http://skypeface.co"
+  }
+  },
+  "icons": {
+    "128": "sflogo128.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"manifest_version": 2,
+	"name": "NoAD in duolingo",
+	"version": "1.337.2",
+
+	"description": "Hide ads in duolingo >_< ",
+
+	"icons": {
+		"48": "icons/duo_48.png",
+		"96": "icons/duo_96.png"
+	},
+
+	"browser_action": {
+		"default_icon": "icons/duo_32.png",
+		"default_title": "Hello my dear friend"
+	},
+
+	"content_scripts": [
+		{
+			"matches": [ "*://*.duolingo.com/*" ],
+			"css": [ "duolingo.css" ]
+
+		}
+	]
+
+
+}

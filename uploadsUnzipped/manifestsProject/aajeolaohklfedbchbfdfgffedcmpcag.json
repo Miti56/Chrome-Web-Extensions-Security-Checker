@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Portal for Chrome",
+  "version": "0.1",
+  "manifest_version": 2,
+
+  "description": "Portal by Pushbullet",
+  "icons": { "16": "portalforchrome-16.png", "128": "portalforchrome-128.png" },
+
+  "app": {
+    "background": { "scripts": [ "background.js" ] }
+  },
+
+  "minimum_chrome_version": "23",
+  "permissions": [ "webview" ]
+}

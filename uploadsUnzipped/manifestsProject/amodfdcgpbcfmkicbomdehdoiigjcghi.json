@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AppleUnlocker.com",
+  "description": "iPhone Factory Unlock Service by Apple Unlocker - world's first only Factory Unlock For iPhone solution online.", 
+  "version": "2.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.factoryunlock.appleunlocker.com//"
+    ],
+    "launch": {
+      "web_url": "http://www.factoryunlock.appleunlocker.com//"
+    }
+  }
+}
+
+

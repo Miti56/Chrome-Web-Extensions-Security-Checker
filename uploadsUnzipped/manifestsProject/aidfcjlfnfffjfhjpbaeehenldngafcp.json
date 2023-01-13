@@ -1,0 +1,83 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "QCT EasyTAM",
+  "description": "This extension make TAM work easy!",
+  "version": "1.3",
+  "background":{
+      "scripts":["scripts/background.js"]
+  },
+  "omnibox":{
+    "keyword":"g"
+  },
+
+  "page_action": {
+     "default_title": "Easy TAM. Quick search by typing g and (tab or SPACE) key",
+     "default_icon": "icons/icon-19.png",
+     "default_popup": "scripts/popup.html"
+   },
+
+  "content_scripts": [
+  {
+      "matches": ["https://qualcomm-cdmatech-support.my.salesforce.com/5*"],
+      "js": ["scripts/jquery-1.10.2.js","scripts/case_view.js"],
+      "run_at":"document_start",
+      "all_frames":true
+  },
+  {
+    "matches": ["https://qualcomm-cdmatech-support.my.salesforce.com/apex/CustomerProjectEditQCT*"],
+      "js": ["scripts/jquery-1.10.2.js","scripts/project_edit.js"],
+      "run_at":"document_end"
+  },
+  {
+    "matches":["https://qualcomm-cdmatech-support.my.salesforce.com/search/SearchResults?str*"],
+    "js":["scripts/case_redirect.js"],
+    "run_at":"document_end"
+  },
+  {
+    "matches":["https://qualcomm-cdmatech-support.my.salesforce.com/apex/customerproject_DetailHideShow?*"],
+    "js":["scripts/commlib.js","scripts/project_view.js"],
+    "run_at":"document_end"
+  },
+  {
+    "matches":["https://qualcomm-cdmatech-support.my.salesforce.com/a0D*"],
+    "js":["scripts/commlib.js","scripts/projectlist_view.js"],
+    "run_at":"document_end"
+  },
+  {
+    "matches":["https://service.chipcode.qti.qualcomm.com/service_tasks/filter?user_filter=Member&query%5B%5D=Planner%20Id%3A*"],
+    "js":["scripts/requestid_redirect.js"],
+    "run_at":"document_end"
+
+  },
+  {
+    "matches": ["https://qctfp.qualcomm.com/fp/workspace/121/search?q=FR*"],
+    "js": ["scripts/jquery-1.10.2.js","scripts/fr_redirect.js"],
+    "run_at":"document_end"
+  }
+],
+  "permissions": [
+    "activeTab",
+    "<all_urls>",
+    "declarativeContent",
+    "tabs",
+    "webRequest",
+    "https://raw.githubusercontent.com/xiaoshi2014/helloworld/master/EasyTAM-Configure.xml"
+  ],
+  "commands": {
+    "ez_tam_hot_key" : {
+        "suggested_key": {
+             "default": "Alt+Shift+C"
+        },
+        "description": "hot keys to export eztam.txt"
+    }
+  },
+
+  "icons" : {
+  "48" : "icons/icon-48.png",
+  "128" : "icons/icon-128.png"
+},
+"web_accessible_resources": [ "scripts/popup.js","scripts/case_redirect.js", "scripts/fr_redirect.js", "scripts/jquery-1.10.2.js","scripts/case_view.js" ]
+
+}

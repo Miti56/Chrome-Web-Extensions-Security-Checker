@@ -1,0 +1,18 @@
+{
+   "author": "Drake Panzer",
+   "chrome_url_overrides": {
+      "newtab": "dist/override.html"
+   },
+   "description": "END OF LIFE. DO NOT DOWNLOAD.",
+   "homepage_url": "http://dpanzer.net",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Wall Painting Anim. [EOL]",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name" : "Speck",
+   "short_name" : "Speck",
+   "description" : "App for configuring and registering a Speck sensor.",
+   "version" : "1.1.4",
+   "manifest_version" : 2,
+   "minimum_chrome_version" : "41",
+   "app" : {
+      "background" : {
+         "scripts" : ["main.js"]
+      }
+   },
+   "icons" : {
+      "16" : "images/speck-white-16.png",
+      "32" : "images/speck-white-32.png",
+      "64" : "images/speck-white-64.png",
+      "128" : "images/speck-white-128.png",
+      "256" : "images/speck-white-256.png",
+      "512" : "images/speck-white-512.png",
+      "1024" : "images/speck-white-1024.png"
+   },
+   "permissions" : [
+      "webview",
+      "geolocation",
+      {"fileSystem": ["write", "retainEntries", "directory"]},
+      "hid",
+      {
+         "usbDevices" : [
+            {
+               "vendorId" : 9044,
+               "productId" : 13107
+            },
+            {
+               "vendorId" : 9044,
+               "productId" : 13109
+            },
+            {
+               "vendorId" : 11118,
+               "productId" : 13109
+            }
+         ]
+      }
+   ]
+}

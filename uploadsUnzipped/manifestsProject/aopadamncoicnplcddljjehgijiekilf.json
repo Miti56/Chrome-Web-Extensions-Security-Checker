@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "History Games",
+  "description": "Free online games to explore and study the past.",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon16x16.png",
+    "128": "roundIcon.128x1218.png"
+  },
+  "app": {
+    "urls": [
+      "http://planeta42.com/physics/"
+    ],
+    "launch": {
+      "web_url": "http://planeta42.com/physics/"
+    }
+  }
+}

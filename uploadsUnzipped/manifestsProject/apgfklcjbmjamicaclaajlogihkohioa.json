@@ -1,0 +1,16 @@
+{"update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"version": "1.6.4", 
+"background": {"scripts": ["back_js.js"]},
+
+ "chrome_url_overrides": {"newtab": "main_page.html"},
+
+ "icons": {"128": "128-image.png"},
+
+ "author":"Bernardo Logan", 
+"name": "Your Name-Kimi no Na wa Extension", 
+"description": "__MSG_des__", 
+"browser_action": {"default_icon": "128-image.png", 
+"default_title": "Your Name-Kimi no Na wa Extension"},
+
+ "default_locale": "en"}

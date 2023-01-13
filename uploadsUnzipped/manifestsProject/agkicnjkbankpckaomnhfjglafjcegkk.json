@@ -1,0 +1,33 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+        "scripts": [
+            "jquery.min.js",
+            "moment.min.js",
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icon128.png",
+        "default_popup": "popup.html"
+    },
+    "default_locale": "en",
+    "description": "__MSG_appDesc__",
+    "icons": {
+        "128": "icon128.png"
+    },
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "permissions": [
+        "cookies",
+        "storage",
+        "tabs",
+        "management",
+        "<all_urls>",
+        "alarms",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "version": "2.2"
+}

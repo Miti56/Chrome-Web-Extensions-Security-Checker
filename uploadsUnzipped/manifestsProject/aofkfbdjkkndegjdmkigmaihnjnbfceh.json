@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "99dmg STEAM ID Buttons",
+"version": "1",
+"content_scripts": [
+	{
+		"matches": ["*://csgo.99damage.de/*"],
+		"js": ["content.js", "lib/bignumber.js"]
+	}],
+"icons": {
+	"16": "16x16.png"
+	}
+}

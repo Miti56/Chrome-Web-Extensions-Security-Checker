@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApIyFdDiYFkLFYg9j/k0+KtdFckH9wRUrpQY11qJSFe7cmlPlcg2ALPMnbmgBuf+NEEew23xeQcSASvbjWAJDYuSdncnl15aCuacTuox4qaQEInXIk2WL7orO/VTjtvPjJPob0raHkDDvlKBfkw3kuO2h3bpqsVGwUGxZs8l+O2IwuW7VhFyngkLudYTAUswX8ZEdk7EifuSrlgpxvXLa5MpfP5OIsM7EdUOcCYOZrNSMcf+X9FhIborHh4TxdxJWY3pTZ1oqK/mhCVmHS+lU9AHctb+nq4+AzdyinJHa7ahGAOf51rhCQYgcgmcjoMdvOeJABkVYDLCKCQsZLDfyXQIDAQAB",
+
+  "name": "Chrome Web Chat",
+  "description": "This extension adds a chat to every website you visit",
+  "version": "1.0.7",
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "Toggle Chat"
+  },
+  "permissions": [
+    "activeTab",
+    "identity",
+    "identity.email",
+    "storage",
+    "contextMenus"
+  ],
+  "optional_permissions": [
+    "notifications"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "oauth2": {
+    "client_id": "504193714183-c0unb468f9oqc88ks66vdsb6vn87an9n.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent" : false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["lib/socket.io-1.4.5.js", "lib/jquery-3.1.1.min.js",
+      "lib/jquery-ui.min.js", "js/content.js"],
+      "css": ["css/style.css", "lib/font-awesome.min.css",
+      "lib/jquery-ui.min.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "content.html",
+    "fonts/fontawesome-webfont.woff2",
+    "images/ui-icons_ffffff_256x240.png",
+    "images/ui-icons_444444_256x240.png",
+    "images/ui-icons_777777_256x240.png",
+    "images/ui-icons_555555_256x240.png"
+  ]
+}
+

@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "B.Shop",
+  "description": "Avoir les meilleures offres proposées par Bouygues Telecom sur les principaux sites marchands",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.stats.bouyguestelecom.fr/; object-src 'self'",
+  "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": true
+    },
+  "icons": { 
+      "128": "icon_bshop_128.png",
+      "48": "icon_bshop_48.png",
+      "16": "icon_bshop_16.png"
+   },
+   "permissions": [
+      "http://www.laboutique.bouyguestelecom.fr/*",
+      "http://www.accessoires.bouyguestelecom.fr/*",
+      "http://www.stats.bouyguestelecom.fr/*",
+      "https://www.stats.bouyguestelecom.fr/*",
+      "https://logs8.xiti.com/*",
+      "http://logc8.xiti.com/*",
+      "http://mesapplis.midlabo.fr/*",
+      "*://*.google.fr/*",
+      "tabs",
+      "webRequest"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "B.Shop",
+    "default_icon": "icon_bshop_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.google.fr/*",
+                  "http://www.amazon.fr/*/dp/*", "https://www.amazon.fr/*/dp/*", "http://www.amazon.fr/dp/*",
+                  "http://www.amazon.fr/gp/product/*", 
+                  "http://www.fnac.com/*/a*/w-4*", 
+                  "http://www.cdiscount.com/telephonie/telephone-mobile/*", 
+                  "http://www.leboncoin.fr/telephonie/*", 
+                  "http://boutique.orange.fr/mobile/*",
+                  "http://www.sfr.fr/mobile/telephone-portable/*",
+                  "http://www.sfr.fr/offres-mobiles/telephone-portable/*",
+                  "http://www.lesmobiles.com/telephones/*"],
+      "css": ["css/style.css"],
+      "js": ["js/modernizr.custom.63321.js", "js/bytel.js"]
+    }
+  ],
+
+  "manifest_version":2 
+}

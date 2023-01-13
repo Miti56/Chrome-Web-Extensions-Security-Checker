@@ -1,0 +1,16 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Collate",
+  "version": "0.4.21029.0",
+  "manifest_version": 2,
+  "description": "A unified BitCoin management system.",
+  "icons": { "128": "icon128.png" },
+  "background": {
+    "page": "bg.html"
+  },
+  "permissions": ["tabs", "http://*/", "https://*/"],
+  "browser_action": {
+    "default_title": "Collate",
+    "default_icon": "icon.png"
+  }
+}

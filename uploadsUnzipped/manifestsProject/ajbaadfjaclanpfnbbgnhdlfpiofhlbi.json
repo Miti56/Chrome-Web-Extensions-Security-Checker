@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "RollingTune",
+ "manifest_version": 2,
+ "short_name": "RollingTune",
+ "description": "Online Music Streaming",
+ "version": "2",
+ "icons": {
+	"128": "icon128.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://www.rollingtune.com"
+	}
+  }
+}

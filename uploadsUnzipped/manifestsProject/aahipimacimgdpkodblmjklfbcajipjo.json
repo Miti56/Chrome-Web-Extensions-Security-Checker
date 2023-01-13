@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Dapper - Staging",
+  "version": "1.0.0.5",
+  "version_name": "1.0.0-beta.5",
+  "description": "Dapper is your portal to the decentralized world",
+  "icons": {
+    "100": "img/icons/dapper.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.segment.com/analytics.js/v1/clLyBgRaklIbhWTpqZQTdGcyhCTLy0nV/analytics.min.js; object-src 'self'",
+  "web_accessible_resources": [
+    "inject.js"
+  ],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "geolocation",
+    "notifications",
+    "alarms",
+    "https://api.staging.app.dapperlabs.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://127.0.0.1/*",
+        "http://localhost/*",
+        "*://*.herokuapp.com/*",
+        "*://*.cryptokitties.co/*",
+        "*://*.kittyhats.co/*",
+        "*://*.kittybattles.io/*",
+        "*://*.localkitty.co/*",
+        "*://*.kittyrace.com/*",
+        "*://*.heaven.cat/*",
+        "*://*.mlbcryptobaseball.com/*",
+        "*://*.csc-game.com/*",
+        "*://*.godsunchained.com/*",
+        "*://*.tugofwar.io/*",
+        "*://*.etheremon.com/*",
+        "*://*.axieinfinity.com/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

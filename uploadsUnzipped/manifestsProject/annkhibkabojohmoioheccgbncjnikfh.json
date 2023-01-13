@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Nexo Goal Wins",
+  "description": "Permite avisarles al resto del equipo que se consiguio un goal!!!",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "nexo.png",
+    "default_popup": "popup.html",
+    "default_title": "Si Señor lo logre!"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

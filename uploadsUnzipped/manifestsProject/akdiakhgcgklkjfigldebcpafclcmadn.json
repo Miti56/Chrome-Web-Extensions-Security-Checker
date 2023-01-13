@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "NEIEP HCL Extension",
+  "version": "2019.10.25",
+  "description": "Enabled communications with the Mathworks physical model simulations.",
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  },
+  "permissions": ["nativeMessaging"],
+  "content_scripts": [{
+      "matches": ["*://*.site-review.net/*", "*://*.neiep.org/*", "*://neiep.mrooms.net/*"],
+      "js": ["neiep-mathworks.js"]
+  }],
+  "page_action": {
+    "default_icon": {
+      "16": "IconNeiepExtension16.png",
+      "32": "IconNeiepExtension32.png",
+      "48": "IconNeiepExtension48.png",
+      "128": "IconNeiepExtension128.png"
+    }
+  },
+  "externally_connectable": {
+    "matches": ["*://*.site-review.net/*", "*://*.neiep.org/*", "*://neiep.org/*", "*://neiep.mrooms.net/*"]
+  },
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mathworks@neiep.org",
+      "strict_min_version": "52.0"
+    }
+  }
+}

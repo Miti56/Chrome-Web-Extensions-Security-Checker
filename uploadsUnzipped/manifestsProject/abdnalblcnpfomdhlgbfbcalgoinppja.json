@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SlickDeals Filter",
+  "description": "Create your own filters to hide deals on slickdeals.net/deals/",
+  "icons": { "128": "icon_128.png" },
+  "version": "0.1.0",
+  
+  "options_page": "options.html",
+  
+  "content_scripts": [
+    {
+      "matches": ["https://slickdeals.net/deals*"],
+      "js": ["jquery/jquery-3.2.0.min.js", "bootstrap/bootstrap.min.js", "chosen_v1.7.0/chosen.jquery.min.js", "event.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "images/*.png",
+    "chosen_v1.7.0/*.png",
+    "*.css",
+    "*.ttf",
+    "*.woff",
+    "*.woff2"
+  ],
+
+  "permissions": [
+  	"storage"
+  ]
+}

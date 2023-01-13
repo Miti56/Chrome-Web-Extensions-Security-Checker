@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Domain Scanner",
+  "short_name": "Domain name suggestion tool",
+  "description": "Domain Scanner is the first domain name ideas aggregator. Find your perfect domain name by comparing suggestions from the web.",
+  "version": "2",
+  "icons": { "24": "24.png", "128": "128.png" },
+  "app": {
+    "urls": [
+      "https://domainscanner.org/"
+    ],
+    "launch": {
+      "web_url": "https://domainscanner.org/"
+    }
+  }
+}

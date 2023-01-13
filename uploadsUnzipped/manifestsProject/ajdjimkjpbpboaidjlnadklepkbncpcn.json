@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "MarsbetPro Türkiye",
+  "short_name": "Güncel MarsbetPro Türkiye adresine giriş yapın.",
+  "description": "Bu eklenti size her zaman güncel MarsbetPro adresini güvenle ziyaret olanağı sunar.",
+  "version": "1.1",
+  "browser_action": {
+    "default_icon": "16x16.png",
+    "default_popup": "marsbet.html"
+  },
+  "permissions": ["tabs"],
+  "icons": { 
+    "16": "16x16.png",
+    "48": "48x48.png",
+    "128": "128x128.png" 
+  }
+}

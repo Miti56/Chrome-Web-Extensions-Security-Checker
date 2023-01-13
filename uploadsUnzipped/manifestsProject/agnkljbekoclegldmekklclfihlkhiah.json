@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Heat Sand Race",
+    "description": "It’s a 3D race full of action and adrenaline.",
+    "version": "1",
+    "app": {
+        "urls": [
+            "http://html5.playcombo.com/HSRace/"
+        ],
+        "launch": {
+            "web_url": "http://html5.playcombo.com/HSRace/"
+        }
+    },
+    "icons": {
+        "128": "thumb128x128_frame.png"
+    },
+    "permissions": [
+        "unlimitedStorage",
+        "notifications"
+    ],
+"manifest_version": 2
+}

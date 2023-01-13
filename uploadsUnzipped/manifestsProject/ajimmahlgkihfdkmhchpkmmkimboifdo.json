@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "nJoyMovies Now",
+  "description": "nJoyMovies Now is a new Chrome extension for a quick movies,trailers and actress click-and-visit experience",
+  "version": "1.0.3",
+  "short_name": "nJoyMovies",
+  "icons": {
+    "128": "imgs/icon128.png",
+    "38": "imgs/icon38.png",
+    "16": "imgs/icon16.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "*",
+    "/js/*",
+    "mobile_sync.html"
+  ],
+  "permissions": [
+    "<all_urls>",
+    "*://*/*",
+    "tabs",
+    "storage",
+    "cookies",
+    "topSites",
+    "gcm",
+    "notifications",
+    "contextMenus",
+    "activeTab"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self' 'unsafe-eval'",
+  "background": {
+    "scripts": [
+      "/js/officialscripts/jquery.min.js",
+      "/js/background/base.js",
+      "/js/background/mobile.js",
+      "/js/background/mail.js",
+      "/js/background/user.js",
+      "/rate/rate.js",
+      "/js/background/init.js",
+      "/vertical/init.js"
+    ],
+    "persistent": true
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://*.njoyapps.com/*"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "imgs/icon38.png",
+    "default_popup": "about/index.html"
+  },
+  "homepage_url":"http://www.njoyapps.com"
+}

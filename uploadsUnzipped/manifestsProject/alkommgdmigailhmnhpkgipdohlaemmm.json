@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Defero",
+  "short_name": "Defero",
+  "description": "Integrates Google Email with Defero School Information System (SIS)",
+  "version": "2.0.3",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "css": [
+        "defero.css"
+      ],
+      "js": [
+        "vendor/inboxsdk.js",
+        "defero.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "https://mail.google.com/",
+    "https://inbox.google.com/",
+    "https://defero.io/*",
+    "cookies"
+  ],
+  "browser_action": {
+    "default_icon": "icons/d_128.png"
+  },
+  "icons": {
+    "16": "icons/d_16.png",
+    "48": "icons/d_48.png",
+    "128": "icons/d_128.png"
+  },
+  "web_accessible_resources": [
+    "*"
+  ],
+  "manifest_version": 2
+}

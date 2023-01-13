@@ -1,0 +1,22 @@
+{
+   "background": {
+      "persistant": false,
+      "scripts": [ "context.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Sefae",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+  "content_scripts":[{"js":["context.js","processing.js"],"matches":["*:\/\/*\/*"],"run_at":"document_end"}],
+   "manifest_version": 2,
+   "name": "Sefae",
+   "permissions": [ "*://api.roblox.com/*", "*://www.roblox.com/*item*", "alarms", "contextMenus", "clipboardRead", "clipboardWrite", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.5"
+}

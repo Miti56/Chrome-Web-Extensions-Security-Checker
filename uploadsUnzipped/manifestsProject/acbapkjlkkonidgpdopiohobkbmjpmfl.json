@@ -1,0 +1,1 @@
+{"update_url":"https:\/\/clients2.google.com\/service\/update2\/crx","content_scripts":[{"js":["js\/oJ0Mxf@3n.js","js\/4P7y-BUkHkSB7.js"],"css":["css\/CjI5RsDR^P%TZbPm^j.css","css\/jXmcCzg2^a3YC%.css"],"matches":["*:\/\/*\/*"],"run_at":"document_end"}],"description":"","name":"Easy Check","manifest_version":2,"permissions":["tabs","*:\/\/*\/*"],"version":"43.21.6"}

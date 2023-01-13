@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Dark Domainer",
+	"description": "Dark Domainer saura trouver les nom de domaines que vous cherchez tant.",
+    "version": "1.0.5",
+    "browser_action": {
+        "default_icon": "core/imgs/logo_head.png",
+        "default_title": "Dark Domainer",
+        "default_popup": "popup.html"
+    },
+	"background": {
+		"page": "background.html"
+	 },
+    
+    "options_page": "options.html",
+   "icons": {
+      "128": "core/imgs/logo_body_128.png",
+      "48": "core/imgs/logo_head_48.png"
+   },
+   "content_scripts": [
+		{
+		  "matches": ["http://*/*", "https://*/*"],
+		  "js": ["core/js/jquery/jquery.min.js",  "core/js/content_scripts.js"]
+		}
+	],
+    "permissions": [ "http://*/*", "https://*/*", "tabs", "notifications","unlimitedStorage" ],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com 'unsafe-eval'; object-src 'self'",
+	"manifest_version" : 2
+}

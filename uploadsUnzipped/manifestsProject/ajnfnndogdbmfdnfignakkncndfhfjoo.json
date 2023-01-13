@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SA-booster",
+  "description": "Extends the functionality of SkoleArena.no",
+  "version": "0.75",
+  "author": "Nicolai R. Tellefsen",
+  "icons": {
+	"128": "icon_128.png",
+	"48": "icon_48.png"
+  },
+  "permissions": [
+	"storage",
+	"*://www.skolearena.no/*"
+  ],
+  "content_scripts": [
+	{
+		"matches": ["*://www.skolearena.no/*"],
+		"css": ["mystyles.css"],
+		"js": ["loader.js"]
+	}
+  ],
+  "web_accessible_resources": [
+	"jquery.js",
+	"myscripts.js"
+  ]
+}

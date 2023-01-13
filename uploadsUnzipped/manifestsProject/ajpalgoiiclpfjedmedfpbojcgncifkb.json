@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Filelist filter",
+    "version": "1.0.1",
+    "description": "Filter movies/others on filelist.ro",
+    "permissions": ["storage", "declarativeContent", "activeTab", "webNavigation"],
+    "background": {
+        "scripts": ["jquery.min.js", "background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icons": {
+            "16": "images/filelist_16.png",
+            "32": "images/filelist_32.png",
+            "48": "images/filelist_48.png",
+            "128": "images/filelist_128.png"
+        }
+    },
+    "icons": {
+        "16": "images/filelist_16.png",
+        "32": "images/filelist_16.png",
+        "48": "images/filelist_48.png",
+        "128": "images/filelist_128.png"
+    },
+    "options_page": "options.html",
+    "content_scripts": [ {
+        "js": [ "jquery.min.js", "contentScript.js" ],
+        "matches": [ "https://filelist.ro/browse.php*"],
+        "css": ["css/style.css"],
+        "run_at": "document_end"
+      }],
+    "manifest_version": 2
+}

@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"author": "广州聚凯软件科技有限公司",
+    "manifest_version": 2,
+	"name": "极客全网营销",
+	"description": "广州聚凯官方出品,“极客全网营销采集助手” 支持采集速卖通、亚马逊、阿里巴巴，ebay等电商网站的产品，一键发布到官网的快速采集发布工具。",
+	"version": "1.0.3",
+	"icons":{
+		"16": "images/logo16.png",
+		"48": "images/logo48.png",
+		"128": "images/logo128.png"
+	},
+	"browser_action":{
+		"default_icon":{
+			"16": "images/logo16.png",
+			"48": "images/logo48.png",
+			"128": "images/logo128.png"
+		},
+      	"default_popup": "popup.html",
+		"default_title":"极客全网营销"
+	},
+	"content_scripts":[
+		{
+			"matches": [
+				"<all_urls>"
+			  ],
+			"all_frames": true,
+			"css": ["js/layer/theme/default/layer.css"],
+			"js":["js/jquery.js","js/jquery.json.js","js/layer/layer.js", "js/util.js", "js/ui.js" ,"js/client.js"]
+		}
+	],
+	"background":{
+		"scripts": ["js/jquery.js", "js/util.js", "js/client.js", "js/background.js"]
+	},
+	"permissions":[
+		"tabs", 
+		"storage",
+		"webRequest",
+		"management",
+		"contextMenus",
+		"notifications",
+		"cookies",
+		"<all_urls>",
+		"http://*/*",
+		"https://*/*"
+	]
+}

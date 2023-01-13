@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Streamities - Realtime Sub Count for YouTube",
+  "short_name": "Streamities",
+  "version": "1.1",
+  "description": "Show your current realtime subscriber count live in the YouTube Creator Studio.",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "webRequest",
+    "https://studio.youtube.com/channel/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://studio.youtube.com/channel/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "iframe.html",
+    "images/icons/trending.png"
+  ],
+  "options_page": "options.html",
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icons/16.png",
+      "32": "images/icons/32.png",
+      "48": "images/icons/48.png",
+      "128": "images/icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icons/16.png",
+    "32": "images/icons/32.png",
+    "48": "images/icons/48.png",
+    "128": "images/icons/128.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SafeUrls",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "阻止黑名单恶意链接",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "page": "src/bg/index.html",
+    "persistent": true
+  },
+  "options_page": "src/options/index.html",
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "SafeUrls",
+    "default_popup": "src/browser_action/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>","https://*/*","http://*/*"],
+      "js": ["src/blocked/con_scr.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Jatna for Chrome",
+  "version" : "1.0.8",
+  "description" : "Informs the user when they can donate to charity.",
+  "background" : {
+    "page": "background.html"
+  },
+  "page_action" :
+  {
+    "default_icon": "leaf-19.png",
+    "default_title": "This page is on Jatna!",
+	"default_popup": "popup.html"
+  },
+  "permissions": [
+	"tabs",
+	"http://*/*",
+	"https://*/*",
+    "<all_urls>",
+	"history"
+  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+	  "js" : ["jquery.js", "jquery.jgrowl.js", "background.js", "contentscript.js"],
+	  "css": ["jquery.jgrowl.css"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "icons" : {
+	"16" : "icon-16.png",
+    "48" : "leaf-48.png",
+    "128" : "leaf-128.png"
+  },
+  "manifest_version": 2
+}

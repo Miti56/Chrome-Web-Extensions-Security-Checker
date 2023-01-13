@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Pongball",
+    "version": "1.1.1",
+    "description": "A fun back and forth ping-pong game with AI or 2-player modes!",
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon64.png",
+        "16": "image.ico"
+    },
+    "browser_action": {
+        "default_icon": "image.ico",
+        "default_popup": "RealPong.html"
+    }
+}

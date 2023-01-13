@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Ninja Token 4.0",   
+  "version": "4.0",
+  "version_name":"Ninja Token 4.0",
+   "description": "Tiện ích dành cho khách hàng phần mềm Ninja",
+   "icons": {
+      "128": "fav.png",
+      "16": "fav.png",
+      "48": "fav.png"
+   },
+  "browser_action": {
+     "default_icon": "fav.png",
+    "default_popup": "popup.html"
+  },
+   "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "webRequestBlocking",
+    "webRequest",
+    "storage", 
+    "activeTab", 
+    "tabs", 
+    "proxy",
+    "webNavigation", 
+    "cookies",
+    "browsingData",
+    "notifications",
+    "contextMenus",
+    "clipboardWrite",
+    "clipboardRead",
+    "downloads"
+    ],
+	 "content_scripts": [
+      {
+        "matches": ["*://127.0.0.1/*","*://localhost/*","*://*.localhost/*","*://*.facebook.com/*"],
+        "all_frames": true,
+        "js": ["jquery.min.js"]
+		  }
+	  ],
+    "background": {
+        "scripts": ["jquery.min.js","background.js"],
+        "persistent": true
+    },      
+    "web_accessible_resources": [
+        "*://127.0.0.1/*",
+        "*://localhost/*",
+     
+        "*://*.facebook.com/*", 
+        "*://*.pusher.com/*", 
+        "https://*.facebook.com/*",
+        "jquery.min.js",
+        "popup.js"
+    ],
+    "content_security_policy": "script-src 'self' https://stats.pusher.com; object-src 'self'"
+}
+ 

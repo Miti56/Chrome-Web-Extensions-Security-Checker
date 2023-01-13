@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"Photoscape by Xgame",
+	"description":"Photoscape is a great photo editor. It includes lots of special filters, tools and effects and is completely free",
+	"version":"3.7",
+	"chrome_url_overrides":{
+		"newtab":"newpage.html"
+	},
+	"browser_action":{
+		"default_icon":"icon.png"
+	}, 
+	"permissions":[
+		"tabs"
+	],
+	"background":{
+		"scripts":["background.js"],
+		"persistent":false
+	}
+	
+}

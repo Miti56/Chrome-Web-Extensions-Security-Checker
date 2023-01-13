@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "图片加速器(淘宝/天猫/JD)",
+  "version": "1.85",
+  "description": "使用后商品图片打开速度加快, 本扩展能破解淘宝等网站的图片限制(目前天猫,JD也支持了)",
+  "permissions": [
+  "tabs","*://*/*","webRequest","cookies","history"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+   "icons": { 
+		"16": "icon16.png", 
+         "48": "icon48.png", 
+         "128": "icon128.png" },
+"background": {
+    "page": "background.html"
+  }
+
+}

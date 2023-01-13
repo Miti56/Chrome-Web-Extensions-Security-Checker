@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "description": "Assinatura de Nota Fiscal com Certificado A3",
+    "externally_connectable": {
+        "matches": ["*://*.cafi.com.br/*"]
+    },
+    "icons": {
+        "128": "icons/icon-128.png",
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png"
+     },
+    "manifest_version": 2,
+    "name": "Cafi Certificado A3",
+    "page_action": {
+        "default_popup": "about.html",
+        "default_title": "Cafi Certificado A3"
+    },
+    "permissions": ["nativeMessaging"],
+    "version": "1.0.1"
+}

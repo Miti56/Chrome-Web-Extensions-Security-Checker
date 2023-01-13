@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Pintellect",
+  "short_name": "Pintellect",
+  "description": "Grab influences from the web and share them on Pintellect and other social media sites!",
+  "version": "0.24",
+
+  "homepage_url": "https://www.pintellect.io",
+  "browser_action": {
+    "default_icon": "images/storeIcons/icon128-production.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "externally_connectable": {
+    "matches": ["*://pintellect.local/*", "*://*.pintellect.io/*"]
+  },
+  "icons": {
+    "16": "images/storeIcons/icon16-production.png",
+    "48": "images/storeIcons/icon48-production.png",
+    "128": "images/storeIcons/icon128-production.png"
+  },
+  "minimum_chrome_version": "55.0.2883.75",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "all_frames": false,
+      "js": ["content-pdf.js", "rangy/rangy-core.js", "rangy/rangy-classapplier.js", "rangy/rangy-highlighter.js", "mark/mark.js",
+        "jquery.js", "moment.js", "lodash.core.js", "tribute/tribute.js",
+        "tingle.js",
+        "pintellect-content.js"],
+      "css": ["content-pdf.css", "tingle.css", "tribute/tribute.css", "pintellect-content.css"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "images/*"
+  ],
+  "permissions": [
+    "cookies",
+    "notifications",
+    "storage",
+    "tabs",
+    "webRequest", "webRequestBlocking",
+    "webNavigation",
+    "*://*/*.pdf",
+    "https://*.pintellect.io/*",
+    "http://*.pintellect.io/*",
+    "http://localhost/*",
+    "http://pintellect.local/*"
+  ]
+}

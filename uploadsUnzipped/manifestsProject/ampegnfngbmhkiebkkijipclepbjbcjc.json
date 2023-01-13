@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Interpreto Extension",
+  "icons": {
+    "16": "assets/icons/icon.png",
+    "48": "assets/icons/icon.png",
+    "128": "assets/icons/icon.png"
+  },
+  "version": "2.4.0",
+  "description":
+    "This extension is a demo for learning a language by reading in that language",
+  "permissions": ["tabs", "activeTab", "contextMenus", "storage"],
+  "background": {
+    "page": "index.html#/event-page",
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css":["contentscript.css"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Interpreto Extension",
+    "default_popup": "index.html#/all-words",
+    "default_icon": "assets/icons/icon.png"
+  },
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

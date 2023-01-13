@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Crypto Coin Market Cap",
+  "description": "Crypto Coin Market Cap. More features will come soon.",
+  "version": "0.0.1",
+  "icons": {
+    "48": "img/icon48.png",
+    "128": "img/icon.png" 
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/jquery.min.js",
+      "js/bootstrap.min.js",
+      "js/scrollspy.js",
+      "js/coinWidget.js",
+      "js/quickSearch.js",
+      "js/main.js",
+      "js/background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'sha256-zazWTR0XFi1jIhOCA5zyWUjF31uAS1mEMRoegbDT6pU='",
+  "web_accessible_resources": ["img/icon.png"],
+  "permissions": [
+    "notifications",
+    "https://weibo.com/",
+    "https://widgets.coinmarketcap.com/",
+    "http://*/",
+    "https://*/"
+  ]
+}

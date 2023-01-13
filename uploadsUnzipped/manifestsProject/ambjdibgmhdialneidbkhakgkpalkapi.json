@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "version": "0.1.3.2",
+  "description": "__MSG_extDescription__",
+  "icons": {
+	 "128": "icons/128x128.png",
+	 "48": "icons/48x48.png",
+	 "16": "icons/16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "656527726823",
+  "default_locale": "en",
+  "short_name": "Gluegent Addressbook",
+  "signature": "Gluegent, Inc.",
+  "app": {
+  	"launch": {
+  		"web_url": "https://test-gluegent-addressbook.appspot.com/"
+  	}
+  }
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AwardBase",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Sorts awardace.com search results by points, not miles.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "content_scripts" : [{
+    "matches" : [ "http://www.awardace.com/*"],
+    "js" : ["src/lodash.min.js", "src/jquery.min.js", "src/main.js"]
+  }],
+  "permissions": [
+    "http://www.awardace.com/*"
+  ],
+  "web_accessible_resources": ["img/amex.svg", "img/chase.svg", "img/citi.svg", "img/spg.svg"]
+}

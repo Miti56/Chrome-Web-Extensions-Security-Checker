@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Play To Cafe Bazaar",
+	"description": "Simply find Google Play apps and games in Cafebazaar",
+	"version": "1.0",
+	"icons": {
+		"128": "images/icon.png"
+	},
+	"background": {
+		"scripts": ["scripts/background.js"]
+	},
+	"permissions": [
+		"tabs", "http://play.google.com/store/apps/*", "https://play.google.com/store/apps/*", "http://cafebazaar.ir/app/*"
+	],
+	"page_action": {
+		"default_icon": {
+			"38": "images/icon38.png"
+		},
+		"default_title": "Hey! this app is in cafebazaar!"
+	}
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Zeus Quest Remastered",
+  "description": "Zeus Quests Remastered is a silly point and click adventure game with light-hearted humour.",
+  "version": "1.0.8.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.crazysoftcloud.net/cloud/zeusquest/"
+    ],
+    "launch": {
+      "web_url": "http://www.crazysoftcloud.net/cloud/zeusquest/"
+    }
+  }
+}

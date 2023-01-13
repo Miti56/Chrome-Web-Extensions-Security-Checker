@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "__MSG_name__",
+	"version": "1.1.2",
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"homepage_url"		: "https://www.facebook.com/groups/wordpressseotools/676933899022668/",
+
+	"content_scripts": [{
+	  "js": ["contentscript.js"],
+	  "matches": [ "*://www.youtube.com/*" ],
+          "run_at": "document_start",
+          "all_frames": false
+	}],	
+	
+	"icons": {
+	  "128": "icon-128.png",
+	  "16": "icon-16.png",
+	  "48": "icon-48.png"
+	},
+	
+	"permissions": ["contentSettings", "tabs","activeTab", "*://www.youtube.com/*"],
+	"update_url": "https://clients2.google.com/service/update2/crx",	
+	"web_accessible_resources": [ "buttons.png"]
+}

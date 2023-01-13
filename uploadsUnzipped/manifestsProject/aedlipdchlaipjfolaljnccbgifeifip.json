@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Openbravo Chrome Extension",
+  "name": "Openbravo",
+  "version": "0.4",
+  "description": "Chrome Extension for Openbravo Applications",
+  "icons": {
+    "60": "mobilewebapp60x60.png",
+    "128": "mobilewebapp128x128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "mobilewebapp128x128.png",
+    "default_title": "Openbravo Chrome Extension"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["content.js"]
+  }],
+  "permissions": [
+    "declarativeContent"
+  ]
+}

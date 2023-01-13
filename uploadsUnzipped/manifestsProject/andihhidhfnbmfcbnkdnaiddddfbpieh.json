@@ -1,0 +1,31 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.1",
+  "name": "Scorge's Dream Theater Theme",
+  "theme": {
+    "images" : {
+      "theme_frame" : "Frame.png",
+      "theme_frame_overlay" : "Overlay.png",
+      "theme_toolbar" : "Toolbar.png",
+      "theme_ntp_background" : "BG.png",
+      "theme_ntp_attribution" : "Logo.png"
+    },
+    "colors" : {
+      "frame" : [255, 255, 255],
+      "toolbar" : [50, 50, 50],
+      "bookmark_text" : [200, 200, 200],
+      "ntp_text" : [255, 255, 255],
+      "ntp_link" : [255, 255, 250],
+      "ntp_section_text" : [255, 255, 250],
+      "ntp_section_link" : [200, 200, 200],
+      "ntp_section" : [50, 50, 50],
+      "button_background" : [255, 255, 255]
+    },
+    "tints" : {
+      "buttons" : [0.33, 0.0, 0.40]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom"
+    }
+  }
+}

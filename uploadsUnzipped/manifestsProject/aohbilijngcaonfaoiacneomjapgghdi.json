@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name":"Suffolk Libraries printing KtoO",
+   "version":"0.1",
+   "manifest_version":2,
+   "description":"Link to print",
+   "app":{
+          "urls":["http://printing.suffolklibraries.co.uk/ktoo"],
+          "launch":{
+		            "web_url":"http://printing.suffolklibraries.co.uk/ktoo"
+					}
+             },		
+   "icons":{
+          "48":"print.png","128":"128print.png"}
+		
+		  }

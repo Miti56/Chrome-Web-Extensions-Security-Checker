@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Better Flow",
+  "version": "1.1.0",
+  "description": "团队内部工作流增强工具，公交/打包/发布等开发流程优化",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Better Flow",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://fabu.qima-inc.com/pubs/apply/*/pre"
+      ],
+      "js": [
+        "js/fabu-watcher.js",
+        "js/common.js"
+      ],
+      "css": [
+        "css/index.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "http://code.qima-inc.com/bus",
+        "http://code.qima-inc.com/express"
+      ],
+      "js": [
+        "js/super-build-order.js",
+        "js/common.js"
+      ],
+      "css": [
+        "css/index.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

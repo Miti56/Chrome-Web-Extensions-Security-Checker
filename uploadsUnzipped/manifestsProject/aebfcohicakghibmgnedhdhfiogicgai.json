@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Gusto",
+  "version": "1.0.0.1",
+  "description": "Payroll, benefits, and HR built for small business",
+  "icons": {
+    "128": "icons/128x128.png",
+    "16": "icons/16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "416608718644",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://app.gusto.com/user/auth/google_oauth2?gsuite_marketplace=true"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Echoes Player",
+    "short_name": "echoes",
+    "version": "3.0.0",
+    "manifest_version": 2,
+    "description": "Ultimate Player for youtube play - Best way to listen & watch",
+    "icons": {
+        "36": "images/icon-36.png",
+        "96": "images/icon-96.png",
+        "128": "images/icon-128.png",
+        "144": "images/icon-144.png",
+        "192": "images/icon-192.png"
+    },
+    "default_locale": "en",
+    "app": {
+        "background": {
+          "scripts": ["scripts/main.js"]
+        }
+    },
+    "permissions": ["webview"]
+}

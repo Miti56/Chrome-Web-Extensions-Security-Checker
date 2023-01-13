@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+
+"name": "Voxel Fly",
+"version": "1.0",
+"manifest_version": 2,
+
+"description": "Voxel arcade flying game",
+"icons": {  "16": "ikonka16.png", 
+			"48": "ikonka48.png", 
+			"128": "ikonka128.png" },
+
+
+"app": { "urls": [  "http://voxelfly.cenda.cz/"  ], "launch": {  "web_url": "http://voxelfly.cenda.cz/"  }  }
+
+}

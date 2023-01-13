@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GitHub Widebody",
+  "description": "Lets you adjust the width of the GitHub Files changed code diff containers",
+  "version": "0.9.1",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["<all_urls>"],
+      "js": ["js/github-widebody.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+      "19": "icons/icon19.png",
+      "38": "icons/icon38.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "GitHub Widebody"
+  },
+  "permissions": [ "storage" ],
+  "manifest_version": 2
+}

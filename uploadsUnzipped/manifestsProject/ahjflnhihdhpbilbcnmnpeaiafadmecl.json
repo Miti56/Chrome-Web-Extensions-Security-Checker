@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "popup.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "script.js" ],
+      "matches": [ "https://plus.google.com/*" ]
+   } ],
+   "content_security_policy": "style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_Desc__",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "32": "32.png",
+      "48": "48.png",
+      "64": "64.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2snmen6BBhLXC2cp3jLt+D40/KvfdBnYt5tdX0XDEJ8qXSNpTQxgH3j40IDBAlhvq31xJwf4OrAkdNYIdjktj4ZysCqFl1hQQWObFw7SPSq5FleQWfJCkV684pnodjSVqd1k3IZZpt6KuRujwmPzwVwb8fkJCzWUvHNXCv54sewIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_Name__",
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "http://www.google.com/*", "https://www.google.com/*", "https://plus.google.com/*", "https://maps.googleapis.com/*", "geolocation", "cookies" ],
+   "short_name": "__MSG_Name_Short__",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "5.62.18",
+   "web_accessible_resources": [ "loading.gif", "options_button.png", "options_button_hover.png", "left_arrow.png", "left_arrow_hover.png", "right_arrow.png", "right_arrow_hover.png", "images/weather_clear.gif", "images/weather_cloudy_day.gif", "images/weather_cloudy_night.gif", "images/weather_fog_day.gif", "images/weather_fog_night.gif", "images/weather_hot.gif", "images/weather_partly_cloud.gif", "images/weather_partly_cloud_night.gif", "images/weather_partly_sunny.gif", "images/weather_rain.gif", "images/weather_rain_night.gif", "images/weather_snow_day.gif", "images/weather_snow_night.gif", "images/weather_sunny.gif", "images/weather_thunderstorm_day.gif", "images/weather_thunderstorm_night.gif", "images/weather_windy_day.gif", "images/weather_windy_night.gif" ]
+}

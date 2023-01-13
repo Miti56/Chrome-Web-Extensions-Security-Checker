@@ -1,0 +1,12 @@
+{
+  "app": {
+    "urls": ["http://factu-nube.com/"],
+    "launch": {"web_url": "http://factu-nube.com/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Facturación online potente y fácil. Facturas, presupuestos, albaranes, tíckets, artículos, stock, etc. Sin límites.",
+  "name": "Factunube \u2013 Gestión online",
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "1.2"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "BestChange",
+    "description": "BestChange.ru is a free online service to search for points of exchange of electronic money.",
+    "app": {
+        "urls": ["http://chengebest.jimdo.com/"],
+        "launch": {
+            "web_url": "http://chengebest.jimdo.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

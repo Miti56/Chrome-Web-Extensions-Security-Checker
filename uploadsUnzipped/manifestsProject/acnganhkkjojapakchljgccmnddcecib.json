@@ -1,0 +1,10 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"permissions": [{"fileSystem": ["write", "retainEntries", "directory"]},"storage", "webview","notifications", "fullscreen", "alwaysOnTopWindows","<all_urls>","identity","unlimitedStorage","alarms","clipboardRead","clipboardWrite","contextMenus","geolocation","system.cpu", "system.memory", "system.storage", "system.display","system.network"],
+ "name":"R300toCSV",
+ "manifest_version":2,
+ "offline_enabled": true,
+ "description":"R300 to CSV and R300 to AXA Bank",
+ "version":"0.7.1",
+ "icons": {"128":"/images/icons/icon-128.png","48": "/images/icons/icon-48.png","16":"/images/icons/icon-16.png"},
+ "app": {"background": { "scripts": ["/js/jquery.min.js","/js/md5.js","background.js","/js/core_vars.js","/js/core_functions.js"]}}}

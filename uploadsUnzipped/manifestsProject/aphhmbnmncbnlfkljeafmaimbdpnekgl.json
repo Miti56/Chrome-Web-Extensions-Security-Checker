@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Talos-Genesis Bridge",
+  "version": "0.0.1",
+  "description": "Browser extension to allow bridging of user events between Talos and Genesis.",
+  "background": {
+    "scripts": [
+      "messageBroker.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:4200/*",
+        "https://talos-app.io/*",
+        "https://talos-staging.tech.sitasys.com/*",
+        "https://*.nxgen.cloud/*"
+      ],
+	  "all_frames": true,
+      "js": [
+        "pageScript.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}

@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "ILANTUS IDaaS Next",
+  "description": "Single Sign On for web and desktop applications.",
+  
+  "version": "7.1",
+   
+  "permissions": [
+	 "storage",
+     "cookies",
+	 "tabs",
+	"http://*/*",
+	"https://*/*"
+    
+  ],
+  "background": {
+		"scripts": ["background.js"] 
+    },
+  "content_scripts": [
+    {
+	  "all_frames": true,
+	  "js": ["popup.js"],
+      "matches": [ "http://*/*", "https://*/*", "file:///*" ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+      "128": "favicon128.png",
+      "16": "favicon16.png",
+      "32": "favicon32.png",
+      "48": "favicon48.png"
+   },
+   
+   "web_accessible_resources": [
+    "icon.png"
+  ],
+   
+  "browser_action": {
+   "default_title": "REAL Sign-On",
+    "default_icon": "icon.png",
+    "default_popup": "background.html"
+
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "Maxim Antonisin",
+   "description": "Torrents md plugin",
+   "homepage_url": "https://www.linkedin.com/in/mantonishin",
+   "manifest_version": 2,
+   "name": "TorrentsMD magnet",
+   "permissions": ["tabs", "http://*/*"],
+   "version": "1.0.1.3",
+   "content_scripts" : [{
+        "run_at"  : "document_start",
+        "matches" : [ "https://www.torrentsmd.com/index.php", "https://www.torrentsmd.com/", "https://www.torrentsmd.com/", "https://www.torrentsmd.com/browse.php", "https://www.torrentsmd.com/browse.php*", "https://www.torrentsmd.com/search.php", "https://www.torrentsmd.com/search.php*"],
+        "js"      : ["main.js"]
+    }]
+}

@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "author": "Medeputize Systems",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://registry3.ncd.or.jp/karte/page/*",
+                "https://registry3.ncd.or.jp/karte/htmldoc/*",
+                "https://registry3.ncd.or.jp/JNR/page/*",
+                "https://registry3.ncd.or.jp/jsprs/page/*",
+                "https://registry3.ncd.or.jp/urology/page/*",
+                "https://ncdhelper.jimdofree.com/*",
+                "https://script.google.com/*"
+            ],
+            "js": [
+                "jquery-2.1.4.min.js",
+                "script.js",
+                "ncdconsts.js",
+                "diag_2017.js",
+                "diag_2019.js",
+                "proc_2012.js",
+                "proc_2018.js",
+                "proc_2019.js",
+                "elements.js",
+                "csvelements.js",
+                "ncdtables.js",
+                "jquery.alerts.js",
+                "images.js",
+                "jquery-ui.min.js",
+                "help.js",
+                "jsgs_table.js",
+                "sampledata.js"
+            ],
+            "css": [
+                "jquery.alerts.css",
+                "jquery-ui.min.css",
+                "jquery-ui.structure.min.css",
+                "ncdhelper.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {
+        "16": "Icon_NCDHelper_16.png",
+        "48": "Icon_NCDHelper_48.png",
+        "128": "Icon_NCDHelper_128.png"
+    },
+    "browser_action": {
+        "default_icon": "Icon_NCDHelper_16.png",
+        "default_title": "NCD Helper",
+        "default_popup": "popup.html"
+    },
+    "description": "NCD手術データの注入・抽出をクリップボード経由で行います",
+    "manifest_version": 2,
+    "name": "NCD Helper",
+    "permissions": [
+        "power",
+        "clipboardWrite",
+        "clipboardRead",
+        "storage"
+    ],
+    "version": "4.2.1"
+}

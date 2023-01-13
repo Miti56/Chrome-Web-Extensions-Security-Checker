@@ -1,0 +1,42 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name" : "Twelephone",
+  "version" : "0.2.0.20",
+  "manifest_version": 2,
+  "description" : "Twelephone",
+  "background": { 
+    "page": "background.html" 
+    },
+  "browser_action" : {
+    "default_icon" : "logo-32.png",
+	  "default_title" : "Twelephone",
+	  "default_popup" : "popup.html"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : [ "jquery-1.8.0.js", "contentscript.js", "flates.js" ],
+      "run_at" : "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    "logo-48.png"
+  ],
+  "icons" : {
+    "16" : "logo-16.png",
+    "48" : "logo-48.png",
+    "128" : "logo-128.png"
+  },
+	"permissions": [
+	  "tabs",
+    "notifications",
+    "cookies", 
+    "http://localhost/",
+    "http://127.0.0.1/",
+    "http://twelephone.com/",
+    "http://www.twelephone.com/"
+	]
+}

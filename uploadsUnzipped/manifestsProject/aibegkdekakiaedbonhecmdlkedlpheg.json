@@ -1,0 +1,20 @@
+{
+   "app": {
+      "background": {
+         "persistent": true,
+         "scripts": [ "background.js" ]
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "24.0.1307.0",
+   "name": "__MSG_appName__",
+   "permissions": [ "notifications", "storage", "browser", "alarms" ],
+   "short_name": "Diet Diary Online",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

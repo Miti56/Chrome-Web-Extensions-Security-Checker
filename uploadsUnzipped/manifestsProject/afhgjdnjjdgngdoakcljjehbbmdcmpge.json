@@ -1,0 +1,31 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+
+	"name": "SilverStripe URL Variable Tools",
+	"description": "The extension provides shortcuts to SilverStripes URL variable tools",
+	"version": "0.0.0.3",
+
+	"permissions": [
+		"tabs",
+		"storage"
+	],
+
+	"browser_action": {
+		"default_icon": "img/ss-16.png",
+		"default_popup": "popup.html"
+	},
+
+	"content_scripts": [ {
+		"js": ["js/page.js"],
+		"run_at": "document_end",
+		"matches": [ "http://*/*", "https://*/*" ]
+	} ],
+
+
+	"icons" : {
+		"16" : "img/ss-16.png",
+		"48" : "img/ss-48.png",
+		"128" : "img/ss-128.png"
+	}
+}

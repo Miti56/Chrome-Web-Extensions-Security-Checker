@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Douban.FM",
+  "description": "Direct to douban.fm",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "douban-fm-16.png",
+    "128": "douban-fm-128.png"
+  },
+  "optional_permissions": [
+      "http://douban.fm/"
+  ],
+  "app": {
+    "launch": {
+      "local_path": "local.html"
+    }
+  }
+}

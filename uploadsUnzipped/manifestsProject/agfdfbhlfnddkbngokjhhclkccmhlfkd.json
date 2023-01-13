@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "My_Test_DRM_Cloud_App",
+    "version": "0.0.0.4",
+    "manifest_version": 2,
+    "description": "I am tring it for the first time",
+    "container": ["GOOGLE_DRIVE"],
+    "api_console_project_id": "293296966088",
+    "gdrive_mime_types": {
+      "http://drive.google.com/intents/opendrivedoc": [
+        {
+          "type": ["image/png", "image/jpeg", "image/gif", "application/vnd.google.drive.ext-type.png",
+          "application/vnd.google.drive.ext-type.jpg","application/vnd.google.drive.ext-type.gif"],
+          "href": "https://drmcloudtesting.blogspot.my",
+          "title": "Open",
+          "disposition": "window"
+        }
+      ]
+    },
+    "icons": {
+      "128": "icon_128.png"
+    },
+    "app": {
+      "launch": {
+      "web_url": "https://drmcloudtesting.blogspot.my"
+      }
+    }
+  }

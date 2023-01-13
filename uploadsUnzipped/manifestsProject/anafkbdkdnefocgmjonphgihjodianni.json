@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.0.2",
+  "name": "Fit Story Research Assistant",
+  "manifest_version": 2,
+  "description": "Fit Story Research Assistant helps professionals clip and save important information relevant to creating Fit Stories on JobFit",
+  "browser_action": {
+    "default_title": "Fit Story Research Assistant",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "img/icon-16.png",
+      "48": "img/icon-48.png",
+      "128": "img/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "author": "JobFit",
+  "web_accessible_resources": ["inject.html"],
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "css": ["semantic/semantic.min.css"],
+      "js": ["semantic/semantic.min.js"]
+    }
+  ],
+  "homepage_url": "https://getjobfit.com",
+  "permissions": [
+    "contextMenus",
+    "management",
+    "tabs",
+    "storage",
+    "https://github.com/*",
+    "activeTab",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking",
+    "background",
+    "activeTab",
+    "http://*/",
+    "https://*/"
+  ],
+  "web_accessible_resources": [
+    "*.png",
+    "*.eot",
+    "*.woff",
+    "*.woff2",
+    "*.ttf",
+    "*.svg"
+  ],
+  "content_security_policy": "default-src 'self'; script-src 'self' '*://*/* https://*.googleapis.com https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com http://localhost:3000 https://localhost:3000 'unsafe-eval'; connect-src '*://*/* https://*.googleapis.com https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com http://localhost:3000 https://localhost:3000; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
+}

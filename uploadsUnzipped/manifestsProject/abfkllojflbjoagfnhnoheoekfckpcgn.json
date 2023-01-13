@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Oryt - Making it possible!",
+  "short_name" : "Shop for good.",
+  "version": "0.7",
+  "icons": {
+      "16": "images/appicon-16.png",
+      "32": "images/appicon-32.png",
+      "48": "images/appicon-48.png",
+      "128": "images/appicon-128.png"
+    },
+  "browser_action": {
+        "default_icon": {
+          "16": "images/appicon-16.png",
+          "32": "images/appicon-32.png",
+          "48": "images/appicon-48.png",
+          "128": "images/appicon-128.png"
+        },
+        "default_popup": "popup.html",
+        "default_title": "Oryt"
+    },
+   "permissions": [
+    "storage","https://oryt.co.uk/data.php"
+  ],
+  "content_scripts": [
+	  {
+	    "matches": [
+        "https://www.amazon.co.uk/*",
+        "https://www.ebay.co.uk/*",
+        "https://www.argos.co.uk/*",
+        "https://www.debenhams.com/*"
+	    ],
+      "run_at": "document_end",
+      "all_frames": true,
+	    "js": ["jquery-3.4.1.min.js","content.js","popup.js","jquery.cookie.js"],
+      "css" : ["plugin.css"]
+	  }
+	],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://oryt.co.uk/data.php; object-src 'self'"
+}

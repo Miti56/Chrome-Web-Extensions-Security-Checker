@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Giftodel",
+	"manifest_version": 2,
+	"description": "Весёлые стикеры, смешные гифки и многое другое для социальных сетей - всё тут!",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": [ "content.js" ],
+			"run_at": "document_start",
+			"all_frames": false
+		}
+	],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+	"permissions": [
+		"storage",
+		"webRequestBlocking",
+		"activeTab",
+		"webRequest",
+		"<all_urls>"
+	],
+	"icons":{
+		"16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
+	},
+	"web_accessible_resources": [
+		"/*"
+	],
+	"browser_action": {},
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

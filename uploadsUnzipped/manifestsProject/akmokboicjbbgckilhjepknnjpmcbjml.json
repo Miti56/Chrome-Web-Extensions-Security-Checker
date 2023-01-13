@@ -1,0 +1,8 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Mongolian Translator",
+  "version": "0.0.1",
+  "description": "Translate from English, French, German, Japanese, Spanish to Mongolian.",
+  "manifest_version": 2
+}

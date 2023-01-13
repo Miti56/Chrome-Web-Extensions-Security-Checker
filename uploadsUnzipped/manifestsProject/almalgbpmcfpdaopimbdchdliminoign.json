@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "3.0.0",
+    "homepage_url": "https://www.urban-vpn.com/",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "bg/build.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "icons/icon_grey.png",
+        "default_title": "Urban Shield",
+        "default_popup": "popup/index.html"
+    },
+    "icons": {
+        "16": "icons/icon.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "proxy",
+        "management",
+        "alarms",
+        "storage",
+        "<all_urls>",
+        "https://*.urban-vpn.com/*",
+        "https://google-analytics.com/*",
+        "https://www.google-analytics.com/*",
+        "https://ssl.google-analytics.com/*"
+    ]
+}

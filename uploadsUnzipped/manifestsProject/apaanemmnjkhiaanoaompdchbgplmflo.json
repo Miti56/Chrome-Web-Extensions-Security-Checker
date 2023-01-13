@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Dojo 2 DevTools",
+	"short_name": "Dojo 2 DevTools",
+	"description": "A development tool extension for Dojo 2",
+	"homepage_url": "https://github.com/dojo/devtool",
+	"version": "0.0.3.1",
+	"page_action": {
+		"default_icon": "img/logo/38x38.png",
+		"default_title": "Dojo 2 DevTools"
+	},
+	"devtools_page": "devtools.html",
+	"icons": {
+		"16": "img/logo/16x16.png",
+		"32": "img/logo/32x32.png",
+		"48": "img/logo/48x48.png",
+		"128": "img/logo/128x128.png"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; style-src * 'unsafe-inline'; img-src 'self' data:;"
+}

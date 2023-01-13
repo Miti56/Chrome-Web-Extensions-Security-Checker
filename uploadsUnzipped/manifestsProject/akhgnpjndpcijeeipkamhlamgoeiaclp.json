@@ -1,0 +1,16 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Sunny Day for Gmail",
+  "version": "1.0.0",
+  "description": "Make your gmail inbox a little more pleasant when you reach inbox zero \\o/",
+  "manifest_version": 2,
+  "content_scripts": [
+      {
+          "matches": [ "*://mail.google.com/*" ],
+          "css": [ "sunny-day.css" ],
+          "js": [ "sunny-day.js" ],
+          "run_at": "document_end"
+      }
+  ],
+  "web_accessible_resources": ["inbox-zero.png"]
+}

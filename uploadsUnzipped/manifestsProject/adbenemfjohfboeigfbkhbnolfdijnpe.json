@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Alarma Despertador Online",
+  "description": "Alarma Despertador es gratis y fácil de usar. Puede establecer dos alarmas independientes, elija tonos, y mucho más.", 
+  "version": "1.1",
+  "manifest_version": 2,
+  "icons": {
+    "128":"icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://alarmadespertadoronline.com/"
+    ],
+	  "launch": {
+		  "web_url": "http://alarmadespertadoronline.com/"
+	  }
+  }
+}
+
+
+

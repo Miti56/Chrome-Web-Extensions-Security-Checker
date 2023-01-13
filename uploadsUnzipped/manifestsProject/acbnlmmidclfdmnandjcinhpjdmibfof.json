@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Man With a Van Plus",
+  "short_name": "manwithavan",
+  "description": "Man with a van plus provides man and van service in London", 
+  "version": "1.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.manwithavanplus.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.manwithavanplus.com/"
+    }
+  }
+}
+

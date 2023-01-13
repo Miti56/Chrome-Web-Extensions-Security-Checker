@@ -1,0 +1,34 @@
+{
+   "manifest_version": 2,
+   "name": "Lyft Pink",
+   "short_name": "Lyft Pink",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 243,243,245 ],
+         "tab_text": [ 243,243,245 ],
+		 "tab_background_text": [ 243,243,245 ],
+         "ntp_background": [  51,52,71 ],
+         "ntp_header": [ 51,52,71 ],
+         "ntp_text": [ 53,35,132 ],
+         "toolbar": [ 255,0,191 ]
+      },
+      "images": {
+		"theme_ntp_background": "HeroBG-1080.png",
+		"theme_toolbar": "toolbarBG.png"
+      },
+      "properties": {
+	    "ntp_background_alignment" : "center top",
+		"ntp_background_repeat" : "repeat",
+		"NTP_LOGO_ALTERNATE" : 1
+      },
+      "tints": {
+		"buttons": [ 53,35,132 ],
+		"background_tab": [ 53,35,132 ] 
+      },
+	  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CEAnywhere Chrome Extension",
+  "version": "0.3",
+  "description": "The CEAnywhere extension allows the retrieval of a patient context from web EHRs and sends it to the CEAnywhere desktop app.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "nativeMessaging",
+    "activeTab",
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "icons": {
+    "16": "ce.png",
+    "48": "ce.png",
+    "128": "ce.png"
+  },
+  "manifest_version": 2
+}

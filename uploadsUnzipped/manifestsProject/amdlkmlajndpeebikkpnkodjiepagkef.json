@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Site Effects",
+  "version": "0.2",
+  "manifest_version": 2,
+  "description": "Add awesome filters to websites.",
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_title": "Add awesome filters to websites.",
+    "default_popup": "extension.html"
+  },
+  "permissions": ["tabs", "<all_urls>", "storage"],
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["popup.js"]
+  }],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

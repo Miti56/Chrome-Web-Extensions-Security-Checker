@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ремонт окон в Киеве",
+  "description": "Услуги ремонта и регулировок окон.  АНТИКРИЗИСНЫЕ цены, срочный вызов мастера. Ремонт окон в Киеве.", 
+  "version": "2.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://okna-servise.kiev.ua/"
+    ],
+    "launch": {
+      "web_url": "http://okna-servise.kiev.ua/"
+    }
+  }
+}

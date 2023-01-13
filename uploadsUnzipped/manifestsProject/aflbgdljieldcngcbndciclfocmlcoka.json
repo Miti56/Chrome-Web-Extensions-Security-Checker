@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FormTab",
+  "description": "FormTab captures your essential data whether you are online or offline. Record data on the move & enforce organisation workflows.",
+  "version": "2.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "launcher.png"
+  },
+  "app": {
+    "launch": {
+      "web_url": "https://app.formtabcentral.com/"
+    }
+  }
+}

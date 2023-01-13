@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "author": "AddSocial UG (haftungsbeschraenkt) <info@addsocial.de>",
+  "homepage_url": "http://ideenhochdrei.org/",
+  "name": "Ideen³ - Fundraising App",
+  "version": "2.6.4",
+  "description": "Mit deiner Online Bestellung Ideen³ unterstützen - ohne einen Cent extra dafür zu zahlen.",
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "browser-app-ideenhoch3@addsocial.de",
+      "update_url": "https://tools.addsocial.de/ideenhoch3/files/firefox/updates.json",
+      "strict_min_version": "45.0"
+    }
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": ["modules/URI.min.js", "modules/jquery-3.2.1.min.js", "scripts/background.js", "scripts/onUninstall.js", "keep-smiling/background.js"]
+  },
+  "permissions": ["webRequestBlocking", "tabs", "http://*/*", "https://*/*", "cookies", "*://*.google.com/", "notifications", "storage", "webRequest", "webNavigation"],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true,
+    "browser_style": false,
+    "chrome_style": false
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "exclude_matches": ["https://*.google.com/*", "https://*.google.de/*", "https://*.ecosia.org/*"],
+    "js": ["scripts/contentscript.js"],
+    "css": ["styles/main.css"],
+    "run_at": "document_end",
+    "all_frames": false
+  }, {
+    "matches": ["https://*.google.com/*", "https://*.google.de/*", "https://*.ecosia.org/*"],
+    "js": ["modules/URI.min.js", "scripts/addIcon.js"],
+    "run_at": "document_end",
+    "all_frames": false
+  }, {
+    "matches": ["https://smile.amazon.de/*"],
+    "js": ["keep-smiling/content.js"],
+    "run_at": "document_end",
+    "all_frames": false
+  }],
+  "browser_action": {
+    "browser_style": false,
+    "default_icon": {
+      "48": "images/icon-48.png",
+      "96": "images/icon-96.png"
+    },
+    "default_title": "Fundraising App Options",
+    "default_popup": "browser_action/popup.html"
+  },
+  "web_accessible_resources": ["images/*", "overlay.html"]
+}

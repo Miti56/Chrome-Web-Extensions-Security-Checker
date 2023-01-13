@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "迅捷画图",
+    "version": "1.0.1",
+    "manifest_version": 2,
+    "description": "迅捷画图包括在线制作流程图、思维导图功能，为用户提供高效的云端制图",
+    "author": "bigpang",
+    "icons": {
+        "16": "images/16.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "browser_action": {
+        "default_icon": "images/48.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+      "contextMenus", "tabs"
+    ]
+}

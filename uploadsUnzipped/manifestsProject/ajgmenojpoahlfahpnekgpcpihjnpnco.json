@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Mini Player",
+  "version": "1.0",
+  "description": "Ouvrez une vidéo dans une mini fenêtre",
+  "icons": {
+    "16": "images/iconLogo.16.png",
+    "32": "images/iconLogo.32.png",
+    "48": "images/iconLogo.48.png",
+    "128": "images/iconLogo.128.png"
+  },
+  "permissions": [
+    "tabs",
+    "*://*/*",
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "pipYoutubeContentStyle.css"
+      ],
+      "js": [
+        "pipYoutubeContentScript.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "pipYoutubeBackground.js"
+    ]
+  }
+}

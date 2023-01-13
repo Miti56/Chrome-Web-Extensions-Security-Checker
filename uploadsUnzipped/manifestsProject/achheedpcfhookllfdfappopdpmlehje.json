@@ -1,0 +1,13 @@
+{"browser_action": {"default_icon": "icons/128.png", 
+"default_title": "Gintama Wallpapers & HD Themes"},
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"version": "1.4.2", 
+"description": "__MSG_extDesc__", 
+"chrome_url_overrides": {"newtab": "index.html"},
+ "icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "manifest_version": 2, 
+"background": {"scripts": ["background.js"]},
+ "default_locale": "en", 
+"name": "__MSG_extName__", 
+"offline_enabled": true}

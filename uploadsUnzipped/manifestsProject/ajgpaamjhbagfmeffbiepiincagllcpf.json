@@ -1,0 +1,46 @@
+{"version":"0.0.4",
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name":"Under my Skin (smooth)",
+"theme":
+   {"images":
+	{"theme_toolbar":"images\/theme_toolbar.png",
+	"theme_window_control_background":"images\/theme_window_control_background.png",
+	"theme_frame": "images\/theme_frame.png", 
+	"theme_ntp_attribution": "images\/bottomframe.png", 
+	"theme_ntp_background":"images\/theme_ntp_background.png",
+	"theme_tab_background_incognito": "images\/theme_tab_background.png",  
+	"theme_tab_background": "images\/theme_tab_background.png",   														    
+	"theme_tab_background_v": "images\/theme_tab_background.png"
+   },
+    "colors": {
+	"frame":[101,65,30],
+	"frame_inactive":[141,162,208],
+	"frame_incognito":[101,65,30],
+	"frame_incognito_inactive":[121,85,40],
+    "toolbar": [240, 248, 250, 0.95],
+	"tab_text":[0, 0, 0],
+	"tab_background_text":[255,255,255],
+	"bookmark_text":[0, 0, 33, 0.27],
+	"ntp_background":[255,255,255],
+	"ntp_text":[0,0,0],
+	"ntp_link":[116,55,15],
+	"ntp_header":[230,160,85],
+	"ntp_section":[229,239,254],
+	"ntp_section_text":[0,0,0],
+	"ntp_section_link":[255,192,161],
+	"control_background":[0,0,0],
+	"button_background":[0,0,0,80]
+ 	},
+    "properties": {
+	"ntp_background_alignment":"bottom",
+	"ntp_background_repeat":"repeat"
+	},
+    "tints": {
+	"buttons":[1,-1,0.35],
+	"frame_inactive":[1,-1,0.63],
+	"frame_incognito":[1, -0.28, 0.6],
+	"frame_incognito_inactive":[-1,0.3,0.6],
+	"theme_toolbar":[1, 1, 0.30],
+	"theme_tab_background_v":[1, 1, 0.10],
+	"background_tab": [1, -0.1, 0.45]
+}}}

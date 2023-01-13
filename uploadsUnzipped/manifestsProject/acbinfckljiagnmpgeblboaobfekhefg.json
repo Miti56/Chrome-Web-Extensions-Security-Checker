@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Dejame leer",
+  "description": "Esta aplicación permite leer noticias sin necesidad de registrarse en los sitios de los más importantes diarios de Argentina.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "newspaper.png"	
+  },
+  "icons": { "16": "newspaper16.png",
+			   "48": "newspaper48.png",
+			  "128": "newspaper.png" 
+  },
+  "permissions": [
+	"webNavigation",
+	"tabs",
+    "activeTab",
+    "cookies",
+    "*://lanacion.com.ar/",
+	"*://*.lanacion.com.ar/",
+	"*://clarin.com/",
+	"*://.clarin.com/",
+	"*://*.clarin.com/",
+	"*://pagina12.com.ar/",
+	"*://*.pagina12.com.ar/",
+	"*://lavoz.com.ar/",
+	"*://*.lavoz.com.ar/"
+  ],
+  "background": {
+    "scripts": ["removeCookies.js"],
+    "persistent": false
+  }
+}

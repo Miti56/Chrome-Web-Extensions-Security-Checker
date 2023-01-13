@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "icons": { "16": "icons/icon16.png",
+           "48": "icons/icon48.png",
+          "128": "icons/icon128.png" },
+
+  "name": "Merch Security",
+  "description": "Adds an extra level of sanity to your Merch account so you dont get it banned because of a silly mistake",
+  "version": "2.3.0",
+  "default_locale": "en",
+  "options_ui": {
+    "page": "src/options.html",
+    "chrome_style": true
+  },
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["https://merch.amazon.com/*/title-setup/*/add_details"],
+    "js": ["js/jquery/jquery.min.js", "src/inject/inject.js"]
+  }],
+  "permissions": [
+   "storage"
+ ]
+}

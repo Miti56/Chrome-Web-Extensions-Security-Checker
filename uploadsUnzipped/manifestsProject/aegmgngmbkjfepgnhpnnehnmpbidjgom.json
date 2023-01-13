@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Camplearn Ekran Kaydı",
+    "author": "Mimcrea Web Software A.Ş",
+    "short_name" : "Camplearn Kayıt",
+    "version" : "2.0",
+    "manifest_version" : 2,
+    "description" : "Camplearn üzerinde ekranın kaydedilmesi ve servera yüklenmesini sağlar.",
+    "homepage_url": "https://camplearn.com/",
+    "background": {
+        "scripts": ["RecordRTC.js", "tab-capturing.js","content-script.js","broadcast.js","firebase.js","QUnit.js","kurento-client.js","kurento-utils.js","adapter.js"],
+		"persistent": false
+    },
+    "content_security_policy": "script-src 'self' https://*.firebaseIO.com; object-src 'self'",
+    "permissions": [
+        "tabCapture", 
+        "activeTab", 
+        "tabs",
+        "storage",
+        "<all_urls>",
+        "desktopCapture",
+        "https://*.firebaseIO.com/*"
+    ],
+    "browser_action" : {
+		"default_icon" : "images/main-icon.png",
+		"default_title" : "Kaydet"
+	},
+	"icons" : {
+		"16" : "images/main-icon.png",
+		"22" : "images/main-icon.png",
+		"32" : "images/main-icon.png",
+		"48" : "images/main-icon.png",
+		"128": "images/main-icon.png"
+	},
+	"web_accessible_resources": [
+		"images/main-icon.png"
+	]
+}

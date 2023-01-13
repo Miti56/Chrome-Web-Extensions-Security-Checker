@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+"short_name": "MyAps",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "name": "Red Best Ball 4",
+  "container": "GOOGLE_DRIVE",
+  "description": "Launch App best app online free games play now Red Ball 4. Online free red ball 4 all games play.",
+     "permissions": [ "webview", "power", "storage", "videoCapture", "geolocation", "pointerLock", "system.display", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "accessibilityFeatures.read", "accessibilityFeatures.modify" ],
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "6.9",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

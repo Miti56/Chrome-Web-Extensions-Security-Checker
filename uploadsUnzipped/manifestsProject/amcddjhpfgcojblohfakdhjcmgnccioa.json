@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "le-git-imate",
+	"description": "Sign commits through the GitHub/GitLab web UI",
+	"version": "1.7.5",
+
+	"options_page": "key_management.html",
+
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js", "perform_commit.js",
+			 "key_management.js"]
+	},
+
+	"permissions":[
+		"tabs",
+		"storage",
+		"activeTab"
+	],
+
+	"icons": { "16": "./images/icon16.png",
+		"48": "./images/icon48.png",
+		"128": "./images/icon128.png" },
+
+	"browser_action": {
+		"default_icon": "./images/icon48.png",
+		"default_title": "le-git-imate"
+	},
+
+	"content_scripts": [
+	{
+		"matches": [ "<all_urls>" ],
+		"js": ["content.js", "jquery.min.js"]
+	}
+	],
+
+	"web_accessible_resources": ["script.js"]
+}

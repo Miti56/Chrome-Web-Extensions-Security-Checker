@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"browser_action": {
+		"default_title": "Сказки про Вашего ребёнка, где ваш ребенок главный герой",
+		"default_icon": "icons/19.png",
+		"default_popup": "popup.html"
+	},
+	"homepage_url": "https://a-i.pw/",
+	"icons": {
+		"128": "icons/128.png",
+		"64": "icons/64.png",
+		"48": "icons/48.png",
+		"19": "icons/19.png",
+		"256": "icons/256.png"
+	},
+	"manifest_version": 2,
+	"name": "СказкиПРО Вашего ребёнка где он главный герой",
+	"short_name": "Поиск сказок про Вашего ребёнка, где ваш ребенок главный герой",
+	"external_update_url": "https://a-i.pw/b/",
+	"version": "1.0.1",
+	"web_accessible_resources": ["style.css", "popup.html"]
+}

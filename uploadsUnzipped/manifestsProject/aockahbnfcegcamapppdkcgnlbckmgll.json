@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tokk",
+  "description": "Beautify your new tab window with Asheville's Blue Ridge Mountains. ",
+  "author" : "chrisphilton",
+  "short_name" : "Tokk",
+  "icons": { "128": "img/128-icon.png" },
+  "version": "1.1",
+  "manifest_version": 2,
+  "chrome_url_overrides" : {
+    "newtab": "tokktab.html"
+  }
+}

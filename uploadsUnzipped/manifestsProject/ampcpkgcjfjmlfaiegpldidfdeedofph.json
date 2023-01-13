@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "The Interrobanger",
+	"version": "1.2",
+	"description": "Replaces '?!' and '!?' with an interrobang.",
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	],
+    "permissions": [
+    		"http://*/*",
+    		"https://*/*"
+    ],
+    "icons":
+    {
+       "320": "icon.png"
+    }
+}

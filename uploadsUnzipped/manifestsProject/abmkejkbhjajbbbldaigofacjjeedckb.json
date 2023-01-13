@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+
+  "name": "Emerald",
+  "description": "Emerald - Search On Famous Sites Directly From Your Browser New Tab",
+  "version": "7.6.2",
+
+  "permissions": [
+    "storage",
+    "<all_urls>",
+    "tabs",
+    "webNavigation",
+    "alarms",
+    "topSites",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "background": {
+    "scripts": [
+      "nav.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon16.png"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "64": "icons/icon64.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Wootocracy Button",
+  "description": "It's time to play life",
+  "version": "1.0",
+  "permissions": [ "tabs", "http://*/", "https://*/" ],
+  "icons": { "128": "icon-128.png", "48": "icon-48.png" },
+  "background": { "scripts": ["script.js"] },
+  "browser_action": {
+    "default_title": "Add to Wootocracy",
+    "default_icon": {
+      "19": "icon-19.png",
+      "38": "icon-38.png"
+    }
+  }
+}

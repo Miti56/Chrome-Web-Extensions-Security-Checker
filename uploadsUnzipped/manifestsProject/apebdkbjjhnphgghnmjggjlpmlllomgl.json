@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "version": "0.2",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "browser_action": {
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "16": "build/icon_16.png",
+      "24": "build/icon_24.png",
+      "32": "build/icon_32.png"
+    }
+  },
+  "background": {
+    "scripts": [
+      "build/background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "build/icon_16.png",
+    "24": "build/icon_24.png",
+    "128": "build/icon_128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "build/oh-new-tab.html"
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": ["build/cs.js"]
+  }],
+  "permissions": [
+    "background",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Toolsley JPEG Stripper",
+  "short_name": "JPEG Stripper",
+  "description": "Remove geotagging and all other metadata from JPEGs",
+  "version": "1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.toolsley.com/jpegstrip.html"
+    ],
+    "launch": {
+      "web_url": "http://www.toolsley.com/jpegstrip.html"
+    }
+  },
+  "icons": {
+    "128": "ico_128.png"
+  },
+  "permissions": [    
+  ]
+}

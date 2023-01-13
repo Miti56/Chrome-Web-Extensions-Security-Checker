@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Disinformation Detector",
+	"version": "1.0",
+	"description": "An extension to flag potential disinformation websites based on Princeton University's machine learning classifier.",
+	"permissions": ["<all_urls>", "declarativeContent"],
+	
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+	  	"css" : ["alertifyjs/css/alertify.min.css","alertifyjs/css/themes/default.min.css"],
+     	"js": ["alertifyjs/alertify.min.js","popup.js"]
+	}],
+	"web_accessible_resources": ["classified_sites.txt"],
+	"icons": { "400": "images/citp-400.png" }
+}

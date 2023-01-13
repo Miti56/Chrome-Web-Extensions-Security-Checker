@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "deviantAnywhere",
+	"version": "1.3.1",
+	"description": "Keeps deviantArt always near you by notifying you about new messages.",
+
+    "homepage_url": "http://deviantanywhere.deviantart.com/",
+
+    "browser_action": {
+		"default_icon": "img/fella_icon.png",
+		"default_popup": "content/popup.html",
+		"default_title": "deviantAnywhere"
+	},
+
+    "content_scripts": [{
+		"matches": ["<all_urls>"],
+		"css": ["css/main.css"],
+		"js": ["js/lib/jquery.js", "js/lib/jquery.cookie.js", "js/lib/utils.js", "js/lib/fancy-settings/lib/store.js", "js/defaults.js", "js/injector.js"]
+	}],
+
+    "web_accessible_resources": [
+        "content/injector.html",
+
+        "css/popup.css",
+        "css/injector.css",
+
+        "js/lib/utils.js",
+        "js/lib/i18n.js",
+        "js/lib/jquery.js",
+        "js/lib/jquery.cookie.js",
+        "js/popup.js",
+
+        "img/status_icons/normal.gif",
+        "img/status_icons/group.gif",
+        "img/collapse_left.png",
+        "img/collapse_right.png"
+    ],
+
+    "icons":{
+        "16" : "img/icons/fella_16.png",
+        "48" : "img/icons/fella_48.png",
+        "128" : "img/icons/fella_128.png"
+    },
+
+	"permissions": [
+	    "*://*.deviantart.com/",
+	    "tabs",
+        "cookies"
+	],
+	"background": {
+        "page": "content/background.html"
+    },
+
+	"options_page": "content/options.html",
+    "manifest_version": 2
+}

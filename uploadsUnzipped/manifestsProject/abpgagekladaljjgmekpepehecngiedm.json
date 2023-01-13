@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"一分网 实时推送",
+"version":"1.0.1.7",
+"description":"一分网是一个中立的，致力于帮助广大网友买到更有性价比网购产品的推荐类网站，每天为网友们提供严谨的、准确的、新鲜的、丰富的网购产品特价资讯",
+"manifest_version":2,
+"options_page": "views/options.html",
+"icons":{ "16": "image/16.png","48": "image/48.png","128": "image/128.jpg" },
+"permissions": ["http://*/*","notifications"],
+"background":{"page":"views/background.html","persistent": true},
+"browser_action":{"default_title": "","default_icon":"image/48.png","default_popup":"views/pop.html","homepage_url": "http://www.yifen.com"},
+"content_scripts": [{"matches": ["http://*/*"],"js": ["script/jquery.js","script/yifen.js","script/back.js"]}]
+}

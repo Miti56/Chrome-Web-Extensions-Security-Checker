@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	
+	"name": "DapperCrew",
+	"description": "The BEST extension for Twitch's own \"Dapper Crew\"!",
+	"version": "1.0",
+	
+	"icons": {
+		"128": "img/icon.png"
+	},
+
+	"background": {
+		"page": "background.html"
+	},
+	
+	"browser_action": {
+		"default_icon": "img/icon.png",
+		"default_popup": "popup.html"
+	},
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+	"permissions": [
+		"background", "tabs", "cookies", "management", "storage", "webRequest", "notifications",
+		"http://*/*", "https://*/*"
+	]
+}

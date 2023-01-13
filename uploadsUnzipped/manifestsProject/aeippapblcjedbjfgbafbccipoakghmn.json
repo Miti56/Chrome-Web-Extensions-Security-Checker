@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Mytoori",
+  "short_name": "Mytoori",
+  "description": "Read bilingual stories with subtitles",
+  "version": "0.0.0.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "author": "Giwan Persaud",
+  "app": {
+    "urls": ["https://mytoori.com/"],
+    "launch": {
+      "web_url": "https://mytoori.com/"
+    }
+  }
+}

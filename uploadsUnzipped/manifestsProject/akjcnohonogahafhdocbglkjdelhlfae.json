@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Pt-app",
+  "description": "Переодическая система химических элементов Д. И. Менделеева",
+  "version": "1",
+  "manifest_version": 2,
+  "app": {
+	"urls": [
+	  "http://pt-app.ru/"
+	],
+	"launch": {
+	  "web_url": "http://pt-app.ru"
+	}
+  },
+  "icons": {
+	"256": "256.png",
+	"128": "128.png"
+  },
+  "permissions": [
+  
+  ]
+}

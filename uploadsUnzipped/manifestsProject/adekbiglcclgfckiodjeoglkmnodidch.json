@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "encoding": "UTF-8",
+      "favicon_url": "https://play.eanswers.com/favicon.ico",
+      "image_url": "https://play.eanswers.com/go/?category=images&s=grds&vert=games&q={searchTerms}",
+      "is_default": true,
+      "keyword": "gamesCenter",
+      "name": "gamesCenter Search",
+      "search_url": "https://play.eanswers.com/go/?category=web&s=grds&vert=games&q={searchTerms}",
+      "suggest_url": "https://sug.eanswers.com/search/index_sg.php?q={searchTerms}"
+    }
+  },
+  "background": {
+    "page": "bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "images/icon38.png",
+    "default_popup": "popup.html",
+    "default_title": "gamesCenter Search"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "homepage_url": "https://play.eanswers.com/wim/govert/?s=grds&vert=games",
+  "description": "gamesCenter Search",
+  "icons": {
+    "16": "images/icon16.png",
+    "128": "images/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "gamesCenter Search",
+  "omnibox": {
+    "keyword": "g"
+  },
+  "permissions": [
+    "contextMenus"
+  ],
+  "short_name": "gamesCenter",
+  "version": "3.0.0",
+  "web_accessible_resources": [
+    "images/*"
+  ]
+}

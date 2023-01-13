@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Rocketnet Screen Sharing",
+  "author": "Rocketnet",
+  "version" : "1.5",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "Расширения для демонстрации экрана в системе Rocketnet.",
+  "homepage_url": "http://promo.rocketnet.pro",
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://rocketnet.pro/*",
+      "https://*.rocketnet.pro/*",
+      "*://localhost/*",
+      "*://127.0.0.1/*"
+    ]
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "logo48.png"
+  ]
+}

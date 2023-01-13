@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ゆゆゆゆゆ式",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "This extension enable you to watching trembling Yuyushiki characters.",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["http://www.yuyushiki.net/"],
+    "js": ["jquery.min.js", "script.js"]
+  }],
+  "browser_action": {
+    "name": "ゆゆゆゆゆ式",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["tabs"]
+}

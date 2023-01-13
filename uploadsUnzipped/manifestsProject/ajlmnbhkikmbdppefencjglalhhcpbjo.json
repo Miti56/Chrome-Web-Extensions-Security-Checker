@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "icons": { "16": "images/icon16.png",
+           "48": "images/icon48.png",
+          "128": "images/icon128.png"
+   },
+   "content_scripts": [ {
+      "js": ["PaidBefore.js"],
+      "matches": [ "*://*.spigotmc.org/*" ],
+      "run_at": "document_end"
+   } ],
+   "background": {
+      "scripts": ["icon_updater.js"]
+   },
+   "page_action": {
+       "default_icon": {
+         "19": "images/icon19.png",
+         "38": "images/icon38.png"
+       },
+       "default_title": "QuickID"
+   },
+   "description": "Puts [Paid] before the thread title",
+   "manifest_version": 2,
+   "name": "PaidBefore",
+   "permissions": [ "tabs", "*://*.spigotmc.org/*" ],
+   "version": "1.2"
+}

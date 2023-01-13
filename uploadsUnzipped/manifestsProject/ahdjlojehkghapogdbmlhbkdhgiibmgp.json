@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+    "name": "Mitt Romney's Nephew",
+    "description": "Correct all instances of 'Doug Robinson' to 'Mitt Romney's Nephew' with this extension.",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": { "128": "icon.png" }
+}

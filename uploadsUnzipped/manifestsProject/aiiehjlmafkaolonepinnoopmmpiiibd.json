@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+   "name":"Cut the Rope: Magic online",
+   "description":"Cut the Rope: Magic is a fun puzzle game in which your character Om Nom has been transported to a strange magical world",
+   "version":"0.0.2",
+   "manifest_version":2,
+   "browser_action":{},
+    "permissions": [
+        "activeTab"
+    ],
+   "background":{  
+      "scripts":[  
+         "background.js"
+      ],
+      "persistent":false
+   },
+   "icons":{  
+      "16":"16.png",
+      "128":"128.png"
+   }
+}

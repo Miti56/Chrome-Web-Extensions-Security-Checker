@@ -1,0 +1,72 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.jpeg",
+      "theme_tab_background": "images/theme_tab_background.jpeg",
+      "theme_ntp_background": "images/theme_ntp_background.jpeg",
+      "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+    },
+    "colors": {
+      "frame": [
+        39,
+        150,
+        229
+      ],
+      "toolbar": [
+        235,
+        220,
+        196
+      ],
+      "tab_text": [
+        4,
+        61,
+        197
+      ],
+      "tab_background_text": [
+        255,
+        251,
+        15
+      ],
+      "bookmark_text": [
+        0,
+        0,
+        0
+      ],
+      "ntp_background": [
+        255,
+        255,
+        255
+      ],
+      "ntp_text": [
+        235,
+        220,
+        3
+      ],
+      "button_background": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "tints": {
+      "buttons": [
+        0,
+        0,
+        0
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "top",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "name": "Superman Dreams - 1920px",
+  "short_name": "Superman Dreams",
+  "version": "2",
+  "description": "Art image of Superman with a message that reminds us why he is so universally loved."
+}

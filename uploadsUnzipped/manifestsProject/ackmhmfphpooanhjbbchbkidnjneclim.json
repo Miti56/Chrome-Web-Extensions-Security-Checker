@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Nexgen Tennis",
+  "short_name": "Nexgen Tennis",
+  "version": "1.0.2",
+  "description": "PlayNexgen Tennisnow!",
+  "homepage_url": "http://myclubgames.xyz/c/fishing-games/",
+  
+  "icons": {
+      "128": "icon.png"
+  },
+  
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Nexgen Tennis",
+
+      "default_popup": "popup.html"
+  }
+}

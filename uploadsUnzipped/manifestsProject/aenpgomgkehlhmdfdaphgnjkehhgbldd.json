@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Hex Highlighter",
+    "version": "1.0",
+    "description": "Highlights hex codes in the RGB values to represent",
+    "manifest_version": 2,
+	"content_scripts": [
+	  {
+	    "matches": [
+	      "*://github.com/*"
+	    ],
+	    "js": ["jquery.js", "highlighter.js"]
+	  }
+	]
+}

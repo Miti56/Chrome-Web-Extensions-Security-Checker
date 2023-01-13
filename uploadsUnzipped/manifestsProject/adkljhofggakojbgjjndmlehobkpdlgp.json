@@ -1,0 +1,15 @@
+{
+  "app": {
+    "urls": ["http://www.winweb.com/cashbook-software/"],
+    "launch": {"web_url": "http://www.winweb.com/cashbook-software/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "WinWeb Cashbook Software - Money In, Money Out \u2013 Easy!",
+  "name": "WinWeb Cashbook",
+  "icons": {
+    "128": "ww-128x128.png",
+    "16": "ww-16x16.png"
+  },
+  "manifest_version": 2,
+  "version": "1.2"
+}

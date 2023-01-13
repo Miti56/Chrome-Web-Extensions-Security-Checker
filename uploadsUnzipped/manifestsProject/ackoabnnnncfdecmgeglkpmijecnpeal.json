@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Facebook Flattener",
+  "description": "Flattens and cleans up the Facebook UI.",
+  "version": "2.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+	  "css": ["mystyles.css"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Facebook Flattener",
+	 "default_icon": "icon.png"
+  },
+  "manifest_version": 2
+}

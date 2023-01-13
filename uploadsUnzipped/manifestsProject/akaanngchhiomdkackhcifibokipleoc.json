@@ -1,0 +1,35 @@
+{
+   "description": "Смешно до слез",
+   "name": "Лучшие анекдоты",
+   "short_name": "Anecdotes",
+   "background": {
+     "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "/icons/action.png",
+      "default_popup": "/popup/popup.html",
+      "default_title": "Анекдоты"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "externally_connectable": {
+     "matches": [ "*://*.anekdot.ks.ua/*", "*://*.anekdot.dev/*" ]
+   },
+   "icons": {
+        "32": "icon32.png"
+      , "64": "icon64.png"
+      , "128": "icon128.png"
+   },
+   "content_scripts": [
+      {
+        "all_frames": true,
+        "js": [ "content_all.js" ],
+        "matches": [ "*://*/*" ],
+        "run_at": "document_start"
+      }
+    ],
+   "manifest_version": 2,
+   "permissions": [ "tabs", "http://*/*", "https://*/*"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "web_accessible_resources": [ "ex.js" ],
+   "version": "1.0.6"
+}

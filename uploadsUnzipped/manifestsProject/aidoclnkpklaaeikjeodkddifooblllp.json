@@ -1,0 +1,58 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Profitfy",
+  "description": "Extensão para sincronizar custo dos pedidos da AliExpress com o Profitfy.me",
+  "version": "1.0.3",
+  "icons": {
+    "128": "/src/img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "/src/img/icon.png",
+    "default_popup": "/src/popup/popup.html"
+  },
+  "background": {
+    "scripts": ["/src/js/constants.js", "/lib/x.min.js", "/src/js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://trade.aliexpress.com/*"],
+      "js": [
+        "/lib/jquery.min.js",
+        "/lib/jquery.toast.min.js",
+        "/lib/x.min.js",
+        "/lib/angular.min.js",
+        "/lib/pluralize.js",
+        "/lib/analytics.js",
+        "/src/js/constants.js",
+        "/src/js/conv/scraper.js",
+        "/src/js/bar_ctrl.js",
+        "/src/js/sync_order_ctrl.js",
+        "/src/js/detail_page_bar_ctrl.js",
+        "/src/js/ali_content.js"
+      ],
+      "css": [
+        "/src/css/jquery.toast.min.css",
+        "/src/css/style.css",
+        "/src/css/content.css",
+        "/src/css/icons.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://dashboard.profitfy.me/*"],
+      "js": [
+        "/lib/x.min.js",
+        "/lib/jquery.min.js",
+        "/lib/angular.min.js",
+        "/src/js/constants.js",
+        "/src/js/om_content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["cookies", "https://sion-apis.profitfy.me/*", "https://dashboard.profitfy.me/*"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' https://dashboard.profitfy.me/*",
+  "web_accessible_resources": ["/*"]
+}

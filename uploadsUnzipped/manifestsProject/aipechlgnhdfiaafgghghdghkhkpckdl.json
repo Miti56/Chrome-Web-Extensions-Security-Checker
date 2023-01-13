@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Tally Integration UAT",
+	"manifest_version":2,
+
+	"description": "FCB Technologies - Training for Tally Integration",
+	"version": "4.0.0.0",
+
+	"browser_action": {
+		"default_title": "FCB Technologies",
+		"default_icon": "assets/images/fcb_logo.png"
+	}, 
+	"icons": {
+		"16": "assets/images/fcb_logo.png",
+		"48": "assets/images/fcb_logo.png",
+		"128": "assets/images/fcb_logo.png"
+
+	}, 
+
+	"background":{
+		"scripts":["system_files/background.js"]
+		
+	},
+
+	"permissions": [
+		"http://localhost/*",		
+		"http://*/",
+		"https://*/",
+		"cookies",
+		"activeTab",
+		"storage"		
+	],
+	
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+	
+}

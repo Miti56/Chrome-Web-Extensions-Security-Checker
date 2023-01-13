@@ -1,0 +1,41 @@
+{
+	"background": {
+		"scripts": [
+			"js/fortnite.js"
+		]
+	},
+	"browser_action": {
+		"default_title": "Fortnite"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_name__",
+	"description": "__MSG_description__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"chrome_url_overrides": {
+		"newtab": "micron.html"
+	},
+	"icons": {
+		"48": "img/ic48.png",
+		"128": "img/ic128.png"
+	},
+	"optional_permissions": [
+		"management"
+	],
+	"version": "0.0.15",
+	"default_locale": "en",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

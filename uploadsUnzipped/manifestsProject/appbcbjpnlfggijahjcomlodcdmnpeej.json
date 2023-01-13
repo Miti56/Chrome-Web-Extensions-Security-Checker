@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version" : 2,
+  "name": "URLShortener",
+  "version": "5.1.4",
+  "description": "Shorten URLs and copy to clipboard or post to twitter directly. Goo.gl, Bit.ly, McAf.ee,  Youtu.be Y.ahoo.it, and others.",
+  "icons":{	
+	"16": "icon16.png",
+	"32": "icon32.png",
+	"48": "icon48.png",
+	"128": "icon128.png"
+  },
+  "content_security_policy": "script-src 'self' https://apis.google.com/js/plusone.js https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.es.SEwSAS6Hffc.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTO_FjodZpT9Bn5Um9msDqSD6Lli-g/cb=gapi.loaded_0; object-src 'self'",  
+  
+  "background": {"page": "url.html"},  
+  "author":"vhanla",  
+  "options_page": "option.html",
+  "permissions": [
+    "tabs","http://*/*","https://*/*"
+  ],
+  "browser_action": {
+      "default_icon": "icon24.png",
+      "default_title": "Shorten URLs",
+      "default_popup": "popup.html"
+   }
+  
+}

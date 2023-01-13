@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "鎌倉観光マップス",
+  "description": "鎌倉観光をサポートするマップ型WEBアプリ（無料）です。季節毎のおすすめスポット、散策コース、グルメ情報など、鎌倉の情報を観光マップにまとめました。",
+  "version": "0.0.0.4",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.kamakura-maps.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.kamakura-maps.com/"
+    }
+  }
+
+}

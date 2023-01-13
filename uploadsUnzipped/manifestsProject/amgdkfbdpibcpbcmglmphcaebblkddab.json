@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Unblock Now - Unblock Sites in a swift",
+    "short_name": "Unblock Now",
+    "version": "0.2",
+    "description": "Easiest way to unblock Youtube, Facebook and other sites with our web proxies",
+    "browser_action": {
+        "default_title": "Unblock Now",
+        "default_icon": {
+            "19": "skin/images/unblocknow-icon-19.png",
+            "38": "skin/images/unblocknow-icon-32.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "skin/images/unblocknow-icon-16.png",
+        "48": "skin/images/unblocknow-icon-48.png",
+        "128": "skin/images/unblocknow-icon-128.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "https://*/",
+        "http://*/",
+        "webRequest",
+        "webRequestBlocking",
+        "tabs"
+    ]
+}

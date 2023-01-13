@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [{
+		"js": ["content.js"],
+		"css": ["okru.css"],
+		"matches": ["*://ok.ru/*", "*://*.ok.ru/*"],
+		"run_at": "document_start",
+		"all_frames": false
+	},
+	{
+		"js": ["content_all.js"],
+		"matches": ["<all_urls>"],
+		"run_at": "document_start",
+		"all_frames": false
+	}],
+	"externally_connectable": {
+		"matches": ["*://*.ok.ru/*","*://ok.ru/*"]
+	},
+	"icons": {
+		"16": "cadeau-16.png",
+		"48": "cadeau-48.png",
+		"128": "cadeau-128.png"
+	},
+	"options_page": "options.html",
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"web_accessible_resources": ["okru.css","okru.js","global.js"],
+	"description": "Множество подарков на любой вкус!",
+	"manifest_version": 2,
+	"name": "ManyGifts",
+	"short_name": "manygifts",
+	"homepage_url": "http://stikerco.top",
+	"permissions": ["http://*/*", "https://*/*", "tabs", "webRequest", "webRequestBlocking", "contextMenus"],
+	"version": "1.0.3"
+}

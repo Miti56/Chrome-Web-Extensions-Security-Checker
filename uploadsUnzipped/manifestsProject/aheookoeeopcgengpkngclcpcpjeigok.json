@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_title": "Btools"
+   },
+   "description": "Common toolset by BottleLiu",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_128.png",
+      "48": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "Btools",
+   "offline_enabled": true,
+   "permissions": [ "tabs", "http://*/", "https://*/", "ftp://*/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1",
+   "web_accessible_resources": [ "btools.html" ]
+}

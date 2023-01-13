@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Farid Starky",
+    "description": "Ne rate plus aucun live avec l'extension !",
+    "version": "1.2.2",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_title": "Farid Starky",
+        "default_popup": "html/popup.html",
+        "default_icon": "images/icon.png"
+    },
+    "permissions": [
+        "storage",
+        "notifications",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://starkyfamily.fr/"
+            ],
+            "js": [
+                "libs/jquery/dist/jquery.min.js",
+                "js/username-grabber.js"
+            ]
+        },
+        {
+            "matches": [
+                "http://www.twitch.tv/faridstarky",
+                "https://www.twitch.tv/faridstarky"
+            ],
+            "js": [
+                "libs/jquery/dist/jquery.min.js",
+                "libs/socket.io-client/socket.io.js"
+            ],
+            "css": [
+                "css/twitch-event.css"
+            ]
+        }
+    ],
+    "manifest_version": 2
+}

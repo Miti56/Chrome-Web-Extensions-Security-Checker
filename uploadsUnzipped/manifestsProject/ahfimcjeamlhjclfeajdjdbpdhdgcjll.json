@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+
+
+"name": "block3000"
+,"manifest_version" : 2
+,"version": "1.0"
+
+
+
+, "content_scripts":
+[{
+"matches": ["http://psiholog3000.ru/*", "https://psiholog3000.ru/*"]
+, "js":  ["b_cs.js"]
+}]
+
+
+
+}

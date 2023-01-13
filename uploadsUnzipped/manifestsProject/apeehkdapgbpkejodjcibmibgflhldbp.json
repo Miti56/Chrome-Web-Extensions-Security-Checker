@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Pururin-Fix",
+    "description": "The styles and functionality of pururin are a little degraded right now, this fixes it.",
+    "version": "0.0.4",
+    "icons": {
+        "48": "prrf_48x48.png",
+        "128": "prrf_128x128.png"
+    },
+
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.pururin.com/assets/*"
+    ],
+
+    "background": {
+        "scripts": ["intercept.js"]
+    },
+
+    "web_accessible_resources": ["pururin.js", "pururin.css"]
+}

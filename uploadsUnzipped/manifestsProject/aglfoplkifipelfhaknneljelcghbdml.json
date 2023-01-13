@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Alegra - Impresora Fiscal",
+
+  "description": "Integración con impresora fiscal Panamá",
+  "version": "0.1.7",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    {
+      "fileSystem": [ "write", "retainEntries", "directory" ]},
+      "storage",
+      "syncFileSystem",
+      "http://dev.alegra.co/",
+      "http://testing1.alegra.co/",
+      "https://app.alegra.com/"
+  ],
+  "file_handlers": {
+    "text": {
+      "types": [
+        "text/*"
+      ]
+    }
+  },
+  "icons": { "16": "logo-icon.png", "128": "logo-icon.png" }
+}

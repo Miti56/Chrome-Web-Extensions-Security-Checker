@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "作业小助手",
+  "version": "1.0.2",
+  "manifest_version": 2,
+  "description": "和你的同学分享快乐！",
+  "homepage_url": "https://git.ixarea.com/ix64/homework-share-chrome",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icons": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "content_scripts": [
+    { "matches": ["*://jqzy.zxxk.com/*"], "js": ["content.js"], "run_at": "document_end" }
+  ],
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "activeTab",
+    "tabs",
+    "*://jqzy.zxxk.com/*"
+  ]
+}

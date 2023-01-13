@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ХабраКарма",
+  "version": "1.3",
+  "manifest_version": 2,
+  "description": "Позволяет вам отслеживать карму пользователей на ресурсах Хабрахабр и Гиктаймс",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "ru",
+  "background": {
+    "page": "src/bg/background.html"
+  },
+  "options_ui": {
+    "page": "src/options/index.html",
+    "open_in_tab": true,
+    "chrome_style": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "ХабраКарма",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "storage",
+    "https://m.habrahabr.ru/users/*",
+    "https://m.geektimes.ru/users/*",
+    "https://habrastorage.org/*"
+  ]
+}

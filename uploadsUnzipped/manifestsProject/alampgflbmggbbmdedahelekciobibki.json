@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Slack Shame Hider",
+    "version": "0.2",
+    "permissions": ["activeTab", "declarativeContent"],
+    "description": "An extension to cover up your friends' names and faces on Slack.",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/shame16.png",
+        "32": "images/shame32.png",
+        "48": "images/shame48.png",
+        "128": "images/shame128.png"
+      }
+    },
+    "icons": {
+      "16": "images/shame16.png",
+      "32": "images/shame32.png",
+      "48": "images/shame48.png",
+      "128": "images/shame128.png"
+    },
+    "manifest_version": 2
+  }

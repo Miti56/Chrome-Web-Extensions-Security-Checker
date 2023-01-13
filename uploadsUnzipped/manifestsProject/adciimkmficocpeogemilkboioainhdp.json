@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tweetect",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "TwitterBotDetector",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+        ],
+      "css":["contentCSS.css"],
+      "js": ["jquery-3.3.1.min.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+          "cookies",
+          "<all_urls>"
+        ],
+  "web_accessible_resources": ["Twitter_Bird.png"],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "Twitter_Bird.png",
+    "default_popup": "popup.html"  
+  }
+}

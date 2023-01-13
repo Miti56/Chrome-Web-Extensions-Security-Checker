@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "LollyLocal",
+  "author": "KudowayDev",
+  "version" : "0.122",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "Only for developer",
+  "homepage_url": "https://app.kudoway.com/",
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://*.kudoway.com/*",
+      "https://*.ngrok.io/*"
+    ]
+  },
+  "icons": {
+    "16": "kudo_logo16.png",
+    "48": "kudo_logo48.png",
+    "128": "kudo_logo128.png"
+  },
+  "permissions": [
+    "desktopCapture",
+    "https://*.ngrok.io/*"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

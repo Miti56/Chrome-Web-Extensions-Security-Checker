@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Typing Instructor Web for Kids for Schools",
+"description": "An innovative online program that teaches young students, grades 1 to 5, to type while taking an exciting adventure on Typer Island.",
+"version": "1.0.4",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.typingforschools.com/chrome?TK"
+],
+"launch": {
+"web_url": "http://www.typingforschools.com/chrome?TK"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

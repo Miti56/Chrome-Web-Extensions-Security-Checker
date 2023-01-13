@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Fixbi - добавление задач на основе страницы",
+	"version": "1.3",
+	"manifest_version": 2,
+	"description": "Добавление задачи в Fixbi.ru на основе текущей страницы",
+	"permissions": [
+	  "tabs",
+	  "http://*.fixbi.ru/",
+	  "http://fixbi/",
+	  "unlimitedStorage"
+	],
+	"browser_action": 
+	{
+		"default_title" : "Добавить задачу на основе этой страницы в Fixbi",
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	}
+}

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": {
+      "16": "build/logo_16.png",
+      "24": "build/logo_24.png",
+      "32": "build/logo_32.png"
+    }
+  },
+  "icons": {
+    "16": "build/logo_16.png",
+    "48": "build/logo_48.png",
+    "128": "build/logo_128.png"
+  },
+  "web_accessible_resources": ["build/*"],
+  "background": {
+    "scripts": ["build/browser-polyfill.js", "build/background.js"]
+  },
+  "permissions": ["tabs"]
+}

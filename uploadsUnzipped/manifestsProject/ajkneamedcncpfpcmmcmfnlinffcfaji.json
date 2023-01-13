@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Ideascast Screen Sharing",
+  "description": "This extension enables screen sharing.",
+  "version": "0.0.8",
+  "permissions": [
+    "desktopCapture","tabs"
+  ],
+  "icons": {
+     "16": "icon16.png",
+     "32": "icon32.png",
+     "48": "icon48.png",
+     "128": "icon128.png" 
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "index.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*", "file:///*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

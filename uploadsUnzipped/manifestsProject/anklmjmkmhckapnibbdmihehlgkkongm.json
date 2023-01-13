@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Truck Loader 4",
+  "short_name":"Play Truck Loader 4 game",
+  "description": "In a special vehicle equipped with a magnet in a mechanical arm, move by scenario and bring the boxes to the truck.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "truckloaderfourjson128.png",
+    "default_popup": "popup.html"
+  },
+  "icons": { "16": "truckloaderfourjson128.png",
+           "48": "truckloaderfourjson128.png"  },
+		  
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": "images/fvd.single.icon.png",
+        "default_popup": "popup.html",
+        "default_title": "__MSG_extension_hint__"
+    },
+    "default_locale": "en",
+    "description":
+        "Popular Video Downloader. Downloads most popular media formats like flash, videos, audios.",
+    "icons": {
+        "128": "images/fvd.single.main_128.png",
+        "16": "images/fvd.single.main_16.png",
+        "24": "images/fvd.single.main_24.png",
+        "32": "images/fvd.single.main_32.png",
+        "48": "images/fvd.single.main_48.png",
+        "64": "images/fvd.single.main_64.png"
+    },
+
+    "content_security_policy":
+        "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://ssl.google-analytics.com https://static.trackivation.com; object-src 'self'",
+    "manifest_version": 2,
+    "name": "Flash Video Downloader",
+    "options_page": "opt_page.html",
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "http://*/*",
+        "https://*/*",
+        "webRequestBlocking",
+        "unlimitedStorage",
+        "storage",
+        "downloads"
+    ],
+    "short_name": "Video Downloader",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "31.2.11",
+    "web_accessible_resources": ["*"]
+}

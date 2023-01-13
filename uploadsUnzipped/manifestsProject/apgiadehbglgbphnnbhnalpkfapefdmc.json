@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "M&O Track - Indústria",
+	"version": "0.0.33",
+	"minimum_chrome_version": "23",
+	"default_locale": "pt_BR",
+	"icons": {
+		"16": "images/icon-16.png",
+		"128": "images/icon-128.png"
+	},
+	"app": {
+		"background": {
+			"scripts": [
+				"scripts/background.js"
+			],
+			"persistent": true
+		}
+	},
+	"permissions": [
+		{
+			"fileSystem": [
+				"write",
+				"retainEntries",
+				"directory"
+			]
+		},
+		"background",
+		"storage",
+		"alarms",
+		"notifications",
+		"<all_urls>",
+		"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+	]
+}

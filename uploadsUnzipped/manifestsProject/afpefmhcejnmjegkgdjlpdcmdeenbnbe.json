@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "DTI Jobs",
+  "version": "0.1.1",
+  "description": "The quickest way to check Delaware's Department of Technology and Information job listings",
+  "permissions": [
+    "https://statejobs.delaware.gov/"
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_action": {
+    "default_popup": "src/popup.html"
+  },
+  "manifest_version": 2
+}

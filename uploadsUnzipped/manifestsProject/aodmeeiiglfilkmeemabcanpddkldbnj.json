@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+ 
+  "name": "OU Campus Plus",
+  "version": "1.3",
+  "description": "Different upgrades to OU Campus UI",
+  "content_scripts": [{
+  	"run_at": "document_end",
+    "css": ["css/style.css"],
+    "js": ["scripts/jquery-3.2.1.min.js","scripts/content.js"],
+    "matches": ["*://a.cms.omniupdate.com/*/"]
+  }], 
+  "icons": {
+  	"16": "icons/fullscreen16.png",
+  	"32": "icons/fullscreen32.png",
+  	"64": "icons/fullscreen64.png"
+  }
+}

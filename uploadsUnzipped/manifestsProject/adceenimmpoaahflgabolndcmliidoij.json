@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "durary.xyz",
+    "version": "0.1",
+            "manifest_version": 2,
+            "description":"موقع درري هو سوق لتأجير وبيع المجوهرات والذهب والفضة واللؤلؤ والألماس",
+            "browser_action": {
+               "default_icon": "logo1.png",
+               "default_title": "موقع درري",
+               "default_popup": "1.html"
+        },
+        "content_security_policy": "secript-src 'self' https://www.google.com object-src 'self'",
+    "icons":{
+    "128": "logo1.png"
+    }
+}
+
+
+
+
+
+
+

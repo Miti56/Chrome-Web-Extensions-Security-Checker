@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "description": "Automatically redirects Amazon to Amazon Smile so your favorite charity always gets a free donation every time you buy via Amazon.",
+    "name": "Amazon Smile - Mouzon",
+    "short_name": "Amazon Smile - Mouzon",
+    "author": "Made with <3 by Mouzon",
+    "homepage_url": "https://mouzno.io/",
+    "permissions": [  
+        "https://www.amazon.com/*",
+        "https://www.amazon.co.uk/*",
+        "https://www.amazon.de/*",
+        "https://smile.amazon.co.uk/*",
+        "https://smile.amazon.com/*",
+        "https://smile.amazon.de/*",
+        "webRequest",
+        "webRequestBlocking"    
+    ],
+    "icons": { 
+        "16": "images/icons/amazon.png",
+        "48": "images/icons/amazon.png",
+       "128": "images/icons/amazon.png" 
+    },
+    
+    "version": "1.1.4",
+    "browser_action": {
+        "default_title": "Mouzon.io",
+        "default_popup":"index.html"
+    },
+
+    "background": {
+        "scripts": [
+            "js/jquery.js","js/background.js","js/analytics.js"
+        ],
+        "persistent": true
+
+      },
+
+      "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+
+ }
+ 

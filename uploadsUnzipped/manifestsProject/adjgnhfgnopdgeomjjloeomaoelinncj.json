@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Serverless Bitcoin Utils - BA.net"
+  ,"version": "1.4"
+  ,"manifest_version": 2
+  ,"description": "Serverless Bitcoin Utils - BA.net"
+  ,"icons": { "128": "asset/image/tunnel_switch.png" }
+  ,"background": {
+    "page" : "asset/html/start.html"
+  }
+  ,"options_page": "asset/html/options.html"
+  ,"permissions": [
+
+  ]
+  ,"browser_action": {
+      "default_title": "Bitcoin"
+      ,"default_icon":"asset/image/direct.png"
+  }
+  ,"homepage_url":"http://ba.net/bitcoin"
+}

@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MtHelper",
+  "version": "1.1.1",
+  "manifest_version": 2,
+  "description": "美团小助手",
+  "browser_action": {
+    "default_icon": "static/icon3.png",
+    "default_title": "美团小帮手",
+    "default_popup": "template/popup.html"
+  },
+  "icons": {
+    "16": "static/icon3.png",
+    "48": "static/icon3.png",
+    "128": "static/icon3.png"
+  },
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "static/node_modules/jquery/dist/jquery.min.js",
+        "static/html2canvas-0.5.0-beta4/dist/html2canvas.min.js",
+        "static/insertPage.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

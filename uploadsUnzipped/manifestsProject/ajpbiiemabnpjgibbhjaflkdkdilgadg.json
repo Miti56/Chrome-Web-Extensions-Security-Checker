@@ -1,0 +1,70 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "AMZfire Search Terms on Steroids",
+  "short_name": "Search Terms on Steroids",
+  "description": "Amazon backend search terms optimization tool.",
+  "version": "0.5.9",
+  "icons": {
+    "16": "images/icon16.png",
+    "24": "images/icon24.png",
+    "32": "images/icon32.png",
+    "64": "images/icon64.png",
+    "128": "images/icon128.png",
+    "256": "images/icon256.png"
+  },
+  "incognito": "split",
+  "options_page": "options/options.html",
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": [
+      "<all_urls>"
+    ],
+    "css": [
+      "common.css"
+    ],
+    "js": [
+      "lib/jquery-3.1.1.js",
+      "lib/q.min.js",
+      "lib/compromise.min.js",
+      "view/notification-panel-builder.js",
+      "services/constants.js",
+      "services/analizer.js",
+      "services/cache.js",
+      "services/event_sender.js",
+      "services/search_terms_getter.js",
+      "services/csv.js",
+      "content.js"
+    ]
+  }],
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "identity",
+    "unlimitedStorage",
+    "declarativeContent",
+    "storage",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_title": "AMZFire Search Terms on Steroids",
+    "default_popup": "popup/popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://maxcdn.bootstrapcdn.com https://ajax.googleapis.com https://www.googleapis.com https://www.gstatic.com https://*.firebaseio.com https://ssl.google-analytics.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "644540831932-c6fepb3e5mg7sr7gk2a6fjn60j3t016u.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoRxWx5RWGbaBfNNH51zwQrFuY7OtmbxoU35EU1HbyzTdznHMt4INjulak+cS1bBj6Apr94FthCwbkeY5yCJBAZDYZr7agixF31TlxIf/S9f1bXf6ze4Vq0mw14BJINwD8ucuvMP2H88dd6k09oreqcs/lpRanoToz+x3RRTmrut9wtj3LM0JfJ+Bluc/0/qxNTHoZeaG6ph7OLyhkCik2LNhv7qNTp8G0veCuvnO3ScmISCymWPTLhX+pTvSAJ5ZCD26Xv4ojcm73+wDt1a+7wvOTXUMmoZy0/bkLbQpIlbGq67GlCbqaHUvn6v21JamSylg9W78ZKJ0DvlxJvB+pQIDAQAB",
+  "web_accessible_resources": [
+    "images/icon64.png"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "lib/md5.min.js", "lib/lodash.min.js", "lib/jquery.js", "lib/fingerprint2.min.js", "utils.js", "config.js", "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "logos/19.png",
+         "38": "logos/38.png"
+      },
+      "default_popup": "popup.html",
+      "default_tile": "淘宝原图下载"
+   },
+   "content_scripts": [ {
+      "css": [ "ct.css" ],
+      "exclude_matches": [ "*://subway.simba.taobao.com/*" ],
+      "js": [ "lib/jquery.js", "iconfont.js", "config.js", "utils.js", "ct.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "jd.js" ],
+      "matches": [ "*://*.jd.com/*" ],
+      "run_at": "document_idle"
+   }, {
+      "exclude_matches": [ "*://subway.simba.taobao.com/*" ],
+      "js": [ "taobao.js" ],
+      "matches": [ "*://*.taobao.com/*", "*://*.tmall.com/*", "*://*.tmall.hk/*", "*://*.1688.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": "script-src 'self'  'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": " 1.支持淘宝、天猫、1688网、京东等站大图的解析和下载；2. 图片收藏功能转移到了新扩展，下载地址是：https://yuntu88.oss-cn-beijing.aliyuncs.com/front/help/index.html",
+   "icons": {
+      "128": "logos/128.png",
+      "16": "logos/16.png",
+      "48": "logos/48.png"
+   },
+   "manifest_version": 2,
+   "name": "淘宝原图下载",
+   "permissions": [ "*://*/*", "webRequest", "webRequestBlocking", "storage", "tabs", "contextMenus", "downloads" ],
+   "version": "1.0.3.5",
+   "web_accessible_resources": [ "logos/*", "iconfont.js" ]
+}

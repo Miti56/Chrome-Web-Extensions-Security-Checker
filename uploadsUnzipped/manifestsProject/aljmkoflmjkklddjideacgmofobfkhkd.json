@@ -1,0 +1,72 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "SpeakIt!",
+   "version": "0.2.997",
+   "manifest_version": 2,
+   "default_locale": "en",
+   "minimum_chrome_version": "14",
+   "description": "__MSG_desc__",
+   "options_page": "options.html",
+   
+   "icons": 
+   {
+      "128": "images/icon.png",
+      "16": "small_icon.png"
+   },
+
+   "background": 
+   {
+      "page": "speakit.html"
+   },
+
+   "browser_action": 
+   {
+      "default_icon": "small_icon.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_title__"
+   },
+
+   "content_scripts": 
+   [
+      {
+         "all_frames": true,
+         "js": [ "js/addSpeech.js" ],
+         "matches": [ 
+                        "<all_urls>", 
+                        "https://*/*" 
+                     ],
+         "run_at": "document_end"
+      }
+   ],
+
+   "permissions": [ 
+                     "<all_urls>",
+                     "contextMenus",
+                     "ttsEngine",
+                     "tts",
+                     "tabs",
+                     "webRequest",
+                     "webNavigation",
+                     "unlimitedStorage",
+                     "webRequestBlocking",
+                     "https://*/*" 
+                  ],
+   
+   "tts_engine": 
+   {
+      "voices": [ 
+      {
+         "event_types": [ "start", "marker", "end" ],
+         "gender": "female",
+         "lang": "en-US",
+         "voice_name": "iSpeech"
+      }, 
+      {
+         "event_types": [ "start", "marker", "end" ],
+         "gender": "female",
+         "lang": "en-US",
+         "voice_name": "SpeakIt!"
+      }]
+   }
+}

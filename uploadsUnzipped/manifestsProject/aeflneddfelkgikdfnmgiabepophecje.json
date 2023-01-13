@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Neopets Shop Highlighter",
+  "description": "Highlights items in Neopets shops that appear on page refresh",
+  "version": "1.8.2",
+
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.neopets.com/*"],
+      "js": ["active-tab.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_popup": "action-menu.html"
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+M",
+        "mac": "Alt+M",
+        "chromeos": "Alt+M",
+        "linux": "Alt+M"
+      }
+    }
+  },
+
+  "options_page": "settings-menu.html",
+  "icons": {
+    "16": "res/icon-16.png",
+    "48": "res/icon-48.png",
+    "128": "res/icon-128.png",
+    "256": "res/icon-256.png"
+  }
+}

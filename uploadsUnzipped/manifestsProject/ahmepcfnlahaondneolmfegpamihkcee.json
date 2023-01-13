@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Miramagia (русский)",
+  "description": "МираМагия – это мир волшебных растений с элементами ролевой игры.",
+  "version": "1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.miramagia.ru/"
+    ],
+    "launch": {
+      "web_url": "http://www.miramagia.ru/"
+    }
+  },
+  "icons": {
+    "128": "AppIcon_128x128.png"
+  }
+}

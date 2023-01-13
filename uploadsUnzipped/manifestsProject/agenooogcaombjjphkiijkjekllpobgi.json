@@ -1,0 +1,37 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "Multi Email Forward",
+    "description": "You can easily forward your maximum 50 emails to any gmail address you want.",
+    "version": "1.0",
+    "permissions": [
+        "cookies",
+        "<all_urls>",
+        "activeTab",
+        "*://mail.google.com/*"
+    ],
+    "browser_action": {
+        "default_icon": "icons/cloud.png",
+ "default_popup": "popup.html"
+        },
+       "oauth2": {
+    "client_id": "237470796096-ruv3vfvlmjd8k9kcg3ldv84c0fqdtr3v.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+" https://www.googleapis.com/auth/gmail.send",
+"https://www.googleapis.com/auth/gmail.modify"
+    ]
+  },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://mail.google.com/*"
+            ],
+            "js": [
+                "popup.js",
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

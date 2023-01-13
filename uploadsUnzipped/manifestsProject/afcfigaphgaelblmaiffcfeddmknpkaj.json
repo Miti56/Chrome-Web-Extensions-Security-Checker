@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"container":["GOOGLE_SPREADSHEET","DOMAIN_INSTALLABLE"],"app":{"background":{"scripts":["background.js"]}},"api_console_project_id":"117518867420","container_info":{"post_install_tip":"csv Exporter is easy to use. Just launch the Exporter, specify the Google Sheet you want to export, choose a delimiter (e.g. comma or semicolon) and click export. The csv file is automatically saved in your Google Drive.","container_id":"MD4IbnrThZNYNhRfOkuKhIXhkBvK4QXUi","container_version":"6"},"manifest_version":2,"name":"csv Exporter","description":"csv Exporter lets you export your Google Sheets as a csv with a freely chosen delimiter","icons":{"16":"script-icon_16.png","128":"script-icon_128.png"},"version":"4"}

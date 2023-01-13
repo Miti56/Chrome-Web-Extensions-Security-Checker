@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "약손명가",
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "2.19",
+   "description": "영업지원에서 판매관리와 결제, 매장관리까지 한번에 통합관리해드리는 최적의 비즈니스솔루션 싱크커머스 ",
+    "short_name": " 약손명가",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "permissions": [
+    "webview",
+    "serial",
+    "storage",
+    "http://ys.ajashop.co.kr/"
+  ]  
+}

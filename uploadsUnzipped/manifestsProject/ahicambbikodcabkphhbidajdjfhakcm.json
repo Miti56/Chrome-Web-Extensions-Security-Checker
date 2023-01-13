@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TopicHeads - SEO Browser",
+  "description": "seo-view.com ist TopicHead's SEO-Browser, er ermöglicht es Websites so zu betrachten, wie es auch google macht.",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.seo-view.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.seo-view.com"
+    }
+  }
+}

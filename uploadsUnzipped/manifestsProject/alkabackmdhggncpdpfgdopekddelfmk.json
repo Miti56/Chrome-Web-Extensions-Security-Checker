@@ -1,0 +1,49 @@
+{
+  "version": "2.0.2",
+   "content_scripts": [ {
+      "js": ["js/content.js"],
+      "matches": [
+        "https://*.alliances.commandandconquer.com/*"
+      ]
+   } ],
+   "description": "This extension contains many scripts that were written by others. I take credit only for scripts written by myself.",
+   "icons": {
+      "48": "imgs/icon.png",
+      "20": "imgs/icon-20.png"
+   },
+   "page_action": {
+    "default_icon": "imgs/icon-20.png",
+    "default_title": "C&C TA: STD Script Collection"
+  },
+  "permissions": [
+    "storage"
+  ],
+   "manifest_version": 2,
+   "name": "C&C TA: STD Script Collection",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "options_page": "options.html",
+   "background": {
+        "scripts": ["js/background.js"]
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "web_accessible_resources": [
+      "scripts/11149.user.js",
+      "scripts/670.user.js",
+      "scripts/11150.user.js",
+      "scripts/1902.user.js",
+      "scripts/1904.user.js",
+	  "scripts/1933.user.js",
+	  "scripts/1936.user.js",
+      "scripts/1860.user.js",
+      "scripts/11148.user.js",
+	  "scripts/718.user.js",
+      "scripts/11147.user.js",
+	  "scripts/11112.user.js",
+	  "scripts/10440.user.js",
+	  "scripts/10436.user.js",
+	  "scripts/11157.user.js",
+	  "scripts/1900.user.js",
+	  "scripts/3230.user.js",
+	  "scripts/12621.user.js"
+	]
+}

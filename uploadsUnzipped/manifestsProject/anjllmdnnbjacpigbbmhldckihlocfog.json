@@ -1,0 +1,79 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TIP Enhancer",
+  "version": "0.0.10",
+  "manifest_version": 2,
+  "description": "Enhances TIP and ADS - made by Foster Clinton",
+   "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  
+  "options_ui": {
+    "page": "src/options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon128.png"
+	
+  },
+  "permissions": [
+    "contentSettings",
+    "tabs",
+	"storage",
+	"notifications",
+	"contextMenus",
+	"clipboardRead",
+	"clipboardWrite",
+    "*://*.tycois.com/*"
+  ],
+  "content_scripts": [
+    {
+	"run_at" : "document_end",
+      "matches": [
+        "https://tip.tycois.com/its/*"
+      ],
+      "js": [
+        "src/inject/jquery-3.2.1.min.js","src/inject/attrchange.js","src/inject/itsinject.js"
+      ]
+
+    }, 
+	{
+	"run_at" : "document_end",
+      "matches": [
+        "https://tip.tycois.com/job/*"
+      ],
+      "js": [
+        "src/inject/jquery-3.2.1.min.js","src/inject/attrchange.js","src/inject/tipinject.js"
+      ]
+
+    },
+	{
+      "matches": [
+        "*://compass.tycois.com/*"
+      ],
+      "js": [
+        "src/inject/injectcompassalive.js"
+      ]
+
+    },
+	{
+      "matches": [
+        "*://ads.tycois.com/ADS2.1/Site/ActivityFrame.aspx"
+      ],
+      "js": [
+        "src/inject/jquery-3.2.1.min.js","src/inject/injectmakeadsgreatagain.js"
+      ]
+
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Airhorn",
+  "short_name": "Airhorn",
+  "description": "",
+  "version": "0.0.5",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "airhorn16.png",
+    "128": "airhorn128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions":["alwaysOnTopWindows"]
+}

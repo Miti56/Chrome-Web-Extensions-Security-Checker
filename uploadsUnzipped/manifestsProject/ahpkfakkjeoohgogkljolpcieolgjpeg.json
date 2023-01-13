@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Oragnize Your Damn Bookmarks",
+  "description": "Organize your Bookmarks",
+  "version": "1",
+  "permissions": [
+    "bookmarks",
+    "storage"
+  ],
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+  "chrome_url_overrides": {
+    "newtab": "main.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "manifest_version": 2
+}

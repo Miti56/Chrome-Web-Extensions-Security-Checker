@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Ameyo.Emerge.Toolbar.2",
+  "description": "Ameyo.Emerge.Toolbar.2",
+  "version": "1.111",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+  {
+    "matches": [
+      "http://*/grofer/groferCrm.html",
+      "http://*/ameyoemerge/groferCrm.html",
+      "http://10.10.10.192/grofer/*",
+      "http://*/AmeyoOmniQueue/*",
+      "http://*/AmeyoEmergeIC/*",
+      "http://internal.grofer.it/orders_dashboard/*",
+      "https://internal.grofers.com/orders_dashboard/"
+    ],
+    "js": ["js/calendar/calendar.js","js/calendar/lang/calendar-en.js","js/calendar/calendar-setup.js","js/util.js","content.js"],
+    "css" : ["css/content.css","js/calendar/skins/aqua/theme.css","js/calendar/skins/custom.css"],
+    "web_accessible_resources": [
+    "js/calendar/skins/aqua/*gif"]
+  },
+  {
+    "matches": [
+      "http://cte.texocc.com:8888/ameyowebaccess/en_chrome_plugin*",
+      "http://cte.texocc.com:8887/ameyowebaccess/en_chrome_plugin*",
+      "http://cte.texocc.com:8877/ameyowebaccess/ameyo_emerge*",
+      "http://localhost:8877/ameyowebaccess/ameyo_emerge*",
+      "http://127.0.0.1:8877/ameyowebaccess/ameyo_emerge*",
+      "http://10.10.10.209:8877/ameyowebaccess/ameyo_emerge*",
+      "http://cte.texocc.com:8888/ameyowebaccess/ameyo_emerge/ameyo_emerge*",
+      "https://cte.texocc.com:8887/ameyowebaccess/ameyo_emerge*"
+    ],
+    "js": ["ameyoContent.js"]
+  }
+],
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*","webRequest", "storage","webRequestBlocking"
+   ]
+}

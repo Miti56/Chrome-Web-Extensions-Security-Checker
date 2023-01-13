@@ -1,0 +1,20 @@
+{
+  "update_url": "http://clients2.google.com/service/update2/crx",
+  "name": "__MSG_extension_name__",
+  "version": "2.2.4",
+  "manifest_version": 2,
+  "description": "__MSG_extension_description__",
+  "default_locale": "en",	
+ "app": {
+    "urls": [
+      "http://www.2048box.info/"
+
+    ],
+    "launch": {
+      "web_url": "http://www.2048box.info/"
+    }
+  },
+  "icons": {
+       "128": "128.png"
+  }
+}

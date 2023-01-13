@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "HopperLoader",
+    "version": "3.3",
+    "description": "mwlists.com Hopper",
+    "permissions": ["*://mwlists.com/*"],
+    "manifest_version" : 2,
+    "content_scripts": [
+        {
+             "matches": ["*://*.mobwars.com/*","*://mobwars.com/*"],
+	    "all_frames":true,
+            "js": ["HopperLoader.min.js"]
+        }
+    ]
+}

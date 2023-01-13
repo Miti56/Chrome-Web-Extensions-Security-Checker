@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Shepherd Wallpapers Shepherd New Tab HD",
+  "description": "New Tab themes with Shepherd HD wallpapers made by fans, for fans of Shepherd",
+  "version": "1.0",
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": {
+    "128": "pictures/128.png"
+    }
+  },
+  "icons": {
+    "128": "pictures/128.png"
+  },
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "topSites",
+    "chrome://favicon/*",
+	"http://*/*",
+	"https://*/*",
+    "webRequestBlocking",
+    "webRequest"
+  ]
+}

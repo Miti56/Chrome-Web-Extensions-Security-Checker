@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "视频自动转HTML5播放器",
+	"version" : "2.0.1",
+	"description" : "HTML5 Player",
+	"page_action" : {
+		"default_title" : "自动检测启动HTML5播放器",
+		"default_icon" : "html5Player.logo.png",
+		"default_popup" : "setting.html"
+	},
+	"background":{
+		"scripts":["source/jquery.min.js","source/background.js"]
+	},
+	
+	"icons" : {
+		"48" : "html5Player.logo.png",
+		"128" : "html5Player.logo.png"
+	},
+	"permissions": [
+		"notifications","tabs","*://*/*",
+		"*://*.56.com/*",
+		"*://*.acfun.tv/*",
+		"*://*.bilibili.tv/*",
+		"*://*.iqiyi.com/*",
+		"*://*.letv.com/*",
+		"*://*.qq.com/*",
+		"*://*.sina.com/*",
+		"*://*.sohu.com/*",
+		"*://*.tudou.com/*",
+		"*://*.xunlei.com/*",
+		"*://*.youku.com/*",
+		"*://*.163.com/*",
+		"*://*.github.com/*"
+	],
+	"manifest_version": 2
+}

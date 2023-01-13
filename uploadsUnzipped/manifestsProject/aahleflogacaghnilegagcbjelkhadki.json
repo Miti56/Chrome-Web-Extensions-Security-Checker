@@ -1,0 +1,23 @@
+{
+  "name": "CloudLink",
+  "version": "1.0.7",
+  "content_security_policy": "script-src 'self' https://www.cloudlink.net.cn/ 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2,
+  "short_name": "CloudLink",
+  "description": "1.CloudLink,Chrome翻墙插件,解决用户对,Google,Facebook,YouTube,Twitter,网站进行翻墙上网。2.CloudLink翻墙插件,多条线路任你选,美国、英国、德国、法国、荷兰、日本、韩国、香港,新加坡,高速、稳定、优质。",
+  "background": {
+    "persistent": true,
+    "page":"background.html"
+  },
+  "browser_action": {
+    "default_icon": "img/logo48.png",
+    "default_popup": "popup.html",
+    "default_title": "CloudLink"
+  },
+  "icons": {
+    "48": "img/logo48.png"
+  },
+  "permissions": ["storage", "management", "proxy", "idle","browsingData", "tabs", "cookies", "notifications", "webRequest", "webRequestBlocking", "http://*/", "https://*/", "activeTab" ],
+  "update_url": "http://clients2.google.com/service/update2/crx",
+  "web_accessible_resources": [ "img/logo48.png" ]
+}

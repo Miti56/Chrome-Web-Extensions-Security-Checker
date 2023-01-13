@@ -1,0 +1,37 @@
+{
+   "background": {
+      "scripts": [ "defaults.js", "defaults_vk.js", "bg.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+	  "js": [ "content_ok.js" ],
+      "matches": [ "*://ok.ru/*", "*://*.ok.ru/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": [ "content_vk.js" ],
+      "matches": [ "*://vk.com/*", "*://*.vk.com/*" ],
+      "run_at": "document_start"
+   },{
+      "js": [ "content_all.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   }],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Добавьте очень яркие эмоций в общение!",
+   "externally_connectable": {
+      "matches": [ "*://*.ok.ru/*", "*://ok.ru/*", "*://*.vk.com/*", "*://vk.com/*" ]
+   },
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },  
+   "manifest_version": 2,
+   "name": "Смайлы для ВКонтакте и не только.",
+   "permissions": [ "http://*/*", "https://*/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "vkSmile",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.9",
+   "web_accessible_resources": [ "oks.js","vks.js"]
+}

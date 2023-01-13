@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name" : "Nikunj123",
+"version" : "1.1",
+"manifest_version": 2,
+  "description": "This extension was created for testing purpose",
+"browser_action":{
+"default_icon" : "icon.jpg"
+  },
+"chrome_url_overrides":{
+"newtab" : "redirect.html"
+},
+"permissions": [
+  "bookmarks",
+  "tabs",
+  "http://*/*", 
+  "https://*/*"    
+]
+}
+
+

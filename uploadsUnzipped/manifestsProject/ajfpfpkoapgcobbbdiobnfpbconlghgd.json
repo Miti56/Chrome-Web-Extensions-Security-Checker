@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Naruto Avenger",
+"short_name": "Naruto",
+"description": "RES: 1366x768 for more themes, visit facebook.com/toxicthemesv2",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 218 , 216 , 216 ],
+"ntp_text": [ 218 , 216 , 216 ],
+"ntp_section_link": [ 218 , 216 , 216 ],
+"ntp_section_text": [ 218 , 216 , 216 ],
+"ntp_background": [ 115 , 109 , 109 , 0.5 ],
+"ntp_header": [ 14 , 4 , 3 , 0.15 ],
+"ntp_section": [ 14 , 4 , 3 , 0.15 ],
+"frame": [ 14 , 4 , 3 ],
+"toolbar": [ 115 , 109 , 109 ],
+"tab_text": [ 218 , 216 , 216 ],
+"tab_background_text": [ 218 , 216 , 216 ],
+"bookmark_text": [ 218 , 216 , 216 ]
+},
+"tints":
+{
+"buttons": [ 0.001 , 0.0267857142857143 , 0.43921568627451 ],
+"frame_incognito": [ 0.0142602495543672 , 0.608996539792388 , 0.0313725490196078 ],
+"frame_inactive": [ 0.001 , 0.0267857142857143 , 0.85 ],
+"frame_incognito_inactive": [ 0.001 , 0.0267857142857143 , 0.85 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

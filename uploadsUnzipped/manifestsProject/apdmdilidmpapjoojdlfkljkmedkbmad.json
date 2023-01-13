@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Video Oynat",
+  "description": "Puts an end to bright pages.",
+  "version": "1.0.8",
+  "permissions": [ "tabs", "*://*.youtube.com/*", "*://*.facebook.com/*", "*://*.google.com/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "icons/icon16on.png",
+    "48": "icons/icon48on.png",
+    "128": "icons/icon128on.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/icon19off.png",
+      "38": "icons/icon38off.png"
+    }
+  },
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "short_name": "Video Seyret",
+  "web_accessible_resources": [
+    "StackBoxBlur.js",
+    "script.js",
+    "options/jquery-2.0.3.min.js",
+    "options/jquery-2.0.3.min.map",
+    "icons/icon48off.png",
+    "icons/icon48on.png"
+  ]
+}

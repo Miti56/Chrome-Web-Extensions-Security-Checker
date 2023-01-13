@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Photogram",
+    "short_name": "Photogram",
+    "description": "__MSG_app_description__",
+    "default_locale": "en",
+    "version": "0.9.5",
+    "manifest_version": 2,
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "permissions": [
+        "storage", {
+            "fileSystem": ["write", "retainEntries", "directory"]
+        }
+    ],
+    "icons": {
+        "128": "icon.png"
+    }
+}

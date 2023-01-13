@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Fireboy and Watergirl 2 - Unblocked",
+    "description": "Play Fireboy and Watergirl 2 for free!",
+    "version": "0.1",
+    "manifest_version": 2,
+	"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+         "title": "Play Fireboy and Watergirl 2 for free!"
+    }
+}

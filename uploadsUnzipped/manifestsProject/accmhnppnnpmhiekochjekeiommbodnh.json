@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Edte.vn Desktop Streamer",
+  "description": "Extendtion Allow share Desktop",
+  "version": "0.1.0",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "favicon-16x16.png",
+    "48": "apple-icon-57x57.png",
+    "128": "apple-icon-144x144.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://edte.vn/*"
+      ]
+  }
+}

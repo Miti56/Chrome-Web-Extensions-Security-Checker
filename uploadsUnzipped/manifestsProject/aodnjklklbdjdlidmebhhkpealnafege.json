@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "DiscussionBar",
+  "description": "Watch and sync YouTube videos while chatting at the same time with your friends.",
+  "version": "0.9104",
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn71nyLiCMYuft5Op99qq+Lku2B4POWspjlojqME66+EAXXwlsIg4O859CYwH9Hm1abdlI8sO706A6YGm/0DR1OZZ2U+3lg/mKepMSi1BaEGHFFhT0PErSl06+mRuqqTGQvxCHrb85HrQQot7NMOO8OzKSf+iRBTWeoc/9RgUN9II9jJljRL7Ik8ypIfKx488sGuAQFrRAEmtJzEy+IMIXSvir5X3C787OHiJcvn/65pycpdMM/UxXNqEKoYZnYRwVelvkOqvvXjhENg0QXtBFmNY4z4/bNZsivDuXikCFagZ9ppSA233Zn1/A+/KgBPUGLyrWR8ADWOyk5M/6nwL2QIDAQAB",
+  "oauth2": {
+    "client_id": "281219611151-gu7e5srh12g1n4cdrus22p5apdf1lign.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/userinfo.profile","https://www.googleapis.com/auth/userinfo.email"]
+  },
+  "permissions": [
+    "activeTab",
+    "identity",
+    "identity.email",
+    "storage",
+    "https://*.aws.found.io/*",
+    "https://f7ve8o3vlb.execute-api.us-west-1.amazonaws.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "DiscussionBar"},
+
+  "content_scripts": [{
+    "js": ["content.js"],
+    "css": ["content.css"],
+    "matches": [
+    "https://*.youtube.com/*",      
+    "https://discussionbar.com/*"
+      ]
+  }],
+  "web_accessible_resources": ["frame.html"],
+  "manifest_version": 2,
+  "icons": { 
+   "128": "DB_logo_v2b_128.png" }
+}

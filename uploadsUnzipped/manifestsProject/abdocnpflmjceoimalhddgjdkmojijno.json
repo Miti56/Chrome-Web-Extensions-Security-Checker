@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Candela for Holiday",
+  "description": "Flickering candles, perfect for that Silent Night",
+  "manifest_version": 2,
+  "version": "0.1",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    {
+      "socket": [
+        "udp-bind:*",
+        "udp-send-to:*"
+      ]
+    }
+  ],
+  "icons": { "128": "img/holiday-114x114.png", "16": "img/holiday-57x57.png" }
+}

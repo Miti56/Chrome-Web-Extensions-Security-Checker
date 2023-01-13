@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "D-Day",
+	"description": "Fly as an American pilot during D-Day and protect the landing craft.",
+	"version": "3.3",
+	"manifest_version": 2,
+	"homepage_url": "http://http://lakedoggames.wix.com/lake-dog-games",
+	"app": {
+		"launch": {
+			"local_path": "index.html"
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

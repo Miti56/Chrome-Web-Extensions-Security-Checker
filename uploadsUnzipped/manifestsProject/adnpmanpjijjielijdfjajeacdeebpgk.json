@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name":"Owlink Bookmarks",
+ "version":"2.0.9",
+ "manifest_version":2,
+
+ "description":"Owlinks lets you bookmark pages and find them with Google search.",
+ "icons":{"128":"popup/extension_logo.png"},
+ 
+  "browser_action": {
+    "default_icon": "popup/extension_logo.png", 
+    "default_title": "Save as Owlink",
+    "default_popup": "popup/main.html"
+  },
+
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ],
+  "content_scripts":[
+    {
+        "matches":["*://*/*"],
+        "include_globs":["*www.google.co*"],
+        "exclude_globs":["*tbm=shop*"],
+        "js":["vendor/jquery.js", "vendor/underscore.js", "search_box/main_division.js"],
+        "css":["search_box/style.css"]
+    },
+    {
+        "matches":["*://*/*"],
+        "run_at":"document_start",
+        "js":["vendor/jquery.js","vendor/underscore.js", "comments/template.js", "comments/share.js", "comments/facebook.js"],
+        "css":["comments/template.css", "comments/share.css"]
+    }
+  ],
+
+  "web_accessible_resources": [
+      "popup/logo2.png",
+      "popup/loading.gif",
+      "vendor/jquery.min.map",
+      "search_box/down.png",
+      "search_box/icon.png",
+      "search_box/close.png"
+  ]
+
+}

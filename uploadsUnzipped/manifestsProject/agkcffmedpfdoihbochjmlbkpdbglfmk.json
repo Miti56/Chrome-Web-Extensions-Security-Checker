@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "IntelApp - Know your prospects",
+  "short_name": "IntelApp",
+  "version": "0.1.8",
+  "description": "Know everything about your prospects in 5 minutes!",
+  "web_accessible_resources": ["sugar.bundle.js", "pipedrive.bundle.js", "inject.bundle.js", "common.bundle.js",
+    "index.html", "inject-sidebar.js"],
+  "background": {
+    "scripts": [
+      "background.bundle.js"
+    ],
+    "persistent": true
+  },
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_scripts": [
+        {
+           "matches": ["http://*/*", "https://*/*"],
+            "js": ["inject.bundle.js"],
+            "run_at": "document_start"
+        }
+    ],
+  "browser_action": {
+    "default_title": "IntellApp"
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "contextMenus",
+    "cookies"
+  ],
+  "externally_connectable": {
+    "matches": ["https://*.intelapp.io/*", "http://localhost:8000/*"]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com/analytics.js https://ssl.google-analytics.com/ga.js https://widget.intercom.io/ https://js.intercomcdn.com/; object-src 'self'"
+}

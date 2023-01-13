@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "lmgtfy Redirect",
+  "description": "A Google Chrome extension that automatically redirects lmgtfy links to their respective search engines",
+  "version": "1.0",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.lmgtfy.com/*",
+    "*://*.lmbtfy.com/*",
+    "*://*.lmddgtfy.net/*",
+    "*://*.lmsptfy.com/*",
+    "*://*.lmstfy.com/*"
+  ],
+
+  "background": {
+    "scripts": [
+      "uri/src/URI.min.js",
+      "lmgtfy.js"
+    ]
+  }
+}

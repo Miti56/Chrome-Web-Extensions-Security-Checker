@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  
+  "manifest_version":2,
+  "name":"Cryptocurrency Faucets",
+  "version":"0.0.6",
+  "description":"Extension for the best and reliable Cryptocurrency Faucets",
+  "author":"Go Faucet",
+  "icons":{"128":"fauceticon1.png"
+  },
+  
+  "browser_action":{
+    "default_popup":"popup.html",
+    "default_icon":"fauceticon1.png",
+    "default_title":"Cryptocurrency Faucets"
+
+  },
+  
+  "permissions":["activeTab"],
+  
+  "background":{
+    "scripts":["main.js"],
+    "scripts":["coinpot.js"],
+    "scripts":["fav.js"],
+    "scripts":["multicoin.js"],
+    "scripts":["Bitcoin.js"],
+    "scripts":["Dogecoin.js"],
+    "scripts":["Ethereum.js"],
+    "scripts":["autofaucet.js"],
+    "scripts":["bitcoinfaucethub.js"],
+    "scripts":["faucethub.js"],
+    "scripts":["wallets.js"],
+    "scripts":["TurtleCoin.js"],
+    "scripts":["ptc.js"],
+    "scripts":["Loki.js"],
+    "scripts":["donate.js"],
+    "scripts":["Blackcoin.js"],
+    "scripts":["Dash.js"],
+    "scripts":["DigiByte.js"],
+    "scripts":["faucets.js"],
+    "scripts":["Litecoin.js"],
+    "scripts":["Monero.js"],
+    "scripts":["Peercoin.js"],
+    "scripts":["Potcoin.js"],
+    "scripts":["Primecoin.js"],
+    "scripts":["Ripple.js"],
+    "scripts":["BitCore.js"],
+    "scripts":["BitcoinCash.js"],
+    "scripts":["autoZCash.js"],
+    "scripts":["autoBitcoin.js"],
+    "scripts":["autoBitcoinCash.js"],
+    "scripts":["autoBitCore.js"],
+    "scripts":["autoBlackcoin.js"],
+    "scripts":["autoDash.js"],
+    "scripts":["autoDigiByte.js"],
+    "scripts":["autoDogecoin.js"],
+    "scripts":["autoEthereum.js"],
+    "scripts":["autoLitecoin.js"],
+    "scripts":["autoMonero.js"],
+    "scripts":["autoPeercoin.js"],
+    "scripts":["autoPotcoin.js"],
+    "scripts":["autoPrimecoin.js"],
+    "scripts":["games.js"]
+  }
+  
+}

@@ -1,0 +1,41 @@
+{
+	"icons": {
+		"48": "image/max-payne-48.png",
+		"128": "image/max-payne-128.png"
+	},
+	"optional_permissions": [
+		"management"
+	],
+	"default_locale": "en",
+	"description": "__MSG_description__",
+	"background": {
+		"scripts": [
+			"assets/max-payne.js"
+		]
+	},
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "7.8.8",
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"name": "__MSG_name__",
+	"browser_action": {
+		"default_title": "Max Payne"
+	},
+	"chrome_url_overrides": {
+		"newtab": "carrier.html"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

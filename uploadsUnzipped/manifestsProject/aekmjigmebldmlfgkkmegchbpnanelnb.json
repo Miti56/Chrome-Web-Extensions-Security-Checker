@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"Runis.eu TimoCom Assistant",
+"description":"Make Phone call from browser easyer with http://www.Runis.eu",
+"version":"1.5.16",
+"manifest_version":2,
+"background": {
+	"persistent": false,
+    "scripts": ["background.js"]
+},
+"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+"content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+       "js": ["jquery-2.1.1.js", "myscript.js"]
+    }
+],
+"permissions" : [
+	"tabs",
+	"contextMenus"
+] 
+}

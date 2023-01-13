@@ -1,0 +1,28 @@
+{
+  "author": "Tamara Parker",
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "images/off.png",
+      "48": "images/off.png",
+      "64": "images/off.png"
+    },
+    "default_popup": "html/popup.html",
+    "default_title": "PrivateVPN"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' blob:; object-src 'self'",
+  "default_locale": "en",
+  "description": "__MSG_appDesc__",
+  "icons": {
+    "128": "images/icon128.png",
+    "16": "images/icon128.png",
+    "48": "images/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "permissions": ["proxy", "storage", "alarms", "tabs", "webRequest", "*://*.com/*", "*://*.net/*", "*://*.org/*", "*://*.life/*", "webNavigation", "webRequestBlocking", "cookies"],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.2"
+}

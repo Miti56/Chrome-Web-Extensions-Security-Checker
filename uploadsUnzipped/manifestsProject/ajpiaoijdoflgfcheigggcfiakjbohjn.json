@@ -1,0 +1,32 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": ["js/bg.js"]
+   },
+   "browser_action": {
+      "default_icon": "icons/128.png",
+      "default_title": "__MSG_title__"
+   },
+   "content_scripts": [{
+      "all_frames": false,
+      "js": ["js/bg.js"],
+      "matches": ["https://web.telegram.org/*"],
+      "run_at": "document_end"
+   }],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+   "description": "__MSG_desc__",
+   "default_locale": "en",
+   "icons": {
+      "128": "icons/128.png",
+      "64": "icons/64.png",
+      "48": "icons/48.png",
+      "32": "icons/32.png",
+      "16": "icons/16.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "short_name": "__MSG_shortname__",
+   "permissions": ["tabs", "storage", "unlimitedStorage", "https://web.telegram.org/*", "browsingData", "proxy", "activeTab"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.07.03.5"
+}

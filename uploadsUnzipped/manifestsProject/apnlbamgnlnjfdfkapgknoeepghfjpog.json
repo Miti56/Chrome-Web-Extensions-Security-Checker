@@ -1,0 +1,32 @@
+{
+	"manifest_version":2,
+	"name":"__MSG_extName__",
+	"background":{
+		"page": "chrome/background.html"
+	},
+	"browser_action":{
+		"default_icon":"src/images/app_logo.png",
+		"default_popup":"chrome/start.html",
+		"default_title":"__MSG_extName__"
+	},
+	"description":"__MSG_extDescription__",
+	"content_scripts":[{
+		"css":["src/css/popup.css"],
+		"js":["src/scripts/lib/jquery.min.js"],
+		"matches": [ "*://*/*" ]
+	}],
+	"default_locale": "en",
+	"update_url":"http://upext.chrome.360.cn/intf.php?method=ExtUpdate.query",
+	"icons":{ 
+	    "16": "src/images/icon16.png",             
+	    "48": "src/images/icon48.png",            
+	    "128": "src/images/icon128.png" 
+	  }, 
+	"permissions":[
+		"contextMenus", "cookies", "tabs", "unlimitedStorage", "notifications", "http://*/*", "https://*/*"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"version":"1.0.0.0",
+	"update_url":"http://clients2.google.com/service/update2/crx"
+	
+}

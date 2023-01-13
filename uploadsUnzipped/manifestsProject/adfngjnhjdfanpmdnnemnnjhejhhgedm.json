@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Logico",
+  "description": "Coloring words according to their grammatical property",
+  "version": "0.1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file:///*/*"
+      ],
+      "css": [
+        "css/textColor.css"
+      ],
+      "js": [
+        "js/api.js",
+        "js/BosonAPI.js",
+        "js/syntaxAnalyzer.js",
+        "js/functions.js",
+        "js/ContentScript.js",
+        "js/compromise.js",
+        "js/POSTagger.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "js/main.js",
+    "js/textColor.css"
+  ],
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "tabs",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "scripts": [
+      "js/dropdown/dropdown.js"
+    ]
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "options_page": "option/option.html",
+  "manifest_version": 2
+}

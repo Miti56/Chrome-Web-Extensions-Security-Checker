@@ -1,0 +1,30 @@
+{  
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon-32.png",
+      "default_title": "sotapit"
+   },
+   "content_scripts": [ {
+      "js": ["youku.js"],
+      "matches": [ "http://tv.sohu.com/*", "http://wenku.baidu.com/*", "http://*.youku.com/*", "http://*.tudou.com/*", "https://*.youku.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "zh_CN",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "48": "icon-48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "options_page": "options.html",
+   "permissions": [ "notifications", "storage", "tabs", "management" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "4.1.5",
+   "web_accessible_resources": [ "buttons.css"]
+}

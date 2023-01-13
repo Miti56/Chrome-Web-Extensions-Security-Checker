@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Brocante Belgique",
+"short_name": "Brocante",
+"description": "Brocante! Site de référence pour trouver ou publier vos PETITES ANNONCES en Belgique",
+"version": "1.0.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": ["http://www.babatic.be/"],
+"launch": {"web_url": "http://www.babatic.be/fr/marche-brocantes-111"}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

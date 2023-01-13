@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "page": "chrome/background.html"
+  },
+  "description": "Easily open desired links in PDF viewer",
+  "homepage_url": "http://pleasurepdf.site",
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png"
+  },
+  "manifest_version": 2,
+  "name": "Take pleasure in pdf",
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*", "https://pleasurepdf.site/*"],
+      "js": [
+        "jquery-3.4.1.js",
+        "http.js",
+        "inboxsdk.js",
+        "main.js",
+        "/gmail/inbox-sdk-config.js"
+      ],
+      "css": ["css/added.css", "css/used.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_ui": {
+    "chrome_style": true,
+    "page": "content/page/page.html"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.google.com/*",
+    "https://pleasurepdf.site/*",
+    "https://vidme.site/*",
+    "storage",
+    "downloads",
+    "contextMenus",
+    "notifications",
+    "nativeMessaging",
+    "tabs"
+  ],
+  "short_name": "pleasure-pdf",
+  "version": "1.0.8"
+}

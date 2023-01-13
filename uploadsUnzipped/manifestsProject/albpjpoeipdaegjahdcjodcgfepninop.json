@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ProsperWorks CRM for G Suite",
+  "version": "1.0.6",
+  "short_name": "ProsperWorks CRM for G Suite",
+  "description": "CRM for G Suite that teams actually want to use",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "app": {
+    "launch": {
+      "web_url" : "https://app.prosperworks.com/auth/auto_login?redirect_url=https%3A%2F%2Fapp.prosperworks.com&use_active_session=1&utm_source=chrome_webstore_app"
+    }
+  }
+}

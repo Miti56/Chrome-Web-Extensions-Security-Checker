@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Newchic.com",
+  "description": "Click and welcome to Newchic.com!",
+  "version": "1.0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },  "icons": {        "128": "Newchicicon.png"    },  "background": {    "scripts": ["popup.js"], "persistent": false },  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/* "
+  ]
+}

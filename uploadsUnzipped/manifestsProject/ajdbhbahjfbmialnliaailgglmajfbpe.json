@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  
+  "name": "Консультант ПК",
+  "version": "1.0.15",
+  "description": "Расширение показывает какие игры пойдут на выбраном вами в интернет магазинах оборудование,а также поможет подобрать комплектующие.",
+  "web_accessible_resources":["images/krestik.png","728.GIF","vibor.html","gam1.js","jquery-2.1.3.js","images/poiskprocessora.png","images/poiskvideo.png","images/poiskozu.png","proverka.html","Materinka.js","images/joystick_4167.png","games.html","javascripts/gam.js","gamejava.xml","javascripts/pipst.js","javascripts/potinet.js","pon.html"],
+  "permissions": [
+        "https://*/*",
+        "http://*/*"
+		,"downloads"
+	],
+  "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png"
+   },
+  
+  "background": {
+    "scripts": ["javascripts/1.js"]
+  },
+  "browser_action" : {
+	  "default_title":"Knopka",
+	  "default_popup":"popup.html"
+  }
+}

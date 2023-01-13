@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "LibreOffice Draw on rollApp",
+  "description": "Excellent package for producing technical drawings, general posters, and much else. Powered by rollApp.",
+  "version": "1.2.1",
+  "app": {
+    "urls": [
+      "*://www.rollapp.com/launch/lodraw",
+      "*://www.rollapp.com/app/lodraw"
+    ],
+    "launch": {
+      "web_url": "https://www.rollapp.com/launch/lodraw?ref=chrome-app",
+      "container": "panel",
+      "width": 900,
+      "height": 600
+    }
+  },
+  "icons": { "16": "lodraw-16.png", "128": "lodraw-128.png" }
+}

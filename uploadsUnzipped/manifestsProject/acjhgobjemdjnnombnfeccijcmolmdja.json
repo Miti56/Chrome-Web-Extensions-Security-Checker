@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Open Page Faster",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "description": "Load pages faster(in China) by replacing Google scripts to the same files hosted by libs.useso.com.",
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "icons": {
+    "16":  "assets/icon16.png",
+    "48":  "assets/icon48.png",
+    "128": "assets/icon128.png" 
+  },
+  "permissions": [
+    "webRequest", "webRequestBlocking", "http://*/*", "https://*/*"
+  ],
+  "web_accessible_resources": ["misc/*"]
+}

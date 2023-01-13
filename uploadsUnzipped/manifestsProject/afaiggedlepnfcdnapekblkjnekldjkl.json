@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Pou Pet",
+ "version": "1.0.1",
+"manifest_version": 2,
+ "description": "Pou is a virtual pet game.",
+  "app": {
+    "urls": [
+      "http://www.yowgame.com/adventure/pou"
+    ],
+    "launch": {
+      "web_url": "http://www.yowgame.com/adventure/pou"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

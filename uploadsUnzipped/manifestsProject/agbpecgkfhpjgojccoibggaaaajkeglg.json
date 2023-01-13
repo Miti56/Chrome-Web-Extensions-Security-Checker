@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Code Saver (Alpha)",
+  "description": " *ALPHA VERSION* Save your code snippets across devices using Google cloud storage!",
+  "version": "0.4.1",
+  "manifest_version": 2,
+  "offline_enabled":true,
+  "permissions":[
+    "alwaysOnTopWindows",
+    "syncFileSystem"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "assets/codesaver-16.png", "128": "assets/codesaver-128.png" }
+}

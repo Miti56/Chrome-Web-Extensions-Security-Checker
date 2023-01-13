@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Notism",
+    "manifest_version": 2,
+    "description": "Notism - Visual feedback, Prototyping & Workflow App for creative teams.",
+    "version": "2.4.6",
+    "icons": {
+      "16": "icon_16.png",
+      "128": "icon_128.png"
+    },
+    "app": {
+        "urls": [
+            "http://www.notism.io/"
+        ],
+        "launch": {
+            "web_url": "http://www.notism.io/"
+        }
+    },
+    "permissions": [
+    ]
+}

@@ -1,0 +1,39 @@
+{
+   "description": "Hulk Theme for Google Chrome and FVD Speed Dial with 3D new tab page [FVD]",   
+   "manifest_version": 2,
+   "name": "Hulk [FVD]",
+   "short_name": "Hulk [FVD]",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 0, 255, 0, 0.7 ],
+         "frame": [ 76, 94, 109 ],
+         "ntp_background": [ 0, 0, 0 ],
+         "ntp_header": [ 40, 40, 40 ],
+         "ntp_link": [ 255, 255, 255 ],
+         "ntp_section": [ 0, 0, 0, 0.5 ],
+         "ntp_section_link": [ 255, 255, 255 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 150, 150, 150 ],
+         "tab_text": [ 0, 255, 0 ],
+         "toolbar": [ 48, 48, 48 ]
+      },
+      "images": {
+         "theme_frame": "img/frame.png",
+         "theme_ntp_background": "img/ntp_background.jpg",
+         "theme_toolbar": "img/toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "top",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "background_tab": [ 0, 0, 0 ],
+         "buttons": [ 0.3, 1, 0.6 ],
+		 "frame_inactive": [ 0, 0, 0 ],
+		 "frame_incognito_inactive": [ 0, 0, 0 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

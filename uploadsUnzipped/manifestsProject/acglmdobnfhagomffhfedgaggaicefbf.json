@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icon-128.png"
+      }
+   },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "default_locale": "en",
+   "description": "Beautiful Kpop Blackpink wallpaper with useful utilities",
+   "icons": {
+      "128": "icon-128.png"
+   },
+   "manifest_version": 2,
+   "name": "Kpop Blackpink Wallpapers Blackpink New Tab",
+   "offline_enabled": true,
+   "permissions": [ "topSites", "\u003Call_urls>", "chrome://favicon/*", "webRequestBlocking", "webRequest" ],
+   "version": "1.2"
+}

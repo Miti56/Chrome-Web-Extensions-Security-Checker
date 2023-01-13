@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "icons": { "128": "128.png" },
+  "name": "Okta Web Authentication Plug-in",
+  "short_name": "Okta Web Authentication Plug-in",
+  "description": "Okta Web Authentication Plug-in works outside the perimeter",
+  "browser_action": {
+    "default_icon": "128.png"
+  },
+  "version": "3.0",
+  "default_locale": "en",
+    "background":
+  {
+	"scripts": ["bg.js"]
+  }
+}
+

@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Радио ФМ Горный 101.6",
+  "version": "0.1.0",
+  "description": "Радио Тогучинского района",
+  "homepage_url": "http://radio.toguchin.ru",
+  "background": {
+    "scripts": [
+      "app/dispatcher.js",
+      "app/settings.js",
+      "app/service.js",
+      "app/player.js",
+      "app/playerchrome.js",
+      "app/app.js"
+    ],
+    "persistent": true
+  },
+  "browser_action" : {
+    "default_icon" : {
+      "16" : "img/icon-16.png",
+      "24" : "img/icon-24.png",
+      "32" : "img/icon-32.png",
+      "64" : "img/icon-64.png",
+      "128" : "img/icon-128.png"
+    },
+    "default_title" : "Радио ФМ Горный 101.6",
+    "default_popup": "ui/player/page.html"
+  },
+  "permissions" : [
+    "declarativeContent",
+    "storage",
+    "https://radio.toguchin.ru/",
+    "http://radio.toguchin.ru/"
+  ],
+
+  "icons" : {
+    "16" : "img/icon-16.png",
+    "24" : "img/icon-24.png",
+    "32" : "img/icon-32.png",
+    "64" : "img/icon-64.png",
+    "128" : "img/icon-128.png"
+  },
+  "offline_enabled": false,
+  "manifest_version": 2
+
+}

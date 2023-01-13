@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Feditor",
+  "description": "Instant code editor for front-end developers & designers",
+  "version": "1.1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://sos.feditor.tech/"
+    ],
+    "launch": {
+      "web_url": "http://feditor.tech/"
+    }
+  }
+}

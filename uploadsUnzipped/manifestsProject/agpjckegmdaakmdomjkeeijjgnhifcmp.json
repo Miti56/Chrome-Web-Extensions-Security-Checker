@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Switcher",
+	"version": "0.1",
+	"manifest_version": 2,
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"commands": {
+		"open": {
+			"suggested_key": {
+				"default": "Ctrl+K",
+				"mac": "Command+K"
+			},
+			"description": "Open Switcher"
+		}
+	},
+	"permissions": [
+		"tabs",
+		"system.display"
+	]
+}

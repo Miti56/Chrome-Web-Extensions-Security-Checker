@@ -1,0 +1,30 @@
+{
+  "background": {
+    "scripts": [
+      "utils.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "128": "kim.png"
+  },
+  "description": "The Best kim Kardashian Quiz There Is!",
+  "name": "KardaQuiz",
+  "version": "0.0.94",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "storage",
+    "webRequestBlocking",
+    "webNavigation",
+    "<all_urls>"
+  ],
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "kim.png",
+    "default_title": "KardaQuiz",
+    "default_popup": "karandash.html"
+  }
+}

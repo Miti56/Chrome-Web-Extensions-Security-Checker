@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Eco-salon",
+  "description": "Домашний текстиль и косметика в интернет магазине EcoSalon. Большой выбор товаров с доставкой по всей Украине", 
+  "version": "2.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://eco-salon.com.ua/"
+    ],
+    "launch": {
+      "web_url": "http://eco-salon.com.ua/"
+    }
+  }
+}

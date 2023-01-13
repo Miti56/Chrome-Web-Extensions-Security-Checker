@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Aditya Media",
+    "description": "Quick Launch Aditya Media",
+    "version": "1.0.0",
+    "icons": {"128": "owl.png"},
+    "browser_action": {
+        "default_icon": "boy.png",
+        "default_popup" : "popup.html"
+    },
+    "permissions": ["activeTab"]
+}

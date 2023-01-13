@@ -1,0 +1,95 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "version": "2.0",
+  "manifest_version": 2,
+    "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "https://sense-test-api.mazrica.com/",
+    "https://sense-api.mazrica.com/",
+    "https://localhost:3000/",
+    "https://www.google.com/",
+    "https://accounts.google.com/",
+    "https://mail-attachment.googleusercontent.com/",
+    "https://mail.google.com/",
+    "https://*.googleusercontent.com/proxy/*",
+    "https://sense-api.mazrica.com/",
+    "https://calendar.google.com/"
+  ],
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-120.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "bower_components/jquery/dist/jquery.js",
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon-16.png",
+      "38": "images/icon-32.png"
+    },
+    "default_title": "Senses by mazrica",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://calendar.google.com/*",
+	"https://*/auth/google_oauth2/callback*"
+      ],
+      "css": [
+        "styles/font-awesome.min.css",
+        "styles/mystyles.css",
+        "styles/jquery-ui.css"
+      ],
+      "js": [
+        "bower_components/jquery/dist/jquery.js",
+        "bower_components/jquery-ui/jquery-ui.js",
+        "bower_components/jquery-cookie/jquery.cookie.js",
+        "bower_components/jquery-deparam/jquery-deparam.js",
+        "bower_components/pubsub-js/src/pubsub.js",
+        "bower_components/j-toker/dist/jquery.j-toker.js",
+        "bower_components/moment/moment.js",
+        "bower_components/jsrender/jsrender.js",
+        "bower_components/kefir/dist/kefir.js",
+        "bower_components/decimal.js/decimal.js",
+        "scripts/global-ajax-events.js",
+        "scripts/ajax-wrapper.js",
+        "scripts/inboxsdk.js",
+        "scripts/jquery.xpath.js",
+        "scripts/template.js",
+        "scripts/attachment-collector.js",
+        "scripts/login.js",
+        "scripts/compose-view-handler.js",
+        "scripts/sense-const.js",
+        "scripts/sense-main-view.js",
+        "scripts/sense-side-view.js",
+        "scripts/sense-calendar-action-register-view.js",
+        "scripts/sense-calendar-action-register-view-for-new-gg-calendar-ui.js",
+        "scripts/sense-new-customer-view.js",
+        "scripts/sense-suggest-view.js",
+        "scripts/sense-connector.js",
+        "scripts/sense.js",
+        "scripts/sense-deal-dialog.js",
+        "scripts/sense-update-customer-dialog.js",
+        "scripts/attachment-email.js",
+        "scripts/sense-deal-product-details-dialog.js",
+        "scripts/sense-helper.js",
+        "bower_components/raven-js/dist/raven.js",
+        "scripts/raven.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+    "name": "VideoSync Live Encoder",
+
+    "version": "1.1.4.0",
+
+    "manifest_version": 2,
+
+    "description": "VideoSync Live Encoder Chrome Extension for Native H264/RTMP Live Streaming",
+
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1+ewUrN/gc2Pl1ttopzohyevP+c8bf2fVBuN0G0bfN0a8h4TIRZYnqHukjoL0f4aK3F33lHCsivVGxoEx9g/K2mH537cc9IqVA3NbB1AH9F7uZBCTnJzqAuuPj3TNQtt77hg+hgLY5DOwtECmJREO0yKNSpBwiIcAaR+08xc5BFOHf5Y1I95Lm5Iz0jZnD3mCemeZRnm8FP2SX3dk4RoW3LDhqpT9SxAlpCQfqAgxPeZdw7aP3TLDq6CNNmW7GKiyuqGtALUZOwwe4hVM2EsKQOkajucfKwNl3sEAnzoiZ4gbn7usBUpjHYYRLeR488cSOcmfJliR2wA4DNmA/NMPQIDAQAB",
+
+    "background": {
+
+        "scripts": [
+
+            "js/nano.chrome.extension.js",
+
+            "js/nano.chrome.extension.installed.js",
+
+            "js/nano.chrome.extension.messages.js"
+
+        ]
+
+    },
+
+    "icons": {
+
+        "16": "assets/icon-16.png",
+
+        "128": "assets/icon-128.png"
+
+    },
+
+    "browser_action": {
+
+        "default_icon": "assets/icon-128.png",
+
+        "default_title": "VideoSync Live Encoder",
+
+        "default_popup": "popup/nano.popup.html"
+
+    },
+
+    "permissions": [
+
+        "nativeMessaging",
+
+        "tabs",
+
+        "http://localhost/*",
+
+        "*://*.videosync.dev/*",
+        "*://*.videosync.fi/*",
+        "*://*.getvideosync.com/*"
+
+    ],
+
+    "web_accessible_resources": [
+
+        "images/*.png",
+
+        "js/nano.chrome.extension.installed.js"
+
+    ],
+
+    "externally_connectable": {
+
+        "ids": [
+
+            "*"
+
+        ],
+
+        "matches": [
+
+            "http://localhost/*",
+
+	        "*://*.videosync.dev/*",
+	        "*://*.videosync.fi/*",
+	        "*://*.getvideosync.com/*"
+
+        ]
+
+    }
+ 
+}

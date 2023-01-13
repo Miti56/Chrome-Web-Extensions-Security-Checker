@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Iron Hotel BETA Manager",
+    "version": "0.0.1",
+    "description": "\n\nGerencie sua conta do Server IronHotel.net\n\nFunções:\n  1 - Automação de Login\n  2 - Remoção de Spans e ADS's",
+    "icons": {
+       "48": "nico.png",
+       "128": "nico.png"
+    },
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"browser_action": {
+		"default_popup": "index.html",
+		"default_title": "Manager",
+		"default_icon": {
+            "19" : "icone.png"
+        }
+	},
+    "permissions": [
+		"tabs",
+		"unlimitedStorage",
+		"activeTab",
+		"browsingData",
+		"storage",
+		"clipboardRead",
+		"webNavigation",
+		"contextMenus",
+		"cookies",
+        "http://ironhotel.net/*",
+        "http://miceiron.ga/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+        "js": [ "script.js" ],
+        "matches": [ "http://ironhotel.net/*", "http://miceiron.ga/*" ]
+    } ]
+}

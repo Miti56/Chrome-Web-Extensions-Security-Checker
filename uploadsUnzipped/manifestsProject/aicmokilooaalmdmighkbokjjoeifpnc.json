@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Laravel API - source links",
+  "description": "This extension adds links to the sources on github.com.",
+  "version": "1.1",
+
+  "permissions": [
+    "tabs", "http://laravel.com/api/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://laravel.com/api/*"],
+      "js": [
+        "jquery.js",
+        "myscript.js"
+      ]
+    }
+  ]
+}

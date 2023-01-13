@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "socket.io.js", "background.script.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Слежение за суммой ставок в игре на CSGO-CASH.COM и оповещение при необходимости",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkiul8eYwcGrMceizmaAnuR1totKijzGV/s0ZZOPsFaPtLwrHTJASDaO3/drlasIQeC6pr7Id0dDz7jNIRnxD1QnHPHrdOQ8v4iAu45wXtH/IGEu0UWVE62P4OTu5GtHNvuinhpc9U8349ROXCI1buJz2LiEo0n41a8yvD0cf338EY34aha/J2yloV76zkikqDWyKq9Cdik5csqm5clmS0OjlaWqMUckbTAtkLueleb9ZBD8LVdH08DOLvm2MnUQsM1LO6XL3iBMaxHzHHWGl4ct1cJwzeqmKF50eGEk5DaMIaOy5yEKqlM2dhWmGgIOW/kWYeceivjgMTpKU51JrfwIDAQAB",
+   "manifest_version": 2,
+   "name": "Расширение CSGO-CASH.COM",
+   "permissions": [ "background", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.4"
+}

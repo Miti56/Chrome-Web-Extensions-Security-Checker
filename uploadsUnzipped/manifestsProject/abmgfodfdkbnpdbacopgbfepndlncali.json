@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "How to Train Your Dragon Wallpaper",
+  "description": "Beautiful How to Train Your Dragon wallpapers with useful utilities",
+  "version": "1.0",
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": {
+    "128": "icon-128.png"
+    },
+    "default_title": "How to Train Your Dragon Wallpaper HD New Tab Theme"
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "background": {
+    "scripts": ["js/bg.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "topSites",
+	"<all_urls>",
+    "chrome://favicon/*",
+    "webRequestBlocking",
+    "webRequest"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "8 ВАLL РООL",
+  "description": "8 Ball Pool, Ballz, Bloons Supermonkey 2, Boom Beach, Buff Knight Advanced, Can You Escape Prison Pro, Castle Clash",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

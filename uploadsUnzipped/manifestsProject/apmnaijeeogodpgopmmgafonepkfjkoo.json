@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Screen Recorder",
+    "version": "0.0.0.1",
+    "author": "Zeus Learning",
+    "manifest_version": 2,
+    "description": "Screen Recorder for chrome",
+    "icons": {
+        "16": "Logo/logo_16.png",
+        "32": "Logo/logo_32.png",
+        "48": "Logo/logo_48.png",
+        "64": "Logo/logo_64.png"
+    },
+    "browser_action": {
+        "default_title": "",
+        "default_icon": "Logo/logo_600.png",
+        "default_popup": "/Pages/popup.html"
+    },
+    "background": {
+        "scripts": [
+            "/JS/core/background.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "desktopCapture",
+        "tabs",
+        "<all_urls>",
+        "system.cpu",
+        "system.memory",
+        "identity",
+        "https://apis.google.com/*"
+    ],
+    "web_accessible_resources": [
+        "config.json"
+    ],
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+    "oauth2": {
+        "client_id": "282349201342-s6drhtldqjtqbufbdn5teqcl6fuiislr.apps.googleusercontent.com",
+        "scopes": [
+          "https://www.googleapis.com/auth/drive"
+        ]
+      }
+}

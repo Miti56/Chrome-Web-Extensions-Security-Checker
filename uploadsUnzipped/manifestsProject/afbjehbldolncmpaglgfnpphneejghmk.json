@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Fallout Pip-Boy Green",
+"description":"RESOLUTION 1366x768 - let me know if you would like a different size @ https://www.facebook.com/toxicthemesv2",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_frame":"images/frame.png",
+"theme_ntp_background":"images/background.png"
+},
+"colors":
+{
+"ntp_link": [ 38 , 38 , 38 ],
+"ntp_text": [ 0,0,0 ],
+"ntp_section_link": [ 38 , 38 , 38 ],
+"ntp_section_text": [ 38 , 38 , 38 ],
+"ntp_background": [ 56,155,100 ],
+"ntp_header": [ 83 , 132 , 189 , 0.15 ],
+"ntp_section": [ 83 , 132 , 189 , 0.15 ],
+"frame": [ 31,209,111 ],
+"toolbar": [ 223,223,223 ],
+"tab_text": [ 0,0,0 ],
+"tab_background_text": [ 64,64,64 ],
+"button_background":[0,0,0,0]},
+"bookmark_text": [ 74,124,175 ]
+},
+"tints":
+{
+"buttons": [ 0,0,0.5 ],
+"frame_incognito": [ 0.554938956714761 , 0.419179436480475 , 0.501960784313725 ],
+"frame_inactive": [ 0.001 , 0.001 , 0.15 ],
+"frame_incognito_inactive": [ 0.001 , 0.001 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}

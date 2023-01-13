@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ExtraaEdge: 2 way E-mail Sync",
+  "description": "Track your leads with ExtraaEdge platform.",
+  "version": "0.7",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": [ "js/jquery.min.js", "js/inboxsdk.js", "app.js", "appInsights.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "management",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "https://mail.google.com/*",
+    "https://inbox.google.com/*",
+    "*://*.extraaedge.com/*",
+    "https://*.googleusercontent.com/*",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "icon_48.png"
+  },
+  "background":{
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  
+  "manifest_version": 2
+}

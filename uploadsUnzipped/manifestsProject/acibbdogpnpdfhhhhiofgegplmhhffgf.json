@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "YouTube Player Speed Controls",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Adds playback speed controls to player control bar.",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon48.png"
+    },
+    "permissions": [ "storage", "*://www.youtube.com/*" ],
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [ "*://www.youtube.com/*" ],
+            "css": [ "styles.css" ],
+            "js": [ "scripts/scripts.js" ]
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tic Tac Toe",
+  "short_name": "Tic Tac Toe",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Simple Tic Tac Toe extension by Tenove Technologies.",
+  "browser_action": {
+    "default_icon": "img/favicon.png",
+    "default_popup": "index.html"
+  }
+}

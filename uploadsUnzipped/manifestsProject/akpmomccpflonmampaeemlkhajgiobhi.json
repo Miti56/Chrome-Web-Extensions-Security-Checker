@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "SITCO-test",
+    "short_name": "complemento SICO",
+    "description": "Complemento de SITCO para Google Chrome",
+    "version": "0.0.7",
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+
+    "minimum_chrome_version": "26.0.1428",
+    "background": {
+        "persistent": false,
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": "icon128.png"
+    },
+
+    "permissions": [
+        "contextMenus",
+        "downloads",
+        "http://10.13.181.167:3789/",
+        "http://www.cobranza.pjud/*",
+        "clipboardRead"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "http://*/SITCOWEB*"
+        ],
+        "js": [
+            "contentscript.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": false
+    }]
+}

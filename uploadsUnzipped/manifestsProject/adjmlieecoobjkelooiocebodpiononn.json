@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "background": {
+      "scripts": ["js/jquery.js","js/background.js"]
+    }
+  },
+  "manifest_version": 2,
+  "name": "Csek Marquee",
+  "version": "1.0.8",
+  "description": "",
+  "icons": {
+    "16": "img/icon_16.png",
+    "48": "img/icon_48.png",
+    "128": "img/icon_128.png"
+  },
+  "author": "Dylan Tyre",
+  "externally_connectable": {
+    "matches": ["*://*.csekcreative.com/*"]
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "*://*.csekcreative.com/*",
+    "alarms",
+    "clipboardRead",
+    "clipboardWrite",
+    "contextMenus",
+    "fileSystem",
+    "fullscreen",
+    "geolocation",
+    "idle",
+    "notifications",
+    "power",
+    "serial",
+    "storage",
+    "system.display",
+    "system.storage",
+    "system.network",
+    "system.memory",
+    "system.cpu",
+    "unlimitedStorage",
+    "system.cpu",
+    "system.memory",
+    "webview",
+    "browser",
+    {"fileSystem": ["write", "retainEntries", "directory"]}
+  ],
+  "short_name": "Marquee"
+}

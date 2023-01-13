@@ -1,0 +1,34 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "size64.png"
+   },
+   "content_scripts": [ {
+      "js": [ "popup.js" ],
+      "matches": [ "*://*.tatkal4u.com/*" ]
+   }, {
+      "js": [ "login.js", "jdetails.js", "tdetails.js", "pdform.js", "payment.js", "cleardata.js" ],
+      "matches": [ "*://*.irctc.co.in/eticketing/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "autonb.js", "ccfill.js", "dcfill.js", "wallets.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Automate your irctc tatkal ticket booking with tatkal4u.com. Every second is precious during tatkal hours.",
+   "icons": {
+      "128": "size128.png",
+      "16": "size16.png",
+      "256": "size256.png",
+      "48": "size64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs5Uz6qYgraCukxqNE1fvJdtW7lSNLjBpzY8ewiPMnJo9JZ9W0QBmSyYcOHI8setCflgAi/CUJXubxdeyNmmR5itRHJvcHWhLcU7fh6uXsCgTHqBkiEzkOVds/n5HLjtayWXy31UTVQRR6U6FvSsg945VXTRt2NFVO3mRDi1ejNNhvm8+9vXMoYs28JFoyo4qAPsbFfGZre2aMfL5W8+bkuRjd0/zzczJI66BfWKp1Rbx6SDmYHZWfAjfrKdJnarFvQCQYyqWpW8NZnLucEi5La6YmrkH3nKBLQFsWLE0akQ9a47iDCM6HlZEX/z2zL2LcMdz2MwaKEeV8GIwYLqnvQIDAQAB",
+   "manifest_version": 2,
+   "name": "Tatkal4U - IRCTC Auto fill",
+   "permissions": [ "management", "storage", "tabs", "webNavigation" ],
+   "short_name": "Tatkal4U - IRCTC Auto Fill",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
+}

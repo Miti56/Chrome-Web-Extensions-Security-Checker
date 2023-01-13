@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "background/global.js", "background/proxy.js", "background/google-analytics.js", "background/antiblock.js" ]
+   },
+   "browser_action": {
+      "default_title": "__MSG_accessOn__"
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "st/icons/icon128.png",
+      "16": "st/icons/icon16.png",
+      "48": "st/icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt1rSXeljeOfR4lEI3W5KsLDck426YX0k9jsWJHVHvtg3VKsGj7V63e2s7/5drzohINraC2N/shrzbT+xmfZiuwpeFfzvmFefFMg37U3Vm+Di1429CisK7upHk3VPww6G6rCo7T0GR41CxYUq0ntY+bgZeNU2DnP6+4Q7ktbrDyixPwkANdQyKcv6nt2XdtuLTbqcR+6SzlHdXPpoIgM5aoWC2vWezr4g5NkUcmp8Osq090YyUXO1z2/MqZD3hRt+uKuXbnYidzrklTB0an6iTIETbYRctNK/2izegGOl42O9cttiJnHTpNXGu2d89XPKcqIBHKHmUf2oq/TD6n8nyQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "proxy", "storage", "tabs", "*://*/*" ],
+   "short_name": "VPN Bypass Block",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "9.0.5"
+}

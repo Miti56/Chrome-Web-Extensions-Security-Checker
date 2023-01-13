@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Website and SEO Analysis",
+  "version": "1.1.3",
+  "options_page": "options.html",
+  "description": "Website & SEO Analysis provides SEO analysis of the website like Ranks, Pages Indexed, Backlinks, Whois, Security, Traffic Stats...",
+  
+  "icons": {
+    "16": "img/logo16.png",
+    "19": "img/logo19.png",
+	"48": "img/logo48.png",
+	"64": "img/logo64.png",
+    "128": "img/logo128.png"
+  },
+  
+  "background": {
+	"page": "background.html"
+  },
+  
+  "browser_action": {
+	"default_title": "Website and SEO Analysis",
+    "default_icon": "img/logo19.png",
+    "default_popup": "popup.html"
+  },
+  
+  "content_scripts":[
+	{
+		"matches":[
+			"http://*.webquantified.com/*"
+		],
+		"js":["init.js"],
+		"run_at":"document_end"
+	}
+  ],
+  
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs"
+  ]
+}

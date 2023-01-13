@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "CGTR - Partage d'écran sitmvisio.fr",
+	"description": "Extension permettant de partager votre écran pendant une réunion sur sitmvisio.fr",
+	"version": "0.1.6",
+	"minimum_chrome_version": "34",
+	"icons": {
+		"16": "cgtr-logo-16x16.png",
+		"48": "cgtr-logo-48x48.png",
+		"128": "cgtr-logo-128x128.png"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+	"permissions": [
+		"desktopCapture"
+	],
+	"externally_connectable": {
+		"matches": [
+			"*://sitmvisio.fr/*"
+		]
+	}
+}

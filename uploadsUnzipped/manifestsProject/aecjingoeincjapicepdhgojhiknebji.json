@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Beach Sampaio",
+"description":"RES: 1366x768 - Sara Sampaio on the beach",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 35 , 36 , 42 ],
+"ntp_text": [ 35 , 36 , 42 ],
+"ntp_section_link": [ 35 , 36 , 42 ],
+"ntp_section_text": [ 35 , 36 , 42 ],
+"ntp_background": [ 227 , 228 , 232 , 0.5 ],
+"ntp_header": [ 235 , 242 , 250 , 0.15 ],
+"ntp_section": [ 235 , 242 , 250 , 0.15 ],
+"frame": [ 235 , 242 , 250 ],
+"toolbar": [ 227 , 228 , 232 ],
+"tab_text": [ 35 , 36 , 42 ],
+"tab_background_text": [ 35 , 36 , 42 ],
+"bookmark_text": [ 35 , 36 , 42 ]
+},
+"tints":
+{
+"buttons": [ 0.633333333333332 , 0.0980392156862746 , 0.7 ],
+"frame_incognito": [ 0.554248366013072 , 0.564705882352941 , 0.895040369088812 ],
+"frame_inactive": [ 0.633333333333332 , 0.0980392156862746 , 0.15 ],
+"frame_incognito_inactive": [ 0.633333333333332 , 0.0980392156862746 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

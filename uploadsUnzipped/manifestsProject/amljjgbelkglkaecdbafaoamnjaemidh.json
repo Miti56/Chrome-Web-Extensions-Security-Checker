@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Sort DailyJs Tags",
+  "description": "This extension fixes DailyJs' bad tag page.",
+  "version": "1.0",
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://dailyjs.com/tags.html*",
+        "https://dailyjs.com/tags.html*"
+      ],
+      "js" : ["jquery-2.0.3.min.js","dailyjs.com.js","contentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+
+  "permissions": [
+    "tabs"
+  ],
+  "page_action": {
+    "default_title": "Sort Tags"
+  }
+}

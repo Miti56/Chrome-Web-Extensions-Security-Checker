@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Spundge It",
+    "version": "1.1.18",
+    "manifest_version": 2,
+    "description": "Load web articles into Spundge Notebooks.",
+    "homepage_url": "http://www.spundge.com/extensions/",
+    "icons": {
+        "16": "spundge-logo-square-16.png",
+        "48": "spundge-logo-square-48.png",
+        "128": "spundge-logo-square-128.png"
+    },
+    "web_accessible_resources": [
+        "add-article-tab.png",
+        "spundgelet-loading.gif"
+    ],
+    "browser_action": {
+        "default_icon": "spundge-icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://*.spundge.com; object-src 'self'"
+}

@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Oyun",
+  "manifest_version": 2,
+  "version": "3.2",
+
+  "browser_action": {},
+  "permissions": ["activeTab"],
+  "background": {
+    "scripts": ["popup.js"],
+    "persistent": false
+  }
+}

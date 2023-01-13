@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "My YouTube Ad skipper",
+	"short_name": "my ad skip",
+    "version": "1.1",
+    "description": "Automatically skips youtube ads when listening a stream",
+    "permissions": [
+		"declarativeContent",
+		"storage",
+		"*://*.youtube.com/*"
+	],
+    "background": {
+	  "scripts": ["js/background.min.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "html/popup.html",
+      "default_icon": {
+        "16": "images/logo16.png",
+        "32": "images/logo32.png",
+        "48": "images/logo48.png",
+        "128": "images/logo128.png"
+      }
+    },
+    "icons": {
+      "16": "images/logo16.png",
+      "32": "images/logo32.png",
+      "48": "images/logo48.png",
+      "128": "images/logo128.png"
+    },
+	"content_scripts": [{
+		"matches": ["https://*.youtube.com/*"],
+		"js": ["js/my_script.min.js"]
+	}],
+	"options_page": "html/options.html",
+    "manifest_version": 2
+  }

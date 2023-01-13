@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name":"Soribada",
+	"description":"Soribada \uC18C\uB9AC\uBC14\uB2E4",
+	"version": "1.1",
+	"app":{
+		"urls":[
+			"http://www.soribada.com/"
+		],
+		"launch":{
+			"web_url":"http://www.soribada.com/"
+		}
+	},
+	"icons": {
+		"128":"icon_128.png"
+	},
+	"permissions":[
+		"unlimitedStorage",
+		"notifications"
+	],
+	"manifest_version":2
+}

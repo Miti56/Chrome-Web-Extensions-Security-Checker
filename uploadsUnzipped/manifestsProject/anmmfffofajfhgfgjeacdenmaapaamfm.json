@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Cinco de Mayo Sudoku",
+  "version": "1.0.0.1",
+  "manifest_version": 2,
+  "icons": { "128": "icon.png" },
+  "description": "Fiesta Fiesta with Cinco de Mayo Sudoku!",
+  "app": {
+    "urls": [
+      "http://www.cincodemayosudoku.com/?chromestore=1"
+    ],
+    "launch": {
+      "web_url": "http://www.cincodemayosudoku.com/?chromestore=1"
+    }
+  }
+}

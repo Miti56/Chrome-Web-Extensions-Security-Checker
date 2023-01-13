@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Aiseesoft PDF Converter for Mac",
+"description": "An efficient PDF application for Mac users. It helps you convert PDF files to document and image files with high speed and accuracy.",
+"version": "3.2.4",
+"icons": {
+"128": "icon.png"
+},
+"app": {
+"urls": [
+"http://www.aiseesoft.com/mac-pdf-converter-ultimate/"
+],
+"launch": {
+"web_url": "http://www.aiseesoft.com/mac-pdf-converter-ultimate/"
+}
+}
+}
+

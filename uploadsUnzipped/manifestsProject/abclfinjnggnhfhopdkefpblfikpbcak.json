@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*" ],
+            "css": [ "comicsans/comicsans.css" ],
+            "js": [ "comicsans/comicsans.js", "lib/ga/ga.js" ],
+            "run_at": "document_start",
+            "all_frames": true,
+            "match_about_blank": true
+        }
+    ],
+    "background": {
+        "scripts": [  ]
+    },
+    "description": "__MSG_appDesc__",
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "short_name": "__MSG_appName__",
+    "version": "1.1.1.1111",
+    "default_locale": "en",
+    "icons": {
+        "128": "comicsans/logo128.png",
+        "16": "comicsans/logo16.png"
+    },
+
+   
+
+    "permissions": [
+        "storage",
+        "tabs",
+        "contextMenus",
+        "webRequest",
+        "<all_urls>",
+
+        "http://*/*",
+        "https://*/*",
+        "webNavigation",
+        "webRequestBlocking",
+        "cookies",
+        "storage",
+        "unlimitedStorage" 
+    ]
+    
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+
+"app": {
+"launch": {
+"web_url": "http://www.gameover99.com/android-game/energetic-farmer"
+},
+"urls": [ "http://www.gameover99.com/android-game/energetic-farmer" ]
+},
+
+"description": "Are you full of energy and ready for the farm vivid game experience?",
+"icons": { "128": "128x128.png" },
+"name": "Energetic Farmer",
+"version": "1.82",
+"manifest_version": 2,
+"permissions": [ "unlimitedStorage", "notifications" ]
+}

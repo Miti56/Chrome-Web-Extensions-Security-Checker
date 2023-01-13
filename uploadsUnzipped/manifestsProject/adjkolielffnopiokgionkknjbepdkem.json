@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "content_scripts": [ {
+        "exclude_globs":    [  ],
+        "include_globs":    [ "*" ],
+        "js":               [ "jquery-min.js",
+                              "litbg.js"
+                            ],
+        "matches":          [   "http://linkedin.com/*",
+                                "http://www.linkedin.com/*",
+                                "https://linkedin.com/*",
+                                "https://www.linkedin.com/*"
+                            ],
+        "run_at": "document_end"
+    } ],
+    "converted_from_user_script": true,
+    "description":  "Don't force me to read LinkedIn Today",
+    "name":         "LinkedIn Today BeGone",
+    "version":      "2012.11.28",
+    "icons": { "128": "litgb_v1.png" }
+}

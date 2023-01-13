@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Live Header Update",
+    "description": "A very simple and easy to use extension to allow Add, Modify, Update and Filter of HTTP headers.",
+    "version": "0.0.1",
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "GUI"
+    },
+    "permissions": [
+        "contextMenus",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "cookies"
+    ],
+    "background": {
+        "scripts": ["js/sock.js", "js/background.js"]
+    },
+    "icons": {
+        "128": "icons/128.png",
+        "16": "icons/16.png",
+        "32": "icons/32.png"
+    }
+}

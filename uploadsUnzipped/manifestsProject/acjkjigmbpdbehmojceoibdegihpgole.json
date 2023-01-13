@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [
+         "core/jquery.min.js",
+         "core/analytics.js",
+         "core/default-domains.js",
+         "core/storage.js",
+         "core/app.js",
+         "core/chrome.js"
+      ]
+   },
+   "browser_action": {
+      "default_title": "__MSG_title__"
+   },
+   "default_locale": "ru",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "img/icon-128.png",
+      "16": "img/icon-16.png",
+      "32": "img/icon-32.png",
+      "48": "img/icon-48.png"
+   },
+   "content_scripts": [
+      {
+         "matches": [
+            "*://vk.com/*"
+         ],
+         "js": [
+            "/core/jquery.min.js",
+            "/core/message.js"
+         ]
+      },
+      {
+         "matches": ["*://*/*"],
+         "all_frames": true,
+         "js": [
+             "/core/stat.js"
+         ]
+     }
+   ],
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [
+      "webRequest", "webRequestBlocking", "*://*/*", "proxy", "storage", "tabs"
+   ],
+   "version": "5.2.4"
+}

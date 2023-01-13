@@ -1,0 +1,15 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "I just wanna read",
+"version": "3.141",
+
+"description": "Get rid of the crap SMH are pulling",
+
+"content_scripts": [{"matches": ["http://*.smh.com.au/*"], "all_frames": false, "js": ["removecrap.js"], "run_at": "document_idle"}],
+
+"homepage_url": "http://www.sideramota.com",
+"manifest_version": 2,
+
+"permissions": ["tabs", "http://*/*"]
+
+}

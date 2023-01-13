@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name": "Cool Gadgets ",
+	"description" : "High quality products that are made in United States of America.",
+	"browser_action": {
+		"default_title" : "Click Here !"
+	},
+	"version": "1",
+	"icons": {
+		"128":"icon128.png",
+		"48":"icon48.png",
+		"16":"icon16.png"
+	},
+	"background": {
+	"scripts" : ["background.js"]
+},
+"permissions": [
+"tabs"
+]
+}

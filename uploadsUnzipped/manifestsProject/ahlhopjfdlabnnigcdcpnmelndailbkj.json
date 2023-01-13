@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Bike Trial Xtreme Forest",
+
+  "short_name": "Bike Trial Xtreme Forest",
+
+  "version": "1.0.2",
+  "description": "Play Bike Trial Xtreme Forest directly on your browser",
+
+  "homepage_url": "https://appfan.pw/c/juegos-de-aviones/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Bike Trial Xtreme Forest",
+
+      "default_popup": "popup.html"
+  }
+}

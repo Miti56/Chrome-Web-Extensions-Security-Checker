@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name" : "audioSuite",
+	"description" : "Audible suite for Self Publishers",
+	"options_page": "options.html",
+	"version" : "0.0.0.8",
+	"permissions": [
+		"storage",
+        "https://www.amazon.com/*",
+        "http://www.amazon.com/*",
+        "https://www.audible.com/*",
+        "https://www.audible.it/*",
+        "https://www.audible.co.uk/*",
+        "https://www.audible.fr/*",
+        "https://www.audible.co.jp/*",
+        "https://www.audible.ca/*",
+        "https://www.audible.de/*",
+        "https://www.audible.in/*",
+        "https://us-central1-audiosuite-8e6ab.cloudfunctions.net/*"
+    ],
+
+
+    "content_scripts" : [
+		{
+			"matches" : ["http://www.audible.com/*","https://www.audible.com/*"],
+			"js" : ["jquery.js","myscript.js"],
+			"run_at" : "document_end"
+		},
+		{
+			"matches" : ["http://www.amazon.com/*","https://www.amazon.com/*"],
+			"js" : ["jquery.js","amazonView.js"],
+			"run_at" : "document_end"
+		}
+
+	],
+
+
+	"background": {
+	    "persistent": true,
+	    "scripts": ["jquery.js","background.js"]
+	},
+	
+	"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+ 	
+
+}

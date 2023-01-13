@@ -1,0 +1,78 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GitChatHub",
+  "description": "The chat extension for github user.",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiH/NgnEsdBY25PwawBEwGB6ou5F3ZWvU/XIHYdBNqbONDRCUZ0LWoqWPCmdG2JuckjALYy16Fg8uXehKIOd3+zdqBcwjudGxfuKgEWczGjobY8Xqatsa3VFsoRvKDBsmuxkc6xus0DWOXYOXG+O5bqvAHW10CkhL+LxOTYvQR5MFP+hqBmScQ8KoJdms4xAUT/nkfgaR/lHhXCRDITZVkAkf6YXU+wvWTZzIS023oSIw6PSiYJpL0XCeJKFyUbJm+yHHu65c5YuPqUSQernJZ3QSxLhUur2QSqgL/QLDPExFxNBHFJMmW4/JLpLRad0NmQf52g9bz0uesH7i+/dr+QIDAQAB",
+  "icons": {
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "GitChatHub",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://github.com/*",
+      "https://chathub.crabdance.com:*/*",
+      "wss://chathub.crabdance.com:*/*"
+    ],
+    "accepts_tls_channel_id": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "contents/hubPage.js"
+      ],
+      "css": [
+        "contents/hubPage.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://chathub.crabdance.com/accessUser?*"
+      ],
+      "js": [
+        "etc/browserLogin.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://chathub.crabdance.com/chatting"
+      ],
+      "js": [
+        "chatting/chatApp.js"
+      ],
+      "css": [
+        "chatting/chatApp.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "permissions": [
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "background",
+    "tabs",
+    "storage",
+    "notifications",
+    "https://chathub.crabdance.com/*",
+    "https://github.com/*",
+    "https://api.github.com/*"
+  ]
+}

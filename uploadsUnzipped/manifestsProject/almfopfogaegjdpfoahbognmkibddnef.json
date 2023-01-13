@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "index.html"
+   },
+      "chrome_url_overrides": {
+      "newtab": "/index.html"
+   },
+   "manifest_version": 2,
+   "name": "飞机",
+   "permissions": [  ],
+   "version": "1.0"
+}

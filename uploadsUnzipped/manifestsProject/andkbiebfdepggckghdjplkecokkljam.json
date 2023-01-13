@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "STA",
+    "version": "0.0.0.2",
+    "manifest_version": 2,
+    "description" : "Automate your task. Send us your user id and we will automate it for you.",
+    "icons": { "16": "icons/16x16.png", "48": "icons/48x48.png", "128": "icons/128x128.png" },
+	"content_scripts": [
+    {
+      "matches": ["https://www.socialtrade.biz/*", "https://socialtrade.biz/*"],
+      "js": ["jquery.min.js"]
+    }
+  ],
+    "browser_action": {
+        "default_icon": {
+            "19": "icons/19x19.png",
+            "38": "icons/38x38.png"
+        },
+        "default_title": "STA: Automate task"
+    },
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions":["https://www.socialtrade.biz/*", "https://socialtrade.biz/*"]
+}

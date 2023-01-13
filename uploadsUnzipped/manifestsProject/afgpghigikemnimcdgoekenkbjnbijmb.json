@@ -1,0 +1,41 @@
+{
+	"version": "1.2.13",
+	"description": "__MSG_description__",
+	"icons": {
+		"48": "vin-diesel-icons/icon48.png",
+		"128": "vin-diesel-icons/icon128.png"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"optional_permissions": [
+		"management"
+	],
+	"chrome_url_overrides": {
+		"newtab": "main.html"
+	},
+	"name": "__MSG_name__",
+	"default_locale": "en",
+	"browser_action": {
+		"default_title": "Vin Diesel"
+	},
+	"manifest_version": 2,
+	"chrome_settings_overrides": {
+		"homepage": "http://svgsearch.com",
+		"search_provider": {
+			"name": "Loadz",
+			"search_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"suggest_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://svgsearch.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

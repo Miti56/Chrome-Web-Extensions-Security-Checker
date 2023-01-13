@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Lady Mommy Goes Shopping",
+
+  "short_name": "Lady Mommy Goes Shopping",
+
+  "version": "1.0.2",
+  "description": "Play Lady Mommy Goes Shopping now!",
+
+  "homepage_url": "http://arroba.xyz/c/4x4-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Lady Mommy Goes Shopping",
+
+      "default_popup": "popup.html"
+  }
+}

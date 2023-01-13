@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Center Google Fonts",
+	"version": "0.2",
+	"description": "Centers the google font preview page.",
+	"icons": {
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://www.google.com/fonts/specimen/*"],
+			"css": ["centergooglefonts.css"]
+		}
+	],
+	"permissions": ["tabs", "*://www.google.com/fonts/specimen/*"]
+}

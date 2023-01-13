@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Geo Sketch Game ",
+  "description": "__MSG_application_description__",
+  "manifest_version": 2,
+  "version": "1.0",
+  "default_locale": "en",
+  "app": {
+    "urls": [
+      "http://www.storewebgames.com/geosketch_game.html",
+      "http://www.storewebgames.com/geosketch_game.html"
+    ],
+    "browse_urls": [
+      "http://www.google.com/"
+      
+    ],
+    "launch": {
+      "web_url": "http://www.storewebgames.com/geosketch_game.html"
+    }
+  },
+  "icons": {
+    "24": "icon_24.png",
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimited_storage"
+  ]
+}

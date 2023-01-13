@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Old Facebook Emoji",
+  "description": "Switches the new (2016-06-02) Facebook emojis with the previous ones",
+  "version": "1.0.2",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["index.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://messenger.com/*",
+    "https://www.messenger.com/*",
+    "https://facebook.com/*",
+    "https://www.facebook.com/*",
+    "https://static.xx.fbcdn.net/images/emoji.php/*"
+  ],
+  "web_accessible_resources": [
+    "memes2/*.png"
+  ]
+}

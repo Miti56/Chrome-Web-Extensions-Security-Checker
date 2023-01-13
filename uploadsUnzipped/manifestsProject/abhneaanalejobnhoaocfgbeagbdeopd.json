@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "二维码",
+    "version": "1.0.0",
+    "description": "二维码",
+    "icons": {
+        "16": "img/qrcode.png",
+        "48": "img/qrcode.png",
+        "128": "img/qrcode.png"
+    },
+    "browser_action": {
+        "default_tile": "二维码",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

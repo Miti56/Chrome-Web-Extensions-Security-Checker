@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Super Smash Flash 2",
+  "version": "2.0.2.3",
+  "manifest_version": 2,
+  "description": "Play the ultimate fighting game where all the fighters are popular characters from big game companies and manga anthologies",
+  "homepage_url": "http://supersmashflash.101bestgamesonline.com/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Super Smash Flash 2",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://supersmashflash.101bestgamesonline.com/"
+  ]
+}

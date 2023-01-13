@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Basket & Ball",
+  "version": "2.7.0.7",
+  "manifest_version": 2,
+  "description": "Basket & Ball - bounce the rebel ball into the baskets while solving puzzles and gathering bonuses.",
+  "homepage_url": "http://www.returnman2.co/basketball-master/",
+  "icons": {
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/22x22.png",
+    "default_title": "Basket & Ball",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://www.returnman2.co/basketball-master/"
+  ]
+}

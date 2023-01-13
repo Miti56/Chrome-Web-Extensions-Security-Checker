@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "Juke",
+"version": "0.3.2",
+"manifest_version": 2,
+"description": "あなたの見つけた面白いWebページを、Webページ共有サービスJuke（http://jukepage.com/）へ簡単に投稿することができます。",
+"background": {
+    "page": "content/post/post.html"
+  },
+"icons": { "16": "content/post/img/icon_16.png",
+           "48": "content/post/img/icon_48.png",
+          "128": "content/post/img/icon_128.png" },
+"homepage_url": "http://jukepage.com/",
+"permissions": [
+  "tabs"
+],
+"browser_action": {
+  "default_title": "juke",
+  "default_icon": "content/post/img/icon.png",
+  "default_popup": "content/post/post.html"
+}
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Zhihu-showL",
+    "version": "1.0.1.14",
+    "manifest_version": 2,
+    "description": "将知乎的粉丝、获得的赞和感谢数量分别换算为以L、J、B为单位，并显示V-point。",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions":[
+        "tabs",
+        "http://www.zhihu.com/*",
+        "https://www.zhihu.com/*"
+    ],
+    "background": { "scripts": ["background.js"] }
+}

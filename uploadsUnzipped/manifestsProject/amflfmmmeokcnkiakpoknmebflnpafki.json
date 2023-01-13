@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Chili Piper - Calendar Round Robin",
+  "version": "1.0.3",
+  "description": "Calendar Round Robin: assignment of meetings to a pool of resources",
+  "icons": {
+    "128": "icons/128x128.png",
+    "16": "icons/16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "618837333486",
+  "app" : {
+    "launch" : {
+      "web_url" : "http://www.chilipiper.com/"
+    }
+  }
+}

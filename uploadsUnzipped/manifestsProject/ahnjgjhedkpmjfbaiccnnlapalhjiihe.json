@@ -1,0 +1,23 @@
+{
+   "background": {
+      "scripts": [ "src/js/helpers.js", "src/js/background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "src/popup.html",
+      "default_title": "X Factor Info"
+   },
+   "description": "X Factor Info - Unique Content Experience",
+   "content_scripts": [ {
+      "js": [ "src/js/content.js" ],
+      "matches": [ "<all_urls>" ]
+   } ],
+   "icons": {
+      "128": "icons/128.png"
+   },
+   "manifest_version": 2,
+   "name": "X Factor Video Player",
+   "permissions": [ "background", "<all_urls>", "tabs", "webRequest", "webRequestBlocking", "cookies" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.8",
+   "web_accessible_resources": [ "src/search.html", "src/js/search.js", "src/js/ecommerce.js", "src/js/anal.js", "src/js/content.js" ]
+}

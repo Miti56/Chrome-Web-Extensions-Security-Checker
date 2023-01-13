@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Remedy Query Injection",
+  "description": "Addon para la autoejecución de una Query en el cliente Remedy Web a través de la variable QueryInjection de la barra de direcciones.",
+  "version": "1.5.1",
+	
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["purl.js", "script.js"]
+    }
+  ],
+	
+  "permissions": [
+    "http://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "puzzle-icon.png",
+    "default_popup": "main.html"
+  }
+}

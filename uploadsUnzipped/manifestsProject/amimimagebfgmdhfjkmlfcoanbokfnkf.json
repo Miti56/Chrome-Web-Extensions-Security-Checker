@@ -1,0 +1,98 @@
+{
+  "name": "Oribi Speak for Chrome",
+  "short_name": "Oribi Speak",
+  "version": "1.4.2",
+  "version_name": "1.4.2",
+  "background": {
+    "scripts": [
+      "storage.js",
+      "keycodes.js",
+      "osdat.js",
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "images/icon_off.png",
+    "default_title": "Oribi Speak"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "storage.js",
+        "js/jquery-2.1.4.min.js",
+        "keycodes.js",
+        "content_script.js" ],
+      "matches": [ "<all_urls>" ]
+    }, {
+      "all_frames": false,
+      "css": [ "font-awesome/4.7.0/css/font-awesome.css", "saida-dialog.css" ],
+      "js": ["storage.js",
+        "draggabilly.min.js",
+        "js/jquery-2.1.4.min.js",
+        "jquery-ui.custom/jquery-ui.min.js",
+        "js/bililiteRange.js",
+        "js/jquery.sendkeys.js",
+        "caret-js/jquery.caret.min.js",
+        "site-info.js",
+        "predict.js"
+      ],
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["*://www.facebook.com/*", "*://facebook.com/*", "*://docs.google.com/presentation/", "*://*.sharepoint.com/*", "*://newtab/", "*://extensions/"]
+    },
+    {
+      "all_frames": false,
+      "css": ["ocr-content.css"],
+      "js": [
+        "sweetalert2.js",
+        "sweetalert2-mixins.js",
+        "ocr-content.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "default_locale": "en",
+  "description": "__MSG_appDesc__",
+  "homepage_url": "http://www.oribi.se",
+  "icons": {
+    "128": "images/icon_128.png",
+    "48": "images/icon_48.png",
+    "16": "images/icon.png"
+  },
+  "manifest_version": 2,
+  "options_page": "options.html",
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "activeTab",
+    "tts",
+    "storage",
+    "identity", "identity.email",
+    "contextMenus",
+    "https://www.googleapis.com/",
+    "*://*.oribisoftware.com/",
+    "notifications"
+  ],
+  "oauth2": {
+    "client_id": "245012448265-nvtd089gq53it6q18k4cv4gg80grmi32.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/plus.login",
+      "https://www.googleapis.com/auth/chromewebstore.readonly"
+    ]
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "web_accessible_resources": [
+    "sounds/*",
+    "images/*",
+    "jquery-ui/images/*",
+    "localStorage",
+    "saida.html",
+    "saida-dialog.html",
+    "font-awesome/*",
+    "https://word-edit.officeapps.live.com/*",
+    "js/*",
+    "google-docs-edit.js"
+  ]
+}

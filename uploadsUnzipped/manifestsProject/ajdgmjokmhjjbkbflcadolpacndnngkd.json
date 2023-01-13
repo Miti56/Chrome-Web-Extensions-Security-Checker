@@ -1,0 +1,65 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Reachable Paths",
+    "version": "2.0.17",
+    "manifest_version": 2,
+    "description": "Reachable Chrome Extension",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": "images/ico.png",
+        "default_title": "Launch Reachable!"
+    },
+    "externally_connectable": {
+        "matches": [
+        ]
+    },
+    "permissions": [
+        "activeTab",
+        "http://*/*",
+        "https://*/*",
+        "contextMenus",
+        "cookies",
+        "storage",
+        "tabs",
+        "<all_urls>"
+    ],
+    "omnibox": {
+        "keyword": "reachout"
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://d37gvrvc0wt4s1.cloudfront.net; object-src 'self'; font-src *",
+    "web_accessible_resources": [
+        "http://fonts.googleapis.com/",
+        "https://*.google-analytics.com/**/*",
+        "scripts/app/index.html",
+        "scripts/contentscript.js",
+        "images/reachable-logo-expand.png",
+        "images/reachable-logo-collapse.png"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "exclude_matches": [
+            ],
+            "css": [
+            ],
+            "js": [
+                "bower_components/jquery/dist/jquery.js",
+                "scripts/contentscript.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ]
+}

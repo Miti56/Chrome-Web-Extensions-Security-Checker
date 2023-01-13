@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+ 
+    "name": "Новости lifesmi24.com",
+    "description": "Всегда будь в курсе свежих и актуальных новостей России и мира.",
+    "version": "1.0",
+	  "icons": {
+		"128": "icon.png"
+	  },
+ 
+    "browser_action": {
+        "default_popup": "popup.html",
+		"default_icon": "icon.png",
+		"default_title": "Новости lifesmi24.com"
+    },
+
+    "permissions": [
+        "activeTab",
+		"notifications"
+    ],
+	"content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+	  "css": [ "css/style.css" ],
+      "js":["jquery.js", "script.js"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Bağlann",
+	"description": "İnternette gezinirken beğendiğiniz sayfaları anında tek tıkla paylaşın. ",
+	"version":"1.5",
+	"manifest_version":2,
+	"browser_action": 
+	{
+		"default_icon": "baglann.png",
+		"default_popup":"baglann.html",
+		"default_title":"Paylaş"
+	},
+	"content_scripts":[{
+		"all_frames":true,
+		"js":["jquery-2.1.4.min.js","js.js"],
+		"matches":["http://*/","https://*/*"],
+		"run_at":"document_end"
+	}]
+	,
+	"background":{
+		"scripts":["jquery-2.1.4.min.js","arka.js"],
+		"persistent":true,
+		"pages":"arka.html"
+		
+	},
+
+	"icons":
+	{
+		"16":"baglann.png",
+		"32":"baglann.png",
+		"48":"baglann.png",
+		"64":"baglann.png",
+		"128":"baglann.png"
+	},
+	"options_page":"baglann.html",
+	"permissions":["contextMenus","notifications","tabs","storage","http://*/*","https://*/*"]
+}

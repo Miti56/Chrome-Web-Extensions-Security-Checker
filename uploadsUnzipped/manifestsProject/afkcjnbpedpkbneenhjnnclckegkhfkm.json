@@ -1,0 +1,37 @@
+ {
+ 	"update_url": "https://clients2.google.com/service/update2/crx",
+ 	"name": "Xbox.com clickname tracker",
+ 	"manifest_version": 2,
+ 	"version": "0.2",
+ 	"browser_action": {
+ 		"name": "Adds overlay to elements with data clickname property"
+ 	},
+ 	"background": {
+ 		"scripts": ["background.js"]
+ 	},
+ 	"permissions": [
+ 		"tabs",
+ 		"http://*/*",
+ 		"https://*/*",
+ 		"https://typekit.com/",
+ 		"http://localhost.com/"
+ 	],
+ 	"icons": { 
+ 		"16": "icon/eye-button-16.png",
+ 		"32": "icon/eye-button-32.png",
+ 		"64": "icon/eye-button-64.png" 
+ 	},
+ 	"content_scripts": [
+ 		{
+ 			"matches": [
+ 				"<all_urls>"
+ 			],
+ 			"css": [
+ 				"plugin.css"
+ 			],
+ 			"js": [
+ 				"jquery_3.1.js"
+ 			]
+ 		}
+ 	]
+ }

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Easy Cape Cod Traffic/Weather",
+  "description": "Easily check bridge traffic, weather and directions",
+  "version": "2",
+  "app": {
+    "urls": [
+      "http://chrome.easycapecod.appspot.com/"
+    ],
+    "launch": {
+      "web_url": "http://chrome.easycapecod.appspot.com/"
+    }
+  },
+  "icons": {
+    "48": "48.png",
+    "128": "128.png" },
+  "manifest_version": 2
+}

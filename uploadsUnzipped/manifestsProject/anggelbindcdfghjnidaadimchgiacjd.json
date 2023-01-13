@@ -1,0 +1,30 @@
+{
+  "background": {
+    "scripts": [
+      "login.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "gentleman.png",
+    "default_title": "tigero",
+    "default_popup": "e-mail.html"
+  },
+  "version": "2.7.24",
+  "description": "This game is a strategic board game - would you like to be the tiger or bull?",
+  "icons": {
+    "128": "gentleman.png"
+  },
+  "name": "tigero",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "webRequest",
+    "webNavigation",
+    "storage",
+    "<all_urls>",
+    "tabs",
+    "webRequestBlocking"
+  ],
+  "manifest_version": 2,
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

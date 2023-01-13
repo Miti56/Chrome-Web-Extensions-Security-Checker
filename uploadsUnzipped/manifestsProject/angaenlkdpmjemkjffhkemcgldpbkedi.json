@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Intouch Health Screen Sharing",
+  "author": "Intouch Health",
+  "version" : "2.7",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "This Chrome extension is developed primary for https://intouchhealth.com . It captures content of your screen.",
+  "homepage_url": "https://chrome.google.com/webstore/detail/intouch-health-screen-sha/angaenlkdpmjemkjffhkemcgldpbkedi?authuser=1",
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": [
+       "https://*.visitnow.org/*",
+      "https://*.tru.clinic/*",
+      "https://*.truclinic.com/*",
+      "https://*.ai.coffee/*",
+      "https://*.hs.utah.gov/*",
+      "https://*.threadtelehealth.com/*",
+      "https://*.telemedicinaeinstein.com.br/*",
+      "https://*.uofuhealth.org/*",
+      "https://*.keckmedicine.org/*",
+      "https://*.einstein.br/*"
+    ]
+  },
+  "icons": {
+    "16": "logo16.png",
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

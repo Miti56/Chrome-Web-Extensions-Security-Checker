@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	  "name": "Salesforce for Gmail",
+	  "version": "0.26",
+	  "manifest_version" : 2,
+	  "description": "Integrates Salesforce into Gmail.",
+	  "icons": { 
+			"16": "icon16.png",
+	  		"32": "icon32.png",
+			"48": "icon48.png",
+			"64": "icon64.png",
+			"96": "icon96.png",
+			"128": "icon128.png"
+		},
+	  "content_scripts": [
+	    {
+	      "matches": ["https://mail.google.com/*"],
+	      "css":        ["css/simple.css"],
+	      "js": ["content.js"],
+	      "run_at" : "document_end"
+	    }
+	  ],
+	  "permissions": [
+	                  "https://salesforcegadget.appspot.com/",
+	                  "https://*.salesforce.com/"
+	                ],
+	  "web_accessible_resources": [
+	  	"app/*",
+	  	"img/select.png",
+	  	"img/spinner.gif",
+	  	"img/master.png",
+	   	"js/jquery.min.js", 
+	   	"js/gmail_dom_v1.js",
+	   	"js/gmail_api_v1.js",
+	   	"js/gmail.js"
+	  ]
+}

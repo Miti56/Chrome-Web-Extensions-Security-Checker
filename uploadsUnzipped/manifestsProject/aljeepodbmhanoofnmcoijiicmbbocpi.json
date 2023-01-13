@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Sigma",
+  "description" : "Make a new Tab your new Home - Minimalistic New Tab page that displays Todo list and Quicknote option with beautiful background.",
+  "version": "1.9.6",
+
+  "browser_action": {
+    "default_icon": "icon_128.png"
+  },
+
+  "icons": {
+    "128": "icon_128.png",
+    "64": "icon_64.png"
+  },
+
+
+  "manifest_version": 2,
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "home.html"
+  },
+  "background":
+    {
+        "scripts": ["jquery.min.js", "jquery.cookie.js", "background.js", "home.js", "jstorage.js","jquery-ui.min.js", "jquery.simpleWeather.min.js", "datedropper.min.js"]
+    },
+  "content_scripts": 
+  [ {
+    "js": [ "jquery.min.js", "jquery.cookie.js", "background.js","home.js", "jquery.simpleWeather.min.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+  
+  "permissions": ["tabs", "http://*/*", "https://*/*", "activeTab", "cookies", "alarms", "storage",
+    "https://ununsplash.imgix.net/",
+    "https://unsplash.com/rss", "geolocation", "webNavigation", "topSites"]
+ 
+}

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Demo",
+  "version": "1.1",
+  "description": "Demo",
+  "permissions": ["webRequest", "webRequestBlocking", "tabs", "activeTab",
+                  "http://*/*", "https://*/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icono.png",
+    "128": "icono128.png"
+  },
+  "manifest_version": 2
+}

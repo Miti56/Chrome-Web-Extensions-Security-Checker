@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "AgileZen Utilities",
+	"version": "2.1.346",
+	"manifest_version": 2,
+	"description": "Utilities for AgileZen",
+	"options_page": "options.html",
+	"icons": { "16": "icons/ag.png", "48": "icons/ag.png", "128": "icons/ag.png" },
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://agilezen.com/project/*/board*"],
+			"js": ["js/jquery-2.0.0.min.js", "js/count-stories-in-lane.js", "js/agilezen-filter.js", "js/add-filter-links.js"]
+		}
+	],
+	"permissions": [
+		"https://agilezen.com/",
+		"https://gist.github.com/",
+		"tabs",
+		"webNavigation",
+		"storage"
+	]
+}

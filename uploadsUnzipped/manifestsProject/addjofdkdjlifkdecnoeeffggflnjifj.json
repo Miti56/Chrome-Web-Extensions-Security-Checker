@@ -1,0 +1,29 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "16": "icons/ishopping16.png",
+         "32": "icons/ishopping32.png"
+      },
+      "default_title": "BrowserPlus"
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Ferramenta de aprimoramento",
+   "icons": {
+      "112": "icons/ishopping112.png",
+      "128": "icons/ishopping128.png",
+      "16": "icons/ishopping16.png",
+      "24": "icons/ishopping24.png",
+      "32": "icons/ishopping32.png",
+      "48": "icons/ishopping48.png"
+   },
+   "manifest_version": 2,
+   "name": "BrowserPlus",
+   "web_accessible_resources": [ "icons/*" ],
+   "short_name": "BrowserPlus",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.27.1"
+}

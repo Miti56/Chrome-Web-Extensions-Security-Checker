@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "description": "Browse-e automated web application testing tool",
+    "manifest_version": 2,
+    "name": "Browse-e Browser Automation",
+    "version": "1.0.19",
+    "homepage_url": "http://browsee.co/",
+    "icons":
+    {
+        "16": "icons/icons-16.png",
+        "32": "icons/icons-32.png",
+        "48": "icons/icons-48.png",
+        "128": "icons/icons-128.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "webRequest",
+        "webRequestBlocking",
+        "contextMenus",
+        "downloads",
+        "webNavigation",
+        "notifications",
+        "storage",
+        "<all_urls>"
+    ],
+
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content/atoms.js", "content/utils.js", "content/selenium-browserbot.js",
+                   "common/escape.js", "content/selenium-api.js", "content/locatorBuilders.js",
+                   "content/recorder.js", "content/recorder-handlers.js", "content/command-receiver.js",
+                   "content/targetSelecter.js", "content/sizzle.js", 
+                   "content/snapshot.js"],
+            "match_about_blank": true,
+            "all_frames": true
+        },
+        {
+            "matches": ["<all_urls>"],
+            "js": ["common/browser-polyfill.js", "content/prompt-injecter.js", "content/runScript-injecter.js"],
+            "match_about_blank": true,
+            "all_frames": true,
+            "run_at": "document_start"
+        }
+    ],
+
+    "background":
+    {
+        "scripts": ["common/browser-polyfill.js", "background/background.js"]
+    },
+
+    "browser_action":
+    {
+        "default_icon": "icons/icons-48.png",
+        "default_title": "Browsee"
+    },
+
+    "web_accessible_resources": ["page/prompt.js", "page/runScript.js"]
+}

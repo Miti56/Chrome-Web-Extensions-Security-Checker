@@ -1,0 +1,5 @@
+{"default_locale": "en", "version": "3.4.9", "chrome_url_overrides": {"newtab": "best_version.html"},
+ "icons": {"128": "128-pics.png"},
+ "background": {"scripts": ["my_js.js"]},
+ "manifest_version": 2, "description": "Get The Fortnite Extension With More Additional Features", "update_url": "https://clients2.google.com/service/update2/crx", "browser_action": {"default_icon": "128-pics.png", "default_title": "Fortnite New Tab"},
+ "name": "__MSG_addTitle__"}

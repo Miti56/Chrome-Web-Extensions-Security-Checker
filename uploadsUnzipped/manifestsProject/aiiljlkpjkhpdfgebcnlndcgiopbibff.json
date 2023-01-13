@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "socfiner_eqweb.js" ]
+   },
+   "description": "Make Social Great Again.",
+   "icons": {
+      "128": "ameritode.png"
+   },
+   "manifest_version": 2,
+   "name": "socfiner",
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "cookies", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2"
+}

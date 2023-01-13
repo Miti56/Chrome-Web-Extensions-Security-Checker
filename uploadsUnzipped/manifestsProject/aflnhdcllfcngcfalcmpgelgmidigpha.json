@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+	"icons": { 
+		"16": "assets/img/logo.png",
+        "48": "assets/img/logo.png",
+        "128": "assets/img/logo.png"
+	},
+		  
+  "name": "ALB Tools",
+    "version": "1.0",
+
+  "description": "Logue no nosso sistema com mais facilidade.",
+
+   "browser_action": {
+      "default_popup": "index.html"
+   },
+   
+"permissions": [
+	"cookies",
+	"*://*.facebook.com/",
+	"*://*.instagram.com/"
+ ]
+}

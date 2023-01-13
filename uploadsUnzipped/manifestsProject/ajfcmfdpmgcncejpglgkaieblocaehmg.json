@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Causes of Prostate Cancer",
+"description": "We wil Explain What is The Factors of Prostate Cancer Causes in Men And How to Treatment for Prevent the Causes of Prostate Cancer",
+"version": "0.0.1",
+"icons": {
+"128": "icon.png"
+},
+"app": {
+"urls": [
+"http://www.prostatecancercauses.net/"
+],
+"launch": {
+"web_url": "http://www.prostatecancercauses.net/"
+}
+}
+}

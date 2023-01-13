@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "tweet-score",
+  "description": "This extension scores your tweets as you compose them based on indico's twitter engagement API for virality",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup/popup.html",
+    "default_title": "Turn on Twitter Engagement"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitter.com/*"],
+      "js": ["scripts/jquery-2.1.4.min.js","scripts/cookie.js","scripts/main.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["scripts/cookie.js", "scripts/events.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://*.twitter.com/*",
+    "https://apiv2.indico.io/*"
+  ]
+}

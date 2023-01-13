@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "manifest_version": 2,
+  "version": "1.0.2.4",
+  "name": "ShopNvestBates Cashback",
+  "description": "Get the latest offers, cashback and voucher codes at shopnvestbates.com.",
+  "icons": {
+      "128": "icons/icon128.png",
+      "48": "icons/icon48.png",
+      "16": "icons/button.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/jquery-3.3.1.min.js",
+        "js/content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/jquery-3.3.1.min.js",
+      "js/background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "popup/store.html",
+    "images/cross-button.png",
+    "icons/icon.png",
+    "icons/arrow.png"
+  ],
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "*://www.shopnvestbates.com/*"
+  ],
+  "browser_action": {
+    "default_icon": "icons/button.png",
+    "default_title": "ShopNvestBates Cashback",
+    "default_popup": "popup/extension.html"
+  }
+}

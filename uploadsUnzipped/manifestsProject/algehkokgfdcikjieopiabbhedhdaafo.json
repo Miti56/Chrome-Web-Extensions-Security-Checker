@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "booky",
+  "description": "Preisvergleich für gebrauchte Bücher",
+  "version": "0.0.2",
+
+  "browser_action": {
+      "default_name": "Book",
+      "default_icon": "booky.png",
+      "default_popup": "popup.html"
+  },
+  "icons": { "16": "icons/booky16.png",
+           "48": "icons/booky48.png",
+          "128": "icons/booky128.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.de/*",
+        "*://*.buecher.de/*",
+        "*://*.medimops.de/*",
+        "*://*.hugendubel.de/*",
+        "*://*.weltbild.de/*",
+        "*://*.weltbild.at/*",
+        "*://*.jokers.de/*",
+        "*://*.jokers.at/*",
+        "*://*.rebuy.de/*",
+        "*://*.booklooker.de/*",
+        "*://*.buch24.de/*",
+        "*://*.thalia.de/*",
+        "*://*.thalia.at/*",
+        "*://*.buch.de/*",
+        "*://*.lesen.de/*",
+        "*://*.arvelle.de/*",
+        "*://*.buyzoxs.de/*",
+        "*://*.abebooks.de/*",
+        "*://*.ebook.de/*",
+        "*://*.buchhandel.de/*"
+        ],
+      "js": ["booky_content_script.js"]
+    }
+  ],
+  "background": {
+    "scripts": [
+       "background.js"
+     ],
+    "persistent": false
+  },
+ "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "booky.css",
+    "img/*.png"
+  ],
+ "minimum_chrome_version": "22"
+}

@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "jquery.js", "background.js" ]
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Extension help's you to find free photos in archives by keyword",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Search the Free-Stock-Photo-sphere",
+   "permissions": [ "contextMenus", "management", "storage", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

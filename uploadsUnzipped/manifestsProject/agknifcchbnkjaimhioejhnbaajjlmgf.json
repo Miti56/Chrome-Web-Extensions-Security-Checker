@@ -1,0 +1,106 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "manifest_version": 2,
+    "version": "0.3.0",
+    "default_locale": "en",
+    "icons": {
+        "128": "icon.png"
+    },
+    "theme": {
+        "colors": {
+            "toolbar": [
+                47,
+                54,
+                61
+            ],
+            "frame": [
+                36,
+                41,
+                46
+            ],
+            "ntp_background": [
+                47,
+                54,
+                61
+            ],
+            "bookmark_text": [
+                135,
+                199,
+                255
+            ],
+            "tab_text": [
+                135,
+                199,
+                255
+            ],
+            "tab_background_text": [
+                158,
+                189,
+                217
+            ],
+            "ntp_text": [
+                255,
+                255,
+                255
+            ],
+            "frame_inactive": [
+                56,
+                64,
+                71
+            ],
+            "frame_incognito": [
+                26,
+                47,
+                64
+            ],
+            "frame_incognito_inactive": [
+                39,
+                71,
+                97
+            ]
+        },
+        "images": {
+            "theme_toolbar": "theme_toolbar.png",
+            "theme_ntp_background": "theme_ntp_background.png"
+        },
+        "tints": {
+            "buttons": [
+                0.5777777777777777,
+                1,
+                0.7
+            ],
+            "frame": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_incognito": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_inactive": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_incognito_inactive": [
+                -1,
+                -1,
+                -1
+            ],
+            "background_tab": [
+                -1,
+                -1,
+                -1
+            ]
+        },
+        "properties": {
+            "ntp_logo_alternate": 0,
+            "ntp_background_repeat": "repeat"
+        }
+    }
+}

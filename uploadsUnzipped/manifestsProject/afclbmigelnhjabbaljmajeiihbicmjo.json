@@ -1,0 +1,11 @@
+{
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Online Sims Series 3 and 4. Play Now!",
+   "manifest_version": 2,
+   "name": "Online Sims best games",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.9"
+}

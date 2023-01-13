@@ -1,0 +1,42 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "«ЛестиНет»",
+   "version": "2.7",
+  "description": "Если вас одолевают сомнения и вы, не знаете можно ли доверять конкретному сайту, то вам поможет «ЛестиНет».",
+  "default_locale": "ru",
+  "homepage_url": "http://lestinet.com/",
+  "minimum_chrome_version": "22.0.1229.94",
+  "browser_action": {
+    "default_icon": "icons/icon_nosite.png",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "16": "icons/icon_plugin_16.png",
+    "32": "icons/icon_plugin_32.png",
+    "48": "icons/icon_plugin_48.png",
+    "128": "icons/icon_plugin_128.png"
+  },
+  "permissions": [
+    "*://*/*",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "js/ChromeManifestClass.js",
+      "js/Utils.js",
+      "js/ServerWrapperClass.js",
+      "js/ServerLoggerClass.js",
+      "js/ConsoleLoggerClass.js",
+      "js/LoggerClass.js",
+      "js/DuplicateServerWrapperClass.js",
+      "js/ServerApiClass.js",
+      "js/LocalStorageWrapperClass.js",
+      "js/DBWrapperClass.js",
+      "js/CacheClass.js",
+      "js/GUIClass.js",
+      "js/EventsClass.js",
+      "js/LestinetExtClass.js"
+    ]
+  }
+}

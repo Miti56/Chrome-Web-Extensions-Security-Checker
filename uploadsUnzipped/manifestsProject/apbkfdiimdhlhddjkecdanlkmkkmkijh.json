@@ -1,0 +1,20 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "256": "icons/icon-256.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "Coinomi"
+   },
+   "description": "Manage your Coinomi Wallet on the fly.",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "64": "icons/icon-64.png"
+   },
+   "manifest_version": 2,
+   "name": "Coinomi",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.9"
+}

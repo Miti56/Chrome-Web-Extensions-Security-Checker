@@ -1,0 +1,39 @@
+{
+  
+   "browser_action": {
+      "default_icon": {
+         "128": "icons/128x128_t.png",
+         "16": "icons/16x16_t.png",
+         "19": "icons/19x19_t.png",
+         "38": "icons/38x38_t.png",
+         "48": "icons/48x48_t.png"
+      },
+      "default_title": "Abc Haber"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+       "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+			    "assets/js/jquery.js",
+                "assets/js/script.js"
+					
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'  https://ssl.google-analytics.com/ga.js https://www.google-analytics.com/analytics_debug.js https://ajax.googleapis.com ; object-src 'self'",
+   "description": "",
+   "icons": {
+      "128": "icons/128x128.png",
+      "16": "icons/16x16.png",
+      "48": "icons/48x48.png"
+   },
+   "manifest_version": 2,
+   "name": "Abc Haber",
+   "permissions": [ "storage", "notifications", "management", "https://www.google.com/jsapi", "http://*/", "http://*.google.com/","\u003Call_urls>", "webRequest", "*://*.t24.com.tr/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0",
+   "web_accessible_resources": [ "icons/48x48.png" ]
+}

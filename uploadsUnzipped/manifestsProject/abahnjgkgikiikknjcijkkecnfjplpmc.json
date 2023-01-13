@@ -1,0 +1,19 @@
+{
+  "browser_action": {
+    "default_icon": "Images/cv16.png",
+    "default_popup": "popup.html",
+    "default_title": "CVReader"
+  },
+  "web_accessible_resources": ["Images/thumb_up.png"],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "background": {"page": "background.html"},
+  "name": "CVReader",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src \u0027self\u0027 https://ssl.google-analytics.com; object-src \u0027self\u0027",
+  "version": "1.0.5"
+}

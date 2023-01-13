@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/libraries/jquery.js", "js/regexer.js", "js/libraries/hmac-sha256.js", "js/libraries/enc-base64.js", "js/background/mwsAPIRequest.js", "js/background/parser.js", "js/background/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/48.png",
+      "default_popup": "home.html"
+   },
+   "content_scripts": [ {
+      "css": [ "css/jsPopup.css", "css/jquery-ui.css" ],
+      "js": [ "js/libraries/jquery.js", "js/libraries/jquery-ui.js", "js/libraries/enscroll.js", "js/libraries/jquery.tablesorter.js", "js/libraries/jquery.stickytableheaders.js", "js/libraries/table2csv.js", "js/libraries/watermark.js", "js/libraries/table2pdf.js", "js/regexer.js", "js/common.js", "js/options.js", "js/filter.js", "js/profit.js", "js/mwsAPI.js", "js/sharePopup.js", "js/currentState.js", "js/sellerPage.js", "js/buyingGuide.js", "js/storefront.js", "js/wordsCloud.js", "js/jsPopup.js","js/libraries/html2canvas.js" ],
+      "matches": [ "*://www.amazon.com/*", "*://www.amazon.co.uk/*", "*://www.amazon.fr/*", "*://www.amazon.de/*", "*://www.amazon.ca/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "js/libraries/plotly.js" ],
+      "matches": [ "*://www.amazon.com/*", "*://www.amazon.co.uk/*", "*://www.amazon.fr/*", "*://www.amazon.de/*", "*://www.amazon.ca/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Barrel13 extension allows you to monitor important metrics of Amazon India products like monthly sales, revenue & much more.",
+   "homepage_url": "https://www.barrel13.com",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Barrel13",
+   "short_name":"Barrel13",
+   "optional_permissions": [ "*://www.google.com/*", "*://www.google.ps/*", "*://www.amazon.in/*", "*://www.amazon.com.mx/*", "*://www.amazon.it/*", "*://www.amazon.es/*", "*://*.amazonservices.in/*" ],
+   "permissions": [ "*://*.herokuapp.com/*", "tabs", "background", "storage", "unlimitedStorage", "*://www.amazon.com/*", "*://www.amazon.fr/*", "*://www.amazon.de/*","*://www.barrel13.com/*", "*://www.amazon.co.uk/*", "*://www.amazon.ca/*", "*://*.amazonservices.com/*", "*://*.amazonservices.ca/*" ],
+   "version": "1.5",
+   "web_accessible_resources": [ "*" ]
+}

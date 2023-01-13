@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "ROBLOX Trade Bot",
+  "description": "Mass sends small overpay trades in hopes of one being accepted",
+  "version": "2.32",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+    
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["getPagesSource.js", "client.js", "jquery.js"]
+        }
+    ],
+  "permissions": [
+   "cookies", 
+   "<all_urls>",
+   "http://*/*",
+   "http://*/*"
+  ]
+}

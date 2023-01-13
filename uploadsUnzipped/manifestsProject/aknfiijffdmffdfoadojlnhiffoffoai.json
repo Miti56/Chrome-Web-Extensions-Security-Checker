@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ 
+  "version": "0.2.0",
+
+  "manifest_version": 2,
+
+  "homepage_url": "http://example.com",
+  "name": "Twitterをねぎにするだけの何か",
+  "description": "Twitterのいいねボタン(ふぁぼ)をねぎにします",
+  
+  "web_accessible_resources": ["negi.css"],
+ 
+"content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+     
+ "css": ["negi.css"]
+    }
+  ],
+  "icons": { "32": "32.png",
+		"48": "48.png",
+		"128": "128.png" }
+}

@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Jay-Z",
+   "theme": {
+      "colors": {
+      "frame": [ 0, 0, 0 ],
+      "frame_inactive": [ 255, 255, 255 ],
+      "frame_incognito": [ 255, 255, 255 ],
+      "frame_incognito_inactive": [ 0, 0, 0 ],
+      "toolbar": [ 0, 0, 0 ],
+      "tab_text": [ 0, 0, 0 ],
+      "tab_background_text": [ 0, 0, 0 ],
+      "bookmark_text": [ 0, 0, 0 ],
+      "ntp_background": [ 0, 0, 0 ],
+      "ntp_text": [ 0, 0, 0 ],
+      "ntp_link": [ 0, 0, 0 ],
+      "ntp_link_underline": [ 0, 0, 0 ],
+      "ntp_header": [ 0, 0, 0 ],
+      "ntp_section": [ 0, 0, 0 ],
+      "ntp_section_text": [ 255, 255, 255 ],
+      "ntp_section_link": [ 255, 255, 255],
+      "ntp_section_link_underline": [ 255, 255, 255 ]
+      },
+      "images": {
+      "theme_frame": "images/frame_normal.png",
+      "theme_frame_inactive": "images/frame_normal_inactive.png",
+      "theme_frame_incognito": "images/frame_incognito.png",
+      "theme_frame_incognito_inactive": "images/frame_incognito_inactive.png",
+      "theme_toolbar": "images/toolbar.png",
+      "theme_ntp_background": "images/background.png",
+	  "theme_tab_background": "images/tab_background.png",
+      "theme_ntp_attribution": "images/black.png"
+      }
+   },
+   "version": "1.0"
+}

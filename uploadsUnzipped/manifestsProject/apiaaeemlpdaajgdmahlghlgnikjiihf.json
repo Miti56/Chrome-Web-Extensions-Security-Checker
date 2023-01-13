@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Black Friday Flyers",
+"description": "This is where you can find the last leaked flyers from the biggest shops so can be updated and your wish list before everyone else. ",
+"version": "0.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"http://ads-blackfriday.com/"
+],
+"launch": {
+"web_url": "http://ads-blackfriday.com/"
+}
+}
+}

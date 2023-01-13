@@ -1,0 +1,14 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "2.6",
+  "name": "rox's theme",
+  "theme": {
+   "colors": {
+         "ntp_header": [ 0, 0, 0 ],
+         "toolbar": [ 229, 239, 254 ]
+      },
+    "images": {
+         "theme_toolbar": "theme_toolbar.png"
+      }
+    }
+}

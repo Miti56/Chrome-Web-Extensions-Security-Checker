@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Exstagram",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "permissions": [  
+    "tabs", "https://www.instagram.com/*"  
+  ],
+  "icons": {
+    "128": "./icon.png"
+  },
+  "description": "press '/' to download picture on instagram which you are showing on your display.",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["jquery-1.12.4.min.js", "index.js"],
+      "css": ["index.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": ["download_icon.png"]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Hippo LMS - Online Learning Platform",
+  "version": "0.1",
+  "description": "Not just LMS, Learning platform and simple rapid eLearning Authoring tool. Power to you.",
+  "icons": {
+    "128": "icons/hippoquiz-128.png",
+    "16": "icons/hippoquiz-16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "479838314001",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://www.hippolms.com/users/auth/google_oauth2"
+    }
+  }
+}

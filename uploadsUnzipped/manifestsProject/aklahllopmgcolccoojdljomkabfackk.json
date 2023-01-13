@@ -1,0 +1,103 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "hotrodatve.com",
+  "description" : "Hệ thống hỗ trợ Ticketing đặt vé máy bay",
+  "version": "1.6.5",
+  "browser_action": {
+    "default_icon": {
+      "16": "images/cc16.png",
+      "32": "images/cc32.png"
+      },
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+		"open_in_tab": true,
+		"page": "page/options.html"
+	},
+  "icons": {
+    "16": "images/cc16.png",
+    "48": "images/cc48.png",
+    "32": "images/cc32.png",
+    "128": "images/cc128.png"
+  },
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "tabs",
+    "contextMenus",
+    "cookies",
+    "http://hotrodatve.com/*",
+    "https://booking.vietjetair.com/*",
+    "https://agents.vietjetair.com/*",
+    "https://www.vietjetair.com/*",
+    "https://hotrodatve.com/*",
+    "https://booking.jetstar.com/*",
+    "https://www.bambooairways.com/*",
+    "https://www.jetstar.com/*",
+    "https://mail.google.com/*",
+    "https://icabssl.com/*",
+    "https://mail-attachment.googleusercontent.com/*",
+    "https://webcheckin.vietjetair.com/*",
+    "https://iport.travelport.com/*"
+  ],
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["js/jquery-3.1.1.min.js","js/commonFunction.js","background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "style.css",
+    "images/*"
+  ],
+  "content_scripts": [
+    {
+      "matches":["https://booking.vietjetair.com/*","https://agents.vietjetair.com/*","https://www.vietjetair.com/*","https://hotrodatve.com/*","http://hotrodatve.com/*"],
+      "js": ["js/jquery-3.1.1.min.js", "js/commonFunction.js","autoFill/vj_content_script.js","autoFill/calculator.js"]
+    },
+    {
+      "matches":["https://booking.vietjetair.com/*", "https://webcheckin.vietjetair.com/*", "https://iport.travelport.com/*"],
+      "js": ["js/jquery-3.1.1.min.js", "js/commonFunction.js","checkin/vj_checkin_content_script.js"]
+    },
+    {
+      "matches":["http://hotrodatve.com/*",
+      "https://booking.vietjetair.com/*",
+      "https://agents.vietjetair.com/*",
+      "https://www.vietjetair.com/*",
+      "https://hotrodatve.com/*",
+      "https://booking.jetstar.com/*",
+      "https://www.bambooairways.com/*",
+      "https://www.jetstar.com/*",
+      "https://mail.google.com/*",
+      "https://icabssl.com/*",
+      "https://mail-attachment.googleusercontent.com/*",
+      "https://webcheckin.vietjetair.com/*"],
+      "css": ["css/hotrodatve.css"]
+		},
+    {
+      "matches":["https://booking.jetstar.com/*","https://www.jetstar.com/*"],
+      "js": ["js/jquery-3.1.1.min.js", "js/commonFunction.js","autoFill/bl_content_script.js","autoFill/calculator.js"]
+    },
+    {
+      "matches":["https://www.bambooairways.com/*"],
+      "js": ["js/jquery-3.1.1.min.js", "js/commonFunction.js","autoFill/qh_content_script.js","autoFill/calculator.js"]
+    },
+    {
+      "matches":[ "http://hotrodatve.com/*",
+                  "https://booking.vietjetair.com/*",
+                  "https://agents.vietjetair.com/*",
+                  "https://www.vietjetair.com/*",
+                  "https://hotrodatve.com/*",
+                  "https://booking.jetstar.com/*",
+                  "https://www.bambooairways.com/*",
+                  "https://www.jetstar.com/*",
+                  "https://mail.google.com/*",
+                  "https://icabssl.com/*",
+                  "https://mail-attachment.googleusercontent.com/*"],
+      "js": ["js/jquery-3.1.1.min.js",
+             "ticket/vj_ticket_content_script.js",
+             "ticket/bl_ticket_content_script.js",
+             "ticket/qh_ticket_content_script.js"]
+    }
+  ]
+}

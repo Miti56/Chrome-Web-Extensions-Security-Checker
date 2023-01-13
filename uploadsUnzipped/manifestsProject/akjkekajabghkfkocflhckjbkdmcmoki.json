@@ -1,0 +1,13 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Clean Weibo",
+  "version": "0.2",
+  "manifest_version": 2,
+  "description": "Make the Weibo interface cleaner",
+  "content_scripts": [
+    {
+      "matches": ["http://weibo.com/*", "http://*.weibo.com/*"],
+      "css": ["cleanwb.css"]
+    }
+  ]
+}

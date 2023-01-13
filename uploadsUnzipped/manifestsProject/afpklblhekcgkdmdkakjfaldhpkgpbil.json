@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Pasteboard - Simple Screenshot Sharing",
+  "description": "Easily share your screenshots and images with Copy & Paste or Drag & Drop.",
+  "version": "1.0",
+  "app": {
+    "launch": {
+      "web_url": "http://pasteboard.co"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

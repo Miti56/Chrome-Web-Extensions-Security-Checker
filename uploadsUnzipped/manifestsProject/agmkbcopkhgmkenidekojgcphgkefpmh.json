@@ -1,0 +1,42 @@
+{
+  "name": "CÔNG CỤ ĐẶT HÀNG - VICHO.VN",
+  "short_name" : "vicho.vn",
+  "description": "Công cụ hỗ trợ người dùng của vicho.vn đặt hàng trên website: Taobao.com, Tmall.com và 1688.com",
+  "manifest_version": 2,
+  "author": "HAIHS",
+  "version": "2.4.0",
+  "homepage_url": "https://vicho.vn",
+  "browser_action": {
+    "default_icon": "images/icon128.png"
+  },
+  "icons": {
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "css/styles.css"
+      ],
+      "js": [
+          "js/scripts.js"
+      ],
+      "matches": [
+          "https://*.1688.com/*",
+          "http://*.1688.com/*",
+          "https://*.taobao.com/*",
+          "http://*.taobao.com/*",
+          "https://*.tmall.com/*",
+          "http://*.tmall.com/*",
+          "https://*.tmall.hk/*",
+          "http://*.tmall.hk/*"
+      ]
+    }
+  ],
+  "permissions": [   
+    "https://local.vicho.vn/*",
+    "http://local.vicho.vn/*",
+    "https://vicho.vn/*",
+    "http://vicho.vn/*"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

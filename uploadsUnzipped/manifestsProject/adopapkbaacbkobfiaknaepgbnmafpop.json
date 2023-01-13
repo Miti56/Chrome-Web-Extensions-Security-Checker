@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Predicoin",
+    "short_name": "Predicoin",
+    "description": "The Chrome extension that will help you trade better on the cryptocurrency market.",
+    "version": "1.04",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Predicoin"
+    },
+    "icons": { 
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png" 
+    },
+    "permissions": [ "tabs", "storage", "activeTab", "http://*/*", "https://*/*" ],
+    "content_scripts": [
+    {
+      "matches": [
+        "http://*/*", 
+        "https://*/*"
+    ],
+      "css" : ["browser.css"],
+      "js": ["jquery.min.js","jquery-ui.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    ]
+}

@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  
+  "name": "HAC Sessions",
+  "description": "Keep your HAC sessions open, even if you go AFK",
+  "author": "Ethan Zimbelman",
+  "homepage_url": "https://zimboboys.com/hac-sessions",
+  "version": "1.0",
+  
+  "icons": {
+	"16": "16.png",
+	"48": "48.png",
+	"128": "128.png"
+  },
+  
+  "content_scripts": [{
+    "matches": ["*://hac.friscoisd.org/*"],
+    "js": ["jquery.min.js", "background.js"],
+    "run_at": "document_end"
+  }],
+  
+  "permissions": [
+    "tabs", "*://hac.friscoisd.org/*"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "front.html"
+   },
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com https://widgets.getpocket.com https://platform.twitter.com https://platform.twitter.com; object-src 'self'",
+   "description": "Get something inspiring from around the web every time you open a new tab.",
+   "homepage_url": "http://www.poshfeed.com",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icon19.png",
+         "38": "icon38.png"
+       },
+      "default_title": "poshfeed"
+   },
+   "background": {
+      "scripts": ["cache.js", "jquery.js"],
+      "persistent": false
+    },
+   "manifest_version": 2,
+   "name": "Poshfeed",
+   "permissions": [ "topSites","alarms", "chrome://favicon/", "http://poshfeed.com/", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.1"
+}

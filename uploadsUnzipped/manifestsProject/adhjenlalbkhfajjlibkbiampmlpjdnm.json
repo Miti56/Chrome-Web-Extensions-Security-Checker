@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Internal Taobao Coupon [Quan]",
+	"description": "Help you quickly find the internal coupons of tmall Taobao, and it's cheaper to take the rebate for shopping",
+	"version": "2.11",
+	"manifest_version": 2,
+	"icons":{
+		"128": "logo.png"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [{
+		"matches": ["https://*.taobao.com/*","https://*.tmall.hk/*","https://*.tmall.com/*"],
+		"js": ["quan.js"],
+		"css": ["quan.css"],
+		"run_at": "document_end"
+	}],
+	"permissions": ["tabs", "activeTab"]
+}

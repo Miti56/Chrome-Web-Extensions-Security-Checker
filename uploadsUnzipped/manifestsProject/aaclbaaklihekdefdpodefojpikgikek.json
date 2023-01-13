@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Incan Adventures",
+"description": "Website launcher",
+"short_name": "Incan Adventures: Experience Peru!",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.incanadventures.com/"
+],
+"launch": {
+"web_url": "http://www.incanadventures.com"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

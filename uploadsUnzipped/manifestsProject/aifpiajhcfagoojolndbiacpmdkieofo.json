@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "WellToPay",
+	 "icons": {
+       "128": "icon128.png"
+    },
+	 "content_scripts": [{
+	 	"matches": ["*://*/*"],
+	 	"css": ["cssOut.css"],
+	 	"js": [ "jquery.js", "out.js"] 
+	
+	  }],
+	
+	
+	"permissions": [
+		"tabs", 
+		"*://*/*",
+		"storage"
+	],
+	
+	"description": "Сохрани свой кешбек!",
+	"browser_action": {
+		"default_icon": {
+			"38": "favicon.png"
+		},
+		"default_title": "WellToPay",
+		"default_popup": "index.html"
+	},
+	"manifest_version": 2,
+	"version": "0.13"
+}

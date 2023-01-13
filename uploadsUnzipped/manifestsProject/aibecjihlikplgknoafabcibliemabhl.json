@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "mbdnow.com",
+  "version": "0.2.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*", 
+        "http://*/*"
+      ],
+      "js": ["Rx.js","jquery.min.js","content.js"]
+    }
+  ],
+  "browser_action":{
+    "default_icon":"logo.png",
+    "default_title": "21Business",
+    "default_popup": "browser_action/index.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "cookies",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "authfb/google.html",
+    "authfb/google.js",
+    "jquery.min.js",
+    "popup/index.html",
+    "popup/js/main.js",
+    "popup/css/styles.css",
+    "assets/img/loading.gif"
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
+}

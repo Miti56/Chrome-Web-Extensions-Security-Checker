@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "New Tab Page",
+  "version": "3.7",
+  "description": "New Tab Page is a Search Engine aggregator and direct links portal ",
+  "icons": { "128": "icon.png" },
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "permissions": [
+	"tabs"
+  ] 
+}

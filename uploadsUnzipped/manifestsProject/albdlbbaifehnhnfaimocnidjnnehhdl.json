@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Maylie Tv StreamApp",
+ "manifest_version": 2,  
+ "version": "1.6",
+ "icons": { "128": "icon.png" },
+ "description": "Notifier quand Maylie est en live sur twitch",
+ "browser_action": {
+  "default_icon": "iconOff.png",
+  "default_title": "Maylie Stream",
+  "default_popup": "popup.html"
+ },
+   "background": {
+    "scripts": ["main.js","jquery.js"]
+  },
+ "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+ "permissions": ["notifications","management"],
+  "minimum_chrome_version": "28"
+}

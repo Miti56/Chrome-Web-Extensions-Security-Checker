@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+
+  "version": "0.0.0.10",
+  "incognito": "split",
+  "icons": { "16": "N_16.png","48": "N_48_selected.png" },
+  "browser_action": {
+    "default_icon": "N_48_selected.png",
+    "default_title": "__MSG_default_title__", 
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

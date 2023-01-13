@@ -1,0 +1,59 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"name": "WA - Send Bulk Messages Free",
+	"short_name": "WA - Send Bulk Messages Free",
+	"description": "WA - Send Bulk Messages Free",
+	"version": "1.3.4",
+	"author" : "complanboy2",
+	"manifest_version": 2,
+	"minimum_chrome_version": "37",
+	"icons": {
+		"16": "img/favicon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": true
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.whatsapp.com/*"
+			],
+			"js": [
+
+			],
+			"css": [
+				"wa-custom.css"
+			],
+			"all_frames": false
+		}
+	],
+	"web_accessible_resources": [
+		"img/*.png",
+		"*.js",
+		"img/*.svg",
+		"wa-custom.css"
+	],
+	"browser_action": {
+		"default_icon": {
+			"19": "img/favicon19.png",
+			"38": "img/favicon38.png"
+		},
+		"default_title": "WA - Send Bulk Messages Free",
+		"default_popup": "popup.html"
+	},
+	"options_page": "options.html",
+	"permissions": [
+		"*://*.whatsapp.com/*",
+		"tabs",
+		"background",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"system.display"
+	]
+}

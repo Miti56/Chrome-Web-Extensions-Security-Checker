@@ -1,0 +1,17 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "clashroyal.png"
+   },
+   "description": "This is a free Clash Royale hack which provides free gems and gold. Get unlimited gems and gold using our free tool.",
+   "icons": {
+      "128": "clash-royale.png"
+   },
+   "manifest_version": 2,
+   "name": "Clash Royale Hack, Cheat",
+   "short_name": "Clash Royale Free Hack",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

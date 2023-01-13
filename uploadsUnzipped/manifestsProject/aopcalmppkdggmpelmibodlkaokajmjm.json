@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AgreeDo",
+  "description": "__MSG_description__",
+  "version": "1.2.9",
+  "default_locale": "en",
+  "manifest_version": 2,
+  
+  "icons": {
+    "128": "logo_128x128.png"
+  },
+
+  "app": {
+    "urls": [
+      "https://www.agreedo.com/"
+    ],
+    "launch": {
+      "web_url": "https://www.agreedo.com/MeetingApp.html?pk_campaign=chromeStore&pk_kwd=meetingApp"
+    }
+  },
+
+  "permissions": [
+    "notifications"
+  ]
+}

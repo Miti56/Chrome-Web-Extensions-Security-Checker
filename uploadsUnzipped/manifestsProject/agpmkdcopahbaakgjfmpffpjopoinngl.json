@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "app": {
+                "background": {
+                        "scripts": [
+                                "background.js"
+                        ]
+                }
+        },
+        "manifest_version": 2,
+        "name": "Robot Quest",
+        "version": "1.0",
+        "description": "A game for children.  Move the robot around, talk to other characters, pick up items, and help everyone out.",
+        "icons": {
+                "128": "icon128.png"
+        },
+        "author": "Tertium Quid Games",
+        "short_name": "Robot Quest",
+        "permissions": [
+                "storage"
+        ]
+}

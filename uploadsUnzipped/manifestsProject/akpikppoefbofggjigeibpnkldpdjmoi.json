@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "DoSales: Email Tracking & Templates For Gmail",
+	"short_name": "DoSales",
+    "description": "DoSales will help you boost your sales by increasing your productivity with email tracking and email templates.",
+    "version": "1.0.0.1",
+    "icons": {
+		"16": "/icons/icon_16.png",
+        "48": "/icons/icon_48.png",
+        "128": "/icons/icon_128.png"
+    },
+    "web_accessible_resources": [
+      "script/static/main.js"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://mail.google.com/*"],
+		    "js": ["script/yanado.inject.js"]
+        }
+    ],
+	"externally_connectable": {
+        "matches": ["*://*.yanado.com/*"]
+    },
+    "manifest_version": 2,
+       "background": {
+        "page": "background.html"
+    },
+    "content_security_policy": "script-src 'self' https://*.dosales.email; object-src 'self'",
+    "permissions": ["notifications", "tabs", "https://*.googleusercontent.com/proxy/*", "webRequest", "webRequestBlocking", 
+		"https://mail.google.com/*", "https://*.yanado.com/*", "https://*.yanado.org/*", "https://*.dotrack.email/*", "https://*.dotemplates.email/*", "https://*.dosales.email/*"
+	]
+}
+
+

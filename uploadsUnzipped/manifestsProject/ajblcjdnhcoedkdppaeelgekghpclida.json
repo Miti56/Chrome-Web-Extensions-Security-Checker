@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Call FPS Free of Duty Games",
+"version": "1.1",
+"description": "call of duty , gta san andreas, minecraft , clash royale, subway surfers, fifa, sims 4, candy crush",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "call of duty heroes gta game",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

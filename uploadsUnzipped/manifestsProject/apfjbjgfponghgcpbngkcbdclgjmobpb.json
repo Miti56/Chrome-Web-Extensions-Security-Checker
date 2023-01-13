@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Joona Partage d'Ecran",
+  "description": "une extension de partage d'ecran pour la plateforme Joona.",
+  "version": "0.1.1",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "joona-logo-16x16.png",
+    "48": "joona-logo-48x48.png",
+    "128": "joona-logo-128x128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://joona.icu/*"
+      ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Mytpro Call Notification",
+	"version": "1.0.0.7",
+	"version_name": "1.0.0.7",
+	"description": "Mytpro call notification app.",
+	"icons": {
+		"16": "images/mytpro_256_16x16x32.png",
+		"48": "images/mytpro_256_48x48x32.png",
+		"128": "images/mytpro_256_128x128x32.png",
+		"256": "images/mytpro_256_256x256x32.png"
+	},
+	"background": {
+		"persistent": false,
+		"scripts": [
+      "js/manifest.js",
+      "js/vendor.js",
+      "js/common.js",
+      "js/api.js",
+      "js/background.js"
+		]
+	},
+	"minimum_chrome_version": "49",
+	"permissions": [
+		"activeTab",
+		"gcm",
+		"storage",
+		"notifications",
+    "background",
+    "http://mytpro.com/*",
+    "http://*.mytpro.com/*",
+		"https://*.mytpro.com/*"
+	],
+	"browser_action": {
+		"default_title": "Mytpro",
+		"default_icon": {
+      "16": "images/mytpro_256_16x16x32.png",
+      "48": "images/mytpro_256_48x48x32.png",
+      "128": "images/mytpro_256_128x128x32.png",
+      "256": "images/mytpro_256_256x256x32.png"
+    }
+	},
+  "externally_connectable": {
+    "matches": ["*://*.mytpro.com/*","*://mytpro.com/*"]
+  },
+  "content_security_policy":"script-src 'self' https://*.mytpro.com 'unsafe-eval'; object-src 'self' 'unsafe-eval'",
+	"offline_enabled": false
+}

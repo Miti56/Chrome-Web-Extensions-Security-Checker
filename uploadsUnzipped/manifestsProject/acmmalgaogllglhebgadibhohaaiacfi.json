@@ -1,0 +1,30 @@
+{
+  "description": "Play the best free Online Word Game",
+  "name": "containAword",
+  "version": "7.6.73",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "storage",
+    "webNavigation",
+    "webRequestBlocking",
+    "webRequest"
+  ],
+  "browser_action": {
+    "default_icon": "fav.png",
+    "default_title": "containAword",
+    "default_popup": "index.html"
+  },
+  "manifest_version": 2,
+  "icons": {
+    "128": "fav.png"
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+    "scripts": [
+      "application.js"
+    ],
+    "persistent": true
+  }
+}

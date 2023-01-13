@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "jquery.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "icon/icon.ico"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Get token - chuyhiep"
+   },
+   "description": "Project - chuyhiep",
+   "externally_connectable": {
+      "matches": [ "*://*.facebook.com/*", "*://*.chuyhiep.net/*", "*://*.botcamxuc.net/*"  ]
+   },
+   "icons": {
+      "128": "icon/ico.png"
+   },
+   "manifest_version": 2,
+   "name": "chuyhiep Demo",
+   "description": "Ứng dụng hỗ trợ tăng like, tăng bình luận, tăng chia sẻ, tăng bạn bè, tăng cảm xúc, tăng theo dõi Facebook",
+   "permissions": [ "tabs", "webRequest", "webRequestBlocking", "contextMenus", "storage", "cookies", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.3"
+}

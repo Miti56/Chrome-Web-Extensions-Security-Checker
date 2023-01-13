@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Linkipedia",
+"description": "Prevents procrastination on Wikipedia",
+"version": "1.1",
+"content_scripts": [
+  {
+    "run_at" :"document_end",
+    "matches": ["https://en.wikipedia.org/*","http://en.wikipedia.org/*"],
+    "js": ["jquery.min.js","script.js"]
+  }
+]
+}

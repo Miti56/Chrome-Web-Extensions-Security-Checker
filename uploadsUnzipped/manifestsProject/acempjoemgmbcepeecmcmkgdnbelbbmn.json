@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Space Repper",
+  "short_name": "Space Repper",
+  "description": "Train your brain and become an astronaut",
+  "version": "0.2.18",
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "tabs",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "scripts": [
+      "background.bundle.js"
+    ]
+  },
+  "commands": {
+    "create_card": {
+      "suggested_key": {
+        "windows": "Alt+Shift+J",
+        "mac": "Alt+Shift+J",
+        "linux": "Alt+Shift+J"
+      },
+      "description": "Create a card"
+    }
+  },
+  "icons": {
+    "16": "space-repper-16.png",
+    "64": "space-repper-64.png",
+    "128": "space-repper-128.png"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    "icons.svg",
+    "*.css",
+    "iframe.bundle.js"
+  ],
+  "browser_action": {
+    "default_title": "Space Repper",
+    "default_icon": "space-repper-16.png",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}

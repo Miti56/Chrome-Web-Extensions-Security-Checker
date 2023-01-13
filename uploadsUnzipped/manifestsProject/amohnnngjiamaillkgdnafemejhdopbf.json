@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "QiitaStockers",
+    "version": "1.1",
+    "description": "displays stockers of Qiita Article",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://qiita.com/*/items/*"
+            ],
+            "js": [
+                "contentScript/index.js"
+            ],
+            "css": [
+                "contentScript/style.css"
+            ]
+        }
+    ],
+    "options_page": "options/index.html",
+    "permissions": [
+        "tabs",
+        "storage",
+        "https://qiita.com/*/items/*"
+    ],
+    "manifest_version": 2
+}

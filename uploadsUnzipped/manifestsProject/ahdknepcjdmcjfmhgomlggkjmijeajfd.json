@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Custom Kitchen Free Quote",
+"description": "Custom Kitchen Free Quote",
+"short_name": "Custom Kitchen Free Quote",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"https://forestrykitchens.ca/"
+],
+"launch": {
+"web_url": "https://forestrykitchens.ca/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

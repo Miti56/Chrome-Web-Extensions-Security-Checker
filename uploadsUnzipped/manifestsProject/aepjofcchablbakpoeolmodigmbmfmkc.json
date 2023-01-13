@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Storysift",
+	"version": "1.0.0.0",
+	"description": "Technology news stories grouped by topics from quality sources across the web.",
+	"short_name": "Storysift",	
+	"icons": {"128":"128.png"},
+	"app": {
+		"urls":["https://storysift.news/"],
+		"launch":{"web_url":"https://storysift.news/"}
+	},
+	"permissions": [
+		"unlimitedStorage"
+	]
+}

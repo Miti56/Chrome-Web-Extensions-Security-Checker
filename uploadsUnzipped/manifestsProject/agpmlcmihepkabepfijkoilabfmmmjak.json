@@ -1,0 +1,45 @@
+{
+	"background": {
+		"scripts": [
+			"background/bundle.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "icons/icon16.png",
+			"19": "icons/icon19.png",
+			"20": "icons/icon20.png",
+			"32": "icons/icon32.png",
+			"38": "icons/icon38.png",
+			"40": "icons/icon40.png"
+		},
+		"default_popup": "popup/index.html"
+	},
+	"content_security_policy": "script-src 'self' https://www.google-analytics.com https://platform.twitter.com; object-src 'self'",
+	"default_locale": "en",
+	"description": "Add subtitles and closed captions to online videos on Youtube, Netflix, Dailymotion, Vimeo, Exashare, Youwatch and many others.",
+	"icons": {
+		"128": "icons/icon128.png",
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"96": "icons/icon96.png"
+	},
+	"incognito": "split",
+	"manifest_version": 2,
+	"name": "Substital Video ",
+	"permissions": [
+		"activeTab",
+		"<all_urls>",
+		"storage"
+	],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"iframe/*",
+		"modal/*",
+		"css/*",
+		"views/*",
+		"injection/*",
+		"detection/detectors/*"
+	]
+}

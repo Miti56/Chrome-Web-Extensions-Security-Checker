@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "叽喳",
+    "version": "1.0.1",
+    "description": "叽喳",
+	"background": {
+		"page": "background.html",
+        "persistent":true
+	},
+    "browser_action": {
+        "default_icon": "images/logo_enabled19.png",
+        "default_popup": "popup.html",
+        "default_title": "叽喳"
+    },
+    "icons": {
+	   "19":"images/logo_enabled19.png",
+       "128":"images/logo128.png"
+    },
+  
+    "permissions": [
+        "unlimitedStorage",
+        "contextMenus",
+		"tabs",
+        "webNavigation",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "proxy",
+        "http://*/*", 
+		"https://*/*"
+    ],
+    "manifest_version": 2
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Full Renew JS Code Injector",
+  "version": "10.0.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "jquery.js", "background.js" ],
+	  "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+   "injected.js"
+  ],
+  "browser_action":{
+    "default_icon": "dice.png",
+    "default_popup": "ind.html"
+  }
+}

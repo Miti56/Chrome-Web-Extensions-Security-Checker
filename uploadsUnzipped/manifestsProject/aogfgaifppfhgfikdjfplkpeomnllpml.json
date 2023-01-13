@@ -1,0 +1,27 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "NetCupom - Combustível para suas compras",
+    "short_name": "NetCupom",
+    "version": "2.2",
+    "description": "Com o NetCupom você sempre sai na frente",
+    "icons": {
+        "16": "img/16x16.png",
+        "48": "img/48x48.png",
+        "128": "img/128x128.png"
+    },
+    "background": {
+        "scripts": [
+            "js/back.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+		"default_title": "Pegar desconto",
+        "default_icon": "img/icon_16_disabled.png"
+    },
+	"permissions": [
+        "activeTab",
+		"tabs"
+    ]
+}

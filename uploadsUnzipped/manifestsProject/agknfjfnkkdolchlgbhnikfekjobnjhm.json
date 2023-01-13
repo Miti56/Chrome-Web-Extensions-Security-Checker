@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Clickbait Revealer",
+  "description": "This extension shows the true headlines behind Huffington Post's Clickbait-y ones, without causing more network traffic.",
+  "version": "1.0",
+
+"content_scripts": [
+    {
+      "matches": ["http://www.huffingtonpost.com/*"],
+      "js": ["jquery-2.1.1.min.js", "myscript.js"]
+    }
+  ]
+}

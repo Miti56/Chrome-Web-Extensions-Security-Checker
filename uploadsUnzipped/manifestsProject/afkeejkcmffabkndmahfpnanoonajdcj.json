@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Anime Resistance Black",
+	"description": "Put background Color of animeresistance Black Black Bones",
+	"version": "1.0",
+	"permissions": [
+		"http://*/*",
+		"https://*/*"
+	],
+	"browser_action": {
+		"default_icon": "img/icon.png",
+		"default_popup": "mcokami.html"
+	},
+	"icons": {
+		"128": "img/icon128.png"
+	},
+	"content_scripts": [{
+		"matches": ["http://animeresistance.com/*"],
+		"js": ["js/app.js"]
+	}]
+}

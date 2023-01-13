@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "VSync",
+    "short_name": "VSync",
+    "version": "2.25",
+    "content_scripts": [{
+        "matches": [
+            "*://*.youtube.com/*",
+            "*://*.netflix.com/*",
+            "*://*.hulu.com/*",
+            "*://*.amazon.com/*",
+            "*://*.discordapp.com/*"
+        ],
+        "run_at": "document_idle",
+        "js": ["jquery-3.3.1.min.js","firebase-app.js","firebase-auth.js","firebase-database.js","content.js"]
+    }],
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "icons": {
+        "16": "vsyncicon.png",
+        "32": "vsyncicon.png",
+        "48": "vsyncicon.png",
+        "128": "vsyncicon.png"
+    },
+    "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com https://extensionuse.firebaseapp.com/analytics",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "vsync controls"
+    },
+    "description": "Synchronises videos across sessions"
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ForecastGenie",
+  "short_name": "ForecastGenie",
+  "author": "Max Helmetag",
+  "version": "1.0.1",
+  "version_name": "1.0.1",
+  "description": "Reveal the 3rd, 4th, 5th and 6th Days for Forecasts on Surfline",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.surfline.com/surf-forecasts/*"
+      ],
+      "js": [
+        "build/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

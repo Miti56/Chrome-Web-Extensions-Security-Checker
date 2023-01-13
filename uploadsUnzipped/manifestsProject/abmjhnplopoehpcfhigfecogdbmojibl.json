@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SuperTunnel Extension",
+  "description": "Tunnel some URL using SuperTunnel URL",
+  "version": "1.3",
+
+  "permissions": [
+    "contextMenus"
+  ],
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "background": {
+    "scripts": ["popup.js"]
+  }
+}

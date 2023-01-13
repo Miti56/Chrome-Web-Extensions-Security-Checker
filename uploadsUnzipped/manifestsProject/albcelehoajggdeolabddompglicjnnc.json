@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version":2,
+   "name":"Office Online Viewer",
+   "version":"1.0.1",
+   "description":"Open online Word, Excel and PowerPoint files with Microsoft's Office Online Viewer.",
+   "icons":{
+      "16": "16.png",
+      "48": "48.png",
+	  "128": "128.png"
+   },
+   "background":{      
+      "persistent":false,
+	  "scripts":["view.js"]
+   },
+   "permissions":["contextMenus"]
+}

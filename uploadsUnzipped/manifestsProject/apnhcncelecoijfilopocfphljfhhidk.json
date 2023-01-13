@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Bound",
+  "version": "1.0.1",
+  "description": "Bound Extension!",
+
+  "oauth2": {
+    "client_id": "121179289007-bbd4nrrm6g5sutpao31auapgp482etdo.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/calendar.readonly",
+      "https://www.googleapis.com/auth/calendar.events.readonly"
+    ]
+  },
+
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["identity", "storage"],
+
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://apis.google.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com https://www.googleapis.com https://apis.google.com; "
+}

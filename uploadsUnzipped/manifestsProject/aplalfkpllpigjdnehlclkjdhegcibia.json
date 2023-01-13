@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"name": "Faucet Helper",
+	"description": "Start faucet pages every elapsed time",
+	"version": "1.1.0",
+	"background": {
+		"page": "background.html"
+	},
+	"browser_action": {
+		"default_icon": "Faucet48.png",
+		"default_title": "Faucet",
+		"default_popup": "index.html"
+	},
+	"icons": { 
+		"16": "Faucet16.png",
+		"128": "Faucet128.png"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	]
+}

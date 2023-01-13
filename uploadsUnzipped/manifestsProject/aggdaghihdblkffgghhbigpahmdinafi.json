@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgL0bjm3uuDte/VT4YMtayUEdz9MoMIliCkmU61ZBehdAC5ph8Hh2t22mOGMURAfWQltT3nq1NbonTOASXa43Q33Fw0ymX9h6yUhdtRqrmP88H4rJ15mZQoLVv6dKXqB7VSUxJMm9vhZwv4+4NRRA6daIej/YRVzqY/M/xEdkpKTfynodOBX4hMB+qcjjlTTXX/jUvYpJ17g5RCR1jqk1c0UwkoCxKghZ/3OELI8LHnPhEV7iIqyTV+SUitGRyrhJJ4THIJk7M94utFcyFotm1wjvZSbaBbixZVyZAHXQG6m2wA31NyS5yizePhO+EblFe78ZO2v14fv6+Ulk4fc6IQIDAQAB",
+  "name": "Remark",
+  "description": "A new tab replacement text editor",
+  "version": "1.4.3",
+  "icons": {
+    "128": "icon.png"
+  },
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "identity",
+    "https://www.googleapis.com/"
+  ],
+  "oauth2": {
+    "client_id": "402576426073-gsl3natgrv6p32ml18uh2tfvbt64v1ou.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/plus.login",
+      "https://www.googleapis.com/auth/chromewebstore.readonly"
+    ]
+  }
+}

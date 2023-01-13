@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "AppTrocaIP",
+	"manifest_version": 2,
+	"version": "1.0",
+	"description": "Aplicativo que reinicia o modem com objetivo em obter um novo IP",
+	"browser_action": {
+		"default_icon": "logo.png",
+		"default_title": "Troca IP",
+		"default_popup": "index.html"
+	},
+	"permissions": [
+		"http://*/*",
+		"https://*/*"
+	], 
+	"content_scripts": [
+		{
+			"matches": ["http://*/*","https://*/*"],
+			"css": ["style.css"],
+			"js": ["configuracao.js", "jquery-3.3.1.min.js", "funcao.js"]
+		}
+	]
+}

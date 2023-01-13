@@ -1,0 +1,17 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "眼跳预测",
+  "version": "2.0.0.1",
+  "manifest_version": 2,
+  "description": "眼跳预测是中国传统民俗预测中必备的工具之一",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "yantiao_128_128.png"
+  },
+  "permissions": [
+    "http://baidu.jiuchongju.com/yantiao"
+  ]
+}

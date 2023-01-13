@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Musix",
+  "description": "Musix - New Tab",
+  "version": "1.1.4",
+  "short_name": "Musix",
+  "icons": {
+    "128": "imgs/logo.png"
+  },
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "/js/*",
+    "/extensions_base/basejs/*"
+  ],
+  "permissions": [
+    "unlimitedStorage",
+    "tabs",
+    "notifications",
+    "cookies",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "jquery.min.js",
+        "content.js"
+      ],
+      "matches": [
+        "*://*.youtube.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "background": {
+    "scripts": [
+      "/extensions_base/basejs/jquery-1.9.1.js",
+      "/extensions_base/basejs/products/zooms_musixlib_parameters_nt.js",
+      "/extensions_base/basejs/base.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "128.png",
+    "ext_data/youtube.txt"
+  ]
+}

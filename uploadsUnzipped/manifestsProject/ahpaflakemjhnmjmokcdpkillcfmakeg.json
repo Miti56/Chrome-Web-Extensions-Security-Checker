@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Crossfit WOD",
+  "description": "Crossfit Workout of the Day",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com/ga.js; object-src 'self'",
+  "chrome_url_overrides" : {
+    "newtab": "window.html"
+  },
+  "author": "SOB Construction",
+  "permissions": [
+    "storage",
+    "http://feeds.feedburner.com/crossfit/eRTq",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "js": ["jquery.js", "background.js", "analytics.js"]
+    }
+  ],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "version": "1.735"
+}

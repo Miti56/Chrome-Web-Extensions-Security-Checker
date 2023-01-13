@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Recalll",
+    "version": "1.0.0",
+    "description": "Recall your stuff across services.",
+    "manifest_version": 2,
+    "options_page": "settings/index.html",
+    "permissions": [ "contextMenus", "*://*/*", "*://galcsy/", "notifications", "activeTab", "alarms", "history", "bookmarks", "webNavigation"],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "web_accessible_resources": [ "assets/js/jquery-1.11.1.min.js", "assets/js/jquery-1.10.2.min.map", "assets/js/jquery.reveal.js", "assets/img/spinner.gif", "assets/img/buttons/*", "settings/*", "window/*" ],
+    "browser_action": {
+        "default_icon": "assets/img/icon-off-38.png"
+    },
+    "icons": {
+        "128": "assets/img/icon-128.png",
+        "16": "assets/img/favicon-16.png"
+    },
+    "background": {
+        "scripts": [ "background.js" ]
+    },
+    "content_scripts": [ {
+        "exclude_globs": [ "mail.google.*" ],
+        "include_globs": [ "*.google.*" ],
+        "js": [ "assets/js/jquery-1.11.1.min.js", "assets/js/jquery.reveal.js", "assets/js/moment.js", "search.js", "embed/contentscript.js" ],
+        "matches": [ "*://*/*" ]
+    }, {
+        "js": [  "assets/js/jquery-1.11.1.min.js", "embed/background_manager.js" ],
+        "matches": [ "*://*/*" ],
+        "run_at": "document_idle"
+    }, {
+        "js": [ "embed/is_installed.js" ],
+        "matches": [ "*://recalll.co/*" ],
+        "run_at": "document_start"
+    }],
+    "omnibox": {
+        "keyword": "recalll-disabled"
+    }
+}

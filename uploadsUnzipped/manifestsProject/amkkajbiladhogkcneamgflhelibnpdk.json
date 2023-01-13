@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "BudgetVM - Customer Portal",
+  "short_name": "BudgetVM",
+  "description": "BudgetVM - Customer Portal",
+  "version": "1.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "https://portal.budgetvm.com/"
+    ],
+    "launch": {
+      "web_url": "https://portal.budgetvm.com/",
+      "container": "panel",
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "icons": {
+    "8": "images/bvm_8.png",
+    "16": "images/bvm_16.png",
+    "32": "images/bvm_32.png",
+    "64": "images/bvm_64.png",
+    "128": "images/bvm_128.png",
+    "256": "images/bvm_256.png",
+    "512": "images/bvm_512.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}

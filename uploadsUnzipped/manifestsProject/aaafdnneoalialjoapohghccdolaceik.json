@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name": "RapidV-BDS", "icons": {"128": "assets/rapidv-128.png", "16": "assets/rapidv-16.png"}, "app": {"background": {"scripts": ["pako/pako.min.js", "background.min.js"]}}, "manifest_version": 2, "externally_connectable": {"matches": ["http://bluetooth.rapidv.com/*"]}, "version": "0.1", "permissions": [{"fileSystem": ["write", "retainEntries", "directory"]}, "storage", "webview", "http://*/", "clipboardRead", "clipboardWrite"], "url_handlers": {"navigate": {"matches": ["http://bluetooth.rapidv.com/chromeapp/*"], "title": "Navigate"}}, "description": "RapidV - Bluetooth Developer Studio"}

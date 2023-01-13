@@ -1,0 +1,24 @@
+{
+   "content_scripts": [ {
+      "css": [ "main.css" ],
+      "js": [ "lib/jquery-1.7.1.min.js", "lib/jquery.ba-bbq.js", "lib/json2.js", "lib/gmailr.js", "lib/trello.js", "lib/gmello.js", "lib/gmello-view.js", "main.js" ],
+      "matches": [ "https://mail.google.com/*", "http://mail.google.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "css": [ "main.css" ],
+      "matches": [ "https://mail.google.com/*", "http://mail.google.com/*" ]
+   } ],
+    "background": {
+        "scripts": [
+            "lib/background.js"
+        ]
+    },
+   "description": "A simple tool for integrating Gmail with Trello",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqryirv4gC9YLndbTeQbU2hXa4vMq35GUgE9CUVzKGqcHujwc1epSrwKUIG9y6NZDWxr3nCP+wHZswBJ1mbkV+5wQPHDaF9WuAONrlt5dXNy/GJpS2P/r2+7EZrFLLA+kgeMZEaHz8va1DBEz1TlvYWR5ZlZ/PvfjVcfCE961j+wIDAQAB",
+   "manifest_version": 2,
+   "name": "Gmello for Trello",
+   "permissions": [  "tabs", "http://mail.google.com/*", "https://mail.google.com/", "https://trello.com/*", "https://api.trello.com/*", "http://gmello.herokuapp.com/*", "http://*/" , "http://www.gmelloapp.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.9.1"
+}

@@ -1,0 +1,73 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "SignalHire - find email or phone number",
+  "short_name": "SH",
+  "description": "SignalHire is a great way to find contact information in a couple of clicks.",
+  "version": "3.0.5",
+  "icons": {
+    "16": "icons/icon_16.png",
+    "30": "icons/icon_30.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon_30.png",
+    "default_title": "Find contacts with SignalHire!",
+    "default_popup": "actionPage.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.linkedin.com/*"
+      ],
+      "js": [
+        "cb73ac734387df662a8f67870688b345.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://github.com/*",
+        "*://twitter.com/*"
+      ],
+      "js": [
+        "ad352bd076ee7178993df061b6012878.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "0d1d11afd728b2b30b3bfdf2256916f7.js",
+    "2ae9faf37d17935d8ebf7a55b451c2f8.js",
+    "images/fontawesome-webfont.woff2",
+    "images/fontawesome-webfont.woff",
+    "images/fontawesome-webfont.ttf",
+    "images/sprite.png"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://www.signalhire.com/*"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "*://*.linkedin.com/*",
+    "*://*.facebook.com/*",
+    "*://github.com/*",
+    "*://twitter.com/*",
+    "https://www.signalhire.com/"
+  ],
+  "optional_permissions": [
+    "notifications"
+  ]
+}

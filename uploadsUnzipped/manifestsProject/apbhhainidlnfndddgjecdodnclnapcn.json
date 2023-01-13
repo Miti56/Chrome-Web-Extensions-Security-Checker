@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Free Coupons Extractor",
+  "description": "This extension extracts free coupons for all shopping sites, online ticket booking and recharge sites.",
+  "version": "0.0.0.5",
+
+  "permissions": [
+    "http://*.com/",
+	"tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

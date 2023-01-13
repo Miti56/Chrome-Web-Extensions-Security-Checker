@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"short_name": "My Solutions Squad",
+"name": "My Solutions Squad Managed IT Support",
+"description": "Managed IT support to small and mid size businesses.",
+"version": "1826.5",
+"version_name": "08102015",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"https://www.solutionssquad.com/"
+],
+"launch": {
+"web_url": "https://www.solutionssquad.com/"
+}
+}
+}

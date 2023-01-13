@@ -1,0 +1,22 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Mediathek Video Downloader",
+    "version": "1.2",
+    "description": "Download videos from public tv stations",
+	"permissions": [ "webRequest", "webRequestBlocking", "declarativeContent", "storage", "*://*/*", "downloads" ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+	 "page_action": {
+      "default_popup": "popup.html"
+    },
+	"icons": {
+      "128": "img/thekaway128.png",
+      "16": "img/thekaway16.png",
+      "32": "img/thekaway32.png",
+      "48": "img/thekaway48.png"
+    },
+    "manifest_version": 2
+ }

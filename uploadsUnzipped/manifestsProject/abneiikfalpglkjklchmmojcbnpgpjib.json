@@ -1,0 +1,174 @@
+{
+   "background": {
+      "permissions": [ "http://*/*", "https://*/*" ],
+      "scripts": [ "lib/jquery.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon128.png",
+      "default_options": "options.html",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "nike.js" ],
+      "matches": [ "http://store.nike.com/*", "https://store.nike.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "NBA.js" ],
+      "matches": [ "http://store.nba.com/*", "https://store.nba.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "footLocker.js" ],
+      "matches": [ "http://www.footlocker.com/*", "https://www.footlocker.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "FootLockerEU.js" ],
+      "matches": [ "http://www.footlocker.eu/*", "https://www.footlocker.eu/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "footAction.js" ],
+      "matches": [ "http://www.footaction.com/*", "https://www.footaction.com/*", "http://www.final-score.com/*", "https://www.final-score.com/*", "http://*.ccs.com/*", "https://shop.ccs.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "champssports.js" ],
+      "matches": [ "http://www.champssports.com/*", "https://www.champssports.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "finishline.js" ],
+      "matches": [ "http://www.finishline.com/*", "https://www.finishline.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "jimmyzaz.js" ],
+      "matches": [ "http://www.jimmyjazz.com/*", "https://www.jimmyjazz.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "kithync.js" ],
+      "matches": [ "http://kithnyc.com/*", "https://kithnyc.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "supremenewyurk.js" ],
+      "matches": [ "http://www.supremenewyork.com/*", "https://www.supremenewyork.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "Ruvilla.js" ],
+      "matches": [ "http://*.ruvilla.com/*", "https://*.ruvilla.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "Undefeated.js" ],
+      "matches": [ "http://undefeated.com/*", "https://undefeated.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "Sneakerhead.js" ],
+      "matches": [ "http://www.sneakerhead.com/*", "https://www.sneakerhead.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "ThePremierStore.js" ],
+      "matches": [ "http://www.thepremierstore.com/*", "https://www.thepremierstore.com/*", "https://shops.companybe.com/*", "http://shops.companybe.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "END.js" ],
+      "matches": [ "http://www.endclothing.co.uk/*", "http://www.endclothing.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "Adidas.js" ],
+      "matches": [ "http://www.adidas.com/*", "https://www.adidas.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "KicksUSA.js" ],
+      "matches": [ "http://www.kicksusa.com/*", "https://www.kicksusa.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "Ubiq.js" ],
+      "matches": [ "http://www.ubiqlife.com/*", "https://www.ubiqlife.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "eastbay.js" ],
+      "matches": [ "http://www.eastbay.com/*", "https://www.eastbay.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "ShoePalace.js" ],
+      "matches": [ "http://www.shoepalace.com/*", "https://www.shoepalace.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "SNS.js" ],
+      "matches": [ "http://www.sneakersnstuff.com/*", "https://www.sneakersnstuff.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "Extra.js" ],
+      "matches": [ "http://shop.extrabutterny.com/*", "https://shop.extrabutterny.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "KB24.js" ],
+      "matches": [ "http://store.kobebryant.com/*", "https://store.kobebryant.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "Politics.js" ],
+      "matches": [ "http://sneakerpolitics.com/*", "https://sneakerpolitics.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "blends.js" ],
+      "matches": [ "http://blendsus.com/*", "https://blendsus.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "bdga.js" ],
+      "matches": [ "http://shop.bdgastore.com/*", "https://shop.bdgastore.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "packer.js" ],
+      "matches": [ "http://*.packershoes.com/*/*/products/*", "http://*.packershoes.com/*/*/products/*", "http://*.packershoes.com/cart/*", "https://*.packershoes.com/cart/*", "http://*.packershoes.com/products/*", "http://*.packershoes.com/products/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "MFootLocker.js" ],
+      "matches": [ "http://m.footlocker.com/*", "https://m.footlocker.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "MFootAction.js" ],
+      "matches": [ "http://m.footaction.com/*", "https://m.footaction.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "MEastBay.js" ],
+      "matches": [ "http://m.eastbay.com/*", "https://m.eastbay.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "MChampsSports.js" ],
+      "matches": [ "http://m.champssports.com/*", "https://m.champssports.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "MSneakerhead.js" ],
+      "matches": [ "http://m.sneakerhead.com/*", "https://m.sneakerhead.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "footpatrol.js" ],
+      "matches": [ "http://www.footpatrol.co.uk/*", "https://www.footpatrol.co.uk/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "rise45.js" ],
+      "matches": [ "http://*.rise45.com/*", "https://*.rise45.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "kickshawaii.js" ],
+      "matches": [ "http://*.kickshawaii.com/*", "https://*.kickshawaii.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "beatnic.js" ],
+      "matches": [ "http://*.beatniconline.com/*", "https://*.beatniconline.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "newpremier.js" ],
+      "matches": [ "http://*.thepremierstoreselect.com/*", "https://*.thepremierstoreselect.com/*" ]
+   }, {
+      "css": [ "modify.css" ],
+      "js": [ "lib/jquery.js", "cncpts.js" ],
+      "matches": [ "http://*.cncpts.com/*", "https://*.cncpts.com/*" ]
+   } ],
+   "description": "Add to cart 4 Champs,Eastbay,Footlocker,Finishline,Jimmyjazz,Kithnyc,nike,and more 40 total!.",
+   "icons": {
+      "128": "img/icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "All in One Bot 40+ websites!",
+   "permissions": [ "cookies", "browsingData", "tabs", "http://*/*", "https://*/*", "contentSettings", "webNavigation", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.1",
+   "web_accessible_resources": [  ]
+}

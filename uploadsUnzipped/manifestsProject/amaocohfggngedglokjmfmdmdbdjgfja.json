@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "browser_action": {
+    "default_popup": "./popup.html"
+  },
+  "content_scripts": [{
+    "all_frames": false,
+    "js": ["./contentScripts.js"],
+    "matches": ["http://*/*", "https://*/*"],
+    "run_at": "document_end"
+  }],
+  "description": "ContentStudio Follow Feed allow you to add a source of your like while scouring the web and share content to your social channels.",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "32": "assets/icons/32.png",
+    "64": "assets/icons/64.png",
+    "128": "assets/icons/128.png"
+  },
+  "manifest_version": 2,
+  "name": "Follow Feed | ContentStudio",
+  "options_ui": {
+    "chrome_style": false,
+    "page": "./options.html"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "background",
+    "cookies"
+  ],
+  "version": "1.0.2",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

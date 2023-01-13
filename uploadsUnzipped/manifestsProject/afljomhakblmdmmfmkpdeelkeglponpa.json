@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Верхний Ларс",
+	"description": "Последние новости о работе КПП Верхний Ларс (Россия) — Дарьяли (Грузия)",
+	"version": "1.0",
+	"manifest_version": 2,
+
+
+	"icons": { 
+		"24": "ico_vlars_24.png", 
+		"128": "ico_vlars_128.png" 
+	},
+	"app": {
+		"launch": {
+			"web_url": "http://vlars.ru/"
+		}
+	},
+	"permissions": [
+		"notifications", 
+		"background"
+	]
+}

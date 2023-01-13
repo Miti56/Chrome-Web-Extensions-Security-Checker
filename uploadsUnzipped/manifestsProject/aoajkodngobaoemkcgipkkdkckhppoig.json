@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Партия Великое Отечество",
+  "short_name": "ПВО",
+  "description": "Официальное расширение, позволяющее смотреть ленту новостей с сайта Партии Великое Отечество.",
+  "version": "2.0.1",
+  "browser_action": {
+    "default_icon": "icons/icon_128X128.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+        "32": "icons/icon_32x32.png",
+        "128": "icons/icon_128x128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://xn--80aealaaatcuj2bbdbr2agjd6hzh.xn--p1ai/*",
+    "notifications",
+    "storage"
+  ],
+  "background": {
+        "scripts": [
+            "assets/jquery-3.1.1.min.js",
+            "background.js"
+        ],
+        "persistent": true
+    },
+  "web_accessible_resources": [
+      "icons/icon_24x24.png"
+  ]
+}

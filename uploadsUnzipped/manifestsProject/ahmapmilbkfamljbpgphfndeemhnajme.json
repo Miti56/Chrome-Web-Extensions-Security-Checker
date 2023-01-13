@@ -1,0 +1,94 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
+  "short_name": "Helperbird",
+  "version": "22.3.0",
+  "homepage_url": "https://www.helperbird.com",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "icons": {
+    "16": "images/logo/16.png",
+    "32": "images/logo/32.png",
+    "48": "images/logo/48.png",
+    "128": "images/logo/128.png"
+  },
+  "options_ui": {
+    "page": "notes.html"
+  },
+  "browser_action": {
+    "default_icon": "images/logo/128.png",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["scripts/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": [
+        "scripts/immersive-reader-sdk.0.0.2.js",
+        "scripts/readability.js",
+        "scripts/content.js"
+      ],
+      "all_frames": false,
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "identity",
+    "storage",
+    "tabs",
+    "tts",
+    "identity.email",
+    "contextMenus",
+    "http://dictionary-lookup.org/",
+    "http://en.wikipedia.org/",
+    "https://irtokengetter.azurewebsites.net/api/what?code=oY0ERIEzxEhyPlfd5ZVZ2mv2ICse2uSO9axy3Pb9nXyCld37BFAUaA==",
+    "https://3qf4dirscf.execute-api.us-east-1.amazonaws.com/"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "/fonts/opendyslexic/OpenDyslexic-Bold.otf",
+    "/scripts/readability.js",
+    "typo/dictionaries/en_US/en_US.aff",
+    "/typo/dictionaries/en_US/en_US.dic",
+    "/fonts/opendyslexic/OpenDyslexic-BoldItalic.otf",
+    "/fonts/opendyslexic/OpenDyslexic-Italic.otf",
+    "/fonts/custom/sign.otf",
+    "/fonts/opendyslexic/OpenDyslexic-Regular.otf",
+    "/fonts/opendyslexic/OpenDyslexicMono-Regular.otf",
+    "/styles/app.css",
+    "/images/logo/full.png",
+    "/styles/google-docs.css",
+    "/styles/comic-sans.css",
+    "/styles/opendyslexic.css",
+    "/styles/arial.css",
+    "scripts/readability.js",
+    "/styles/gothic.css",
+    "/styles/tahoma.css",
+    "/styles/trebuchet.css",
+    "/styles/verdana.css",
+    "/styles/bookman.css",
+    "/styles/courier.css",
+    "/styles/georgia.css",
+    "/styles/reader.css",
+    "/styles/helvetica.css",
+    "/styles/impact.css",
+    "/styles/palatino.css",
+    "/styles/times.css",
+    "/styles/sign.css",
+    "/images/full.png"
+  ],
+  "commands": {
+    "_execute_page_action": {
+      "description": "Copy the link to the active pipeline",
+      "suggested_key": {
+        "default": "Ctrl+O",
+        "mac": "MacCtrl+O"
+      }
+    }
+  }
+}

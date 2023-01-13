@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "alicli评论净化器",
+  "version": "1.2",
+  "description": "一个可以定制的，屏蔽不希望看到言论的插件",
+  "background": {
+    "scripts": ["static/scripts/jquery.min.js", "static/scripts/storageManger.js", "static/scripts/background.js"]
+  },
+  "content_scripts": [{
+    "matches" : ["<all_urls>"],
+    "js": ["static/scripts/jquery.min.js", "static/scripts/content.js"]}
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "templates/popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/",
+    "https://*/",
+    "webRequest",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

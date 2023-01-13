@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Martkz",
+	"description": "Fique por dentro de tudo que acontece no Marktz de forma rápida, fácil e sem spam.",
+	"version": "2.7",
+	"icons": { 
+		"16": "logo16x16.png",
+		"48": "logo48x48.png",
+		"128": "logo128x128.png" 
+	},
+	"browser_action": {
+		"default_icon": "logo16x16.png",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"page": "background.html"
+	},
+	"permissions": [
+		"http://*.marktz.com/",
+		"http://*.facebook.com/",
+		"http://*.fb.com/",
+		"http://*.google-analytics.com/",
+		"https://*.marktz.com/",
+		"https://*.facebook.com/",
+		"https://*.fb.com/",
+		"https://*.amazonaws.com/",
+		"https://*.cloudfront.net/",
+		"https://*.google-analytics.com/",
+		"tabs"
+	],
+	"homepage_url": "https://www.marktz.com/",
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

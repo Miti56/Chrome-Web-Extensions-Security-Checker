@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "background.js", "options_shortcut.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/theme/colors/blue/logo.png",
+      "default_title": "ThoughtMarks"
+   },
+   "content_scripts": [ {
+      "js": [ "addMarks.js", "getSelection.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; https://ajax.googleapis.com; object-src 'self'",
+   "description": "Bookmarking service with apps to save memorable quotes, take short notes and recall them in current context",
+   "icons": {
+      "128": "img/theme/colors/blue/logo.png",
+      "48": "img/theme/colors/blue/logo.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "17",
+   "name": "ThoughtMarks",
+   "options_page": "options_shortcut.html",
+   "permissions": [ "contextMenus", "http://thoughtmarks.in/*", "tabs", "http://*/", "https://*/", "webRequest", "https://ajax.googleapis.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

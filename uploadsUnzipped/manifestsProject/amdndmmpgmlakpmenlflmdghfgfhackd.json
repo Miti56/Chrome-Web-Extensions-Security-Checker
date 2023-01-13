@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "icons/icon_128.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "injector.js" ],
+      "matches": [ "https://apps-141184676316522.apps.fbsbx.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "beer-manager/waiter.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Have new opportunities in the game EverWing",
+   "icons": {
+      "128": "icons/icon_128.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "18.0",
+   "name": "EverWing Cheats Hacks Mods",
+   "permissions": [ "\u003Call_urls>", "storage", "activeTab", "webNavigation", "webRequest", "webRequestBlocking" ],
+   "short_name": "EW Cheats Hacks Mods",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0",
+   "web_accessible_resources": [ "icons/*", "images/*", "script.js", "beer-manager/*" ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "DA Domain Authority Checker",
+  "description": "Check your website Domain authority with the help of InRaMS DA checker tool. Find domain authory.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://smallseotools.inramstechnology.com/domain-authority-checker"
+    ],
+    "launch": {
+      "web_url": "http://smallseotools.inramstechnology.com/domain-authority-checker"
+    }
+  }
+}

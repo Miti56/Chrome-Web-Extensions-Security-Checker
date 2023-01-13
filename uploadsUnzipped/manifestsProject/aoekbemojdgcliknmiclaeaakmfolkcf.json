@@ -1,0 +1,9 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "chrome_url_overrides": {"newtab": "back.html"},
+  "name": "True\u0026Simple - Página Inicial",
+  "permissions": ["management"],
+  "icons": {"48": "icon.png"},
+  "manifest_version": 2,
+  "version": "1.0.9"
+}

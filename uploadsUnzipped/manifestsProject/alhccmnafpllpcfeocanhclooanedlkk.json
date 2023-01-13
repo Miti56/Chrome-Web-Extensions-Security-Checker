@@ -1,0 +1,11 @@
+{"default_locale": "en", 
+"icons": {"128": "128-main_logo.png"}, 
+"chrome_url_overrides": {"newtab": "main_new.html"}, 
+"background": {"scripts": ["myscript.js"]}, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"description": "__MSG_locDescription__", 
+"manifest_version": 2, 
+"browser_action": {"default_icon": "128-main_logo.png", 
+"default_title": "Halloween - Pumpkin Pics & New Tab"}, 
+"version": "0.0.1", 
+"name": "__MSG_myHead__"}

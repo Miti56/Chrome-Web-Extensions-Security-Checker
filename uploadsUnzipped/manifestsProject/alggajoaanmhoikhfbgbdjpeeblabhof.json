@@ -1,0 +1,44 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Native Inverted Linen",
+   "version": "0.91",
+   
+   "description": "An attempt to make a sane theme with an interesting texture.  Native window trim, inset design.",
+   "icons": {
+       "16": "icons/icon16.png",
+       "48": "icons/icon48.png",
+       "128": "icons/icon128.png"
+   },
+   
+   "theme": {
+		"images": {
+			"theme_toolbar":	"images/toolbar.png",
+			"theme_tab_background":	"images/tab_background.png",
+			"theme_tab_background_v":	"images/tab_background.png",
+			"theme_ntp_background":	"images/ntp_background.png"
+		},
+		"colors": {
+			"toolbar" : [ 0, 0, 0, 0.8],
+			"tab_text" : [ 230, 230, 230 ],
+			"tab_background_text" : [ 115, 115, 115 ],
+			"bookmark_text" : [ 245, 245, 245 ],
+			"ntp_background" : [ 255, 255, 255 ],
+			"ntp_text" : [ 50, 50, 50 ],
+			"ntp_link" : [ 100, 100, 100 ],
+			"ntp_link_underline" : [ 255, 0, 0 ],
+			"ntp_header" : [0, 0, 0, 0.5],
+			"ntp_section" : [ 80, 80, 80, 0.5 ],
+			"ntp_section_text" : [ 230, 230, 230 ],
+			"ntp_section_link" : [ 0, 255, 0 ],
+			"ntp_section_link_underline" : [ 255, 0, 0]
+		},
+		"tints": {
+			"buttons" : [0, 0, 0.65],
+			"background_tab" : [ -1, 0.5, 0.5 ]
+		},
+		"properties" : {
+			"ntp_background_alignment" : "left bottom",
+			"ntp_background_repeat" : "repeat"
+		}
+	}
+}

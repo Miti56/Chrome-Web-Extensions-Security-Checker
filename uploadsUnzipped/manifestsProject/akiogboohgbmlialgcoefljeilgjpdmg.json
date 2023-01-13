@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Ocultar posts no deseados en taringa",
+	"short_name": "hidePostsTaringa",
+	"version": "1.0",
+	"description": "Chrome extension to hide posts in taringa.net",
+	"manifest_version": 2,
+	"background": {
+		"scripts": ["jquery-1.11.3.min.js", "jquery.storageapi.min.js", "background.js"]
+	},
+	"content_scripts":[
+		{
+			"matches": ["http://www.taringa.net/*","http://taringa.net/*"],
+			"js": ["jquery-1.11.3.min.js", "jquery.storageapi.min.js", "script.js"]
+		}
+
+	],
+	"options_page": "options.html",
+	"icons": {
+		"128": "favicon128.png",
+		"48": "favicon48.png",
+		"16": "favicon16.png"
+	},
+	"browser_action":{
+		"default_icon": "favicon16.png",
+		"default_title": "Ocultar posts"
+	}
+}

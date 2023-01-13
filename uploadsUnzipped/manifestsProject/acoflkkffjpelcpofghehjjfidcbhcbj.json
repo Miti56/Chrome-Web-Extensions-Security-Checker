@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Torn Market",
+    "version": "2.5",
+    "description": "Check Torn market, stocks anywhere.",
+    "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+    "background": {
+    	"scripts": ["background.js", "jquery.min.js"],
+    	"persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.torn.com/crimes.php"],
+            "js": ["crimeAwards.js"]
+        }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "50": "images/icon50.png"
+      } 
+    },
+    "icons": {
+        "50": "images/icon50.png"
+    },
+    "options_page": "options.html",
+    "manifest_version": 2
+  }

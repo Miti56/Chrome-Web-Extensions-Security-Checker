@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [ "js/background.js" ]
+  },
+  "content_scripts": [ {
+    "all_frames": true,
+    "css": [ "css/style.css", "css/bootstrap.min.css" ],
+    "js": [ "js/jquery-1.11.1.js", "js/main.js", "js/firebase.js" ],
+    "matches": [ "*://geeksquiz.com/*", "*://www.geeksforgeeks.org/*" ]
+  } ],
+  "manifest_version": 2,
+  "description": "Extension to track questions done on GeeksForGeeks.com, bookmark doubts, store and share code, and check progress.",
+  "name": "geekify",
+  "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self';",
+  "permissions": [ "activeTab", "tabs", "identity" ],
+  "oauth2" : {
+    "client_id": "394892408639-510283qgbcvt1phu2dpqroml7lgln22j.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/plus.login"]
+  },
+  "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArjWsSAFMxnvPelG1LVRoUsmtZyjaPCB5Jm3HDj2fDxF72OTd8Qq4MxhDNhkapOugUlNCYLrawIHMD+aRydcLGVnxKUVvvdv1Hq3VGI6hmsW3+n880F/9Dbd536BgienkYu6mdeWJ22mAMzY02UrQ3wHI9k7Nba6g6rnLi1UZRZOaqoI+bWCapixi2bCj2QNs/N0ImHho5lCLkPCkbJ/NPF3dMSpGXHE24C0kcxJSVDS1EX5TaDx1No0d1pHs/QioRWmTEXHzd/LnvdChOR7gydw84bo9koypI/H+hSJnGugX/yVe2yg+W9nH1GMScwvBmGxR3KJIZI/1xlVo+pDKbwIDAQAB",
+  "short_name": "geekify",
+  "version": "1.0.0",
+  "web_accessible_resources": [ "js/popup.js", "js/jquery-1.11.1.js", "css/bootstrap.min.css", "js/firebase.js"]
+}

@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Tron",
+  "version": "1.0",
+  "description": "Tron Life",
+
+
+  "browser_action":{
+  "default_icon": {
+    "16": "blueneon.png"
+    
+  }
+},
+
+"permissions": 
+  ["<all_urls>",
+ "tabs"],
+  
+
+"chrome_url_overrides":{
+"newtab":"tron.html"
+
+
+},
+
+"content_scripts": [{
+    "css": ["tron.css"],
+    "js": ["tron.js"],
+    "matches": ["<all_urls>"]
+   
+    
+  }],
+  "background":{
+    "scripts":["background.js"]
+}
+}
+

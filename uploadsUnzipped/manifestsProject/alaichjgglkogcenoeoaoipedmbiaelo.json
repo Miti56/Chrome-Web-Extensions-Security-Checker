@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Airline Manager 2 : Price Finder Extension",
+  "version": "1.1.3",
+  "description": "Find ideal price for your lines, depending on your remaining capacity",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.airlines-manager.com/network/planning"],
+      "js": ["scripts/networkPlanning.js"]
+    },
+    {
+      "matches": ["*://www.airlines-manager.com/marketing/pricing/*"],
+      "js": ["scripts/managePricing.js"]
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/price_finder16.png",
+      "32": "icons/price_finder32.png",
+      "48": "icons/price_finder48.png",
+      "128": "icons/price_finder128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/price_finder16.png",
+    "32": "icons/price_finder32.png",
+    "48": "icons/price_finder48.png",
+    "128": "icons/price_finder128.png"
+  },
+  "permissions": ["activeTab","declarativeContent", "storage"],
+  "manifest_version": 2
+}

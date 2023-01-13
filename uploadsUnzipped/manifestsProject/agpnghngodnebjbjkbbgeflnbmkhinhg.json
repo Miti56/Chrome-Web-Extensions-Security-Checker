@@ -1,0 +1,47 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.2",
+  "name": "boys2010dp",
+  "theme": {
+      "images" : {
+      "theme_frame": "images/theme_frame.jpg",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_ntp_background": "images/theme_ntp_background.jpg"
+    },
+    "colors" : {
+      "frame" : [13, 42, 82],
+      "frame_inactive" : [152, 188, 233],
+      "frame_incognito" : [83, 106, 139],
+      "frame_incognito_inactive" : [126, 139, 156],
+      "toolbar" : [13, 42, 82],
+      "tab_text" : [240, 240, 240],
+      "tab_background_text" : [117, 117, 117],
+      "bookmark_text" : [240, 240, 240],
+      "ntp_background" : [255, 255, 255],
+      "ntp_text" : [254, 254, 254],
+      "ntp_link" : [230, 230, 230],
+      "ntp_link_underline" : [219, 219, 219],
+      "ntp_header" : [13, 42, 82],
+      "ntp_section" : [254, 254, 254],
+      "ntp_section_text" : [69, 69, 69],
+      "ntp_section_link" : [13, 42, 82],
+      "ntp_section_link_underline" : [17, 56, 108],
+      "control_background" : [0, 0, 0],
+      "button_background" : [229, 229, 229]
+    },
+    "tints" : {
+      "buttons" : [0.60, 0.37, 0.40],
+      "frame" : [-1.00, -1.00, -1.00],
+      "frame_inactive" : [-1.00, -1.00, 0.75],
+      "frame_incognito" : [-1.00, 0.20, 0.35],
+      "frame_incognito_inactive" : [-1.00, 0.30, 0.60],
+      "background_tab" : [-1.00, 0.50, 0.75]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "center bottom",
+      "ntp_background_repeat" : "no-repeat",
+      "ntp_logo_alternate" : 1
+    }
+  }
+}

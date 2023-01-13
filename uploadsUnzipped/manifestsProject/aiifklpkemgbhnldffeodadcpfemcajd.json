@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "/start/external/underscore.js", "/start/external/string.js", "/start/external/jquery-3.2.0.js", "/start/search/search-engines.js", "/start/chrome/settings.js", "/start/common/prefs-sys.js", "/start/external/md5.js", "/start/chrome/utils.js", "/start/chrome/common.js", "/start/chrome/analytics.js", "/start/common/abtest.js", "/start/common/udata.js", "/start/chrome/setup.js", "/start/common/nt_ptr.js", "/start/chrome/lifecycle.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "/start/skin/icons/128.png",
+         "16": "/start/skin/icons/16.png",
+         "48": "/start/skin/icons/48.png"
+      }
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://www.google.com; object-src https://www.google-analytics.com https://www.google.com 'self'",
+   "default_locale": "en",
+   "description": "__MSG_extDesc__",
+   "icons": {
+      "128": "/start/skin/icons/128.png",
+      "16": "/start/skin/icons/16.png",
+      "48": "/start/skin/icons/48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "permissions": [ "\u003Call_urls>", "tabs", "storage", "unlimitedStorage", "cookies", "contextMenus", "notifications", "webRequest", "webRequestBlocking", "webNavigation", "management", "topSites" ],
+   "sandbox": {
+      "pages": [  ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3",
+   "web_accessible_resources": [ "*" ]
+}

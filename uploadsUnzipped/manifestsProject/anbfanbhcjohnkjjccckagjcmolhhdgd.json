@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ZeroTab - Empty New Tab Page",
+    "version": "1.0.0",
+
+    "short_name": "ZeroTab",
+    "description": "With this extension, new tabs display a blank page instead of the usual new tab page with thumbnails.",
+
+    "icons": {
+        "128": "icon_128.png"
+    },
+
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "options_page": "options.html",
+
+    "permissions": [
+        "storage"
+    ]
+}

@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icons/game.png"
+  },
+  "icons": {
+    "128": "icons/128.png",
+    "24": "icons/game.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "management",
+    "webRequest",
+    "webRequestBlocking",
+    "https://search.yahoo.com/*",
+    "https://www.bing.com/*",
+    "https://www.google.com/*",
+    "https://www.google.fr/*",
+    "https://www.google.co.in/*",
+    "https://www.google.pt/*",
+    "https://www.google.ca/*",
+    "https://www.google.es/*",
+    "https://www.google.de/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://77unblockedgames.weebly.com/javelin-fighting-unblocked.html"
+      ],
+      "js": [
+        "js/javelin-fighting.js"
+      ],
+      "css": [
+        "webgl.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "js/http.js",
+      "js/background.js"
+    ]
+  }
+}

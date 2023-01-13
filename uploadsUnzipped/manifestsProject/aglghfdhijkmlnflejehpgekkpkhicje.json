@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Yournet - Free Browser VPN & Proxy Service",
+  "version": "1.6.5",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqyym98gpn98AE9RcF0sb7rBd1RwC0Ff5gSrjNUzG7Kb7+yGlbhIBNwXgJWfHdesnauyh/BJ43whspUbQt7CcmSg5tq2fHuRXgdQAJ2IQ8pwQB0ia2aPDSDisEdjznDVrrshsvBfwMf2p8cOtDgSJoaSx8FJEe0+YFsvmkXu6ktoucSz47DSedYlZqlnEwIVrzAKX41uTunv0zTY+GnGr1OYZLsIAZ+7NRRN1OktZdm1PKdYWzwK3aQeNTdkv2L7iFnlydoRWMGtklPCLfZ7E4NA2y8Rv4LWWdLzeckQhbcJQkgUoa2fdG45u7FYMGlrEZ4BqyAYkKhYg+9S6n6fUdwIDAQAB",
+  "description": "Yournet proxy service unblocks your favourite websites. Access news, social media, internet radio, videos, music and more.",
+  "browser_action": {
+    "default_title": "Yournet",
+    "default_icon": "data/static/icons/icon_128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/application.module.js"
+    ]
+  },
+  "icons": {
+    "16": "data/static/icons/icon_16.png",
+    "24": "data/static/icons/icon_24.png",
+    "48": "data/static/icons/icon_48.png",
+    "128": "data/static/icons/icon_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/**"],
+      "js": [
+        "data/static/js/jquery-3.0.0.min.js",
+        "data/static/js/dispatcher.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "homepage_url": "https://yournet.io/",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "proxy",
+    "*://*/",
+    "tabs",
+    "webNavigation",
+    "storage",
+    "notifications"
+  ],
+  "externally_connectable": {
+    "ids": [
+      "*"
+    ],
+    "matches": [
+      "*://*.yournet.io/*"
+    ],
+    "accepts_tls_channel_id": false
+  }
+}

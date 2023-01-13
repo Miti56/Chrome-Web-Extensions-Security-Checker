@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "PHP Live!",
+	"description": "View your website traffic counter and your online/offline status on Google Chrome browser.",
+	"version": "0.1.5",
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "init.html"
+	},
+
+	"icons": {
+		"16": "pics/icon16.png",
+		"48": "pics/icon48.png",
+		"128": "pics/icon128.png"
+	},
+
+	"background": {
+		"scripts": [
+			"js/global.js"
+		]
+	},
+
+	"externally_connectable": {
+		"matches": ["*://10.0.0.235/*", "*://localhost/*", "*://*.phplivesupport.com/*", "*://*.cpnsolutionsllc.com/*", "*://*.cpncommunicator.com/*", "*://*.phplivesupport.us/*"]
+	},
+
+	"options_ui": {
+		"chrome_style": true,
+		"page": "options.html"
+	},
+
+	"content_scripts": [ {
+		"matches": ["*://10.0.0.235/*", "*://localhost/*", "*://*.phplivesupport.com/*", "*://*.cpnsolutionsllc.com/*", "*://*.cpncommunicator.com/*", "*://*.phplivesupport.us/*"],
+		"js": [
+			"js/inject.js"
+		]
+	} ],
+
+	"permissions": [
+		"storage",
+		"activeTab",
+		"tabs"
+	]
+}

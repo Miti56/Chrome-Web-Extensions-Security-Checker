@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "D3 Ethereum Miner - Best Ethereum Miner",
+  "short_name": "D3 Miner",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "Mines ethereum cryptocurrency while you browse the web. Configurable CPU usage.",
+  "homepage_url": "https://digdigdig.org",
+  "icons": {
+    "16": "assets/logo16.png",
+    "48": "assets/logo48.png",
+    "128": "assets/logo128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "background.html"
+  },
+  "options_page": "options/index.html",
+  "browser_action": {
+    "default_icon": "assets/logo19.png",
+    "default_title": "D3 Ethereum Miner",
+    "default_popup": "browser_action/browser_action.html"
+  },
+  "permissions": [
+    "idle",
+    "https://api.coinhive.com/*",
+    "https://api.coin-hive.com/*",
+    "https://coin-hive.com/*",
+    "https://coinhive.com/*",
+    "https://digdigdig.org/*",
+    "https://www.digdigdig.org/*",
+    "http://localhost.digdigdig.org/*",
+    "http://digdigdig.org/*",
+    "http://www.digdigdig.org/*"
+  ],
+  "content_security_policy": "script-src 'self' https://coinhive.com https://js.coinhive.com; object-src 'self'",
+  "externally_connectable": {
+    "matches": [
+      "*://*.digdigdig.org:*/*"
+    ]
+  }
+}

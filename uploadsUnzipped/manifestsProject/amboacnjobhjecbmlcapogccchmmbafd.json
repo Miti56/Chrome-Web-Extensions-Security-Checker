@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Quiet Chatwork",
+  "version": "0.9.0",
+  "manifest_version": 2,
+  "description": "Quiet Chatwork is a Quiet Chatwork.",
+  "content_scripts": [{
+    "matches": ["https://www.chatwork.com/*"],
+    "js": ["script.js"]
+  }]
+}

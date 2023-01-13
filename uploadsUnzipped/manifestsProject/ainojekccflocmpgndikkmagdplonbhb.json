@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Meme Center",
+  "short_name": "Memecenter",
+  "description": "See the latest trending memes and funny images online from Memecenter",
+  "version": "1.0.0.13",
+  "manifest_version": 2,
+  "app": {
+	"launch": {
+      "web_url": "http://meme.yumworks.net"
+    }
+  },
+  "icons": {"128": "128.jpg" }
+}

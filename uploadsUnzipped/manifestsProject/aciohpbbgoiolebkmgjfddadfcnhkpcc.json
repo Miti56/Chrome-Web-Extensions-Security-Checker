@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ToJiTab",
+  "version": "0.0.3",
+  "author": "keita",
+
+  "description": "閉じたタブを復元する",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background/background.js"
+    ],
+    "presistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon16.png",
+    "default_title": "ToJiTab",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

@@ -1,0 +1,63 @@
+
+   {
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+
+   "browser_action": {
+      "default_icon": "icons/logo.png",
+      "default_popup": "src/Hotstar.html",
+      "default_title": "hotstar match"
+   },
+
+
+ "background": {
+      "persistent":true,
+      "scripts": [ "js/bg.js"]
+         },
+
+
+   "content_scripts": [ 
+
+                        {
+         "js": ["js/jquery/jquery.js","js/grapit.js"],
+         "matches": ["https://www.tricks4you.in/2019/02/blog-post.html"]
+         } ,
+
+                       {
+         "js": ["js/jquery/jquery.js","js/grabgot.js"],
+         "matches": ["https://www.tricks4you.in/2019/04/game-of-thrones-on-hotstar.html"]
+         } ,
+
+
+      {
+         "js": ["js/jquery/jquery.js","js/letmecheck.js","js/hotsopt.js","js/switch.js"],
+         "matches": ["https://www.hotstar.com/*"],
+         "run_at": "document_end"
+         },
+      {
+         "js": ["js/jquery/jquery.js","js/grapit.js"],
+         "matches": ["https://flashsalesmadeeasy.blogspot.com/2019/03/hotstar-streaming.html"],
+         "run_at": "document_end"
+         }
+         
+      ],
+
+   "description": "It will help to find live match on hotstar",
+   
+      "icons": {
+      "128": "icons/E128.png",
+      "16": "icons/E16.png",
+      "48": "icons/E48.png"
+   },
+
+   "manifest_version": 2,
+   "name": "Cricket on Hotstar ",
+   
+   "permissions": ["cookies", "gcm", "storage", "identity"],
+   "short_name": "hotstar helper",
+   "version": "100.0.1",
+  "content_security_policy" :"script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
+
+
+

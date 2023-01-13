@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "css/injectcss.css" ],
+      "exclude_matches": [ "*://www.mymaths.co.uk/", "*://www.myimaths.com/" ],
+      "js": [ "js/jquery/jquery.min.js", "js/jquery/jquery-ui.min.js", "js/injectscript.js" ],
+      "matches": [ "*://www.mymaths.co.uk/*", "*://www.myimaths.com/*", "*://app.mymaths.co.uk/*", "*://app.myimaths.com/*" ],
+      "run_at": "document_start"
+   } ],
+  "name": "Tab Pro",
+"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "description": "A clean, simple new tab page",
+  "version": "2.0",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 2
+}

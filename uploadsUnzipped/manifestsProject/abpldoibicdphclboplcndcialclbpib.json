@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Magnet Link Finder",
+    "version": "1.1.1",
+    "description": "Finds all magnet URLs and displays them prominently",
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["magnet-links.user.js"],
+            "run_at": "document_end"
+        }
+    ]
+}

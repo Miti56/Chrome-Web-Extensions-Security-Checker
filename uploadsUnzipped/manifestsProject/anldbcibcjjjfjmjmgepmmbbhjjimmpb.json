@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Remove Youtube Comments", 
+  "description": "Remove all comments from Youtube.com.",  
+  "version": "1.0.5",
+  "icons": { "16": "youtube-no-comments-256px.png",
+            "48": "youtube-no-comments-256px.png",
+           "128": "youtube-no-comments-256px.png" },
+  "content_scripts": [
+	{
+	"matches": ["https://*.youtube.com/*", "http://*.youtube.com/*"],
+	"js": ["jquery.js", "contentScript.js"]
+   }
+  ]
+}

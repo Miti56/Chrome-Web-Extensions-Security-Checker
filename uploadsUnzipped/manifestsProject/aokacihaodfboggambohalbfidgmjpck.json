@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "SAFARI Montage",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"description": "One-click single sign on access to SAFARI Montage and the Google G Suite for Education integration directly from the Chrome toolbar!",
+	"background": {
+		"scripts": [ "background.js" ]
+	},
+	"browser_action": {
+		"default_title": "SAFARI Montage",
+		"default_icon": "SM_icon_128px.png"
+	},
+	"permissions": [ "tabs", "storage" ],
+	"storage": {
+		"managed_schema": "schema.json"
+	},
+	"icons": {
+		"16": "SM_icon_16px.png",
+		"48": "SM_icon_48px.png",
+		"128": "SM_icon_128px.png"
+	}
+}

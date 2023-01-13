@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Gluebin",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Quickly save pastes with Gluebin",
+  "homepage_url": "http://jackhallam.net/utilities/gluebin/",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "options_page": "src/options/index.html",
+  "browser_action": {
+    "default_icon": "icons/icon128.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "clipboardRead",
+    "http://jackhallam.net/*"
+  ]
+}

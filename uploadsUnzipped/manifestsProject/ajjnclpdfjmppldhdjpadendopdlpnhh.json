@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "LPU Time-Tabulation",
+  "version": "0.3.2",
+  "description":"A chrome extension to upload time table data to Time-Tabulation Servers.",
+
+  "page_action" : {
+  	"default_icon":"assets/images/tt_logo_1.png",
+  	"default_title":"Time Tabulation",
+    "default_popup": "popup.html"
+  },
+
+
+  "content_scripts": [
+  {
+      "matches" : ["https://ums.lpu.in/lpuums/Reports/frmStudentTimeTable.aspx","https://ums.lpu.in/LpuUms/Reports/frmStudentTimeTable.aspx"],
+      "js"  : ["jquery-2.2.0.min.js","data_getter.js"]
+  }
+
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApI/K4cLYNifLNN24YDzw0QFbWpK1aSxg9tRB0QDsTfNBPUN9MmYbOvbcArVW/RoFXezUyltJEb4I9+ycTfncnNVI/Oy36UOq7RF+kVO2ocgGmnVNO95r/bBkoA1qoMOi/4ajJBk9q35I/H06kn0LxQvlHoDnDddUBaTNtZ9c0u5viap0KG/ePYqgIRggHL4XlxkAZjuZHb83uuelblt8CeE+V9MPaypgQEm8eSnIRCA1JQIxq6FJahHISNEDKwIZIDI+QXxVrFLlSYJ73J8ZFT4A5DfBDcV0gLJMZycL1iNN7p9/3Z4D96Umkv2ZhEPdlBb24LQ4F/6L/VVJS8hXgQIDAQAB",
+
+
+  "background": {
+    "scripts": ["jwt-decode.min.js","jquery-2.2.0.min.js","bootstrap.js"]
+  },
+
+  "permissions" : ["https://ums.lpu.in/lpuums","tabs","identity","http://api.timetabulation.trimadium.com/"],
+
+
+  "oauth2": {
+    "client_id": "138041846002-qmaqk3pbaeehs7pgaknt8r9jmucm8rki.apps.googleusercontent.com",
+    "scopes": [
+      "profile",
+      "email"
+    ]
+  }
+}

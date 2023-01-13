@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "/r/xTrill Tools v2",
+  "description": "Easily navigate to download pages via r/xTrill keys.",
+  "version": "1.3",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["script.js"]
+  },
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  }
+}

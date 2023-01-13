@@ -1,0 +1,70 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+	
+    
+    "name":"CALLIDO Extension Tool",
+    "version":"1.1.5",
+    "description":"CALLIDO Extension Tool for Student",
+    "icons":{
+        "128":"Logo.png",
+        "48":"Logo.png",
+        "16":"Logo.png"
+    },    
+    "browser_action":{
+        "default_icon":"images/Logo.png"
+    },
+    "permissions": [
+        "<all_urls>",
+		"tabs",
+        "identity",
+        "identity.email",
+		"contextMenus",
+		"storage"
+    ],
+		
+    "content_scripts":[
+        {
+            "matches":["http://*/*","https://*/*"],
+            "js":["js/jquery-3.4.1.min.js","js/content.js","js/Chart.bundle.js","js/chart.js","js/Chart.min.js"],
+            "css": ["css/bootstrap.min.css"]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "js/background.js",
+			"js/global.js",
+			"js/background1.js"			
+        ]
+    },
+	"default_locale": "en",
+	"oauth2": {
+        "client_id": "915929524818-cpf14cg7etmcp20rsee50l7r299oo9ua.apps.googleusercontent.com",
+        "scopes": [
+            "profile",
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/contacts.readonly"
+    ]
+      },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com; object-src 'self'",
+    "web_accessible_resources": [
+        "subjectSelection.html",
+        "questionForm.html",
+        "argument_map.html",
+        "EvaluateQuestion.html",
+        "images/*",
+        "graphForms/*",
+        "barChart.html",
+        "scatteredChart.html",
+        "ReserchRepository.html",
+        "source.html",
+		"index.html",
+		"repository.html",
+		"js/background1.js",
+		"mapper.html"
+        
+    ],
+    "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg6CIZeMUfKbUnJhc+x6ig7PlWibYoHqVwiXmMheW37hAAelMIn9YoueQH9iQ2rRWT0tAbh9N2wdTBks3lcc4aF/SWf21CFclwip2Uv+msfx8xJuaNHCoEY6UQbEAgD/6EtwqEMcbWF5x2zVqD3UsBIL2inYV/vVHul+pIo0VDDkMp9U3OZLFUpy1QSnkgPFDWBusiR7b2MauQbplpXU/b+9lQQY5bhUW/EMM7LlizWKnwwK4JsB6qfkoYe0uaEg4WeR3jg8Np6Mo8/iJcMOuFmRA+Da/9YEJuCyyKm44uMW2dieePBr/Pd6exspG413ZrCwx705UXdV1lGDC4SmVAQIDAQAB",
+    "manifest_version":2
+
+
+}

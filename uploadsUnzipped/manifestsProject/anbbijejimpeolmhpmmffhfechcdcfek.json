@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "author": "Peter Valley",
+  "description": "RepriceAlytics is the first Amazon repricing tool to embed 12 month avg sales rank, avg price, and more on Amazon's repricing page",
+  "manifest_version": 2,
+  "version": "1.0.5",
+  "name": "RepriceAlytics",
+  "icons": { "512": "Reprice.png"},
+  "background": {
+    "page": "src/html/background.html",
+    "content_scripts": [
+      {
+        "script": [
+          "src/js/jquery-3.1.1.min.js",
+          "src/js/buy.js",
+          "src/js/background.js"
+        ]
+      }
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "src/html/popup.html"
+  },
+  "web_accessible_resources": [
+    "src/img/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sellercentral.amazon.com/inventory/*"
+      ],
+      "css": [
+        "src/css/bootstrap.min.css",
+        "src/css/style.css"
+      ],
+      "js": [
+        "src/js/jquery-3.1.1.min.js",
+        "src/js/bootstrap.min.js",
+        "src/js/reprice.js"
+      ]
+    }
+      ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://fonts.googleapis.com/*; object-src 'self'",
+  "permissions": [
+    "activeTab",
+    "proxy",
+    "identity",
+    "identity.email",
+    "storage",
+    "tabs",
+    "https://accounts.google.com/o/oauth2/token",
+    "https://www.googleapis.com/oauth2/v1/userinfo",
+    "https://www.googleapis.com/",
+    "http://price-production.sjcukk54cx.us-west-2.elasticbeanstalk.com/*",
+    "http://production.xgnvbnrn2x.us-west-2.elasticbeanstalk.com/*"
+  ],
+  "oauth2": {
+    "client_id": "53550983061-r4v3kt0vigd4lrov0dg6i2igkjt7d8at.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/plus.login",
+      "https://www.googleapis.com/auth/chromewebstore.readonly"
+    ]
+  }
+
+}

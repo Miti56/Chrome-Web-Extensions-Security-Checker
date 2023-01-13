@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Need For Speed racing Games",
+  "description": "need for speed rivals,gta v , candy crush ,subway surfers , clash of clans , sims 3",
+  "version": "1.4",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

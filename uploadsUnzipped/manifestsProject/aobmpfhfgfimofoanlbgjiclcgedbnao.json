@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PDFstudio",
+  "short_name" : "pdfstudio",
+  "description": "Convert PDF to Word & Word to PDF from your New Tab.",
+  "version": "1.0.18.608",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "32": "icons/32.png",
+    "128": "icons/128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab/index.html"
+  },
+  "browser_action": {
+	  "default_icon":
+	  {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"32": "icons/32.png",
+		"128": "icons/128.png"
+	  },
+	  "default_title": "PDFstudio"
+	},
+  "background":{
+    "scripts":["background.js"]
+  },
+  "content_scripts":[{
+    "matches": ["*://*.pdf.studio/*","*://*.pdftab.com/*","*://*.pdf.live/*"],
+    "js": ["content.js"],
+    "run_at": "document_start"
+  }],
+  "permissions": ["<all_urls>", "cookies", "storage", "tabs", "management"],
+  "content_security_policy": "script-src  https://*.google-analytics.com 'self'; object-src 'self';",
+  "manifest_version": 2,
+  "minimum_chrome_version": "32",
+  "web_accessible_resources": [ "/icons/16.png" ]
+}

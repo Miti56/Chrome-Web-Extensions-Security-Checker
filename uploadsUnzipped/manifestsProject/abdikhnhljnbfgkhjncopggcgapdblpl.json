@@ -1,0 +1,10 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ES-Custom-Dictionary-Builder",
+  "version": "1.0",
+
+  "description": "Custom dictionary builder for Google Docs",
+  "icons": {"128": "icon_es.png"}
+}

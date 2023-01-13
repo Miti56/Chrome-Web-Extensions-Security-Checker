@@ -1,0 +1,113 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "This is a combined dark and light solarized theme, based on a colour scheme by Ethan Schoonover.",
+  "theme": {
+    "tints": {
+      "frame": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_incognito": [
+        -1,
+        0.2,
+        0.35
+      ],
+      "background_tab": [
+        -1,
+        0.5,
+        0.75
+      ],
+      "frame_inactive": [
+        -1,
+        -1,
+        0.75
+      ],
+      "frame_incognito_inactive": [
+        -1,
+        0.3,
+        0.6
+      ],
+      "buttons": [
+        0.57,
+        0.69,
+        0.49
+      ]
+    },
+    "colors": {
+      "button_background": [
+        38,
+        139,
+        210,
+        1
+      ],
+      "ntp_text": [
+        0,
+        0,
+        0
+      ],
+      "bookmark_text": [
+        0,
+        43,
+        54
+      ],
+      "tab_background_text": [
+        238,
+        232,
+        213
+      ],
+      "tab_text": [
+        0,
+        43,
+        54
+      ],
+      "toolbar": [
+        223,
+        223,
+        223
+      ],
+      "frame": [
+        66,
+        116,
+        201
+      ],
+      "ntp_background": [
+        255,
+        255,
+        255
+      ],
+      "frame_incognito": [
+        83,
+        106,
+        139
+      ],
+      "frame_inactive": [
+        161,
+        182,
+        228
+      ],
+      "frame_incognito_inactive": [
+        126,
+        139,
+        156
+      ]
+    },
+    "images": {
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_frame": "images/theme_frame.png"
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "name": "Solarized",
+  "icons": {
+    "48": "solarized48.png",
+    "128": "solarized128.png",
+    "16": "solarized16.png"
+  },
+  "manifest_version": 2,
+  "version": "1"
+}

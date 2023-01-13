@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "HRO CijferCheck",
+  "short_name": "CijferCheck",
+  "description": "Gemakkelijk je laatste cijfers opvragen, direct vanuit je browser!",
+ 
+  "version": "1.0.7",
+	"icons": { 
+		"48": "images/48x48.png",
+		"128": "images/128x128.png" 
+	},	
+	"browser_action": {
+		"default_icon": { 
+			"19": "images/19x19.png",
+			"38": "images/38x38.png" 
+		},
+		"default_title": "HRO CijferCheck",
+		"default_popup": "popup.html"
+	},						
+	"permissions": [
+		"<all_urls>",
+		"storage",
+		"tabs",
+		"cookies"
+    ],
+	"background": {
+		"scripts": ["js/library/jquery-1.11.1.min.js", "js/background.js"],
+		"persistent": false
+    },
+	"content_scripts": [
+	    {
+	      "matches": [
+				"<all_urls>"
+		  ],		  
+	      "js": ["js/library/jquery-1.11.1.min.js", "js/content_injector.js"],
+	      "run_at": "document_start",
+	      "all_frames": false
+	    }
+	]
+}

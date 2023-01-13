@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_name__",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "description": "__MSG_description__",
+  "icons": {
+        "16": "images/16.png",
+        "24": "images/24.png",
+        "36": "images/36.png",
+       "48": "images/48.png",
+      "144": "images/144.png"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": ["scripts/sbx.js","scripts/sbx-settings.js","scripts/sbx-api.js","scripts/background.js"]
+  },
+  "homepage_url": "http://browser.kiddoware.com/",
+  "browser_action": {
+    "default_icon": "images/48.png",
+    "default_title": "Safe Browser",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+	"tabs",
+    "webRequest",
+    "webNavigation",
+    "webRequestBlocking",
+    "notifications",
+    "management",
+    "storage",
+    "http://s1.kpsb.kiddoware.com/",
+    "http://s2.kpsb.kiddoware.com/",
+    "http://browser.kiddoware.com/",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

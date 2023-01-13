@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "js/jquery-2.1.3.min.js","js/URL.js","js/background.js"]
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      
+      "css": [ "css/comman.css","css/jquery-ui.css","css/main.css","css/prediction.css","css/coupons-sidebar.css","css/FlipStyle.css" ],
+      "js": [ "js/jquery-2.1.3.min.js", "js/jquery-ui.min.js","js/date.js", "js/affiliate.js", "js/ntsuccfuncs.js", "js/getproduct.js", "js/prphetchfuncs.js", "js/geturl.js", "js/commonfn.js", "js/Reader.js","js/price.js", "js/prodPhetch.js", "js/azofr.js","js/URL.js", "js/writedata.js","js/utility_all.js" ,"js/coupons.js","js/coupons-sidebar.js"],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Price Comparision on Flipkart, Amazon and 70 others.Add best coupons automatically with just a click.",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "All in One Shopping",
+    
+    "permissions": [ "storage","http://www.flipkart.com/*", "http://www.myntra.com/*", "http://www.snapdeal.com/*", "http://*.tradus.com/*", "http://www.cromaretail.com/*", "http://www.yebhi.com/*", "http://www.homeshop18.com/*", "http://www.jabong.com/*", "http://www.amazon.in/*", "http://www.shopclues.com/*", "http://track.in.omgpm.com/*", "http://rover.ebay.in/*", "http://rover.ebay.com/*", "http://www.ebay.in/*", "http://zovi.com/*", "http://shopping.indiatimes.com/*", "http://shopping.rediff.com/*", "http://www.infibeam.com/*", "http://www.zivame.com/*", "http://www.lenskart.com/*", "http://www.watchkart.com/*", "http://www.fashionara.com/*", "http://ad.doubleclick.net/*", "http://www.fabfurnish.com/*", "http://www.pepperfry.com/*", "http://jasper.go2cloud.org/*", "http://www.trendin.com/*", "http://clk.pvnsolutions.com/*", "http://www.babyoye.com/*", "http://time.jsontest.com/*" ],
+   
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.6",
+   "web_accessible_resources": ["icon/*","css/*","img/*","js/*"]
+}

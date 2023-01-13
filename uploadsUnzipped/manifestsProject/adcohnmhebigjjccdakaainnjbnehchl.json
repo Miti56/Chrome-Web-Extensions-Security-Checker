@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Show MR overview in Gitlab",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "This minimalistic extension makes Gitlab always show merge request overview",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "styles/index.css"
+      ]
+    }
+  ]
+}

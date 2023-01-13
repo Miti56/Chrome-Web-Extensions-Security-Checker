@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "TAAAC for Stackoverflow",
+    "version": "0.6",
+    "description": "Points out wrong accepted answers on Stackoverflow.",
+    "browser_action": {
+        "default_title": "TAAAC",
+        "default_icon": "imgs/icon_16.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "imgs/icon_16.png",
+        "48": "imgs/icon_48.png",
+        "128": "imgs/icon_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://stackoverflow.com/questions/*",
+                "https://stackoverflow.com/questions/*"
+            ],
+            "js": [
+                "libs/jquery-3.1.1.min.js",
+                "libs/lodash.min.js",
+                "inject.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "http://stackoverflow.com/questions/*",
+        "https://stackoverflow.com/questions/*"
+    ],
+    "web_accessible_resources": [
+        "imgs/check_green.svg",
+        "imgs/check_yellow.svg",
+        "imgs/check_orange.svg",
+        "imgs/check_gray.svg"
+    ],
+    "manifest_version": 2
+}

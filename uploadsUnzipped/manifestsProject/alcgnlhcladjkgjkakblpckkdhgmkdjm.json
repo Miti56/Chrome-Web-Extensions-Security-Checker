@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Pinkoi 訂單整合工具",
+  "description": "可以一次將訂單一次複製，貼到類似是 Execl 的工具",
+  "version": "1.3",
+  "background" : {
+    "scripts" : ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png"},
+  "permissions": [
+    "tabs",
+    "*://www.pinkoi.com/panel/order*"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Livetube CommentHelper",
+	"description": "Make your Livetube comment post more comfortable",
+	"version": "1.0.1",
+	"author": "sekai013",
+	"permissions": [
+		"storage",
+		"tabs",
+		"notifications"
+	],
+	"browser_action": {
+		"default_popup": "background/popup.html",
+		"default_icon": {
+			"19": "img/icon19.png",
+			"38": "img/icon38.png"
+		},
+		"default_title": "Livetube CommentHelper for Google Chrome"
+	},
+	"background": {
+		"scripts": [
+			"background/js/background.js"
+		]
+	},
+	"content_scripts": [{
+		"matches": ["http://livetube.cc/*", "http://*.livetube.cc/*"],
+		"js": ["content/jquery-2.1.1.min.js", "content/content.js"]
+	}],
+	"icons": {
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"manifest_version": 2
+}
+

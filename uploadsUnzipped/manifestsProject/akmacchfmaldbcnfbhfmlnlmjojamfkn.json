@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Office365 Webmail Highlight unread messages",
+	"version": "0.0.6",
+	"manifest_version": 2,
+	"description": "Better highlighting of unread messages in Web-Outlook",
+	"content_scripts": [
+		{
+		  "matches": ["https://*/owa/*"],
+		  "css": ["style.css"]
+		}
+	]
+}

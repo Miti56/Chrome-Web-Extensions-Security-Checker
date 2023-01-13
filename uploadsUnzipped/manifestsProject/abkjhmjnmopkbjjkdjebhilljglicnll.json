@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ポイントタウンツールバー byGMO",
+  "version": "4.0.15",
+
+  "description": "ポイントタウンでポイントが貯めやすくなるChromeツールバーです。",
+  "author": "pointtown",
+
+  "browser_action": {
+    "default_icon": "img/icon-48.png",
+    "default_title": "ポイントタウンツールバー byGMO",
+    "default_popup": "index.html"
+  },
+
+  "icons": {
+    "16": "img/icon-16.png",
+    "20": "img/icon-20.png",
+    "24": "img/icon-24.png",
+    "48": "img/icon-48.png",
+    "32": "img/icon-32.png",
+    "64": "img/icon-64.png",
+    "128": "img/icon-128.png"
+  },
+
+  "background": {
+    "scripts": ["js/analytics.js","js/jquery-2.2.4.js","js/jquery.cookie-1.4.1.js","js/common.js","js/icon-animator.js","js/background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "js/*.js",
+    "img/icon-pointtown.png"
+  ],
+  "content_security_policy": "script-src 'self' https://*.google-analytics.com 'unsafe-eval' ; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/analytics.js","js/jquery-2.2.4.js","js/jquery.cookie-1.4.1.js","js/content.js"],
+      "css": ["css/content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+     "tabs"
+     ,"alarms"
+     ,"idle"
+     ,"cookies"
+     ,"http://*.pointtown.com/"
+     ,"https://*.pointtown.com/"
+     ,"http://localhost/"
+     ,"http://*.google-analytics.com/"
+     ,"https://*.google-analytics.com/"
+     ,"http://maxcdn.bootstrapcdn.com/"
+     ,"notifications"
+   ]
+}

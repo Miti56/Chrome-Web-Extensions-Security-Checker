@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "WGT Baseball: MLB Unblocked",
+  "version": "2.0.4",
+  "manifest_version": 2,
+  "description": "An official Major League Baseball licensed game with Hall of Fame MLB players and all your favorite MLB teams in turbo time!",
+  "homepage_url": "http://bloonstowerdefense5.co/wgt-baseball-mlb/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "WGT Baseball MLB",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://bloonstowerdefense5.co/wgt-baseball-mlb/"
+  ]
+}

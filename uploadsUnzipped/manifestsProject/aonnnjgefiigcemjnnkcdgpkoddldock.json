@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name":"Best Email Tracking",
+	"version":"1.0",
+	"description": "Best Email Tracking allows you to browse the top best world email tracking tools in seconds and choose one satisfying your needs.",
+		
+	 "icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+ 	 },	
+	
+	"background": {
+	        "scripts": ["background.js"]	
+        },
+
+	"browser_action": {
+    		"default_icon": "icon48.png", 
+   		"default_title": "Best Email Tracking"
+  	},
+
+	"permissions":["tabs"]
+}

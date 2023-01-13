@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "YouiDraw Drawing",
+   "short_name": "Drawing",
+   "description": "Online Vector Graphic Design on html5 canvas. Drawing online tools is a powerful vector SVG design solution, like illustrator.",
+   "version": "1.0.2",
+   "icons": { "24": "24.png", "128": "128.png" },
+   "omnibox": {
+    "keyword": "Drawing"
+  },
+   "app": {
+     "urls": [
+       "https://www.youidraw.com/#drawingapp"
+     ],
+     "launch": {
+        "web_url": "https://www.youidraw.com/#drawingapp"
+      }
+    },
+	"container" : "GOOGLE_DRIVE",
+	"api_console_project_id" : "1095704208375",
+	"gdrive_mime_types": {
+	"https://drive.google.com/intents/opendrivedoc": [{
+		"type": ["image/ydr", "image/yid", "application/youidrawdrawing"],
+		"href": "https://www.youidraw.com/apps/drawing",
+	  	"title" : "Open",
+	  	"disposition" : "window"
+	}]
+	},
+    "permissions": ["unlimitedStorage"],
+    "manifest_version": 2
+}

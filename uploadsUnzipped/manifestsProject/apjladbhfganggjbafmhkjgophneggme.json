@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Видео Закладка",
+    "description": "Видео Закладка",
+    "version":"0.0.0.1",
+
+    "browser_action": {
+        "default_icon":"icon.png",
+        "default_popup":"popup.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["myscript.js"],
+            "matches": ["http://*/*"],
+            "run_at": "document_end"
+        }
+    ]
+}

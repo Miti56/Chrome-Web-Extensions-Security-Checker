@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "2345网址导航便捷主页(2345.com官方网址)",
+  "version": "1.58",
+  "description": "2345网址导航便捷主页(2345.com官方网址)",
+  "permissions": [
+  "tabs","*://*/*","webRequest","cookies","history"
+  ],
+  
+
+"background": {
+    "page": "background.html"
+  },
+
+  "icons": { 
+        "16": "icon16.png",
+         "48": "icon48.png", 
+         "128": "icon128.png" },
+"chrome_url_overrides": {
+      "newtab": "redirect.html"
+   }
+
+}

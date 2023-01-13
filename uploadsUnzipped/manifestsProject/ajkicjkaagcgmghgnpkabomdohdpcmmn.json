@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Trello CheckList Extender",
+	"version": "0.1",
+	"manifest_version" : 2,
+	"description": "Shows pending checklist items for each task in Trello (first unchecked item or all the items from checklist called 'Pending')",
+	"background" : {
+		"page" : "background.html",
+		"persistent": false
+	},
+	"page_action" :
+	{
+		"default_icon": {
+			"19": "icons/19.png",
+			"38": "icons/38.png"
+		}
+	},
+	"content_scripts": [
+	{
+		"matches": ["https://trello.com/b/*"],
+		"js": ["key.js", "settings/js/vendor/jquery-3.1.0.min.js", "lib/trello_client.js", "/lib/hashSearch.js", "scripts/main.js"],
+		"run_at": "document_idle"
+	}
+	],
+	"permissions": [
+		"tabs"
+	],
+	"web_accessible_resources": [
+		"settings/index.html"
+	],
+	"icons": {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+    "options_page": "settings/index.html"
+}

@@ -1,0 +1,108 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "2.15.24",
+  "name": "Reply: Free Email Search and Outreach",
+  "description": "Find email addresses on Linkedin. Create personalized email sequences.",
+  "homepage_url": "https://reply.io",
+  "permissions": ["storage", "tabs", "contextMenus", "management", "activeTab"],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+  "background": {
+    "scripts": ["background.build.js", "forGmail/requests.js", "locationWatcher.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://run.replyapp-stage.net/*", "https://run.reply.io/*"],
+      "js": ["forReply/peopleListener.js", "forReply/browserZoom.js"]
+    },
+    {
+      "matches": ["https://*.lightning.force.com/*", "https://*.lightning.force.com/*"],
+      "run_at": "document_idle",
+      "js": ["forSalesforce/helpers/salesforceHelper.js", "forSalesforce/syncNew.js"]
+    },
+    {
+      "matches": ["https://*.salesforce.com/*", "https://*.salesforce.com/*"],
+      "run_at": "document_idle",
+      "js": ["forSalesforce/helpers/salesforceHelper.js", "forSalesforce/syncOld.js"]
+    },
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "run_at": "document_idle",
+      "js": [
+        "forLinkedin/forLinkedinLoader.js",
+        "forLinkedin/syncHelpers.js",
+        "forLinkedin/syncLinkedInProfile.js",
+        "forLinkedin/syncLinkedinList.js",
+        "forLinkedin/syncNavigatorProfile.js",
+        "forLinkedin/syncNavigatorList.js"
+      ]
+    },
+    {
+      "matches": ["https://app.prosperworks.com/*"],
+      "run_at": "document_idle",
+      "js": ["forCopper/forCopperLoader.js", "forCopper/syncLead.js", "forCopper/countries.js"]
+    },
+    {
+      "matches": ["https://app.hubspot.com/*"],
+      "run_at": "document_idle",
+      "js": ["forHubspot/helpers/hubspotHelper.js", "forHubspot/syncLead.js"]
+    },
+    {
+      "matches": ["https://*.mail.google.com/mail/u/*/*"],
+      "exclude_matches": ["https://mail.google.com/mail/u/0/?singleGComposer*"],
+      "js": [
+        "forGmail/inboxsdk.js",
+        "forGmail/forGmailComposerPreact.build.js",
+        "forGmail/gmailButtonsLogic.js",
+        "forGmail/gmailContactSearch.js"
+      ],
+      "css": ["forGmail/forGmail.css"]
+    },
+    {
+      "matches": ["https://mail.google.com/mail/*"],
+      "js": ["forGmailComposer/name2emailLogic.js"]
+    },
+    {
+      "matches": [
+        "https://api.reply.io/api/v1/chrome-extension/play?*",
+        "https://api.replyapp-stage.net/api/v1/chrome-extension/play?*"
+      ],
+      "js": ["forReply/hideUrl.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "forSalesforce/json/countries.json",
+    "forSalesforce/json/states.json",
+    "forGmail/jquery.js",
+    "forGmail/gmailApi.js",
+    "forGmail/initGmailApi.js",
+    "forLinkedin/XMLHttpWatcher.js",
+    "forCopper/CopperHttpWatcher.js"
+  ],
+  "icons": {
+    "16": "icons/logo.png",
+    "48": "icons/logo-1.png",
+    "128": "icons/logo-2.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/logo-1.png",
+    "default_title": "Reply"
+  },
+  "commands": {
+    "toggle-feature": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "MacCtrl+Shift+Y"
+      },
+      "description": "Send a 'toggle-feature' event to the extension"
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "MacCtrl+Shift+L"
+      }
+    }
+  }
+}

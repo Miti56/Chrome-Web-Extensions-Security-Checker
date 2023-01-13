@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GDrive app 7130",
+  "version": "71.30",
+  "version_name":"GDrive App 71.30",
+  "manifest_version": 2,
+  "offline_enabled" : true,
+  "description" : "For testing css, Lauren Faust, the creative genius behind the hit cartoon series My Little Pony: Friendship ",
+  "container" : "GOOGLE_DRIVE",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": {
+    "16": "16x16.png",
+    "24": "24.png",
+    "128": "128.png"
+  }
+}

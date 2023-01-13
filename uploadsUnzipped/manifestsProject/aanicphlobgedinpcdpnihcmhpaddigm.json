@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+     "default_icon": "icons/icon19.png",
+     "default_title": "RadioJuventud.Net\n\nUna Bendición,\npara tu corazón.",
+     "default_popup": "index.html"
+   },
+
+
+   "icons": {
+      "128": "icons/icon128.png",
+	  "48": "icons/icon48.png",
+      "32": "icons/icon32.png",
+      "16": "icons/icon16.png"
+   },
+
+   "manifest_version": 2,
+   "name": "RadioJuventud.Net",
+   "description": "En RadioJuventud.Net podrás escuchar la palabra de Dios, nuestros cantos e himnos de alabanza y conoceras nuestras redes sociales.",
+   "version": "1.0",
+
+   "permissions": [ "http://*/*", "https://*/*", "tabs" ],
+   "homepage_url": "http://bit.ly/rjvoficial",
+   "options_page": "config.html"
+}
+

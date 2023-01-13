@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"icons": {
+        "128": "icon128.png", 
+        "48": "icon48.png", 
+        "16": "icon128.png"
+    },
+	"name": "Friend Request For Facebook",
+  "short_name": "Pending Request",
+  "description": "notify if some one Delete Or Block Your Friend Request, from his facebook friend  request list,  pending friend request manager",
+  "version": "1.0.5",  
+  "background": {
+    "scripts": ["jquery-3.2.1.js","lodash.js","background.js"]
+  },
+  "permissions":["tabs","cookies","https://*.facebook.com/*","https://www.instagram-computer.com/"],
+  "browser_action": {
+    "default_title": "Pending Request",
+	"default_popup" :"popup.html"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://www.instagram-computer.com/; object-src 'self'"
+}

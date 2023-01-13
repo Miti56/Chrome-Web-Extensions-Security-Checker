@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Facebook & Twitter Marketer Suite",
+ "manifest_version": 2,
+ "short_name": "Marketer",
+ "description": "Facebook & Twitter on Autopilot",
+ "version": "1.0",
+ "icons": {
+	"128": "Thumb_128px.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://suite.social/marketer.html"
+	}
+  }
+}

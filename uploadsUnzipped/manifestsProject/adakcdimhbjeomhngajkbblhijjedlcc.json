@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "author": "Kennr",
+  "background": {
+    "scripts": [
+      "settings.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "img/logo.png",
+    "default_title": "Kennr trefwoorden voor Domus Magnus"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>" ],
+      "exclude_matches": [
+        "*://*.kennr-dev.nl/",
+        "*://*.kennr-tst.nl/",
+        "*://*.kennr-acc.nl/",
+        "*://*.kennr.nl/"
+      ],
+      "run_at": "document_end",
+      "css": ["css/summary-box.css"],
+      "js": [
+        "matcher.js",
+        "replacer.js",
+        "settings.js",
+        "highlighter.js",
+        "summary.js",
+        "contentScript.js"
+      ]
+    }
+  ],
+  "description": "Deze Kennr-extensie markeert trefwoorden die op Kennr gevonden worden en vervangt deze met links naar de Kennr zoekresultaten.",
+  "icons": {
+    "128": "img/logo.png"
+  },
+  "manifest_version": 2,
+  "name": "Kennr trefwoorden voor Domus Magnus",
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
+  "version": "1.0.9",
+  "web_accessible_resources": [
+    "img/link-cursor.png",
+    "img/kennr-cursor.cur"
+  ]
+}

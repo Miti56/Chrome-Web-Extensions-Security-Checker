@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Duelingnexus deck exporter",
+    "version": "1.0",
+    "description": "Export your deck from duelingnexus.com",
+    "manifest_version": 2,
+     "content_scripts": [
+        {
+            "matches": ["https://duelingnexus.com/editor/*"],
+            "js": ["scripts.js"]
+        }
+    ]
+}

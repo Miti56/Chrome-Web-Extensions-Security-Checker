@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Anti-Corona",
+    "version": "1.0.1",
+    "description": "A cura do Coronavirus para o seu browser.",
+    "icons": {
+      "16": "icons/anticorona-16.png",
+      "48": "icons/anticorona-48.png",
+      "128": "icons/anticorona-128.png"
+    },
+    "browser_action": {
+      "default_title": "Chega de corona!"
+    },
+    "background": {
+      "scripts": ["dist/background.js"],
+      "persistent": false
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "manifest_version": 2
+}

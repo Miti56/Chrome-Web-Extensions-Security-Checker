@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Jeu de cartes de Rami multijoueur",
+"description": "Venez découvrir notre jeu de cartes de Rami multijoueur",
+"version": "1",
+"manifest_version":2,
+"app": {
+"urls": [
+"http://www.jeux-gratuits.com/jeu-rami-multijoueur.html"
+],
+"launch": {
+"web_url": "http://www.jeux-gratuits.com/jeu-rami-multijoueur.html",
+"container": "tab"
+}
+},
+"icons": {
+"128": "icon_128.png"
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

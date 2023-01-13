@@ -1,0 +1,26 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "__MSG_name__",
+  "version": "1.0",
+  "description": "__MSG_description__",
+  "default_locale": "en",
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Video Downloader"
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "icons": { 
+   "16": "img/16.png",
+   "32": "img/16.png",
+   "48": "img/48.png",
+   "64": "img/16.png",
+   "128": "img/128.png"
+ }
+}

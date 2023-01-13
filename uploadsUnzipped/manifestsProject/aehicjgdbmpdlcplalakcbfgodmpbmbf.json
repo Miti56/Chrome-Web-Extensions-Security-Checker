@@ -1,0 +1,161 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ClearTax Assistant",
+  "version": "1.50",
+  "manifest_version": 2,
+  "description": "ClearTax Chrome Plugin",
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "storage",
+    "cookies",
+    "https://gstfrontend-stage-http.internal.cleartax.co/stage-funnelmetrics/"
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com/analytics.js; object-src 'self'",
+  "icons": {
+    "16": "img/pinchy16x16.png",
+    "32": "img/pinchy32x32.png",
+    "64": "img/pinchy64x64.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/pinchy16x16.png",
+      "32": "img/pinchy32x32.png",
+      "64": "img/pinchy64x64.png"
+    },
+    "default_title": "ClearTax Assistant"
+  },
+  "background": {
+    "scripts": [
+      "js/backgroundScript.js"
+    ]
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:3001/*",
+      "https://gstfrontend-stage-http.internal.cleartax.co/*",
+      "https://gstfrontend-preprod-http.internal.cleartax.co/*",
+      "https://gst.cleartax.in/*"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:3001/*",
+        "https://gstfrontend-stage-http.internal.cleartax.co/*",
+        "https://gstfrontend-preprod-http.internal.cleartax.co/*",
+        "https://gst.cleartax.in/*"
+      ],
+      "js": [
+        "js/sourceFile.js"
+      ],
+      "css": [
+        "css/main.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://payment.gst.gov.in/payment/auth/"
+      ],
+      "exclude_matches": [
+        "http://payment.gst.gov.in/*"
+      ],
+      "js": [
+        "js/targetFile.js"
+      ],
+      "css": [
+        "css/main.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://services.gst.gov.in/services/auth/dashboard",
+        "https://services.gst.gov.in/services/auth/fowelcome"
+      ],
+      "js": [
+        "js/initiateGSTR4Flow.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://return.gst.gov.in/returns/auth/dashboard"
+      ],
+      "css": [
+        "css/main.css"
+      ],
+      "js": [
+        "js/returnsDashboard.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://services.gst.gov.in/services/login*"
+      ],
+      "js": [
+        "js/login.js"
+      ],
+      "css": [
+        "css/main.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://return.gst.gov.in/returns/auth/gstr3b*"
+      ],
+      "js": [
+        "js/gstr3bReturns.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://return.gst.gov.in/returns/auth/gstr1"
+      ],
+      "css": [
+        "css/main.css"
+      ],
+      "js": [
+        "js/gstr1Filing.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://return.gst.gov.in/returns2/auth/annualreturn"
+      ],
+      "js": [
+        "js/selectAnnualReturnPeriodAndPrepareOnline.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://return.gst.gov.in/returns2/auth/gstr9/questionnaire"
+      ],
+      "js": [
+        "js/questionnairePage.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://return.gst.gov.in/returns2/auth/gstr9/dashboard"
+      ],
+      "js": [
+        "js/gstr9Dashboard.js"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "css/main.css"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "pages/options.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "YouTube Ad Skipper - Press s key",
+	"content_scripts": [
+		{
+			"js": [ "js/youtube.js" ],
+			"matches": ["https://*.youtube.com/*"]
+		}
+	],
+	"description": "Not adblocker. Press s key, only when you have no interest in the ad.",
+	"icons": {
+		"128": "img/icon-skip-youtube-ads-128.png"
+	},
+	"version": "0.22",
+	"web_accessible_resources": [ "img/icon-skip-youtube-ads-128.png" ]
+}

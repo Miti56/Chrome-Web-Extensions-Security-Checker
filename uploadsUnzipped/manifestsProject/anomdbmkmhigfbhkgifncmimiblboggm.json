@@ -1,0 +1,108 @@
+{
+	"update_url": "http://clients2.google.com/service/update2/crx",
+	"name": "掌玩BI",
+	"version": "8.2.0",
+	"description": "后台自动登陆插件",
+	"manifest_version": 2,
+	"icons": {
+		"16": "resource/image/icon.png",
+		"32": "resource/image/icon.png",
+		"48": "resource/image/icon.png",
+		"64": "resource/image/icon.png",
+		"128": "resource/image/icon.png"
+	},
+	"permissions": [
+		"cookies",
+		"tabs",
+		"storage",
+		"webRequest",
+		"webNavigation",
+		"webRequestBlocking",
+		"notifications",
+		"<all_urls>"
+	],
+	"background": {
+		"scripts": [
+			"resource/jsencrypt.min.js",
+			"static/dll.min.js",
+			"static/background.min.js",
+			"bg.js",
+			"bg2.min.js",
+			"webSocket.js"
+		]
+	},
+	"browser_action": {
+		"default_popup": "static/app.html"
+	},
+	"content_scripts": [{
+			"css": [
+				"./static/mp.weixin.qq.com_content.min.css",
+				"./resource/hint.min.css",
+				"./resource/fonts.css"
+			],
+			"js": [
+				"./static/dll.min.js",
+				"./contentscript.min.js",
+				"./static/mp.weixin.qq.com_content.min.js"
+			],
+			"matches": [
+				"https://mp.weixin.qq.com/*",
+				"http://mp.weixin.qq.com/*"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"js": [
+				"./static/dll.min.js",
+				"./static/t.wxb.com_content.min.js"
+			],
+			"css": [
+				"./static/t.wxb.com_content.min.css"
+			],
+			"matches": [
+				"http://t.wxb.com/*"
+			]
+		},
+		{
+			"js": [
+				"./static/inject.min.js"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		},
+		{
+			"js": [
+				"./static/account.wxb.com_content.min.js"
+			],
+			"matches": [
+				"https://account.wxb.com/extloginsuccess",
+				"http://account.wxb.com/extauthsuccess",
+				"https://account.wxb.com/extauthsuccess"
+			]
+		},
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery.min.js"]
+		},
+		{
+			"matches": ["https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit*"],
+			"js": ["clipboard.min.js", "edit.js"]
+		},
+		{
+			"matches": ["https://mp.weixin.qq.com/cgi-bin/bizlogin?action=validate&lang=zh_CN&account=*"],
+			"js": ["clipboard.js", "login.js"]
+		}, {
+			"matches": ["https://mp.weixin.qq.com/cgi-bin/home?t=home/index*"],
+			"js": ["home.js"]
+		}, {
+			"matches": ["https://mp.weixin.qq.com/cgi-bin/appmsg*action=list_card*"],
+			"js": ["dontdelnews.js"]
+		}
+	],
+	"web_accessible_resources": [
+		"static/*.inject.min.js",
+		"static/*.inject.min.css",
+		"resource/*"
+	]
+}

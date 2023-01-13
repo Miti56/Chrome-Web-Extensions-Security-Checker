@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "note",
+  "version": "1.1",
+  "description": "快速补齐工作日志",
+  "icons": {
+    "16": "icon/icon_16.png",
+    "32": "icon/icon_32.png",
+    "48": "icon/icon_48.png",
+    "64": "icon/icon_64.png",
+    "128": "icon/icon_128.png"
+  },
+  "page_action": {
+    "default_icon": "icon/icon_16.png",
+    "default_title": "快速补齐工作日志"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://jira.up366.com:8080/browse/*"],
+      "js": ["js/content.js"],
+      "css": ["css/note.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "notifications"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Comic Sansifier",
+	"version": "0.1",
+  "description": "This amazing chrome extension will change the font of every webpage you visit to the most beautiful font ever, Comic Sans MS!",
+	"author": "Alfons Nilsson (TC5550)",
+	
+	"permissions": ["activeTab"],
+	
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	],
+	
+	"icons": {
+		"16":  "icon.png",
+    "48":  "icon.png",
+    "128": "icon.png"
+	}
+}

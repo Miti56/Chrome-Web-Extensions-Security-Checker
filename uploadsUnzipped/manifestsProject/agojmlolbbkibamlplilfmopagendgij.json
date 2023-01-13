@@ -1,0 +1,20 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "RPG Dice Roller",
+	"description": "An attractively simple way to roll dice.",
+	"version": "1.2",
+	"manifest_version": 2,
+	"app": {
+		"launch": {
+			"local_path": "index.html"
+		}
+	},
+	"icons": {
+		"16": "icon_16.png",
+		"128": "icon_128.png"
+	},
+	"permissions": [
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

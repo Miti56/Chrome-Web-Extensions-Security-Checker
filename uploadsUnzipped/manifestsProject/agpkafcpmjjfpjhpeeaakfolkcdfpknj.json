@@ -1,0 +1,59 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "commands": {
+      "forward": {
+         "description": "Вперед",
+         "global": true,
+         "suggested_key": {
+            "default": "Ctrl+Shift+4",
+            "mac": "Command+Shift+4"
+         }
+      },
+      "next": {
+         "description": "Следующие видео",
+         "global": true,
+         "suggested_key": {
+            "default": "Ctrl+Shift+2",
+            "mac": "Command+Shift+2"
+         }
+      },
+      "pause": {
+         "description": "Пазуа/Играть",
+         "global": true,
+         "suggested_key": {
+            "default": "Ctrl+Shift+1",
+            "mac": "Command+Shift+1"
+         }
+      },
+      "previous": {
+         "description": "Предыдущее Видео",
+         "global": true,
+         "suggested_key": {
+            "default": "Ctrl+Shift+3",
+            "mac": "Command+Shift+3"
+         }
+      }
+   },
+   "content_security_policy": "connect-src http: https:; default-src 'self';",
+   "description": "Это расширение позволяет удаленно управлять воспроизведением на сайте Youtube.com",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Управление Youtube2.0",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "file://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "sandbox": {
+      "pages": [
+         "popup.html"
+      ]
+   }
+}

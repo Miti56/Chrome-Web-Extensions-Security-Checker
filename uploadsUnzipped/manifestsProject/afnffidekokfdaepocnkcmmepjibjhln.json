@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Dynalist Highlighter",
+  "description": "Powerful web highlighter for Dynalist",
+  "version": "1.2",
+  "manifest_version": 2,
+  "icons": {
+    "16": "./icon/icon-on-16.png",
+    "48": "./icon/icon-on-48.png",
+    "128": "./icon/icon-on-128.png"
+  },
+  "background": {
+    "scripts": ["app/background.js"],
+    "persistent": false
+  },
+
+  "browser_action": {},
+  "permissions": ["storage", "activeTab", "<all_urls>", "contextMenus"],
+  "web_accessible_resources": [
+    "/static/css/content.css",
+    "/static/css/app.css",
+    "/static/css/cssreset.css"
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+}

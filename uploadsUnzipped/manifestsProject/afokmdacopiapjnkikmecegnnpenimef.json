@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ib0t 4 Google Chrome™",
+  "short_name": "ib0t4Chrome",
+  "default_locale": "en",  
+   "author": {
+      "email": "osintau@gmail.com",
+      "name": "Lee J"
+   },
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5lPWv1O75nagWEwtR5k+3hI9fCaL9jL61I5/8RdA1og0dZCmYpQNisE35XQzRSH//ybNQbBcVoQ0rWmpxBAxRttdoT70D6XiBAlSKI8umAPQ7sECkKYYaH4v9uDaN0H1AzGKuR3Cnph9+1K02C8zb7ugo9zATWNBGd9gcXzqdQDbw5L9y1EHwf/ddVKxvEGJx2RCHuxZx0vtEGlmbCUnYLSbBc1HstZUik7O2rUTjMU7cg6zIlaJikQF296w65z0AZlRAAcLJAXVsCfhwRwaDxynA8oq93Js22ggr3VTocudz5rwfWHrzx0QviI0V8oGwig2xpjSnZRaxQuF2P7awIDAQAB",
+  "description": "Ares p2p chat client and channel list tools based directly on ib0t v2 but built just for Google Chrome™",
+  "manifest_version": 2,
+  "minimum_chrome_version": "33",
+  "version": "1.2.0",
+  "offline_enabled": false,
+  "kiosk_enabled": true,
+  "app": {"background": {"scripts": ["background.js","js/jquery-2.1.1.min.js"]}},
+  "icons": { "16": "imgs/ilogo.png", "128": "imgs/ilogobig.png" },
+  "permissions": [{"socket": ["tcp-connect","tcp-listen"]}, "clipboardWrite","http://chatrooms.marsproject.net/","storage"]
+}

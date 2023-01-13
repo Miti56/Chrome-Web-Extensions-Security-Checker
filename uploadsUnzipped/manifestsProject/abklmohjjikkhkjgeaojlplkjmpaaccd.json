@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Computer-Masters.net",
+"description": "Articles about computers, Windows, programming and language",
+"version": "0.0.0.3",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"HTTP://WWW.COMPUTER-MASTERS.NET/home-en.php"
+],
+"launch": {
+"web_url": "HTTP://WWW.COMPUTER-MASTERS.NET/home-en.php"
+}
+}
+}

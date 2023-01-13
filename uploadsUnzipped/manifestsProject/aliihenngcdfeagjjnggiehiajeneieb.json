@@ -1,0 +1,22 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "src/app.js" ]
+      },
+      "web_accessible_resources": [ "http://player.twitch.tv/js/embed/v1.js" ]
+   },
+   "author": "Zalati",
+   "description": "Regardez le live tout en naviguant sur internet",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhBFjy66x/4V9GxLEVTLY1PuurHFA943RXOmDTkuXw5LmNWFvPdUHurZu5SMusRW0Y4OwTSTloW6kr6nQX6VtojI040wOYfw0u9RAJj35Xcss69QHXG9hAUAib6CRcMMWubSJB8n00fKWIGBrLsgzaYF2uFPsgLH2q2I9sJDuUEy3NeD2hVQEFfcbYGx4y5NoR2mSlI+ZPsGtjQTffkex+cL/spQ8fjBpn6DzxGVNXY/62S3jvZ5dRweNgrqsprH0TTdPcy0rQlQRCz5d1mdTbRAV2OnL8MM0OBeKGCsVuwmaoLniQpXbLmRoK0oD0gfwtbQugTI9gctfWiEKVJi5YQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "39",
+   "name": "Maajin +",
+   "permissions": [ "webview", "alwaysOnTopWindows", "*://player.twitch.tv/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}

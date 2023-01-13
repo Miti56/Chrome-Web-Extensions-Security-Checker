@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  	"manifest_version": 2,
+
+  	"name": "Appraised!",
+  	"description": "Instant house price appraisals as you browse the property market. Works on Rightmove, Zoopla and Prime Location.",
+  	"version": "1.2.1.1",
+
+	"icons": { 
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+      
+  	"options_ui": {
+	    "page": "options.html",
+	    "chrome_style": true
+  	},
+        
+    "background": {
+        "persistent": false,
+        "page": "background.html"
+    },
+
+	"sandbox": {
+     	"pages": ["sandbox.html"]
+  	},
+  
+	"content_scripts": [
+	    {
+	      "matches": [
+	      	"http://www.rightmove.co.uk/property-for-sale/property-*",
+	      	"http://www.rightmove.co.uk/new-homes-for-sale/property-*",
+	      	"http://www.primelocation.com/for-sale/details/*",
+	      	"http://www.zoopla.co.uk/for-sale/details/*"
+	      ],
+	      "js": [
+	      	"resources/lib/unpack.js",
+	      	"resources/lib/chrome.js",
+	      	"resources/lib/parser.js",
+	      	"content.js"
+	      ]
+	    }
+    ],
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+
+  	"page_action": {
+    	"default_icon": "icon.png"
+  	},
+        
+  	"permissions": [
+  		"http://*.zoocdn.com/",
+    	"http://media.rightmove.co.uk/",
+    	"http://houseprices.landregistry.gov.uk/",
+    	"http://landregistry.data.gov.uk/",
+    	"https://api.postcodes.io/",
+    	"http://cti.voa.gov.uk/",
+    	"notifications",
+    	"storage",
+    	"alarms"
+  	]
+}

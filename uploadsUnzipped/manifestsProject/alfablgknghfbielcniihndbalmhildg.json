@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Kapruka Globalshop Price Checker",
+  "description": "This extension will show Kapruka Global Shop Price from Amazon and Ebay",
+  "version": "0.0.03",
+  "icons":{
+    "96":"img/96_logo.png",
+    "128":"img/128_logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.com/*",
+        "http://*.amazon.com/*",
+        "http://*.amazon.in/*",
+        "https://*.amazon.in/*",
+        "https://*.ebay.com/*",
+        "http://*.ebay.com/*"
+      ],
+      "js": ["view.js","content.js"]
+    },
+    {
+      "matches":["<all_urls>"],
+      "js": ["other.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "background":{
+    "scripts":["background.js"]
+  },
+  "browser_action":{
+    "default_icon":"img/128_logo.png"
+  },
+  "permissions": [
+    "tabs",
+    "https://www.kapruka.com/",
+    "http://www.kapruka.com/",
+    "https://kapruka.com/",
+    "http://kapruka.com/",
+    "http://*.doofinder.com/",
+    "https://*.doofinder.com/",
+    "http://eu1-search.doofinder.com/",
+    "https://eu1-search.doofinder.com/"
+  ]
+}

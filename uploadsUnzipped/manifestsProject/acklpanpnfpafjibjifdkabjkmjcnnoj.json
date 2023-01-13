@@ -1,0 +1,22 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "台灣房屋",
+  "description": "台灣房屋官方網站提供數萬筆精選房屋，線上影音看屋，數十項便利買賣房屋功能，獨創大雲端比較式搜尋引擎，政府實價登錄房價分析，提供買賣屋資訊及相關文章，不管投資房地產或首次購屋都必逛的首選網站",
+  "version": "1.0",
+  "app": {
+    "urls": [
+      "http://www.twhg.com.tw/"
+    ],
+    "launch": {
+      "web_url": "http://www.twhg.com.tw/"
+    }
+  },
+  "icons": {
+    "128": "128x128_logo.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

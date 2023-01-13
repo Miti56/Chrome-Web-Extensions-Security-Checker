@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Neopets DreamTheme",
+  "description": "Use any of the official Neopets site themes and easily switch between them.",
+  "version": "1.0.2",
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "background": {
+    "scripts": [
+      "js/jquery.js",
+      "js/background.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.neopets.com/*"
+      ],
+      "exclude_matches": [
+        "*://*.nc.neopets.com/*"
+      ],
+      "js": [
+        "js/jquery.js",
+        "js/content.js"
+      ],
+      "css": [
+        "css/content.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "page_action": {
+    "default_title": "Neopets DreamTheme",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+
+  "web_accessible_resources": [
+    "data/rotations.json",
+    "img/themes/*",
+    "css/themes/*"
+  ]
+}

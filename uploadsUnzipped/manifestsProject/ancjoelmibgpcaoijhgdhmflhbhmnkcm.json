@@ -1,0 +1,39 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Just Facts Original Extension",
+  "version": "1.92",
+  "manifest_version": 2,
+  "description": "Capture a web page selection as a fact.",
+  "browser_action": {
+    "default_icon": "icon_19.png",
+    "default_title": "Create Fact",
+    "default_popup": "popup.html"
+   },
+   "icons": { 
+   		"16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
+    },
+   "permissions": [
+     "tabs",
+   	 "*://*/*", 
+     "contextMenus",
+     "cookies",
+     "webNavigation",
+     "http://www.justfacts-beta.us/",
+     "http://myapp.net:8080/justfacts/"
+	],
+   "content_scripts": [
+   {
+    "matches": ["*://*/*"],
+    "js": ["selection.js", "hilight.js", "refresh.js", "messageHandler.js", "constants.js", "jquery-1.4.2.min.js", "jquery.xpath.js"],
+    "run_at": "document_start",
+    "all_frames": true
+   }
+  ],
+   "background": {
+    "scripts": ["URI.js", "eventPage.js"],
+    "persistent": false
+  }
+}
+

@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "Nostradamus and His Prophecies",
+  "short_name": "Nostradamus and His Prophecies",
+ 	"version": "1.6",
+	"description": "Nostradamus was a 16th-century seer.",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Nostradamus and His Prophecies"
+  },
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "CommentSentiment",
+  "description": "Displays Sentiment of a post in colour based on comments",
+  "version": "1.1",
+
+  "background": {
+    "persistent":true,
+    "page":"background.html"
+  },
+  "permissions": [
+    "tabs",
+    "https://commentsentiment.objectivetruth.ca/hn/",
+    "https://commentsentiment.objectivetruth.ca/reddit/",
+    "https://commentsentiment.objectivetruth.ca/score_comment"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/*", "http://www.reddit.com/*"],
+      "js": ["lib/jquery.js", "reddit-highlight.js", "lib/d3.v4.min.js", "lib/d3-scale-chromatic.v1.min.js", "colour.js"],
+      "run-at": "document_end"
+    },
+    {
+      "matches": ["https://news.ycombinator.com/*"],
+      "js": ["hn-highlight.js", "lib/d3.v4.min.js", "lib/d3-scale-chromatic.v1.min.js", "colour.js"],
+      "run-at": "document_end"
+    },
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["lib/jquery.js", "twitter-highlight.js", "lib/d3.v4.min.js", "lib/d3-scale-chromatic.v1.min.js", "colour.js"],
+      "run-at": "document_end"
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["youtube-highlight.js", "lib/d3.v4.min.js", "lib/d3-scale-chromatic.v1.min.js", "colour.js"],
+      "run-at": "document_end"
+    }
+  ],
+  "icons": { 
+      "16": "icons/logo16.png",
+      "48": "icons/logo48.png",
+      "128": "icons/logo128.png" 
+  }
+}

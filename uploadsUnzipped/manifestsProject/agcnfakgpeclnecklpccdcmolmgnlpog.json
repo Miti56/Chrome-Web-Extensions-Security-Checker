@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [
+         "scripts/background.js"
+      ],
+      "persistent": true
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "scripts/content.js" ],
+      "matches": [ "<all_urls>", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "browser_action": {
+      "default_title": ""
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Лучшие цитаты",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "48": "icons/64.png"
+   },
+   "manifest_version": 2,
+   "name": "Nathesfop",
+   "short_name": "NT",
+   "permissions": [
+      "*://*/*",
+      "<all_urls>",
+      "webRequest", "webRequestBlocking"
+   ],
+   "version": "1.0.1"
+}

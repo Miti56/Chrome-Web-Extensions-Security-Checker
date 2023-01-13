@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.jpeg","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.jpeg"},"colors":{"frame":[33,27,26],"toolbar":[159,113,85],"tab_text":[33,27,26],"tab_background_text":[33,27,26],"bookmark_text":[33,27,26],"ntp_background":[255,255,255],"ntp_text":[193,137,103],"button_background":[0,0,0,0]},"tints":{"buttons":[0.06,0.42,0.58]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}},"name":"NAIQRA","version":"1","description":"A sensational voice"}

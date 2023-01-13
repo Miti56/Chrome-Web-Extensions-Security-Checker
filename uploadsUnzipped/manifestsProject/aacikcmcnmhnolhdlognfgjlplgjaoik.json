@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ROBLOX Trade+",
+  "description": "Trade on Roblox.",
+  "version": "2.35",
+  "permissions": [
+   "<all_urls>",
+    "cookies"
+  ],
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["background.js", "onlyfakedcanceronce.js"]
+        }
+    ],
+  "browser_action": {
+    "default_title": "Trade",
+    "default_popup": "popup.html"
+
+  },
+  "manifest_version": 2
+}

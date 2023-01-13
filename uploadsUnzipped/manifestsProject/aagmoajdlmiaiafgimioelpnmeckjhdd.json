@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "TGN iTownPlay MOD",
+    "version": "1.0",
+	"manifest_version": 2,
+    "description": "Se acabó el \"Me gusta\" ! A partir de ahora: Gusta!",
+	"icons": { "16": "ico/icon16.jpg",
+           "48": "ico/icon48.jpg",
+          "128": "ico/icon128.jpg" },
+    "browser_action": {
+		"default_title": "iTownPlay MOD",
+		"default_icon": "ico/iconbig.jpg",
+		"default_popup": "popup.html"
+    },
+    "permissions": [
+		"<all_urls>",
+		"history",
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ],
+	"content_scripts": [
+    {
+      "matches": ["http://www.youtube.com/watch?v=*"],
+      "js": ["replace.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

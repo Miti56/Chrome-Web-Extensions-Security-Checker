@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Pastor Wade Butler",
+  "description": "Offering Bible in Chronological Order", 
+  "version": "1.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.pastorwadebutler.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.pastorwadebutler.com/"
+    }
+  }
+}
+
+

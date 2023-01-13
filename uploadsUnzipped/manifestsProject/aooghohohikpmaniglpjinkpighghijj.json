@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Vogt & Barber",
+"description": "Accédez aux meilleurs produits de rasage et de soin pour homme.",
+"version": "0.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"http://www.vogtbarber.com/fr"
+],
+"launch": {
+"web_url": "http://www.vogtbarber.com/fr"
+}
+}
+}

@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Kik Connecting the world through chat.",
+   "manifest_version": 2,
+   "name": "Kik Messenger for Chrome™",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.1"
+}

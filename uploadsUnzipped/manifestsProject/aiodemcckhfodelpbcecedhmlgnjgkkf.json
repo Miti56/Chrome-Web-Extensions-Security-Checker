@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "UW-Madison People Directory",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "Send email or find phone number of people in the University of Wisconsin-Madison directory.",
+  "homepage_url": "https://chrome.google.com/webstore/detail/uw-madison-people-directo/aiodemcckhfodelpbcecedhmlgnjgkkf",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/options_custom/lib/store.js",
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "options_page": "src/options_custom/index.html",
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+S",
+        "mac": "Alt+S",
+        "chromeos": "Alt+S",
+        "linux": "Alt+S"
+      }
+    }
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "UW-Madison people directory",
+    "default_popup": "src/browser_action/popup.html"
+  },
+  "permissions": [
+    "clipboardRead",
+    "storage",
+    "http://*/*", "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'"
+
+}

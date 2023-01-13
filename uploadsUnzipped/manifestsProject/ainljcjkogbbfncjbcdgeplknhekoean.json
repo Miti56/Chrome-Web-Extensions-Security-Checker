@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Janela Mailto",
+  "icons": {
+    "16": "images/logoPictureImageIcon.16.png",
+    "32": "images/logoPictureImageIcon.32.png",
+    "48": "images/logoPictureImageIcon.48.png",
+    "128": "images/logoPictureImageIcon.128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "*://*/*",
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "popupToMailContentStyle.css"
+      ],
+      "js": [
+        "popupToMailContentScript.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "popupToMailBackground.js"
+    ]
+  },
+  "version": "1.1",
+  "description": "Utilize ou copie um endereço de e-mail",
+  "browser_action": {
+    "default_icon": {
+      "16": "images/logoPictureImageIcon.16.png",
+      "32": "images/logoPictureImageIcon.32.png"
+    },
+    "default_title": "Janela Mailto",
+    "default_popup": "popupToMailBrowserPopup.html"
+  }
+}

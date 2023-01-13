@@ -1,0 +1,26 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "Use this to open the popup"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "jquery.js", "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Send24 Loader",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsH/mIeyqLFySjEwmzFN68BjtgCoi0wIrvrPlpv20y32o/xZgH1AWDDD9g3+5srXIVNlKIeXV+OjguHzETZAiqtuxZBNkLripnyBCNNo3wW59S7QV5y3zXcBX+P76Sbaq2TZ1y1DrqS9x+Jcbd33bZs/ly1/HijUEwvvH3HLfzSfNsMe5YHi6fyMY/o0mLgMDpknW1lPrRCJJdUYdAdplzovbuAkI6z+OXDirNH2oGL0YCCJ2HcGB+rLBdfFyfNuvCkWhvdfSOUdv4o/pNcIDhfOqMXRYZKhUoBfjOb8dtTRCB6SZ6hLRq8QCPHBIejTmx23LdhispUtphaEG2267swIDAQAB",
+   "manifest_version": 2,
+   "name": "Send24 Loader",
+   "permissions": [ "tabs", "storage", "activeTab", "*://send24.net/*", "*://*.anastasiadate.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.9"
+}

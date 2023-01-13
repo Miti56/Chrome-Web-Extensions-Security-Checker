@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"description":"Browsing should not be boring with these stunning minecraft themed backgrounds","version":"1.0","name":"Wallstilldawn","manifest_version":2,"chrome_url_overrides":{"newtab":"newTabOverride.html"},"icons":{"128":"logo.png"},"permissions":["tabs"],"content_security_policy":"script-src 'self' 'unsafe-eval' https://*.maximg.dev https://www.googleapis.com https://ssl.google-analytics.com; object-src 'self'"}

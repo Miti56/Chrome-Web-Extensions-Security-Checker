@@ -1,0 +1,11 @@
+{"chrome_url_overrides": {"newtab": "main_new.html"}, 
+"default_locale": "en", 
+"background": {"scripts": ["main.js"]}, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"name": "__MSG_title__", 
+"version": "3.0.3", 
+"browser_action": {"default_icon": "128-logo.png", 
+"default_title": "Avengers: Infinity War Backgrounds & New Tab"}, 
+"icons": {"128": "128-logo.png"}, 
+"description": "If You Dream of Avengers: Infinity War, Now You Can Install This New Tab Extension To Get Avengers: Infinity War Wallpapers And More", 
+"manifest_version": 2}

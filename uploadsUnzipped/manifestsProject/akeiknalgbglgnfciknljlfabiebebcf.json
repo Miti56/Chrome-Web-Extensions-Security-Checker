@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "LucidMailer",
+  "description": "Profesjonalny e-mail marketing. Twórz i wysyłaj skuteczne kampanie mailingowe, monitoruj ich przebieg, analizuj efektywność.",
+  "manifest_version": 2,
+  "version": "0.1.1",
+  "app": {
+    "urls": [
+      "http://lucidmailer.pl/",
+      "https://lucidmailer.pl/"
+    ],
+    "launch": {
+      "web_url": "http://lucidmailer.pl/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

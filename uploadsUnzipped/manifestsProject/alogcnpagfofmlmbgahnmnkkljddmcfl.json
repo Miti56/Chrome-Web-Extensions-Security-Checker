@@ -1,0 +1,19 @@
+
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "app": {
+      "launch": {
+         "local_path": "index.html"
+      }
+   },
+   "name": "__MSG_appName__",
+   "description": "__MSG_appDesc__",
+   "default_locale": "en",
+   "icons": {
+      "128": "128_128_bubbles.png",
+      "16": "16_16_bubbles.png"
+   },
+   "version": "13.4331.235",
+   "manifest_version": 2
+}
+	

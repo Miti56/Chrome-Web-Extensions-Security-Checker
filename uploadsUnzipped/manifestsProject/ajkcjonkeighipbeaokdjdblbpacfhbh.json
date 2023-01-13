@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Sex Kameros",
+"description": "Mergaiciu 18 + pasirodymai gyvai akimirksniu. Naujos ir 100% nemokamos sekso kameros gyvai lietuvoje",
+"short_name": "Sexkameros.com Sex Kameros | Nemokamos Sekso Kameros Gyvai.",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"https://www.sexkameros.com/"
+],
+"launch": {
+"web_url": "https://www.sexkameros.com"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

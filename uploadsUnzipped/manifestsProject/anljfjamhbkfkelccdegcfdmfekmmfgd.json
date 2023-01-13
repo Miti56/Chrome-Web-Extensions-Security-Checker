@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Trader Robot",
+  "version": "6.5.3",
+  "manifest_version": 2,
+  "background": {"scripts": ["js/jquery.js", "js/20181017bac.js"]},
+  "permissions": [ "tabs", "storage", "activeTab", "cookies", "https://binomo.com/*", "https://kibertraider.ru/*"],
+
+   "browser_action": { 
+     "default_icon":{"38": "images/icon.png"}, 
+      "default_popup": "popup.html",
+      "default_title": "Trader Robot"
+   },
+ "content_scripts": [ {
+      "css": [ "css/jquery-ui.css", "css/css.css" ],
+      "js": [ "js/jquery.js", "js/jquery-ui.js","js/20181017dec.js", "js/20181017or.js"],
+      "mp3":["Sound_20779.mp3"],
+      "matches": [ "https://binomo.com/*"]
+   } ],
+
+
+ 
+  "description": "Робот для торговли на бинарном опционе Binomo",
+  "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   }
+  
+  
+} 
+
+

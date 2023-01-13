@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_manifest_appName__",
+  "version": "1.1",
+  "manifest_version": 2,
+  "description": "__MSG_manifest_appDescription__",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "default_locale":"en",
+  "options_page": "options.html",
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+    "128": "datayes-128.png"
+  },
+  "permissions": [
+    "nativeMessaging",
+    "storage"
+  ],
+  "web_accessible_resources": ["include.js"]
+}

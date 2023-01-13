@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Easy Sudoku Beginnings",
+ "description": "It begins with easy Sudokus and gets harder as you advance. How far you can go?",
+ "version": "1.0.0",
+ "manifest_version": 2,
+  "icons": { "16": "icon-16.png", "128": "icon-128.png" },
+ "app": {
+ "launch": {
+ "web_url": "http://gamequack.com/easy-sudoku-beginnings/"
+ }
+ }
+ }

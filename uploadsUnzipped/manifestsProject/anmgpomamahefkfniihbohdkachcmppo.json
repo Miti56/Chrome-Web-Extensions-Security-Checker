@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Global Smart Data",
+  "manifest_version": 2,
+  "version": "0.0.0.1",
+  "description": "Global Smart Data Chrome Extension,用户可通过此插件将网页,文献信息等采集到GSD平台进行保存并搜索",
+  "browser_action": {
+    "default_icon": "favicon48.png",
+    "default_title": "GSD"
+
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "css": ["css/gsd.css"],
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["js/jquery-2.1.1.js","js/utils.js","js/script.js"]
+
+    }
+  ],
+  "icons": {
+    "16": "favicon16.png",
+    "48": "favicon48.png",
+    "128": "favicon128.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "contextMenus",
+    "http://*/*", "https://*/*", "background"
+
+  ],
+  "web_accessible_resources" : ["js/background.js","js/script.js","js/config.js","config.html","editText_dialog.html","css/gsd.css","js/editText.js","js/jquery-2.1.1.js"]
+}

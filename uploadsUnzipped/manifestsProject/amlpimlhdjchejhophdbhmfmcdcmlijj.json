@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "G+J e|MS AdTrace 2.0",
+  "short_name": "G+J AdTrace",
+  "version": "2.1.1",
+  "manifest_version": 2,
+  "description": "G+J e|MS AdTrace 2.0",
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts" : [
+    {
+      "matches": ["*://*/*"],
+      "js" : ["scripts/inject.js"]
+    }
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+G"
+      }
+    }
+  },
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ]
+}

@@ -1,0 +1,218 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "__MSG_chrome_extension_name__",
+    "description": "Heartbeat Chrome Extension by Freedom! Labs",
+    "version": "2.0.0",
+    "default_locale": "en",
+    "icons": {
+        "16": "images/icon-bitty.png",
+        "48": "images/icon-small.png",
+        "128": "images/icon-large.png"
+    },
+    "author": "Any.tv <info@any.tv>",
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "config/config.js",
+            "lib/async.min.js",
+            "lib/numeral.min.js",
+            "lib/moment.min.js",
+            "lib/fermata.js",
+            "lib/tagger.js",
+            "lib/jsonToDOM.js",
+            "lib/lodash.js",
+            "lib/domToJSON.js",
+            "helpers/utilities.js",
+            "helpers/theme_helper.js",
+            "helpers/activity_builder.js",
+            "helpers/blacklist_words.js",
+            "config/setting_config.js"
+        ],
+        "css": [
+            "styles/font-awesome.min.css"
+        ]
+    }, {
+        "matches": ["https://www.youtube.com/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "lib/lmcbutton.js",
+            "lib/Chart.min.js"
+        ],
+        "css": [
+            "styles/youtube.css",
+            "styles/materialize-icons.css"
+        ]
+    }, {
+        "matches": ["https://www.facebook.com/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/facebook/hover_zoom.js"
+        ],
+        "css": [
+            "styles/facebook.css"
+        ]
+    }, {
+        "matches": ["https://gaming.youtube.com/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/youtube_gaming/add_to_streamers.js",
+            "widgets/youtube/social_tab.js"
+        ],
+        "css": [
+            "styles/youtube_gaming.css"
+        ]
+    }, {
+        "matches": ["https://apis.google.com/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/youtube/lights.js"
+        ]
+    }, {
+        "matches": ["https://tweetdeck.twitter.com/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/tweetdeck/add_lab_user.js"
+        ],
+         "css": [
+            "styles/tweetdeck.css"
+        ]
+    }, {
+        "matches": ["https://www.twitch.tv/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/twitch/add_channel.js",
+            "widgets/twitch/add_to_streamers.js",
+            "widgets/twitch/broadcaster_stats.js",
+            "widgets/twitch/earnings.js",
+            "widgets/twitch/lights.js",
+            "widgets/twitch/loyal_users.js",
+            "widgets/twitch/twitter_timeline.js",
+            "widgets/twitch/user_tracker.js"
+        ],
+        "css": [
+            "styles/twitch.css"
+        ]
+    }, {
+        "matches": ["http://www.hitbox.tv/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/hitbox/add_channel.js",
+            "widgets/hitbox/add_to_streamers.js",
+            "widgets/hitbox/earnings.js",
+            "widgets/hitbox/user_tracker.js"
+        ],
+        "css": [
+            "styles/hitbox.css"
+        ]
+    }, {
+        "matches": ["http://www.dailymotion.com/*", "http://games.dailymotion.com/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/dailymotion/add_to_streamers.js",
+            "widgets/dailymotion/earnings.js",
+            "widgets/dailymotion/follower_count.js",
+            "widgets/dailymotion/light_switch.js",
+            "widgets/dailymotion/user_tracker.js",
+            "widgets/dailymotion/video_view_comment_count.js"
+        ],
+        "css": [
+            "styles/dailymotion.css"
+        ]
+    }, {
+        "matches": ["https://www.you1tube.com/*", "https://localhost/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/you1tube/redirect.js"
+        ]
+    }, {
+        "matches": ["*://*.heartbeat.tm/*", "*://*.heartbeat.dev/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/heartbeattm/heartbeat_visitors.js",
+            "widgets/heartbeattm/login_callback.js"
+        ]
+    }, {
+        "matches": ["*://*/*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/cross_platform/notify_subscribers.js",
+            "preload.js"
+        ],
+        "css": [
+            "styles/streamers.css"
+        ]
+    }, {
+        "matches": ["https://heartbeat--43483.onmodulus.net/youtubeChat/*", "https://www.google.com/tools/feedback/content_frame?*"],
+        "all_frames": true,
+        "run_at": "document_start",
+        "js": [
+            "widgets/youtube/iframe_light.js"
+        ]
+    }],
+    "web_accessible_resources": [
+        "assets/lmcbutton.swf",
+        "styles/lightsout-comment.css",
+        "styles/lightsout.css",
+        "styles/twitch-dmode.css",
+        "styles/summarizer.css",
+        "fonts/*",
+        "_locales/**/*.json",
+        "options/index.html",
+        "lib/ckeditor_config.js",
+        "theme/*.less"
+    ],
+    "background": {
+        "page": "background/index.html"
+    },
+    "permissions": [
+        "identity",
+        "identity.email",
+        "tabs",
+        "storage",
+        "\u003Call_urls>",
+        "contextMenus",
+        "cookies",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "clipboardWrite",
+        "unlimitedStorage"
+    ],
+    "oauth2": {
+        "client_id": "519680141770-8f29pmh3fptropinlq890sllgv4t3vp7.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/youtubepartner",
+            "https://www.googleapis.com/auth/youtube",
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/plus.me"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon-small.png",
+            "38": "images/icon-small.png"
+        },
+        "default_title": "Heartbeat",
+        "default_popup": "popup/index.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://www.youtube.com https://s.ytimg.com https://api.keen.io https://www.google.com; object-src 'self'",
+    "options_page": "options/index.html",
+    "externally_connectable": {
+        "matches": ["https://www.youtube.com/*"]
+    }
+}

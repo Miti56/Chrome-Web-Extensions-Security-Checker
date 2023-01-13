@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Pacman: Play Pac-Man Classic Game 🕹",
+  "version": "1.0.3",
+  "description": "Play classic Pacman for FREE. Are you ready to avoid ghosts and eat all the food?",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "homepage_url": "https://myemulator.online/nes/pac-man",
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Play Pac-Man Online"
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hypercare",
+  "short_name": "Hypercare",
+  "version": "2.6",
+  "description": "Importuj kontakty do Hypercare z systemów rekrutacyjnych",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  },
+  "icons": {
+    "16": "images/btn.png",
+    "32": "images/btn@2x.png",
+    "48": "images/btn@2x.png",
+    "128": "images/btn@2x.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://system.erecruiter.pl/web2/*"],
+      "include_globs": ["*candidate*", "*recruitment*"],
+      "run_at": "document_end",
+      "css": ["content.css"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["https://*.traffit.com/*"],
+      "exclude_globs": ["*/login*"],
+      "run_at": "document_end",
+      "css": ["traffit/content.css"],
+      "js": ["traffit/content.js"]
+    },
+    {
+      "matches": ["https://*.hrlink.pl/*"],
+      "exclude_globs": ["https://hrlink.pl/"],
+      "run_at": "document_end",
+      "css": ["hrlink/content.css"],
+      "js": ["hrlink/content.js"]
+    },
+    {
+      "matches": ["https://*.elevato.net/*"],
+      "include_globs": [
+        "*/Admin/jobOffersRecruitmentProjectCandidateList.aspx*",
+        "*/Admin/JobOffersCandidatesList.aspx*",
+        "*/Admin/JobOffersCandidatesDetails.aspx*",
+        "*/Admin/AppointmentMeetingRoom.aspx*"
+      ],
+      "run_at": "document_end",
+      "css": ["elevato/content.css"],
+      "js": ["elevato/content.js"]
+    }
+  ],
+  "manifest_version": 2
+}

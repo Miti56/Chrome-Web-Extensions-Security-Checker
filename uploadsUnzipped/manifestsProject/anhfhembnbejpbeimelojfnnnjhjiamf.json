@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "call-of-duty-black-ops-call-of-duty-black-ops-js/call-of-duty-black-ops.js" ]
+   },
+   "browser_action": {
+      "default_icon": "call-of-duty-black-ops-icons/icon-48.png",
+      "default_popup": "batch.html"
+   },
+   "description": "__MSG_description__",
+   "default_locale": "en",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.15.10"
+}

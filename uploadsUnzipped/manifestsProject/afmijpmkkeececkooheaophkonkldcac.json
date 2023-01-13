@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	
+	"name": "__MSG_extName__",
+	
+	"short_name": "__MSG_extName__",
+	
+	"manifest_version": 2,
+	
+	"description": "__MSG_extDesc__",
+	
+	"default_locale": "en_US",
+	
+	"version": "2.1.6",
+	
+	"icons": {
+		"16": "images/icon-x16.png",
+		"48": "images/icon-x48.png",
+		"128": "images/icon-x128.png"
+	},
+   
+   "background": {
+		"persistent": true,
+		"page": "background.html"
+	},
+   
+   "browser_action": {
+      "default_icon": "images/icon-x24.png"
+   },
+   
+	"content_scripts": [ {
+		"css": [ "css/viewer.css" ],
+		"js": [ "scripts/prototypes.js", "scripts/jquery.js", "scripts/jquery.mousewheel.js", "scripts/storage.js", "scripts/css-transform.js", "scripts/image-viewer.js", "scripts/activate.js" ],
+		"matches": [ "*://*/*", "file:///*" ]
+   } ],
+
+   "options_page": "options.html",
+   
+   "permissions": [ "tabs", "contextMenus", "*://*/*", "storage", "unlimitedStorage" ]
+   
+}

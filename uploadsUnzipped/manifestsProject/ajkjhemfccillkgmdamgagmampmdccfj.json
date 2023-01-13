@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "notice me",
+  "version": "1.0.7",
+  "manifest_version": 2,
+  "description": "Twitchチャット通知表示",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "storage",
+    "https://api.twitch.tv"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {},
+  "content_scripts": [{
+    "matches": [
+      "https://www.twitch.tv/*"
+    ],
+    "js": [
+      "content.js"
+    ],
+    "run_at": "document_idle"
+  }]
+}

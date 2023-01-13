@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "SMS Marketing - SimplyCast",
+  "description": "SimplyCast's SMS marketing enables you to put your timely message right in the hands of your subscribers, easily and quickly.",
+  "version": "8.3.2",
+  "app": {
+    "launch": {
+      "web_url": "http://chrome.sms.simplycast.com"
+    }
+  },
+  "icons": {
+    "128": "128x128.png"
+  }
+}

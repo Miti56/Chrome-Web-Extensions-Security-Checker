@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Se7enSins Post Templates",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "A basic extension to give the users of Se7ensins the ability to have post templates",
+  "homepage_url": "http://www.matthewh.in",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.se7ensins.com/forums/*"
+      ],
+      "css": [
+        "src/inject/matthewh.css"
+      ]
+    },
+    {
+      "matches": [
+        "http://www.se7ensins.com/forums/forums/*/create-thread"
+      ],
+      "js": [
+        "src/inject/postTemplate.js"
+      ]
+    }
+  ]
+}

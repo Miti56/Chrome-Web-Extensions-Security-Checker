@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "F1TV English",
+    "version": "0.0.4",
+    "description": "Listen to english commentary in any country",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+      },
+    "permissions": [
+        "https://*.formula1.com/*",
+        "webRequest",
+        "webRequestBlocking",
+        "activeTab"        
+    ]    
+  }

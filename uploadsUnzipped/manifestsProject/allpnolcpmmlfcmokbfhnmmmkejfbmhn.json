@@ -1,0 +1,12 @@
+{
+   "content_scripts": [ {
+      "css": [ "skilse.css" ],
+      "js": [ "famous_gear.js","redusechek.js"],
+      "matches": [ "*://*/*" ]
+   } ],
+   "manifest_version": 2,
+   "name":"HelpRB",
+   "permissions": [ "tabs", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.3"
+}

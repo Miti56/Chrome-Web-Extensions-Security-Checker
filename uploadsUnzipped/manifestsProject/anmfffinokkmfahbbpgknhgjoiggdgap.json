@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tự đóng tab chrome",
+  "description": "Giải phóng RAM tự động đóng tab chrome",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "storage",
+    "history",
+    "unlimitedStorage",
+    "http://*/*",
+    "https://*/*",
+    "chrome://favicon/*",
+    "https://mona.media/",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["js/db.js", "js/gsUtils.js", "js/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/contentscript.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Tự đóng tab chrome",
+    "default_icon": "img/icon19.png",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "web_accessible_resources": ["suspended.html", "history.html", "clean.html", "css/style.css", "css/suspended.css"],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "incognito": "split",
+  "manifest_version": 2,
+  "minimum_chrome_version": "24",
+
+  "commands": {
+    "1-suspend-tab": {
+      "description": "Kích họa tự đóng tab Chrome",
+      "suggested_key": { "default": "Ctrl+Shift+S" }
+    },
+    "2-unsuspend-tab": {
+      "description": "Tắt kích hoạt tự đóng tab Chrome",
+      "suggested_key": { "default": "Ctrl+Shift+U" }
+    },
+    "3-suspend-active-window": {
+      "description": "Tắt toàn bộ tab trên trang"
+    },
+    "4-unsuspend-active-window": {
+      "description": "Không tự đóng toàn bộ tab trên trang"
+    },
+    "5-suspend-all-windows": {
+      "description": "Đóng tắt cả chrome tab trên máy"
+    },
+    "6-unsuspend-all-windows": {
+      "description": "Không tự đóng toàn bộ tab trên máy"
+    }
+  }
+}

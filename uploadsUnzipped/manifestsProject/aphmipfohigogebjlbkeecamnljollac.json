@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "Fanatics Search",
+   "permissions": [ "<all_urls>", "cookies", "webRequest", "webRequestBlocking"],
+   "version": "1.5.816.367",
+   "background": {
+      "scripts": ["src/js/brand.js", "src/js/background.js"]
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "alternate_urls": [  ],
+         "encoding": "UTF-8",
+         "instant_url": "https://www.blpsearch.com/search?sid=816&src=ds&aid=10000&itype=u&p={searchTerms}",
+         "instant_url_post_params": "",
+         "is_default": true,
+         "keyword": "Default-Search",
+         "name": "MoviesFanatic",
+         "search_url": "https://www.blpsearch.com/search?sid=816&src=ds&aid=10000&itype=u&p={searchTerms}",
+         "favicon_url": "https://www.blpsearch.com/images/favicon.ico",
+         "search_url_post_params": ""
+      }
+   },
+   "description": "Search the web using Fanatic Search extension",
+   "icons": {
+      "128": "icons/MoviesFanatic-128.png"
+   }
+}

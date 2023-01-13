@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Noxwin Guncel Giris Adresi",
+  "short_name": "Noxwin",
+  "version": "1.3",
+  "description": "Noxwin güncel giriş adresine yönlendirir.",
+
+   "background":{
+  "scripts": ["background.js"] },
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Noxwin güncel adresine gitmek için tıkla!"
+  },
+
+  "permissions": ["tabs"]
+
+}

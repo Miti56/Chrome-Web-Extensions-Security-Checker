@@ -1,0 +1,22 @@
+{
+   "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html",
+      "default_title": "Speech To Text Notes App"
+   },
+   "description": "Create a new note by typing or using voice recognition !",
+   "icons": {
+        "16": "logo.png",
+        "32": "logo.png",
+        "48": "logo.png",
+        "128": "logo128.png"
+   },
+    "manifest_version": 2,
+   "name": "Speech To Text Notes App",
+   "permissions": [ "tabs", "notifications" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "offline_enabled": true,
+   "container": "GOOGLE_DRIVE",
+   "version": "0.5"
+}
+

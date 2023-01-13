@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Everyclickismagic.be Extension",
+  "description": "Everyclickismagic.be Extension",
+  "author": "Oleg Tolkach (oleg.tolkach@gmail.com)",
+  "version": "0.0.2",
+  "default_locale": "en",
+
+  "browser_action": {
+    "default_icon": "icons/30.png"
+  },
+
+  "icons": {
+    "16": "icons/16.png",
+    "19": "icons/19.png",
+    "30": "icons/30.png",
+    "32": "icons/32.png",
+    "38": "icons/38.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  },
+
+  "background": {
+    "scripts": ["js/vendor/jquery.min.js", "js/vendor/moment.min.js", "js/vendor/base64.min.js", "js/vendor/psl.min.js", "js/vendor/lodash.min.js", "js/const.js", "js/apis/ECIMApi.js", "js/helpers.js", "js/background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [ {
+      "css": [ "css/style.min.css", "css/vendor/select2.min.css" ],
+      "matches": [ "*://*/*" ],
+      "js": ["js/vendor/jquery.min.js", "js/vendor/moment.min.js", "js/vendor/base64.min.js", "js/vendor/psl.min.js", "js/vendor/select2.min.js", "js/vendor/lodash.min.js", "js/const.js", "js/apis/ECIMApi.js", "js/helpers.js", "js/services/ECIMService.js", "js/bars/ECIMBar.js", "js/content.js"]
+    }
+  ],
+
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "management",
+    "activeTab",
+    "tabs",
+    "storage",
+    "https://www.everycalickismagic.be/",
+    "https://4pmedia.rurl.me/*",
+    "<all_urls>"
+  ],
+
+  "web_accessible_resources": [ "html/*", "img/*" ]
+}

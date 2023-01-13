@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "beetelligence",
+  "version": "1.0",
+  "description": "beetelligence",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "geolocation"
+  ],
+  "background": {
+    "scripts": [
+      "backgroundConfigs.js",
+      "backgroundUtils.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_title": "beeCheaper"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.food123.com.tw/site/sku/*",
+        "https://www.happy-shopping.tw/*",
+        "https://www.momoshop.com.tw/*",
+        "https://shopee.tw/*"
+      ],
+      "js": [
+        "fetchResources.js"
+      ]
+    },
+    {
+      "matches": ["https://www.food123.com.tw/*"],
+      "js": [
+        "backgroundQueryTerm.js"
+      ]
+    },
+    {
+      "matches": ["https://www.happy-shopping.tw/*"],
+      "js": [
+        "backgroundQueryTermHappyShopping.js"
+      ]
+    }
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://mitjobs.ianchenhq.com; object-src 'self'",
+  "externally_connectable": {
+    "matches": [
+      "https://www.food123.com.tw/*",
+      "https://www.happy-shopping.tw/*",
+      "https://www.momoshop.com.tw/*",
+      "https://shopee.tw/*"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Instagram Story Downloader",
+  "description": "Press 'Shift + D' to download instagram story",
+  "version": "0.0.2",
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["main.js"]
+    }
+  ],
+  "permissions": [
+    "tabs", "https://www.instagram.com/*"
+  ],
+  "icons": {
+    "32": "icons/32.png",
+    "128": "icons/128.png"
+  }
+}

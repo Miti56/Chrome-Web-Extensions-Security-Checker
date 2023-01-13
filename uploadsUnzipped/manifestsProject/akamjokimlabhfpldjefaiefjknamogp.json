@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "/css/all.css" ],
+      "js": [ "jquery.js", "RandomUtil.js", "RoomnameGenerator.js", "meet-calendar.js" ],
+      "matches": [ "https://calendar.google.com/calendar/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "A simple extension that allows you to schedule Jitsi Meetings and stream your desktop into Jitsi conferences.",
+   "externally_connectable": {
+      "matches": [ "*://meet.hospidata.com.br/*", "*://meet2.hospidata.com.br/*" ]
+   },
+   "icons": {
+      "128": "jitsi-logo-128x128.png",
+      "16": "jitsi-logo-16x16.png",
+      "48": "jitsi-logo-48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlWcbYnp6HMSrPzC3+Hvbrr1ihgtv+cyawuoizRix1P8ToOFYtut08wrC+4UUHBB4z8GKOwRuAwdUt8O8PMgFUf/dTjX+F32iaysk63qA7+5dJ92lvJAcQtJq68Vx7d8qUhrU+EfBapGB3KdKkkgz/wjdJkbmjX0CVo0IbVsQUuqaXcIsazp+gwiQqBuBJc8lSDqdUvcd24FD3QPXzN52euedbI9OEfrkWNPfRbW/uuXDfS7mIsT+7neguu6ISVI1yHpEtKW4w0OusKU3Nw9juy+ivC6FFbFSLJDCFcv6drLc9ZxBDeryA3jOIuAcUPeXFfdm/X1ln7lkJQAGCretAwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "34",
+   "name": "Jitsi Meetings",
+   "permissions": [ "desktopCapture", "https://calendar.google.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2.6.9",
+   "web_accessible_resources": [ "jitsi-logo-48x48.png", "jitsi-logo-white-48x48.png" ]
+}

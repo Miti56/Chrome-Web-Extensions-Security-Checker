@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Digital Tech Thoughts ",
+ "description": "Digital Tech Thoughts; Where We Share Our Thoughts On Tech",
+ "version": "1.0.0",
+ "manifest_version": 2,
+ "icons": {
+ "128": "icon_128.png"
+ },
+ "app": {
+ "urls": [
+ "http://digitaltechthoughts.weebly.com/"
+ ],
+ "launch": {
+ "web_url": "http://digitaltechthoughts.weebly.com/"
+ }
+ }
+ }

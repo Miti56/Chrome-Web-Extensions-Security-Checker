@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Offline switcher",
+  "description": "Disable connection at your Chrome Browser with one button press. It was never easy such before. ",
+  "version": "1.5",
+  "icons": {"128": "icon.png"},
+  "background": {
+    "scripts": ["offline.min.js","background.js"]
+  },   
+  "permissions": ["proxy","tabs", "storage", "\u003Call_urls>"],
+  "browser_action": {
+      "default_title": "Go offline",
+      "default_icon": {"19": "on-19.png", "38": "on-38.png"}
+  },
+  "manifest_version": 2
+}

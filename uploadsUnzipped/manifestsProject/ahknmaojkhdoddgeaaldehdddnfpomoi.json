@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "EZprice找便宜：購物比價、搜書比價、價格比較工具，幫你網購省最多的懶人比價神器",
+    "description": "網購比價神器，瀏覽商品即時比價，快速找出最低價的網路購物平台，讓你網路購物邊逛邊比價，輕鬆撿便宜找優惠！",
+    "version": "2.0.4",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "browser_action": {
+        "default_icon": { "19": "icon_19.png",
+                          "38": "icon_38.png"},
+        "default_title": "EZprice找便宜",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+    "16":  "icon_16.png",
+    "48":  "icon_48.png",
+    "128": "icon_128.png"
+  },
+    "options_page": "option.html",
+    "background": {
+        "scripts": ["jquery.js","EZeventPage.min.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*","https://*/*"],
+            "js": ["jquery.js", "EZcontent.min.js", "iframeResizer.contentWindow.min.js", "iframeResizer.min.js", "script.min.js","jquery.cookie.min.js"],
+            "css": ["style/style.css"],
+            "all_frames": true,
+      "run_at": "document_start"
+        }
+    ],
+    "permissions": ["alarms","storage", "notifications", "contextMenus", "tabs", "http://*/*", "https://*/*"]
+}

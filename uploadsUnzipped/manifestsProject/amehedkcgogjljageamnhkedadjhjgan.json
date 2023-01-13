@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "DI.se Fixer",
+  "description": "This removes the paywall on di.se and the big ad thing at the top",
+  "version": "1.2",
+  "content_scripts": [ {
+    "js": ["jquery.min.js","fixer.js"],
+    "matches": [ "http://www.di.se/*", "https://www.di.se/*"],
+    "run_at": "document_end"
+  }],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

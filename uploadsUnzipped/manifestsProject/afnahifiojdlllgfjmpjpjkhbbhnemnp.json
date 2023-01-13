@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Carbon Flights",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Check how much carbon dioxide you emit for each flight you take and how many trees you would need to plan to offset.",
+    "permissions": [
+        "https://www.google.com/flights*"
+    ],
+    "icons": {
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/flights*"
+            ],
+            "js": [
+                "app.js"
+            ],
+            "run_at": "document_idle",
+            "all_frames": false
+        }
+    ]
+}

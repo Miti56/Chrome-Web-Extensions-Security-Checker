@@ -1,0 +1,24 @@
+ 
+ 
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "MIST Kiosk",
+  "short_name": "MIST Kiosk",
+  "version": "8.0.0.1",
+  "author": "Measurement Incorporated",
+  "description": "Secure testing kiosk for MIST.",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    "https://*.misttest.com/",
+    "webview",
+    "clipboardWrite"
+  ],
+  "kiosk_enabled": true,
+  "icons": { "16": "mist16.png", "128": "mist128.png" }
+}

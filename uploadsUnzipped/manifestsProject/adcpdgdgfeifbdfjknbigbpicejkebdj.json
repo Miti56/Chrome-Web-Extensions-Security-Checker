@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "CW Plugin Debugger",
+  "description": "Launch the Codeweavers finance plugin debugger.",
+  "version": "1.4.5",
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "all_frames": true,
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/main.js",
+        "ui/main.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background/main.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/72_default.png",
+    "default_popup": "ui/index.html"
+  },
+  "icons": {
+    "36": "icons/36_default.png",
+    "48": "icons/48_default.png",
+    "72": "icons/72_default.png",
+    "96": "icons/96_default.png",
+    "144": "icons/144_default.png",
+    "192": "icons/192_default.png",
+    "256": "icons/256_default.png",
+    "384": "icons/384_default.png",
+    "512": "icons/512_default.png"
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "一览",
+	"version": "1.1.3",
+	"description": "使用一览，您可以将喜爱的站点聚合起来并高效阅读，收藏喜欢的文章收藏并推荐给好友，或分享到社交网络",
+	"homepage_url": "http://www.yilan.io",
+	"manifest_version": 2,
+	"icons": {
+		"16": "images/yilan16.png",
+		"128": "images/yilan128.png"
+	},
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"scripts/page.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"permissions": [
+		"cookies",
+		"*://*.yilan.io/",
+		"tabs",
+		"storage",
+		"activeTab"
+	],
+	"browser_action": {
+		"default_icon": {
+			"19": "images/yilan19.png",
+			"38": "images/yilan38.png"
+		},
+		"default_title": "一览",
+		"default_popup": "popup.html"
+	},
+	"incognito": "split"
+}

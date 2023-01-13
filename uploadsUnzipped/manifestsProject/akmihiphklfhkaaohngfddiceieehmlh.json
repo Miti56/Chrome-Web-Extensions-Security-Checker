@@ -1,0 +1,13 @@
+{"offline_enabled": true, 
+"description": "__MSG_extDesc__", 
+"manifest_version": 2, 
+"browser_action": {"default_icon": "icons/128.png", 
+"default_title": "Narcos Wallpapers & HD Themes"},
+ "background": {"scripts": ["background.js"]},
+ "icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "default_locale": "en", 
+"version": "1.4.7", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"chrome_url_overrides": {"newtab": "index.html"},
+ "name": "__MSG_extName__"}

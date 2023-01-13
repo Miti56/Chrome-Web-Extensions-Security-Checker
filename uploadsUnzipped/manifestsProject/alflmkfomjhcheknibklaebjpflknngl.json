@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version" : 2,
+  "name" : "__MSG_appName__",
+  "description" : "__MSG_appDesc__",
+  "default_locale": "en",
+  "version" : "0.0.0.4",
+
+  "permissions" : [
+    "tabs",
+    "<all_urls>",
+    "storage",
+    "proxy",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "icons" : {
+    "48" : "/resources/icons/extension/48.png",
+    "128" : "/resources/icons/extension/128.png"
+  },
+  "browser_action": { },
+  "background" : {
+    "page" : "/html/background.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com ; object-src 'self'",
+  "externally_connectable": {
+    "matches": ["*://croupierica.com/*"]
+  }
+}

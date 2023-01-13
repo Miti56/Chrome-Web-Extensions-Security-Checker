@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "TaoBao Address / AliGeorgia.ge",
+    "version": "2.0",
+    "description": "For AliGeorgia user who needs to update his/her address on website taobao.com",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+	"content_scripts": [{
+		"matches": ["*://member1.taobao.com/member/fresh/deliver_address.htm*"],
+		"js": ["assets/js/content.js"]
+	}],
+    "permissions": ["activeTab"],
+    "icons": { "16": "assets/images/android-chrome-192x192.png"}
+}

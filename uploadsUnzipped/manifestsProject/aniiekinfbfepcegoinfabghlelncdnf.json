@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Switcheroo Redirector Pro",
+  "version": "1.2.4",
+  "manifest_version": 2,
+  "description":
+    "Setup custom redirect rules for any http request i.e pages, scripts, images etc. Uses a simple string replace to do this.",
+  "icons": {
+    "16": "images/switch128.png",
+    "48": "images/switch128.png",
+    "128": "images/switch128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/switch-browser.png",
+    "default_title": "Switcheroo Redirector Plus",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "webRequest",
+    "notifications",
+    "webRequestBlocking",
+    "<all_urls>",
+    "tabs",
+    "storage"
+  ],
+  "content_security_policy":
+    "default-src 'self';connect-src * ; script-src 'self'  https://ajax.googleapis.com https://sentry.io 'unsafe-eval'; style-src * 'unsafe-inline';font-src 'self' https://at.alicdn.com",
+  "background": {
+    "scripts": ["background/background.js", "background/underscore.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/contentscript.js"],
+      "css": ["style/styles.css"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+J",
+        "mac": "Command+J",
+        "chromeos": "Ctrl+J",
+        "linux": "Ctrl+J"
+      }
+    },
+    "open-in-content-page": {
+      "suggested_key": {
+        "windows": "Ctrl+U",
+        "mac": "Command+U",
+        "chromeos": "Ctrl+U",
+        "linux": "Ctrl+U"
+      },
+      "description": "__MSG_pageboxDesc__",
+      "global": true
+    }
+  }
+}

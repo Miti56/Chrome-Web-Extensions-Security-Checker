@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Productivity Tracker",
+  "short_name": "Productivity Tracker",
+  "description": "Track Your Productivity with a task based stopwatch",
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://app.adiz.net/productivity-tracker"
+    ],
+    "launch": {
+      "web_url": "http://app.adiz.net/productivity-tracker"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [],
+  "manifest_version": 2
+}

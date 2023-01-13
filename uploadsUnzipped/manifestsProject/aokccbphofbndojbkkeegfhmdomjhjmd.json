@@ -1,0 +1,58 @@
+{
+   "author": "Bbpi.ru",
+   "background": {
+      "page": "chrome/background.html",      
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "img/proxymanager_logo128.png",
+         "16": "img/ico_logo.png",
+         "18": "img/ico_logo.png",
+         "48": "img/proxymanager_logo48.png",
+         "64": "img/proxymanager_logo64.png"
+      },
+      "default_popup": "page_proxylist.html"
+   },
+  "content_scripts": [ {
+      "js": [ "js/content_script_chrome.js", "js/jqmini.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Bbpi бесплатный прокси / Proxy менеджер который поможет оставаться анонимным в сети.",
+   "icons": {
+      "128": "img/proxymanager_logo128.png",
+      "16": "img/ico_logo.png",
+      "18": "img/ico_logo.png",
+      "48": "img/proxymanager_logo48.png",
+      "64": "img/proxymanager_logo64.png"
+   },
+   "manifest_version": 2,
+   "name": "Прокси менеджер бесплатные прокси",
+   "options_page": "page_options.html",
+   "options_ui": {
+      "chrome_style": true,
+      "open_in_tab": false,
+      "page": "page_options.html"
+   },
+   "permissions": 
+   [ 
+      "http://*/*",
+	  "https://*/*",
+      "proxy", 
+      "contextMenus", 
+      "webRequest", 
+      "webRequestBlocking", 
+      "notifications", 
+      "tabs", 
+      "clipboardWrite", 
+      "clipboardRead", 
+      "privacy",
+      "storage",
+	  "alarms",
+	  "\u003Call_urls>"
+   ],
+   "short_name": "free proxy / бесплатные прокси / BBpi",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.1.2"
+}

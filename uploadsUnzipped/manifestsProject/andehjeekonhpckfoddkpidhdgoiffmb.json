@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Skip it",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "*://play.google.com/music/*"
+  ],
+  "description": "Skip disliked music automatically on Google Play Music.",
+  "content_scripts": [{
+    "matches": [
+      "*://play.google.com/music/*"
+    ],
+    "js": [
+      "skip.js"
+    ],
+    "run_at": "document_end"
+  }]
+}

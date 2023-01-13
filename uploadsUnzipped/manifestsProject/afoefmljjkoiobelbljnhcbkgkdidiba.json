@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Cats Help You Quit Social",
+	"description": "Remove the temptation to check social media, each time you try to visit certain social sites, this app will redirect to a cat video.",
+	"version": "0.1",
+	"background": {
+		"scripts": ["background/background.js"],
+		"persistent" : true
+	},
+	"icons": {
+		"19": "images/cat-icon.png"
+	},
+	"browser_action": {
+		"default_title": "Cats Help You Quit Social",
+		"default_icon": "images/cat-icon.png"
+	},
+	"options_page": "options/options.html",
+	"permissions": [
+		"background",
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"*://*.facebook.com/",
+		"*://*.twitter.com/"
+	]
+}

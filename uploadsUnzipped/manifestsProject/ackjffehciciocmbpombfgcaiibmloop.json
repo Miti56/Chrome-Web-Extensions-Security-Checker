@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Race Games | Apphy.XYZ",
+  "short_name": "Race Games",
+  "version": "1.0.2",
+  "description": "Direct link to the Race Games category on Apphy.XYZ",
+  "homepage_url": "http://apphy.xyz/c/car-games/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Race Games | Apphy.XYZ",
+      "default_popup": "popup.html"
+  }
+} 

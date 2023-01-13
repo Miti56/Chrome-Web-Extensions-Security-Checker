@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Next Up",
+  "description": "Next Up YouTube playlist finder",
+  "version": "0.1.1",
+  "permissions": [
+    "http://localhost:8080/*",
+    "tabs",
+    "activeTab",
+    "declarativeContent",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {}
+}

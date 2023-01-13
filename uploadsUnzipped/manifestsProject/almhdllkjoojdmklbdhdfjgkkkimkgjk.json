@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Chrome Extension For Kibana 4",
+  "description" : "키바나 4 버전 대시보드를 위한 크롬 확장 프로그램",
+  "version": "0.3.1",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "js": ["contentscript.js"],
+    "matches": ["<all_urls>"]
+  }],
+  "web_accessible_resources": ["script.js"]
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Owl",
+	"version": "1.1",
+	"description": "Add health checks for your services",
+	"permissions": ["tabs", "notifications", "storage"],
+	"browser_action": {
+    	"default_title": "Owl Watch"
+ 	},
+	"background": {
+		"scripts": ["jquery.js", "background.js"]
+	},
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"64": "icons/icon64.png",
+		"128": "icons/icon128.png"
+	},
+	"manifest_version": 2
+}

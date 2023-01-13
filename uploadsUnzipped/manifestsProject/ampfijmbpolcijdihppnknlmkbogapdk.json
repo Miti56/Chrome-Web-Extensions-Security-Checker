@@ -1,0 +1,29 @@
+{
+	"name":"forminine",
+	"description":"forminine - When you need a search friend.",
+	"icons":{"128":"pictures/icon.png"},
+
+	"manifest_version":2,
+  "browser_action": {
+	      "default_icon":"pictures/icon.png",
+	      "default_title":"forminine"
+	    },
+	"version":"9.4.38",
+
+	  "chrome_settings_overrides" : {
+	    "search_provider": {
+    		"name":"forminine",
+	
+		"encoding":"UTF-8",
+		"keyword":"formo",
+		"search_url":"http://forminine.com?q={searchTerms}",
+    		"favicon_url":"http://forminine.com/imagesss/favicon.ico",
+		"is_default":true
+	    }
+  	},
+
+	"omnibox": { "keyword" : "forminine" },
+  
+	 "background":{"scripts":["scripts/main.js"]},
+	"update_url": "https://clients2.google.com/service/update2/crx"
+}

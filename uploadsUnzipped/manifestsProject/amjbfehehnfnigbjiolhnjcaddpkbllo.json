@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "I'll Allow It",
+  "short_name": "I'll Allow It",
+  "description": "Changes Facebook Like and Unlike buttons to more truthful alternatives",
+  "version": "1.3",
+  "icons": { "128": "hashtag.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["jquery-2.1.4.min.js", "main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_title": "I'll Allow It"
+  },
+  "manifest_version": 2
+}

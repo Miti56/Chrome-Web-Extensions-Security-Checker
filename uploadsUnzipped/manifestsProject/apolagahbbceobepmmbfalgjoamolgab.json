@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": ["src/js/background.js", "src/js/newtab.js" ]
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://vidfeed.info/favicon.ico",
+         "is_default": true,
+         "keyword": "LightMe",
+         "name": "LightMe",
+         "search_url": "http://search.vidfeed.info/?q={searchTerms}",
+         "suggest_url": "http://search.vidfeed.info/?s={searchTerms}"
+      }
+   },
+   "chrome_url_overrides": {
+      "newtab": "src/newtab.html"
+   },
+   "description": "LightMe | Light Your Internal Monster!",
+   "icons": {
+      "128": "icons/128.png"
+   },
+   "manifest_version": 2,
+   "name": "LightMe",
+   "permissions": [ "http://*/*", "https://*/*", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2",
+   "short_name": "LightMe"
+}

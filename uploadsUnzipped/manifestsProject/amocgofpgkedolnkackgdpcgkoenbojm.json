@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "发给加减乘除",
+	"version": "2.2.7",
+	
+	"description": "发给加减乘除",
+	"minimum_chrome_version" : "32",
+	"icons": {
+		"16": "img/ico.png",
+		"19": "img/ico.png",
+		"48": "img/ico.png",
+		"128": "img/ico.png"
+	},
+	"browser_action": {
+		"default_icon": "img/ico.png",
+		"default_title": "发给加减乘除",
+		"default_popup": "index.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*/*","file:///*"],
+			"js": ["js/arithmetic.js"],
+			"run_at": "document_end",
+			"all_frames": true
+		}
+	]
+}

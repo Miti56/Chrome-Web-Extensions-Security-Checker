@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "YTFuckter",
+  "description": "Fucks up youtube",
+  "version": "1.0",
+ 
+  "permissions": [
+    "http://youtube.com/"
+  ],
+
+  "background": {
+    "scripts": ["change.js"]
+  },
+
+  "content_scripts" : [{
+      "matches": [ "http://www.youtube.com/*", "https://www.youtube.com/*"],
+      "js": [ "jquery-1.10.2.min.js", "change.js"]
+  }],
+
+  "web_accessible_resources": [
+    "jquery-1.10.2.min.js", 
+    "change.js"
+  ]
+
+}

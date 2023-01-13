@@ -1,0 +1,66 @@
+{
+  "background": {
+    "scripts": [
+      "lib/jquery-2.2.4.min.js",
+      "js/app.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/48.png",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "css/seller_check.css",
+        "css/fb.css"
+      ],
+      "js": [
+        "lib/jquery-2.2.4.min.js",
+        "js/app.js",
+        "js/config.js",
+        "js/popup.js",
+        "js/tabs.js"
+      ],
+      "matches": [
+        "*://*.aliexpress.com/*",
+        "*://*.aliexpresshelper.net/*",
+        "*://*.aliexpresshelper.herokuapp.com/*",
+        "*://*.test.ulocal/*"
+      ]
+    }
+  ],
+  "default_locale": "en",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com https://aliexpresshelper.herokuapp.com https://aliexpresshelper.net/; object-src 'self'",
+  "description": "Seller Check. package tracking",
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png",
+    "48": "icons/48.png"
+  },
+  "manifest_version": 2,
+  "name": "AliexpressHelper.net",
+  "options_page": "html/options.html",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "background",
+    "browsingData",
+    "webNavigation",
+    "notifications",
+    "cookies",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "storage"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "3.0.0",
+  "web_accessible_resources": [
+    "lib/jquery-2.2.4.min.js",
+    "js/options.js",
+    "img/sprite.png",
+    "img/loading.gif"
+  ]
+}

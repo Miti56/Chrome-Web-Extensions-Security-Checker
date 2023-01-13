@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "manifest_version": 2,
+  "name": "TabIt - Telegram",
+  "version": "1.01",
+  "icons": {"16": "images/icon16.png",
+            "24": "images/icon24.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png" },
+
+  "description": "Provides quick access to Telegram - right in browser action's pop-up",
+
+  "browser_action": {
+    "default_icon": "images/icon16.png",
+    "default_title": "TabIt - Telegram",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    { "matches": ["https://web.telegram.org/*"],
+      "js": ["script.js"],
+      "all_frames": true }
+  ]
+
+}

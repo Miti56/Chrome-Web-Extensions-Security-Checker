@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "The Open Gaming Society - Best Casino Bonuses",
+  "description": "The Open Gaming Society gives casino enthusiasts a chance to connect and learn from each other)",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.theopengamingsociety.org/best-casino-bonuses/"
+    ],
+    "launch": {
+      "web_url": "https://www.theopengamingsociety.org/best-casino-bonuses/"
+    }
+  }
+}

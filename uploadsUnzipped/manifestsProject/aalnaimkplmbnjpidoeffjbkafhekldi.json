@@ -1,0 +1,28 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "name": "ProPeople Sharing",
+    "version": "1.0.8",
+    "manifest_version": 2,
+    "description": "Share links to ProPeople Network.",
+    "options_page": "options.html",
+    "icons":{
+        "16": "icon_16.png",
+        "128": "icon_128.png"
+    },
+    "browser_action":{
+        "default_icon": "icon_16.png",
+        "default_popup": "background.html"
+    },
+    "permissions":[
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts":[
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "css": ["/css/content.css"],
+            "js": ["/js/jquery-1.8.3.min.js", "/js/contentscript.js"]
+        }
+    ]
+}

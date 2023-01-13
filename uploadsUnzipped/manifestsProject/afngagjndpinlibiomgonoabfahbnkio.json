@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Campuswire Search",
+	"version": "1.0",
+	"description": "Improved post search for Campuswire",
+	"icons": {
+		"48": "icons/logo-48.png",
+		"128": "icons/logo-128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://campuswire.com/c/*"],
+			"js": [
+				"./vendor/fuse.min.js",
+				"content.js"
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Primeiramão",
+  "description": "Anunciou, vendou!",
+  "version": "1.0",
+  "manifest_version":2,
+  "icons": {
+    "128": "icone_pm4.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.primeiramao.com.br/"
+    ],
+    "launch": {
+      "web_url": "http://www.primeiramao.com.br/"
+    }
+  }
+}

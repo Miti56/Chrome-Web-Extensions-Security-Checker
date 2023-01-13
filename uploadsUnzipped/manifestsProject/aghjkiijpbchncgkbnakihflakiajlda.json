@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Wooshark Banggood importer - dropship",
+    "short_name" : "Woocommerce Banggood Dropshipping",
+    "description": "Woocommerce Banggood import products - Dropshipping",
+    "version": "0.1",
+    "options_page": "options.html",  
+    "browser_action": {
+      "default_icon": "images/aliexpress128.png",
+      "default_popup": "popup.html",
+      "default_title": ""
+    },
+    "permissions": [
+      "tabs",
+      "http://*/*",
+      "https://*/*",
+      "activeTab",
+      "storage"
+    ],
+    "icons": {
+      "48": "images/aliexpress128.png",
+      "128": "images/aliexpress128.png"
+    },
+    "background": {
+      "scripts": [ "js/feedbacks.js", "js/background.js", "js/openOption.js", "js/loading.js"],
+      "persistence":false
+    },
+    "content_scripts": [
+      {
+        "run_at": "document_end",
+
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js": [
+          "js/jquery-3.2.1.min.js",
+          "js/jquery.scoped.js",
+          "js/apiexpress_content.js",
+          "js/lodash.js",
+          "js/bootstrap.min.js",
+          "js/aliexpress_order.js",
+          "js/ordersAndProducts.js"
+        ],
+        "css":[
+          "css/bootstrap.min.css"
+        ]
+      }
+    ],
+    "web_accessible_resources" : ["js/jquery-3.2.1.min.js", "/js/injectScript.js"],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  }

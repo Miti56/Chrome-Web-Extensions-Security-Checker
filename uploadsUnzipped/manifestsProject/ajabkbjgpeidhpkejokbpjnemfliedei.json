@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "PUBG Wallpapers PUBG New Tab HD",
+  "description": "PUBG New Tab. HD PUBG wallpapers with useful utilities for New Tab",
+  "version": "1.0",
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": {
+    "128": "/icons/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": ["/lib/js/sweetalert2.js", "/js/todoFromButton.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle"
+    },
+    {
+      "js": ["/js/search_rdir.js"],
+      "matches": [
+        "*://search.yahoo.com/search*",
+        "*://duckduckgo.com/*",
+        "*://www.google.com/search*",
+        "*://www.bing.com/search*",
+        "*://gl-search.com/*",
+        "*://redirect.lovelytab.com/*",
+        "*://str-search.com/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "128": "/icons/icon-128.png"
+  },
+  "background": {
+    "scripts": ["js/bg.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "topSites",
+    "chrome://favicon/*",
+    "<all_urls>",
+    "activeTab",
+    "tabs",
+    "storage"
+  ]
+}

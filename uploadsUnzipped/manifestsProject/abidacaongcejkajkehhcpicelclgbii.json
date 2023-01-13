@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name":    "Jarvis",
+	"version": "1.7.4",
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches":    ["<all_urls>"],
+			"js":         ["resources/tools/jquery/jquery.js","content.js"],
+			"all_frames": false
+		},
+		{
+			"matches":    ["https://podio.com/exactusensupt/projecto/*","https://podio.com/sandbox-8dj3u1nig2/projecto/*"],
+			"js":         ["resources/tools/jquery/jquery.js","content.js","resources/modules/module.podio.js","resources/modules/module.timezy.js","resources/modules/module.flasher.js"],
+			"all_frames": false
+		},
+		{
+			"matches":    ["https://podio.com/exactusensupt/design/*","https://podio.com/sandbox-8dj3u1nig2/design/*"],
+			"js":         ["resources/tools/jquery/jquery.js","scanner.js","resources/modules/module.podio.js","resources/modules/module.timezy.js","resources/modules/module.flasher.js"],
+			"all_frames": false
+		},
+		{
+			"matches":    ["https://podio.com/*"],
+			"js":         ["resources/tools/jquery/jquery.js","scanner.js","resources/modules/module.podio.js","resources/modules/module.timezy.js","resources/modules/module.flasher.js","resources/modules/module.googler.js"],
+			"all_frames": false
+		}
+	],
+	"page_action": {
+		"default_title": "Jarvis",
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"cookies",
+		"alarms",
+		"notifications",
+		"https://podio.com/*",
+		"https://exactusensu.pt/*",
+		"https://jarvis.exactusensu.pt/vulture/podio/stats",
+		"https://jarvis.exactusensu.pt/*"
+	],
+	"web_accessible_resources": [
+		"resources/media/images/loading-animation.gif"
+	],
+	"icons": {
+		"16": "icon.png",
+		"48": "resources/media/icons/icon-48px.png",
+		"128": "resources/media/icons/icon-128px.png"
+	}
+}

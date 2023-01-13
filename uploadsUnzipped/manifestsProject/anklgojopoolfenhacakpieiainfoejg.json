@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ちょび得",
+  "description": "ちょび得拡張機能をインストールすると有名通販サイトの商品詳細ページを表示する際に、ちょび得ならいくらで購入できるかの価格を表示します。ちょび得なら3%～5%程安く購入することができるのでとてもお得です。",
+  "version": "5.0",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.co.jp/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+	  "run_at": "document_end"
+    }
+  ],
+
+  "icons": {
+    "16" : "icon/icon16.png",
+    "48" : "icon/icon48.png",
+    "128" : "icon/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "/icon/icon16.png",
+    "default_popup": "popup.html",
+    "default_title": "ちょび得"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["/background.js"]
+  },
+
+  "permissions": [
+    "https://www.amazon.co.jp/*",
+    "https://chobitoku.shop/*"
+  ]
+}

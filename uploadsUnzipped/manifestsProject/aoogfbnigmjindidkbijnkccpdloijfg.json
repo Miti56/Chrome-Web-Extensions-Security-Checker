@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "oload.js" ],
+      "matches": [ "https://vk.com/*", "http://vk.com/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://vk.com https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Убирает из новостей ВКонтакте политические и другие сообщения.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Антиполитик",
+   "permissions": [ "https://vk.com/", "http://vk.com/", "*://*.vk.me/*" ],
+   "version": "1.0.1"
+}

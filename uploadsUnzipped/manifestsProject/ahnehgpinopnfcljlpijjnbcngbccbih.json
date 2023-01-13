@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "background": {
+   		"scripts": ["background.js"]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "index.html"
+   },
+   "description": "\u0412\u0438\u0446\u043E\u0432\u0435, \u0441\u043C\u0435\u0448\u043D\u0438 \u0438 \u0437\u0430\u0431\u0430\u0432\u043D\u0438 \u0442\u0435\u043A\u0441\u0442\u043E\u0432\u0435 \u0438 \u043C\u043D\u043E\u0433\u043E \u0441\u043C\u044F\u0445. \u0417\u0430\u0431\u0430\u0432\u043B\u044F\u0432\u0430\u0439\u0442\u0435 \u0441\u0435 \u043E\u0442 \u0441\u044A\u0440\u0446\u0435 \u0441 www.JustSmile-BG.com!",
+   "icons": {
+      "128": "icon-128x128.png",
+      "32": "icon-32x32.png",
+      "48": "icon-48x48.png"
+   },
+   "name": "\u0413\u043E\u043B\u044F\u043C\u043E \u0440\u0430\u0437\u043D\u043E\u043E\u0431\u0440\u0430\u0437\u0438\u0435 \u043E\u0442 \u0432\u0438\u0446\u043E\u0432\u0435.",
+   "permissions": [ "http://www.justsmile-bg.com/*"],
+   "version": "2.1",
+   "manifest_version": 2,
+   "web_accessible_resources": ["manifest.json"]
+}

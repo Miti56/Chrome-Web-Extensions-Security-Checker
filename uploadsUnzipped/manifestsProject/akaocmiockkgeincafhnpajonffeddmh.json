@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Objects",
+  "description": "Information at your fingertips",
+  "version": "0.3",
+  "app": {
+    "urls": [
+      "http://objectsapp.com/"
+    ],
+    "launch": {
+      "web_url": "http://objectsapp.com/"
+    }
+  },
+  "icons": {
+    "128": "128.png"
+  },
+  "permissions": [
+    "unlimitedStorage"
+  ]
+}

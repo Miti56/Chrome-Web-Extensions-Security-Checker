@@ -1,0 +1,2 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx","name":"__MSG_appName__","description":"__MSG_appDesc__","default_locale":"en","version":"13.6456.7396","manifest_version":2,"browser_action":{"default_title":"__MSG_appName__","default_icon":"19_19_papas_taco_mia.png","default_popup":"popup.html"}}

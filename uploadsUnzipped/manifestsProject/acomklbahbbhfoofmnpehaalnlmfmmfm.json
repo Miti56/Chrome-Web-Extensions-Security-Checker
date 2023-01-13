@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "eCover Creator Online",
+"manifest_version": 2,
+  "version": "1.0",
+  "description": "The best eCover creator online application.",
+  
+  "icons": {
+"128": "icon.png"
+},
+  "app": {
+"urls": [
+"http://www.covermakeronline.com/"
+],
+"launch": {
+"web_url": "http://www.covermakeronline.com"
+}
+},
+
+  "permissions": [
+    "http://www.covermakeronline.com"
+  ]
+}

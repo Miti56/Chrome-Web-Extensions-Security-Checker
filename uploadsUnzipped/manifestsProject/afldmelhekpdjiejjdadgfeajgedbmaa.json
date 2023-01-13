@@ -1,0 +1,12 @@
+{"description": "Install This Extension And Get Forza Motorsport 7 Wallpapers Every New Tab - Have Fun!", 
+"chrome_url_overrides": {"newtab": "index.html"},
+ "name": "Forza Motorsport 7 Wallpapers & Themes", 
+"icons": {"128": "128-forza-motorsport-7.png", 
+"48": "48-forza-motorsport-7.png"},
+ "browser_action": {"default_icon": "128-forza-motorsport-7.png", 
+"default_title": "Forza Motorsport 7 Wallpapers & Themes"},
+ "background": {"scripts": ["back.js"]},
+ "manifest_version": 2, 
+"version": "1.5.3", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"offline_enabled": true}

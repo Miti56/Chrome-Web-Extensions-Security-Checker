@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Overheads",
+	"version": "5.0.6",
+	"description": "Real time presentations. WARNING: This is an early Alpha version and not completely functional yet.",
+	"app":
+	{
+		"launch":
+		{
+			"local_path": "index.html"
+		}
+	},
+	"permissions":
+	[
+		"http://overheads.drewnels.net/"
+	],
+	"icons":
+	{ 
+		"16": "icon_16.png",
+		"128": "icon_128.png" 
+	},
+	"manifest_version": 2
+}

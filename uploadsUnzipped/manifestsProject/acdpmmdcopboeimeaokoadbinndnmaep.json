@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "0.1.3",
+  "name": "Aqui tem pontos Livelo!",
+  "description": "Olá, você na Livelo para Chrome. Acumular pontos Livelo ficou ainda mais fácil! Vamos começar?",
+  "icons": {"16": "img/livelo16.png", "48": "img/livelo48.png", "64": "img/livelo64.png", "128": "img/livelo128.png"},
+  "author": "Timepix Interactive Studio",
+  "browser_action": {
+    "default_title": "Aqui tem pontos Livelo!",
+    "default_popup": "default.html",
+    "default_icon": "img/livelo-off.png"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com/; object-src 'self'",
+  "permissions": [
+    "webNavigation",
+    "activeTab",
+    "tabs",
+    "notifications",
+    "cookies",
+    "storage",
+    "https://static.pontoslivelo.com.br/content/img/extensao/json/*.*",
+    "https://static.pontoslivelo.com.br/content/img/extensao/promocao/*.*",
+    "https://livelo-a.akamaihd.net/ofertas.json",
+    "https://*/*"
+  ],
+  "background": { "scripts": ["js/background.js"], "persistent": false },
+  "content_scripts": [{
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": ["js/content.js"],
+    "run_at": "document_end"
+  }],
+  "web_accessible_resources": ["https://static.pontoslivelo.com.br/content/img/extensao/json/parceiros_banners.json", "https://livelo-a.akamaihd.net/ofertas.json", "https://www.google-analytics.com", "https://www.googletagmanager.com/*.*", "img/*.*","fonts/*.*"]
+}

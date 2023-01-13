@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ガンストnetアシストツール",
+  "version": "0.9",
+  "manifest_version": 2,
+  "description": "ガンストの公式サイトをちょっと便利にする非公式ツールです",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://sp3.gunslinger-stratos.net/page/event/campaign/campaign_code_top.html*","http://sp3.gunslinger-stratos.net/page/event/campaign/issue_serial_code.html*","http://sp3.gunslinger-stratos.net/page/event/pccampaign/pc_campaign_list.html*","http://sp3.gunslinger-stratos.net/page/player/battleinfo/battle_log_top.html*"],
+      "js": ["gss_support_tool.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

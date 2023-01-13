@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Herningsholm Ludus",
+    "version": "1.2",
+    "description": "Build an Extension!",
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+          "matches": ["*://ludusweb.herningsholm.dk/*"],
+          "js": ["content.js"]
+        }
+      ],
+    "permissions": ["*://ludusweb.herningsholm.dk/*", "storage"],
+    "manifest_version": 2
+  }

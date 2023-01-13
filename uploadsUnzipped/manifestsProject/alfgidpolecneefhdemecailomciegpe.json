@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Jingle Bells Everywhere",
+  "description": "So you like Jingle Bell Rock do you?",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*","https://*/*"],
+      "js": ["jquery-3.2.1.min.js", "hideListing.js"],
+      "css": ["style.css"]
+	  
+	  
+    }
+  ],
+  
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+	"storage"
+  ]
+}

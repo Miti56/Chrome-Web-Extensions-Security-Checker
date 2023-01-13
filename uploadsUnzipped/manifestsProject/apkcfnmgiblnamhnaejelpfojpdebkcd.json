@@ -1,0 +1,33 @@
+{
+  "browser_action": {
+    "default_title": "AliExpress Auto Zoom Images"
+  },
+  "background": {
+        "scripts": [ "js/main.js" ]
+     },
+  "content_scripts": [
+    {
+      "js": [
+        "lib/jquery-3.4.1.min.js",
+        "js/script.js"
+      ],
+      "matches": [
+        "*://*.aliexpress.com/*",
+        "*://*.aliexpress.ru/*"
+      ]
+    }
+  ],
+  "icons": {
+    "128": "/img/icon256.png"
+  },
+  "manifest_version": 2,
+  "name": "AliExpress Auto Zoom Images",
+  "description": "Auto Zoom effect on images of products on aliexpress.com",
+  "default_locale": "en",
+  "permissions": [
+    "*://*.aliexpress.com/*",
+    "*://*.aliexpress.ru/*"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "3.8.4"
+}

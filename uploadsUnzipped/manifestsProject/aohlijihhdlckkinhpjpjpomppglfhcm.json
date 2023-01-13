@@ -1,0 +1,62 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "homepage_url": "https://canjetiendasonlineqa.latampass.com",
+  "version": "4.5.1",
+  "default_locale": "es",
+  "background": {
+    "scripts": [
+      "static/js/runtime.js",
+      "static/js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "css": ["static/css/content.css"],
+      "matches": [
+        "https://www.amazon.com/*"
+      ],
+      "js": [
+        "static/js/runtime.js",
+        "static/js/content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "externally_connectable": {
+    "matches": ["*://*.latampass.com/*"]
+  },
+  "web_accessible_resources": [
+    "static/img/*.png",
+    "static/img/*.jpg",
+    "static/img/*.svg",
+    "static/font/*.eot",
+    "static/font/*.ttf",
+    "static/font/*.woff",
+    "static/font/*.woff2",
+    "static/font/*.svg",
+    "icon-16.png"
+  ],
+  "permissions": [
+    "gcm",
+    "notifications",
+    "storage",
+    "*://*.latampass.com/*",    
+    "https://www.amazon.com/*",
+    "cookies"
+  ],
+  "browser_action": {
+    "default_icon": "icon-128.png",
+    "default_popup": "popup.html",
+    "default_title": "__MSG_extTitle__"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com https://*.latampass.com; object-src 'self'"
+}

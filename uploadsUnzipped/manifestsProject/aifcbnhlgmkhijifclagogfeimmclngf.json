@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background":{"scripts": ["jquery.min.js","md5.js","ini.js","back.js","bg.js"]},
+   "name": "__MSG_zname__",
+   "browser_action": {
+      "default_icon": "img/128.png",
+      "default_title": "__MSG_zname__",
+      "default_popup": "pop.html"
+   },
+   "description": "__MSG_zdesc__",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png"
+   },
+   "permissions": ["http://*/*","https://*/*","storage","tabs","unlimitedStorage", "management"],
+   "offline_enabled": true,
+   "default_locale": "zh_CN",
+   "version": "1.2.55",
+   "manifest_version": 2
+}

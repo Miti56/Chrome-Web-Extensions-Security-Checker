@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Value Management Platform",
+	"description": "Value Management Platform",
+	"short_name": "VMP",
+	"version": "6.41",
+	"manifest_version": 2,
+	"minimum_chrome_version": "29",
+	"app": {
+		"background": {
+			"scripts": [ "js/libs/require/require.js", "background.js" ]
+		}
+	},
+	"icons": {
+		"36": "img/VMP-36px.png",
+		"48": "img/VMP-48px.png",
+		"72": "img/VMP-72px.png",
+		"78": "img/VMP-78px.png",
+		"96": "img/VMP-96px.png",
+		"114": "img/VMP-114px.png",
+		"120": "img/VMP-120px.png",
+		"128": "img/VMP-128px.png",
+		"144": "img/VMP-144px.png",
+		"152": "img/VMP-152px.png"
+	},
+	"oauth2": {
+		"client_id": "50575246049-b9vf79le9egr6jvcctub5o7pqn9rfhb3.apps.googleusercontent.com",
+		"scopes": [
+			"https://www.googleapis.com/auth/plus.login",
+			"https://www.googleapis.com/auth/plus.me",
+			"https://www.googleapis.com/auth/userinfo.email",
+			"https://www.googleapis.com/auth/userinfo.profile"
+		]
+	},
+	
+	"permissions": [
+		"fileSystem",
+		"fileSystem.write",
+		"chrome://favicon/",
+		"storage",
+		"identity",
+		"unlimitedStorage",
+		"webview",
+		"https://www.googleapis.com/*",
+		"https://accounts.google.com/",
+		"<all_urls>"
+	]
+}

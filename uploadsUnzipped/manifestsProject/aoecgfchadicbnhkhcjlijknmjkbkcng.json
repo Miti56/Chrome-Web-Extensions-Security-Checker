@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "JSON Lint Pro",
+    "version": "1.1",
+    "description": "The easiest way to validate and format JSON. This is the validating and formating JSON tool from pro.jsonlint.com.",
+    "icons": {
+        "128": "images/icon_128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": ["js/background.js"]
+        }
+    },
+    "permissions": [
+        "http://pro.jsonlint.com/"
+    ],
+    "offline_enabled": true,
+    "minimum_chrome_version": "31"
+}

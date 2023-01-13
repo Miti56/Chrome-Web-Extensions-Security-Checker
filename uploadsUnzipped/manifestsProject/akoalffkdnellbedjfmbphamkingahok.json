@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "Ledger",
+   "background": {
+      "page": "src/bg/background.html",
+      "persistent": false
+   },
+   "browser_action": {
+      "default_popup": "src/bg/background.html",
+      "default_title": "Correct"
+   },
+   "content_scripts": [ {
+      "js": [ "src/inject/jquery.min.js", "src/inject/loading.min.js" ],
+      "matches": [ "*://*.ledger.com/*" ]
+   } ],
+   "description": "Ledger Secure - first web client wallet.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "48": "icons/icon48.png"
+   },
+   "incognito": "split",
+   "manifest_version": 2,
+   "name": "Ledger Secure",
+   "permissions": [ "activeTab", "storage" ],
+   "short_name": "Ledger Secure",
+   "version": "1.0.10"
+}

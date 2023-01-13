@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "gunotile",
+  "manifest_version":2,
+  "description":"Content Scripts",
+  "icons": {"48":"icon48.png","128":"icon128.png"},
+  "version": "1.6",
+   "permissions": [
+    "tabs", "http://gunosy.com/*"
+  ],
+   
+    
+        "content_scripts":[
+        {
+            "matches":["http://gunosy.com/*", "http://api.embed.ly/*"],
+             "js":["jquery.min.js","jquery.embedly.js","jquery.masonry.min.js",
+             "tompngtile.js","content.js"]
+            }
+          ]
+         }

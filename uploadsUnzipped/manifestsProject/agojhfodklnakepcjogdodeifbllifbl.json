@@ -1,0 +1,26 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "2.6.3",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "jquery.min.js",
+            "background.js"
+        ]
+    },
+    "name": "Jera",
+    "permissions": [
+        "<all_urls>",
+        "tabs"
+    ],
+    "description": "Jera zugore ojaf mivuco ekanaci vilaf",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "icon48.png",
+        "default_popup": "popup.html"
+    }
+}

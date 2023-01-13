@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Firkant",
+  "description": "Firkant is an Ampache client. It's got a clean UI that let's your music shine. It features local caching, no internet needed!",
+  "version": "0.0.0.6",
+  "manifest_version": 2,
+  "options_page": "options.html",
+  "offline_enabled": true,
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "unlimitedStorage"
+  ],
+  "app": {
+    "launch": {
+      "local_path": "main.html"
+    }
+  },
+  "icons":{
+    "128": "icons/logo128.png",
+    "48": "icons/logo128.png",
+    "16": "icons/logo128.png"
+  }
+}
+

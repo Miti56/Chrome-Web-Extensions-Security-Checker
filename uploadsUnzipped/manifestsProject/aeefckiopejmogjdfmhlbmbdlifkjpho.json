@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Criptomoedas - Cotação em Tempo Real",
+  "description": "Veja aqui a cotação de centenas de criptomoedas em tempo real! Bitcoin, Ethereum, Monero, TRON, RaiBlocks, Dash, Cardano, Verge...",
+  "version": "0.2",
+
+  "browser_action": {
+    "default_icon": "bitcoin.png"
+    
+  },
+
+  "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+  },
+
+  "background": {
+    "scripts": ["jquery.min.js","background.js"]
+  },
+
+  "options_page": "options.html",
+  
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "https://api.coinmarketcap.com/"
+   ]
+}

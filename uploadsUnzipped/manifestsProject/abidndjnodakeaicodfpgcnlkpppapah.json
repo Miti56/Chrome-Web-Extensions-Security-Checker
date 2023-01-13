@@ -1,0 +1,36 @@
+{
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "background.js",
+            "analytics.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icons/icon-disabled.png",
+        "name": "Allow Copy - Click to activate on this tab"
+    },
+    "description": "Allow Copy will re-enable select, copy, paste and right click in any webpage using any copy protection.",
+    "icons": {
+        "16": "icons/icon-enabled.png",
+        "19": "icons/icon-enabled.png",
+        "32": "icons/icon-enabled.png",
+        "48": "icons/icon-enabled.png",
+        "128": "icons/icon-enabled.png"
+    },
+    "manifest_version": 2,
+    "name": "Allow Copy",
+    "permissions": [
+        "*://*/*",
+        "webRequest",
+        "webRequestBlocking",
+        "tabs",
+        "storage"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "0.1.9",
+    "web_accessible_resources": [
+        "allowcopy.3.js"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval';object-src 'self';"
+}

@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Disk Long Count",
+  "description": "Mesoamerican long count calendar (20 baktuns), shown as interlocking faces moving against a steady hand.",
+  "version": "2.7.0",
+  "app": {
+    "launch": {
+      "local_path": "index.html",
+      "container": "tab"
+    }
+  },
+  "icons": {
+    "16": "images/icon_16.png",
+    "128": "images/icon_128.png"
+  },
+  "permissions": [
+    "geolocation"
+  ]
+}
+

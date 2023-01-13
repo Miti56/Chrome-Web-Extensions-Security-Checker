@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/main_settings.js", "js/commandLineInterceptor.js", "js/chrome.js", "js/searcher.js", "js/main.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "js/main_settings.js", "js/commandLineInterceptor.js", "js/youtube.js" ],
+      "matches": [ "*://*.youtube.com/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "js/main_settings.js", "js/commandLineInterceptor.js", "js/youtube.js" ],
+      "matches": [ "*://*.youtube.com/embed/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "Automatically resumes YouTube videos from where you played them last.",
+   "icons": {
+      "128": "images/main_label.png",
+      "48": "images/default_label.png"
+   },
+   "manifest_version": 2,
+   "name": "Video Renew",
+   "options_page": "index.html",
+   "permissions": [ "storage", "unlimitedStorage", "alarms", "<all_urls>", "tabs" ],
+   "version": "2.0"
+}

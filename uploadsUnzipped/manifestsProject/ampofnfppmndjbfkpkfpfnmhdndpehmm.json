@@ -1,0 +1,37 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "version": "1.0.1",
+    "name": "Ole' Rider",
+    "description": "Ole' Rider Theme. Old car theme with a Web2.0 feel style for the toolbar.",
+    "theme": {
+        "images": {
+            "theme_frame": "images/theme_frame_normal.png",
+            "theme_frame_inactive": "images/theme_frame_inactive.png",
+            "theme_toolbar": "images/toolbar.png",
+            "theme_ntp_background": "images/background.jpg"
+        },
+        "colors": {
+            "frame": [ 96, 47, 111 ],
+            "frame_inactive": [ 141, 94, 201 ],
+            "tab_text": [ 255, 255, 255 ],
+            "button_background": [ 0, 0, 87 ],
+            "bookmark_text": [ 255, 255, 255 ],
+            "toolbar": [ 109, 67, 233 ],
+            "ntp_background": [ 80, 78, 92 ],
+            "ntp_text": [ 34, 214, 202 ],
+            "ntp_section": [ 115, 42, 192 ]
+        },
+        "tints": {
+            "buttons": [ 0, 0, 0.9 ]
+        },
+        "properties": {
+            "ntp_background_alignment": "center top",
+            "ntp_background_repeat": "no-repeat"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
+}

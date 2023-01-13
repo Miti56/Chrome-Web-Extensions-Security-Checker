@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Homey",
+  "short_name": "Homey",
+  "version": "1.6",
+  "description": "Homey - Search like a magic",
+  "background": {
+    "scripts": ["settings.js","js/background.js","js/nt_logic.js"]
+ },
+ "icons": {
+      "128": "icons/icon128.png"
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://search.homeytab.com/favicon.ico",
+         "is_default": true,
+         "keyword": "Homey",
+         "name": "Homey",
+         "search_url": "http://search.homeytab.com?ht&q={searchTerms}"
+      }
+   },
+   "web_accessible_resources":["js/nt.js"],
+  "permissions": ["cookies","tabs","topSites","*://*.homeytab.com/*"],
+  "manifest_version": 2
+}

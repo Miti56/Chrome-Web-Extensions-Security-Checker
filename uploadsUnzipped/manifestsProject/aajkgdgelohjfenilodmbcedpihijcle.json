@@ -1,0 +1,24 @@
+{
+   "name": "Echotip",
+   "short_name": "Echotip",
+   "description": "A fast tipping tool for CB, suited for ohmibod, lovense and other tip sensitive toys",
+   "content_scripts": [ {
+      "css": [ "./content-scripts/cb/style.css" ],
+      "js": [ "./vendor/jquery-2.2.1.min.js", "./echobod.js", "./content-scripts/cb/main.js", "./content-scripts/cb/ui.js" ],
+      "matches": [ "https://chaturbate.com/*", "https://*.chaturbate.com/*", "file:///*/test*.html" ]
+   } ],
+   "browser_action": {
+	"default_icon": "echoes48.png"
+	,"default_title": "Echotip"
+   },
+   "manifest_version": 2,
+   "icons": {
+    "16": "echoes16.png",
+    "32": "echoes32.png",
+    "48": "echoes48.png",
+    "128": "echoes128.png"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.24",
+   "web_accessible_resources": []
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Beat Petite",
+    "description": "A unique sample-free drum machine made with the Web Audio API.",
+    "version": "0.2",
+    "minimum_chrome_version": "26",
+    "app": {
+        "background": {
+            "scripts": [
+                "scripts/background.js"
+             ]
+        }
+    },
+    "icons": {
+        "16": "images/bp-16.png",
+        "128": "images/bp-128.png"
+    }
+}

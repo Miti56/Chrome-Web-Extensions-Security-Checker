@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Adult & Porn blocker - Web & YouTube Filter",
+  "version": "1.1.0",
+  "description": "Block adult and porn websites & Youtube Filtering extension for chrome & chromebooks.",
+  "browser_action": {
+    "default_icon": "img/16x16.png",
+    "default_popup": "views/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "scripts/storage.js",
+      "scripts/time.js",
+      "scripts/ajax.js",
+      "scripts/helpers.js",
+      "scripts/background.js",
+      "scripts/popup.js",
+      "scripts/config.js",
+      "scripts/debug.js",
+      "js/jquery-3.3.1.min.js"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/jquery-3.3.1.min.js", "scripts/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "views/settings.html",
+  "web_accessible_resources": ["views/unlock.html", "views/page.html"],
+  "manifest_version": 2,
+  "icons": {
+      "128": "img/128x128.png",
+      "16": "img/16x16.png",
+      "48": "img/48x48.png"
+   }
+}

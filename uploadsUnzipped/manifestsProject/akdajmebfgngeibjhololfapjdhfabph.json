@@ -1,0 +1,28 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "short_name": "CUT THE ROPE: MAGIC",
+  "browser_action": {
+    "default_icon": "128.png"
+  },
+  "version": "4.1",
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "alarms",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+}

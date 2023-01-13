@@ -1,0 +1,38 @@
+{
+ "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "webNavigation",
+        "<all_urls>",
+        "tabs",
+        "storage",
+        "cookies",
+        "unlimitedStorage"
+    ],
+
+   "icons":
+   {
+      "128": "icon.png"
+   },
+
+   "browser_action":
+   {
+      "default_icon": "icon.png",
+      "default_title": "Tetris"
+   },
+      "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+   "description": "Play Tetris Online From Your Browser. Just click on the Tetris extension icon to play: It's 100% free!",
+
+   "name": "Tetris",
+
+   "manifest_version": 2,
+
+   "update_url": "https://clients2.google.com/service/update2/crx",
+
+   "version": "1.2.3"
+}

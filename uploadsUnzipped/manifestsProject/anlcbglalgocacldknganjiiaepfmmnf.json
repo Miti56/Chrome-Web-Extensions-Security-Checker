@@ -1,0 +1,34 @@
+{
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": "img/icon.ico",
+        "default_title": "Amulyam - Free Mobile Recharge",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+            "all_frames": false,
+            "js": ["libs/jquery.js", "js/content_script.js", "libs/utils.js", "libs/underscore-min.js", "libs/backbone-min.js"],
+            "matches": ["\u003Call_urls\u003E"],
+            "run_at": "document_start"
+        }],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+    "description": "Shop via us to earn free recharge on your shopping from flipkart, jabong, paytm and 500 plus other stores. Stop paying for recharge!",
+    "homepage_url": "http://www.amulyam.in",
+    "icons": {
+        "128": "img/logo128.png",
+        "16": "img/logo16.png",
+        "18": "img/icon.ico",
+        "32": "img/logo32.png",
+        "48": "img/logo48.png",
+        "64": "img/logo64.png"
+    },
+    "manifest_version": 2,
+    "name": "Amulyam - Free Mobile Recharge",
+    "short_name": "Amulyam - Free Mobile Recharge",
+    "permissions": ["tabs", "gcm", "storage", "notifications", "cookies", "\u003Call_urls\u003E"],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.1.9",
+    "web_accessible_resources": ["templates/*", "img/*.png", "css/chrome-extension.css", "fonts/OpenSans/*"]
+}

@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "English break",
+  "description": "Dobrze wykorzystaj czas! Zamiast marnować czas w sieci lepiej poucz się angielskiego.",
+  "version": "1.1",
+  "browser_action": {
+    "default_icon": {
+      "16": "img/16.png",
+      "32": "img/32.png",
+      "48": "img/48.png",
+      "128": "img/128.png"
+    },
+    "default_popup": "popup.html"     
+  },
+  "icons": {
+    "16": "img/16.png",
+    "32": "img/32.png",
+    "48": "img/48.png",
+    "128": "img/128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [{
+      "matches": ["<all_urls>"], 
+      "css" : ["main.css"]
+  }],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "manifest_version": 2
+}

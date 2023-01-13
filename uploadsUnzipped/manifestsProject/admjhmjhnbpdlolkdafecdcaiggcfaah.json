@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Nuts For Donuts",
+  "description": "Harry is always hungry and he loves Donut's more than anything in the world. Help him get to the donut as soon as possible.",
+  "version": "1.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.ebhasin.com/games/NutsForDonuts/index.html"
+    ],
+    "launch": {
+      "web_url": "http://www.ebhasin.com/games/NutsForDonuts/index.html"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

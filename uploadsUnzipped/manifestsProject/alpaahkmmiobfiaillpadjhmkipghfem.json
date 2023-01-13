@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Netkent Ekran Paylas",
+  "description": "Ekran Eklenti",
+  "version": "0.3.0",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "logo-16x16.png",
+    "48": "logo-48x48.png",
+    "128": "logo-128x128.png"
+  },
+  "homepage_url": "http://netkent.edu.tr",
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://*.netkent.edu.tr/*"
+      ]
+  },
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

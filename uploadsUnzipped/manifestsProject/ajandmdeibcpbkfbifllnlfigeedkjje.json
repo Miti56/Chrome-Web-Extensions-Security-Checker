@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Mondays",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Changes all images on every page, but only on Monday",
+  "browser_action": {
+    "default_icon": "icon128.jpeg"
+  },
+  "content_scripts": [{
+    "js": ["background.js"],
+    "matches": ["<all_urls>"]
+  }]
+}

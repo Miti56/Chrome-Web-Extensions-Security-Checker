@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Automational Gmail Gadget",
+    "version": "2.2.2.3",
+    "description": "The all-in-one CRM, sales and marketing automation solution for small business",
+      "icons": {
+    "16": "16X16.png",
+    "32": "32X32.png",
+    "48": "48X48.png",
+    "128": "128X128.png"
+   },
+    "api_console_project_id": "397231868152",
+    "container": ["DOMAIN_INSTALLABLE"],
+    "app": {
+        "urls": [
+            "https://webfront.automational.com/token.html"
+        ],
+        "launch": {
+            "web_url": "https://webfront.automational.com/token.html"
+        }
+    }
+}

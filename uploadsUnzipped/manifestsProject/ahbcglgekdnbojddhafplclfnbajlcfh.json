@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "EL_3ALAME",
+  "version": "3.8.9",
+  "manifest_version": 2,
+  "description": "Advanced Assistant for Gladiatus Game",
+  "homepage_url": "https://s23-ae.gladiatus.gameforge.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "page_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "Gladiatus automate"
+  },
+   "permissions": [
+    "storage",
+    "https://s23-ae.gladiatus.gameforge.com/*"
+   ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://s23-ae.gladiatus.gameforge.com/*"
+      ],
+      "js": [
+        "src/bg/background.js",
+        "src/inject/inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources":[
+    "icons/*.png",
+    "src/bg/setting.html"
+  ]
+}

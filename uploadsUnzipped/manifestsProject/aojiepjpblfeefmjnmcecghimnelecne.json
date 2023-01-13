@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Peugeot Piter Club",
+  "version": "3.0.41121",
+  "description": "Peugeot Piter Club: Active Themes Checker",
+  
+  "background": { 
+    "page": "background.html"
+  },
+  "options_page": "settings.html",
+  "browser_action": {
+        "default_icon": "assets/icons/inout/logged_out.png",
+        "default_title": "Peugeot Piter Club",
+        "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "tabs",
+    "http://peugeotpiter.ru/",
+    "notifications"
+   ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  
+  "icons": {
+    "128": "assets/icons/icon_128.png"
+  },
+  "web_accessible_resources": [
+    "assets/icons/inout/favicon_in.png"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Atravesse a Galinha",
+  "version": "1.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "description": "Controls ship game with Arduino.",
+
+  "app": {
+    "background": {
+      "scripts": [ "background.js" ]
+    }
+  },
+
+  "icons": {
+    "16": "assets/icon-16x16.jpeg",
+    "128": "assets/chicken-icon.png"
+  },
+
+  "permissions": [
+    "serial"
+  ]
+}

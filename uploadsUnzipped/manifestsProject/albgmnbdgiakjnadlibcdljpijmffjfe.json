@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "NTU Library Proxy",
+  "version": "1.2.0",
+  "manifest_version": 2,
+  "description": "Use NTU library proxy to get full text access to academic publications in the same tab.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent":false},
+  "permissions": [
+    "tabs","http://*/*","https://*/*"
+	],
+  "icons": {"16": "icon_3_16.png",
+            "48": "icon_3_48.png",
+            "128": "icon_3_128.png"},
+  "browser_action": {
+    "name": "Click to use NTU library proxy",
+    "default_title": "NTU Library Proxy",
+    "default_icon": "icon_3_48.png"
+  }
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Aliexpress Стилист",
+    "short_name": "AliStylist",
+    "description": "Получайте ежедневные подборки товаров Алиэкспресс в своем браузере.",
+    "background": {
+        "scripts": ["assets/js/background.js"]
+    },
+    "browser_action": {
+        "default_icon": "assets/img/icon.png"
+    },
+    "icons": {
+        "128": "assets/img/icon_128.png",
+        "16": "assets/img/icon_16.png",
+        "48": "assets/img/icon_48.png"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "css": ["assets/css/content.css"],
+        "js": ["assets/js/yo.js", "assets/js/content.js"]
+    }],
+    "permissions": [
+      "storage",
+      "alarms"
+    ],
+    "web_accessible_resources": ["sidebar.html"],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "version": "1.0.2",
+    "manifest_version": 2
+}

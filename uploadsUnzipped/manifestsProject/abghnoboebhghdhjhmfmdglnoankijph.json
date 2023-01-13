@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Ethical Shopper",
+    "version": "0.0.1",
+    "description": "Make ethical shopping choices as an informed customer. Visit any brand's website and learn about their sustainability practices.",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+        "16": "images/logo_16.png",
+        "32": "images/logo_32.png",
+        "48": "images/logo_48.png",
+        "128": "images/logo_128.png"
+      }
+    },
+
+    "permissions": ["tabs", "activeTab", "storage", "declarativeContent"],
+    "icons": {
+        "16": "images/logo_16.png",
+        "32": "images/logo_32.png",
+        "48": "images/logo_48.png",
+        "128": "images/logo_128.png"
+      },
+      "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "css": ["style.css"],
+          "js": ["content.js"]
+        }
+      ],
+      "web_accessible_resources": [
+        "json.txt",
+        "fonts/*.woff",
+        "fonts/*.woff2",
+        "fonts/*.ttf",
+        "fonts/*.otf",
+        "images/background.png"
+    ],
+    "manifest_version": 2
+  }

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	  "name": "Libersy Calender",
+	  "description": "Libersy Calender",
+	  "version": "2",
+	  "icons": { "128": "128.png" },
+	  "app": {
+	    "urls": [
+	      "http://libersy.com/login"
+	    ],
+	    "launch": {
+	      "web_url": "http://libersy.com/login/"
+	    }
+  },
+	  "permissions": [""],
+  "manifest_version": 2
+	}

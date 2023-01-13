@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Blue Webteams",
+  "version": "0.0.1",
+  "background": {"scripts":["back.js"]},
+  "options_page": "options.html",
+  "permissions": [
+    "tabs", "contextMenus", "http://*/*", "https://*/*","geolocation","cookies","webRequest","webRequestBlocking"
+  ],
+  "browser_action": {
+      "default_title": "highlights or shares",
+      "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["chrome.css"],
+      "js": ["jquery.min.js", "myscript.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",  
+  "icons": {"16": "icon16.png", "48": "icon48.png", "128": "icon128.png"},
+  "manifest_version": 2
+}

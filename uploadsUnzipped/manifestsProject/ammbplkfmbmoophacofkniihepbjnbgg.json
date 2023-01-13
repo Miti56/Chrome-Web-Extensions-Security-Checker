@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Drag Racing",
+  "description": "High speed drag racing game. Shift gears right in time to be first on the finish.",
+  "version": "1.0",
+  "app": {
+    "urls": [
+      "http://www.gamehitzone.com/mobile/drag-racing/play.html"    ],
+    "launch": {
+      "web_url": "http://www.gamehitzone.com/play-online/drag-racing.html"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+  ]
+}

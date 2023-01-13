@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "优汇券",
+  "version": "3.0.1.14",
+  "manifest_version": 2,
+  "description": "优汇券是一款淘宝搜券、领券工具，每日推荐海量隐藏优惠券、内部优惠券（非店铺优惠券），致力于为您购物省钱，让优惠随手可得！",
+  "icons": {
+    "16": "logos/16.png",
+    "48": "logos/48.png",
+    "128": "logos/128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "logos/19.png",
+      "38": "logos/38.png"
+    },
+    "default_title": "优汇券",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "jquery.js",
+        "contentScript.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "management",
+    "nativeMessaging"
+  ],
+  "content_security_policy": "script-src 'self'  'unsafe-eval'; object-src 'self'",
+  "background": {
+    "page": "background.html"
+  },
+  "web_accessible_resources": [
+    "*"
+  ]
+}

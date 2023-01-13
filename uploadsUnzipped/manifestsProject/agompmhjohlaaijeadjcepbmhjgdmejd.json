@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_app_name__",
+  "short_name": "Content Blocker",
+  "description": "__MSG_app_summary__",
+  "default_locale": "en",
+  "author": "abilitools.com",
+  "version": "0.8.0",
+  "manifest_version": 2,
+  "permissions": [
+    "background",
+    "storage",
+    "contextMenus"
+  ],
+  "optional_permissions": [
+    "tabs",
+    "webNavigation",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_popup": "popup-d250302af79f4a5e3f881ad2458cbf39.html",
+    "default_title": "Remove unwanted Content - abilitools"
+  },
+  "background": {
+    "page": "background-b7925aac0a0571f7c81052da27b842b9.html",
+    "persistent": false
+  },
+  "options_page": "options-15ef3367d07990fbeb36cbaa49bdc8de.html",
+  "icons": {
+    "16": "icon-16-216ca2fbc425c1108ec2e88c7af0d5c7.png",
+    "48": "icon-48-cb770faa777f86b89c0f0a795805093c.png",
+    "128": "icon-128-7a8a609bc42af3cc25fdcf5d65676093.png"
+  },
+  "-ms-preload": {
+    "backgroundScript": "edge-background-scripts-API-bridge-ea0d2dc5f3cdc907fddf.js",
+    "contentScript": "edge-content-scripts-API-bridge-7ef8e86eb2e8d440a1fb.js"
+  },
+  "web_accessible_resources": [
+    "icon-128-7a8a609bc42af3cc25fdcf5d65676093.png",
+    "icon-16-216ca2fbc425c1108ec2e88c7af0d5c7.png",
+    "icon-48-cb770faa777f86b89c0f0a795805093c.png",
+    "icon-black-7a8a609bc42af3cc25fdcf5d65676093.png",
+    "icon-clean-81b2897d4be0d8881c5bd0eb1c487f7a.png",
+    "icon-loading-4e1e0cda3859472af45784ffcf05aa6a.png",
+    "icon-red-4842713181d35e384a939d256fe7563b.png",
+    "icon-selection-ee4e82782403f521f7de984ba0919696.png",
+    "index-a0420c3d52c1b2538fed2f6c0dd19bd6.css",
+    "options-0b33cbba5c4b575e071e2cfcb11b4f60.css",
+    "popup-9f22cf8f27af614414e6ed93c076f1cd.css",
+    "undo-c28f43313d72f114c0a6409bc37bdeb3.png"
+  ]
+}

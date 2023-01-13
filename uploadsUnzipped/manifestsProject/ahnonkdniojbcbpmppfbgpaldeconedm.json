@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"theme":{
+		"images":{
+			"theme_frame":"images\/theme_frame.png",
+			"theme_toolbar":"images\/theme_toolbar.png",
+			"theme_tab_background":"images\/theme_tab_background.png",
+			"theme_ntp_background":"images\/theme_ntp_background.png",
+			"theme_ntp_attribution":"images\/theme_ntp_attribution.png"
+		},
+		"colors":{
+			"frame":[226,226,229],
+			"toolbar":[226,226,229],
+			"tab_text":[61,44,46],
+			"tab_background_text":[61,44,46],
+			"bookmark_text":[61,44,46],
+			"ntp_background":[255,255,255],
+			"ntp_text":[61,44,46],
+			"button_background":[0,0,0,0]
+		},
+		"tints":{
+			"buttons":[0,0,0.5]
+		}
+		,"properties":{
+			"ntp_background_alignment":"left top",
+			"ntp_background_repeat":"no-repeat"
+		}
+	},
+	"name":"Kim HyunA Minimalist Theme 2",
+	"short_name": "Kim HyunA",
+	"version":"1.0",
+	"description":"Super-sexy/cute star Kim Hyuna (김현아), from 4Minute/Trouble maker, on a minified theme",
+	"icons": { 
+		"128": "icon_128.png", 
+		"64": "icon_64.png", 
+		"32": "icon_32.png" 
+	}
+}

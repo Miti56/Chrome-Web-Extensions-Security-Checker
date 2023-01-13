@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Last.fm API search",
+  "description" : "Search last.fm API",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions" : [
+    "tabs",
+    "http://www.last.fm/*"
+  ],
+  "omnibox": { "keyword" : "lfmapi" },
+  "manifest_version": 2
+}

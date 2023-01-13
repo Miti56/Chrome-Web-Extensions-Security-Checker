@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MTK",
+  "version": "1.13.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "My Tool Kit Author:Jorger Date:2011-9-20",
+  "background": { "scripts": ["background.js"] },
+  "options_page": "options.html",
+  "icons": {"16": "logo.png", "48": "logo.png", "128": "logo.png"},
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "notifications"
+  ],
+  "browser_action": {
+    "icons": ["logo.png"],
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

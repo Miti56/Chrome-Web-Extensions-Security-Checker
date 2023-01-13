@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "app": {
+    "urls": [ "https://magazin.spiegel.de/digital/" ],
+    "launch": {
+      "container": "tab",
+      "web_url": "https://magazin.spiegel.de/digital/"
+    }
+  },
+  "name": "DER SPIEGEL",
+  "description": "Lesen Sie Deutschlands größtes Nachrichtenmagazin mit der SPIEGEL-Web-App.",
+  "version": "2.1.722.0",
+  "offline_enabled": true,
+  "icons": {
+    "16": "app_016.png",
+    "32": "app_032.png",
+    "64": "app_064.png",
+    "128": "app_128.png",
+    "256": "app_256.png",
+    "512": "app_512.png",
+    "1024": "app_1024.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

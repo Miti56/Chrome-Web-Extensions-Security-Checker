@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "name": "MEL Teens",
+  "short_name": "MEL Teens",
+  "version": "1.2",
+  "description": "Quickly locate homework help, good reads, college information, and other issues that impact your life.",
+  "icons":{
+      "48" : "teens-icon-48.png",
+      "128": "teens-icon-128.png"
+  },
+  "app":{
+     "urls": ["http://teens.mel.org/"],
+     "launch":{"web_url": "http://teens.mel.org/"}
+  },
+  "permissions": ["unlimitedStorage", "notifications"]
+}

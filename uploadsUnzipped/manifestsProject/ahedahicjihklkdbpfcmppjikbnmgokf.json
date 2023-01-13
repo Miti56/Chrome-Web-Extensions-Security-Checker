@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "WBPO Login Assistant",
+    "description": "Login assistant for BPO Specialists.",
+    "version": "5.0.0.1",
+    "browser_action": {
+        "default_icon": "icon-small.png"
+    },
+    "background": {
+        "scripts": [
+            "plugins/jquery/dist/jquery.min.js", 
+            "js/background.js"
+        ]
+    },
+    "permissions": [
+        "activeTab", 
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "externally_connectable": {
+        "matches": [
+            "*://localhost/*", 
+            "*://192.168.0.100/*", 
+            "*://www.processing.wevalue-bpo.com/*", 
+            "*://www.admin.wevalue-bpo.com/*", 
+            "*://www.agent.wevalue-bpo.com/*"
+        ]
+    },
+    "icons": {
+        "16": "icon-small.png",
+        "48": "icon.png",
+        "128": "icon-new.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "*://*.clearcapital.com/*"
+        ],
+        "css": ["plugins/toastr/toastr.min.css"],
+        "js": [
+            "plugins/jquery/dist/jquery.min.js", 
+            "plugins/toastr/toastr.min.js",
+            "js/check.js"
+        ],
+        "execute_at": "document_end"
+    }, {
+        "matches": [
+            "*://*/*"
+        ],
+        "js": [
+            "plugins/jquery/dist/jquery.min.js"
+        ],
+        "execute_at": "document_end"
+    }]
+}

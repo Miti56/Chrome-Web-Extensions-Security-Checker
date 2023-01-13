@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Is Deadpool Out Yet?",
+  "short_name": "Deadpool Yet?",
+  "description": "",
+  "version": "0.0.2",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "assets/deadpool_icon.png",
+    "128": "assets/deadpool_icon.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

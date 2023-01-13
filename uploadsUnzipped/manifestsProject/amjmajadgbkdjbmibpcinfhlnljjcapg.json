@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Close Tabs",
+  "description": "Quickly close tabs to the left, right or both sides of the currently visible tab.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "/assets/close-tabs-icon_16px.png",
+    "128": "/assets/close-tabs-icon_128px.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "/assets/close-tabs-icon_16px.png",
+      "24": "/assets/close-tabs-icon_24px.png",
+      "32": "/assets/close-tabs-icon_32px.png"
+    },
+    "default_title": "Close Tabs",
+    "default_popup": "main.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "commands": {
+    "left": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Z",
+        "mac": "Ctrl+Shift+Z",
+        "chromeos": "Ctrl+Shift+Z",
+        "linux": "Ctrl+Shift+Z"
+      },
+      "description": "Close tabs to the left",
+      "global": true
+    },
+    "both": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+X",
+        "mac": "Ctrl+Shift+X",
+        "chromeos": "Ctrl+Shift+X",
+        "linux": "Ctrl+Shift+X"
+      },
+      "description": "Close all other tabs",
+      "global": true
+    },
+    "right": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+C",
+        "mac": "Ctrl+Shift+C",
+        "chromeos": "Ctrl+Shift+C",
+        "linux": "Ctrl+Shift+C"
+      },
+      "description": "Close tabs to the right",
+      "global": true
+    }
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "manifest_version": 2
+}

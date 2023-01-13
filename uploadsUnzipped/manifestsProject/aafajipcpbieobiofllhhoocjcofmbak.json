@@ -1,0 +1,37 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+    "scripts": [
+      "1507229525190.js",
+      "1507229561428.js"
+    ],
+    "persistent": true
+  },
+  "default_locale": "en",
+  "name": "Nature Beauty",
+  "description": "Discover how beautiful, fragile and powerful at the same time our nature is!",
+  "icons": {
+    "16": "1507229525190_16.png",
+    "48": "1507229525190_48.png",
+    "128": "1507229525190_128.png"
+  },
+  "browser_action": {
+    "default_title": "Nature Beauty",
+    "default_popup": "1507229525190.html",
+    "default_icon": "1507229525190_128.png"
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "webNavigation",
+    "webRequestBlocking",
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webRequest",
+    "gcm",
+    "notifications"
+  ],
+  "version": "2.58.492",
+  "offline_enabled": true
+}

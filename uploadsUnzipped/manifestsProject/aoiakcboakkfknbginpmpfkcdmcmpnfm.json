@@ -1,0 +1,37 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"version":"1.6",
+"name":"South Park",
+"manifest_version":2,
+"description": "Visit UltraPeter.com for more themes!",
+"theme":{
+
+"images":{
+"theme_frame":"img/frame.jpg",
+"theme_toolbar":"img/toolbar.jpg",
+"theme_tab_background":"img/tab.jpg",
+"theme_tab_background_incognito":"img/tab.jpg",
+"theme_ntp_background":"img/NTP.jpg",
+"theme_ntp_attribution": "img/attribution.png",
+"theme_frame_overlay": "img/overlay.png"},
+
+"colors" : {
+"bookmark_text":[255,255,255],
+"ntp_link":[0,0,0],
+"ntp_section": [54,99,100],
+"ntp_section_link": [0,0,0],
+"ntp_section_text": [0,0,0],
+"ntp_background": [108,199,200],
+"ntp_text": [0,0,0],
+"button_background":[54,99,100],
+"tab_background_text":[182,227,228],
+"tab_text": [255,255,255],
+"frame":[108,199,200],
+"toolbar": [65,115,72]},
+
+"properties":{
+"ntp_background_alignment":"bottom"},
+
+"tints":{
+"buttons":[1,1,1]
+}}}

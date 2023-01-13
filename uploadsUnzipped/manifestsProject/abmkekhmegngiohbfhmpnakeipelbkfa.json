@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ProfitSignal",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "Бесплатные сигналы помогут заработать на торговле бинарными опционами с любым брокером.",
+  "short_name": "PS",
+   "icons": {
+    "128": "ico/test.png"
+  },
+  "background": {
+    "scripts": ["js/jq.js","js/background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "ico/test.png",
+    "default_popup": "index.html",
+    "default_title": "ProfitSignal"
+  },
+ "permissions": [ 
+    "<all_urls>",
+    "background",
+    "tabs",  
+    "webRequest",
+    "webRequestBlocking"
+],
+ "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

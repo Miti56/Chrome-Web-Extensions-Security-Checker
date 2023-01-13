@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name":"Who is online ?",
+	"description":"Now, you know who is online.",
+	"version":"1.2.3",
+	"options_page": "default_options.html",
+	"permissions": [
+		"tabs",
+		"https://twitch.tv/*",
+		"notifications",
+		"webRequest",
+		"https://api.twitch.tv/kraken/streams/*",
+		"unlimitedStorage"
+	],
+	"background": {
+		"scripts":["Javascript/background.js"]
+	},
+	"browser_action": {
+		"default_icon":"Images/default_icon_16x16.png",
+		"default_popup":"default_popup.html"
+	},
+	"manifest_version":2
+}

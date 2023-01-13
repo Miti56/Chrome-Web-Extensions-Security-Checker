@@ -1,0 +1,94 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GetProduct",
+  "version": "1.0.5",
+  "description": "Automate DropShipping with GetProduct!",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "cookies",
+    "https://getproduct.io/",
+    "http://localhost:5000/",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.fr/*",
+        "https://www.amazon.com/*",
+        "https://www.amazon.es/*",
+        "https://www.amazon.it/*",
+        "https://www.amazon.co.uk/*",
+        "https://www.amazon.de/*",
+        "https://www.walmart.com/*",
+        "https://www.ebay.fr/*",
+        "https://www.ebay.com/*",
+        "https://www.ebay.co.uk/*",
+        "https://www.ebay.de/*",
+        "https://www.ebay.es/*",
+        "https://www.ebay.it/*",
+        "https://www.chinabrands.com/*",
+        "https://*.aliexpress.com/*",
+        "https://www.zooplus.fr/*",
+        "https://www.zooplus.com/*",
+        "https://www.zooplus.co.uk/*",
+        "https://www.zooplus.de/*",
+        "https://www.zooplus.es/*",
+        "https://www.zooplus.it/*",
+        "https://www.cdiscount.com/*",
+        "https://www.cdiscountpro.com/*",
+        "https://yaballe.com/*",
+        "https://app.autods.com/*",
+        "https://www.shopmaster.com/*",
+        "https://www.dsmtool.com/*",
+        "https://getproduct.io/*",
+        "https://getproduct.io/*",
+        "https://webseller.guru/*"
+      ],
+      "js": [
+        "content/exporter.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.amazon.fr/gp/*",
+        "https://www.amazon.com/gp/*",
+        "https://www.amazon.es/gp/*",
+        "https://www.amazon.it/gp/*",
+        "https://www.amazon.co.uk/gp/*",
+        "https://www.amazon.de/gp/*",
+        "https://order.cdiscount.com/*",
+        "https://www.walmart.com/checkout/*",
+        "https://www.chinabrands.com/flow/*",
+        "https://getproduct.io/orders*",
+        "http://localhost:5000/orders*"
+      ],
+      "js": [
+        "content/address.js"
+      ]
+    }
+  ],
+  "options_page": "options.html",
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/getproduct_16_icon_transp.png",
+      "32": "images/getproduct_32_icon_transp.png",
+      "48": "images/getproduct_48_icon_transp.png",
+      "128": "images/getproduct_128_icon_transp.png"
+    }
+  },
+  "icons": {
+    "16": "images/getproduct_16_icon_transp.png",
+    "32": "images/getproduct_32_icon_transp.png",
+    "48": "images/getproduct_48_icon_transp.png",
+    "128": "images/getproduct_128_icon_transp.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Birdsong",
+  "description": "Generates a synthesizer soundscape from your twitter feed. Alpha Version",
+  "version": "0.0.2",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://tweetdeck.twitter.com/*", "https://tweetdeck.twitter.com/*"],
+    "js":["jquery-1.11.1.min.js","p5.min.js","p5.sound.min.js","content_script.js"],
+    "all_frames": true,
+    "match_about_blank": true
+  }]
+
+}

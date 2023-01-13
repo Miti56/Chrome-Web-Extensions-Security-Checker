@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "HDCG",
+	"description": "HDCG",
+	"version": "1.0.2",
+	"app": {
+		"urls": [
+			"http://www.hdcg.co.kr/"
+		],
+		"launch": {
+			"web_url": "http://www.hdcg.co.kr/"
+		}
+	},
+	"icons": {
+		"128": "ic_launcher_128x128.png"
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	],
+	"manifest_version": 2
+}

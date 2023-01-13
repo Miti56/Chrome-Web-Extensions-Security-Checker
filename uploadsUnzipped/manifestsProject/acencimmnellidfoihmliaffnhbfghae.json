@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "TengeConverter",
+  "description": "Это расширение помогает переводить цены в доллары на сайте крыша и колеса",
+  "short_name": "Converter",
+  "version": "0.0.0.9",
+  "icons": { "16": "ico16.png", "128": "chromeIcon.png" },
+  "browser_action": {
+    "default_icon": "ico16.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://kolesa.kz/*", "http://krisha.kz/*"],
+      "js": ["jquery-1.12.0.min.js", "script.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "http://kolesa.kz/",
+    "http://krisha.kz/"
+  ]
+}

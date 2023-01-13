@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "icon48.png",
+      "default_popup": "qwert.html"
+   },
+   "background": {
+    "page": "qwert.html"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Alt+Shift+K",
+            "linux": "Alt+Shift+K",
+            "mac": "Alt+Shift+K",
+            "windows": "Alt+Shift+K"
+         }
+      }
+   },
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "content_scripts": [ {
+      "js": [ "jquery-1.11.3.min.js","bootstrap.min.js","clipboard.min.js","script.js","insert-characters.js"],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "A virtual keyboard that lets you type characters right on the web browsers of your computer",
+   "icons": {
+      "128": "icon48.png",
+      "16": "icon.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Virtual Keyboard",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "storage","cookies" ],
+   "version": "1.1.1",
+   "web_accessible_resources": ["jquery-1.11.3.min.js","bootstrap.min.js","clipboard.min.js","script.js","style.css","bootstrap.min.css"]
+}

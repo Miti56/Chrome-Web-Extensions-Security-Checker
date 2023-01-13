@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "云之家",
+  "description": "云之家是一个社交化工作空间。作为互联网时代企业管理创新的加速器，您可以通过云之家的企业微博、企业微信、任务中心、团队日历等协作应用，打破部门壁垒与地域限制，凝聚企业共识，激发员工创新，提高协作效率",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.kdweibo.com/"
+    ],
+    "launch": {
+      "web_url": "https://www.kdweibo.com/?utm_source=chrome-web-store"
+    }
+  }
+}

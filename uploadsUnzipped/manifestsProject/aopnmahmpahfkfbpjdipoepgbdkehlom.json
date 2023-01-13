@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SBD Yerel for KRW",
+  "version": "1.0.4",
+  "short_name": "SBD Yerel",
+  "description": "See the value of your Steemit reward in South Korean Won (KRW) ",
+  "icons": {"16": "16.png", "48": "48.png", "128": "128.png"},
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "off.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs",
+        "*steemit.com*"
+    ]
+
+}

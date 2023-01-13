@@ -1,0 +1,18 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "background.js" ]
+      }
+   },
+   "description": "Acesse o Whatsapp no seu pc usando-o no Chrome.",
+   "icons": {
+      "128": "imagens/logo-128.png",
+      "16": "imagens/logo-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAorB4Y920DkO86UGTYx3YEfSE4cWEeeVGcMbqqUrnuB3c/qji3DqBaSA1Z42ZihR0tFSfU3VaTvKxq2TM1xieg4sI+kIJ10ACS6dtt9y59SHpgES1qjwcdb1iXoPUDu9AqGE32Lsyc77eeYEK/uE7ixOmp6hltfqfR124UcnZ8hAi0K9z0BhjkSd5P3oeNKMJeztiBWTTOyW+M4HYMEgNKPpqjOCHwZj3n1mG/YZCaQBtN5KlApnH9ba95oNhVC/OGEJryw0siHQb+PDgkrzB1L0BKV8pjzXKbwFMSo76NnXwMB8cDH71UwW8cz8UZdc3SjkP6F+8xLBeQIS5fnez8QIDAQAB",
+   "manifest_version": 2,
+   "name": "Whatsapp Web - Para PC e Chrome",
+   "permissions": [ "webview" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.1"
+}

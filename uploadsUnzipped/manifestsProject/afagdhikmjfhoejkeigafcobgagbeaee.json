@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+      "js": [ "content_script.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Replaces the text 'podcast' with 'codpast'",
+   "manifest_version": 2,
+   "name": "Codpast",
+   "version": "1.0"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Domifreak",
+  "background": {
+    "scripts": [
+      "utils.js"
+    ],
+    "persistent": true
+  },
+  "description": "Domifreak was created for all Domino lovers",
+  "version": "2.2.14",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "browser_action": {
+    "default_icon": "dominate.png",
+    "default_title": "Domifreak",
+    "default_popup": "beat.html"
+  },
+  "permissions": [
+    "storage",
+    "<all_urls>",
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+    "128": "dominate.png"
+  }
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "exSports Sync",
+  "description": "Syncs your FIFA 18 FUT Club with EXP",
+  "version": "1.0.1",
+
+  "browser_action": {
+    "default_title": "exSports"
+  },
+  "background": {
+    "scripts": ["exsports-chrome.js"]
+  },
+  "icons": { "16": "logo-16.png", "48": "logo-48.png", "128": "logo-128.png" },
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "debugger",
+    "*://*.easports.com/",
+    "*://*.ea.com/"
+  ],
+  "content_scripts" : [
+      {
+          "matches" : [ "https://*.futexp.io/*" ],
+          "js": ["openDialog.js", "jquery.js"]
+      }
+  ],
+  "externally_connectable": {
+  "matches": ["*://*.futexp.io/*"]
+  }
+}

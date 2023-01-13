@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"description": "How To Train Your Dragon",
+"icons": {
+    "128": "images/icon.png"
+  },
+"version": "1.2",
+"name": "Hiccup & Toothless",
+"theme": {
+"images" : {
+"theme_frame" : "images/frame.png",
+"theme_toolbar" : "images/toolbar3.png",
+"theme_ntp_background" : "images/background.png",
+"theme_tab_background" : "images/tabinactive.png"
+},
+"colors" : {
+"ntp_link": [0,83,135],
+"ntp_text": [255,255,255],
+"ntp_section_link": [0,83,135],
+"ntp_section_text": [255,255,255],
+"ntp_background": [45 , 117 , 160],
+"frame": [33 , 107 , 155],
+"toolbar": [152 , 193 , 210],
+"tab_text": [228,0,0],
+"tab_background_text": [0,83,135],
+"bookmark_text": [0,83,135],
+"control_background": [228,0,0]
+},
+"tints" : {
+"buttons" : [0.6, 0.9, 0.35]
+},
+"properties" : {
+"ntp_background_alignment" : "center",
+"ntp_background_repeat": "no-repeat"
+}
+}
+}

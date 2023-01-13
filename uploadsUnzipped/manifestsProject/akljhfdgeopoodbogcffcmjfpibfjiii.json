@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "IMDb Icon Search",
+"description" : "Adds customizable search icons to the IMDb site.",
+"manifest_version" : 2,
+"version" : "1.23",
+"background" : {"page" : "index.html"},
+"icons" : {"128": "images/icon128.png"},
+"options_page" : "options.html",
+"content_scripts": [
+{"js": ["oex_shim/operaextensions_injectedscript.js", "includes/imdb.js"], "matches": ["<all_urls>"], "include_globs": ["http://*.imdb.com/title/*"], "exclude_globs": [], "run_at": "document_start", "all_frames" : true}],
+"web_accessible_resources" : ["images/gradient.png","images/icon128.png","includes/imdb.js"],
+"permissions" : ["https://*/*", "storage", "http://*/*"],
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'unsafe-eval';"
+}

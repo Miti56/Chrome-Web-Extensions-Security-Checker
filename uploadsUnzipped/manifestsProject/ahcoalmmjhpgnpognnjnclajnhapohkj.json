@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Deutscher Thesaurus (OpenThesaurus)",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Thesaurus in deutscher Sprache zum schnellen Nachschlagen im Browser",
+  "homepage_url": "http://hagentrinter.de/",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "browser_action": {
+    "default_icon": "icon19.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "http://www.openthesaurus.de/*",
+    "contextMenus",
+    "tabs"
+  ]
+}

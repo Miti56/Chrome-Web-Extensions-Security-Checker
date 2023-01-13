@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "VY & TEA",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "VY & TEA infor customer",
+    "homepage_url": "https://pages.fm",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"           
+        },
+        "default_title": "VY & TEA"    
+    },
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://pages.fm/*"
+            ],
+            "css": ["css/jquery-ui.css", "css/css_bg.css"],
+            "js": [
+                "js/jquery/jquery.min.js",
+                "js/jquery/livequery.js",
+                "js/script.js"
+
+            ]
+        }
+    ]
+}

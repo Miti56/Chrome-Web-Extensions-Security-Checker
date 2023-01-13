@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ReadPaths",
+  "version": "1.5",
+  "icons": {
+    "16": "favicon-16x16.png",
+    "32": "favicon-32x32.png"
+  },
+  "description": "Add articles to readpaths.",
+  "manifest_version": 2,
+  "permissions": [
+    "cookies",
+    "contextMenus",
+    "https://readpaths.com/"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "onClicked": {}
+  }
+}

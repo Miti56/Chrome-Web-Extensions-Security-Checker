@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Springboard JobTracker",
+  "description": "Save job applications to your career dashboard directly from job posting sites.",
+  "version": "1.1",
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/logged-out-icon.png"
+    }
+  },
+  "background": {
+    "scripts": [
+      "ext-config.js",
+      "ext-env.js",
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.springboard.com/*",
+    "*://*.segment.io/*"
+  ],
+  "content_security_policy": "script-src https://use.fontawesome.com https://maps.googleapis.com https://springboard.com https://*.segment.com 'self' 'unsafe-eval'; object-src 'self';",
+  "web_accessible_resources": [
+    "assets/css/*",
+    "assets/js/*",
+    "assets/fonts/*",
+    "index.html"
+  ]
+}

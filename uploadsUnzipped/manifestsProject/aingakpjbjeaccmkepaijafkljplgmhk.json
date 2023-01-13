@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "フリー層：RDP：ストリーミングデスクトップガイド",
+"short_name": "Windows 10 : RDP",
+"version": "0.0.1",
+"description": "任意の画面またはデバイスを完全に機能的なデスクトップにするには......単にインターネットを追加します >>>",
+ "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+
+  },
+"browser_action": {
+"default_title": "フリー層：RDP：ストリーミングデスクトップガイド"
+},
+
+"background":{
+  "scripts": ["background.js"]
+},
+
+"permissions": [
+"tabs"
+]
+}

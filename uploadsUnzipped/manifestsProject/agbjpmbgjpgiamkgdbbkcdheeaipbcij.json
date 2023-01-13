@@ -1,0 +1,21 @@
+{"icons": {"128": "128-main.png"}, 
+
+"name": "__MSG_headTitle__", 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"manifest_version": 2, 
+
+"chrome_url_overrides": {"newtab": "homepage.html"}, 
+
+"default_locale": "en", 
+
+"background": {"scripts": ["new_script.js"]}, 
+
+"browser_action": {"default_icon": "128-main.png", 
+
+"default_title": "Vampire Knight New Tab Page"}, 
+
+"description": "__MSG_addoninfo__", 
+
+"version": "3.5.6"}

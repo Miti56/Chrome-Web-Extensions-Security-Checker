@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "__MSG_application_title__",
+	"default_locale": "en",
+	"description": "__MSG_application_description__",
+	"version": "1.0.5",
+	"icons": { 
+		"16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
+  "browser_action": {
+    "default_title": "Simple Auto HD for Youtube",
+    "default_icon": "icon-16.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+      "scripts": [
+       "/js/update-conf.js","/js/update.min.js"
+      ]
+  },
+
+	"content_scripts": [{
+		"matches": ["*://www.youtube.com/*"],
+		"exclude_globs": [
+			"*/embed/*",
+			"*/tv#/*",
+			"*/tv/*"
+		],
+		"all_frames": true,
+		"js": ["content.js"],
+		"run_at": "document_start"
+	}],
+
+	"permissions": ["contextMenus", "storage", "*://www.youtube.com/*", "https://*.freebusinessapps.net/*"]
+}

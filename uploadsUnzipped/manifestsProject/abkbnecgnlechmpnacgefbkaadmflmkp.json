@@ -1,0 +1,65 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Easy Travel Tab",
+    "short_name": "EasyTravelTab",
+    "default_locale": "en",
+    "description": "__MSG_extShortDesc__",
+    "version": "1.1.4",
+    "icons": {
+        "128": "images/128x128.png",
+        "96": "images/96x96.png",
+        "48": "images/48x48.png",
+        "16": "images/16x16.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://s3.eu-central-1.amazonaws.com/*"
+            ],
+            "js": [
+                "content/content.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "permissions": [
+        "https://*/*",
+        "tabs",
+        "storage",
+        "unlimitedStorage",
+        "geolocation",
+        "unlimitedStorage",
+        "http://partners.api.skyscanner.net/apiservices/",
+        "https://www.google-analytics.com/",
+        "https://s3.amazonaws.com/",
+        "https://maps.googleapis.com/maps/api/",
+        "http://api.bing.com/",
+        "<all_urls>",
+        "webRequest",
+        "webRequestBlocking",
+        "*://s3.eu-central-1.amazonaws.com/"
+    ],
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "lib/angular/js/angular.min.js",
+            "app/common/global.js",
+            "app/background.js"
+        ]
+    },
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+    "externally_connectable": {
+        "matches": [
+            "*://*.google-analytics.com/*"
+        ]
+    },
+    "web_accessible_resources": [
+        "content/*"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "app/tab.html"
+    }
+}

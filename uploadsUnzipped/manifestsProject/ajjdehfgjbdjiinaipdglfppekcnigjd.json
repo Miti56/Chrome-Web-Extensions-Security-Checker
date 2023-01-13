@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Element Text Selector",
+  "version": "1.0",
+  "description": "Highlights text based on elements.",
+  "permissions": ["contextMenus","activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action":{
+    "default_icon":"16.png"
+  },
+  "commands": {
+    "usedHotkey":{
+      "suggested_key":{
+        "default":"Ctrl+Shift+A",
+        "windows":"Ctrl+Shift+A",
+        "mac":"Command+Shift+A"
+      },
+      "description":"Highlights text"
+    }
+  },
+  "manifest_version": 2,
+  "icons": {
+    "16":"16.png",
+    "48":"48.png",
+    "128":"128.png"
+  }
+}

@@ -1,0 +1,11 @@
+{
+   "browser_action": {
+      "default_icon": "icon1.png",
+      "default_popup": "1.html"
+   },
+   "description": "All of this",
+   "manifest_version": 2,
+   "name": "Relation",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.13"
+}

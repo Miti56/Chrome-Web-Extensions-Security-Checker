@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Amazon t-shirt design downloader",
+  "version": "1.0",
+  "author": "Do van Cuong",
+  "description": "Download design of amazon t-shirt. A tool writed by Do Van Cuong",
+  "permissions": ["storage","declarativeContent","activeTab","downloads"],
+  "options_page": "options.html",
+  "page_action": {
+      "default_popup": "popup.html",
+	  "default_icon": {
+        "16": "images/ico16.png",
+        "32": "images/ico32.png",
+		"48": "images/ico48.png",
+		"128": "images/ico128.png"
+      }
+   },
+	"icons": {
+	  "16": "images/ico16.png",
+	  "32": "images/ico32.png",
+	  "48": "images/ico48.png",
+	  "128": "images/ico128.png"
+	},
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "manifest_version": 2
+}

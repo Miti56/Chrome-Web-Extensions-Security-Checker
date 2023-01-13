@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Daily News",
+	"version": "1.0",
+	
+  	"default_locale": "en",
+  	"description": "Real time news headlines powered by Google News",
+  	"icons": {"64":"img/dn-logo64.png"},
+
+  	"browser_action": {
+		"default_icon": {
+			"32": "img/dn-logo32.png",
+			"64": "img/dn-logo64.png"        
+		},
+		"default_title": "Daily News",
+		"default_popup": "index.html"
+	},
+	"permissions":[
+		"tabs",
+		"https://*.google.com/*"
+	],
+	"short_name": "Daily News"
+}

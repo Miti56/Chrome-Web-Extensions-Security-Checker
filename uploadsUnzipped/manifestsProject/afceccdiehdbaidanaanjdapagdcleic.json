@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Crowler Susep - Axa Seguros",
+  "description": "Get statistcs from SUSEP",
+  "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {"256": "icon.png"},   
+
+  "content_scripts": [
+    {
+      "matches": ["http://www2.susep.gov.br/menuestatistica/SES/premiosesinistros.aspx?id=54"],
+      "run_at": "document_end",
+      "js": ["js/vendor.js", "js/contentGetStatistics.js", "js/contentGenerateSheet.js"]
+    },
+    {
+      "matches": ["http://www2.susep.gov.br/menuestatistica/SES/resp_premiosesinistros.aspx"],
+      "run_at": "document_end",
+      "js": ["js/vendor.js", "js/contentGetTableData.js"]
+    },
+    {
+      "matches": ["https://www.axa.com.br/"],
+      "run_at": "document_end",
+      "js": ["js/vendor.js", "js/contentGenerateRawSheet.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["js/vendor.js", "js/background.js"]
+  },
+
+  "permissions": [
+    "storage",
+    "activeTab"
+  ]
+}

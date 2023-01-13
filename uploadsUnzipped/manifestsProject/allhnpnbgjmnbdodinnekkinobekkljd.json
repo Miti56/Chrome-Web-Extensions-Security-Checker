@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Xtreme Offroad Car Racing 4x4",
+
+  "short_name": "Xtreme Offroad Car Racing 4x4",
+
+  "version": "1.0.2",
+  "description": "Play Xtreme Offroad Car Racing 4x4 now!",
+
+  "homepage_url": "http://chromapp.xyz/c/sport-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Xtreme Offroad Car Racing 4x4",
+
+      "default_popup": "popup.html"
+  }
+}

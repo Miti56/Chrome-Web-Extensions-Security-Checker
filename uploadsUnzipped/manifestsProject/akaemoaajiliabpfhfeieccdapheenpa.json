@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "0.1",
+  "name": "单一窗口数据同步",
+  "description": "中国国际贸易单一窗口货物申报、税费支付数据同步工具",
+  "permissions": ["*://swapp.singlewindow.cn/*","file:///*", "http://openapi.welogix.co/*", "https://openapi.welogix.cn/*", "http://localhost:3031/*", "tabs", "declarativeContent", "storage", "notifications"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    "icons/icon16.png",
+    "icons/icon48.png",
+    "icons/icon128.png",
+    "icons/icon19.png",
+    "icons/icon38.png"
+  ],
+  "page_action": {
+    "default_icon": "icons/icon128.png",
+		"default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://swapp.singlewindow.cn/*"],
+      "all_frames": true,
+      "js": [
+        "js/vendor/jquery.js",
+        "js/content_script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["js/background_script.js"],
+    "persistent": false
+  }
+}

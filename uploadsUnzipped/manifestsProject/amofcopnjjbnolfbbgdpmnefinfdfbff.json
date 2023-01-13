@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Github Bugspots",
+  "description": "Show a list of ranked files which likely have bugs",
+  "version": "0.8.4",
+  "homepage_url": "https://github.com/travelist/github-bugspots",
+  "content_scripts": [{
+    "matches": ["https://github.com/*"],
+    "js": [
+      "bower_components/jquery/dist/jquery.min.js",
+      "bower_components/handlebars/handlebars.min.js",
+      "bower_components/github-api/lib/underscore-min.js",
+      "bower_components/github-api/github.js",
+      "github-bugspots.js"
+    ],
+    "run_at": "document_end",
+    "all_frames": false
+  }],
+  "web_accessible_resources": [
+    "templates/main.html",
+    "templates/ranking.html",
+    "templates/button.html"
+  ],
+  "manifest_version": 2
+}

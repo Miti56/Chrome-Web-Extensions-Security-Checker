@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+
+  "name": "Online Logo Maker - Designimo",
+  "short_name": "Logo Maker - Designimo",
+  "description": "Logo Design, Online Logo Maker & Generator - Create awesome logo design for your business in a few minutes.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons":
+{
+
+"128": "128x128.png"
+},
+
+"app": 
+{
+"urls": [ "http://www.designimo.com/"],
+"launch":
+{
+"web_url":"http://www.designimo.com/#logomakerapp"}
+}
+}

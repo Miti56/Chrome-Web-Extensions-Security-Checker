@@ -1,0 +1,112 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "T1280 ikol ada",
+  "version": "0.2",
+  "description": " selfmake 1280 theme ",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_ntp_attribution": "images/theme_ntp_attribution.png",
+      "theme_window_control_background": "images/theme_window_control_background.png"
+    },
+    "colors": {
+      "frame": [
+        14,
+        0,
+        138
+      ],
+      "frame_inactive": [
+        9,
+        0,
+        128
+      ],
+      "frame_incognito": [
+        71,
+        96,
+        128
+      ],
+      "frame_incognito_inactive": [
+        47,
+        78,
+        110
+      ],
+      "toolbar": [
+        0,
+        0,
+        0
+      ],
+      "tab_text": [
+        255,
+        255,
+        255
+      ],
+      "tab_background_text": [
+        217,
+        217,
+        217
+      ],
+      "bookmark_text": [
+        217,
+        217,
+        217
+      ],
+      "ntp_background": [
+        0,
+        0,
+        0
+      ],
+      "ntp_text": [
+        255,
+        255,
+        255
+      ],
+      "button_background": [
+        30,
+        17,
+        115,
+        0.58
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "left bottom",
+      "ntp_background_repeat": "no-repeat"
+    },
+    "tints": {
+      "buttons": [
+        0,
+        0,
+        0.76
+      ],
+      "frame": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_inactive": [
+        0.69,
+        1,
+        0.22
+      ],
+      "frame_incognito": [
+        0.63,
+        0.58,
+        0.4
+      ],
+      "frame_incognito_inactive": [
+        0,
+        0,
+        0.62
+      ],
+      "background_tab": [
+        0,
+        0,
+        0.34
+      ]
+    }
+  }
+}

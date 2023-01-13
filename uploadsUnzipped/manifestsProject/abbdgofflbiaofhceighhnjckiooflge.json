@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Qilania",
+  "version": "1.2",
+  "icons": { "16": "16.png", "48": "48.png", "128": "128.png" },
+  "app": {
+    "urls": [
+      "http://www.qilania.com/es/login.php",
+      "http://www.quilania.com/es/login.php"
+    ],
+    "launch": {
+      "web_url": "http://www.qilania.com/es/login.php"
+    }
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "manifest_version": 2
+}

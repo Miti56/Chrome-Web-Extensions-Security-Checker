@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Numero Lingo",
+  "description": "Take visual/oral tests to learn foreign language numbers and arithmetic in English, French, German, Italian, Portuguese & Spanish.",
+  "version": "0.0.0.5",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "launch": {
+      "web_url": "http://www.silvawood.co.uk/lingo"
+    }
+  },
+  "offline_enabled": true
+}

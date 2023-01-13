@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "2.4.14",
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.chessmail.de/",
+	  "http://www.chessmail.eu/"
+    ],
+    "launch": {
+      "web_url": "http://www.chessmail.eu/switchLanguageAuto.html"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Pricing Blocker",
+  "description": "Shield to block dynamic pricing.",
+  "version": "1.0.55",
+  "author": "Hashbinary",
+  "content_scripts": [
+    {
+      "js": [
+        "js/contentscript.js"
+      ],
+      "run_at": "document_start",
+      "matches": [
+        "<all_urls>"
+      ]
+    },
+    {
+      "js": [
+        "js/loginContentscript.js"
+      ],
+      "run_at": "document_end",
+      "matches": [
+        "https://portal.pricingblocker.org/*",
+        "http://localhost:4200/*"
+      ]
+    },
+    {
+      "match_about_blank": true,
+      "all_frames": true,
+      "js": [
+        "js/content-script.bundle.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "match_about_blank": true,
+      "all_frames": true,
+      "js": [
+        "js/content-script.searchItems.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "html/*.html",
+    "*.*",
+    "*.html"
+  ],
+  "background": {
+    "page": "html/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "images/inactive16.png",
+    "default_title": "Pricing Blocker V1.0",
+    "default_popup": "html/popup.html"
+  },
+  "icons": {
+    "48": "images/active48.png",
+    "128": "images/active128.png"
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:4200/*",
+      "https://portal.pricingblocker.org/*"
+    ]
+  },
+  "incognito": "spanning",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "notifications",
+    "contextMenus",
+    "background",
+    "contentSettings",
+    "https://www.googleapis.com/",
+    "webRequestBlocking",
+    "webRequest",
+    "activeTab",
+    "identity",
+    "management",
+    "tabs",
+    "storage",
+    "browsingData",
+    "proxy",
+    "privacy"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnGwphBaDj2b6sTYnE4tqeETVAP5ajW9eNyypl3fmggsGl5aauLkTYdKR4BJVxnCwuaOQSRrjXDbJR0g9rK2WhZ85inf5aT1aJ2bFoZLX3LoF0HbIvI/aciNvBMKP/GEtd902cLF8SU/6+ALBXSdvTkI4gwYnw2XTA364F4TdKZyMIEwvwselSTPVHCjdczSVnnFq2y6RecsWNh08RSxiJQL6gEigmFc4FHaLP11Q6SOONu35YktDU2H2aHbtG5jDNWxYfiGMHBe6hcMZeiuJnPeyjzdqI6Y43+DJNR3mTTs2ieba9zOP8w+C8GvfFhObXkJx/Tp8mNahnU5gQAsBnwIDAQAB",
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com 'unsafe-eval'; object-src 'self'",
+  "oauth2": {
+    "client_id": "1061483791874-ipptcemn9sp9t6q8b6puv0l0lqcpqjo6.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/plus.login",
+      "https://www.googleapis.com/auth/chromewebstore.readonly",
+      "https://www.googleapis.com/auth/appsmarketplace.license"
+    ]
+  }
+}

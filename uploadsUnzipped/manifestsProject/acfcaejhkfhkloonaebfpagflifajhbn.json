@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "coolor",
+  "description": "Pogledajte na Coolor aplikaciji najčudnije nazive boja i razrešite večitu muško-žensko dilemu.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://getcoolor.com/"
+    ],
+    "launch": {
+      "web_url": "http://getcoolor.com/"
+    }
+  },
+  "icons": {
+    "128": "coolor-w-128.png"
+  }
+}

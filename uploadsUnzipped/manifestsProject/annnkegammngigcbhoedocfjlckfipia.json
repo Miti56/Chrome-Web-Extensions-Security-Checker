@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Roller Adventure Coaster Online Tycoon Games",
+  "description": "Roller Coaster Tycoon, Rolling Sky, Scribblenauts Remix, Scribblenauts Unlimited, Smash or Pass, Solitaire, Star Wars",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

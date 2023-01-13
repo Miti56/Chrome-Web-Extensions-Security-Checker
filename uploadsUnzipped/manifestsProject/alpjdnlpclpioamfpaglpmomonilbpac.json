@@ -1,0 +1,19 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "contentScript.js" ],
+      "matches": ["http://demo.netsync.co.kr/Mob/flash_test/chrome/*"]
+   } ],
+   "description": "CJ Vingo for Chrome Testver",
+   "externally_connectable": {
+      "matches": ["http://demo.netsync.co.kr/Mob/flash_test/chrome/*"]
+   },   
+   "manifest_version": 2,
+   "name": "CJ Vingo for Chrome Testver",
+   "permissions": ["http://demo.netsync.co.kr/Mob/flash_test/*", "nativeMessaging", "tabs", "downloads" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0.32"
+}

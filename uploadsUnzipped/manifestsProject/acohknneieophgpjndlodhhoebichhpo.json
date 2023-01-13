@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "minimum_chrome_version": "34",
+   "name": "Ofcampus Screensharing",
+   "permissions": [ "desktopCapture" ],
+   "short_name": "Screen sharing for Ofcampus",
+   "version": "0.0.0.1",
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "script.js" ]
+   },
+   "description": "Extension to allow screen sharing in Ofcampus applications.",
+   "externally_connectable": {
+      "matches": [ "*://*.ofcampus.com/*"]
+   },
+   "icons": {
+      "128": "pu_main_128.png",
+      "16": "pu_main_16.png",
+      "48": "pu_main_48.png"
+   },
+   "browser_action":{
+     "default_icon": "pu_main_128.png"
+   }
+}
+

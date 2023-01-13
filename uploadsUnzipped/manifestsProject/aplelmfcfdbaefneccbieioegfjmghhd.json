@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ThienDia Extreme",
+  "short_name": "ThienDia",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Xóa quảng cáo vào chỉnh lại giao diện trên ThienDia để thuận tiện đọc truyện hơn",
+  "homepage_url": "http://hieu.azurewebsites.net/",
+  "icons": {
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+	"scripts" : ["js/jquery/jquery.js", "src/bg/background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "storage", "tabs", "https://*/*", "http://*/*" ,  "contextMenus", "notifications", "activeTab", "unlimitedStorage", "background" 
+  ],
+  "browser_action" : {
+    "default_title" : "Thien Dia Extra"
+  },
+  "options_ui": {
+    "page" : "src/options/options.html",
+    "open_in_tab" : true
+  },
+  "web_accessible_resources": [
+    "icons/*.png","src/inject/*.*"
+  ]
+}

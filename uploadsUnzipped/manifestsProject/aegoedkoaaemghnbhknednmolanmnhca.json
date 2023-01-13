@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "short_name": "DocuSign",
+  "version": "4.2.0",
+  "default_locale": "en",
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "66351547828",
+  "app": {
+    "launch": {
+      "web_url": "https://dsgoogle.docusign.net/start-oauth-process/gapps"
+    }
+  }
+}

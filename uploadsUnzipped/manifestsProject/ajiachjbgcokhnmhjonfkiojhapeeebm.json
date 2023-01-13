@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Babylon Software Translator",
+  "version": "2.6",
+  "manifest_version": 2,
+  "description": "Babylon tool translates texts from within your Google Chrome in a single click.",
+  "background": { "page": "bg.html" },
+  "icons": { "48": "Babylon48.png", "128": "Babylon48.png" },  
+  "permissions": [ "tabs", "nativeMessaging" ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",        
+        "file:///*"
+      ],      
+      "js": ["cs.js"],      
+      "all_frames" : true 
+    }
+  ]
+}

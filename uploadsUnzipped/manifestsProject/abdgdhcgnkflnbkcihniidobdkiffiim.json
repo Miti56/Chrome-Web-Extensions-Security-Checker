@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "confgsec",
+	"version": "1.8",
+	"content_security_policy": "script-src 'self' https://tuniplanet365.net; object-src 'self'",
+	"permissions": [
+    	"storage",
+    	"tabs",
+    	"https://m.planetwin365.com/*",
+    	"https://*.tuniplanet365.net/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*.tuniplanet365.net/*",
+				"https://m.planetwin365.com/*"
+				
+			],
+			"js": [
+				"jquery.js",				
+				"content.js"
+			]
+		}
+	]
+}

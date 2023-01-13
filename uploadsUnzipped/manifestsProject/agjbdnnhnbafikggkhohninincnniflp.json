@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "WiinkZ New Tab",
+	"short_name": "WiinkZ New Tab", 
+	"version": "3.0.3",
+	"manifest_version": 2,
+	"description": "Create a beautiful personalized new tab with wallpapers, weather & news",
+	"icons": {
+		"16": "icons/icon16.png",
+		"128": "icons/icon128.png"
+	},
+	"homepage_url": "https://www.wiinkz.com",
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"browser_action" : {
+		"default_title" : "WiinkZ",
+		"default_icon" : "icons/chrome.png",
+		"default_popup": "popup.html"
+	},
+	"chrome_url_overrides" : {
+		"newtab": "redirect.html"
+	},
+	"permissions": [
+		"tabs",
+		"management"
+	]
+}

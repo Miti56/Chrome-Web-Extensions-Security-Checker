@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  
+  "name": "Tech Jargon Generator",
+  "description": "Sound tech savvy with the click of a button using our app",
+  "version": "1.0",
+  "offline_enabled": false,
+  
+  "app": {
+    "urls": [
+		"http://makebullshit.com/?chromeapp"
+	],
+    "launch": {
+      "web_url": "http://makebullshit.com/?chromeapp"
+    }
+  },
+  
+  "icons": {
+    "128": "icon.png"
+  },
+  
+    "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

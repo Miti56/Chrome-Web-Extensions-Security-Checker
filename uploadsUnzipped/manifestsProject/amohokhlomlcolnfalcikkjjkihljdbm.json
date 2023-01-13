@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "71.31",
+  "version_name":"Extension 71.31",
+  "name": "Extension 7131",
+  "description": "Extension for testing purposes Extension for testing purposes",
+  "manifest_version": 2,
+
+  "author": "caon",
+  "author_email": "caon@google.com",
+
+  "browser_action": {
+      "default_icon": "PicMonkey_16.png",
+        "default_popup" : "popup.html"
+  },
+
+  "language": "en",
+  "country": "USA",
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "js": ["foo.js"]
+    }
+  ],
+
+  "permissions": [
+    "http://www.google.com/*"
+  ]
+}

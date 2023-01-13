@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LMSearch",
+  "version": "2.0.2",
+  "manifest_version": 2,
+
+  "description": "Last Mile Search (LMS) extension.",
+  "icons": {
+    "48" : "images/lms-manifest-48.png",
+    "128" : "images/lms-manifest-128.png"
+  },
+  "background" : {
+	"scripts": ["jquery.js", "json2.js", "date.js", "similar.js",
+			"analyze.js", "eventdata.js", "storage.js", 
+			"conversations.js", "mainbackground.js"
+			]
+  },
+  "options_page" : "optionspage.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["lms_styles.css", "jquery-ui-1.10.4.custom.css"],
+      "js": ["jquery.js", "json2.js", "date.js", "pup.js", "jquery-ui-1.10.4.custom.js",
+      		 "similar.js", "datatypes.js", "analyze.js", "eventdata.js", "lmsworker.js", 
+      		 "pageaction_ui.js", "storage.js", "contentscript.js"],
+      "run-at": ["document-idle"],
+      "all-frames": "true"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "unlimitedStorage",
+    "contextMenus",
+    "chrome://favicon/",
+    "cookies",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "images/*.png"
+  ]
+}
+

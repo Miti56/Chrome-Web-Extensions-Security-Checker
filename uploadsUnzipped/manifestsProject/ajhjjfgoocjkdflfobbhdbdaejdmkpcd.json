@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LinesCounter",
+  "version": "1.2",
+  "description": "Count how many lines were added/removed in a pull request on bitbucket.org",
+  "author": "Mukha Viacheslav",
+  "manifest_version": 2,
+  "icons": {
+    "48": "/images/bitbucket_48.png"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["*://*/*"],
+      "js": [
+        "/scripts/libs/jquery-2.1.0.min.js",
+		"/scripts/libs/jquery.growl.js",
+        "/scripts/contentScripts/content.js"
+      ],
+	  "css": [
+		"/css/jquery.growl.css"
+	  ],
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

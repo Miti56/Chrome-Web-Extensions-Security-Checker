@@ -1,0 +1,26 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Quick Launcher App",
+ "version": "1",
+ "manifest_version": 2,
+ "minimum_chrome_version": "23",
+"icons": { "16": "icone.png",
+           "48": "icone.png",
+          "128": "icone.png" },
+ "app": {
+ "background": {
+ "scripts": ["background.js"]
+ 
+ }
+ },
+
+ "permissions": [
+ "storage"
+
+ 
+
+ ]
+
+ 
+}

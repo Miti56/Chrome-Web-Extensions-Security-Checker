@@ -1,0 +1,43 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"manifest_version" : 2,
+"version" : "1.0",
+"name": "Archon",
+
+"theme":
+{
+	"images" : 
+	{
+		"theme_frame" : "images/archon_frame.png",
+		"theme_ntp_background" : "images/archon_back.png",
+		"theme_toolbar" : "images/archon_toolbar.png",
+		"theme_tab_background" : "images/archon_tab_back.png",
+		"theme_tab_background_incognito" : "images/archon_tab_back.png",
+		"theme_tab_background_v" : "images/archon_tab_back.png",
+		"theme_ntp_attribution" : "images/attribution.png"
+	},
+	
+	"colors":
+	{
+		"frame" : [15,126,202],
+		"frame_inactive" : [81,83,106],
+		"frame_incognito" : [15,126,202],
+		"frame_incognito_inactive" : [81,83,106],
+		"tab_text" : [255,255,255],
+		"tab_background_text" : [240,240,240],
+		"toolbar" : [15,126,202],
+		"bookmark_text" : [255,255,255],
+		"ntp_section_text" : [255,255,255],
+		"ntp_section_link" : [222,222,222],
+		"ntp_section_link_underline" : [222,222,222],
+		"ntp_text" : [255,255,255],
+		"ntp_link" : [222,222,222],
+		"npt_link_underline" : [222,222,222],
+		"ntp_header" : [0,0,0],
+		"ntp_section" : [0,0,0],
+		"ntp_background" : [0,0,0],
+		"control_background" : [15,126,202],
+		"button_background" : [15,126,202]
+	}
+}
+}

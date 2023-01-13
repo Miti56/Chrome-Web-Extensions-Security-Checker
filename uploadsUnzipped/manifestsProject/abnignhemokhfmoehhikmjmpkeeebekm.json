@@ -1,0 +1,32 @@
+{
+    "browser_action": {
+        "default_icon": "img/discount32.png",
+        "default_popup": "feed.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "content_scripts": [
+        {
+            "js": [ "inject.js" ],
+            "matches": [ "http://www.siguedescuentos.com/*" ],
+            "run_at": "document_end"
+        }
+    ],
+    "default_locale": "es",
+    "description": "__MSG_chrome_extension_description__",
+    "icons": {
+        "128": "img/discount128.png",
+        "32": "img/discount32.png",
+        "48": "img/discount48.png",
+        "64": "img/discount64.png"
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuMVxQZ7g892/pyLzqj5+e7wE83jTNg6vq/pbIqkAa1gITBG1JXQVM88Zp3LCL+KShy0+E2XX/+LltZfYS1Vo19mFMbf7mH6x1nPLbPr5bmCn5iyggSEjsnju0C6QRsTchCCJJxGiy7m3e90n8cuV8LZTpjUcEkdbOTiQDiRK7pmsxZNPQIRXJXPPBZk+qWcWMo1rpEmBmiFJs/9IAZ92fbN5HK+KHIab5QNAVIVvRGpzFJVBiJXGBhmvAI6aIfWwkgRBCCl2mY9wjdnBXSQeVlJHQhnknLUc9WHgX15o2h5rC2nO5R2Royu+rVf8USyN0ymLIzssSGWhF5gom43n1wIDAQAB",
+    "manifest_version": 2,
+    "name": "__MSG_chrome_extension_name__",
+    "optional_permissions": [ "http://www.siguedescuentos.com/*", "tabs" ],
+    "permissions": [ "http://www.siguedescuentos.com/*", "tabs" ],
+    "permissions": [ "tabs", "storage", "http://www.siguedescuentos.com/*"],
+    "short_name": "__MSG_chrome_extension_short_name__",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.5.8",
+    "web_accessible_resources": [ "inject.js" ]
+}

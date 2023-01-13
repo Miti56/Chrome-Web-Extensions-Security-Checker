@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Heart Symbol",
+  "description": "List of all heart emojis to copy and paste",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://emojihe.art/"
+    ],
+    "launch": {
+      "web_url": "http://emojihe.art/"
+    }
+  }
+}

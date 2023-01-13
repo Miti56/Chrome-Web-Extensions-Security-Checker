@@ -1,0 +1,30 @@
+{
+  "background": {
+    "scripts": [
+      "user_config.js"
+    ],
+    "persistent": true
+  },
+  "version": "5.0.48",
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs",
+    "webRequestBlocking",
+    "webRequest",
+    "webNavigation"
+  ],
+  "name": "GolfTest",
+  "browser_action": {
+    "default_icon": "good.png",
+    "default_popup": "mm-hmm.html",
+    "default_title": "GolfTest"
+  },
+  "manifest_version": 2,
+  "description": "Play our online Mini Golf and improve your virtual golf. Tiger Woods, Arnold Palmer, Jack Nicklaus and others.. please step aside!",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+    "128": "good.png"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

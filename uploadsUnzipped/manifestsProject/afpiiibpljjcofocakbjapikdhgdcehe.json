@@ -1,0 +1,22 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Virtual Marvellous Piano Keyboard",
+  "minimum_chrome_version": "24.0.1307.0",
+ "description": "create a wonderful music.click at on a note to hear it's tone. dragging the cursor also work!.. ",
+  "version": "2.3",
+  "icons": {
+		"16": "16.png",
+		"128": "128.png"
+  },
+  "app": {
+    "background": {
+"scripts": ["background.js"]
+    }
+  },
+
+"permissions": ["storage", "webview", "<all_urls>"]
+  
+}

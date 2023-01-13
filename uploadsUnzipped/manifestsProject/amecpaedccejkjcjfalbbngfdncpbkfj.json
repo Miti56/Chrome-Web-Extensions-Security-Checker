@@ -1,0 +1,78 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "历来",
+  "version": "0.1.3",
+  "manifest_version": 2,
+  "description": "历来简历助手",
+  "icons": {
+    "16": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  },
+  "browser_action": {
+    "default_icon": "images/logo.png",
+    "default_title": "历来",
+    "default_popup": "app.html"
+  },
+  "background": {
+    "scripts": [
+      "config.js",
+      "lib/jquery.js",
+      "js/run.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "css/qichacha.css"
+      ],
+      "js": [
+        "config.js",
+        "lib/jquery.js",
+        "js/base.js",
+        "js/content.js",
+        "js/qichacha.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html",
+  "permissions": [
+    "http://*.qichacha.com/*",
+    "http://*.imd.com/*",
+    "http://ehire.51job.com/*",
+    "https://ehire.51job.com/*",
+    "http://h.liepin.com/*",
+    "https://h.liepin.com/*",
+    "http://easy.lagou.com/*",
+    "https://easy.lagou.com/*",
+    "*.inmindglobal.com/*",
+    "http://*.jihui.io/*",
+    "http://5011fa-0.sh.1253132977.clb.myqcloud.com/*",
+    "https://hrapi.allen.xin/*",
+    "http://127.0.0.1:9002/*",
+    "http://*.jihui.in/*",
+    "http://localhost:8000/*",
+    "http://localhost:8001/*",
+    "http://localhost:8002/*",
+    "http://172.16.52.86:8000/*",
+    "cookies",
+    "tabs",
+    "activeTab",
+    "contentSettings"
+  ],
+  "web_accessible_resources": [],
+  "externally_connectable": {
+    "matches": [
+      "http://*.imd.com/*",
+      "http://*.jihui.io/*",
+      "http://*.inmindglobal.com/*",
+      "http://*.jihui.in/*",
+      "http://127.0.0.1:9002/*"
+    ]
+  }
+}

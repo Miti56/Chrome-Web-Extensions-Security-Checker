@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Карты: телепортация 🦊🗺",
+  "version": "1.0.3",
+  "description": "Быстрый переход в ту же точку между разными источниками карт. Например, из Яндекс-гибрида в топо.",
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_title": "Телепортация",
+    "default_icon": {
+      "16": "icon/Teleport-16.png",
+      "32": "icon/Teleport-32.png",
+      "48": "icon/Teleport-48.png",
+      "128": "icon/Teleport-128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon/Teleport-16.png",
+    "32": "icon/Teleport-32.png",
+    "48": "icon/Teleport-48.png",
+    "128": "icon/Teleport-128.png"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}

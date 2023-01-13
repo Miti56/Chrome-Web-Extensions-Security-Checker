@@ -1,0 +1,58 @@
+{
+   "content_scripts": [ {
+      "css": [ "dist/libs/jquery-ui.css", "dist/libs/lity.css", "dist/styles/style.css" ],
+      "js": [ "dist/libs/jquery-2.2.1.js", "dist/libs/jquery-ui.js", "dist/scripts/gtrack.js", "dist/libs/lity.js", "dist/libs/jquery.fileupload.js", "dist/libs/jquery.csv.js", "dist/libs/notify.js", "dist/scripts/ebay.js","dist/scripts/common.js"  ],
+      "matches": [ "*://*.ebay.com/*","*://*.ebay.co.uk/*","*://*.ebay.de/*","*://*.ebay.fr/*","*://*.ebay.com.au/*" ,"*://*.ebay.es/*"],
+      "run_at": "document_end"
+   },
+   {
+      "css": [ "dist/libs/jquery-ui.css", "dist/libs/lity.css", "dist/styles/style.css" ],
+      "js": [ "dist/libs/jquery-2.2.1.js", "dist/libs/jquery-ui.js",  "dist/scripts/gtrack.js", "dist/libs/lity.js", "dist/libs/jquery.fileupload.js", "dist/libs/jquery.csv.js", "dist/libs/notify.js", "dist/scripts/shopify.js", "dist/scripts/common.js"],
+      "matches": [ "*://*.myshopify.com/*","*://*.shopify.com/*" ],
+      "run_at": "document_end"
+   },
+   {
+      "css": [ "dist/libs/jquery-ui.css", "dist/libs/lity.css", "dist/styles/style.css" ],
+      "js": [ "dist/libs/jquery-2.2.1.js", "dist/libs/jquery-ui.js", "dist/scripts/gtrack.js", "dist/libs/lity.js",  "dist/libs/jquery.fileupload.js", "dist/libs/jquery.csv.js", "dist/libs/notify.js", "dist/scripts/amazon.js", "dist/scripts/common.js" ],
+      "matches": [ "*://*.amazon.com/*","*://*.amazon.com.au/*","*://*.amazon.it/*","*://*.amazon.co.uk/*","*://*.amazon.ca/*","*://*.amazon.de/*","*://*.amazon.com.mx/*","*://*.amazon.es/*" ],
+      "run_at": "document_end"
+   },
+   {
+      "css": [ "dist/libs/jquery-ui.css", "dist/styles/style.css" ],
+      "js": [ "dist/libs/jquery-2.2.1.js", "dist/libs/jquery-ui.js",  "dist/scripts/gtrack.js", "dist/libs/jquery.fileupload.js", "dist/libs/jquery.csv.js", "dist/libs/notify.js","dist/scripts/suppliers.js","dist/scripts/common.js"],
+      "matches": [ "*://*.ebay.com/*","*://*.ebay.co.uk/*","*://*.ebay.de/*","*://*.ebay.fr/*","*://*.ebay.com.au/*","*://*.ebay.es/*","*://*.ebay.it/*","*://*.amazon.com/*","*://*.amazon.com.au/*","*://*.amazon.com.mx/*","*://*.amazon.co.uk/*","*://*.amazon.de/*","*://*.amazon.it/*","*://*.amazon.es/*","*://*.newchic.com/*","*://*.walmart.com/*","*://*.walmart.ca/*","*://*.sears.com/*" ,"*://*.kmart.com/*","*://*.wayfair.co.uk/*","*://*.wayfair.ca/*","*://*.wayfair.com/*","*://*.hayneedle.com/*","*://*.overstock.com/*","*://*.banggood.com/*","*://*.dhgate.com/*","*://*.alibaba.com/*","*://*.bonanza.com/*","*://*.gearbest.com/*","*://*.aliexpress.com/*","*://*.shopify.com/*","*://*.homedepot.com/*","*://*.homedepot.ca/*","*://*.target.com/*","*://*.bedbathandbeyond.com/*","*://*.petco.com/*","*://*.bestbuy.com/*","*://*.costco.co.uk/*","*://*.zooplus.co.uk/*","*://*.smythstoys.com/*","*://*.robertdyas.com/*","*://*.asda.com/*","*://*.domu.com/*","*://*.vidaxl.co.uk/*","*://*.samsclub.com/*","*://*.lowes.com/*","*://*.rakuten.com/*","*://*.llbean.com/*","*://*.iherb.com/*"],
+      "run_at": "document_end"
+   },
+   {"css": [ "dist/styles/style.css" ],
+    "js": [ "dist/libs/jquery-2.2.1.js","dist/libs/jquery-ui.js",  "dist/scripts/gtrack.js", "dist/libs/notify.js", "dist/scripts/suppliers.js","dist/scripts/frame.js","dist/scripts/common.js"],
+    "matches": ["*://*.overstock.com/*","*://*.bongous.com/*","*://*.bedbathandbeyond.com/*"],
+    "exclude_matches": [
+            "https://*.aliexpress.com/"
+    ],
+    "all_frames":true
+    }
+  ]
+    ,
+   "background": {
+      "scripts": [ "dist/libs/jquery-2.2.1.js", "dist/libs/jquery-ui.js", "dist/scripts/gtrack.js", "dist/libs/jquery.fileupload.js", "dist/libs/jquery.csv.js", "dist/scripts/background.js"]
+   },
+   "browser_action": {
+      "default_icon": "dist/images/icon48.png",
+      "default_popup": "dist/popup.html",
+      "default_title": "Settings"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'",
+   "description": "Helps Ebay dropshippers, sourcing from 3rd party retailers. More info on https://aohero.com!",
+   "icons": {
+   	  "48": "dist/images/icon48.png",
+      "128": "dist/images/icon128.png"
+      
+   },
+   "manifest_version": 2,
+   "name": "Auto Order Hero",
+   "permissions": [ "debugger", "activeTab", "tabs", "notifications", "storage", "unlimitedStorage","management", "identity", "cookies", "webRequest", "webRequestBlocking" ,"*://*.dropshie.com/*","*://*.torpec.com/*","*://*.ebay.com/*","*://*.ebay.co.uk/*","*://*.ebay.de/*","*://*.ebay.fr/*","*://*.ebay.com.au/*","*://*.ebay.es/*","*://*.ebay.it/*","*://*.amazon.com/*","*://*.amazon.com.au/*","*://*.amazon.com.mx/*","*://*.amazon.co.uk/*","*://*.amazon.de/*","*://*.amazon.it/*","*://*.amazon.es/*","*://*.newchic.com/*","*://*.walmart.com/*","*://*.walmart.ca/*","*://*.sears.com/*" ,"*://*.kmart.com/*","*://*.wayfair.co.uk/*","*://*.wayfair.ca/*","*://*.wayfair.com/*","*://*.hayneedle.com/*","*://*.overstock.com/*","*://*.banggood.com/*","*://*.dhgate.com/*","*://*.alibaba.com/*","*://*.bonanza.com/*","*://*.gearbest.com/*","*://*.aliexpress.com/*","*://*.shopify.com/*","*://*.homedepot.com/*","*://*.homedepot.ca/*","*://*.target.com/*","*://*.bedbathandbeyond.com/*","*://*.petco.com/*","*://*.bestbuy.com/*","*://*.costco.co.uk/*","*://*.zooplus.co.uk/*","*://*.smythstoys.com/*","*://*.robertdyas.com/*","*://*.asda.com/*","*://*.domu.com/*","*://*.vidaxl.co.uk/*","*://*.samsclub.com/*","*://*.lowes.com/*","*://*.rakuten.com/*","*://*.llbean.com/*","*://*.iherb.com/*"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "web_accessible_resources": ["dist/images/loading.gif"],
+   "version": "5.5.8"
+}
+

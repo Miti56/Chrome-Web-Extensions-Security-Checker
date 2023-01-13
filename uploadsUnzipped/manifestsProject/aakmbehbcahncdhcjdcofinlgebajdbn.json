@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "SharePoint Word Wrap",
+    "version": "0.0.1",
+    "description": "Make long text fields in SharePoint wrap to the next line.",
+    "icons": {
+        "128": "spWrapIcon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.sharepoint.com/*"],
+            "css": ["styles.css"]
+        }
+    ]
+}

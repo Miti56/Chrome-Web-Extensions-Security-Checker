@@ -1,0 +1,21 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Kayture",
+  "version": "1.5",
+  "description": "Kristina is a stylist, influencer, model and creative directo.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Kayture"
+  },
+  "permissions": [ "<all_urls>", "tabs" ],
+   "background": {
+    "scripts": [ "background.js", "jquery.js" ]
+  }
+
+}

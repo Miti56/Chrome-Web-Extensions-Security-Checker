@@ -1,0 +1,12 @@
+{"browser_action": {"default_icon": "128-fifa-2018-themes.png", 
+"default_title": "Fifa 2018 Wallpapers and tab"},
+ "icons": {"128": "128-fifa-2018-themes.png", 
+"48": "48-fifa-2018-themes.png"},
+ "chrome_url_overrides": {"newtab": "index.html"},
+ "manifest_version": 2, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"description": "Fifa 2018 Wallpapers and Tab - Enjoy Beautiful HD Pictures Every New Tab", 
+"background": {"scripts": ["bg.js"]},
+ "version": "1.0.1", 
+"offline_enabled": true, 
+"name": "Fifa 2018 Wallpapers and Tab"}

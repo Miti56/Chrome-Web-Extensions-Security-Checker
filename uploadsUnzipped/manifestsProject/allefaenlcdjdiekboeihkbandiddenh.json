@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "On The Border",
+  "description": "On The Border catering integration with MonkeyMedia Software",
+  "short_name": "On The Border",
+  "version": "0.9.11",
+  "manifest_version": 2,
+  "permissions": [
+	  "storage"
+	],
+   "browser_action": { 
+	"default_popup": "popup.html",
+		"default_icon": {
+			"19": "images/Untitle.png"
+		}  
+    },
+    "content_scripts":[
+     {      
+     "matches":["<all_urls>"], 
+     "js":["jquery.min.js","content1.js"]     
+     } 
+     ],
+	
+	 "background": {
+    "scripts": ["jquery.min.js","background.js"],
+	"all_frames": true
+  },
+  "web_accessible_resources":[
+  "images/*.png"
+  ],
+  
+  "icons": {
+		"16": "images/Untitle.png",
+        "48": "images/Untitle.png"
+	}
+}

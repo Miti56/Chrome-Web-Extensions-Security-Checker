@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": ["js/bg.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+    "128": "icon-128.png"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "default_locale": "en",
+  "description": "Roses New Tab. HD Roses wallpapers with useful utilities for New Tab",
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "manifest_version": 2,
+  "name": "Roses Wallpapers Roses New Tab HD",
+  "offline_enabled": true,
+  "version": "1.0",
+  "permissions": [
+    "topSites",	"\u003Call_urls>",    "chrome://favicon/*",    "webRequestBlocking",    "webRequest"
+  ]
+}

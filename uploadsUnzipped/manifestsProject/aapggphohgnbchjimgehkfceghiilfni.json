@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "YouTube Personalization Study",
+ "description": "YouTube Personalization Study",
+ "version": "1.0.2",
+ "author": "Hammas Saeed",
+ 
+"browser_action": {
+   "default_title": "YouTube Personalization Study"
+ },
+ 
+"background": {
+    "scripts": ["background.js"],
+    "persistent": true
+},
+
+ "permissions": ["activeTab", 
+		"contextMenus",
+		"tabs",
+		"cookies",
+		"webRequest",
+		"webRequestBlocking",
+		"history",
+		"downloads",
+		"storage",
+		"tabs",
+		"https://*/"],
+
+ "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

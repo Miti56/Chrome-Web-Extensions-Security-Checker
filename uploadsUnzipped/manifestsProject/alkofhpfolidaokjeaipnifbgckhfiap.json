@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "ChillitalkMeeting",
+    "author": "Aricovindane.P ",
+    "version" : "1.1",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "WebRTC Private Screen Share",
+    "homepage_url": "https:web.chillitalk.com",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_end",
+       "matches": ["https://www.stagingweb.chillitalk.com/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

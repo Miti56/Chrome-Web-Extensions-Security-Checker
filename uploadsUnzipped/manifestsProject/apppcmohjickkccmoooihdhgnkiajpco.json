@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "BitCoin Price Ticker & Alerts in INR & USD",
+  "version": "1.5",
+  "description": "Displays the current BitCoin prices in INR/USD and You can configure Alerts for the price changes",
+  "icons": { "128": "icon.png" },
+  "background": {
+    "scripts": ["utils.js",
+                "prefs.js",
+                "background.js"]
+  },
+  "permissions": [
+    "notifications",
+	  "alarms",
+	  "https://*/*",
+	  "http://*/*",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "Loading...",
+    "default_icon" : "small.png",
+	  "default_popup": "popup.html"
+  },
+ "options_page": "options.html",
+ "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  },
+  "manifest_version": 2
+}

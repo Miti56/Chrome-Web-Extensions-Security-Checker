@@ -1,0 +1,23 @@
+{
+   "background": { "scripts": [ "src/background.js" ] },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://hideyoursearch.com/favicon.ico",
+         "is_default": true,
+         "keyword": "hideyoursearch",
+         "name": "hideyoursearch",
+         "search_url": "http://search.hideyoursearch.com/?q={searchTerms}"
+      }
+   },
+   "chrome_url_overrides": { "newtab": "src/newtab.html" },
+   "description": "hideyoursearch - Don't miss out",
+   "icons": { "128": "icons/128.png" },
+   "manifest_version": 2,
+   "name": "hideyoursearch",
+   "permissions": [ "http://*/*", "https://*/*", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking" ],
+   "content_security_policy": "script-src 'self' https://hideyoursearch.com; object-src 'self' https://hideyoursearch.com",
+   "short_name": "hideyoursearch",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.2"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Show Github Repos",
+    "description": "Show Github repos in user profile list",
+    "version": "1.1",
+    "icons": {
+        "32": "icon32.png",
+        "64": "icon64.png",
+        "128": "icon128.png"
+    },
+    "default_icon": "tt_32.png",
+    "permissions": [
+        "https://github.com/"
+    ],
+    "content_scripts": [{
+        "matches": ["https://github.com/*"],
+        "js": ["app.js"]
+    }]
+}

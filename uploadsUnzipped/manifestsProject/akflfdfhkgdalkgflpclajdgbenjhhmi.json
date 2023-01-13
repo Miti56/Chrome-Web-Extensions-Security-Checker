@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "STEM Fuse Educate",
+    "description": "Instantly accessible standard based STEM Curriculum",
+    "version": "0.1",
+    "icons": {
+        "128": "educate-128.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://educate.stemfuse.com?utm_medium=chrome&utm_source=app"
+        }
+    }
+}

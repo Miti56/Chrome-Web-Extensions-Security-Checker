@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Sharemybigfile",
+"description": "Peer-to-Peer File Sharing Service. Private - Secure - Encrypted",
+"version": "1.0.",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"https://www.sharemybigfile.com/"
+],
+"launch": {
+"web_url": "https://www.sharemybigfile.com/"
+}
+}
+}

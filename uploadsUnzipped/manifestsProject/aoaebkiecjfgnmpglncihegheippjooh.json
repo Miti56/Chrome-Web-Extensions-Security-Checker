@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Anchor Links",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Copy anchored links to your clipboard",
+  "web_accessible_resources": [
+    "assets/images/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["assets/stylesheets/all.css"],
+      "js": ["vendor/jquery.js", "assets/javascripts/all.js"]
+    }
+  ],
+  "icons": {
+    "48": "assets/images/link-48.png",
+    "128": "assets/images/link-128.png"
+  }
+}

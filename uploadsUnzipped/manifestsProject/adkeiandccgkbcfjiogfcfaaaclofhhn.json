@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Trailhead Assist",
+  "version": "1.1",
+  "description": "Helps you score 100% in your quiz assessment.",
+  "permissions": ["https://us-central1-trailhead-assist.cloudfunctions.net"],
+  "background" : {
+    "scripts" : ["background.js"],
+    "persistent" : false
+  },
+  "browser_action": {
+      "default_icon": {
+        "16": "ASTRO_IMAGES/ASTRO_16.png",
+        "32": "ASTRO_IMAGES/ASTRO_32.png",
+        "48": "ASTRO_IMAGES/ASTRO_48.png",
+        "128":"ASTRO_IMAGES/ASTRO_128.png"
+      }
+  },
+  "content_scripts":[ 
+    { "matches": [
+      "https://trailhead.salesforce.com/*"
+    ],
+      "js": ["jquery-3.4.1.min.js","trailhead.js"] ,
+      "png" :["ASTRO_IMAGES/ASTRO_128.png"]     
+    }
+  ],
+
+  "web_accessible_resources":["ASTRO_IMAGES/ASTRO_16.png","ASTRO_IMAGES/ASTRO_32.png","ASTRO_IMAGES/ASTRO_48.png","ASTRO_IMAGES/ASTRO_128.png"],
+  "manifest_version": 2 ,
+  "icons": {
+    "16": "ASTRO_IMAGES/ASTRO_16.png",
+    "32": "ASTRO_IMAGES/ASTRO_32.png",
+    "48": "ASTRO_IMAGES/ASTRO_48.png",
+    "128":"ASTRO_IMAGES/ASTRO_128.png"
+  }
+
+}

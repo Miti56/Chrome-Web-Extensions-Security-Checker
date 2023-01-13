@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Elsa Superhero Vs Princess",
+  "short_name": "Elsa Superhero Vs Princess",
+  "version": "1.0.2",
+  "description": "PlayElsa Superhero Vs Princessnow!",
+  "homepage_url": "https://appmgr.pw/c/juegos-de-perros/",
+  
+  "icons": {
+      "128": "icon.png"
+  },
+  
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Elsa Superhero Vs Princess",
+
+      "default_popup": "popup.html"
+  }
+}

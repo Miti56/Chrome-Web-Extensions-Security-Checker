@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"scripts": ["scripts/jquery-2.1.1.min.js", "background.js"]
+	},
+	"browser_action": {
+		"default_icon": "images/iocn_48.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [{
+		"css": ["css/style.css"],
+		"js": ["scripts/jquery-2.1.1.min.js", "scripts/highcharts.js", "scripts/jquery.qrcode.min.js", "scripts/taobao_item.js"],
+		"matches":  [ "*://item.taobao.com/*", "*://detail.tmall.com/*", "*://*.95095.com/*", "*://detail.tmall.hk/*", "*://chaoshi.detail.tmall.com/*", "*://*.fliggy.com/*", "*://*.liangxinyao.com/*" ],
+		"run_at": "document_end"
+	},{
+		"css": ["css/style.css"],
+		"js": ["scripts/jquery-2.1.1.min.js", "scripts/highcharts.js", "scripts/jquery.qrcode.min.js", "scripts/tao_search.js"],
+		"matches": ["https://list.tmall.com/search_product.htm?*","https://s.taobao.com/search?*"],
+		"run_at": "document_end"
+	}],
+	"description": "特价么旗下比价浏览器插件，为用户提供商品隐藏优惠券、商品历史价格，更加入同款商品搜索，在淘宝找同款更加方便快捷，与此同时还支持商品搜索列表查询优惠券，大大提高查券效率",
+	"icons": {
+		"128": "images/iocn_128.png",
+		"16": "images/iocn_16.png",
+		"48": "images/iocn_48.png"
+	},
+	"manifest_version":2,
+	"name": "特价么优惠券助手",
+	"permissions": ["tabs", "notifications", "background", "storage", "activeTab", "<all_urls>", "contextMenus"],
+        "web_accessible_resources": [ "*" ],
+	"version":"1.5"
+}

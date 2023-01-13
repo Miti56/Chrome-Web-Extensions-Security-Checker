@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name" : "FV Color Palette",
+	"description" : "Add your favourite colors to a named color palette.",
+	"version" : "1.0.1",
+
+	"permissions" : [
+		"webRequest",
+		"cookies",
+		"activeTab",
+		"webRequestBlocking",
+		"<all_urls>",
+		"tabs",
+		"storage"
+	],
+	"icons" : {
+		"48" : "/img/48.png",
+		"128" : "/img/128.png"
+	},
+	"browser_action": {
+		"default_popup": "/html/popup.html"
+	},
+	"background" : {
+		"page" : "/html/background.html"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com ; object-src 'self'"
+}

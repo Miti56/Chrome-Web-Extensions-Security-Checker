@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "OFN",
+  "description": "OWA FULL NIH ~ Allows Chrome to use the Full instead of Lite version of NIH OWA mail.",
+  "version": "1",
+  "icons": {
+    "128": "img/img.png"
+  },
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "https://mail.nih.gov/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
+}

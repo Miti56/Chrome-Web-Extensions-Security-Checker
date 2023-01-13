@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Close Unpinned Tabs",
+  "version": "0.2",
+  "description": "Close all unpinned tabs with a short cut \"Alt + Shift + O\"" ,
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+  	"default_icon":{
+  		"16": "broom.png",
+		"32": "broom.png",
+		"48": "broom.png",
+		"128": "broom128.png"
+  	},
+  	"default_title":"Clutter"
+  },
+  "commands": {
+    "toggle_pin": {
+      "suggested_key": { "default": "Alt+Shift+P" },
+      "description": "Toggle if the pin is tabbed"
+    },
+    "close_unpinned":{
+    	"suggested_key":{"default": "Alt+Shift+O" },
+    	"description": "Close all tabs excepts pinned ones"
+    }
+  },
+  "manifest_version": 2
+}

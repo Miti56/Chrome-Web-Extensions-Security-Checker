@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LamViecOnl",
+  "version": "0.0.7",
+  "manifest_version": 2,
+  "description": "Cong Cu Ho Tro Danh Rieng Cho Web LamViecOnl.com",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    },
+    "default_title": "LamViecOnl",
+    "default_popup": "popup.html"
+  },
+
+  "omnibox": {
+    "keyword": "LamViecOnl Add On"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://faucet.raiblockscommunity.net/*"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "scripts/content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  
+  "web_accessible_resources": [
+    "scripts/count.js"
+  ],
+  
+  "permissions": [
+    "*://faucet.raiblockscommunity.net/*"
+  ]
+}

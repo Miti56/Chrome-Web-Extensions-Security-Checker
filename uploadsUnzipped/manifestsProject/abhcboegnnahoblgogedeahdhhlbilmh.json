@@ -1,0 +1,36 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "content_scripts": [
+        {
+            "css": [
+                "deladv.css"
+            ],
+            "matches": [
+                "*://vk.com/*"
+            ]
+        }
+    ],
+    "default_locale": "ru",
+    "description": "__MSG_extdesc__",
+    "icons": {
+        "16": "16.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "manifest_version": 2,
+    "name": "__MSG_extname__",
+    "permissions": [
+        "proxy",
+        "tabs",
+        "*://*/*",
+        "webRequest",
+        "storage",
+        "webRequestBlocking"
+    ],
+    "version": "2.25.7",
+    "content_security_policy": "script-src https://mc.yandex.ru/ 'self' 'unsafe-eval';object-src 'self';"
+}

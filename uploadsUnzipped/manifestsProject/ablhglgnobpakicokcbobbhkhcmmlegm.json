@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.1",
+"name":"Jubei Yagyu - Samurai Girls",
+"description":"res 1366x768 - This is Jubei Yagyu from Samurai Girls, if you haven't watched it yet. do so!",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 38 , 37 , 39 ],
+"ntp_text": [ 38 , 37 , 39 ],
+"ntp_section_link": [ 38 , 37 , 39 ],
+"ntp_section_text": [ 38 , 37 , 39 ],
+"ntp_background": [ 134 , 133 , 138 , 0.5 ],
+"ntp_header": [ 248 , 244 , 233 , 0.15 ],
+"ntp_section": [ 248 , 244 , 233 , 0.15 ],
+"frame": [ 248 , 244 , 233 ],
+"toolbar": [ 134 , 133 , 138 ],
+"tab_text": [ 38 , 37 , 39 ],
+"tab_background_text": [ 38 , 37 , 39 ],
+"bookmark_text": [ 38 , 37 , 39 ]
+},
+"tints":
+{
+"buttons": [ 0.7 , 0.0209205020920501 , 0.531372549019608 ],
+"frame_incognito": [ 0.115032679738562 , 0.486815415821501 , 0.887658592848904 ],
+"frame_inactive": [ 0.7 , 0.0209205020920501 , 0.15 ],
+"frame_incognito_inactive": [ 0.7 , 0.0209205020920501 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

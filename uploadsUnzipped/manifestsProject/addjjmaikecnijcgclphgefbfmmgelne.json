@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Tinder Web Theme",
+	"description": "Improves the look of Tinder.",
+	"version": "1.0.1.3",
+	"browser_action": {
+		"default_icon": "Assets/icon16.png"
+	},
+	
+	"content_scripts": [
+		{
+		"matches": ["http://www.tinder.com/*", "https://www.tinder.com/*", "https://tinder.com/*", "http://tinder.com/*"],
+		"css": ["tinder.css"]
+		}
+	],
+	
+	"icons": {
+		"16": "Assets/icon16.png",
+		"48": "Assets/icon48.png",
+		"128": "Assets/icon128.png"
+	}
+}

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Whitepages Pro Identity Check - 41stParameter",
+	"description": "Provides links within order pages on the 41st Parameter platform, which users can click to verify billing and shipping info.",
+	"version": "1.5",
+	"browser_action": {
+		"default_icon": "whitepages.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*.the41.com/*","https://*.the41.com/*"],
+			"js": ["whitepages.js"]
+		}
+	]
+}

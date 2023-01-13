@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Công Cụ Đặt Hàng của DPG Order",	
+	"short_name": "dpg-order.com",
+	"description": "DPG Order công cụ hỗ trợ đặt hàng trên taobao, tmall, 1688.",
+	"homepage_url": "http://www.dpg-order.com",
+	"background": {
+		"page": "background.html"
+	},
+	"browser_action": {
+      "default_icon": {
+         "16": "images/icon-16.png",
+         "32": "images/icon-32.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "DPG Order - CONG CU DAT HANG TRUNG QUOC"
+   },
+	 
+	"content_scripts": [ {	 
+		"js": [ "js/jquery.js", "js/config.js", "js/background.js", "js/script.js" ],
+		"matches": [ 
+			"<all_urls>" ]
+	}],	
+	"icons": { 
+		"120": "images/icon-120.png",
+		"16": "images/icon-16.png",
+		"32": "images/icon-32.png"
+    },
+	"options_page": "options.html",
+	"permissions": [ "tabs", "webRequest", "webNavigation", "storage", "cookies", "http://*/*", "https://*/*" ],	
+	"version": "1.9",	
+	"web_accessible_resources": [ "template/index.html", "css/main.css", "css/cn_main.css", "images/*" ]
+}

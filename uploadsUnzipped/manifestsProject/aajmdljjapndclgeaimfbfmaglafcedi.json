@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Captions for YouTube",
+  "short_name": "Captions for YouTube",
+  "description": "Closed Captions for YouTube, powered by Amara.",
+  "version": "0.0.4",
+
+  "content_scripts": [ {      
+      "js": [ "scripts/jquery-1.11.2.min.js", "scripts/utils.js", "scripts/amara_api.js", "scripts/gui.js", "scripts/extension.js"],
+      "matches": [ "*://www.youtube.com/*" ]
+   } ],  
+
+"icons": { "16": "images/icon16.png",
+           "48": "images/icon48.png",
+          "128": "images/icon128.png" },   
+
+  "permissions": ["https://amara.org/","https://www.amara.org/"]
+}

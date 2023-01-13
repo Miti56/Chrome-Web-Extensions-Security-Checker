@@ -1,0 +1,30 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/lib/jquery-1.8.2.min.js", "js/mainscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+	  "run_at" : "document_idle", 
+      "all_frames" : false 
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Black Theme for Facebook",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "BlackFb",
+   "page_action": {
+      "default_icon": {
+         "19": "img/icon16.png",
+         "38": "img/icon48.png"
+      },
+      "default_title": "BlackFb"
+   },
+   "permissions": [ "cookies", "tabs", "http://*/*", "https://*/*", "notifications", "contextMenus", "webNavigation", "webRequest", "webRequestBlocking", "storage", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.7"
+}

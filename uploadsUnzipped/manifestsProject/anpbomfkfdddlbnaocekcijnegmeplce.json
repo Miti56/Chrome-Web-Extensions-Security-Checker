@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Latham EZ Measure",
+  "short_name": "Latham EZ Measure",
+  "author": "Fisherlea Systems",
+  "description": "Measuring for a new pool liner or safety cover couldn't be easier with Latham's EZ Measure app!",
+  "version": "5.2.1.5",
+  "app": {
+    "background": {
+      "scripts": [
+        "www/js/launch.js"
+      ]
+    }
+  },
+  "icons": {
+    "16": "www/img/icon_16.png",
+    "32": "www/img/icon_32.png",
+    "48": "www/img/icon_48.png",
+    "64": "www/img/icon_64.png",
+    "128": "www/img/icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "storage",
+    "geolocation",
+    "http://pmp.fisherlea.com/",
+    "https://pmp.fisherlea.com/",
+    "https://google.com/",
+    "http://google.com/",
+    "http://www.google-analytics.com/",
+    "https://www.google-analytics.com/",
+    "https://maps.googleapis.com/"
+  ]
+}

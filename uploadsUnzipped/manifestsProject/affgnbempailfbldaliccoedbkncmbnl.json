@@ -1,0 +1,74 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "贸牛助手",
+  "version": "3.5.26",
+  "description": "贸牛助手",
+  "permissions": [
+    "storage",
+    "cookies",
+    "notifications",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "icons/logo_19x19.png",
+    "48": "icons/logo_48x48.png",
+    "128": "icons/logo_128x128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/logo_19x19.png"
+  },
+  "background": {
+    "scripts": [
+      "libraries/axios.min.js",
+      "libraries/jquery.js",
+      "libraries/jquery.modal.js",
+      "libraries/jquery.cookie.js",
+      "libraries/util.js",
+      "background.js",
+      "build/report_background.js",
+      "build/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "libraries/jquery.js",
+        "libraries/jquery.modal.js",
+        "libraries/jquery.cookie.js",
+        "content.js"
+      ],
+      "css": [
+        "libraries/jquery.modal.css"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.maoniunet.com/*",
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "libraries/axios.min.js",
+        "libraries/util.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "build/content_script.js",
+        "build/report_content.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}

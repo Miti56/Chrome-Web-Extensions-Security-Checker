@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "icons": {
+      "128": "logo/logo_128x.png"
+   },
+   "description": "Full Hd Quallity Player",
+   "manifest_version": 2,
+   "name": "Full Hd Quallity",
+   "permissions": ["storage","webRequest", "webRequestBlocking", "https://*/*", "http://*/*"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.4"
+
+}

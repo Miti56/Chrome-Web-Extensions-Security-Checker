@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Puc-Man Run Online Games",
+  "description": "Pac-Man, Piano Tiles 2, Plants Vs Zombies, Roblox, Roll The Ball, Roller Coaster Tycoon, Rolling Sky, Solitaire",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

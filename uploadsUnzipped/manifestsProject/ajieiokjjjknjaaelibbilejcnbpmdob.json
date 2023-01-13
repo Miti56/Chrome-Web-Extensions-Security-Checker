@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "short_name": "__MSG_shortName__",
+  "permissions": [
+    "notifications",
+	"storage"
+  ],
+  "description": "__MSG_appDesc__",
+  "default_locale":"en",
+  "version": "1.5.20.2",
+  "manifest_version": 2,
+  "app": {
+	"background": {
+		"scripts":["background.js"]
+	}
+  },
+  "icons": { "128": "toast.png" ,
+	  "16":"toast16.png"
+	}
+}

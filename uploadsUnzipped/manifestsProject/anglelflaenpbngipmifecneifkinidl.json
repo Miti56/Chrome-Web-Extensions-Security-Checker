@@ -1,0 +1,30 @@
+{
+   "author": "Alexander Krivorutchko",
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icons/icon.png"
+      },
+      "default_popup": "index.htm",
+      "default_title": "__MSG_name__"
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "icons/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkkq0OboCqaYThxjH+p0c6VqmKTeQ2n0OfkjIY4TKhJLQQeE5+roLvBclKK9KPU7q1wBgx8V8r+sb69Ws19LPYafEzAQKG35lfytxDjqaB1YfM9dPZ6hNhvhd+Xm9nc33cZNsdWmO6EreK4DxFe3OC/hOCQmo//RcFCqiqsdZF+gNU733nv6iETcQ+cI+NJv8uq8WzxfGK9e5jVZC4bnMFmUcJ7M1JUMpbW/vdtdU/j+gWU7b9poWBj3BRjHPgYZU93+BX6Kl2+2zmItCzZbB+0NnR1EMpH/aSh9bknAhvqJ5Tb0BqmlbSatG/kWV4E7Ap3Hkvpt6lM1F7TAqjo6rWQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "http://*/*", "https://*/*", "activeTab", "tabs", "\u003Call_urls>", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Sky Sudoku",
+  "description": "Sudoku",
+  "manifest_version": 2,
+  "version": "1.1",
+  "app": {
+    "background": {
+      "scripts": [
+      "background.js",
+      "jquery.min.js",
+      "SudokuAlgorithm.js",
+      "bootstrap/js/bootstrap.js",
+      "bootstrap/js/bootstrap.min.js",
+      "ui.js"
+
+      ]
+    },
+    "background_page": "window.html"
+  },
+  "icons": { "16": "Sudoku-16.jpg", "128": "Sudoku-128.jpg" }
+}

@@ -1,0 +1,100 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_app_name__",
+  "description": "__MSG_app_desc__",
+  "version": "1.1.0",
+  "manifest_version": 2,
+  "homepage_url": "http://www.mousebreaker.com/",
+  "default_locale": "en_US",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "__MSG_app_name__",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "contentSettings",
+    "tabs",
+    "*://www.gamesgames.com/*",
+    "*://www.spelletjes.nl/*",
+    "*://www.jetztspielen.de/*",
+    "*://www.jeux.fr/*",
+    "*://www.gioco.it/*",
+    "*://www.gry.pl/*",
+    "*://www.spela.se/*",
+    "*://www.ojogos.com.br/*",
+    "*://www.juegos.com/*",
+    "*://www.games.co.uk/*",
+    "*://www.ourgames.ru/*",
+    "*://www.permainan.co.id/*",
+    "*://www.girlsgogames.de/*",
+    "*://www.girlsgogames.fr/*",
+    "*://www.juegosdechicas.com/*",
+    "*://www.girlsgogames.it/*",
+    "*://www.girlsgogames.co.uk/*",
+    "*://www.girlsgogames.ru/*",
+    "*://www.girlsgogames.co.id/*",
+    "*://www.jeu.fr/*",
+    "*://www.spel.nl/*",
+    "*://www.spielen.com/*",
+    "*://www.games.co.id/*",
+    "*://www.agame.com/*",
+    "*://www.flashgames.ru/*",
+    "*://www.giochi.it/*",
+    "*://www.mousebreaker.com/*",
+    "*://www.a10.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.gamesgames.com/*",
+        "*://www.spelletjes.nl/*",
+        "*://www.jetztspielen.de/*",
+        "*://www.jeux.fr/*",
+        "*://www.gioco.it/*",
+        "*://www.gry.pl/*",
+        "*://www.spela.se/*",
+        "*://www.ojogos.com.br/*",
+        "*://www.juegos.com/*",
+        "*://www.games.co.uk/*",
+        "*://www.ourgames.ru/*",
+        "*://www.permainan.co.id/*",
+        "*://www.girlsgogames.de/*",
+        "*://www.girlsgogames.fr/*",
+        "*://www.juegosdechicas.com/*",
+        "*://www.girlsgogames.it/*",
+        "*://www.girlsgogames.co.uk/*",
+        "*://www.girlsgogames.ru/*",
+        "*://www.girlsgogames.co.id/*",
+        "*://www.jeu.fr/*",
+        "*://www.spel.nl/*",
+        "*://www.spielen.com/*",
+        "*://www.games.co.id/*",
+        "*://www.agame.com/*",
+        "*://www.flashgames.ru/*",
+        "*://www.giochi.it/*",
+        "*://www.mousebreaker.com/*",
+        "*://www.a10.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://www.mousebreaker.com/*"
+    ]
+  }
+}

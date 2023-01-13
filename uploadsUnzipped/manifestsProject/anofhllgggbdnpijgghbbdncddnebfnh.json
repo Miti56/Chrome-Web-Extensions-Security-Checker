@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "hipnosis",
+  "description": "Subverting your bland generalisations.",
+  "version": "1.0",
+
+  "permissions": [
+     "tabs", "http://*/*"
+  ],
+  "background": "background.html",
+  "content_scripts": [ {
+        "all_frames": true,
+        "matches": ["*://*/*"],
+        "js": [ "jquery-1.9.1.min.js", "content.js" ],
+        "run_at": "document_end"
+  } ]
+}
+

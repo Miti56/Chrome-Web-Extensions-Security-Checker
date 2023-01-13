@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Plants Vs Zombies Game Online",
+  "description": "Play Plants Vs Zombies quick and easy by clicking the little button in the top right corner of the browser.",
+  "version": "1.4",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

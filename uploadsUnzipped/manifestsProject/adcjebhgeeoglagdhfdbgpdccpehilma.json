@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Skylark",
+  "short_name": "Skylark",
+  "description": "Skylark web services pvt ltd. The best of web and android applications designed and developed with customers and profits in mind.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "urls": ["http://skylarkwebservices.com/"],
+	  "launch": {"web_url":"http://skylarkwebservices.com/"}
+    }
+  },
+  "icons": { "16": "lonka_16.png","128": "lonka_128.png"}
+}

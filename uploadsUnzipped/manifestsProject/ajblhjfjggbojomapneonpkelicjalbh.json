@@ -1,0 +1,23 @@
+{"version": "2.4.8", 
+
+"icons": {"128": "128-picture.png"}, 
+
+"browser_action": {"default_icon": "128-picture.png", 
+
+"default_title": "Roblox New Tab Page"}, 
+
+"default_locale": "en", 
+
+"background": {"scripts": ["script.js"]}, 
+
+"description": "Install our Roblox product to your browser and get 4K Roblox themes, Jailbreak game and more stuff every new tab page", 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"manifest_version": 2, 
+
+"name": "__MSG_localeAddTitle__", 
+
+"chrome_url_overrides": {"newtab": "newtab_index.html"}
+
+}

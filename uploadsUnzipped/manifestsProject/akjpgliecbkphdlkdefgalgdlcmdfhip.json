@@ -1,0 +1,31 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "description": "",
+"manifest_version": 2,
+"name": "Torch - On Fire",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 93, 93, 93 ],
+         "button_background": [ 0, 0, 0, 0.09 ],
+         "frame": [ 255, 255, 255 ],
+         "ntp_background": [ 10, 10, 10 ],
+         "ntp_text": [ 0, 0, 0 ],
+         "tab_background_text": [ 36, 36, 36 ],
+         "tab_text": [ 0, 0, 0 ],
+         "toolbar": [ 209, 209, 209 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "left bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0, 0, 0.57 ]
+      }
+   },
+   "version": "1"
+}

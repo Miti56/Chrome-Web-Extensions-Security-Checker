@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["js/jquery.js", "js/application.js"]
+  },
+  "name": "Domain Whitelist",
+  "description":  "Surf only trusted websites",
+  "icons" : {
+    "16"  : "img/icon-16.png",
+    "32"  : "img/icon-32.png",
+    "48"  : "img/icon-48.png",
+    "128" : "img/icon-128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [ "tabs", "cookies", "\u003Call_urls>", "storage", "webRequest", "webRequestBlocking" ],
+  "version": "0.4.0"
+}

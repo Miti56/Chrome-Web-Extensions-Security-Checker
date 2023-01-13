@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "tlo.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/19.png",
+         "38": "images/38.png"
+      },
+      "default_title": "ВLООNS SUРЕR МОNКЕУ"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "skrypt.js" ],
+      "matches": [ "*://*.minecraft-cla.blogspot.com/*" ]
+   } ],
+   "description": "Bloons Supermonkey 2, Boom Beach, Buff Knight Advanced, Can You Escape Prison Pro, Card Wars Adventure Time",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "ВLООNS SUРЕR МОNКЕУ",
+   "permissions": [ "*://*.minecraft-cla.blogspot.com/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "ВLООNS SUРЕR МОNКЕУ",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

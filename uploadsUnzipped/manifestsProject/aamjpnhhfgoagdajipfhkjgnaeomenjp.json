@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "Styz",
+ "description": "Vous informe si Styz est en live",
+ "version": "1.0",
+ "browser_action": {
+   "default_icon": "red_circle.png",
+   "default_title": "Styz"
+ },
+ "icons": {
+  "32" : "red_circle.png",
+  "32" : "green_circle.png"
+ },
+ "background": {
+    "scripts": ["background.js"]
+ }
+}

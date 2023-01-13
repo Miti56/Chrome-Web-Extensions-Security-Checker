@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Open Me Later!",
+  "version": "1.10",
+  "description": "Schedule your favourite websites to  open up on their own whenever you want.",
+    "icons": {
+"128": "TW-Extension-Icon2.png"
+},   "background": {
+      "scripts": [ "background.js"]
+   }, 
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],  
+      "js": ["popup1.js","jquery-1.10.2.js","jquery-ui.js","bootstrap.min.js","stars.js"]
+    }
+    ], 
+    "permissions": [
+    "activeTab","tabs","contextMenus", "http://*/*"
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

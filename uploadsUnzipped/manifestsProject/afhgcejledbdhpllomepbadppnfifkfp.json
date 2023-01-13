@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Der RSS-Feed des heise Newstickers.",
+   "icons": {
+      "128": "logo128.png"
+   },
+   "manifest_version": 2,
+   "name": "heise Newsticker",
+   "permissions": [ "http://www.heise.de/newsticker*", "https://www.heise.de/newsticker*" ],
+   "version": "1.3"
+}

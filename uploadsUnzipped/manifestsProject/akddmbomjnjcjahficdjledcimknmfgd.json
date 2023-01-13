@@ -1,0 +1,115 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name":"gBlocks",
+            "description":"A blend of modern and retro, seamlessly meshing into one smooth product. Now in green.",
+
+   "theme":{
+      "images":{
+         "theme_frame":"images/sprite2.png",
+         "theme_toolbar":"images/spec.png",
+         "theme_tab_background":"images/tab_bg.png",
+         "theme_ntp_background":"images/Clipboard02.png",
+	    "theme_frame_overlay":"images/over.png"
+      },
+	  "appDesc": {
+    "message": "Testing the Short Desription",
+	"description":"Really this is a test"
+	},
+      "properties":{
+         "ntp_background_repeat":"repeat",
+         "description":"A plain text description",
+         "ntp_background_alignment":"left top"
+      },
+      "colors":{
+         "frame":[
+            83, 
+            106,
+            139
+         ],
+         "frame_inactive":[
+            126,
+            139,
+            156
+         ],
+         "frame_incognito":[
+            83,
+            106,
+            139
+         ],
+         "frame_incognito_inactive":[
+            126,
+            139,
+            156
+         ],
+         "toolbar":[
+            66,
+            66,
+            66
+         ],
+         "tab_text":[
+            255,
+            255,
+            255
+         ],
+         "tab_background_text":[
+            220,
+            220,
+            220
+         ],
+         "bookmark_text":[
+            255,
+            255,
+            255
+         ],
+         "ntp_background":[
+            255,
+            222,
+            53
+         ],
+         "ntp_text":[
+            240,
+            240,
+            240
+         ],
+         "ntp_link":[
+            6,
+            55,
+            116
+         ],
+         "ntp_header":[
+            75,
+            140,
+            220
+         ],
+         "ntp_section":[
+            229,
+            239,
+            254
+         ],
+         "ntp_section_text":[
+            0,
+            0,
+            0
+         ],
+         "ntp_section_link":[
+            6,
+            55,
+            116
+         ],
+         "control_background":[
+            0,
+            0,
+            0,
+            0
+         ],
+         "button_background":[
+            0,
+            0,
+            0,
+            0
+         ]
+      }
+   },
+   "version":"1.26",
+   "manifest_version":2
+}

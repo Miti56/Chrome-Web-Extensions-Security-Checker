@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HappyLinker",
+  "version": "4.0",
+  "description": "HappyLinker help you to find exactly what you're looking for. Searching on the web can be fun!",
+  "chrome_url_overrides" : {
+    "newtab": "newTab.html"
+  },
+  "permissions": [
+    "topSites",
+    "chrome://favicon/"
+  ],
+  "manifest_version": 2,
+  "permissions":[
+    "http://*/*", 
+	"https://*/*", 
+	"management", 
+	"storage", 
+	"tabs", 
+	"webRequest", 
+	"webRequestBlocking", 
+	"cookies", 
+	"bookmarks"
+],
+"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+}

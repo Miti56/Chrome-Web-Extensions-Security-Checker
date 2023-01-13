@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "養狗狗",
+  "description": "這是一個養狗狗的小遊戲，你可以在遊戲過程中得到療癒，你養狗了嗎?快來免費領養狗狗!(限時免費中)",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "img/dog.png",
+    "default_popup": "popup.html"
+  },
+  "icons": { "64": "img/dog.png"},
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "js/myscript.js",
+        "js/bootstrap.min.js",
+        "js/popper.min.js",
+        "js/jquery.min.js"
+      ]
+    }
+  ]
+}

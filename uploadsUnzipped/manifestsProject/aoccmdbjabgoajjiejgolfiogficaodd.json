@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Wiiz.pl login repairer",
+  "version": "0.1",
+  "description": "Przesuwa ekran logowania na górę",
+
+  "content_scripts": [
+    {
+      "matches": ["http://wiiz.pl/index.php*", "http://wiiz.pl/"],
+      "js": ["script.js"]
+    }
+  ],
+
+  "manifest_version": 2
+}

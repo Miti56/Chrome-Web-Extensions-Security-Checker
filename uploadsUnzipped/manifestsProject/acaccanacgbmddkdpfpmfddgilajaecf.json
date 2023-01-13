@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "manifest_version": 2,
+  "name": "RobotGeek RFIDuino Logger",
+  "short_name": "RG RFID Log",
+  "version": "0.0.3",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+
+
+  "permissions": [
+  	"serial",
+  	{"fileSystem": ["write", "retainEntries", "directory"]}
+  		],
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+
+
+}

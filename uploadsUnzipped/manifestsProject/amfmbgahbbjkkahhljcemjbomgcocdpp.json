@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.3",
+"name":"SuperGirl by toxic",
+"description":"SuperGirl saves the day!",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar_toxic",
+"theme_frame":"images/frame_toxic",
+"theme_tab_background":"images/tab_toxic",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 255 , 205 , 179 ],
+"ntp_text": [ 255 , 205 , 179 ],
+"ntp_section_link": [ 255 , 205 , 179 ],
+"ntp_section_text": [ 255 , 205 , 179 ],
+"ntp_background": [ 158 , 55 , 0 , 0.5 ],
+"ntp_header": [ 158 , 48 , 0 , 0.15 ],
+"ntp_section": [ 158 , 48 , 0 , 0.15 ],
+"frame": [ 158 , 48 , 0 ],
+"toolbar": [ 158 , 55 , 0 ],
+"tab_text": [ 255 , 205 , 179 ],
+"tab_background_text": [ 255 , 205 , 179 ],
+"bookmark_text": [ 255 , 205 , 179 ]
+},
+"tints":
+{
+"buttons": [ 0.0580168776371309 , 0.99 , 0.309803921568627 ],
+"frame_incognito": [ 0.0476545048399106 , 0.941176470588235 , 0.291580161476355 ],
+"frame_inactive": [ 0.0580168776371309 , 0.99 , 0.85 ],
+"frame_incognito_inactive": [ 0.0580168776371309 , 0.99 , 0.85 ]
+},
+"properties":
+{
+"ntp_background_alignment":"top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

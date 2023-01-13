@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Excel Chat",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Extension interface for Excelchat by Got It, Inc.",
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "Excel Chat"
+    },
+    "content_scripts": [{
+    	"js": [ "fa.js", "jquery-3.4.1.min.js", "keywords.js", "constants.js", "content.js"],
+      "css": [ "content.css"],
+    	"matches": ["<all_urls>", "https://*.google.com/*"],
+      "run_at": "document_end"
+    }],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "permissions": [
+      "http://*/*",
+      "https://*/*",
+      "storage",
+      "extension",
+      "tabs"
+    ],
+    "web_accessible_resources": ["*.html", "*.gif"],
+    "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+K",
+          "mac": "Command+Shift+K"
+        }
+      }
+    },
+    "externally_connectable": {
+      "matches": ["*://www.got-it.ai/*", "*://www.excelchat.co/*", "*://www.got-it.io/*"]
+    }
+}

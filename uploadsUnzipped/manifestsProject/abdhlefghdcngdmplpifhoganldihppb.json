@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Visual Design Quick Tests",
+  "version": "0.0.1",
+  "description": "Easily apply visual filters to any website or file",
+  "manifest_version": 2,
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_title": "Visual Design Quick Tests",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  }
+}

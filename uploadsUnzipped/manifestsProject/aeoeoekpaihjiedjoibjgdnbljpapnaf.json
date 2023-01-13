@@ -1,0 +1,50 @@
+{
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "COCO代購助手"
+  },
+  "background": {
+    "scripts": [
+      "js/Background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "js/DynamicLoad.js",
+        "js/Init.js"
+      ],
+      "matches": [
+        "*://*.taobao.com/*",
+        "*://*.tmall.com/*",
+        "*://*.1688.com/*",
+        "*://*.jd.com/*",
+        "*://*.vip.com/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "description": "【COCO代購助手】在您網購瀏覽商品的同時，可直接添加商品到COCO代購購物車或提交轉運寄送全球！",
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "manifest_version": 2,
+  "minimum_chrome_version": "18",
+  "name": "COCO代購助手",
+  "permissions": [
+    "*://*/",
+    "webRequest",
+    "webRequestBlocking",
+    "notifications"
+  ],
+  "update_url": "http://clients2.google.com/service/update2/crx",
+  "version": "2.2.38",
+  "web_accessible_resources": [
+    "js/*.js",
+    "images/*.png"
+  ]
+}

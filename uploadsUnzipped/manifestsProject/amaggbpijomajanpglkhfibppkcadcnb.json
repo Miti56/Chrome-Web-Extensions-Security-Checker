@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "version":"1.3.0",
+    "name":"Abaca Green Theme",
+    "description":"Abaca Green Theme for Google Chrome is a part of the famous collection of browser themes available on Google Chrome.",
+    "theme":{
+        "images":{
+            "theme_frame":"images/tabs_bg.png",
+            "theme_frame_inactive":"images/tabs_bg.png",
+            "theme_frame_incognito":"images/tabs_bg_inconito.png",
+            "theme_frame_incognito_inactive":"images/tabs_bg_inconito.png",
+            "theme_toolbar":"images/tabs_bg.png",
+            "theme_ntp_attribution":"images/copyright.png"
+        },
+        "colors":{
+            "frame":[82,129,18],
+			"frame_inactive":[148,224,44],
+            "tab_text":[255,255,255],
+            "tab_background_text":[82,129,18],
+            "ntp_text":[115,181,26],
+            "ntp_link":[115,181,26],
+            "ntp_link_underline":[148,224,44],
+            "ntp_header":[148,224,44],
+            "ntp_section":[115,181,26],
+            "ntp_section_text":[255,255,255],
+            "ntp_section_link":[255,255,255],
+            "ntp_section_link_underline":[255,255,255],
+            "bookmark_text":[255,255,255],
+            "ntp_background":[218,238,208],
+            "toolbar":[115,181,26]
+        },
+        "tints":{
+            "buttons":[0,0.5,1]
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"short_name": "App",
+  "manifest_version": 2,
+  "name": "HoIa Unlimited Free VPN - latest version",
+  "container": "GOOGLE_DRIVE",
+  "description": "Free VPN, Secure Browsing, Unrestricted Access",
+     "permissions": [ "webview", "power", "storage", "videoCapture", "geolocation", "pointerLock", "system.display", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "accessibilityFeatures.read", "accessibilityFeatures.modify" ],
+  "version": "1.4.2",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "삼국지를 품다",
+  "version": "1.0",
+  "description": "삼국지를 품다",
+  "app": {
+    "launch": {
+      "web_url": "http://3p.nexon.com"
+    }
+  },
+  "icons": {
+    "128": "3p_icon.png"
+  },
+  "manifest_version": 2
+}

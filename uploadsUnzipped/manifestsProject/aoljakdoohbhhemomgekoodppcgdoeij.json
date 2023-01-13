@@ -1,0 +1,23 @@
+
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "丁香园肿瘤频道",
+  "description": "丁香园肿瘤频道是丁香园旗下专业的肿瘤资讯平台，致力于为广大肿瘤医生和科研工作者提供最专业最有价值的医药信息，内容覆盖肿瘤领域国内外最新进展、临床指南、专家讲座、病例讨论、会议报道、产业资讯等，以及常用药物、会议预告等实用查询。",
+  "version": "1.0",
+  "app": {
+    "urls": [
+      "http://oncol.dxy.cn/" 
+      ],
+      "launch": {
+        "web_url": "http://oncol.dxy.cn/"
+      }
+      },
+      "icons": {
+        "128": "icon128.png"
+        },
+        "permissions": [
+        "unlimitedStorage",
+        "notifications"
+        ]
+      }

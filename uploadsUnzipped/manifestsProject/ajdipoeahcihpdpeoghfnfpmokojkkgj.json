@@ -1,0 +1,95 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ethyk",
+  "author": "Protect US",
+  "version": "0.0.3.10",
+  "description": "Ethyk delivers real time information on a companies ethical practices for you when shopping online and browsing the internet",
+  "web_accessible_resources" : [
+    "Data/*.js",
+   "icons/*.PNG",
+   "icons/*.png"
+   ],
+  "icons": {
+    "16": "icons/16x16.png",
+    "32": "icons/32x32.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "permissions": [
+    "*://*.google.com/*",
+    "*://*.amazon.com/*",
+    "*://*.yelp.com/*",
+    "*://*.usnews/best-colleges/*",
+    "activeTab",
+    "declarativeContent",
+    "webNavigation",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "extension_reload_dev.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/16x16.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/search?*",
+        "*://*.usnews.com/best-colleges/rankings/*",
+        "*://*.yelp.com/*",
+        "https://www.niche.com/*"
+      ],
+      "js": [
+        "lib/firebase_sdk/firebase-app.js",
+        "lib/firebase_sdk/firebase-analytics.js",
+        "lib/firebase_sdk/firebase-firestore.js",
+        "firebase_init.js",
+        "usage_tracker.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.yelp.com/*"
+      ],
+      "js": [
+        "Data/esgindexdata.js",
+        "Data/college_data.js",
+        "Data/college_data1.js",
+        "content_script_yelp.js",
+        "living_wage_businesses.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.google.com/search?*"
+      ],
+      "js": [
+        "Data/GRA_DATA.js",
+        "content_script_google.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.niche.com/*"
+      ],
+      "js": [
+        "content_script_college_niche.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.usnews.com/best-colleges/rankings/*"
+      ],
+      "js": [
+        "content_script_usnews.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}

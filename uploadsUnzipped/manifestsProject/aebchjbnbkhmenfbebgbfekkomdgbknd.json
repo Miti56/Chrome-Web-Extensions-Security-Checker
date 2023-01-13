@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Ekşi: Entry Süresi",
+  "description": "Bu eklenti eksisozluk.com üzerinde yer alan entryleri yaklaşık olarak kaç dakikada okuyabileceğinizi gösterir.",
+  "version": "2.3",
+  "permissions": ["*://*.eksisozluk.com/*", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.eksisozluk.com/*"],
+      "js": ["get_time.js"]
+    }
+  ],
+  "icons": {
+    "16": "./icons/icon16.png",
+    "48": "./icons/icon48.png",
+    "128": "./icons/icon128.png"
+  }
+}

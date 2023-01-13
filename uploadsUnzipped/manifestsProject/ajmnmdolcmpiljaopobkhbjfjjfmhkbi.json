@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Guo.Media Fixer",
+  "version" : "1.0",
+  "description" : "Fix Guo.Media web site issues",
+  "content_scripts": [{
+    "matches": ["https://guo.media/*", "https://www.guo.media/*"],
+	  "js": ["content.js"]
+  }],
+	"permissions": [
+		"https://guo.media/*",
+		"https://www.guo.media/*"
+	],
+  "minimum_chrome_version" : "59.0.0.0",
+	"icons": {
+		"16": "guomediafixer-16.png",
+		"48": "guomediafixer-48.png",
+		"128": "guomediafixer-128.png"
+	},
+  "manifest_version": 2
+}

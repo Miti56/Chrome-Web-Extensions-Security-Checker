@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "description": "\u5929\u732B\u5546\u57CE\u5B98\u65B9\u65D7\u8230\u5E97\u002D\u002D\u65D7\u8230\u5E97\u91CC\u9500\u552E\u7684\u5546\u54C1\u66F4\u6709\u4FDD\u8BC1\uFF0C\u8FD9\u4E2A\u63D2\u4EF6\u6309\u7167\u5546\u54C1\u7C7B\u76EE\u6536\u5F55\u54C1\u724C\u65D7\u8230\u5E97\uFF0C\u53EF\u4EE5\u65B9\u4FBF\u5FEB\u901F\u5230\u8FBE\u60F3\u53BB\u7684\u54C1\u724C\u5E97\uFF0C\u4E70\u5230\u7269\u7F8E\u4EF7\u5EC9\u7684\u5546\u54C1\u3002",
+   "name": "\u5929\u732B\u5546\u57CE\u5B98\u65B9\u65D7\u8230\u5E97",
+   "version": "1.0",
+   "homepage_url":"http://www.7jdian.com",
+   "offline_enabled": true,
+   "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+   "browser_action": {
+        "default_icon": "icon19.png",
+        "default_title": "\u5929\u732B\u5546\u57CE\u5B98\u65B9\u65D7\u8230\u5E97",
+        "default_popup": "popup.html"
+    },
+    
+   "manifest_version": 2
+}

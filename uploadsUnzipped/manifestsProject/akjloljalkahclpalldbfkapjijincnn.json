@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Online PDF Editor In Docs - PDFfiller",
+    "short_name": "PDFfiller",
+    "version" : "1.0.5.1",
+    "manifest_version" : 2,
+    "description" : "Instantly edit PDF online in Docs with PDFfiller's Google App. Edit, sign, save and share anytime, anywhere, from any device!",
+    "container" : "GOOGLE_DRIVE",
+    "api_console_project_id" : "67059205970",
+    "gdrive_mime_types": {
+        "http://drive.google.com/intents/opendrivedoc": [
+            {
+                "type": ["application/pdf", "application/vnd.google.drive.ext-type.pdf"],
+                "href": "http://www.pdffiller/en/gDrive/import",
+                "title" : "Open",
+                "disposition" : "window"
+            }
+        ]
+    },
+    "icons": {
+        "16": "img/16.png",
+        "32": "img/32.png",
+        "64": "img/64.png",
+        "128": "img/128.png",
+        "256": "img/256.png"
+    },
+    "app" : {
+        "launch" : {
+            "web_url" : "https://pdf-editor.pdffiller.com"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Print PDF From Docs - PDFfiller",
+    "short_name": "PDFfiller",
+    "version" : "1.1.0",
+    "manifest_version" : 2,
+    "description" : "Instantly print PDF documents in Docs from any device with PDFfiller's Google App. ",
+    "container" : ["GOOGLE_DRIVE"],
+    "api_console_project_id" : "797355644493",
+    "gdrive_mime_types": {
+        "http://drive.google.com/intents/opendrivedoc": [
+            {
+                "type": ["application/pdf", "application/vnd.google.drive.ext-type.pdf"],
+                "href": "https://www.pdffiller.com/en/gDrive/import",
+                "title" : "Open",
+                "disposition" : "window"
+            }
+        ]
+    },
+    "icons": {
+        "16": "img/16.png",
+        "32": "img/32.png",
+        "64": "img/64.png",
+        "128": "img/128.png",
+        "256": "img/256.png"
+    },
+    "app" : {
+        "launch" : {
+            "web_url" : "https://how-to-print-pdf.pdffiller.com"
+        }
+    }
+}

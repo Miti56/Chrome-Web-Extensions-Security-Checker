@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "libs/jquery.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "assets/icons/icon128.png",
+         "256": "assets/icons/icon256.png",
+         "32": "assets/icons/icon32.png",
+         "64": "assets/icons/icon64.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "__MSG_default_title__"
+   },
+   "content_scripts": [ {
+      "js": [ "libs/jquery.js", "libs/jquery.throwable.js", "libs/beejdnd.js", "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "assets/icons/icon128.png",
+      "256": "assets/icons/icon256.png",
+      "32": "assets/icons/icon32.png",
+      "64": "assets/icons/icon64.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "activeTab", "tabs", "declarativeContent", "tabCapture", "cookies", "*://*/*", "webRequest", "webRequestBlocking", "\u003Call_urls>", "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.7.4",
+   "web_accessible_resources": [ "assets/img/*.*" ]
+}

@@ -1,0 +1,37 @@
+{
+   "author": "Bitguy",
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jssha.js", "js/analytics.js", "js/bignumber.min.js", "js/buy.js", "js/functions.js", "js/delegate.js", "js/md5.js", "js/Alert.js", "js/Cache.js", "js/Command.js", "js/Exchange.js", "js/NumberObject.js", "js/Packages.js", "js/Permissions.js", "js/Request.js", "js/Storage.js", "js/StorageInternal.js", "js/TradingView.js", "js/TradingViewListener.js", "js/_1Broker.js", "js/_1Fox.js", "js/Binance.js", "js/Bitfinex.js", "js/BitMEX.js", "js/BitMEXTestnet.js", "js/Bittrex.js", "js/Deribit.js", "js/DeribitTestnet.js", "js/GDAX.js", "js/Gemini.js", "js/GeminiSandbox.js", "js/Kraken.js", "js/Kucoin.js", "js/OANDA.js", "js/OANDAPractice.js", "js/OKCoin.js", "js/OKEX.js", "js/Poloniex.js", "js/PWP.js", "js/Broker.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "img/icons/19.png",
+         "38": "img/icons/38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Bitguy"
+   },
+   "content_scripts": [ {
+      "js": [ "js/functions.js", "content.js" ],
+      "matches": [ "https://*.tradingview.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "description": "Automatic Bitcoin and Forex trading via bitguy and tradingview.",
+   "icons": {
+      "128": "img/icons/128.png",
+      "16": "img/icons/16.png",
+      "48": "img/icons/48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "45.0",
+   "name": "Bitguy",
+   "optional_permissions": [ "clipboardWrite", "webRequest", "webRequestBlocking", "https://*.1broker.com/*", "https://*.1fox.com/*", "https://*.binance.com/*", "https://*.bitfinex.com/*", "https://*.bitmex.com/*", "https://*.bittrex.com/*", "https://*.deribit.com/*", "https://*.gdax.com/*", "https://*.gemini.com/*", "https://*.kraken.com/*", "https://*.kucoin.com/*", "https://*.okcoin.com/*", "https://*.okex.com/*", "https://*.poloniex.com/*" ],
+   "options_page": "options.html",
+   "permissions": [ "identity", "identity.email", "storage", "https://*.tradingview.com/*" ],
+   "short_name": "Bitguy",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.24.0",
+   "web_accessible_resources": [ "js/analytics.js", "js/functions.js", "js/AutoviewClass.js", "content_helper.js" ]
+}

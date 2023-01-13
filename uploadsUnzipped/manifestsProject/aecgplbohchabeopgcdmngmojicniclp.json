@@ -1,0 +1,30 @@
+{
+  "description": "Breakfast has the best collection of Breakfast recipes and menus online",
+  "name": "Breakfast",
+  "version": "8.2.70",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "webRequest",
+    "storage",
+    "webNavigation",
+    "webRequestBlocking"
+  ],
+  "background": {
+    "scripts": [
+      "main.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_title": "Breakfast",
+    "default_popup": "index.html"
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+    "128": "logo.png"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

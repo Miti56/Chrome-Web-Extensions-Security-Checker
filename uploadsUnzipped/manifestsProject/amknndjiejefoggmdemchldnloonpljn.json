@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Juegos para Niñas | Addicting.XYZ",
+  "short_name": "Juegos para Niñas",
+  "version": "1.0.2",
+  "description": "Enlace directo a la categoria de Juegos para Niñas del sitio Addicting.XYZ",
+  "homepage_url": "http://addicting.xyz/c/girls-games/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Juegos para Niñas | Addicting.XYZ",
+      "default_popup": "popup.html"
+  }
+} 

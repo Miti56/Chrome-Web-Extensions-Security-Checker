@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Быстрая статистика myTarget",
+    "version": "0.0.7",
+    "description": "Быстрая статистика myTarget от Академии Лидогенерации",
+    "homepage_url": "http://lead-academy.ru",
+    "icons": {
+       "128": "icons/128.png",
+       "64": "icons/64.png",
+       "32": "icons/32.png"
+  },
+    "permissions": [
+        "background",
+        "storage",
+        "https://target.my.com/api/v1/*"
+    ],
+    "browser_action": {
+        "default_title": "Быстрая статистика myTarget от Академии Лидогенерации"
+    },
+    "background": {
+        "scripts": ["js/background.js"]
+    }
+}

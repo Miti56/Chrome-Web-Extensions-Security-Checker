@@ -1,0 +1,11 @@
+{"version": "3.3.8", 
+"manifest_version": 2, 
+"icons": {"128": "128-pics.png"}, 
+"background": {"scripts": ["bgscript.js"]}, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"browser_action": {"default_icon": "128-pics.png", 
+"default_title": "One Piece Anime New Tab Page"}, 
+"default_locale": "en", 
+"description": "__MSG_extended__", 
+"chrome_url_overrides": {"newtab": "newtab_index.html"}, 
+"name": "__MSG_tit__"}

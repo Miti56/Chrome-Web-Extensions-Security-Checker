@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Booru Pool Downloader",
+	"short_name": "Booru PD",
+	"description": "Download an entire pool from a Booru site.",
+	"version": "4.4",
+	
+	"icons":
+	{
+		"16": "img/bs_icon_16.png",
+		"48": "img/bs_icon_48.png",
+		"128": "img/bs_icon_128.png"
+	},
+
+	"browser_action":
+	{
+		"default_icon": "img/bs_icon_19.png",
+		"default_popup": "popup.html"
+	},
+	
+	"background":
+	{
+		"scripts":
+		[
+			"js/base/functions.js",
+			"js/base/WebRequest.js",
+			"js/base/WebRequester.js",
+			"js/base/DownloadQueueItem.js",
+			"js/base/DownloadManager.js",
+			"js/pool/PoolDownloader.js",
+			"js/pool/DanbooruPoolDownloader.js",
+			"js/pool/E621PoolDownloader.js",
+			"js/pool/InkbunnyPoolDownloader.js",
+			"js/pool/SakugabooruPoolDownloader.js",
+			"js/post/PostDownloader.js",
+			"js/post/E621PostDownloader.js",
+			"js/settings/E621SettingsManager.js",
+			"js/settings/InkbunnySettingsManager.js",
+			"js/background.js"
+		]
+	},
+	
+	"permissions":
+	[
+		"contextMenus",
+		"downloads",
+		"storage",
+		"tabs",
+		"*://*.danbooru.donmai.us/*",
+		"*://*.e621.net/*",
+		"*://*.inkbunny.net/*",
+		"*://*.sakugabooru.com/*"
+	],
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.e621.net/post/index*"],
+			"js": ["js/E621ContentScript.js"]
+		}
+	]
+}

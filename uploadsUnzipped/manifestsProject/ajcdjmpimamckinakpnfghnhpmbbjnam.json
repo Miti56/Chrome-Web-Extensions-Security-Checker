@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	   "manifest_version": 2,
+	   "version": "2.2",
+	   "name": "Dota 2# Theme",
+ 	   "description": "A Dota 2 Google Chrome Theme",
+	   "author": "foamier",
+
+	   "theme": {
+	      "colors": {
+	         "frame": [ 50, 0, 0 ],
+			 "frame_inactive": [50, 0, 0],
+			 "frame_incognito": [40, 0, 0],
+			 "frame_incognito_inactive": [40, 0, 0],
+			 
+	         "ntp_link": [255, 255, 255],
+			 "ntp_link_underline": [255, 255, 255],
+	         "ntp_section": [50,0,0],
+			 "ntp_background": [25, 14, 8],
+			 "ntp_text": [255, 255, 255],
+			 
+	         "toolbar": [17,40,67, 0.01],
+			 "tab_text": [219, 78, 32],
+			 "tab_background_text": [255, 255, 255],
+			 "bookmark_text": [255, 255, 255],
+			 
+			 "control_background": [10,34,78],
+			 "button_background": [219, 78, 32]
+	      },
+		  "tints": {
+             "buttons" : [0.025, 1, 0.42]
+          },
+	      "images": {
+			 "theme_tab_background": "images/dota2back.png",
+			 "theme_tab_background_incognito": "images/dota2back.png",
+			 
+	         "theme_frame": "images/dota2top.png",
+			 "theme_frame_incognito": "images/dota2top.png",
+			 
+			 "theme_frame_inactive": "images/dota2topinactive.png",
+			 "theme_frame_inactive_incognito": "images/dota2topinactive.png",
+			 
+	         "theme_ntp_background": "images/dota2home.png",
+			 
+	         "theme_toolbar": "images/dota2toolbar.png",
+			 "theme_window_control_background": "images/dota2toolbar.png"
+	      },
+		  "properties": {
+		  "ntp_background_alignment": "center"
+		  },
+		  "icons": {
+          "128": "icons/dotathemeicon.png" 
+		  }
+	   }
+
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Banana Facebook auto like and comment",
+    "description": "Facebook tool allow auto like, comment.",
+    "version": "2.1",
+    "background": {
+        "scripts": ["event.js"],
+        "persistent": false
+    },
+    "icons": {
+    "16": "iconexxt.png",
+    "128": "iconexxt.png"
+  },
+  "content_scripts": [
+    {
+        "matches": ["http://facebook.com/*", "https://www.facebook.com/*"],
+        "js": ["jquery.min.js","main1.js" ]
+    }
+],
+    "browser_action": {
+        "default_icon": "iconexxt.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+
+        "http://*.facebook.com/*",
+        "https://*.facebook.com/*"
+    ]
+}

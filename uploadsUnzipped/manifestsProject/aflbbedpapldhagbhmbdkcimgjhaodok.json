@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Superman Metropolis Defender",
+  "description": "Help our Classic Hero Superman to destroy the meteorites.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.dcheroesgames.com/superman-games/superman-metropolis-defender"
+    ],
+    "launch": {
+      "web_url": "http://www.dcheroesgames.com/superman-games/superman-metropolis-defender"
+    }
+  }
+}

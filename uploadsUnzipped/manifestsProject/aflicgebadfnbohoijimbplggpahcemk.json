@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+     "container": "GOOGLE_DRIVE",
+  "description": "__MSG_appDesc__",
+  "minimum_chrome_version": "24.0.1307.0",
+  "default_locale": "en",
+  "version": "1.1.11",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["yuki1.js"],
+      "persistent": true
+    }
+  },
+  "permissions": [
+    "browser"
+  ]
+}

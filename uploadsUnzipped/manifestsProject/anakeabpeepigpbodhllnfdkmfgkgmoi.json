@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Free Christmas Gifts",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Free Christmas Gifts provides a quick cure for your Christmas gift shopping.  Get everyone on your list, a special gift.",
+    "app": {
+		"urls": ["http://BestAudibleBooks.com/"],
+		"launch":{
+	 		"web_url": "http://BestAudibleBooks.com/" 	
+		}
+
+	},
+	"icons": {
+		"128": "icon.png"
+	}
+
+}

@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+	"name": "المعاني",
+	"version": "1.0",
+	"author": "Mohammed Moaayed",
+	"description": "هذه الاضافة تمكنك من البحث السريع و المباشر للكلمات العربية من خلال البحث في اغلب المعاجم العربية من خلال موقع المعاني .",
+	"options_page": "welcome.html",
+	"omnibox": {
+		"keyword": "معنى"
+	},
+	"permissions": [
+		"contextMenus",
+		"https://www.almaany.com/",
+		"http://www.almaany.com/",
+		"storage"
+	],
+	"background": {
+		"scripts": [ "js/background.js"]
+	},
+	"content_scripts": [
+		{
+		"matches": ["http://www.almaany.com/*", "https://www.almaany.com/*"],
+		"js": ["js/contentscript.js"],
+		"run_at": "document_end"
+		}
+	],
+	"icons":{
+		"16":"img/icon16.png",
+		"32":"img/icon32.png",
+		"48":"img/icon48.png",
+		"128":"img/icon128.png"
+	}
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CloudSlides 云幻灯",
+  "description": "免费、实时、跨平台的在线PPT会议应用，就在你的眼前。没有投影仪，一样可以开PPT会议。梁博文、黎伟杰、何俊浩、叶江楠、黎子靖",
+  "version": "1.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://CloudSlides.net/"
+    ],
+    "launch": {
+      "web_url": "http://CloudSlides.net/"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

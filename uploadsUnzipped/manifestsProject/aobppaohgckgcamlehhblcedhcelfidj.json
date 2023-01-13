@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Board Games",
+ "manifest_version": 2,
+ "short_name": "Board Games",
+ "description": "Millions of people love playing board games and cards.",
+ "version": "1",
+ "icons": {
+	"128": "icon.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://arroba.xyz/c/board-games/"
+	}
+  }
+}

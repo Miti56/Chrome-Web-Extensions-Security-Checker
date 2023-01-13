@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "author": "Emil Langazov",
+    "background": {
+        "persistent": false,
+        "scripts": ["background-script.js"]
+    },
+    "content_scripts": [{
+        "all_frames": true,
+        "js": ["md5.js", "content-script.js"],
+        "matches": [
+          "*://*.eit.edu.au/*", 
+          "*://eit.invigilationsystem.com/*", 
+          "*://lms.curtin.edu.au/*",
+          "*://curtin.invigilationsystem.com/*", 
+          "*://iris-local/*", 
+          "*://vpt-eit-iris-test.ap-southeast-2.elasticbeanstalk.com/*"
+        ]
+    }],
+    "description": "Curtin Remote Invigilation System (CRIS)",
+    "homepage_url": "http://www.eit.edu.au/",
+    "icons": {
+        "48": "icon.png"
+    },
+    "manifest_version": 2,
+    "minimum_chrome_version": "34",
+    "name": "CRIS",
+    "permissions": [ "desktopCapture", "\u003Call_urls>", "unlimitedStorage", "storage", "system.display", "contextMenus" ],
+    "version": "3.3.1",
+    "web_accessible_resources": ["icon.png"],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.youtube.com https://s.ytimg.com; object-src 'self'",
+    "externally_connectable": {
+        "matches": [
+          "*://*.eit.edu.au/*", 
+          "*://eit.invigilationsystem.com/*", 
+          "*://lms.curtin.edu.au/*",
+          "*://curtin.invigilationsystem.com/*", 
+          "*://iris-local/*", 
+          "*://vpt-eit-iris-test.ap-southeast-2.elasticbeanstalk.com/*"
+        ]
+    },
+    "incognito": "spanning"
+}

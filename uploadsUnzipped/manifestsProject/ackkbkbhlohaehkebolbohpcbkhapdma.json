@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Quran Translation",
+  "description": "This extension enables you to translate the holy quran to many languages in an easy to use interface.",
+  "version": "1.0",
+
+  "permissions": [
+    "http://worldquran.com/"
+  ],
+  "browser_action": {
+    "default_icon": {"19":"icon-19.png", "38":"icon-38.png"},
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Syntax!",
+    "background": {
+        "scripts": ["scripts/background.js"]
+    },
+    "content_scripts": [{
+        "js": ["scripts/lib/passme.min.js","scripts/content.js"],
+        "matches": ["*://*/*.js", "*://*/*.js?*", "*://*/*.json", "*://*/*.json?*", "*://*/*.pbxproj", "*://*/*.pbxproj?*"],
+        "run_at": "document_end"
+    }],
+    "description": "Syntax highlight for f2ers!",
+    "icons": {
+        "128": "images/icons/icon_128.png",
+        "48": "images/icons/icon_48.png"
+    },
+    "options_page": "options.html",
+    "page_action": {
+        "default_icon": "images/icons/icon_48.png",
+        "default_popup": "popup.html",
+        "default_title": "Syntax!"
+    },
+    "permissions": ["tabs", "http://*/*", "https://*/*", "ftp://*/*"],
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "1.1.1",
+    "web_accessible_resources": ["styles/*", "scripts/*"]
+}

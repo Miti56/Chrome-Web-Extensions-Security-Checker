@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Deals Platform Chrome Extension",
+  "description": "Add Link for widget service to inventories",
+  "version": "1.0.3",
+  "options_page": "options.html",
+  "permissions": ["tabs", "storage"],
+  "content_scripts": [{
+    "matches": ["*://www.nykaa.com/*", "*://www.nykaafashion.com/*", "*://www.nykaaman.com/*"],
+    "js": ["linkAdder.js"]
+  }],
+  "browser_action": {
+    "default_popup": "options.html"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": ["link_icon.svg"]
+}

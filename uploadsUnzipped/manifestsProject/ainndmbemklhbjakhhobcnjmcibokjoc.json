@@ -1,0 +1,44 @@
+{
+   "author": "Ivanovserr",
+   "background" : {
+      "persistent": true,
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/linkedin-inactive19.png",
+         "38": "images/linkedin-inactive38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Доступ к LinkedIn. Зайти на Linkedin"
+   },
+   "description": "Бесплатный доступ к LinkedIn",
+   "icons": {
+      "128": "images/linkedin128.png",
+      "16": "images/linkedin16.png",
+      "48": "images/linkedin48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+NGeuSZQsoYgC/KX3D0uzGJvxNxnlcDlydngz9e3IG6+4SPkJ2ON8/8YDSA7hNWFecX4K+iHDP62nVzq8dcEv65OHFOOyN9oVEnCGuWNK6TGQzD6SFce2mRX2OFdbtOGv6gUjjL5FGBHKXA0wZrouVtW+AC6ODzpx3RLXKFt7il1CNNP6HiqavrFLu3sIBdyww4G31YCzib4W3MnOFsmWxB0M3SBWp6svRl68J301IEWwghfN+Eoeche6UXdBg/aRx4eN1S7S9MnsboABKlr9Lh0Yx5EWFYG4UBeiMw3UkGundOc9QniM4gsS2PB73y00nH19YyxN16jmsEmyXEewIDAQAB",
+   "manifest_version": 2,
+   "name": "Доступ к LinkedIn. Зайти на Linkedin",
+   "permissions": [
+      "proxy",
+      "activeTab",
+      "browsingData",
+      "<all_urls>",
+      "webRequest",
+      "webRequestBlocking",
+      "storage",
+      "tabs"
+   ],
+   "content_scripts": [
+      {
+         "matches": [ "https://*/*", "http://*/*" ],
+         "js": [ "lib/jquery/jquery-2.1.4.js", "content-script.js"],
+         "run_at": "document_start"
+      }
+   ],
+   "short_name": "free-linkedin",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
+}

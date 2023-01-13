@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Investments Optimizer",
+  "description": "Digital Wealth Optimization, equity research, and portfolio management for investors of all levels",
+  "version": "1.0.1.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+   "author": "Macroaxis Inc",
+  "app": {
+    "urls": [
+      "http://www.macroaxis.com/"
+    ],
+  "launch": {
+      "web_url": "http://www.macroaxis.com/invest/chromeLogin"
+    },
+    "permissions": [
+      "unlimitedStorage",
+      "notifications"
+   ]
+  }
+}

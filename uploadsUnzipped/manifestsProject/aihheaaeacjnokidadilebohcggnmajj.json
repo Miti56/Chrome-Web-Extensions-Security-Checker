@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "AdFly Skipper+",
+    "description": "Passez les liens AdFly instantanément !",
+    "version": "7.3",
+
+    "icons": {
+        "128": "img/icon_128.png"
+    },
+
+    "web_accessible_resources": [
+        "src/skipper.js"
+    ],
+
+    "browser_action": {
+        "default_icon": "img/icon_32.png",
+        "default_popup": "src/popup.html",
+        "default_title": "AdFly Skipper+"
+    },
+
+    "content_scripts": [
+        {
+            "js": [ "src/injector.js" ],
+            "matches": [ "*://*.adf.ly/*", "*://*.j.gs/*", "*://*.q.gs/*", "*://*.ay.gy/*" ]
+        }
+    ],
+
+    "background": {
+        "page": "task/background.html",
+        "persistent": true
+    },
+
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/",
+        "cookies",
+        "storage"
+    ],
+
+    "manifest_version": 2
+}

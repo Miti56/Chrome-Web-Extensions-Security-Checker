@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Handle for Google Apps",
+  "version": "1.0.0",
+  "description": "Handle: To-do List, Inbox, and Calendar Management all in one",
+  "icons": {
+    "16": "icon-16x16.png",
+    "48": "icon-48x48.png",
+    "128": "icon-128x128.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "771876926249",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://web.handle.com"
+    }
+  }
+}

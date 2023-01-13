@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Sisters Fashionista Makeup",
+
+  "short_name": "Sisters Fashionista Makeup",
+
+  "version": "1.0.2",
+  "description": "Play Sisters Fashionista Makeup on your browser",
+
+  "homepage_url": "http://apiengine.xyz/c/girls-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Sisters Fashionista Makeup",
+
+      "default_popup": "popup.html"
+  }
+}

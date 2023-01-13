@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Mark One - Online Video Note-taker",
+    "version": "0.21",
+    "description": "The simplest note-taker for videos. Turn subtitles to notes, capture screenshots, take notes without leaving the video page.",
+    "author": "Mark One Team",
+    "manifest_version": 2,
+    "icons":
+    {
+        "16": "icons/Markone_icon_16.png",
+        "32": "icons/Markone_icon_32.png",
+        "48": "icons/Markone_icon_48.png",
+        "128": "icons/Markone_icon_128.png"
+    },
+    "permissions": ["<all_urls>", "*://*/*", "activeTab", "tabs", "cookies", "background", "storage"],
+    "browser_action":
+    {
+        "default_title": "Markone"
+    },
+    "background":
+    {
+        "persistent": false,
+        "page": "pages/background.html"
+    },
+    "content_scripts": [
+    {
+        "js": ["js/inject.js"],
+        "css": ["injectStyle/inject.css"],
+        "run_at": "document_end",
+        "matches": ["*://*.youtube.com/*", "*://www.bilibili.com/*"],
+        "all_frames": true
+    }],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "web_accessible_resources": ["panel.html", "js/content.js", "injectImg/play.png", "injectImg/cut.svg", "injectImg/cut-force.svg", "injectImg/play-force.png", "injectImg/more.png", "injectImg/more-force.png", "injectImg/enter.svg", "injectImg/enter-force.svg", "injectImg/cut-disable.svg", "injectImg/play-disable.png", "icons/background.png"]
+}

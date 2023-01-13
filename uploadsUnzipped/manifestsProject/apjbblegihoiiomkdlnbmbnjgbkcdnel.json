@@ -1,0 +1,22 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js", "js/share.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Za punu sobu dobrog zvuka!",
+   "icons": {
+      "128": "img/icon.png",
+      "16": "img/icon_16.png",
+      "48": "img/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA099a9HpNAzgUdiwBnNR5Nqrj/8X6Zduj61ifR2JCOjqm3O4w0t9ra8l6xUQAnDRS3L//WdWHd98BRvpYN+OYlhELl3C0UwxVAj6CN55QJKxLtZ+jxQ010+kQnMHKNtn2nHZDaaF3x91nFqkR9Td1EinVd0LHJlDVGJNbrExEKaf+/31SGn0DBhCBdDeqAwQy6ihA/NvuKF8nB/vLEcjc/xW7QLUx2I4C1aenUVe1N7wiOWaQvg8XNvp+Ri/TPmBt3Z6zTNQfi1hiJlEZVSqFy+K8kVurw35eECtwrarT96egzSygRTy0WfFFi/wGKNG4ZnAb8zhd8LnSZQqyVWr5lwIDAQAB",
+   "manifest_version": 2,
+   "name": "BIG Radio BL",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.1"
+}

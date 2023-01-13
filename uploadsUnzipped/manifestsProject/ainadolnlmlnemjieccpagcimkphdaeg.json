@@ -1,0 +1,11 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "Chinese Language Learn",
+  "name": "Chinese Language Learn",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "version": "1.0"
+}

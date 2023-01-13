@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Email Tracking Preventer",
+  "version": "0.0.16",
+  "manifest_version": 2,
+  "description": "Keep your privacy intact! Stop email tracking images from loading, and know who is trying to track you :)",
+  "homepage_url": "http://www.tracknot.co",
+  "default_locale": "en",
+  "background": {
+    "persistent": true,
+    "scripts": ["/js/jquery/jquery1.js", "/src/background.js"]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "notifications",
+    "activeTab",
+    "tabs",
+    "*://*/*",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "optional_permissions": ["*://*/*" ],
+  "content_security_policy": "script-src 'self' https://cdn.mxpnl.com; object-src 'self'",
+  "omnibox": {
+    "keyword": "email tracking preventer"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/"
+      ],
+      "css": [
+        "src/gmail/inject.css"
+      ],
+      "js": [
+        "js/jquery/jquery1.js",
+        "js/inboxsdk.js",
+        "src/gmail/gmail-main-inboxsdk.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "js/jquery/jquery1.js"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Application Findizer",
+  "short_name": "Findizer",
+  "description": "Sauvegardez en un clic vos recherches shopping et bénéficiez automatiquement de codes de réduction pour vos achats sur Internet.",
+  "version": "1.31",
+
+  "icons": {
+     "16": "data/img/icons/fdz-16x16-red.png",
+     "48": "data/img/icons/fdz-48x48.png",
+     "128": "data/img/icons/fdz-128x128.png"
+   },
+
+  "browser_action": {
+      "default_icon": {
+          "19": "data/img/icons/fdz-19x19-grey.png",
+          "38": "data/img/icons/fdz-38x38-grey.png"
+        },
+    "default_title": "Sauvegarder ce produit sur Findizer"
+  },
+
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "*://*/"
+  ],
+
+  "background": {
+    "scripts": ["lib/findizer.js","lib/facebook.js","lib/audivox.js","lib/search_tracker.js","lib/nav_analyzer.js","lib/extract_product.js","lib/list_handler.js","lib/main.js"],
+    "persistent": false
+  },
+
+  "web_accessible_resources": [
+    "data/img/style/picto-fdz-white.png",
+    "data/img/style/logo-fdz.png",
+    "data/img/style/check.png",
+    "data/img/style/picto-list-shared.png",
+    "data/img/style/picto-list-private.png",
+    "data/img/style/picto-validate.png",
+    "data/img/style/picto-validate-big.png",
+    "data/img/style/next.png",
+    "data/img/style/prev.png",
+    "data/img/style/view.png",
+    "data/img/style/tuto_list.png",
+    "data/img/style/time.png",
+    "data/img/style/arrow.png",
+    "data/img/style/picto-fdz-logo.png",
+    "data/img/style/up_pyramid.png",
+    "data/img/style/right_pyramid.png",
+    "data/img/icons/fdz-16x16-red.png",
+    "data/img/icons/fdz-16x16-grey.png",
+    "data/img/style/loader.gif"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": [
+          "data/js/jquery.min.js",
+          "data/js/jquery.tinyscrollbar.js",
+          "data/page-mods/utils/chrome-adapter.js",
+          "data/page-mods/utils/ui.js",
+          "data/page-mods/nav/analyzer.js",
+          "data/page-mods/nav/list.js",
+          "data/page-mods/nav/reco.js",
+          "data/page-mods/nav/tuto.js",
+          "data/page-mods/nav/voucher_code_panel.js",
+          "data/page-mods/findizer/tutorial.js"
+      ]
+    },
+    {
+      "matches": ["*://*.findizer.fr/*","*://*.findizer.dev/*"],
+      "js": ["data/page-mods/findizer/messaging.js"]
+    },
+    {
+      "matches": ["*://*.leguide.com/*"],
+      "js": [ "data/page-mods/search/leguide.js"]
+    },
+    {
+      "matches": ["*://*.kelkoo.fr/*"],
+      "js": [ "data/page-mods/search/kelkoo.js"]
+    },
+    {
+      "matches": ["*://*.shopping.com/*"],
+      "js": [ "data/page-mods/search/shopping.js"]
+    },
+    {
+      "matches": ["*://*.pricerunner.fr/*"],
+      "js": [ "data/page-mods/search/pricerunner.js"]
+    },
+    {
+      "matches": ["*://*.idealo.fr/*"],
+      "js": [ "data/page-mods/search/idealo.js"]
+    },
+    {
+      "matches": ["*://*.2xmoinscher.com/*"],
+      "js": [ "data/page-mods/search/2xmc.js"]
+    },
+    {
+      "matches": ["*://*.priceminister.com/*"],
+      "js": [ "data/page-mods/search/priceminister.js"]
+    },
+    {
+      "matches": ["*://*.izideal.fr/*"],
+      "js": [ "data/page-mods/search/izideal.js"]
+    },
+    {
+      "matches": ["*://*.lebigcomparateur.com/*"],
+      "js": [ "data/page-mods/search/lebigcomparateur.js"]
+    },
+    {
+      "matches": ["*://*.twenga.fr/*"],
+      "js": [ "data/page-mods/search/twenga.js"]
+    },
+    {
+      "matches": ["*://*.cherchons.com/*"],
+      "js": [ "data/page-mods/search/cherchons.js"]
+    },
+    {
+      "matches": ["*://*.achetezfacile.com/*"],
+      "js": [ "data/page-mods/search/achetezfacile.js"]
+    },
+    {
+      "matches": ["*://*.i-comparateur.com/*"],
+      "js": [ "data/page-mods/search/icomparateur.js"]
+    },
+    {
+      "matches": ["*://*.shopwiki.fr/*"],
+      "js": [ "data/page-mods/search/shopwiki.js"]
+    },
+    {
+      "matches": ["*://*.shopzilla.fr/*"],
+      "js": [ "data/page-mods/search/shopzilla.js"]
+    },
+    {
+      "matches": ["*://*.malinoo.fr/*"],
+      "js": [ "data/page-mods/search/malinoo.js"]
+    },
+    {
+      "matches": ["*://*.monsieurprix.com/*"],
+      "js": [ "data/page-mods/search/monsieurprix.js"]
+    },
+    {
+      "matches": ["*://*.amazon.fr/*"],
+      "js": [ "data/page-mods/search/amazon.js", "data/page-mods/products/amazon.js"]
+    },
+    {
+      "matches": ["*://*.google.fr/*"],
+      "js": [ "data/js/jquery.ba-hashchange.js", "data/page-mods/search/google.js"]
+    },
+    {
+      "matches": ["*://*.ebay.fr/*"],
+      "js": [ "data/page-mods/search/ebay.js"]
+    },
+    {
+      "matches": ["*://*.cdiscount.com/*"],
+      "js": [ "data/page-mods/search/cdiscount.js"]
+    },
+    {
+      "matches": ["*://*.laredoute.fr/*"],
+      "js": [ "data/page-mods/search/laredoute.js"]
+    },
+    {
+      "matches": ["*://*.pixmania.com/*"],
+      "js": [ "data/page-mods/search/pixmania.js"]
+    },
+    {
+      "matches": ["*://*.rueducommerce.fr/*"],
+      "js": [ "data/page-mods/search/rueducommerce.js"]
+    },
+    {
+      "matches": ["*://*.3suisses.fr/*"],
+      "js": [ "data/page-mods/search/3suisses.js"]
+    },
+    {
+      "matches": ["*://*.mistergooddeal.com/*"],
+      "js": [ "data/page-mods/search/mistergooddeal.js"]
+    }
+  ]
+}

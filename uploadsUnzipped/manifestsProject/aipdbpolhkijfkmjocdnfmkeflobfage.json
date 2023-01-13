@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "LinkedIn® People You Surely Know",
+	"version": "1.0.3",
+	
+	"description": "Encontre pessoas que você - com certeza - conhece no LinkedIn.",
+	"icons": { 
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png" 
+	},
+
+	"page_action": {
+		"default_icon": {
+			"19": "images/icon19.png", 
+            "38": "images/icon38.png" 
+		},
+		"default_title": "LinkedIn People You Surely Know",
+		"default_popup": "popup.html"
+	},
+	
+	"author": "Edney Pitta",
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": false
+	},
+	"content_scripts": [{
+		"matches": ["*://*.linkedin.com/people/pymk*"],
+		"js": ["js/contentscript.js"],
+		"run_at": "document_start",
+		"all_frames": false
+	}],
+	"permissions": [
+		"tabs",
+		"https://www.linkedin.com/",
+		"https://www.linkedin.com/people/pymk"
+	],
+	"short_name": "People You Surely Know",
+	"web_accessible_resources": [ ]	
+}

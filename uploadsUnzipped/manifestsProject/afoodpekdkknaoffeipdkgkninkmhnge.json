@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "wordtwist_wizard",
+
+    "description": "This extension will search for wordtwist gameboards with at least 140 ultra rare words.",
+
+    "version": "2.0",
+
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "homepage_url": "https://wordtwist.puzzlebaron.com/init4.php",
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["popup.js"]
+        }
+      ]
+}

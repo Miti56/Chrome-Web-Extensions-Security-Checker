@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "CopyCat",
+	"version": "0.1.1",
+	"manifest_version": 2,
+	"description": "很久以前有一家公司叫做fireball, 公司里面有一只小猫叫做copycat，它每天都会帮公司订单组同事发订单。",
+	"icons": {
+		"16": "images/icon-16.png",
+		"128": "images/icon-128.png"
+	},
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"background",
+		"cookies",
+		"webRequestBlocking",
+		"https://buyertrade.taobao.com/*",
+		"webRequest",
+		"*://*.taobao.com/",
+		"contextMenus",
+		"notifications"
+	],
+	"web_accessible_resources": [
+		"images/icon-38.png"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://evo.xinpinget.com/*",
+				"http://evo.local.com/*",
+				"http://daily.evo.xinpinget.com/*",
+				"http://localhost:8000/*"
+			],
+			"js": [
+				"scripts/contentscript.js"
+			],
+			"run_at": "document_end",
+			"all_frames": false
+		}
+	],
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon-19.png",
+			"38": "images/icon-38.png"
+		},
+		"default_title": "copycat",
+		"default_popup": "popup.html"
+	}
+}

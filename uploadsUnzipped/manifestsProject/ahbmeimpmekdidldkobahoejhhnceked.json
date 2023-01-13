@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "自由人人",
+  "version": "6",
+  "description": "自由访问新鲜事、日志、状态、头像，自由设定特别关注，自由穿梭人人网。",
+  "content_scripts": [ {
+      "css": [ "inject.css" ],
+      "js": [ "jquery.js" , "inject.js" ],
+      "matches": [ "http://*.renren.com/*" , "http://*.facejoking.com/*" , "http://*.duoshuo.com/*" ],
+	  "run_at": "document_end"
+   } ],
+  "browser_action": {
+    "default_icon": "icon.png",
+	"default_popup": "popup.html"
+  },
+  "icons": {
+	"128": "icon.png",
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png"
+  },
+  "permissions": [
+    "tabs", 
+	"http://*.renren.com/",
+	"http://*.facejoking.com/",
+	"http://*.duoshuo.com/"
+]
+}

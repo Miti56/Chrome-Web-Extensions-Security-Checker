@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Moduwa",
+  "description": "Moduwa Screen Sharing",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "minimum_chrome_version": "34",
+  "icons": {
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [ {
+    "js": [ "content.js" ],
+    "matches": [ "https://moduwa.modutech.co.kr:8082/*" ]
+  }],
+  "externally_connectable": {
+      "matches": [
+          "https://moduwa.modutech.co.kr:8082/*"
+      ]
+  }
+}

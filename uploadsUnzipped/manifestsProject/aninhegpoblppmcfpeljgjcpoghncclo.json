@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "cryptopp.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_title": "Attach a hindstamp to selection"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery-3.1.1.min.js", "qrcode.js", "ser.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Lets you place hindstamps on chosen text straight out of your favorite WYSIWYG editor, leaving links that can be saved as-is.",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Hindstamps Blogs",
+   "permissions": [ "contextMenus", "tabs", "clipboardWrite", "clipboardRead", "activeTab" ],
+   "short_name": "Hindstamps",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ "qrcode.html", "stamp.html", "wait.html", "result.html", "load.gif", "back.jpg", "crack-stamp.png" ]
+}

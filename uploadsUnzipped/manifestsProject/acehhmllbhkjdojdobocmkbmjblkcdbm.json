@@ -1,0 +1,24 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "__MSG_name__",
+    "version": "1.44",
+    "description": "__MSG_description__",
+    "default_locale": "en",
+    "icons": {"128": "img/icon128.png"},
+    "background": {"scripts": ["js/background.js"]},
+    "chrome_url_overrides": {"newtab": "index.html"},
+    "browser_action": {"default_title": "Adventure Films & Fantasy Movies HD New Tab"},
+    "permissions": [
+        "<all_urls>",
+        "idle",
+        "notifications",
+        "storage",
+        "cookies",
+        "webRequest",
+        "webRequestBlocking",
+        "activeTab",
+        "tabs",
+        "unlimitedStorage"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"content_scripts": [
+  {
+	"matches": [
+	  "<all_urls>"
+	],
+	"js": ["thirdParty/jquery-3.1.1.min.js" , "content.js"],
+	"run_at":"document_start"
+  }
+
+],
+"background":{
+	"scripts":["thirdParty/jquery-3.1.1.min.js", "background.js"]
+}
+,
+"browser_action": {
+  "default_icon": "ico_clock_green.png"
+},
+  "description" : "This tool pulls data from Ticketing Systems (right now, just Jira) and links it to the inTime application. ",
+  "manifest_version": 2,
+  "name": "inTime - Ticketing Systems Linker",
+  "version": "1.1.5"
+}

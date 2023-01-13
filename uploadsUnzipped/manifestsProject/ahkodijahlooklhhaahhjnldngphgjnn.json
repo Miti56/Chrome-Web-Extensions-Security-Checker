@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "Welearn New Tab",
+ "description": "The best content for you on Welearn, just a tab away.",
+ "version": "0.0.2",
+ "chrome_url_overrides": { "newtab": "index.html" },
+ "icons": {
+    "16": "img/16x16.png",
+    "48": "img/48x48.png",
+    "128": "img/128x128.png"
+},
+"content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+ "permissions": [
+  "tabs",
+  "cookies",
+  "http://fonts.googleapis.com/",
+  "https://fonts.googleapis.com/",
+  "http://*/*", "https://*/*"
+  ],
+  "version_name": "En 0.0.2",
+ "short_name": "Welearn New Tab"
+}

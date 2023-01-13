@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+    "name": "Awsome Twitter Counter",
+    "description": "Good old character countdown for twitter.",
+    "version": "1.0",
+    "shortname": "A Twitter Counter",
+    "homepage_url": "http://github.com/xome4ok/awsome-twitter-counter",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://twitter.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {"128": "Twitter.svg.png"}
+}

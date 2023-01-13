@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "logic.js" ]
+   },
+   "description": "This extension is used to inform TB members whenever a new shout was published.",
+   "icons": {
+      "128": "TB_Logo.png"
+   },
+   "manifest_version": 2,
+   "name": "Team Bluesteel - Group Shout Notifier",
+   "permissions": [ "http://*.roblox.com/*", "notifications", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1",
+   "web_accessible_resources": [ "TB_Logo.png" ]
+}

@@ -1,0 +1,24 @@
+{
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "form.html"
+   },
+   "background": {
+   "scripts": [ "back.js"],
+   "persistent": false
+   },
+   "content_scripts": [ {
+      "js": [ "jquery-1.8.2.min.js", "popup.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Busque seus videos no Youtube com apenas um clique",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Quick Youtube",
+   "permissions": [ "tabs", "cookies", "bookmarks", "*://*/*", "http://eflux.com.br/*","https://eflux.com.br/*", "cookies", "http://compre.vc/*", "https://www.lomadee.com/*", "https://www.lomadee.com/*", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1"
+}

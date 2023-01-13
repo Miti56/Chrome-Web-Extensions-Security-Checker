@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Form Filler",
+    "version": "1.1.0.5",
+    "manifest_version": 2,
+    "description": "Fills web forms for you.",
+    "minimum_chrome_version": "23.0.0",
+     "browser_action": {
+        "default_icon": "img/logo128x128.png",
+        "default_popup": "popup/popup.html",
+        "default_title": "Form Filler"
+      },
+    "options_page": "options.html",
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "scripts": ["bundles/bundled_background.js"],
+        "persistent": false
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": [ "bundles/bundled_formfiller.js" ],
+          "all_frames": true
+        }
+      ]
+}
+

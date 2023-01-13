@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "name": "Y123Y",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Al3ab Flash Y123Y",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

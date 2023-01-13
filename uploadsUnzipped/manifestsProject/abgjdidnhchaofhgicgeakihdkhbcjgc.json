@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmJTVK+HWWWp7qoixo0GTmL6K0Y+9LgxM2PQQM9MdybDWFouB5mGtDrYbnRr3I82/bM66fnK7kz0O7wMa6woexXicMTdhi6lMxO10sQYdzE73p9Gqc6cLXhMJLmS1UGNe2M3hDhZO9cT4tXvviC8dLrPjD3XLKoDlCsUqcCdUYhoWs8q+GJtagQlf0LTHa/OYRVv+Ig5Lciuci2SdWR8aOXTGf4EmzkuGQtKwu7mBhSq6rdaOWcViSjzPfMxroX+bt/tQli57NafEJpUN0JEYwDw2gt6uXyttIfI3ZChTDgn/y8wb4yhWJE6UhLXE4j9LmLX1zlANenTEoHPiCGWWqwIDAQAB",
+    "short_name": "Fake News Detector",
+    "name": "Fake News Detector",
+    "version": "0.0.2",
+    "description": "Evaluate whether news articles provide authentic information or are just fake news.",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "Detect fake news",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+    "permissions": [
+        "identity",
+        "storage",
+        "tabs",
+        "http://127.0.0.1:5000/",
+        "*://*.facebook.com/*",
+        "*://*.facebook.net/*"
+    ],
+    "oauth2": {
+        "client_id": "3655087929-pn9vea1mk2g2ivel2mkoqlcs5cd08im1.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/plus.login",
+            "https://www.googleapis.com/auth/user.addresses.read",
+            "https://www.googleapis.com/auth/user.birthday.read",
+            "https://www.googleapis.com/auth/user.emails.read",
+            "https://www.googleapis.com/auth/user.phonenumbers.read",
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/userinfo.profile"
+        ]
+    }
+}

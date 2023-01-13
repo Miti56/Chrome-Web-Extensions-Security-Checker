@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"2.1",
+"name":"Camo FTW Hanna Hilton",
+"description":"RES 1366x768 - After two years, a new version of Hanna Hilton",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 43 , 47 , 29 ],
+"ntp_text": [ 43 , 47 , 29 ],
+"ntp_section_link": [ 43 , 47 , 29 ],
+"ntp_section_text": [ 43 , 47 , 29 ],
+"ntp_background": [ 203 , 209 , 181 , 0.5 ],
+"ntp_header": [ 180 , 195 , 134 , 0.15 ],
+"ntp_section": [ 180 , 195 , 134 , 0.15 ],
+"frame": [ 180 , 195 , 134 ],
+"toolbar": [ 203 , 209 , 181 ],
+"tab_text": [ 43 , 47 , 29 ],
+"tab_background_text": [ 43 , 47 , 29 ],
+"bookmark_text": [ 43 , 47 , 29 ]
+},
+"tints":
+{
+"buttons": [ 0.202380952380952 , 0.233333333333333 , 0.764705882352941 ],
+"frame_incognito": [ 0.195435551269688 , 0.317192070198245 , 0.607151095732411 ],
+"frame_inactive": [ 0.202380952380952 , 0.233333333333333 , 0.15 ],
+"frame_incognito_inactive": [ 0.202380952380952 , 0.233333333333333 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

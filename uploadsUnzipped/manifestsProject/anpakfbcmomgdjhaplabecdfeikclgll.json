@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "TubeNotes",
+	"description": "This extension allows for fast and accurate note-taking on Youtube Videos",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon": "icon_temp.png",
+		"default_popup": "popup.html",
+		"default_title": "Click here if you wanna"
+	},
+
+	"permissions": [
+		"activeTab",
+		"identity",
+		"storage",
+		"https://www.googleapis.com/*",
+		"http://youtube.com/*",
+		"https://youtube.com/*"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://www.youtube.com https://s.ytimg.com https://www.googleapis.com/; object-src 'self'",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"chrome_url_overrides": {
+		"newtab" : "existing_iframe.html"
+	},
+	"icons" : {
+		"64" : "icon_temp.png"
+	},
+	"content_scripts": [
+    {
+      "matches": ["http://www.youtube.com/watch*", "https://www.youtube.com/watch*"],
+      "js": ["existing_iframe.js"]
+    }
+    ],
+    "web_accessible_resources": [
+    	"existing_iframe.js"
+    ]
+}

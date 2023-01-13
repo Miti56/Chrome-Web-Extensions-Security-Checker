@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Aliexpress Deals",
+  "description": "Latest Aliexpress Deals",
+  "version": "1.0",
+
+  "permissions": [
+    "http://s.click.aliexpress.com/",
+	"http://m.aliexpress.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

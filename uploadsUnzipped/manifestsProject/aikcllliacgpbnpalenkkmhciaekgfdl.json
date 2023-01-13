@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+  
+    "name": "Repo In The Wild",
+    "description": "A browser extension indicating publicly exposed code repositories.",
+    "version": "1.2",
+
+    "icons": {"128": "icons/icon.png" },
+  
+    "page_action": {
+      "default_icon": "icons/icon.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+    ]
+  }

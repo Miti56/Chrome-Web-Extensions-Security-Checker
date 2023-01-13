@@ -1,0 +1,18 @@
+{
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_title": "FreeNew App Store"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Download the best free Android，iPhone \u0026 iPad，Windows apps at www.freenew.net",
+  "background": {"scripts": ["background.js"]},
+  "name": "FreeNew App Store",
+  "permissions": ["tabs"],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png",
+    "16": "icon16.png"
+  },
+  "manifest_version": 2,
+  "version": "1.0.0"
+}

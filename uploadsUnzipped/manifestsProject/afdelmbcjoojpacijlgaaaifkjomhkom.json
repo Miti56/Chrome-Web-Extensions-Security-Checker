@@ -1,0 +1,12 @@
+{"manifest_version": 2, 
+"browser_action": {"default_icon": "128-logo.png", 
+"default_title": "Happy Wheels Wallpapers"},
+ "description": "__MSG_extinfo__", 
+"name": "Happy Wheels Wallpapers", 
+"default_locale": "en", 
+"icons": {"128": "128-logo.png"},
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"version_name":"fix 75","permissions":["storage"], 
+"background": {"scripts": ["backscript.js"]},
+ "version": "0.8.3", 
+"chrome_url_overrides": {"newtab": "index.html"}}

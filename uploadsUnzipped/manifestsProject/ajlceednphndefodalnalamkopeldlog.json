@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "OdooCRM Inbox",
+	"description": "Nam Vu's description",
+	"icons": {
+		"16": "icons/icon16.png",
+		"32": "icons/icon32.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"version": "1.0.1",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"manifest_version": 2,
+	"permissions": [
+		"identity",
+		"tabs",
+		"storage",
+		"*://*.google.com/*",
+		"https://www.googleapis.com/*"
+	],
+	"background": {
+	    "scripts": [
+	    	"lib/jquery.js",
+	    	"common/shared-common.js", 
+	    	"background/background.js"
+	    ]
+  	},
+	"content_scripts": [
+	    {
+	      	"matches": ["*://mail.google.com/*"],
+	      	"css": ["css/style.css"],
+	      	"js": [
+	      		"lib/jquery.js",
+	      		"common/shared-common.js", 
+	      		"content_script/content_script.js"
+	      	]
+	    }
+  	],
+  	"web_accessible_resources": [
+  		"lib/jquery.js",
+  		"lib/gmail_api.js",
+  		"common/shared-common.js",
+  		"common/dom_page.js",
+  		"injected_script/page.js",
+  		"css/style.css",
+  		"icons/odoo.png",
+  		"icons/gmail.png",
+  		"sidebar.html"
+  	],
+  	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn8OHxVBHqUMniEhy/OxQMHmeqSer3gasg+svTVjUfIy6bm5cv2H8RIPr/munrEKmZcAfv2Sw/Ns46N/Fu3pT0d+dL40PbtB+KDyaNaEzv8D00jVasEPg6gkfKd3+f0FwKGM833pEhYd62CIu5dEG3aA7BE8g4fLsTTECXStEfgA3eGDqovBlOq2oPK31kmt4vW/A14fdlLpJJu6vnHVVD8GpfJ4REt0+w4q1UvTHfZ9G+11uz9R1wdKMVSrIzYFMSehoGzPE4F/0RlzsDyqrfxN4EywlXiroipqUef3gLMqEZxUEVgFaaDIh0hg5/F+t1p1fQ4D1LpUuAQCDRzMKgwIDAQAB",
+  	"oauth2": {
+	    "client_id": "677030558753-lhn7guku4lf1l51u29ksvi03cvk5bp2d.apps.googleusercontent.com",
+	    "scopes": [
+	      "https://www.googleapis.com/auth/gmail.readonly"
+	    ]
+  	}
+}

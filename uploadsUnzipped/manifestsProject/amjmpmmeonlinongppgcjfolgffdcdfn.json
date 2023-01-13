@@ -1,0 +1,45 @@
+{"version":"0.1.2",
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name":"Shine Skin Aero (by Skarv)",
+"theme":
+   {"images":
+	{"theme_toolbar":"images\/theme_toolbar.png",
+	"theme_window_control_background":"images\/theme_window_control_background.png",
+	"theme_ntp_attribution": "images\/message.png", 
+	"theme_ntp_background":"images\/theme_ntp_background.png",
+	"theme_tab_background_incognito": "images\/theme_tab_background.png",  
+	"theme_tab_background": "images\/theme_tab_background.png",
+    "theme_tab_background_v": "images\/theme_tab_background.png"
+   },
+    "colors": {
+	"frame":[33,33,88],
+	"frame_inactive":[112, 140, 183],
+	"frame_incognito":[0,0,10],
+	"frame_incognito_inactive":[0,0,10],
+    "toolbar": [255,255,255, 0.1],
+	"tab_text":[0,0,0],
+	"tab_background_text":[255,255,255],
+	"bookmark_text":[255, 255, 255],
+	"ntp_background":[255,255,255],
+	"ntp_text":[255,255,255],
+	"ntp_link":[255,255,255],
+	"ntp_header": [103, 136, 186, 0.6],
+	"ntp_section":[113,120,160, 0.4],
+	"ntp_section_text":[255,255,255],
+	"ntp_section_link":[161,192,255],
+	"control_background":[0,0,0],
+	"button_background":[0,0,0,80]
+ 	},
+    "properties": {
+	"ntp_background_alignment":"top",
+	"ntp_background_repeat":"repeat"
+	},
+    "tints": {
+	"buttons":[-1,-1,0.35],
+	"frame_inactive":[-1,-1,0.63],
+	"frame_incognito":[-1,0.2,0.35],
+	"frame_incognito_inactive":[-1,0.3,0.6],
+	"theme_toolbar":[1, 1, 0.30],
+	"theme_tab_background_v":[1, 1, 0.10],
+	"background_tab": [-1, 0.45, 0.45]
+}}}

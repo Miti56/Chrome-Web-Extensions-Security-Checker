@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "即決勇者",
+    "description": "手軽に遊べるカジュアルゲーム",
+    "version": "1.0.1",
+    "app": {
+        "launch": {
+            "web_url": "http://mhgames.web.fc2.com/Sokketsuyusya/index.html"
+        }
+    },
+    "icons": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "permissions": [
+    ]
+}

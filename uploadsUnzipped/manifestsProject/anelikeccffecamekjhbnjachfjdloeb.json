@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "CSS Change",
+    "version": "1.1",
+    "manifest_version": 2,
+    "description": "“CSS Change”可以让用户对网页自定义样式，嵌入脚本等。",
+    "icons": {
+        "128": "icon-open.png"
+    },
+    "browser_action": {
+        "default_icon": "icon-close.png",
+        "default_title": "CSS Change",
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "webNavigation",
+        "tabs"
+    ]
+}

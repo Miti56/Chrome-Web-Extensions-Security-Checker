@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Araba Oyunları Oyna",
+    "description": "En Güzel Araba Oyunları Oyun Sitemizde Hergün Güncel Şekilde listelenmektedi. Araba Oyunları Oyna.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {  
+        "128": "icon.png"
+    },
+    "app": {
+        "urls": [
+            "http://www.arabaoyunu.io/"
+        ],
+        "launch": {
+            "web_url": "http://www.arabaoyunu.io/"
+        }
+    }
+}

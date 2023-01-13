@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [
+      "background.js", 
+      "rewriteurls.js"
+    ]
+  }, 
+  "content_scripts": [
+    {
+      "js": [
+        "contentscript.js"
+      ], 
+      "matches": [
+        "http://*/*"
+      ],
+      "exclude_matches": ["http://extension.buy2change.com/*"],
+      "run_at" : "document_end"
+    }
+  ], 
+  "description": "Raise money for Summer Search when you shop online.", 
+  "id": "488E76AB46B08E11E2C6700C075384C0CB470AEC", 
+  "name": "Summer Search Smart Shopper", 
+  "permissions": [
+    "tabs",
+    "webRequest", 
+    "webRequestBlocking", 
+    "http://*/*"
+  ], 
+  "version": "1.0.2.7",
+  "manifest_version": 2
+}

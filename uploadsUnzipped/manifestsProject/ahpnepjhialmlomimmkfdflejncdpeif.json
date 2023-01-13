@@ -1,0 +1,9 @@
+{  
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version":2,
+	"name":"Search by CID or Company ID",
+	"description":"This tool lets you to navigate to different pages in Rocket Fuels's DSP, Apollo and Admin via CID or Company ID",
+	"version":"1.5",
+	"browser_action":{"default_icon":"logo.png","default_popup":"RF SHORT CUT TOOL.html"},
+	"permissions": ["tabs", "http://*/*", "https://*/*"]
+}

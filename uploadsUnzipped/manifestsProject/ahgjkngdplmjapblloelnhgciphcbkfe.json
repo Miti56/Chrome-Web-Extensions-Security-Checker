@@ -1,0 +1,40 @@
+{
+   "description": "theme unofficial Ultra Music Festival 2012",
+   "name": "Ultra Music Festival 2012",
+   "manifest_version": 2,
+   "theme": {
+      "colors": {
+         "frame":[ 225,225,225 ],
+         "bookmark_text":[ 0,0,0 ],
+         "ntp_link": [ 44,51,66 ],
+         "ntp_section": [ 194,217,122 ],
+         "ntp_text": [ 32,32,32 ],
+         "tab_background_text": [ 255,255,255 ],
+         "tab_text": [ 0,0,0 ],
+         "toolbar": [ 208,208,210 ]
+      },
+      "images": {
+ "theme_frame": "images/theme_frame_overlay.png",
+         "theme_frame_inactive": "images/theme_frame_overlay.png",
+         "theme_frame_incognito": "images/theme_frame_overlay.png",
+         "theme_frame_incognito_inactive": "images/theme_frame_overlay.png",
+         "theme_frame_overlay": "images/theme_frame_overlay.png",
+         "theme_ntp_attribution": "images/theme_ntp_attribution.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom center",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 2
+      },
+      "tints": {
+         "background_tab": [ 0.5, 0.5, 0.15 ],
+         "frame_inactive": [ 0.5, 0, 0.65 ],
+         "frame_incognito_inactive": [ 0.5, 0, 0.45 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.6.0"
+}

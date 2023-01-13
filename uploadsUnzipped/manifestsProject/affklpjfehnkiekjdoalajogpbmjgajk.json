@@ -1,0 +1,69 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+  
+    "name": "Peach",
+    "description": "Share knowledge and opinion on any web page",
+    "version": "0.0.0.9",
+    "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://firebasestorage.googleapis.com/* https 'unsafe-inline'; object-src 'self'",
+
+  
+    "browser_action": {
+      "default_popup": "index.html",
+      "default_title": "Open the popup"
+    },
+    "icons": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
+    },
+    "permissions": [
+        "<all_urls>",
+        "storage",
+        "geolocation"
+    ],
+
+    "content_scripts": [{
+        "matches" : ["<all_urls>"],
+        "js" : ["jquery.js","./firebaseScripts/firebase-app.js","./firebaseScripts/firebase-functions.js","./firebaseScripts/firebase-firestore.js","helpers.js","content.js"],
+        "all_frames": false
+    }],
+
+    "background": {
+        "scripts": ["jquery.js","./firebaseScripts/firebase-app.js","./firebaseScripts/firebase-auth.js","./firebaseScripts/firebase-functions.js","./firebaseScripts/firebase-firestore.js","background.js"],
+        "persistent": false
+    },
+
+    "web_accessible_resources":[
+        "index.html",
+        "48.png",
+        "eye.svg",
+        "eyeClosed.svg",
+        "waiting.svg",
+        "plus.svg",
+        "globle.svg",
+        "peachIcon.svg",
+        "smily.svg",
+        "close.svg",
+        "delete.svg",
+        "peachPost.html",
+        "floatNavi.html",
+        "user1.png",
+        "peachLogo.png",
+        "comment.svg",
+        "https://peachplugin.com/*",
+        "https://flatmates-res.cloudinary.com/*",
+        "https://firebasestorage.googleapis.com/*",
+        "https://*.cloudfunctions.net/*",
+        "floatNavi.js",
+        "peachPost.css",
+        "peachPost.js",
+        "jquery.js",
+        "https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js",
+        "newPeachPost.html",
+        "drag.svg",
+        "newPeachPost.js",
+        "peachTask.js"
+    ]
+  }

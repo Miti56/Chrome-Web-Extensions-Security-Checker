@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "short_name": "vkaudiomaster",
+  "description": "__MSG_appDesc__",
+  "default_locale": "ru",
+  "version": "1.0.6",
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png",
+    "48": "icons/64.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/128.png",
+    "default_title": "__MSG_popupTitle__"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "background/app.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://vk.com/*"],
+      "css": ["content/styles.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*/*"],
+      "js": ["content/app.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "downloads"
+  ],
+  "externally_connectable": {
+    "matches": ["*://vk-download.me/*"]
+  },
+  "content_security_policy": "object-src 'self'; script-src 'self' https://vk-download.me"
+}

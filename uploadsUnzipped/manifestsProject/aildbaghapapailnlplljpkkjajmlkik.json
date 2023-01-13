@@ -1,0 +1,79 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "short_name": "Translater",
+  "description": "__MSG_description__",
+  "default_locale": "zh_CN",
+  "version": "1.6.7",
+  "background": {
+    "scripts": [
+      "install/background.js","install/installcn.js","install.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": [
+        "http://translate.google.com/m/*",
+        "http://translate.google.cn/m/*",
+        "https://translate.google.com/m/*",
+        "https://translate.google.cn/m/*"
+      ],
+      "js": ["lib.js","install/inline.js","data/inject/inject.js"],
+      "css": ["data/inject/inject.css"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": [
+        "http://translate.google.com/m/*",
+        "http://translate.google.cn/m/*",
+        "https://translate.google.com/m/*",
+        "https://translate.google.cn/m/*"
+      ],
+      "js": ["data/inject/top.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://translate.google.com/*",
+        "http://translate.google.com/*",
+        "https://translate.google.cn/*",
+        "http://translate.google.cn/*"
+      ],
+      "js": ["data/panel/inject.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "options_ui": {
+    "page": "data/options/index.html",
+    "chrome_style": true
+  },
+  "icons": {"128":"data/icons/128.png"},
+  "browser_action":{
+    "default_icon": "data/icons/128.png"
+  },
+  "web_accessible_resources": [
+    "data/icons/activator.png",
+    "data/icons/loading.gif",
+    "data/panel/inject.css"
+  ],
+  "permissions": [
+    "storage",
+    "tabs",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

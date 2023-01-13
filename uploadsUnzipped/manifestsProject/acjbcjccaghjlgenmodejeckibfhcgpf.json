@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Princess Ava Real Dentist",
+
+  "short_name": "Princess Ava Real Dentist",
+
+  "version": "1.0.2",
+  "description": "Play Princess Ava Real Dentist directly on your browser",
+
+  "homepage_url": "https://appfan.pw/c/juegos-de-matematicas/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Princess Ava Real Dentist",
+
+      "default_popup": "popup.html"
+  }
+}

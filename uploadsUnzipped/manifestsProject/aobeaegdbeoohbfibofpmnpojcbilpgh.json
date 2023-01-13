@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+    },
+    
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "version": "1.0.6",
+  "name": "What is DNA?",
+  "description": "Learn what DNA is: From atoms to genomes",
+  "author": "Amino Labs Inc",
+  "offline_enabled": true,
+  "icons": {
+    "16": "DNAlogo16.png",
+    "128": "DNAlogo128.png"
+  }
+}

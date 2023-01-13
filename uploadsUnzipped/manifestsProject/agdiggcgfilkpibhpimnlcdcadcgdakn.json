@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "MKCL VLM",
+    "version": "2.0.0",
+    "manifest_version": 2,
+    "description": "MKCL Virtual Learning Monitor",
+    "author": "Imtiyaz Shaikh",
+    "minimum_chrome_version": "25",
+    "background": {
+        "scripts": ["main.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "history",
+        "http://updatertestww.mkcl.org/*"
+    ],
+    "icons": {
+        "16": "16.png",
+        "32": "32.png",
+        "48": "48.png",
+        "128": "128.png"
+    }
+}

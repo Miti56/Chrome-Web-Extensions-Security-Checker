@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Media Library URL Grabber",
+  "author": "ApplianSys",
+  "description": "Send Video URLs to Media Library for downloading.",
+  "version": "0.4",
+  "permissions": [
+    "tabs"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ],
+  "browser_action": {
+    "default_title": "Send to Media Library",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "manifest_version": 2
+}

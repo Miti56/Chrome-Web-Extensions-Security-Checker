@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version":2,
+   "name":"KoC Helper",
+   "description":"Less Clicks. More Play.",
+   "version":"1.1.0",
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "browser_action":{
+      "default_icon":"img/icon.png",
+      "default_popup":"popup.html"
+   },
+   "background": {
+      "scripts": [
+	 "socket.io.js",
+         "jquery-2.1.3.min.js",
+         "bg.js"
+      ]
+   },
+   "content_scripts":[
+      {
+         "js":[
+            "jquery-2.1.3.min.js",
+            "script.js",
+            "cron.js"
+         ],
+         "matches":[
+            "http://www.kingsofchaos.com/*",
+            "https://www.kingsofchaos.com/*"
+         ]
+      }
+   ],
+   "web_accessible_resources":[
+      "img/farm_inactive.png",
+      "img/farm_active_sm.png",
+      "img/vert_arrow_up.png",
+      "img/vert_arrow.png",
+      "img/spy.png",
+      "img/check.png",
+      "img/remove.png",
+      "img/check_green.png",
+      "img/check_yellow.png",
+      "img/check_gray.png"
+
+   ],
+   "permissions":[
+      "tabs",
+      "http://*/*",
+      "https://*/*",
+      "cookies",
+      "<all_urls>",
+      "system.cpu",
+      "system.display",
+      "system.memory",
+      "system.storage"
+   ]
+}

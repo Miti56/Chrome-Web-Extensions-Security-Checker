@@ -1,0 +1,18 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Duma NewTab",
+  "version": "1.0.4",
+  "manifest_version": 2,
+  "description": "Új fül nézet a 'droID-242 duma page' oldalhoz.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "icons": {
+      "128": "assets/image/icon_128.png"
+  },
+  "content_security_policy": "script-src 'self' https://apis.google.com  https://plusone.google.com https://ssl.gstatic.com; object-src 'self'",
+  "permissions": [
+    "http://duma.folyam.info/"
+  ],
+  "homepage_url": "http://duma.folyam.info"
+}

@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	
+	"name": "Easy Play Music Hotkeys",
+	"description": "This extensions allows you to set hotkeys for controlling Google Play Music.",
+	"version": "0.2",
+
+	"browser_action": {
+		"default_title": "Google Play Music Hotkeys",
+		"default_icon": "play.png",
+		"default_popup": "popup.html"
+	},
+	
+	"content_scripts" : [
+		{
+			"matches": ["https://play.google.com/music/*"],
+			"js": ["controls.js"],
+			"css": ["styles.css"],
+			"run_at": "document_end"
+		}
+	],
+	
+	"background": {
+		"scripts":["background.js"]
+	},
+
+	"permissions": ["tabs"],
+
+
+	"commands": {
+		"next_track": {
+			"suggested_key": {
+	        	"default": "Alt+Right"
+			},
+			"description": "Skip to next track"
+		},
+
+		"play_pause": {
+			"suggested_key": {
+				"default": "Alt+P"
+			},
+			"description": "Play/Pause music"
+		},
+		
+		"volume_up": {
+			"suggested_key": {
+				"default": "Alt+Up"
+			},
+			"description": "Raise volume"
+		},
+		
+		"volume_down": {
+			"suggested_key": {
+				"default": "Alt+Down"
+			},
+			"description": "Lower volume"
+		}
+	}
+}

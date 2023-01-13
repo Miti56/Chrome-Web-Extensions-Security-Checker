@@ -1,0 +1,41 @@
+{
+	"description": "__MSG_description__",
+	"browser_action": {
+		"default_title": "Dragon Ball Super"
+	},
+	"default_locale": "en",
+	"optional_permissions": [
+		"management"
+	],
+	"chrome_url_overrides": {
+		"newtab": "theme.html"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"background": {
+		"scripts": [
+			"js/bg.js"
+		]
+	},
+	"icons": {
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"version": "4.6.17",
+	"name": "__MSG_name__",
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

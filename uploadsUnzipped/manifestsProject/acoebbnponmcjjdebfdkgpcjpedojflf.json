@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Corporate Travel Notify",
+  "short_name": "Notify",
+  "version": "1.18.0",
+  "manifest_version": 2,
+  "description": "Employee travel notifications and health and safety alerts when searching for business travel\n\n",
+  "homepage_url": "http://www.sheptravel.com",
+  "content_security_policy": "script-src 'self' https://spc-secure.sheptravel.com https://dvwojwjrd5xuz.cloudfront.net; object-src",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/shep-chrome_16.png",
+    "48": "icons/shep-chrome_48.png",
+    "128": "icons/shep-chrome_128.png"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "cookies",
+    "history",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.aa.com/*", "*://*.agoda.com/*", "*://*.airasia.com/*", "*://*.airbnb.com/*", "*://*.aircanada.com/*", "*://*.alaskaair.com/*", "*://*.americanairlines.com/*", "*://*.ana.co.jp/*", "*://*.avidhotels.com/*", "*://www.booking.com/*", "*://*.britishairways.com/*", "*://*.candlewoodsuites.com/*", "*://*.cathaypacific.com/*", "*://*.cheaphotels.com/*", "*://*.cheapoair.com/*", "*://*.concursolutions.com/*", "*://*.concur.com/*", "*://*.couchsurfing.com/*", "*://*.crowneplaza.com/*", "*://*.concursolutions.com/*", "*://*.delta.com/*", "*://*.easyjet.com/*", "*://*.emirates.com/*", "*://*.expedia.com/*", "*://*.evenhotels.com/*", "*://*.flyfrontier.com/*", "*://*.flyscoot.com/*", "*://*.hiexpress.com/*", "*://*.hilton.com/*", "*://*.holidayinn.com/*", "*://*.holidayinnresorts.com/*", "*://*.homeaway.com/*", "*://*.hotelindigo.com/*", "*://*.hotels.com/*", "*://*.hotelsworld.com/*", "*://*.hotwire.com/*", "*://*.hyatt.com/*", "*://*.iberia.com/*", "*://*.intercontinental.com/*", "*://*.ihg.com/*", "*://*.jetairways.com/*", "*://*.jetblue.com/*", "*://*.jetstar.com/*", "*://*.kayak.com/*", "*://*.kimptonhotels.com/*", "*://*.kiwi.com/*", "*://*.koreanair.com/*", "*://*.klm.com/*", "*://*.kulula.com/*", "*://*.lufthansa.com/*", "*://*.marriott.com/*", "*://*.orbitz.com/*", "*://*.priceline.com/*", "*://*.qatarairways.com/*", "*://*.quantas.com/*", "*://*.regenthotels.com/*", "*://*.ryanair.com/*", "*://*.saudia.com/*", "*://*.saudiairlines.com/*", "*://*.skyscanner.com/*", "*://*.southwest.com/*", "*://*.spicejet.com/*", "*://*.spirit.com/*", "*://*.staybridge.com/*", "*://*.travelocity.com/*", "*://*.trip.com/*", "*://*.tripadvisor.com/*", "*://*.trivago.com/*", "*://*.turkisairlines.com/*", "*://*.united.com/*", "*://*.vocohotels.com/*", "*://*.vrbo.com/*", "*://*.fcm.travel/*", "*://*.tajhotels.com/*", "*://*.jal.co.jp/en*"
+      ],
+      "css": [
+        "app.bundle.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://*.aa.com/*", "*://*.agoda.com/*", "*://*.airasia.com/*", "*://*.airbnb.com/*", "*://*.aircanada.com/*", "*://*.alaskaair.com/*", "*://*.americanairlines.com/*", "*://*.ana.co.jp/*", "*://*.avidhotels.com/*", "*://www.booking.com/*", "*://*.britishairways.com/*", "*://*.candlewoodsuites.com/*", "*://*.cathaypacific.com/*", "*://*.cheaphotels.com/*", "*://*.cheapoair.com/*", "*://*.concursolutions.com/*", "*://*.concur.com/*", "*://*.couchsurfing.com/*", "*://*.crowneplaza.com/*", "*://*.concursolutions.com/*", "*://*.delta.com/*", "*://*.easyjet.com/*", "*://*.emirates.com/*", "*://*.expedia.com/*", "*://*.evenhotels.com/*", "*://*.flyfrontier.com/*", "*://*.flyscoot.com/*", "*://*.hiexpress.com/*", "*://*.hilton.com/*", "*://*.holidayinn.com/*", "*://*.holidayinnresorts.com/*", "*://*.homeaway.com/*", "*://*.hotelindigo.com/*", "*://*.hotels.com/*", "*://*.hotelsworld.com/*", "*://*.hotwire.com/*", "*://*.hyatt.com/*", "*://*.iberia.com/*", "*://*.intercontinental.com/*", "*://*.ihg.com/*", "*://*.jetairways.com/*", "*://*.jetblue.com/*", "*://*.jetstar.com/*", "*://*.kayak.com/*", "*://*.kimptonhotels.com/*", "*://*.kiwi.com/*", "*://*.koreanair.com/*", "*://*.klm.com/*", "*://*.kulula.com/*", "*://*.lufthansa.com/*", "*://*.marriott.com/*", "*://*.orbitz.com/*", "*://*.priceline.com/*", "*://*.qatarairways.com/*", "*://*.quantas.com/*", "*://*.regenthotels.com/*", "*://*.ryanair.com/*", "*://*.saudia.com/*", "*://*.saudiairlines.com/*", "*://*.skyscanner.com/*", "*://*.southwest.com/*", "*://*.spicejet.com/*", "*://*.spirit.com/*", "*://*.staybridge.com/*", "*://*.travelocity.com/*", "*://*.trip.com/*", "*://*.tripadvisor.com/*", "*://*.trivago.com/*", "*://*.turkisairlines.com/*", "*://*.united.com/*", "*://*.vocohotels.com/*", "*://*.vrbo.com/*", "*://*.fcm.travel/*", "*://*.tajhotels.com/*", "*://*.jal.co.jp/en*"
+      ],
+      "js": [
+        "app.bundle.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "*",
+    "images/*"
+  ]
+}

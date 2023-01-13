@@ -1,0 +1,42 @@
+{
+	"manifest_version": 2,
+
+	"author": "Twikii",
+	"name": "Twikii Live Extension",
+	"short_name": "Twikii Live",
+	"description": "Notifie lorsque Twikii est en live.",
+	"homepage_url": "https://www.twikii.be/",
+	"version": "7.1",
+	"background": {
+		"persistent": true,
+		"scripts": [ 
+			"js/jquery.js",
+			"js/jquery.browser.min.js",
+			"js/main.js" 
+		]
+	},
+
+	"browser_action": {
+		"default_title": "Twikii - Hors-Ligne",
+		"default_icon": "images/iconoff16.png",
+		"default_popup": "popup/popup.html"
+	},
+	"icons": {
+		"128": "images/icon.png"
+	},
+	"permissions": [
+		"tabs",
+		"https://api.twitch.tv/kraken/streams?channel=*",
+		"*://*.youtube.com/*",
+		"*://*.ytimg.com/*",
+		"*://yt3.ggpht.com/*",
+		"notifications",
+		"storage"
+	],
+	"options_ui": {
+		"page": "settings/options.html",
+		"open_in_tab": true
+	},
+
+	"update_url": "https://clients2.google.com/service/update2/crx"
+}

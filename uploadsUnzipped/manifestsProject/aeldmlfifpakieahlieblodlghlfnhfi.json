@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+    "name" : "联想智能服务Chrome工具插件",  
+    "version" : "1.0.1",  
+    "description" : "支持chrome浏览器实现在线运行智能工具",  
+    "background" : { "scripts": ["background.js"] },    
+    "permissions" : [  
+        "nativeMessaging",
+		"tabs",
+        "http://*/*"  
+    ], 	 
+  "icons": {
+      "128": "lenovorobot.ico",
+      "16": "lenovorobot.ico",
+      "48": "lenovorobot.ico"
+   },
+    "content_scripts": [  
+    {  
+      "matches": ["http://*/*"],  
+      "js": ["content.js"]
+    }  
+    ], 	  
+	"short_name": "LenovoRobot",
+    "minimum_chrome_version" : "6.0.0.0",  
+    "manifest_version": 2
+	 
+}

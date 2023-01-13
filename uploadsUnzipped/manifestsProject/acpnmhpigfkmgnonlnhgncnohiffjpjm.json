@@ -1,0 +1,35 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"name": "Windows XP Zune theme (alternate)",
+	"theme": {
+		"images" : {
+			"theme_frame" : "image/frame_zune.png",
+			"theme_frame_inactive" : "image/frame_inactive_zune.png",
+			"theme_frame_incognito" : "image/frame_incognito_zune.png",
+			"theme_frame_incognito_inactive" : "image/frame_incognito_inactive_zune.png",
+			"theme_toolbar" : "image/toolbar_xp.png",
+			"theme_tab_background" : "image/tab_background_xp.png",
+			"theme_tab_background_incognito" : "image/tab_background_xp.png"
+		},
+		"colors" : {
+			"frame" : [41, 41, 41],
+			"frame_inactive" : [76, 76, 76],
+			"frame_incognito" : [83, 83, 83],
+			"frame_incognito_inactive" : [81, 81, 81],
+			"toolbar" : [215, 215, 215],
+			"ntp_background" : [126, 126, 126],
+			"ntp_section" : [240, 90, 26],
+			"ntp_section_text" : [255, 255, 255],
+			"ntp_section_link" : [255, 255, 255],
+			"ntp_section_link_underline" : [255, 255, 255]
+		},
+		"tints" : {
+			"frame_inactive" : [-1.0, -1.0, -1.0],
+			"frame_incognito" : [-1.0, -1.0, -1.0],
+			"frame_incognito_inactive" : [-1.0, -1.0, -1.0],
+			"buttons" : [-1.0, 0, -1.0],
+			"background_tab" : [-1.0, -1.0, -1.0]
+		}
+	}
+}

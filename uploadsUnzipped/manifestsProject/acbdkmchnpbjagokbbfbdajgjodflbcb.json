@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Slackarchive link fix",
+  "description": "Fixes the date linking for search entries, so that clicking the links will navigate to the unfiltered discussion about the entry",
+  "version": "1.0",
+  "homepage_url": "https://github.com/jojje/slackarchive-link-fix-chrome-extension",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_title": "Slackarchive link fixer"
+  },
+  "permissions": [
+    "http://*.slackarchive.io/*",
+    "declarativeContent"
+  ]
+}

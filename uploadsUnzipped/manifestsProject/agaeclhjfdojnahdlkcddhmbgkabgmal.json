@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name":"Artis Web Kpax Connector",
+	"description":"Connecteur Kpax pour Artis",
+	"version":"1.2",
+	"manifest_version": 2,
+	"icons":{
+		"512": "logo.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://artis.factoria.fr/ArtisWeb/com/artis/composants/services/ccDit/*", "https://178.1.1.14/*"],
+			"js": ["jquery.js", "main.js"],
+			"css": ["style.css"]
+		}
+	],
+	"permissions": [
+		"https://artis.factoria.fr/ArtisWeb/com/artis/composants/services/ccDit/*",
+		"https://178.1.1.14/*"
+	],
+	"applications": {
+		"gecko": {
+			
+			"update_url": "https://addon.zorio.fr/updates.json"
+		}
+	}
+}

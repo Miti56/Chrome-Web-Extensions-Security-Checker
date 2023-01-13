@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Deliver Your PDF Froms - PDFfiller",
+    "version": "0.3.0",
+    "author": "PDFfiller (support@pdffiller.com)",
+
+    "description": "Instantly deliver your PDF forms with PDFfiller extension. Edit, sign, save and share anytime, anywhere, from any device!",
+    "icons": {
+        "16": "img/logo16.png",
+        "48": "img/logo48.png",
+        "128": "img/logo128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "exclude_matches": ["*://*.pdffiller.com/*"],
+            "css": ["css/style.css"],
+            "js": ["libs/jquery.min.js", "libs/base64.js", "js/config.js", "js/browser.js", "js/inject.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "img/*"
+    ],
+    "background": {
+        "scripts": [
+            "js/config.js",
+            "js/listener.js"
+        ],
+        "persistent": false
+    }
+}

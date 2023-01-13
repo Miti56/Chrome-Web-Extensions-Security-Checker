@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "BraveQA Chrome Extension",
+  "version": "0.2.15",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": ["<all_urls>"],
+  "icons": {
+    "16": "assets/icons/icon_16.png",
+    "48": "assets/icons/icon_48.png",
+    "128": "assets/icons/icon_128.png"
+  },
+  "content_scripts": [
+    {
+      "permissions": ["<all_urls>"],
+      "matches": ["<all_urls>"],
+      "js": ["checkout.js", "bundle.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "assets/*"
+  ],
+  "page_action": {
+    "default_title": "Brave QA"
+  },
+  "externally_connectable": {
+    "matches": ["*://localhost/*", "https://braveqa-214f6.firebaseapp.com/*"]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'"
+}

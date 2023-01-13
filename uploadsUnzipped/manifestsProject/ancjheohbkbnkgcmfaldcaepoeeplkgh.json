@@ -1,0 +1,62 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "version": "2.0.7",
+    "description": "Google Tradutor para Português",
+    "name": "Google Tradutor para Português",
+    "default_locale": "en",
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://translate.googleapis.com; object-src 'self'",
+    "background": {
+        "page": "background.htm"
+    },
+    "background": {
+        "scripts": [
+          "injection.js",
+          "main_compiled.js",
+          "background.js",
+          "ins/oninstall.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+    "default_icon": {
+      "19": "icons/19.png",
+      "38": "icons/38.png"
+    },
+    "default_title": "Google Tradutor para Português",
+    "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["bubble_compiled.js", "lists.js", "inline.js"],
+          "css": ["bubble_gss.css"],
+          "run_at": "document_end",
+          "all_frames": true
+        }
+    ],
+    "web_accessible_resources": [
+    "popup_css_compiled.css",
+    "options.html"
+    ],
+    "options_page": "options.html",
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "storage",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "icons": {
+        "16": "icons/16.png",
+        "19": "icons/19.png",
+        "32": "icons/32.png",
+        "38": "icons/38.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    }
+}

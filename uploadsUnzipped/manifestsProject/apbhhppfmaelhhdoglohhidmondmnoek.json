@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Casino Games",
+ "version": "0.0.1",
+"manifest_version": 2,
+ "description": "Casino Games, Poker, Craps, Black Jack (21), 5 Card Draw Flash Games.",
+  "app": {
+    "urls": [
+      "http://www.yowgame.com/casino/blackjack-21"
+    ],
+    "launch": {
+      "web_url": "http://www.yowgame.com/casino/blackjack-21"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

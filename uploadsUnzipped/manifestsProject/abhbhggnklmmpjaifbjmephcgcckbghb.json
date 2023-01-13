@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_title": "Omni Ad Swiper"
+   },
+   "content_scripts": [ {
+      "css": [ "content-script.css" ],
+      "js": [ "content-script.js", "html2canvas.js", "iframe2image.min.js", "jquery-3.4.1.min.js" ],
+      "matches": [ "<all_urls>", "http://localhost:8000/*", "https://app.omniadswiper.com/*", "http://ec2-18-204-226-123.compute-1.amazonaws.com/*", "*://*.linkedin.com/*", "*://linkedin.com/*", "*://facebook.com/*", "*://*.google.com/*", "*://mail.google.com/*", "*://*.facebook.com/*", "*://twitter.com/*", "*://*.twitter.com/*", "*://youtube.com/*", "*://*.youtube.com/*", "*://instagram.com/*", "*://*.instagram.com/*" ],
+      "run_at": "document_end",
+      "all_frames": true
+   } ],
+   "description": "Save ads from multiple platforms.",
+   "icons": {
+      "84": "icons/favicon_84.png"
+   },
+   "manifest_version": 2,
+   "name": "Omni Ad Swiper",
+   "permissions": [ "webRequest", "webRequestBlocking", "activeTab", "tabs", "storage", "unlimitedStorage", "<all_urls>", "http://localhost:8000/api/*", "http://ec2-18-204-226-123.compute-1.amazonaws.com/api/*", "https://app.omniadswiper.com/api/*", "*://linkedin.com/*", "*://*.linkedin.com/*", "*://facebook.com/*", "*://*.facebook.com/*", "*://twitter.com/*", "*://*.twitter.com/*", "*://youtube.com/*", "*://*.youtube.com/*", "*://instagram.com/*", "*://*.instagram.com/*", "*://*.google.com/*", "*://mail.google.com/*" ],
+   "version": "0.0.95",
+   "web_accessible_resources": [ "save-button/*", "app/*" ],
+   "content_security_policy": "script-src 'self' https://www.youtube.com https://www.google-analytics.com https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'; object-src 'self'; style-src 'self' http://* 'unsafe-inline';"
+}

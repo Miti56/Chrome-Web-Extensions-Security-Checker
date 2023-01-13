@@ -1,0 +1,25 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+
+"name": "Hz Muhammed - Son Peygamber",
+"description": "Ehli Sünnet vel cemaat çizgisinde Kur’an ve Sünnet ışığında yayın yapmaktayız.HafazanALLAH",
+ "short_name": "Son Peygamber Hz Muhammed SAV Efendimizin Hayatı.",
+"version": "517",
+"manifest_version": 2,
+
+"app": {
+    "urls": [
+      "https://www.hafazanallah.net/kategori/hz-muhammed/hayati/"
+    ],
+    "launch": {
+      "web_url": "https://www.hafazanallah.net/kategori/hz-muhammed/hayati/"
+}
+},
+"icons": {
+"128": "128x128.png"
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

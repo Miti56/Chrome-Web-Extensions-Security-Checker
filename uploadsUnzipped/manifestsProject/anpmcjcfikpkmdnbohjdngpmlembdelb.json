@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Moč Besed",
+  "description": "Blokiraj sovražni govor na Facebook, Twitter in Youtube kanalih.",
+  "version": "8.3",
+  "permissions": [
+    "activeTab", "storage","http://mocbesedplugin.renderspace.si/*"
+  ],  
+  "icons": { 
+     "48": "ico48.png",
+     "128": "ico128.png"
+  },
+  "content_scripts": [
+  	{
+    "run_at": "document_end",
+     "all_frames": true,
+     "matches": ["https://apis.google.com/*",
+                "https://plus.googleapis.com/*","https://twitter.com/*", "https://www.youtube.com/*", "https://www.facebook.com/*", "http://www.24ur.com/*"],
+      "js": ["jquery.min.js","code.js"]
+    }
+  ], 
+  "browser_action": {
+    "default_icon": "ico48.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version":2
+}

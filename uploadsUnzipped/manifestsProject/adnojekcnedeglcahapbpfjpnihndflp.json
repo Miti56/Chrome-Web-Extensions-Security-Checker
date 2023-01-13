@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "128": "icons/icon128.png"
+  },
+  "omnibox": {
+    "keyword": "youtube"
+  },
+  "default_locale": "en",
+  "version": "0.9.488",
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1BH1u4k/vwKXrDB+S/FP4/cMSKna5iBSUQMhcqMWGLF1OLoHhG7d1j+fGTD+tAnz/V64Ug8o9Q+h4a8EpDD6TtITdxxj30oYso3r3di7g2DIEwEJ+4z3uYwPfi6e9MBusbRHPuFWfx7TSGwQx8ieklduIqDTSQZ2UnWJ9todqxZPTCL7t/a9PknFON+MVSRP4mbXgDHhvGaXfpyGr3ItAaKqaah+IsxyFIgfj1sB6IdWsKoU7xJIkd/yBUKBP6hIRFFfLyGWo2kOl/8MH/Y/4bj33j4bcdsrNi1Z/djuNHLW7giNs0M5/BRKebhWDE8FdEBdxL7Jk3cIVmQyUtLYkwIDAQAB",
+  "manifest_version": 2
+}

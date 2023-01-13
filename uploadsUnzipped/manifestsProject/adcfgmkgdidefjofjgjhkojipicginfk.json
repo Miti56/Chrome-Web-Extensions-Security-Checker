@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SalaryBot Salary Calculator",
+  "description": "Provide quick on page take home pay calculations for popular job listings.",
+  "version": "0.1.0",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webNavigation"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "js": ["jquery.min.js","content.min.js"],
+      "matches": [
+        "*://www.jobsite.co.uk/*",
+        "*://www.adzuna.co.uk/*",
+        "*://www.totaljobs.com/*",
+        "*://www.cv-library.co.uk/*",
+        "*://www.reed.co.uk/*",
+        "*://*.monster.co.uk/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 2
+}

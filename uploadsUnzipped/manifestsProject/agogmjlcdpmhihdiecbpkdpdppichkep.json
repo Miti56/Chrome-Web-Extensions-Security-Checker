@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TLD EAP Search",
+  "description": "Context Menu Search for TLD EAP#",
+  "version": "1.1.0",
+  "permissions": ["contextMenus"],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "icons": { "16": "images/logo.png",
+    "48": "images/logo.png",
+   "128": "images/logo.png"},
+  "manifest_version": 2
+}

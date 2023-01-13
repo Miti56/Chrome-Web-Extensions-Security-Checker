@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Oliver Hardy Sound",
+  "description": "Voice Sounds Quotes from legendary comedian Oliver Hardy.Laurel Classic Soundboard! Html5 audio old movie film",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.akama.ch/webapps/hardy-soundboard/"
+    ],
+    "launch": {
+      "web_url": "http://www.akama.ch/webapps/hardy-soundboard/"
+    }
+  }
+}

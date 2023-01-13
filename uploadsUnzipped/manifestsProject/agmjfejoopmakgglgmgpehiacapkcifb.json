@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"content_security_policy": "connect-src *; script-src 'self' https://www.google-analytics.com; object-src 'self'",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+
+  "manifest_version": 2,
+  "version": "2.0",
+  "icons": { "128": "ico-128.png" },
+    "browser_action": {
+    "default_icon": "ico-128.png"
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background":
+  {
+	"scripts": ["backgr.js"]
+  }
+}
+

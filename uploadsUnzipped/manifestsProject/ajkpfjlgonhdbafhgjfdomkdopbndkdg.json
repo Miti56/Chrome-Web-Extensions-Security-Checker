@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "author": "Beau August",
+  "content_scripts": [ {
+    "matches": ["*://*.reddit.com/*", "*://*.reddit.com/r/*"],
+    "css": ["style.css"],
+    "js": ["jquery.js", "script.js"],
+    "run_at": "document_end"
+  } ],
+  "name": "Simplify Reddit",
+  "description": "Strip out the useless stuff to make browsing Reddit at a smaller resolution that little bit easier.",
+  "version": "0.2",
+  "icons": {
+	"128": "icon.png"
+  }
+}

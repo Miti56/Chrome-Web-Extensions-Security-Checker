@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "author": "Grant Winney",
+    "homepage_url": "https://grantwinney.com/twitter-tamer/",
+
+    "name": "Twitter Tamer",
+    "description": "Choose what to hide in Twitter - sidebars (who to follow, trends), notifications, activity (comments, likes) and more!",
+    "version": "2.1.1",
+
+    "options_ui": {
+        "page": "options.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+
+    "browser_action": {
+        "default_title": "Twitter Tamer",
+        "default_icon": {
+            "16": "images/dft-16.png",
+            "32": "images/dft-32.png",
+            "48": "images/dft-48.png",
+            "64": "images/dft-64.png",
+            "128": "images/dft-128.png"
+        }
+    },
+
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.twitter.com/*"
+            ],
+            "js": [
+                "js/arrive.js",
+                "js/twitter.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}

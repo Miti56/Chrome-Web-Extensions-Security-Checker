@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://haraj.com/*", 
+                "https://haraj.com/*", 
+                "http://haraj.com.sa/*",
+                "https://haraj.com.sa/*",
+                "http://*.haraj.com.sa/*",
+                "https://*.haraj.com.sa/*",
+                "http://*.haraj.com/*",
+                "https://*.haraj.com/*"
+            ], 
+            "all_frames": true, 
+            "run_at": "document_start", 
+            "js": [
+                "includes/content.js"
+            ]
+        }
+    ], 
+    "name": "HarajPanda", 
+    "icons": {
+        "128": "icons/icon128.png", 
+        "48": "icons/icon48.png", 
+        "16": "icons/button.png"
+    }, 
+    "web_accessible_resources": [
+        "res/*", 
+        "assets/*", 
+        "icons/*"
+    ], 
+    "description": "\u0625\u0636\u0627\u0641\u0629 \u0635\u063a\u064a\u0631\u0647 \u0644\u062a\u0635\u0641\u062d \u0623\u0633\u0647\u0644 \u0648\u0623\u0633\u0631\u0639 \u0644\u0645\u0648\u0642\u0639 \u062d\u0631\u0627\u062c \u0645\u0639 \u062d\u0631\u0627\u062c \u0628\u0627\u0646\u062f\u0627", 
+    "background": {
+        "page": "background.html"
+    }, 
+    "homepage_url": "http://youtu.be/9fJTWB1UXMs", 
+    "version": "0.1.6", 
+    "manifest_version": 2, 
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'", 
+    "browser_action": {
+        "default_popup": "popup.html", 
+        "default_icon": "icons/icon16.png", 
+        "default_title": "HarajPanda"
+    }, 
+    "permissions": [
+        "tabs", 
+        "webNavigation",
+        "http://haraj.com/*", 
+        "https://haraj.com/*", 
+        "http://haraj.com.sa/*",
+        "https://haraj.com.sa/*",
+        "http://*.haraj.com.sa/*",
+        "https://*.haraj.com.sa/*",
+        "http://*.haraj.com/*",
+        "https://*.haraj.com/*"
+  ],
+  "short_name": "حراج باندا"
+}

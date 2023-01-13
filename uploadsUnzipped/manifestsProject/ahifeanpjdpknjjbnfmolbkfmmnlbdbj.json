@@ -1,0 +1,21 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "AstroBackyard",
+  "version": "1.7",
+  "description": "Astrobackyard.com exists to share beautiful photography of the night sky, and share information about astrophotography.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "AstroBackyard"
+  },
+  "permissions": [ "<all_urls>", "tabs" ],
+   "background": {
+    "scripts": [ "background.js", "jquery.js" ]
+  }
+
+}

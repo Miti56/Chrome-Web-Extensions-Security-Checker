@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ADVrider UI Tweaks",
+    "author": "Ian Cooper",
+    "description": "This extension tweaks the user interface of the Adventure Rider forum for better usability.",
+    "version": "1.6.0",
+    "icons": {
+        "16": "advtweak-16.png",
+        "48": "advtweak-48.png",
+        "64": "advtweak-64.png",
+        "128": "advtweak-128.png"
+    },
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "advtweak.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.advrider.com/*"
+            ],
+            "css": [
+                "advtweak.css"
+            ],
+            "js": [
+                "jquery.js",
+                "jquery.xmlrpc.js",
+                "advtweak-inject.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "webNavigation",
+        "*://*.advrider.com/*"
+    ]
+}

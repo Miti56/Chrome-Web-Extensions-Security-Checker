@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "name": "دیجی کالا تخفیف",
+  "version": "0.0.2",
+  "description": "خرید با تخفیف از دیجی کالا",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "page_action": {
+    "default_title": "DigiKalaTakhfif",
+    "default_icon": {
+      "16": "images/16px.png",
+      "32": "images/32px.png",
+      "48": "images/48px.png",
+      "128": "images/128px.png"
+    }
+  },
+  "icons": {
+    "16": "images/16px.png",
+    "32": "images/32px.png",
+    "48": "images/48px.png",
+    "128": "images/128px.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.digikala.com/product/dkp-*"],
+      "css": [
+        "contentScripts/common.css"
+      ],
+      "js": [
+        "vendor/jquery-3.3.1.min.js",
+        "contentScripts/digikala.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}

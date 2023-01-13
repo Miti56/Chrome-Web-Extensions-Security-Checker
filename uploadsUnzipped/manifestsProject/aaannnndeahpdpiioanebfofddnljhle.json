@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "G-Connect",
+  "short_name": "G-Connect",
+  "version": "4.2.0",
+  "description": "SAP - Google Apps Integration",
+  "icons": {
+    "128": "gconnect-128x128.png",
+    "16": "gconnect-16x16.png"
+  },
+ "container": ["DOMAIN_INSTALLABLE"],
+ "api_console_project_id": "187100763154",
+ "app": {
+    "urls": [
+      "https://gconnect.iserviceglobe.net/"
+    ],
+    "launch": {
+      "web_url": "https://gconnect.iserviceglobe.net/"
+    }
+  }
+}

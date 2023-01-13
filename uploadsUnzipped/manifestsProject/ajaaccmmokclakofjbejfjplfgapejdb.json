@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "AltSTU_Helper",
+    "version": "1.2",    
+    "description":"Created by WeekFax",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://student.altstu.ru/*"
+            ],
+            "js": [ "script/new_files.js" ]
+        },
+        {
+            "matches": [
+                "http://student.altstu.ru/files/"
+            ],
+            "js": [ "script/files.js" ]
+        }
+
+    ],
+    "description": "Поддержать разработчика можно просто пополнив его мобильный счет: +7-962-790-95-50",
+
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ]
+ }

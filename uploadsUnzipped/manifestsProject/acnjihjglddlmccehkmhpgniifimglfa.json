@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Drupal.org Kanban",
+  "homepage_url": "https://github.com/mglaman/drupalorg-kanban",
+  "version": "1.0.1",
+  "description": "An extension for Drupal.org to embed ContribKanban.com",
+  "author": "Matt Glaman",
+  "icons": { "128": "icon.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.drupal.org/*",
+        "*://*.devdrupal.org/*"
+      ],
+      "js": ["drupalorg-kanban.js"]
+    }
+  ],
+  "permissions": [
+    "*://*.drupal.org/*",
+    "*://*.devdrupal.org/*"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "UM Calendar Downloader",
+    "version": "0.0.0.1",
+    "description": "An automatic organizer tool to load course schedules in wolverine access to google calendar",
+    "icons": {
+        "128": "SlayTheDayIcon.png",
+        "48": "SlayTheDayIcon.png",
+        "16": "SlayTheDayIcon.png"
+    },
+    "browser_action": {
+        "default_icon": "SlayTheDayIcon.png",
+        "default_title": "Autoload UMich Schedule",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["eventPage.js", "jquery-3.3.1.min.js", "ics.deps.min.js", "ics.js"],
+        "persistent": false
+    },
+    "content_scripts":[
+        {
+            "matches": [ "https://csprod.dsc.umich.edu/psc/csprodnonop/EMPLOYEE/SA/c/*" ],
+            "js": ["angular.min.js", "jquery-3.3.1.min.js"]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "*://*/*",
+        "https://csprod.dsc.umich.edu/psp/csprodnonop/EMPLOYEE/SA/c/*"
+    ],
+    "web_accessible_resources": ["SlayTheDayIcon.png" ]
+}

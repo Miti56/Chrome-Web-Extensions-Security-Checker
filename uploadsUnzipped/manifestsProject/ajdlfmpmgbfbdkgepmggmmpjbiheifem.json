@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Remove Docbase Sidebar",
+  "short_name": "RDS",
+  "description": "Docbaseの左側にあるサイドバーを消すやつ",
+  "author": "gecko655",
+  "manifest_version": 2,
+
+  "version": "1.0.0.1",
+  "permissions": [
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "jquery-3.4.1.min.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [ {
+    "matches": ["https://*.docbase.io/*"],
+    "js": ["jquery-3.4.1.min.js","content.js"],
+    "run_at": "document_end"
+  } ],
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Facebook auto reactions",
+  "description": "Auto reactions for facebook marketing",
+  "icons": {
+    "16": "icons/like_16.png",
+    "48": "icons/like_48.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/like_16.png",
+    "default_popup": "popup.html",
+    "default_title": "Facebook Reactions"
+  },
+  "author": "xvn",
+  "permissions": ["*://*.facebook.com/*", "storage"],
+  "content_scripts": [{
+      "js": ["js/content_scripts.js"],
+      "matches": ["https://*.facebook.com/*"]
+  }],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "web_accessible_resources": ["lib/jquery/jquery.min.js", "js/auto_reactions.js"],
+  "version": "1.0.10",
+  "minimum_chrome_version": "9",
+  "manifest_version": 2
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Интеграция Poster с ЕГАИС",
+  "description": "Расширение позволяет работать с УТМ из административной панели Poster",
+  "version": "1.0.0",
+  "homepage_url": "http://joinposter.com/",
+
+  "icons": {
+    "256": "icons/icon256.png"
+  },
+
+  "permissions": [
+    "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.joinposter.com/*",
+        "https://*.joinposter.com/manage/*",
+        "http://*.joinposter.com/*",
+        "http://*.joinposter.com/manage/*",
+        "http://poster.dev/manage/*"
+      ],
+      "js": [
+        "contentscript.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "utmApi.js"
+  ]
+}

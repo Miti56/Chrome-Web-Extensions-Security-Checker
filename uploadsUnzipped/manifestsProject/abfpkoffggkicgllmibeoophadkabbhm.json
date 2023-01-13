@@ -1,0 +1,41 @@
+{
+	"name": "__MSG_name__",
+	"browser_action": {
+		"default_title": "Rainbow Six"
+	},
+	"version": "0.2.17",
+	"optional_permissions": [
+		"management"
+	],
+	"default_locale": "en",
+	"chrome_url_overrides": {
+		"newtab": "sigma.html"
+	},
+	"description": "__MSG_description__",
+	"manifest_version": 2,
+	"chrome_settings_overrides": {
+		"homepage": "http://funsearchbox.com",
+		"search_provider": {
+			"name": "Fun Search Box",
+			"search_url": "http://funsearchbox.com/search/{searchTerms}",
+			"suggest_url": "http://funsearchbox.com/suggest/{searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://funsearchbox.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"background": {
+		"scripts": [
+			"rainbow-six-js/back.js"
+		]
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"icons": {
+		"48": "rainbow-six-icons/icon48.png",
+		"128": "rainbow-six-icons/icon128.png"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

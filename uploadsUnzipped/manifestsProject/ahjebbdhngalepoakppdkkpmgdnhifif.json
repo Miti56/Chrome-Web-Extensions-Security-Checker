@@ -1,0 +1,30 @@
+{
+  "version": "4.1.32",
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webNavigation",
+    "webRequestBlocking"
+  ],
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "Tetristick is your favorite known game - Tetris! Play now from your browser",
+  "name": "Tetristick",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "icons": {
+    "128": "conservative.png"
+  },
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "nav.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "conservative.png",
+    "default_title": "Tetristick",
+    "default_popup": "shelter.html"
+  }
+}

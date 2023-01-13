@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Notifier for Google™ Calendar",
+  "short_name": "igcalendar",
+  "description": "Track life's important events all in one place supporting badge notification",
+  "author": "Aurthur Polinsky",
+  "version": "0.2.2",
+  "manifest_version": 2,
+  "permissions": [
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "lib/rrule.js",
+      "lib/moment.js",
+      "lib/moment-timezone-with-data.js",
+      "lib/chrome/chrome.js",
+      "lib/config.js",
+      "lib/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_popup": "data/popup/index.html"
+  },
+
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "all_frames": true,
+      "matches": [
+        "https://calendar.google.com/calendar/*",
+        "http://calendar.google.com/calendar/*"
+      ],
+      "js": ["data/inject/inject.js"]
+    }
+  ],
+  "homepage_url": "http://add0n.com/calendar.html?from=context",
+  "icons": {
+    "16": "data/icons/16.png",
+    "48": "data/icons/48.png",
+    "128": "data/icons/128.png"
+  },
+  "options_ui": {
+    "page": "data/chrome/options/index.html",
+    "chrome_style": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Docs365 Barcodes Studio",
+  "description": "Quickly print QR and bar-codes from Google Sheets and other sources",
+  "version": "1.01",
+  "manifest_version": 2,
+  "icons": {
+    "128": "Logo_New_128.png",
+    "16": "Logo_New_16.png"
+  },
+  "app": {
+
+    "launch": {
+      "web_url": "https://apps.docs365.io/barcodes.aspx#driveLaunch"
+    }
+  },
+
+  "container": [ "GOOGLE_DRIVE" ],
+  "api_console_project_id": "81680226459",
+
+  "gdrive_mime_types": {
+    "http://drive.google.com/intents/opendrivedoc": [
+      {
+        "type": [ "application/vnd.google-apps.spreadsheet", "application/vnd.google.drive.ext-type.barcodes" ],
+        "href": "https://apps.docs365.io/barcodes.aspx#driveLaunch",
+        "title": "Open",
+        "disposition": "window"
+      }
+    ]
+  }
+}

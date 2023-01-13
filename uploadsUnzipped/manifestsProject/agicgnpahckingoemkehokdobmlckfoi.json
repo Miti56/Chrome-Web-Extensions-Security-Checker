@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "manifest_version": 2,
+
+  "name": "PlayGram | Insta Auto Seguir/Desseguir",
+  "description": "Esta extensao automatiza o processo de  seguir/desseguir no Instagram",
+  "short_name":"PlayGram",
+  "version": "1.0.0",  
+   "browser_action": {
+    "default_title": "PlayGram - Auto Insta",
+    "default_icon": "img/in-progressx.png"
+  },
+   "icons": {
+        "128": "img/in-progressx.png"
+    },
+  "permissions": [
+    "storage",
+    "tabs",
+    "alarms",
+    "unlimitedStorage",
+    "background",
+    "notifications",
+    "*://playgram.anunciosimperatriz.com/*",
+    "*://*.instagram.com/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://playgram.anunciosimperatriz.com/*"
+    ]
+  },
+  "background": {
+    "scripts": ["js/jquery.js","js/background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": ["img/*","fonts/*","js/*","css/*"] ,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["js/jquery.js","js/content.js"],
+      "css": ["css/content.css"]
+    } 
+     
+  ]
+}

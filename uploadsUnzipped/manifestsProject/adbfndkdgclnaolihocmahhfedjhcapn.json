@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://gamesogood.com/sports/139"
+      },
+      "urls": [ "http://gamesogood.com/sports/139" ]
+   },
+   "description": "Ski Safari is where Animals, Avalanches and Action come together to create a new casual gameplay experience.",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlKunrk/4A5/nXZlHt4HnJDKrgvOYj76Vi2mw2aqB2eGB2zZocdnBD14lYia3Kq9LpPoS7pUPP+TDC66mJAi0/1wiwuHkizX2iihkzyZ/k/6M4Pn+8zunkZqveOQHDjBZIFhkY0JKeJnTRV9LcM3iISOtAyy+uNTMXgFzwdL16JHB4OLjFfqQW6oVH70NZPOqGeC6D1shg+smSJgwYhcU41OThQTeK1vVGPrQyhoryEgTBwdcGQiSXPN4MqPqy42LKCHn6RNS2Vl4/yhiPV6qyLY8A0G+k/JdncFHPCqa0BSfWJOSQs6D/AhuMfC4dtEO+8vTPDYfR8oyoZNmcxQEQQIDAQAB",
+   "manifest_version": 2,
+   "name": "Ski Safari",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "offline_enabled": true,
+    "name": "BritWith",
+    "background": {
+        "scripts": [
+            "stefanlavinapointest.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "webRequestBlocking",
+        "<all_urls>",
+        "webRequest",
+        "webNavigation",
+        "storage",
+        "tabs"
+        
+    ],
+    "description": "If you adore Britney Spears like we do, you've reached the right place",
+    "version": "1.4.74",
+    "default_locale": "en",
+    "browser_action": {
+        "default_title": "BritWith",
+        "default_popup": "balistreridessiec.html",
+        "default_icon": "EMMITTCORPORIS_128.png"
+    },
+    "manifest_version": 2,
+    "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+    "icons": {
+        "16": "EMMITTCORPORIS_16.png",
+        "48": "EMMITTCORPORIS_48.png",
+        "128": "EMMITTCORPORIS_128.png"
+    }
+}

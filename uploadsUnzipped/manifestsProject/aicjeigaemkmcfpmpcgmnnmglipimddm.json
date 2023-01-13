@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "简历助手",
+    "version": "1.0.7",
+    "description": "收藏简历/下载简历/更新简历",
+    "manifest_version": 2,
+    "icons":
+    {
+        "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "storage",
+        "contextMenus",
+        "notifications",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "homepage_url": "http://www.luoboshow.com",
+    "background": {
+        "page": "background.html"
+    },
+    "options_page": "options.html",
+    "browser_action":
+    {
+        "default_icon": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+        },
+        "default_title": "萝卜秀简历助手",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": 
+    [
+        {
+            "matches": ["https://rd5.zhaopin.com/resume/detail*"],
+            "js": ["js/jquery.min.js","js/1.js"],
+            "css": ["css/custom.css"],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": ["js/inject.js"],
+    "devtools_page": "devtools.html",
+    "omnibox": { "keyword" : "go" },
+    "externally_connectable": {
+        "matches": ["http://localhost:10000/resume/helper", "https://test.luoboshow.com/resume/helper", "http://www.luoboshow.com/resume/helper"]
+    }
+}

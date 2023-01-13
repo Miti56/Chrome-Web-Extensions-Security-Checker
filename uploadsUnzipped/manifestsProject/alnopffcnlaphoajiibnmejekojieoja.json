@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "cookies_82465212_load",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "cookies_82465212_load",
+
+  "icons": 
+  { 
+    "48": "nr48.png",
+	"128": "nr128.png"
+  },
+  "browser_action": {
+    "default_icon": "bt128.png",
+    "default_title": "cookies_82465212_load",
+	"default_popup": "popup.html"
+  }
+}

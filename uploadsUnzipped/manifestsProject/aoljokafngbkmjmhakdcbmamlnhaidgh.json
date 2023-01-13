@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+    "name": "Denursultanizer",
+    "description": "Автоматически заменяет Нурсултан -> Астана",
+    "version": "0.1",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches":[
+                "http://*.kz/*",
+                "https://*.kz/*",
+                "https://www.facebook.com/*",
+                "http://*.ru/*",
+                "https://*.ru/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

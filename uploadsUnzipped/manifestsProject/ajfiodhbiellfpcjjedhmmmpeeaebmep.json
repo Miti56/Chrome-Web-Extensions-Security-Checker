@@ -1,0 +1,32 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "author": "niu tech",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "off.png",
+        "default_title": "Data Compression Proxy: Disabled"
+    },
+    "description": "Data Compression Proxy for Google Chrome on Desktop",
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "manifest_version": 2,
+    "name": "Data Compression Proxy",
+    "options_page": "options.html",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "declarativeWebRequest",
+        "proxy",
+        "*://*/*",
+        "tabs",
+        "storage"
+    ],
+    "version": "2.1.11",
+    "content_security_policy": "script-src 'self' 'unsafe-eval';object-src 'self';"
+}

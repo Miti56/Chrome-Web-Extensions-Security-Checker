@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "page-action-demo",
+	"version": "1.0.5",
+	"description": "pageAction演示",
+	"icons": {
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"page_action": {
+		"default_icon": "img/icon.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"declarativeContent",
+		"bluetooth"
+	],
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"bluetooth": {
+		"uuids": ["1105", "1106"],
+		"socket": true
+	}
+}

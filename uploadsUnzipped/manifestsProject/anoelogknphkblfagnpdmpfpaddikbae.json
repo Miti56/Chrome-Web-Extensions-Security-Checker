@@ -1,0 +1,28 @@
+  {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PIP Video",
+  "version": "2.3.3",
+  "manifest_version":2,
+  "description": "Dock any video from a website to your Desktop and watch the video while doing any other work on your desktop.",
+  "icons": { "16": "images/logo16.png",
+           "48": "images/logo.png",
+          "128": "images/logo.png" },
+  "permissions":["storage","activeTab","tabs","background","http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*","file://*/*"],
+      "css": [],
+      "js": ["jquery.min.js","URI.min.js","main.js"]
+    }
+  ],
+  "background":{
+    "scripts":["jquery.min.js","background.js"] 
+  },
+  "browser_action":{
+    "default_icon": "images/logo16.png",
+    "default_title":"pip video options",
+    "default_popup":"popup.html"
+  },
+  "web_accessible_resources":["jquery.min.js","jquery.min.map","images/logo.png","images/notice.png"]
+}

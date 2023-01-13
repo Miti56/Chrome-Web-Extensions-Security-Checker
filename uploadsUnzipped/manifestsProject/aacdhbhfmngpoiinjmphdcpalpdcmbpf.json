@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "UI Automation",
+  "description": "UI Automation helps you to write automated UI tests.",
+  "version": "0.2.1",
+  "devtools_page": "code/html/devtools.html",
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "code/js/background_script/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "code/js/lib/jquery.js",
+        "code/js/content_script/pageObjectBuilder.js",
+        "code/js/tools/CSSGenerator.js",
+        "code/js/tools/XPathGenerator.js",
+        "code/js/tools/JavaGenerator.js"
+      ]
+    }
+  ]
+}

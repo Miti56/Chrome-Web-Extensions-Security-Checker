@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Cloud To Butt Data To Poop",
+	"version": "2.1",
+	"description": "Replaces the text 'the cloud' with 'my butt' and 'big data' with 'big poop'.",
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
+

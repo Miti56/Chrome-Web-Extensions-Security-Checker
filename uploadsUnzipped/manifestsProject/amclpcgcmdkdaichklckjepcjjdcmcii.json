@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "./js/common.js", "./js/background.js", "./js/contextMenu.js" ]
+   },
+   "browser_action": {
+      "default_icon": "assets/onIcon.png",
+      "default_title": "Always on Top"
+   },
+   "default_locale": "en",
+   "description": "Open an address inside a window that stays on top",
+   "icons": {
+      "128": "assets/onIcon.png",
+      "16": "assets/icon16.png"
+   },
+   "manifest_version": 2,
+   "name": "Always on Top",
+   "options_page": "options.html",
+   "permissions": [ "storage", "https://www.youtube.com/", "contextMenus", "notifications" ],
+   "short_name": "AOT",
+   "version": "2.9.8",
+   "web_accessible_resources": [ "assets/onIcon.png" ]
+}

@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AdFox - Ads Intelligence Tool",
+  "background": {
+    "scripts": [
+      "lib/jquery-3.1.0.min.js",
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "AdFox: Ads Intelligence Tool",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "lib/jquery-3.1.0.min.js",
+        "main.js"
+      ],
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "css": [
+        "main.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "description": "This plugin helps the users find the best FB ads and helps them learn about new ads,etc...",
+  "icons": {
+    "128": "icon.png"
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.facebook.com/*",
+    "*://adfox.io/*"
+  ],
+  "version": "1.2.4"
+}

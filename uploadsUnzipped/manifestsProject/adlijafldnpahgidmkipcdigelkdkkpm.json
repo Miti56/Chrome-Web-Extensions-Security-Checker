@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "sXstem Amazon",
+  "description": "查询Amazon库存",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.cn/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.de/*",
+        "*://*.amazon.jp/*",
+        "*://*.amazon.ca/*",
+        "*://*.amazon.com.mx/*",
+        "*://*.amazon.in/*",
+        "*://*.amazon.com.au/*",
+        "*://*.amazon.it/*",
+        "*://*.amazon.fr/*",
+        "*://*.amazon.es/*",
+        "*://*.amazon.co.jp/*"
+      ],
+      "js": [
+        "static/js/jquery-3.3.1.min.js",
+        "static/js/stock.js"
+      ],
+      "css": [
+        "static/css/iconfont.css",
+        "static/css/common.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "stock.js"
+  ],
+  "permissions": [
+    "*://*.amazon.com/*",
+    "*://*.amazon.cn/*"
+  ],
+  "browser_action": {
+    "default_icon": "static/img/48.png",
+    "default_title": "亚马逊库存查询"
+  },
+  "icons": {
+    "128": "static/img/128.png",
+    "16": "static/img/16.png",
+    "48": "static/img/48.png"
+  }
+}

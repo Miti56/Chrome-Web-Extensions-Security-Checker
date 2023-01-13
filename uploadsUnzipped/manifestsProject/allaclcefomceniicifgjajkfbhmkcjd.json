@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "VSO Story Collapser",
+  "description": "This extension collapses/expands stories in the online VSO scrum board",
+  "version": "0.0.0.1",
+  "author": "Chester Craig",
+
+  "browser_action": {
+    "default_title": "VSO Story Collapser",
+    "default_icon": "icon.png"
+  },
+
+  "background" : {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+    "matches": ["http://*/*","https://*/*"],
+    "js": ["content_script.js"]
+  }
+  ],
+
+  "permissions" : ["tabs"],  
+  "manifest_version": 2
+}
+
+

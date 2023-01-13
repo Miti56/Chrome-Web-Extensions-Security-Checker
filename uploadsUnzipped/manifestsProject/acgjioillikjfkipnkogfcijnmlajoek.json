@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HariniOnlineJobs-Anandan",
+  "description": "Harini Online Jobs",
+  "version": "1",
+  "permissions": [
+    "https://www.harinionlinejobs.in/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/ap/signin?ie=*","https://www.amazon.com/ap/signin?openid.ns=*","https://www.mturk.com/mturk/myhits"],
+      "js": ["popup.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2,
+
+  "browser_action": { "default_icon":"icon48.png" }
+}

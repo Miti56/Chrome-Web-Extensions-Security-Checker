@@ -1,0 +1,72 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Chainsights",
+  "short_name": "Chainsights",
+  "description": "",
+  "version": "0.1.4",
+
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "options.html",
+    "default_title": "Chainsights"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "optional_permissions": [
+    "history"
+  ],
+
+  "content_scripts":[{
+    "run_at": "document_start",
+    "matches": ["http://*/*", "https://*/*"],
+    "js": [
+      "js/app/lib/punycode.min.js",
+      "js/app/lib/blockies.min.js",
+      "js/app/lib/sha256.min.js",
+      "js/app/lib/patch-worker.js",
+      "js/SignatureInject.js"
+    ]
+  },{
+    "run_at": "document_end",
+    "matches": ["http://*/*", "https://*/*"],
+    "js": [
+      "js/app/lib/web3-light.min.js",
+      "js/DomManipulator.js",
+      "js/labels.js",
+      "js/main.js",
+      "js/app/lib/nat-twbs-modal-popover.js"
+    ],
+    "css": ["css/app.css"]
+  },{
+    "run_at": "document_end",
+    "matches": ["https://twitter.com/*"],
+    "js": [
+      "js/TwitterFakeAccount.js"
+    ]
+  }],
+
+  "background": {
+    "scripts": ["js/options.js"]
+  },
+
+  "icons": {
+    "16": "images/ether-16x16.png",
+    "32": "images/ether-32x32.png",
+    "128": "images/ether-128x128.png"
+  },
+
+  "web_accessible_resources": [
+    "images/powered-by-quiknode.png",
+    "/js/workers/TwitterFakeAccount.js",
+    "images/twitter/whitelisted.png",
+    "images/twitter/blacklisted.png",
+    "images/twitter/neutral.png"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LightboxE",
+  "version": "3.1.0",
+  "manifest_version": 2,
+  "description": "View linked media (images, GIFs, videos) without leaving the page.",
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.js", "lightboxE.js"]
+    }
+  ],
+  "icons": {
+    "48": "Icon-48.png",
+    "128": "Icon-128.png"
+  }
+}

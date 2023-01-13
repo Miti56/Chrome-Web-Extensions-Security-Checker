@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Shell Heroes",
+  "description": "Help the turle workers build the path for their king.",
+  "version": "0.6.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://shellheroes.csharks.com/"
+    ],
+    "launch": {
+      "web_url": "http://shellheroes.csharks.com/"
+    }
+  }
+}

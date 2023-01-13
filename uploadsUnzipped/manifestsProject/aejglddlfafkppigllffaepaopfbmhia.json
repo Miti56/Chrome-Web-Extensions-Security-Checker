@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "UrlUploader",
+  "version": "0.1.12",
+  "manifest_version": 2,
+  "description": "Push webfiles to your dropbox directly",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/action19.png",
+      "38": "images/action38.png"
+    },
+    "default_title": "Starting..."
+  },
+  "minimum_chrome_version": "24",
+  "permissions": [
+    "<all_urls>",
+
+    "chrome://favicon/",
+    "contextMenus",
+    "notifications",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "optional_permissions": [
+  ],
+  "background": {
+    "scripts": [
+      "vendor/js/dropbox.js",
+      "vendor/js/humanize.js",
+      "vendor/js/uri.js",
+      "js/dropbox_chrome.js",
+      "js/download_controller.js",
+      "js/dropship_file.js",
+      "js/dropship_list.js",
+      "js/options.js",
+      "js/upload_controller.js",
+      "js/event_page.js"
+    ],
+    "persistent": false
+  },
+  "options_page": "html/options.html",
+  "web_accessible_resources": [
+    "html/chrome_oauth_receiver.html",
+    "images/icon16.png",
+    "images/icon48.png",
+    "images/icon64.png",
+    "images/icon128.png"
+  ],
+  "incognito": "split"
+}

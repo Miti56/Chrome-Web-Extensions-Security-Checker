@@ -1,0 +1,29 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Auto Refresh Pro - Reload Pages automatically",
+  "version": "1",
+  "manifest_version": 2,
+  "description": "Easy Auto Refresh is the easiest extension to refresh webpage with a timer",
+  "icons": {
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon128.png",
+    "default_title": "Auto Refresh | Reload Pages",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "webRequestBlocking", 
+    "webRequest", 
+    "cookies",
+    "tabs",
+    "activeTab",
+    "<all_urls>"
+  ]
+}

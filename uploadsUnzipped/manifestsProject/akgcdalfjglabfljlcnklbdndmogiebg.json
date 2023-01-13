@@ -1,0 +1,16 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.css88.com/jqapi-1.9/"
+      },
+      "urls": [ "http://www.css88.com/" ]
+   },
+   "description": "jQuer 1.9 \u4E2D\u6587API ",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "jQuery 1.9  \u4E2D\u6587API",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

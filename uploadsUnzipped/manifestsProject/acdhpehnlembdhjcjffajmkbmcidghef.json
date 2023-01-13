@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name" : "神码"
+	, "version" : "2.1"
+	, "description" : "还没有被弱站泄漏密码整怕吗？还在为记住各网站不同的帐号密码而苦恼吗？神码 --神奇密码助手，会帮你改变这一切。神码利用一个密码种子实现在不同网站、不同帐号使用不同的密码，从此再也不怕弱站泄密，轻松应对网络密码的烦恼！"
+	, "background": {"page":"background.html"}
+	, "permissions": [ "tabs","http://*/*","https://*/*" ]
+	, "icons": {
+					"32": "32.png"
+					, "48": "48.png"
+					, "64": "64.png"
+					, "128": "128.png"
+				}
+	, "browser_action": {
+							"default_icon": "19.png",
+							"default_popup": "popup.html"
+						}
+	, "manifest_version": 2
+	, "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'"
+}

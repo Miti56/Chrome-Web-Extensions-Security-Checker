@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "RTU.fm",
+  "description": "RTU.fm - Le Grand Mix",
+  "version": "1.2.1",
+  "icons": {
+    "128": "images/icon-128.png"
+  },
+  "permissions": [
+    "https://rtu-server.herokuapp.com/"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "RTU.fm",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "38": "images/icon-38.png"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Wind power",
+	"version": "1.0",
+	"description": "Easy way to know who is more cool.",
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"background": {
+		"persistent": true,
+		"scripts": [ "js/main.js"]
+	},
+
+	"permissions": [ "activeTab", "tabs", "http://*/*", "https://*/*" ],
+
+	"browser_action": {
+		"default_title": "Wind power",
+		"default_icon": "icon.png",
+		"default_popup":"popup.html"
+	},
+
+	"options_page": "options.html"
+}

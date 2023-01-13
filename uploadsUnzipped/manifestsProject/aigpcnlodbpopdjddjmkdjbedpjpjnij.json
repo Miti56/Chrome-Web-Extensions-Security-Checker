@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Documents Automation for Zoho CRM",
+  "version": "1.2.3",
+  "manifest_version": 2,
+  "description": "Create, send and track quotes, proposals, contracts and other collateral from within Zoho CRM using PandaDoc extension!",
+  "homepage_url": "https://www.pandadoc.com/integration-zoho-crm",
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "38": "icons/icon76.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "default_locale": "en",
+  "permissions": [
+    "https://*.zoho.com/*", "https://*.zoho.eu/*",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "PandaDoc",
+    "default_icon": {
+      "19": "icons/icon19.png",
+      "38": "icons/icon76.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/background/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://crm.zoho.com/*", "https://crm.zoho.eu/*"],
+      "js": [
+        "libs/moment.min.js",
+        "libs/moment-timezone-with-data.js",
+        "libs/jquery.js",
+        "libs/purl.js",
+        "libs/jquery.cookie.js",
+        "libs/jquery.noty.packaged.js",
+        "libs/lodash.js",
+        "libs/parse-names.js",
+        "libs/raven.min.js",
+        "libs/pd_js_sdk/pandadoc-js-sdk.min.js",
+        "js/content_scripts/extension.js",
+        "js/content_scripts/panel.js",
+        "js/content_scripts/init.js",
+        "js/content_scripts/providers/zoho.js"
+      ],
+      "css": [
+        "libs/pd_js_sdk/pandadoc-js-sdk.css",
+        "css/inject.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}

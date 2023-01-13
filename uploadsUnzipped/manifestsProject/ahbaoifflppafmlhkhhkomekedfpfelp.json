@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Jogos de Cães",
+ "manifest_version": 2,
+ "short_name": "Jogos de Cães",
+ "description": "Jogos de Cães sao são divertidos",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1491706315_Games_2.ico"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

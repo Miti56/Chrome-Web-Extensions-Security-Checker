@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "short_name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "zh_CN",
+  "author": "vidown",
+  
+  "version": "1.8.1",
+  "permissions": ["activeTab", "contextMenus", "pageCapture", "proxy", "tabs", "webRequest", "storage", "webRequestBlocking", "webNavigation", "*://*/*"],
+  "background": {
+    "scripts": ["sample.js", "logger.js"]
+  },
+  "browser_action": {
+    "default_title": "用【维棠】下载本页视频(Alt+Q)"
+  },
+  "commands": {
+    "toggle-pin-tab": {
+      "suggested_key": {
+        "default": "Alt+Q",
+        "mac": "Alt+Q"
+      },
+      "description": "用【维棠】下载本页视频."
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+  	"128": "icon_128.png"
+  },
+  "manifest_version": 2
+}

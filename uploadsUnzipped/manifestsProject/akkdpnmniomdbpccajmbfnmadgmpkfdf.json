@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+        "scripts": [
+            "utils.js",
+            "background.js",
+            "files/newtabpromo_bg.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "all_frames": false,
+            "css": [
+                "new.vk.com/main.css"
+            ],
+            "js": [
+                "jquery/jquery-3.0.0.min.js",
+                "utils.js",
+                "content.js"
+            ],
+            "matches": [
+                "http://vk.com/*",
+                "https://vk.com/*"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "default_locale": "en",
+    "description": "__MSG_appDesc__",
+    "icons": {
+        "128": "icons/icon128.png",
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png"
+    },
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "options_page": "files/options.html",
+    "page_action": {
+        "default_icon": "icons/icon48.png"
+    },
+    "permissions": [
+        "webRequestBlocking",
+        "webRequest",
+        "cookies",
+        "webNavigation",
+        "storage",
+        "unlimitedStorage",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "version": "1.1.0.34",
+    "web_accessible_resources": [
+        "*"
+    ]
+}

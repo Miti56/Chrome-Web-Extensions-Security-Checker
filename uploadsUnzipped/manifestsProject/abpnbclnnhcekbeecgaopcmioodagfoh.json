@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Minimal Sakura",
+	"description": "A minimal dark theme with Light Sakura color. #Modern #Material #Gray",
+
+	"version": "9.0.7",
+
+	"icons": {
+		"128": "images/icon128.png"
+	},
+
+	"theme": {
+		"images": {
+			"theme_toolbar": "images/theme_toolbar.png",
+			"theme_window_control_background": "images/theme_window_control_background.png",
+			"theme_ntp_background": "images/dark_refresh_grey.png",
+			"theme_frame": "images/theme_frame.png"
+		},
+		"colors": {
+			"frame": [29, 29, 29],
+			"frame_inactive": [29, 29, 29],
+			"frame_incognito": [29, 29, 29],
+			"frame_incognito_inactive": [29, 29, 29],
+			"toolbar": [50, 50, 50],
+			"tab_text": [210, 210, 210],
+			"tab_background_text": [178, 178, 178],
+			"tab_background_text_inactive": [168, 168, 168],
+			"bookmark_text": [200, 200, 200],
+			"ntp_background": [245, 190, 210],
+			"ntp_text": [40, 40, 40]
+
+		},
+		"tints": {
+			"buttons": [ 0.94, 1.00, 0.8738 ],
+			"frame_inactive": [ 0.5833, 0.18, 0.5 ],
+            "frame_incognito_inactive": [ 0.5833, 0.18, 0.5 ]
+		},
+		"properties": {
+			"ntp_logo_alternate": 1,
+			"ntp_background_repeat": "repeat"
+		}
+	}
+}

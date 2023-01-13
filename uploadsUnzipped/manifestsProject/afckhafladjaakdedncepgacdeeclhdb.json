@@ -1,0 +1,13 @@
+{
+  "app": {
+    "urls": ["http://www.duckiedeck.com/play/dental-memory?ref\u003dcws"],
+    "launch": {"web_url": "http://www.duckiedeck.com/play/dental-memory?ref\u003dcws"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Try our memory games and check if you can still remember things well. It\u2019s a memory game for children good at associating facts.",
+  "name": "Memory Game - Dental Memory at Duckie Deck",
+  "permissions": ["notifications"],
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "1.1"
+}

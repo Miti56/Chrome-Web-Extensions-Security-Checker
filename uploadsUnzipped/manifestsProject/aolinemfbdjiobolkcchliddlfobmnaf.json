@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Traductor Español",
+  "manifest_version": 2,
+  "description": "Traductor Español - Traducir el lenguaje de idiomas más populares del mundo .",
+  "version": "1.0.3",
+  "icons": {
+	"24": "icon24.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+  ],
+  "app": {
+  		"urls": [
+    		"http://traductor-espanol-sa.hevokuapp.com/"
+  		],
+		"launch":{
+			"web_url": "http://traductor-espanol-sa.hevokuapp.com/"
+		}
+  }
+}

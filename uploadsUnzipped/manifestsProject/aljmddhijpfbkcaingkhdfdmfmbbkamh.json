@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "jackBeNimble",
+  "short_name": "jbk",
+  "author": "Michael Symmes",
+  "description": "A lightning-fast, easy-to-configurable, hotkey order-entry system that works with multiple crypto exchanges.",
+  "version": "0.5.10",
+  "browser_action": {
+    "default_popup": "config.html",
+    "default_title": "jackBeNimble"
+  },
+  "icons": {"128": "jbk-icon.png" },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.gdax.com/*",
+        "https://www.bitfinex.com/*"
+      ],
+      "js": [
+        "js/jackBeNimble.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Ness - scan document",
+    "version": "2.2",
+    "manifest_version": 2,
+    "description": "scan document",
+    "browser_action": {
+        "default_icon": {
+            "16": "icon.png"
+        }
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+            "matches": [
+				"<all_urls>"
+			],
+            "js": ["contentScript.js"],
+            "all_frames": true
+        }],
+    "permissions": [
+        "nativeMessaging",
+		"tabs",
+		"activeTab"
+    ],
+    "optional_permissions": [ 
+        "downloads.open"
+    ]
+}

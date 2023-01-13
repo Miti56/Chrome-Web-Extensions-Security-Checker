@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.2.1",
+  "name": "Sesame Teams",
+  "homepage_url": "https://www.sesametime.com/sesame-teams/",
+  "description": "Herramienta de control horario y gestión de equipos remotos. Mejora la gestión de tu empresa con Sesame.",
+  "default_locale": "es",
+  "permissions": [
+    "geolocation",
+    "storage",
+    "activeTab",
+    "notifications",
+    "*://sesametime.com/*",
+    "https://maps.google.com"
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "19": "icons/19.png",
+    "38": "icons/38.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "16": "icons/16.png",
+      "19": "icons/19.png",
+      "38": "icons/38.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com",
+      "strict_min_version": "42.0"
+    }
+  },
+  "content_security_policy": "script-src 'self' ; object-src 'self'"
+}

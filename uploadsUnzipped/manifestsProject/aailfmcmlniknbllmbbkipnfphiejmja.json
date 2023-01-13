@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Exporter for Trello",
+  "description": "Export your Trello content to CSV documents (unofficial).",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "http://trello.com/*",
+    "https://trello.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

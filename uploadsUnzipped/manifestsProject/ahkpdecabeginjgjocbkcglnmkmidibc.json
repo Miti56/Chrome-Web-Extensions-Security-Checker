@@ -1,0 +1,16 @@
+{
+    "name": "Snapdragon Online Accounting",
+    "description": "Easy online accounting made to simplify your life! The best online accounting software with unlimited transactions and users.",
+    "app": {
+        "urls": ["http://www.snapdragononlineaccounting.com/"],
+        "launch": {
+            "web_url": "http://www.snapdragononlineaccounting.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

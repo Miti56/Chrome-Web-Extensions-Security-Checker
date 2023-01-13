@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "/common/js/common.js", "/common/js/eventHandler.js", "/common/js/background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "/public/injection.js" ],
+      "matches": [ "*://tv.naver.com/*", "*://tv.kakao.com/*", "*://tvpot.daum.net/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "ko",
+   "description": "__MSG_extDesc__",
+   "icons": {
+      "128": "clipping_128.png",
+      "16": "clipping_16.png",
+      "48": "clipping_48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "permissions": [ "contextMenus", "tabs", "contentSettings", "*://*/*" ],
+   "short_name": "__MSG_extShortName__",
+   "version": "0.1.7"
+}

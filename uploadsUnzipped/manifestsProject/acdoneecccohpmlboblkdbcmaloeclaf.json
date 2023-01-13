@@ -1,0 +1,31 @@
+{
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": "social_64x64.png",
+        "default_popup": "/popup/popup.html"
+    },
+    "content_security_policy": "script-src 'self' https://ws.audioscrobbler.com https://vk.com; object-src 'self'",
+    "description": "__MSG_extDescription__",
+    "manifest_version": 2,
+    "icons": {
+        "64": "social_64x64.png",
+        "128": "social_128x128.png"
+    },
+    "default_locale": "ru",
+    "name": "__MSG_extName__",
+    "short_name": "__MSG_extShortName__",
+    "permissions": [
+        "history",
+        "storage",
+        "alarms",
+        "webNavigation",
+        "tabs",
+        "webRequest",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.2.1"
+}

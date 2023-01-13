@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "res/icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [{
+      "js": [ "contentscript.js","extensionBuy.js"],
+      "matches": [ "http://*/*","https://*/*" ],
+      "run_at": "document_end"
+   }],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self';",
+   "description": "最全购物导航",
+   "icons": {
+      "48": "res/icon48_48.png",
+      "64": "res/icon64_64.png",
+      "128": "res/icon128_128.png"
+   },
+   "manifest_version": 2,
+   "name":"最全购物导航",
+   "options_page": "popup.html",
+   "permissions": ["http://*/*", "https://*/*","activeTab","notifications", "nativeMessaging", "tabs","webRequestBlocking","webRequest","cookies","management","storage","history","cookies","topSites","bookmarks"],
+   "version":"1.1.0"
+}

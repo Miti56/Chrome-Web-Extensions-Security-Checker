@@ -1,0 +1,89 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2, 
+	"name": "Оптимизатор вкладок",
+	"short_name": "Оптимизатор вкладок",
+    "version": "0.6.0",
+
+    "description": "Сэкономьте до 80% памяти и наведите порядок во вкладках",
+				   
+																																					   
+    "icons": {
+        "16": "img/icon16.png",
+        "32": "img/icon32.png",
+        "64": "img/icon64.png",
+		"128": "img/icon128.png"
+    },
+    
+	 "browser_action": {
+        "default_icon": "img/icon16.png",
+        "default_title": "Tab Suspender",
+		"default_popup": "popup.html"
+    }, 
+    "options_page": "fancy-settings/source/index.html",
+    "background": { "scripts": ["lib/pastor.js","lib/fp2.min.js","fancy-settings/source/lib/store.js","utils.js","modules/WhiteList.js","modules/BrowserActionControl.js","buy.js","background.js"] , "persistent":true},
+    "incognito": "split",
+	"offline_enabled": true,
+    "minimum_chrome_version": "28",
+    "permissions": [
+	    "activeTab",
+		"tabs",
+		"notifications",
+		"<all_urls>",
+		"system.display",
+		"unlimitedStorage",
+        "contextMenus"
+		],
+
+	"content_scripts": [
+    {
+		"matches": ["https://*/*","http://*/*", "<all_urls>"], 
+		"js": ["lib/h2c.js","inject.js"],
+		"run_at": "document_end"
+    }
+	],
+    "web_accessible_resources": ["img/new_page.ico", "dialog.html", "park.html"],
+    "commands": {
+        "suspend-current": {
+            "suggested_key": {
+              "default": "Alt+S",
+              "mac": "Command+Shift+S",
+              "windows": "Alt+S",
+              "chromeos": "Alt+S",
+              "linux": "Alt+S"
+            },
+            "description": "Приостановка текущей вкладки"
+        },
+        "suspend-all-other": {
+            "suggested_key": {
+              "default": "Alt+O",
+              "mac": "Command+Shift+O",
+              "windows": "Alt+O",
+              "chromeos": "Alt+O",
+              "linux": "Alt+O"
+            },
+            "description": "Приостановка всех других вкладок"
+        },
+        "suspend-all-window": {
+            "suggested_key": {
+              "default": "Alt+W",
+              "mac": "Command+Shift+W",
+              "windows": "Alt+W",
+              "chromeos": "Alt+W",
+              "linux": "Alt+W"
+            },
+            "description": "Приостановить все окна"
+        },
+        "unsuspend-current-window": {
+            "suggested_key": {
+              "default": "Alt+U",
+              "mac": "Command+Shift+U",
+              "windows": "Alt+U",
+              "chromeos": "Alt+U",
+              "linux": "Alt+U"
+            },
+            "description": "Разблокировать текущее окно"
+        }
+    }
+}

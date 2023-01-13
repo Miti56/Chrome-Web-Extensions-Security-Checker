@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+    "name": "Meme to Dom",
+    "description": "Requested by @MostLikelyDom... or @ThatOneDom... or @RebrandJoke. Created by @maxly_. Replaces 'meme' with 'Dom', for some reason.",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Screen Share - WikiSchool",
+  "short_name": "screen_share-wikischool",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Extensão para compartilhar a tela",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "desktopCapture",
+    "tabs",
+    "https://*.wikischool.com.br/*",
+    "https://*.abcogen.com.br/*",
+    "http://localhost:8080/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["https://*.wikischool.com.br/*", "https://*.abcogen.com.br/*", "http://localhost:8080/*"],
+    "js": ["content.js"],
+    "all_frames": true,
+    "run_at": "document_end"
+  }]
+}

@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "getcoinfree.com - Claim Calculator",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "This Claim Calculator Addon supports calculating your recent claims on Raiblock website.",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    },
+    "default_title": "getcoinfree.com - Claim Calculator",
+    "default_popup": "popup.html"
+  },
+  "omnibox": {
+    "keyword": "getcoinfree.com - Claim Calculator"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://faucet.raiblockscommunity.net/*"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  
+  "web_accessible_resources": [
+    "scripts/getcoinfree_claim.js"
+  ],
+  
+  "permissions": [
+    "*://faucet.raiblockscommunity.net/*"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "4 dodatak",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Ovo je kratak opis o mom dodatku.",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "prozor.html"
+	}
+}

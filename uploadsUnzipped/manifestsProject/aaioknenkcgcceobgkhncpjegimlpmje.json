@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Spreeder: Speed Reading E-Reader and Trainer",
+  "short_name": "Spreeder",
+  "description": "Triple your reading speed, improve comprehension, and save time. Speed read almost any text, e-book, web page, or document.",
+  "version": "2016.0.0.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+	"app": {
+    "urls": [
+      "http://www.ereflect.com/apps/HOME/SpreederCX/"
+    ],
+    "launch": {
+		"container": "panel",
+         "height": 880,
+         "web_url": "http://www.ereflect.com/apps/HOME/SpreederCX/",
+         "width": 1160
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "scenery_grandparents",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "scenery_grandparents",
+
+  "icons": 
+  { 
+    "48": "nr48.png",
+	"128": "nr128.png"
+  },
+  "browser_action": {
+    "default_icon": "bt128.png",
+    "default_title": "scenery_grandparents",
+	"default_popup": "popup.html"
+  }
+}       

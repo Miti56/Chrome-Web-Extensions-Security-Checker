@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Splitplan.com browser extension",
+  "version": "1.0",
+  "description": "Extension for splitplan.com",
+  "manifest_version": 2,
+  "short_name": "SplitPlan",
+  "author": "SplitPlan, Inc",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://api.splitdev.com:8888/*",
+    "https://api.splitplan.com/*"
+  ]
+}

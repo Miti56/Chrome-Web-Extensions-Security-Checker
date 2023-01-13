@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Domain Name Generator",
+"description": "A simple to use tool for domain name generation from keyword list. Bulk availability test",
+"version": "0.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"http://domaine-name-generator.com/"
+],
+"launch": {
+"web_url": "http://domaine-name-generator.com/"
+}
+}
+}

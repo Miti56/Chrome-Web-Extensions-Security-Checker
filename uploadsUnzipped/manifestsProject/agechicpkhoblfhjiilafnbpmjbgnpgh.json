@@ -1,0 +1,48 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "bg.js", "jquery.js" , "dis_msg.js" ]
+   },
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "browser_action": {
+      "default_icon": "img/64.png"
+   },
+   "content_scripts": [ {
+      "js": [  "jquery.js" , "popup_new.js" ],
+      "matches": [ "*://*.mytatkal.co.in/*" ]
+   }, {
+      "js": [ "jquery.js", "dis_msg.js", "process.js" , "show_time.js" ],
+      "matches": [ "*://*.irctc.co.in/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "dis_msg.js" , "pymt_full.js" ],
+	  "exclude_matches": [ "*://*.irctc.co.in/*" ],
+	  "exclude_globs" : [ "*irctc.co.in*" ],
+      "matches": [ "*://*/*" ]
+   },{
+     "all_frames" : true,
+     "js": ["ipay_pymt.js"],
+     "matches": ["*://*.irctcipay.com/*"]
+   } ],
+   "description": "Mytatkal IRCTC Fastest Booking. Each second is important at the time of TATKAL.",
+   "icons": {
+        "256" : "img/256.png",
+        "192" : "img/192.png",
+        "144" : "img/144.png",
+        "128" : "img/144.png",
+        "96"  : "img/96.png",
+        "72"  : "img/72.png",
+        "64"  : "img/64.png",
+        "48"  : "img/48.png",
+        "36"  : "img/36.png",
+        "32"  : "img/32.png",
+        "16"  : "img/16.png"
+   },
+   "manifest_version": 2,
+   "name": "Mytatkal - Mytatkal IRCTC Fastest Booking",
+   "permissions": [ "management", "storage", "tabs", "webNavigation" , "https://*/*", "http://*/*" ],
+   "short_name": "Mytatkal IRCTC Fastest Booking",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.8"
+}

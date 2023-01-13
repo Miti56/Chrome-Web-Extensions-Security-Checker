@@ -1,0 +1,20 @@
+{
+   "background": {
+      "scripts": [ "jquery.js", "background.js" ]
+   },
+  "browser_action": {
+      "default_icon": "icons128.png"
+   },
+   "description": "CorelDRAW Graphics Suite, Floor plans and interior design, 2D 3D Designer",
+   "icons": {
+      "128": "icons128.png"      
+   },
+   "manifest_version": 2,
+   "name": "CorelDRAW Graphics Suite",
+   "permissions": [ "contextMenus", "downloads",
+    "activeTab",
+	"tabs"
+	],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.1.3"
+}

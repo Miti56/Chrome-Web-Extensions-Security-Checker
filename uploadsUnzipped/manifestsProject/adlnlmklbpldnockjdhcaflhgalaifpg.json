@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Tubemate for chrome",
+  "description": "Tubemate - download for free directly. Enjoy the best videos saver from Youtube, Vimeo and other websites.",
+  "version": "2.1",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

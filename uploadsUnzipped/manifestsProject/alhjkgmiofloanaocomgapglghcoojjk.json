@@ -1,0 +1,20 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.kaiagames.com/game/frankie-stein-real-makeover-61"
+      },
+      "urls": [ "http://www.kaiagames.com/game/frankie-stein-real-makeover-61" ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "128.png"	  
+   },
+
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "short_name": "__MSG_appName__",
+   "permissions": [ "unlimitedStorage", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

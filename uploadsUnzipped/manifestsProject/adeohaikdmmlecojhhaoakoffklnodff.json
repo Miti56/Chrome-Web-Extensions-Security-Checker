@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"Toques Para Celular",
+	"description":"Baixar Toques Para Celular mp3 Gratis.Melhor toques Telemovel 2019 de Qualidade Para Todos os Dispositivos",
+	"version":"0.1.1",
+	"chrome_url_overrides":{
+		"newtab":"newpage.html"
+	},
+	"browser_action":{
+		"default_icon":"icon.png"
+	}, 
+	"permissions":[
+		"tabs"
+	],
+	"background":{
+		"scripts":["background.js"],
+		"persistent":false
+	}
+	
+}

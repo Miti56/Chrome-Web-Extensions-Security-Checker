@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Golos Explorer",
+	"version": "1.0.3",
+	"description": "Golos Blockchain Explorer",
+	"icons": {
+		"192": "graphics/android-chrome-192x192.png"
+	},
+	"homepage_url": "https://explorer.golos.io/",
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"author": "Epexa entusoft@gmail.com",
+	"browser_action": {
+		"default_icon": "graphics/android-chrome-192x192.png"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

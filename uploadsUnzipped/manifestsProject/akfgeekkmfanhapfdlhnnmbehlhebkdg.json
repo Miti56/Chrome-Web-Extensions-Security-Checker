@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Backlog wiki freshness checker",
+  "description": "Display a warning to the old page.",
+  "version": "0.1.1",
+  "permissions": [
+      "storage"
+  ],
+  "content_scripts": [{
+      "matches" : ["https://*.backlog.jp/wiki/*"],
+      "js": ["js/lib/jquery-1.11.3.min.js", "js/lib/moment.js", "js/main.js"],
+      "run_at": "document_start"
+  }],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "options_page": "options/options.html",
+  "manifest_version": 2
+}

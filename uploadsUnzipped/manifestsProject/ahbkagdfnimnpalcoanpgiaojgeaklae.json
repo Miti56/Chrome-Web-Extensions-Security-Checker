@@ -1,0 +1,26 @@
+{
+    "background": {
+      "page": "background.html"
+    },
+    "content_security_policy": "script-src 'self' https://www.myiplocation.org https://myiplocation.org https://maps.gstatic.com https://maps.googleapis.com https://apis.google.com; object-src https://apis.google.com 'self'",
+    "default_locale": "en",
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "homepage_url": "http://www.talkapps.org/ip-flager",
+    "icons": {
+        "128": "icon128.png",
+        "16": "icon16.png",
+        "48": "icon48.png"
+    },
+    "manifest_version": 2,
+    "page_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "tabs",
+        "webRequest"],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.1.3"
+}

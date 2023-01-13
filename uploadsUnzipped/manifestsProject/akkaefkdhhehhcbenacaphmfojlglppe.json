@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_extName__",
+	"description": "__MSG_extDesc__",
+	"default_locale": "en",
+    "icons": {
+        "128": "img/128.png",
+        "64": "img/64.png",
+        "32": "img/32.png"
+    },
+    "browser_action": {
+        "default_icon": "img/32.png",
+        "default_title": "Loady",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "js/lib/grafy.js",
+            "js/lib/analytics.js",
+            "js/lib/jquery-3.1.1.min.js",
+            "js/lib/tools.js",
+            "js/_config.js",
+            "js/search-engine.js",
+            "js/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": [
+                "js/lib/jquery-3.1.1.min.js",
+                "js/lib/tools.js",
+                "js/lib/md5.min.js",
+                "js/_config.js",
+                "js/providers/abstract-provider.js",
+                "js/providers/dm.js",
+                "js/providers/fb.js",
+                "js/providers/in.js",
+                "js/providers/tw.js",
+                "js/providers/vm.js",
+                "js/providers/xx.js",
+                "js/providers/dz.js",
+                "js/providers/sc.js",
+                "js/providers/sf.js",
+                "js/providers/ya.js",
+                "js/providers/mr.js",
+                "js/app.js",
+                "js/content.js"
+            ],
+            "css": ["css/app.css", "css/sidebar.css", "css/content.css"]
+        },
+        {
+            "matches": ["*://*/*"],
+            "all_frames": true,
+            "js": [
+                "js/lib/analytics.js",
+                "js/lib/jquery-3.1.1.min.js"
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://google-analytics.com; object-src 'self'",
+    "manifest_version": 2,
+	"permissions": [
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"http://vk.com/*",
+		"https://vk.com/*",
+		"*://vkmusic.xyz/*",
+		"*://*/*"
+	],
+    "optional_permissions": ["downloads"],
+    "web_accessible_resources": ["img/*"],
+    "version": "1.0.0"
+}

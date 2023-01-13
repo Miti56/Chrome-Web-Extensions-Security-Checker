@@ -1,0 +1,38 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "assets/icons/icon.png",
+      "default_popup": "popup/index.html",
+      "default_title": "Capture interface"
+   },
+   "commands": {
+      "start": {
+         "description": "Start Capture",
+         "suggested_key": {
+            "default": "Alt+O",
+            "mac": "Alt+O"
+         }
+      },
+      "stop": {
+         "description": "Stop Capture",
+         "suggested_key": {
+            "default": "Ctrl+Shift+X",
+            "mac": "MacCtrl+Shift+X"
+         }
+      }
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' ; object-src 'self'",
+   "default_locale": "en",
+   "description": "AUDIO DEVICE",
+   "icons": {
+      "128": "assets/icons/icon.png"
+   },
+   "manifest_version": 2,
+   "name": "AUDIO",
+   "options_page": "options/index.html",
+   "permissions": [ "tabCapture", "webRequest", "*://*.example.com/*", "http://192.168.1.46/*", "contextMenus", "webRequestBlocking", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}

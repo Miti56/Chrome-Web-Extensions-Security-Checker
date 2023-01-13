@@ -1,0 +1,29 @@
+{   
+
+   "browser_action": {
+      "default_icon": "/icon/icon128.png",
+      "default_popup": "index.html",
+      "default_title": "Yobit Dice AI Bot"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "The extension for automatic play in DICE brings 1% an hour at optimal risk.",
+   "icons": {
+      "128": "/icon/icon128.png"
+   },
+   "content_scripts": [
+        {
+          "matches": ["http://*/*","https://*/*"],
+          "js": ["js/jquery-3.2.1.min.js"]
+        }
+      ],
+      "permissions" : [
+        "declarativeContent","tabs","storage","notifications","activeTab"
+      ],
+
+   "manifest_version": 2,
+   "name": "Yobit Dice AI Bot",
+   "short_name": "Yobit Dice AI Bot",
+
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.8"
+}

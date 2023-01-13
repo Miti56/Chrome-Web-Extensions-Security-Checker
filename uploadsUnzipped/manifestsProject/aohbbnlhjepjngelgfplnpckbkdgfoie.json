@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Dynamic Bookmarks",
+    "version": "1.0.3",
+    "description": "Dynamically show bookmarks at the start of the bookmarks bar on url change",
+    "permissions": [
+        "bookmarks",
+        "contextMenus",
+        "tabs",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["url-match.js", "background.js"]
+    },
+    "options_page": "options.html",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "icons": {
+        "128": "icon-large.png"
+    },
+    "manifest_version": 2
+}

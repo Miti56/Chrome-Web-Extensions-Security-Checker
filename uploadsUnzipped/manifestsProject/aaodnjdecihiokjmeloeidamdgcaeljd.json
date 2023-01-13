@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.1.12",
+  "name": "タイムズカープラス マップで検索",
+  "description": "タイムズカープラス（カーシェア）を地図から徒歩距離順で検索して、予約状況一覧を表示します",
+  "page_action": {
+    "default_icon": "images/myicon.png",
+    "default_popup": "popup.html",
+    "default_title": "タイムズカープラス マップで検索"
+  },
+  "icons": {
+    "48": "images/myicon.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["js/jquery-2.0.0.min.js", "js/background.js"]
+  },
+  "content_scripts": [
+      {
+        "matches": ["https://plus.timescar.jp/view/member/mypage.jsp"],
+        "js": ["js/jquery-2.0.0.min.js", "js/script.js"],
+        "run_at": "document_end"
+      }
+    ],
+  "content_security_policy": "script-src https://*.google.com https://*.googleapis.com https://*.gstatic.com 'unsafe-eval' 'self'; object-src 'self';",
+  "permissions": ["tabs", "geolocation", "https://plus.timescar.jp/*", "http://plus.timescar.jp/*"],
+  "manifest_version": 2
+}

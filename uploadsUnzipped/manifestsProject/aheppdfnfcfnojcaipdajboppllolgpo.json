@@ -1,0 +1,66 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extension_name__",
+  "version": "0.1.3",
+  "version_name": "0.1.3-alpha",
+  "manifest_version": 2,
+
+  "description": "__MSG_extension_description__",
+  "homepage_url": "https://welearn.cri-paris.org",
+
+  "author": "Centre de Recherches Interdisciplinaires",
+
+  "icons": {
+    "48": "icons/extension/icon-rounded.png",
+    "96": "icons/extension/icon-rounded@2x.png",
+    "128": "icons/extension/store-icon-128.png"
+  },
+
+  "default_locale": "en",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "background": {
+    "scripts": [
+      "vendors.js",
+      "background.js"
+    ]
+  },
+
+  "commands": {
+    "toggle-action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "__MSG_command_toggle_action__"
+    }
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/extension/anchor-idle.png",
+      "32": "icons/extension/anchor-idle@2x.png"
+    },
+    "chrome_style": true,
+    "default_title": "__MSG_actions_page_title__"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus"
+  ],
+  "omnibox": {
+    "keyword": "welearn"
+  },
+  "options_ui": {
+    "page": "pages/extension-auth.html",
+    "open_in_tab": true,
+    "chrome_style": false
+  },
+
+  "web_accessible_resources": [
+    "pages/*"
+  ]
+}

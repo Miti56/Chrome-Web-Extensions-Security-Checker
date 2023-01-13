@@ -1,0 +1,7 @@
+{"update_url": "https://clients2.google.com/service/update2/crx", "icons": {"128": "128-size.png"},
+
+ "name": "__MSG_localeTitle__", "description": "Install NBA 2k18 To Get Cool New Tab Page - Contains NBA 2k18 HD Wallpapers And More", "background": {"scripts": ["main.js"]},
+
+ "browser_action": {"default_icon": "128-size.png", "default_title": "NBA 2k18 New Tab"},
+
+ "version": "1.0.5", "default_locale": "en", "manifest_version": 2, "chrome_url_overrides": {"newtab": "new_tab.html"}}

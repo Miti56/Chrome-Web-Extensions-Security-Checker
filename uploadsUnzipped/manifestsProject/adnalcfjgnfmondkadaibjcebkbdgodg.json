@@ -1,0 +1,44 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Shiki Theme",
+	"version": "1.0",
+	"description": "Theme for Shiki on Linux.",
+	"theme": {
+		"images" : {
+			"theme_frame" : "i\/theme_frame.png",
+			"theme_frame_inactive" : "i\/theme_frame.png",
+			"theme_frame_overlay" : "i\/theme_frame_overlay.png",
+			"theme_toolbar":"i\/theme_toolbar.png",
+			"theme_tab_background":"i\/theme_tab_background.png",
+			"theme_ntp_background":"i\/theme_ntp_background.png",
+			"theme_button_background":"i\/theme_button_background.png",
+			"theme_window_control_background":"i\/theme_window_control_background.png"
+		},
+		
+		"colors" : {
+			"frame" : [60,60,60],
+			"frame_inactive" : [60,60,60],
+			"toolbar" : [216,216,216],
+			"bookmark_text" : [51,51,51],
+			"tab_text" : [0,0,0],
+			"tab_background_text" : [51,51,51],
+			"ntp_background" : [216,216,216],
+			"ntp_text" : [255,255,255],
+			"ntp_link" : [255,255,255],
+			"ntp_section" : [51,51,51,0.7],
+			"ntp_section_text" : [255,255,255],
+			"ntp_section_link" : [255,255,255],
+			"button_background" : [144,144,144]
+		},
+		
+		"properties":{
+			"ntp_background_alignment":"top",
+			"ntp_background_repeat":"repeat"
+		},
+		
+		"tints" : {
+			"buttons" : [0.0, 0.0, 0.25],
+			"frame_inactive" : [0,0.5,0.5]
+		}
+	}
+}

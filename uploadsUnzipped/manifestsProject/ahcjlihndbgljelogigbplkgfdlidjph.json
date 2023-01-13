@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Festival Checklist (NL)",
+  "version": "2.0.1",
+  "description": "Mijn checklist samenstellen voor festival weekends. Een goede inpaklijst is de basis voor een zorgeloos festival camping weekend!",
+  "app": {
+    "urls": [
+      "http://www.infozine.be/festivalchecklist/"
+    ],
+    "launch": {
+      "web_url": "http://www.infozine.be/festivalchecklist/"
+    }
+  },
+  "icons": {
+    "128": "google-chrome-webstore-icon-128px-01.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

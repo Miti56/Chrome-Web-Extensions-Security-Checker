@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version" : 2
+    , "name"           : "Hacker News Vue"
+    , "version"        : "1.0.57"
+    , "description"    : "Hacker News Vue makes Hacker News easy on the eyes!"
+    , "homepage_url"   : "https://HackerNewsVue.com"
+
+    , "content_security_policy" : "default-src 'self' https://hacker-news.firebaseio.com"
+    
+    , "icons"   : {
+           "16" : "icons/icon16.png"
+        ,  "32" : "icons/icon32.png"
+        ,  "48" : "icons/icon48.png"
+        , "128" : "icons/icon128.png"
+    }
+    
+    , "browser_action"    : {
+          "default_icon"  : "icons/icon16.png"
+        , "default_title" : "Hacker News Vue"
+    }
+
+    , "default_locale" : "en"
+    
+    , "content_scripts" : [
+        {
+            "matches"   : [
+                "*://news.ycombinator.com/*"
+            ]
+            , "css"     : [
+                "src/inject/inject.css"
+            ]
+        }
+        , {
+            "matches"   : [
+                "*://news.ycombinator.com/*"
+                , "*://hackernewsvue.com/*"
+            ]
+            , "js"      : [
+                "src/inject/inject.js"
+            ]
+        }
+    ]
+
+    , "background"     : {
+          "persistent" : false
+        , "scripts"    : [ "js/background.js" ]
+    }
+
+    , "permissions" : [
+          "alarms"
+        , "background"
+        , "tabs"
+        , "webNavigation"                       
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Evidian WAM GUI Launcher",
+    "description": "This extension allows you to launch directly Evidian WAM Administration Console from JNLP file, instead to download it.",
+    "version": "1.1",
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "icons": {
+      "16": "evidian16.png",
+      "48": "evidian48.png",
+      "128": "evidian128.png" },
+    "browser_action": {
+        "default_icon": "evidian128.png"
+    },
+    "background": {
+      "persistent": false,
+      "scripts": [ "evidian_gui_launcher.js" ]
+    },
+    "author": "Atos Evidian EEC - STh",
+    "homepage_url": "http://www.evidian.com",
+    "permissions": [
+      "downloads", "nativeMessaging"
+    ]
+}

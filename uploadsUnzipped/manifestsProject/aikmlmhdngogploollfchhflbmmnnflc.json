@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Magicify The Election",
+    "short_name": "Magicify",
+	"description": "Makes the 2016 Presidential Election a bit more magical.",
+	"author": "Chloe Mirzayi",
+	"version": "0.3",
+
+	"icons": {
+		"128": "icon128.png"
+	},
+
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*/*"],
+			"all_frames": true,
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}

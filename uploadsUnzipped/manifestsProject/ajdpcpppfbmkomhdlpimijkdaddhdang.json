@@ -1,0 +1,26 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "ExtempEngine",
+  "description": "Virtual extemp box and index. Auto-updates. Offline optimized.",
+  "version": "1.6.301",
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "permissions": [
+    "notifications",
+    "background",
+    "https://*.extempengine.com/",
+    "http://*.extempengine.com/",
+	  "storage",
+	  "unlimitedStorage",
+    "fileSystem"
+	],
+  "app": {
+    "background": {
+      "scripts": ["background.js", "js/Lawnchair.js"]
+    }
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "128": "img/icon-128.png"
+  }
+}

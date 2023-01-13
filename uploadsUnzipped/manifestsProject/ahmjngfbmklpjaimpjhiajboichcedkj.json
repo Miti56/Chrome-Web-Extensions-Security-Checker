@@ -1,0 +1,23 @@
+{
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "/js/main.js" ]
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "/img/icon_128.png",
+      "16": "/img/icon_16.png",
+      "32": "/img/icon_32.png",
+      "48": "/img/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA52ztcf7uFI1gv/FVIMXpDI5LZmzTLTqZ1Z9AQRhiJwL33ynWyDZWDA8mNG0psVE2EDC/jOVAp5JWHzvzUxEuLdoChoQyrxR2mPLll25XfFkwNzPRGBX/QYgz0wWZQFOSIS/WAF2ywCukYKXE9xgymcvgK1PpbNPGeMbMD2whi1YKYKrUMJ0q78t5RGJ1RWMI8uT83GHO870HWfqcWCVVnfQYKJoRyJmJAuIRvXGjjVVoDTItHWqClIXGrr/sDr5Tcmh3LZPSOYipO0L87px/uSZDgPNp6E0FjH31pKBtX4/1DkVTfDUGptrU1S6nBn+Qvw/oYDXiEkqXLLE4UkLvFQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "webview" ],
+   "short_name": "muse",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.5"
+}

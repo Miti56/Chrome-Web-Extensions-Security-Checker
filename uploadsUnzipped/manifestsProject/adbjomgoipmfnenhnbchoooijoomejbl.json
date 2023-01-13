@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "A1電商好幫手",
+    "version": "1.1.2",
+    "description": "簡單幾個步驟，賣家就能迅速回覆評價。",
+    "permissions": [
+        "*://*/*",
+        "accessibilityFeatures.read",
+        "accessibilityFeatures.modify",
+        "cookies",
+        "storage",
+        "tabs",
+        "activeTab"
+    ],
+    "background": {
+        "page": "index.html#/event-page",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "A1電商好幫手",
+        "default_popup": "index.html#/popup"
+    },
+    "options_page": "index.html#/main",
+    "icons": {
+        "128": "assets/icons/icon_128x128-3.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com ; object-src 'self'"
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Search with quotes",
+	"version": "1.1",
+	"manifest_version": 2,
+
+	"description": "Exact words in quotes on Google Search",
+
+  "icons":{
+    "128":"icon.png"
+  },
+
+	 "permissions": [
+    "tabs"
+  ],
+
+   	"permissions": [
+ 	   "contextMenus"
+ 	 ],
+
+  "background" : {
+    "scripts" : ["background.js"]
+  }
+}

@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_security_policy": "script-src 'self' https://query.yahooapis.com; object-src 'self' 'unsafe-eval'",
+   "icons": {
+      "128": "store_logo.png"
+   },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "secure",
+      "keyword": "searchTerms",
+      "search_url": "https://seekoutresultz.com/?keywords={searchTerms}",
+      "favicon_url": "https://seekoutresultz.com/favicon.ico",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+  },
+   "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+   "permissions": [  "storage", "https://query.yahooapis.com/" ],
+   "version": "1.5.7"
+}

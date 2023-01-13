@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Youtubify",
+  "version": "1.4",
+
+  "description": "Customize youtube ! Change text, background, icon colors, fonts, choose between patterns ! ",
+  "icons": {
+    "48": "/images/icon_48.png",
+    "96": "/images/logo_chrome.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["*://www.youtube.com/*"],
+      "js": [
+        "buy.js",
+        "jquery/jquery.js",
+        "browser-polyfill.js",
+        "content-script.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "*://www.youtube.com/*",
+    "activeTab",
+    "tabs",
+    "storage",
+    "webRequest",
+    "cookies"
+  ],
+  "background": {
+    "scripts": [
+      "buy.js",
+      "jquery/jquery.js",
+      "browser-polyfill.js",
+      "background-script.js"
+    ]
+  },
+  "web_accessible_resources": ["images/*", "patterns/*"],
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/page-16.png",
+      "32": "icons/page-32.png"
+    }
+  }
+}

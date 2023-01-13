@@ -1,0 +1,25 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "Mint",
+	"description": "Help explorer Asha protect the land of Laa.",
+	"version": "0.1",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": { 
+		"16": "mint-16.png", 
+		"128": "mint-128.png" 
+	},
+	"permissions": [
+		"fileSystem",
+		"unlimitedStorage"
+	],
+	"requirements": {
+		"3D": {
+			"features": ["webgl"]
+		}
+	}
+}

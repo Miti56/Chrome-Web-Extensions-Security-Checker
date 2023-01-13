@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "St.nu unlocked premium article notifier",
+	"short_name": "St.nu notifier",
+	"version": "0.1",
+	"description": "Get notified when a new unlocked premium article is published on st.nu",
+	"homepage_url": "https://github.com/crash007/st-notifier",
+	"author": "crash007",
+	"permissions": ["storage", "alarms", "notifications", "https://www.st.nu/" ],
+	"icons": {
+		"128": "st-notifier-128.png"
+	},
+	"background": {
+		"scripts": ["libs/jquery-3.3.1.min.js", "background.js"],
+		"persistent": false
+	  }
+}

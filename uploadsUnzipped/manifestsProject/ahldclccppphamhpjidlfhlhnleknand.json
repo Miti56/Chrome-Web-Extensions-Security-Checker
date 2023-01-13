@@ -1,0 +1,16 @@
+{
+    "name": "Nakouzia",
+    "description": "Nakouzia, by: Abdel Wadoud Nakouzi, serves as a local portal.",
+    "app": {
+        "urls": ["http://www.nakouzia.com/"],
+        "launch": {
+            "web_url": "http://www.nakouzia.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnC/vorlbhr6oqNqZ09iHF9TKUnKvYaZsDziZusG5m06Sj5H6IcBpDSxD4Z8Sozq72ZzU0QWPAB+fY3UUe2qOxSczQxPJVKnE6Ng6A2hcVvWfk65/pdfZ5Y4yypgxaH6f1LXtH/0sVHQ4JS4ndc/Xgwxo+9F0wflY6PUD2g9v+Ud7umLidggRz+x1cuowUwjjBs0dlt+ULAaMl0tMNqXj7ZLniETXa0IgQeL/dk88LqBFsd/DrHgfPIKmpBfncOhLzdJd97cRFn5FKVsiA9G51Z02T2aaJVl+QtOlexZOR2x4R1qpBFJqC0ALjJJU5Bbls/0ne99O4bwoTTeE+GjvNwIDAQAB",
+
+  "name": "Feedbak",
+  "version": "2.0",
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "browser_action": {
+    "default_popup": "Screen2new.html",
+    "default_title": "Feedbak"
+  },
+
+  "permissions": [
+    "identity"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "oauth2": {
+    "client_id": "135478768149-t0punlog0anjecjjq1uf3g73e45jbuvk.apps.googleusercontent.com",
+
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
+  },
+
+  "manifest_version": 2
+}

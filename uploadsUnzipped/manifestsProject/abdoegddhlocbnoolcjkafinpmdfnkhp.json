@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Masked Forces 3",
+
+  "short_name": "Masked Forces 3",
+
+  "version": "1.0.2",
+  "description": "Play Masked Forces 3 now",
+
+  "homepage_url": "http://appwords.xyz/c/driving-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Masked Forces 3",
+
+      "default_popup": "popup.html"
+  }
+}

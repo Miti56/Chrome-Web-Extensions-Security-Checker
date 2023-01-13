@@ -1,0 +1,15 @@
+{
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "CeleryMan",
+        "default_popup": "popup.html"
+    },
+    "description": "Good Morning, Paul. What will your first sequence of the day be?",
+    "icons": { "1": "icon.png" },
+    "manifest_version": 2,
+    "name": "Celery Man",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.0.1",
+    "web_accessible_resources": [ "assets/*" ],
+    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+}

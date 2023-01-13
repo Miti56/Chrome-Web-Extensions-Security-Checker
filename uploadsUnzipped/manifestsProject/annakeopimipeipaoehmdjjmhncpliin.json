@@ -1,0 +1,41 @@
+	{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Ultimate FBA Calculator",
+	"description": "This is an Amazon FBA ROI calculator and an Amazon FBA profit calculator.",
+	"version": "5.2",
+	
+	"web_accessible_resources": ["images/*.*","scripts/inject.js"],
+
+	"browser_action": 
+		{
+		"default_icon": 
+			{
+			"19": "images/icon19.png",
+			"38": "images/icon38.png"
+			},
+		"default_popup": "load_popup.html"
+		},
+	"background": 
+		{
+		"scripts": ["scripts/jquery-2.2.4.min.js","scripts/background.js"]
+		},
+	"icons": 
+		{ 
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png" 
+		},
+	"content_scripts": 
+		[{
+		"matches": ["<all_urls>"],
+		"js": ["scripts/content.js"]
+		}],
+	"permissions": 
+		[
+		"activeTab", "storage", "tabs", "background", "clipboardWrite", "*://*.amazon.com/*", "http://*/*", "https://*/*"
+		],
+	"content_security_policy": "script-src 'self' https://images-na.ssl-images-amazon.com https://sellerstats.com https://connect.facebook.net https://www.facebook.com; object-src 'self'"
+	}

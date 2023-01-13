@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "description": "Identify with Nigeria and celebrate a great nation with this theme for Google Chrome™. Spread the love to friends and family.",
+   
+   "manifest_version": 2,
+   "name": "Nigerian Flag Theme",
+   "theme": {
+      "colors": {         
+         "frame": [ 230, 230, 230 ],
+		 "toolbar": [ 1, 143, 90, 0.6 ],
+		 "bookmark_text": [ 0, 0, 0 ],
+         "ntp_background": [ 0, 0, 0 ],
+         "ntp_link": [ 0, 0, 0 ],
+         "ntp_link_underline": [ 0, 0, 0 ],
+         "ntp_text": [ 0, 0, 0 ],
+		 "tab_background_text": [ 0, 0, 0 ],
+         "tab_text": [ 0, 0, 0 ]
+		 
+         
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "top center",
+         "ntp_background_repeat": "no-repeat"
+      }
+   },
+   "version": "1.0"
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "default_locale": "en",
+   "name" : "WhatFontIs Font Finder",
+   "description": "Find any font from any image (commercial or free)",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "24": "24.png",
+      "48": "48.png"
+   },
+   "app": {
+      "launch": {
+         "container": "tab",
+         "web_url": "https://www.whatfontis.com",
+		 "default_locale": "en"
+      }
+   },   
+   "manifest_version": 2,
+   "version": "2.2"
+}

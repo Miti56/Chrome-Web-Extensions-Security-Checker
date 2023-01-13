@@ -1,0 +1,31 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "3.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon128-128.png"
+  },
+  "default_locale": "en",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "short_name": "Funky Racing on Scratch",
+  "browser_action": {
+    "default_icon": "icon128-128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "activeTab",
+    "bookmarks",
+    "management",
+    "tabs",
+    "<all_urls>",
+    "alarms",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+}

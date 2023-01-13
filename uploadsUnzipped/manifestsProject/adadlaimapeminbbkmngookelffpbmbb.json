@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Field Agent",
+  "short_name":"FormApp",
+  "description": "Questionnaire Manager for Field Agent",
+  "version": "0.0.1.4",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "manifest_version": 2,
+  "icons": {
+	"16": "catalog16.png",
+	"32": "catalog32.png",
+    "128": "catalog128.png"
+  },
+  "permissions": [
+    "unlimited_storage",
+    "notifications"
+  ]
+ }

@@ -1,0 +1,70 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Waiterio POS",
+    "short_name": "Waiterio",
+    "author": "Waiterio LTD",
+    "description": "Waiterio POS is the fastest way to handle restaurants' orders",
+    "version": "0.0.4",
+    "manifest_version": 2,
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "kiosk_enabled" : true,
+    "icons": { "16": "favicon.ico", "128": "favicon-128.png"},
+    "permissions": ["webview", "serial", "usb", {
+        "usbDevices": [
+
+            {"vendorId": 1046, "productId":  20497, "description": "Nuvoton Technology Corp"},
+
+            {"vendorId": 1049, "productId":  15360, "description": "Bixolon SRP-350"},
+            {"vendorId": 1049, "productId":  15361, "description": "Bixolon SRP-270"},
+
+            {"vendorId": 1273, "productId":   8196, "description": "Brothers PT-2300 / PT-2310"},
+            {"vendorId": 1273, "productId":   8213, "description": "Brothers QL-500"},
+            {"vendorId": 1273, "productId":   8214, "description": "Brothers QL-550"},
+            {"vendorId": 1273, "productId":   8218, "description": "Brothers PT-18R"},
+            {"vendorId": 1273, "productId":   8219, "description": "Brothers QL-650TD"},
+            {"vendorId": 1273, "productId":   8231, "description": "Brothers QL-560"},
+            {"vendorId": 1273, "productId":   8235, "description": "Brothers PT-7600"},
+
+            {"vendorId": 1208, "productId":    514, "description": "Epson TM-T20 / TM-T88IV"},
+            {"vendorId": 1208, "productId":   3587, "description": "Epson "},
+            {"vendorId": 1208, "productId":   3605, "description": "Epson "},
+            {"vendorId": 1208, "productId":  13703, "description": "Epson TM-T70 / TM-T88IV"},
+
+            {"vendorId": 4070, "productId":  33054, "description": "RongaTech R80 usb & serial & wifi thermal printer"},
+            {"vendorId": 1659, "productId":   8963, "description": "RongaTech RPP-200 usb & wifi portable thermal printer"},
+
+            {"vendorId": 1561, "productId":    273, "description": "Seiko DPU-V445"},
+            {"vendorId": 1561, "productId":    265, "description": "Seiko MPU-L465"},
+
+            {"vendorId": 1305, "productId":      1, "description": "Star Micronics IFBD-HU05/06, IFBD-HU07/08"},
+            {"vendorId": 1305, "productId":      2, "description": "Star Micronics IFBD-HU05/06, IFBD-HU07/08"},
+            {"vendorId": 1305, "productId":      3, "description": "Star Micronics TSP100U/ECO"},
+            {"vendorId": 1305, "productId":      5, "description": "Star Micronics TSP100GT"},
+            {"vendorId": 1305, "productId":      9, "description": "Star Micronics FVP10"},
+            {"vendorId": 1305, "productId":     10, "description": "Star Micronics FVP10"},
+            {"vendorId": 1305, "productId":     11, "description": "Star Micronics BSC10"},
+            {"vendorId": 1305, "productId":     15, "description": "Star Micronics TSP043"},
+            {"vendorId": 1305, "productId":     17, "description": "Star Micronics BSC10BR"},
+
+            {"vendorId": 2655, "productId":      9, "description": "Zebra LP2844"},
+            {"vendorId": 2655, "productId":    140, "description": "Zebra ZP 450"},
+            {"vendorId": 2655, "productId":    209, "description": "Zebra GC420d"}
+
+
+        ]
+    }],
+    "sockets": {
+        "tcp": {
+            "connect": "*"
+        }
+    },
+    "bluetooth": {
+        "uuids": [ "00001101-0000-1000-8000-00805f9b34fb" ],
+        "socket": true
+    }
+}

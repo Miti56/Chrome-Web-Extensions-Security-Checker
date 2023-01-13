@@ -1,0 +1,7 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name":"Plain",
+	"theme": {
+	},
+	"version": "1.0.0.0"
+}

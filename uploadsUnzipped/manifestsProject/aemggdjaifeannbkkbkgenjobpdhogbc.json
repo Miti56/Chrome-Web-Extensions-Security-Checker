@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "tlo.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/19.png",
+         "38": "images/38.png"
+      },
+      "default_title": "Zombie in ACT Gunship Online Survival"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "skrypt.js" ],
+      "matches": [ "*://*.minecraft-wat.blogspot.com/*" ]
+   } ],
+   "description": "Zombie Gunship Survival, NBA Jam, Need for Speed Most Wanted, Pac-Man, Piano Tiles 2, Plants Vs Zombies, Roll The Ball",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "Zombie in ACT Gunship Online Survival",
+   "permissions": [ "*://*.minecraft-wat.blogspot.com/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "Zombie in ACT Gunship Online Survival",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"page": "background.html"
+	},
+	"description": "辅助工具",
+	"icons": {
+		"128": "assets/images/imageinfo-16.png",
+		"16": "assets/images/imageinfo-48.png",
+		"48": "assets/images/imageinfo-128.png"
+	},
+	"manifest_version": 2,
+	"minimum_chrome_version": "27",
+	"name": "辅助工具",
+	"permissions": [ "storage", "tabs", "cookies", "contextMenus", "http://*/*", "https://*/*"],
+	"version": "1.0.2",
+	"browser_action":{
+		"default_icon":"assets/images/imageinfo-16.png"
+	},
+	"content_scripts": [
+	]
+}

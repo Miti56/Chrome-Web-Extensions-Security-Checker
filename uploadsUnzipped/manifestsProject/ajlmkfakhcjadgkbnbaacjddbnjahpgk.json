@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "أذكار المسلم",
+  "version": "2.3",
+  "manifest_version": 2,
+  "options_page": "options.html",
+  "background_page": "background.html",
+  "description": "أذكار المسلم",
+  "icons": {"16": "images/icones.jpg", 
+			"48": "images/icones.jpg",
+			"128":"images/icones.jpg"},
+  "browser_action": {
+    "default_icon": "images/icones.jpg",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "http://*/*",
+    "notifications",
+	"unlimitedStorage",
+	"declarativeContent",
+	"webNavigation"
+  ]
+}

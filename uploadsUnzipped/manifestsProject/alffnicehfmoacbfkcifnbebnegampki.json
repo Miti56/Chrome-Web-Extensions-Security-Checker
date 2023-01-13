@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Dinosaurs Games",
+ "manifest_version": 2,
+ "short_name": "Dinosaurs Games",
+ "description": "Much you like dinosaurs?",
+ "version": "1",
+ "icons": {
+	"128": "icone.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://myaddons.xyz/c/dinosaurs-games/"
+	}
+  }
+}

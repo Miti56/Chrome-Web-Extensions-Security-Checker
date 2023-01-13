@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Rocket of the online League",
+  "description": "Rocket League®, Football Manager 2017, Inside, Rust, The Forest, Limbo, Garry's Mod, H1Z1: King of the Kill",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

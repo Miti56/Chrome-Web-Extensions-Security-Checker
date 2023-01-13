@@ -1,0 +1,30 @@
+{
+   "background": {
+      "default_popup": "popup.html",
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "豆瓣电影下载神器——豆瓣皮"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery.js", "douban.js" ],
+      "matches": [ "https://movie.douban.com/subject/*" ]
+   } ],
+   "description": "在你访问豆瓣电影页面时将会为您查找可下载资源",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoTq5afCyk3P6KY7AWvOnhdd/hjhCjvMXTV3haLe7QWw1wFiPLEzHaFEDzf/1JRvn09j2y0OPlLxv3xwisFvYk/UNPuPnBOq4cqD4BHt7vyx3YCLnWXsfiaZUmJGmFUdVOiRaulF+wO4Djlts9gsCgqhuSRMaSnIaG9dX/XplEVc7enmsaZTlpscH2FWNyY+fEImXCOd9HELGFGp4BfFvw92oLz9ukrC11zKPPFVEr9wy9NOUQdf3ZXzSixW1bxHKygvgKzY+2EXMu+x8ritAw/ojeDbJodlrA5WkifDeSKRGvMIbAq+WtISB1HDx2IG8WpQcQEm9YZKlzMsPTOXgpQIDAQAB",
+   "manifest_version": 2,
+   "name": "豆瓣电影下载神器——豆瓣皮",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "contextMenus", "http://*/", "https://*/*" ],
+   "short_name": "豆瓣皮",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.6"
+}

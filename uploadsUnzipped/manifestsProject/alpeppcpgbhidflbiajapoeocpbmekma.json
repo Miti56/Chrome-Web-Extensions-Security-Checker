@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Itch - The Scratch Teacher Dashboard",
+  "short_name": "Itch",
+  "version": "2.2",
+  "permissions": ["webview"],
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "icons": {
+    "512": "icon_512.png"
+  }
+}

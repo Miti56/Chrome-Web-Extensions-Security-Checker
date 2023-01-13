@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Secretary",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Your own online secretary",
+  "background": {
+    "scripts": [
+      "src/jquery-3.2.1.min.js",
+      "src/background.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "options_page": "src/options.html",
+  "browser_action": {
+    "default_popup": "src/main.html"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage"
+  ]
+}

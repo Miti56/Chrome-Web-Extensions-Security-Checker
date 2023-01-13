@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Flying Game",
+  "description": "Free Flying fire game, provide powerups and accelerator.",
+  "version": "1.1.1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.html5app.info/html5fly/"
+    ],
+    "launch": {
+      "web_url": "http://www.html5app.info/html5fly/"
+    }
+  }
+}

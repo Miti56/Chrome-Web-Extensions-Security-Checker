@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.1.1",
+  "name": "TV Gazers",
+  "manifest_version": 2,
+  "description": "TVGazers.com chrome extension. The extension tries to match the current web page to the tv listing.",
+  "browser_action": {
+    "default_title": "TV Gazers",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.netflix.com/*"],
+      "js": ["js/matcher.bundle.js"]
+    }
+  ],
+  "permissions": [ "contextMenus", "tabs", "storage", "https://www.tvgazers.com/*" ],
+  "content_security_policy": "default-src 'self'; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src https://api.tvgazers.com https://api.themoviedb.org; style-src * 'unsafe-inline'; img-src 'self' http://image.tmdb.org data:;"
+}

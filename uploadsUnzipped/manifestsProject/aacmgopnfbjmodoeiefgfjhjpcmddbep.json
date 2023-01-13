@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "",
+   "background": {
+      "scripts": [ "jquery.js", "settings.js", "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "content.css" ],
+      "js": [ "jquery.js", "settings.js", "common.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'unsafe-eval' 'self'; object-src 'self'",
+   "description": "",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "48": "icons/48.png"
+   },
+   "manifest_version": 2,
+   "name": "翻译a",
+   "permissions": [ "http://*/", "https://*/", "storage" ],
+   "version": "0.5.0",
+   "web_accessible_resources": [ "throbber_small.svg" ]
+}

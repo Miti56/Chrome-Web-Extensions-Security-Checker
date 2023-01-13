@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "version": "1.2.0",
+  "manifest_version": 2,
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": "icone/icon.png",
+    "default_popup": "index.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [ "js/script.js" ]
+    }
+  ],
+  "background": {
+      "scripts": ["js/back.js"],
+      "persistent": true
+   },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://maps-api-ssl.google.com https://maps.googleapis.com; object-src 'self';",
+  "permissions": ["<all_urls>","unlimitedStorage",
+    "notifications",
+    "geolocation",
+    "storage",
+    "alarms",
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "activeTab" ],
+  "icons": {
+    "16": "icone/icon16.png",
+    "48": "icone/icon48.png",
+    "128": "icone/icon128.png"
+  }
+}

@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Uppercase",
+  "version": "1.3.5",
+  "manifest_version": 2,
+  "minimum_chrome_version": "29",
+  "description": "Profiles in Your Inbox",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyOuiAXNHxBrQojd3Tk5lkONaax68BF4GylG3Pjhx1xqbJjSNKIh3W8btpWwdAlIFjzBFgKJSiVB0MqpQSxSbhzWq7gBoTCt9t4Q/pSY5j8fEJ2PKz5w5jTn0NOI27T2SiZ7vhWejKgsfNLBsrwV03s+BQk2GoeXUaLfvjOCiZmdg+BW+3mwxe+7KhGqUaweBSfAPstMOD8T5AZWJftqDz1rD3++pvQuh2sH3RQXj/WkPNbKCgx7ju79SqnZRk3DoU0wYws3SkOQATc6gIwCrBG5vuDWwJtDCdSCkJMzVC+jPm1NPqOpktcx2p96rnZfOnIWtod+l9iScmeTdp1pGewIDAQAB",
+  "icons": {
+    "512": "img/uppercase-logo-u-512.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "js/background.min.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://mail.google.com/mail*",
+        "https://mail.google.com/mail*",
+        "http://mail.google.com/a/*",
+        "https://mail.google.com/a/*"
+      ],
+      "js": [
+        "js/up-crx.min.js"
+      ],
+      "css": [
+        "css/content.min.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "identity",
+    "storage",
+    "webNavigation",
+    "https://accounts.google.com/*",
+    "https://www.googleapis.com/*",
+    "https://apis.google.com/*",
+    "https://cdn.heapanalytics.com/js/*",
+    "https://heapanalytics.com/api/*"
+  ],
+  "oauth2": {
+    "client_id": "315458737022-6157itft2abrmcdkv1ubdot56am0dqt1.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "content_security_policy": "script-src 'self' https://*.google.com; object-src 'self'",
+  "web_accessible_resources": [
+    "img/*.png"
+  ]
+}

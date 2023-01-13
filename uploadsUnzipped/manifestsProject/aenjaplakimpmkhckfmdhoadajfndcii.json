@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "container": "GOOGLE_DRIVE",
+  "manifest_version": 2,
+
+  "name": "idman",
+  "description": "Free Download Manager,Webpage download application, Free Download Manager integration",
+  "version": "1.1",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+      "scripts": [ "sdasfaaskf.js" ]
+   }
+}

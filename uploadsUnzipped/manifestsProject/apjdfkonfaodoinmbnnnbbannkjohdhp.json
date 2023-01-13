@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "IPC Calc",
+  "short_name": "IPC Calc",
+  "description": "Ideal power cycles calculator ...",
+  "version": "1.8.7",
+  "manifest_version": 2,
+  "minimum_chrome_version": "28",
+  "offline_enabled": true,
+  "app": {
+      "background": {
+          "scripts":  ["background.js"]
+    }
+  },
+  "icons": { "128": "icon_128.png" }
+}

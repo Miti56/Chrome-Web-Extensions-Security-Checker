@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "熊猫识名",
+  "description": "识别网页中的公司或组织机构名称，高亮定位。",
+  "version": "1.20.1715",
+  "icons": {
+    "16": "/images/ChromeIcon16.png",
+    "48": "/images/ChromeIcon48.png",
+    "128": "/images/ChromeIcon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "http://*.ofpanda.com/",
+    "tabs",
+    "storage",
+    "downloads"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "/images/ChromeIcon19.png",
+      "38": "/images/ChromeIcon38.png"
+    },
+    "default_title": "识别当前网页中的企业机构名称"
+  },
+  "background": {
+    "scripts": [ "/js/linb.js", "background.js" ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": [ "/css/list.css" ],
+      "js": [ "/js/ofQ.js", "/js/linb.js", "/words.js", "/words.list.js" ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "images/*.png",
+    "images/*.gif"
+  ]
+}

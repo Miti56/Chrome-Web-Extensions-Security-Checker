@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Show CSS",
+  "description": "Shows the CSS of web page elements",
+  "version": "0.1",
+  "browser_action": {
+   "default_icon": "icon16.png",
+   "default_popup": "popup.html"
+  },
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "background": {
+    "scripts": ["public/js/jquery.js","public/js/jquery.min.js","public/js/dropbox.js","public/js/dropbox.min.js", "background.js"]
+  },
+   "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["public/js/jquery.min.js","popup.js"],
+      "css" : ["public/css/jquery.webui-popover.css"]
+    }
+  ],
+  "web_accessible_resources": [],
+   
+  "permissions": [
+  "*://*/*",
+   "activeTab",
+   "unlimitedStorage",
+    "storage" 
+   ]
+   
+}

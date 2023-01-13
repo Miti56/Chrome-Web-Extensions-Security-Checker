@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Interactivos Secundaria 2",
+    "version": "2.6",
+    "manifest_version": 2,
+    "minimum_chrome_version": "50",
+    "app": {
+        "background": {
+            "scripts": ["js/go/main.js"]
+        }
+    }, 
+    "permissions": [
+        "identity", 
+        "identity.email",
+        "app.window.fullscreen.overrideEsc",
+        "https://accounts.google.com/*",
+        "https://www.googleapis.com/*",
+        "http://oficinamx.com/digital/*",
+        "https://packgoogle-pro.s3.amazonaws.com/*",
+        "http://www.profesoresenred.com.mx/*",
+        "http://www.frontendmx.com/*",
+        "webview",
+        "app.window.fullscreen"
+    ],
+    "icons": {
+        "16": "img/logoSmall-16.png",
+        "128": "img/logoBig-128.png"
+    }
+}

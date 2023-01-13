@@ -1,0 +1,25 @@
+{
+   "browser_action": {
+      "default_icon": "32.png",
+      "default_popup": "popup.html",
+      "default_title": "Fix a spelling mistake"
+   },
+   "content_scripts": [ {
+      "js": [ "replace.js" ],
+      "matches": [ "http://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Fix spelling mistakes on any web page",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "32": "32.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "Spellify",
+   "permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
+   "short_name": "Spellify",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1.251"
+}

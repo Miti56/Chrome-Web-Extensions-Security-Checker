@@ -1,0 +1,11 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "WMAraci Son Eklenen Konular",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "WMAraci.com Forumuna eklenen son konularin mini eklentisi.",
+  "browser_action": {
+    "default_icon": "button4.png",
+	"default_popup": "wmaraci.html"
+  }
+}

@@ -1,0 +1,15 @@
+{"version": "0.4.10", 
+"chrome_url_overrides": {"newtab": "newtab_index.html"},
+
+ "default_locale": "en", 
+"description": "__MSG_addinfo__", 
+"background": {"scripts": ["script.js"]},
+
+ "icons": {"128": "128-pics.png"},
+
+ "browser_action": {"default_icon": "128-pics.png", 
+"default_title": "Arsenal Wallpapers & New Tab"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"name": "Arsenal Wallpapers & New Tab", 
+"manifest_version": 2}

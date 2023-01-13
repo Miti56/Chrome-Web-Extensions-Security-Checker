@@ -1,0 +1,24 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"assets/tower-vs-tower.js"
+		]
+	},
+	"manifest_version": 2,
+	"version": "0.0.1",
+	"name": "__MSG_name__",
+	"icons": {
+		"48": "image/icon-48.png",
+		"128": "image/tower-vs-tower-128.png"
+	},
+	"browser_action": {
+		"default_icon": "image/icon-48.png",
+		"default_popup": "tower-vs-tower.html"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

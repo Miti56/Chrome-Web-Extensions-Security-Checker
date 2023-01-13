@@ -1,0 +1,135 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "2.0.5",
+
+    "default_locale": "en",
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+
+    "manifest_version": 2,
+    "minimum_chrome_version": "18",
+
+    "icons": {
+        "16": "content/icons/16.png",
+        "19": "content/icons/19.png",
+        "48": "content/icons/48.png",
+        "128": "content/icons/128.png"
+    },
+	"browser_action": {
+       "default_icon": {                   
+         "19": "content/icons/19.png",   
+         "48": "content/icons/48.png"    
+       },
+	   "default_popup": "pop.html" 
+    },
+    "permissions": [
+        "http://*/*", "https://*/*","geolocation","tabs","topSites","webNavigation"
+    ],
+	"background": { "page" : "background.html" },
+	"web_accessible_resources": [
+        "message.html"
+    ],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://d31qbv1cthcecs.cloudfront.net https://d5nxst8fruw4z.cloudfront.net; object-src 'self'",
+	"content_scripts": [
+        {
+          "matches": ["http://*/*","https://*/*"],
+		  "run_at":"document_start",
+          "js": ["scripts/jquery-1.7.2.min.js", "scripts/client.js"]
+        },
+        {
+            "js": ["scripts/pages/facebook.js"],
+            "css": ["content/weather.css", "content/facebook.css"],
+            "matches": ["http://*.facebook.com/*","https://*.facebook.com/*"]
+        }, 
+		{
+            "js": ["scripts/pages/bing.js"],
+            "css": ["content/weather.css", "content/bing.css"],
+            "matches": ["*://*.bing.com/*"]
+        },
+		{
+            "js": ["scripts/pages/youtube.js"],
+            "css": ["content/weather.css", "content/youtube.css"],
+            "matches": ["*://*.youtube.com/*"]
+        },
+		{
+            "js": ["scripts/pages/googleplus.js"],
+            "css": ["content/weather.css", "content/googleplus.css"],
+            "matches": ["http://plus.google.com/*","https://plus.google.com/*"]
+        },
+		{
+            "js": ["scripts/pages/google.js"],
+            "css": ["content/weather.css", "content/googleplus.css"],
+            "matches": [ "*://*.google.com/*", "*://*.google.ac/*", "*://*.google.ad/*", "*://*.google.com.af/*", "*://*.google.com.ag/*", "*://*.google.com.ai/*", "*://*.google.am/*", "*://*.google.it.ao/*", "*://*.google.com.ar/*", "*://*.google.as/*", "*://*.google.at/*", "*://*.google.com.au/*", "*://*.google.az/*", "*://*.google.ba/*", "*://*.google.com.bd/*", "*://*.google.be/*", "*://*.google.bf/*", "*://*.google.bg/*", "*://*.google.com.bh/*", "*://*.google.bi/*", "*://*.google.bj/*", "*://*.google.com.bn/*", "*://*.google.com.bo/*", "*://*.google.com.br/*", "*://*.google.bs/*", "*://*.google.co.bw/*", "*://*.google.com.by/*", "*://*.google.by/*", "*://*.google.com.bz/*", "*://*.google.ca/*", "*://*.google.com.kh/*", "*://*.google.cc/*", "*://*.google.cd/*", "*://*.google.cf/*", "*://*.google.cat/*", "*://*.google.cg/*", "*://*.google.ch/*", "*://*.google.ci/*", "*://*.google.co.ck/*", "*://*.google.cl/*", "*://*.google.cm/*", "*://*.google.cn/*", "*://*.g.cn/*", "*://*.google.com.co/*", "*://*.google.co.cr/*", "*://*.google.com.cu/*", "*://*.google.cv/*", "*://*.google.com.cy/*", "*://*.google.cz/*", "*://*.google.de/*", "*://*.google.dj/*", "*://*.google.dk/*", "*://*.google.dm/*", "*://*.google.com.do/*", "*://*.google.dz/*", "*://*.google.com.ec/*", "*://*.google.ee/*", "*://*.google.com.eg/*", "*://*.google.es/*", "*://*.google.com.et/*", "*://*.google.fi/*", "*://*.google.com.fj/*", "*://*.google.fm/*", "*://*.google.fr/*", "*://*.google.ga/*", "*://*.google.gd/*", "*://*.google.ge/*", "*://*.google.gf/*", "*://*.google.gg/*", "*://*.google.com.gh/*", "*://*.google.com.gi/*", "*://*.google.gl/*", "*://*.google.gm/*", "*://*.google.gp/*", "*://*.google.gr/*", "*://*.google.com.gt/*", "*://*.google.gy/*", "*://*.google.com.hk/*", "*://*.google.hn/*", "*://*.google.hr/*", "*://*.google.ht/*", "*://*.google.hu/*", "*://*.google.co.id/*", "*://*.google.iq/*", "*://*.google.ie/*", "*://*.google.co.il/*", "*://*.google.im/*", "*://*.google.co.in/*", "*://*.google.io/*", "*://*.google.is/*", "*://*.google.it/*", "*://*.google.je/*", "*://*.google.com.jm/*", "*://*.google.jo/*", "*://*.google.co.jp/*", "*://*.google.co.ke/*", "*://*.google.com.kh/*", "*://*.google.ki/*", "*://*.google.kg/*", "*://*.google.co.kr/*", "*://*.google.com.kw/*", "*://*.google.kz/*", "*://*.google.la/*", "*://*.google.com.lb/*", "*://*.google.com.lc/*", "*://*.google.li/*", "*://*.google.lk/*", "*://*.google.co.ls/*", "*://*.google.lt/*", "*://*.google.lu/*", "*://*.google.lv/*", "*://*.google.com.ly/*", "*://*.google.co.ma/*", "*://*.google.md/*", "*://*.google.me/*", "*://*.google.mg/*", "*://*.google.mk/*", "*://*.google.ml/*", "*://*.google.mn/*", "*://*.google.ms/*", "*://*.google.com.mt/*", "*://*.google.mu/*", "*://*.google.mv/*", "*://*.google.mw/*", "*://*.google.com.mx/*", "*://*.google.com.my/*", "*://*.google.co.mz/*", "*://*.google.com.na/*", "*://*.google.ne/*", "*://*.google.com.nf/*", "*://*.google.com.ng/*", "*://*.google.com.ni/*", "*://*.google.nl/*", "*://*.google.no/*", "*://*.google.com.np/*", "*://*.google.nr/*", "*://*.google.nu/*", "*://*.google.co.nz/*", "*://*.google.com.om/*", "*://*.google.com.pa/*", "*://*.google.com.pe/*", "*://*.google.com.ph/*", "*://*.google.com.pk/*", "*://*.google.pl/*", "*://*.google.pn/*", "*://*.google.com.pr/*", "*://*.google.ps/*", "*://*.google.pt/*", "*://*.google.com.py/*", "*://*.google.com.qa/*", "*://*.google.ro/*", "*://*.google.rs/*", "*://*.google.ru/*", "*://*.google.rw/*", "*://*.google.com.sa/*", "*://*.google.com.sb/*", "*://*.google.sc/*", "*://*.google.se/*", "*://*.google.com.sg/*", "*://*.google.sh/*", "*://*.google.si/*", "*://*.google.sk/*", "*://*.google.com.sl/*", "*://*.google.sn/*", "*://*.google.sm/*", "*://*.google.so/*", "*://*.google.st/*", "*://*.google.com.sv/*", "*://*.google.td/*", "*://*.google.tg/*", "*://*.google.co.th/*", "*://*.google.com.tj/*", "*://*.google.tk/*", "*://*.google.tl/*", "*://*.google.tm/*", "*://*.google.to/*", "*://*.google.com.tn/*", "*://*.google.com.tr/*", "*://*.google.tt/*", "*://*.google.com.tw/*", "*://*.google.co.tz/*", "*://*.google.com.ua/*", "*://*.google.ua/*", "*://*.google.co.ug/*", "*://*.google.ae/*", "*://*.google.co.uk/*", "*://*.google.us/*", "*://*.google.com.uy/*", "*://*.google.co.uz/*", "*://*.google.com.vc/*", "*://*.google.co.ve/*", "*://*.google.vg/*", "*://*.google.co.vi/*", "*://*.google.com.vn/*", "*://*.google.vn/*", "*://*.google.vu/*", "*://*.google.ws/*", "*://*.google.co.za/*", "*://*.google.co.zm/*", "*://*.google.co.zw/*" ]
+        },
+        {
+            "js": ["scripts/pages/twitter.js"],
+            "css": ["content/weather.css", "content/twitter.css"],
+            "matches": ["http://*.twitter.com/*","https://*.twitter.com/*"]
+        },
+        {
+            "js": ["scripts/pages/linkedin.js"],
+            "css": ["content/weather.css", "content/linkedin.css"],
+            "matches": ["http://*.linkedin.com/*","https://*.linkedin.com/*"]
+        },
+        {
+            "js": ["scripts/pages/flickr.js"],
+            "css": ["content/weather.css", "content/flickr.css"],
+            "matches": ["http://*.flickr.com/*","https://*.flickr.com/*"]
+        },
+        {
+            "js": ["scripts/pages/tencent.js"],
+            "css": ["content/weather.css", "content/tencent.css"],
+            "matches": ["http://t.qq.com/*","http://1.t.qq.com/*"]
+        },
+        {
+            "js": ["scripts/pages/163.js"],
+            "css": ["content/weather.css"],
+            "matches": ["http://*.163.com/*"]
+        },
+        {
+            "js": ["scripts/pages/youku.js"],
+            "css": ["content/weather.css"],
+			"run_at":"document_start",
+            "matches": ["http://*.youku.com/*"]
+        },
+        {
+            "js": ["scripts/pages/ku6.js"],
+            "css": ["content/weather.css"],
+            "matches": ["http://*.ku6.com/*"]
+        },
+        {
+            "js": ["scripts/pages/qqnews.js"],
+            "css": ["content/weather.css"],
+            "matches": ["http://news.qq.com/*","http://www.qq.com/*"]
+        },
+        {
+            "js": ["scripts/pages/ifeng.js"],
+            "css": ["content/weather.css"],
+		    "run_at":"document_start",
+            "matches": ["http://news.ifeng.com/*","http://www.ifeng.com/"]
+        },
+        {
+            "js": ["scripts/pages/weibo.js"],
+            "css": ["content/weather.css"],
+            "matches": ["http://weibo.com/*"]
+        },
+        {
+            "js": ["scripts/pages/sogou.js"],
+            "css": ["content/weather.css"],
+            "matches": ["http://www.sogou.com/*"]
+        },
+        {
+            "js": ["scripts/pages/soso.js"],
+            "css": ["content/weather.css"],
+			"run_at":"document_start",
+            "matches": ["http://www.soso.com/*"]
+        },
+        {
+            "js": ["scripts/pages/baidu.js"],
+            "css": ["content/weather.css"],
+			"run_at":"document_start",
+            "matches": ["http://www.baidu.com/*"]
+        }
+    ]
+}

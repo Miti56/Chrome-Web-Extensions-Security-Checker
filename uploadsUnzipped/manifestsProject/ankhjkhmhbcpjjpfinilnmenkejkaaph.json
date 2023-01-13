@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Cool tree new tab",
+  "description": "Open your new tab page with the taghua.com tree generator",
+  "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "*://*/*"
+  ],
+  "chrome_url_overrides": {
+   "newtab" : "NT.html"
+  }
+}

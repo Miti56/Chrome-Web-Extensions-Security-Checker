@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "京东助手",
+    "description": "京东助手",
+    "icons": { "128": "logo.png" },
+    "version": "1.0.4",
+    "background": { "page": "bg.html" },
+
+    "browser_action": {
+        "name": "点击运行"
+    },
+    "content_scripts": [{  
+        "run_at":"document_end",      
+        "js": ["loader.js"],
+        "matches": ["https://jd.51youquan.com/"]
+    },{
+        "all_frames": true,
+        "css": ["sweetalert2.min.css", "css/plus.css"],
+        "js": ["jquery.js", "sweetalert2.min.js", "plus.js"],
+        "matches": ["https://search.jd.com/*", "http://search.jd.com/*", "https://search.jd.hk/*", "http://search.jd.hk/*"]
+    }, {
+        "all_frames": true,
+        "css": ["sweetalert2.min.css", "css/plus2.css"],
+        "js": ["jquery.js", "sweetalert2.min.js", "plus2.js"],
+        "matches": ["*://item.jd.com/*", "*://item.jd.hk/*"]
+    }, {
+        "all_frames": true,
+        "css": ["sweetalert2.min.css", "css/plus2.css"],
+        "js": ["jquery.js", "sweetalert2.min.js", "plus3.js"],
+        "matches": ["https://list.jd.com/*", "http://list.jd.com/*"]
+    }
+    ],
+    "homepage_url": "https://jd.51youquan.com",
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; frame-src https://m.360buyimg.com https://dr.jd.com https://yifus.win  https://jd.51youquan.com",
+    "permissions": [
+        "tabs", "*://*/*","webRequest","webRequestBlocking"
+    ]
+    
+    
+}

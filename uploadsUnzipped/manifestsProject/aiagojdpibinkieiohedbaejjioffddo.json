@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "The city Games",
+ "manifest_version": 2,
+ "short_name": "THE CITY GAMES",
+ "description": "Play New city life stile games!",
+ "version": "1.1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1491720790_Games_1.ico"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

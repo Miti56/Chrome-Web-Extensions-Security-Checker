@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "content.js" ],
+      "matches": [  "\u003Call_urls>", "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   }],
+   "browser_action": {
+      "default_icon": {
+         "19": "icon19.png",
+         "38": "icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Load Master"
+   },
+   
+   "description": "You personal Yoda for downloads",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "offline_enabled": true,
+   "manifest_version": 2,
+   "name": "LoadMaster",
+   "short_name" : "LoadMaster",
+   "optional_permissions": [ "management" ],
+   "permissions": [ "tabs", "activeTab", "*://*/*", "downloads", "downloads.open", "downloads.shelf", "storage", "notifications", "\u003Call_urls>", "webRequest", "webRequestBlocking" ],
+  "web_accessible_resources": [ "icons/startd.png","icons/startdr.png"],
+   "version": "1.0.0"
+}

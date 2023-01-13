@@ -1,0 +1,16 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Морской бой",
+  "version": "1",
+  "icons": { "128": "128.png" },
+  "app": {
+    "urls": [
+      "http://minigames.mail.ru/morskoy_boy"
+    ],
+    "launch": {
+      "web_url": "http://minigames.mail.ru/morskoy_boy"
+    }
+  },
+  "permissions": ["notifications"],
+  "manifest_version": 2
+}

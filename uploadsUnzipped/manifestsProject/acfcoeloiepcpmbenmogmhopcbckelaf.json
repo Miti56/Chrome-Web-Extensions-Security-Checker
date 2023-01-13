@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Blue Planet Prank Radio",
+  "description": "The world's largest streaming archive of phone and Internet pranks!",
+  "version": "1.0.0.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "*://www.blueplanetprankradio.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.blueplanetprankradio.com/"
+    }
+  },
+  "icons": {
+    "128": "bpprbutton128x128.png"
+  }  
+}

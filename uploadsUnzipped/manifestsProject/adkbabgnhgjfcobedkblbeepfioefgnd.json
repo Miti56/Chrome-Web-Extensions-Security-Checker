@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "StuffDOT",
+  "version": "6.1.10",
+  "manifest_version": 2,
+  "description": "The StuffDOT button finds deals on the stuff you love.",
+  "homepage_url": "https://stuffdot.com",
+  "author": "StuffDOT",
+  "icons": {
+    "16": "images/16x16_orange.png",
+    "18": "images/18x18_orange.png",
+    "24": "images/24x24_orange.png",
+    "48": "images/128x128_orange.png",
+    "128": "images/128x128_orange.png"
+  },
+  "permissions": [
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webNavigation",
+    "contextMenus",
+    "storage",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "24": "images/24x24_grey.png",
+      "48": "images/128x128_grey.png",
+      "128": "images/128x128_grey.png"
+    },
+    "default_title": "StuffDOT"
+  },
+  "options_ui": {
+    "chrome_style": false,
+    "page": "options.html"
+  },
+  "background": {
+    "scripts": [
+      "scripts/background_bundle.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "styles/main.css"
+      ],
+      "js": [
+        "scripts/content_bundle.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "images/*.png",
+    "styles/*.css"
+  ]
+}

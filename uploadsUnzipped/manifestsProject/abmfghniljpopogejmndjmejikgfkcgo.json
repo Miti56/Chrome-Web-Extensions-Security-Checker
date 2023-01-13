@@ -1,0 +1,27 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Paukd",
+	"description": "Paukd ist eine moderne Lern-App mit dem du einfach und effektiv lernen kannst.",
+	"version": "1.17",
+	"manifest_version": 2,
+	"app": {
+		"urls": [
+			"*://paukd.com/"
+		],
+		"launch": {
+			"web_url": "https://paukd.com/",
+			"container": "tab"
+		}
+	},
+	"icons": {
+		"128": "icon_128.png"
+	},
+	"minimum_chrome_version": "20.0",
+	"offline_enabled": false,
+	"permissions": [
+		"unlimitedStorage",
+		"notifications",
+		"clipboardRead",
+		"clipboardWrite"
+	]
+}

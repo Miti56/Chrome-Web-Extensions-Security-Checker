@@ -1,0 +1,11 @@
+{"background": {"scripts": ["javas.js"]},
+ "version": "1.8.3", 
+"name": "__MSG_locHead__", 
+"chrome_url_overrides": {"newtab": "main_page.html"},
+ "description": "__MSG_desc__", 
+"icons": {"128": "128-main.png"},
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"browser_action": {"default_icon": "128-main.png", 
+"default_title": "Pokemon Themes - New Tab"},
+ "manifest_version": 2, 
+"default_locale": "en"}

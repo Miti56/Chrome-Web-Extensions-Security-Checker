@@ -1,0 +1,17 @@
+{
+    "name": "SHAREit for PC - Guide",
+    "description": "SHAREit is an excellent file sharing application.", 
+    "browser_action": {
+        "icon": {
+            "128": "icon128.png"
+            }, 
+        "default_title": "Your Extension Popup Title", 
+        "default_popup": "extension.html"
+    }, 
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+    "version": "0.1"
+}
+
+

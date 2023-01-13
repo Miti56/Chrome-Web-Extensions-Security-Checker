@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Make GitHub Great Again",
+  "version": "0.0.4",
+  "icons": {
+    "128": "icon-grey.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "http://github.com/*",
+        "https://gist.github.com/*",
+        "http://gist.github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

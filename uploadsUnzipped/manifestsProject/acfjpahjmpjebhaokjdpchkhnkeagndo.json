@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "2.0",
+
+    "icons": {
+        "48": "icons/sokhan-48.png",
+        "96": "icons/sokhan-96.png",
+        "128": "icons/sokhan-128.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": ["lib/define.js", "lib/sokhan.js"]
+    }],
+
+    "browser_action": {
+        "default_icon": "icons/sokhan-96.png",
+        "default_title": "Sokhan",
+        "default_popup": "menu/menu.html"
+    },
+
+    "permissions": [
+        "tabs",
+        "management",
+        "storage",
+        "tts"
+    ],
+
+    "commands": {
+        "Ctrl+Right": {
+            "suggested_key": {
+                "default": "Ctrl+Right"
+            },
+            "description": "Speed up speech"
+        },
+        "Ctrl+Left": {
+            "suggested_key": {
+                "default": "Ctrl+Left"
+            },
+            "description": "Speed down speech"
+        }
+    },
+
+    "background": {
+        "scripts": ["lib/background.js"]
+    },
+
+    "minimum_chrome_version": "45.0"
+}

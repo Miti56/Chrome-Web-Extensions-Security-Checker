@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "favicon_16.png"
+   },
+   "description": "BeeMP3 is one of the most popular mp3 search services on the web.",
+   "icons": {
+      "128": "favicon_128.png",
+      "16": "favicon_16.png",
+      "48": "favicon_48.png"
+   },
+   "manifest_version": 2,
+   "name": "BeeMP3 - Free MP3 Download",
+   "permissions": [ "tabs", "*://*.convert2mp3.cc/" ],
+   "version": "1.0.0"
+}

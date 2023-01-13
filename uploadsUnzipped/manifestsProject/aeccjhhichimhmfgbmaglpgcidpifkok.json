@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "cir",
+  "version": "1.1",
+  "description": "Shows IMDB ratings",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.blitz-cinestar.hr/*"
+      ],
+      "js": [
+        "./index.js"
+      ],
+      "css": [
+        "./index.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "<all_urls>"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.1.2",
+  "manifest_version": 2,
+  "short_name": "noeval",
+  "permissions": ["storage"],
+  "name": "NoEval - Disable Eval()",
+  "background": {"page": "lib/chrome/background.html"},
+  "homepage_url": "https://mybrowseraddon.com/noeval.html",
+  "description": "Disable window.eval() in all websites and improve your online security!",
+  "browser_action": {
+    "default_popup": "data/popup/popup.html",
+    "default_title": "NoEval - Disable Eval()",
+    "default_icon": {
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+    }
+  },
+  "content_scripts": [{
+    "all_frames": true,
+    "match_about_blank": true,
+    "run_at": "document_start",
+    "js": ["data/content_script/inject.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png"
+  }
+}

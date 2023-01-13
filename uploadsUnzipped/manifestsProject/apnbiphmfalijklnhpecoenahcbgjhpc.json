@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ToDo",
+  "version": "0.0.2",
+  "description": "ToDo.",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "ToDo",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "permissions": [
+    "https://todo.hackerth.com/"
+  ],
+  "manifest_version": 2
+}

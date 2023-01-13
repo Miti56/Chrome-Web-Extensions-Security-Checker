@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name":"Outlook Click2Dial",
+	"short_name": "Click2Dial",
+	"description":"Call phone numbers from Outlook Messages, Contacts and Calendars",
+	"version":"1.4",
+	"manifest_version":2,
+	"icons": {
+		"19" : "images/19x19_icon.png",
+		"32" : "images/32x32_icon.png",
+		"48" : "images/48x48_icon.png",
+		"128" : "images/128x128_icon.png"
+	},
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"page_action": {
+		"default_title": "Outlook Click2Dial",
+		"default_icon": {
+			"19" : "images/19x19_icon.png",
+			"32" : "images/32x32_icon.png",
+			"48" : "images/48x48_icon.png",
+			"128" : "images/128x128_icon.png"
+		}
+	},
+	"content_scripts": [{
+			"matches": ["https://outlook.office.com/*", "https://outlook.live.com/*", "https://outlook.office365.com/*"],
+			"css": ["libraries/jquery-ui.min.css"],
+			"js": ["libraries/jquery.js", "libraries/jquery-ui.min.js", "content.js"],
+			"all_frames": true
+		}
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"http://64.118.199.41:10680/*",
+		"https://outlook.office.com/*",
+		"https://outlook.live.com/*",
+		"https://outlook.office365.com/*",
+		"storage"
+		
+	]
+}

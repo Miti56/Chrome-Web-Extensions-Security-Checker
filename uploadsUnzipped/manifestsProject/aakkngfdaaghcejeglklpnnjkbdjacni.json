@@ -1,0 +1,13 @@
+{"name": "__MSG_extName__", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"default_locale": "en", 
+"icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "version": "2.2.9", 
+"offline_enabled": true, 
+"browser_action": {"default_icon": "icons/128.png", 
+"default_title": "Star Wars 'Rogue One' Wallpapers Themes HD"},
+ "background": {"scripts": ["background.js"]},
+ "description": "__MSG_extDesc__", 
+"chrome_url_overrides": {"newtab": "index.html"}}

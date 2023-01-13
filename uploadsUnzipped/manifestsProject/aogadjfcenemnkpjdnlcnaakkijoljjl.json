@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "FindAt - Search Everything",
+    "version": "0.0.1",
+    "description": "FindAt brings you the New Tab Extension to organize and manage the way you explore the internet",
+    "manifest_version": 2,
+    "permissions": [
+    ],
+    "web_accessible_resources": [
+        "images/*.png"
+    ],
+    "browser_action": {
+        "default_title": "New Tab",
+        "default_icon": {
+            "16": "images/icon.png",
+            "48": "images/icon.png"
+        }
+    },
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "name": "FindAt",
+            "keyword": "findat",
+            "search_url": "https://findat.net/search.php?offset=1&q={searchTerms}",
+            "favicon_url": "https://findat.net/static/img/favicon.ico",
+            "encoding": "UTF-8",
+            "is_default": true
+        }
+    },
+    "chrome_url_overrides": {
+        "newtab": "pages/newtab.html"
+    },
+    "content_security_policy": "script-src 'self' https://z-na.amazon-adsystem.com https://aax-us-east.amazon-adsystem.com; object-src 'self'",
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    }
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "1000 Tools",
+  "short_name":"1KT",
+  "description": "A website that allows people to rent tools from each other",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.1000tools.com/"
+    ],
+    "launch": {
+      "web_url": "https://www.1000tools.com/"
+    }
+  }
+}

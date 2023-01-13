@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Serviço Biométrico Benner",
+	"version": "0.6",
+	"manifest_version": 2,
+	"description": "Serviço Biométrico Benner",
+	"browser_action": {
+		"default_title": "Serviço Biométrico Benner",
+		"default_icon": "logo_16.png",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "logo_16.png",
+		"48": "logo_48.png",
+		"128": "logo_128.png"
+	},
+	"permissions": [
+		"nativeMessaging", "tabs"
+	],
+	"externally_connectable": {
+	  "matches": ["*://*.bennercloud.com.br/*", "*://*.benner.com.br/*", "*://*.unimedcuritiba.com.br/*", "*://*.medplan.com.br/*", "*://*.unimedpponline.com.br/*", "*://*.unimedextremosul.com.br/*", "*://*.unimedtatui.com.br/*", "*://*.saocristovao.com.br/*"]
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	}
+}

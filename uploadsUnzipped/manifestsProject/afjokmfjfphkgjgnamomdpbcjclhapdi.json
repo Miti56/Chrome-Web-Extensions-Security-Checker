@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"ИСП Империал - Личный кабинет",
+	"description":"Это дополнение показывает состоние учетной записи пользователя сети ИСП Империал",
+	"version":"2016.1.20.5",
+	"icons":{
+		"128":"small_logotip.png",
+		"16":"mini_logotip.png"
+	},
+	"background":{
+		"page":"popup.html"
+	},
+	"browser_action":{
+		"default_icon":"mini_logotip.png",
+		"default_popup":"popup.html",
+		"default_title":"Интернет статус"
+	},
+	"permissions":[
+		"http://imperial.net.ua/",
+		"http://my.imperial.net.ua/"
+	]
+}

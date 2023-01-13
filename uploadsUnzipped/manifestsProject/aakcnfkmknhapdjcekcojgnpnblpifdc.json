@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"author": "alienprogrammer",
+	"name": "روتگرام",
+	"version": "1.4.1",
+	"background": {
+    "scripts": ["background.js"]
+	},
+	"externally_connectable": {  
+		"matches": ["*://*.rootgram.com/*"]
+	},
+	"description":"مدیریت سرویس ها، اطلاع سریع از خطاها و محدودیت ها، دسترسی راحت تر به پنل روتگرام از ویژگی های افزونه گوگل می باشد",
+	"permissions": [ "tabs", "cookies", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*" ],  
+	"browser_action": {
+		"default_popup": "popup.html"
+	},   
+	"icons": {"16": "icon16.png","48": "icon48.png","128": "icon128.png"},
+	"manifest_version": 2
+}

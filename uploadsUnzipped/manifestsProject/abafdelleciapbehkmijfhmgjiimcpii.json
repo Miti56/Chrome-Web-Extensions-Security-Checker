@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Penguins Attack TD",
+  "description": "Penguins Attack TD - Tower Defense dans lequel vous devez résister aux assauts de pingouins armés d'avions et de chars d'assaut.",
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://harry-games.fr/play-1160-penguins-attack-td.html"
+    ],
+    "launch": {
+      "web_url": "http://harry-games.fr/play-1160-penguins-attack-td.html"
+    }
+  },
+  "icons": {
+    "128": "1160.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

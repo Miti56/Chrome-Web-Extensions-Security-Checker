@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Skateboarding Games",
+ "manifest_version": 2,
+ "short_name": "Skateboarding Games",
+ "description": "Play Skateboarding Games Now!",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1491723745_videogame_icons-06.ico"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

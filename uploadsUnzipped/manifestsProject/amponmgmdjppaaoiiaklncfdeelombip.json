@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": ["src/js/background.js", "src/js/newtab.js" ]
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://beloop.me/favicon.ico",
+         "is_default": true,
+         "keyword": "Beloop",
+         "name": "Beloop",
+         "search_url": "http://search.beloop.me/?q={searchTerms}",
+         "suggest_url": "http://search.beloop.me/?s={searchTerms}"
+      }
+   },
+   "chrome_url_overrides": {
+      "newtab": "src/newtab.html"
+   },
+   "description": "Beloop - Do Everything In Your Way",
+   "icons": {
+      "128": "icons/128.png"
+   },
+   "manifest_version": 2,
+   "name": "Beloop",
+   "permissions": [ "http://*/*", "https://*/*", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1",
+   "short_name": "Beloop"
+}

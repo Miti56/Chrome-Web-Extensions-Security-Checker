@@ -1,0 +1,20 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+
+      "default_popup": "popup.html"
+   },
+   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+   "description": "bulbik to FLowner",
+   "content_scripts": [ {
+      "js": [ "test.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+    "manifest_version": 2,
+   "name": "FLownera",
+   "permissions": [ "\u003Call_urls>", "tabs", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.10.19.0"
+}

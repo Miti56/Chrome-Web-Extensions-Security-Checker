@@ -1,0 +1,16 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "JMX Enhancer | Auto-Correlation for JMeter",
+	"description": "JMX Enhancer Solutions for JMeter Test Plans. JCorrelate - JLog - JBasic - JPort - JCalculus",
+	"version": "4.3",
+	"short_name": "JMX Enhancer",  
+  	"browser_action": {
+    	"default_icon": "icon.png",
+    	"default_popup": "home.html"
+  	},
+	  "permissions": [
+	"storage",
+	"https://*.jmxenhancer.com/"
+	]
+}

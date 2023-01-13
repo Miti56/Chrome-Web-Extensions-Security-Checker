@@ -1,0 +1,31 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name":"王宇的插件",
+  "version":"1.0",
+  "manifest_version":2,
+  "description":"这是第一个chrome插件",
+  "permissions":[
+    "tabs","http://*/*","https://*/*",
+    "notifications",
+    "debugger"
+  ],
+  "browser_action":{
+    "default_title":"set the page's color.",
+    "default_icon":"icon.png"
+  },
+  "content_scripts":[{
+    "matches":["http://*/*"],
+    "js":["js/zepto.min.js","content_scripts/content_script.js"],
+    "css":["content_scripts/cs.css","css/global.css"]
+  }],
+  "web_accessible_resources":[
+    "images/smile.gif",
+    "content_scripts/sprite.gif",
+    "content_scripts/sprite.png",
+    "interface.html"
+  ],
+  "background":{
+    "scripts":["background.js"]
+  },
+  "options_page":"options.html"
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"QRC-URL",
+"description":"Cette extension génère un QR-code de l'adresse du site en cours.",
+"version":"1.0",
+"manifest_version":2,
+"browser_action": {
+    "icons": ["img/icon.png"],
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+"permissions": ["tabs",
+    "<all_urls>","webRequest","webRequestBlocking"],
+
+"icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+"content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["jquery-1.12.3.min.js","popup.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

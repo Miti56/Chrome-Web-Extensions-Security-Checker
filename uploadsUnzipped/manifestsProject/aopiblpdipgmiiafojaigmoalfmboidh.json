@@ -1,0 +1,80 @@
+{
+    "name": "TecMundo Descontos",
+    "description": "O TecMundo Descontos ajuda voc\u00ea a pesquisar pre\u00e7os e buscar cupons de forma autom\u00e1tica em suas lojas favoritas.",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoxOHUBxt\/dYYjJU2+ODTVnztiwwTovu0jtTw4G+GgKSkHGBViMt901d5JiA1rC+18xxT2WWIv3CUfZxtQw8eFuekw7QmQ5\/uNgpICUzJ+nF+Xka1ByiQRXNTl5uGuT7DPXGGmYezA0hwesno3qNdDaXLgSVXbbp+PNbOEH9RQ5C5kDRxloVnn1523hmhUl3qlwcvBVdIfVoTYvHQu7vkHmWIPPUjgKaJ9iLw3uIBeFGkEieTex2dfZ4Uxlj9PIg4IIsz3IlamTZQ2OiA0DXqxNfW\/mOXE5ysPJiSBx++P5sOf9+ZRtYQVxUNiQl6trj3KHCmKOgv2znSM2Ey4inh9wIDAQAB",
+    "version": "3.0.1",
+    "background": {
+        "scripts": [
+            "js\/jquery-3.3.1.min.js",
+            "js\/jszip-utils.min.js",
+            "js\/jszip.min.js",
+            "js\/getter.js",
+            "js\/background.js",
+            "js\/localstorage.js",
+            "modules_push\/clusterws.min.js",
+            "modules_push\/push_background.js",
+            "modules_blocking\/blocking_background.js",
+            "js\/background_avisocupons.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "css": [
+                "css\/ribbon.css",
+                "css\/testador-cupom.css",
+                "css\/comp-agressiva.css",
+                "css\/avisocupons.css",
+                "css\/push.css"
+            ],
+            "js": [
+                "js\/jquery-3.3.1.min.js",
+                "js\/jquery-ui.min.js",
+                "js\/misc.js",
+                "js\/xregexp-all.js",
+                "js\/base64.js",
+                "js\/debug.js",
+                "js\/custom_events.js",
+                "js\/myscript.js",
+                "js\/custom_aliexpress.js",
+                "js\/custom_fastshop.js",
+                "js\/localstorage.js",
+                "js\/autocupom_custom.js",
+                "js\/autocupom.js",
+                "js\/content_avisocupons.js",
+                "js\/comp-agressiva.js",
+                "modules_push\/push_content.js"
+            ],
+            "matches": [
+                "https:\/\/*\/*",
+                "http:\/\/*\/*"
+            ]
+        }
+    ],
+    "icons": {
+        "128": "icon_128.png",
+        "16": "icon_16.png",
+        "48": "icon_48.png"
+    },
+    "browser_action": {
+        "default_popup": "tpl\/popup.html"
+    },
+    "manifest_version": 2,
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "http:\/\/*\/*",
+        "https:\/\/*\/*"
+    ],
+    "update_url": "https:\/\/clients2.google.com\/service\/update2\/crx",
+    "web_accessible_resources": [
+        "js\/jquery-3.3.1.min.js",
+        "tpl\/*",
+        "lay\/*",
+        "css\/*",
+        "js\/jsextension.js",
+        "js\/xmlrequest.js"
+    ],
+    "author": "Baixou.com",
+    "options_page": "tpl\/options.html"
+}

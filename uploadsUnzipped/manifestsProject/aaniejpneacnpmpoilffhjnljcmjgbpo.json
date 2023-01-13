@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": ["processor.js","background.js"],
+    "persistent": true
+  },
+  "name": "BNB Ticker",
+  "short_name":"BNB Ticker",
+  "description": "This extension Shows BNB coin in USD price.",
+  "version": "1.0.2",
+  "icons": { "128": "binance-coin-bnb-logo_128x128.png" },
+  "options_page": "options.html",
+  "permissions": [
+    "https://api.binance.com/*","activeTab","storage"
+  ],
+  "browser_action": {
+    "default_title": "BNB Ticker",
+    "default_icon": "binance-coin-bnb-logo_128x128.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SocialZ",
+  "description": "Real-Time Social Data Visualisation.",
+  "version": "0.0.5.1",
+  "manifest_version": 2,
+
+  "author": {
+    "name": "SocialZ",
+    "email": "socialzsupport@buzzradar.com"
+  },
+
+  "permissions":[
+
+    "storage",
+    "fullscreen",
+    "browser",
+    "webview",
+
+    "http://crow.buzzradar.com/",
+    "http://omao.buzzradar.com/",
+    "http://insights.buzzradar.com/",
+    "http://ipe.buzzradar.com/",
+    "http://tea.buzzradar.com/",
+    "http://0c8eed0b95e8001351c1-cc7a500d9b10d65e67a8ddf30b9c21f5.r33.cf3.rackcdn.com/",
+
+    "https://abs.twimg.com/",
+    "http://pbs.twimg.com/",
+
+    "https://www.youtube.com/iframe_api"
+
+  ],
+
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+
+  "minimum_chrome_version": "51",
+
+  "icons": { "16": "SocialZicon_16.png", "48": "SocialZicon_48.png", "128": "SocialZicon_128.png" },
+
+  "kiosk_enabled": true,
+  "offline_enabled": true
+
+}

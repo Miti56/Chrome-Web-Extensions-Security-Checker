@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Gmail\u2122 on Rails",
+  "version": "2.3",
+  "manifest_version": 2,
+  "description": "Command Line for your Inbox.",
+  "icons": {
+    "48": "images/gmail_on_rails_48.png",
+    "128": "images/gmail_on_rails_128.png"
+  },
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "https://mail.google.com/"
+  ],
+  "web_accessible_resources": [
+    "js/*",
+    "html/*",
+    "css/*",
+    "images/*",
+    "bower_components/*",
+    "css/autocomplete.css"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": [
+        "js/jquery_and_dominit.js",
+        "js/lib/require.js",
+        "js/requireContent.js",
+        "js/requireConfig.js",
+        "js/content.js"
+      ],
+      "css": [
+        "css/gmail-search.css",
+        "bower_components/jqueryui/themes/smoothness/jquery-ui.min.css"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

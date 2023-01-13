@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "I Want More Toys!",
+    "description": "Instantly see cool new toys, gifts, and products anytime you open a new tab!",
+    "version": "1.0",
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "chrome_url_overrides" : {
+        "newtab": "chrome_extension_iwantmoretoys.html"
+    },
+    "icons": {  "16": "icon16.png",
+                "48": "icon48.png",
+                "128": "icon128.png" 
+    },
+    "permissions": [
+        "http://www.iwantmoretoys.com/"
+    ]
+}

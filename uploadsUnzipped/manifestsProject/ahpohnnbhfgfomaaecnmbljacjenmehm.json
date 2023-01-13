@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": " GTA Strategy V Games Free",
+"version": "4.2",
+"description": "Gta V free game gta 5 game",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "gta V free and online pc game",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

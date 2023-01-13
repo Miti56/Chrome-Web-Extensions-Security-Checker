@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Moncton Flight College - Talon Mods",
+    "version": "1.2",
+    "description": "This extension helps to modify Talon's Ops Graphical view for better readability and added features.",
+    "manifest_version": 2,
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+          "matches": [
+            "https://apps5.talonsystems.com/*"
+          ],
+          "css":["css/talon.css"],
+          "js": ["js/font-awesome.js","js/jquery.js","js/talon.js","js/options.js"]
+        }
+    ],
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/img16.png",
+            "32": "images/img32.png",
+            "48": "images/img48.png",
+            "128": "images/img128.png"
+        }
+    },
+    "icons": {
+        "16": "images/img16.png",
+        "32": "images/img32.png",
+        "48": "images/img48.png",
+        "128": "images/img128.png"
+    },
+    "web_accessible_resources": ["images/*.png","images/*.gif"]
+}

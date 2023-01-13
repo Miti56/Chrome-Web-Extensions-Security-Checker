@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "manifest_version"      :       2,
+        "background": {
+                "page" : "background.html"
+        },
+        "default_locale": "en",
+        "description": "__MSG_description__",
+        "icons": {
+                "128": "images/install_logo.png",
+                "48": "images/extension_logo.png"
+        },
+        "name": "__MSG_name__",
+        "permissions": [ "tabs", "http://*/" ],
+        "version": "1.2.6"
+}

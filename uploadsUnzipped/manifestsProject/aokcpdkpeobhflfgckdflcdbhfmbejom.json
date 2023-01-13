@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Auto MMU Wifi Login",
+  "description": "Auto login when on the MMU wifi",
+  "version": "0.0.5",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "promo/icon-16.png",
+	     "48": "promo/icon-48.png",
+             "128": "promo/icon-128.png" },
+  "permissions": [
+    "https://wifi.mmu.edu.my/login.html",
+    "storage"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Gävle Energi",
+  "version": "0.0.0.5",
+  "description": "Senaste driftinformationen och nyheterna direkt i din webbläsare.",
+  	"browser_action": {
+    	"default_icon": "icon128.png",
+		"default_popup": "index.html",
+		"default_title": "Senaste driftinformationen och nyheterna direkt i din webbläsare."
+  	},	
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "homepage_url": "https://www.gavleenergi.se",
+  "permissions": [
+    "https://functions.janjoo.se/*",
+    "https://extfunktioner.gavleenergi.se/*",
+	"https://fonts.googleapis.com/*"
+  ]
+}

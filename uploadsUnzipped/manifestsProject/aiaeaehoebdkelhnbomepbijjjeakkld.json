@@ -1,0 +1,94 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Seek 'n Play for YouTube™",
+	"description": "__MSG_appDescription__",
+	"version": "2.4.2",
+	"homepage_url": "https://chrome.google.com/webstore/detail/aiaeaehoebdkelhnbomepbijjjeakkld/",
+	"short_name": "Seek 'n Play",
+	"icons": {
+		"16": "img/icon.16.png",
+		"48": "img/icon.48.png",
+		"128": "img/icon.128.png"
+	},
+	"options_ui": {
+		"page": "html/options.html",
+		"chrome_style": true
+	},
+	"permissions": [
+		"notifications",
+		"webRequest",
+		"*://*.ytsnp.helper/*",
+		"*://*.youtube.com/*", 
+		"*://*.ytimg.com/*", 
+		"<all_urls>",
+		"webRequestBlocking",
+		"storage",
+		"activeTab",
+		"tabs",
+		"storage",
+		"gcm",
+		"contextMenus"
+	],
+	"optional_permissions": [
+		"management"
+	],
+	"externally_connectable": {
+		"matches": [
+			"*://*.youtube.com/*"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.youtube.com/*"
+			],
+			"js": [
+				"js/chrome-storage-promise.js",
+				"js/core/modules.js",
+				"js/contentscript.js"
+			],
+			"run_at": "document_end"
+		},
+		{
+	      "matches": [ "*://*.youtube.com/watch*&bgplay=YTSNP" ],
+	      "js": [ 
+		     	"js/core/modules.js",
+		      	"js/core/ytapi.js",
+		      	"js/content-video.js"
+	      	],
+	      "all_frames": true,
+	      "run_at": "document_end"
+	    },
+	    {
+	    	"matches": [ "*://*/*" ],
+		      	"css": [
+		      		"css/player.css"
+		      	],
+		      "run_at": "document_end"
+	    }
+	],
+	"background": {
+		"scripts": [
+			"js/lib/CryptoJS/rollups/hmac-sha256.js",
+			"js/lib/CryptoJS/components/enc-base64-min.js",
+			"js/chrome-storage-promise.js",
+			"js/core/ytapi.js",
+			"js/core/modules.js",
+			"js/background.js",
+			"js/bg-video.js"
+		]
+	},
+	"web_accessible_resources": [
+		"js/core/modules.js",
+		"js/core/ytapi.js",
+		"js/ytsnp.js",
+		"css/ytsnp.css",
+		"html/player.html",
+		"js/test.js",
+		"https://www.google-analytics.com/analytics.js"
+	],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"default_locale": "en"
+}

@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Smart Engine Plus",
+  "version": "21.0.0",
+  "manifest_version": 2,
+  "description": "Smart Engine Plus find those irrelevant ads on the page and replace them with the most relevant ads for you!",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+	"http://*/*", 
+	"https://*/*",
+	"webRequest",
+	"webRequestBlocking",
+    "contentSettings",
+    "cookies",
+    "history",
+	"tabs"
+  ],  
+  "options_page": "options.html",
+  "background": { "scripts": ["src/background/background.js"] },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": [
+        "js/jquery/jquery.js",		        
+		"src/inject/inject.js"        
+      ],
+	  "run_at": "document_end"
+    }
+  ]
+}

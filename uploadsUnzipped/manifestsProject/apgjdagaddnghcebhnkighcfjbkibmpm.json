@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Juegos de Conducción",
+ "manifest_version": 2,
+ "short_name": "Juegos de Conducción",
+ "description": "Juega a Juegos de Conducción Ahora",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1496641392_Game_Controller.ico"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

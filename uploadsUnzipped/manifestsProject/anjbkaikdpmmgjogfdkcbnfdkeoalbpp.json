@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "RA-MICRO Toolbar",
+  "version": "17317",
+  "manifest_version": 2,
+  "description": "Online-Recherchen und Kanzlei-Tools",
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_icon": "ra_e.png",
+    "default_title": "RA-MICRO Toolbar Version 17317.01",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

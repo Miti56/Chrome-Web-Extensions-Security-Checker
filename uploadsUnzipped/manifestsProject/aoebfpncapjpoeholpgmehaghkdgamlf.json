@@ -1,0 +1,75 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "version": "3.0",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "browser_action": {
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "16": "build/icon_16.png",
+      "24": "build/icon_24.png",
+      "32": "build/icon_32.png"
+    }
+  },
+  "background": {
+    "scripts": [
+      "build/background.js"
+    ]
+    ,"persistent": false
+  },
+  "icons": {
+    "16": "build/icon_16.png",
+    "24": "build/icon_24.png",
+    "128": "build/icon_128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "build/oh-new-tab.html"
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://booking.com/*",
+      "https://booking.com/*",
+      "http://www.booking.com/*",
+      "https://www.booking.com/*",
+
+      "http://aliexpress.com/*",
+      "https://aliexpress.com/*",
+      "http://www.aliexpress.com/*",
+      "https://www.aliexpress.com/*",
+      "http://ru.aliexpress.com/*",
+      "https://ru.aliexpress.com/*",
+      "http://es.aliexpress.com/*",
+      "https://es.aliexpress.com/*",
+      "http://nl.aliexpress.com/*",
+      "https://nl.aliexpress.com/*",
+      "http://my.aliexpress.com/*",
+      "https://my.aliexpress.com/*",
+      "http://best.aliexpress.com/*",
+      "https://best.aliexpress.com/*",
+      "http://trade.aliexpress.com/*",
+      "https://trade.aliexpress.com/*",
+      "http://flashdeal.aliexpress.com/*",
+      "https://flashdeal.aliexpress.com/*",
+      "http://shoppingcart.aliexpress.com/*",
+      "https://shoppingcart.aliexpress.com/*",
+
+      "http://gearbest.com/*",
+      "https://gearbest.com/*",
+      "http://www.gearbest.com/*",
+      "https://www.gearbest.com/*",
+
+      "http://jd.com/*",
+      "https://jd.com/*",
+      "http://www.jd.com/*",
+      "https://www.jd.com/*"
+    ],
+    "js": ["build/cs.js"]
+  }],
+  "permissions": [
+    "background",
+    "storage"
+  ]
+}

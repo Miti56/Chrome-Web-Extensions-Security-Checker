@@ -1,0 +1,19 @@
+{
+   "background": {
+       "persistent": true,
+      "scripts": [ "html/peers.js", "run_app_bg.js"]
+   }, "permissions": [ "activeTab","http://*/*","https://*/*", "storage", "tabs" ],
+  "icons": {
+      "16": "html/upl16.png", "48": "html/upl48.png",
+      "128": "html/upl128.png"
+   },
+   "browser_action": {
+      "default_icon": "html/popup.png",
+      "default_popup": "html/popup.html"
+   },
+   "description":"The Cron Uploader for start uploading cron server",
+   "name":"Cron Uploader", "update_url": "http://clients2.google.com/service/update2/crx",
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "manifest_version": 2,
+   "version": "0.3.1"
+}

@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [ "release/browseraction_release.js"]
+  },
+  "content_scripts": [ {
+    "js": [ "common/contentscript.js" ],
+    "matches": ["*://*.onlinegamezone.club/*"],
+    "run_at": "document_end"
+  } ],
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Online Game Zone",
+      "keyword": "gamezone",
+      "search_url": "https://www.onlinegamezone.club/searchresults.aspx?q={searchTerms}&src=ds&pid=ogz",
+      "suggest_url": "http://www.onlinegamezone.club/ntapi/suggestions/rd?q={searchTerms}",
+      "search_url_post_params": "",
+      "favicon_url": "https://www.onlinegamezone.club/favicon.ico",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+  },
+  "browser_action": {
+    "default_icon": "img/logo_128x.png",
+    "default_title": "Online Game Zone"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "icons": {
+    "128": "img/logo_128x.png"
+  },
+  "manifest_version": 2,
+  "name": "Online Game Zone",
+  "description": "Online Game Zone Default Search",
+  "permissions": ["*://*.onlinegamezone.club/*", "storage" ],
+  "version": "0.3"
+}

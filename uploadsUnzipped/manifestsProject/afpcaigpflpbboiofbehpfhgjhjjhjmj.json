@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Ambeyonce",
+  "description": "A chrome extension that responsively adjusts the background music it plays in response to your mood",
+  "version": "1.0",
+
+  "background": {
+      "page": "background.html"
+   },
+
+  "browser_action": {
+    "default_icon": "icon128.png"
+  },
+
+  "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+
+  "permissions": [
+    "storage",
+    "https://connect.soundcloud.com/",
+    "http://api.getsoundcloudify.com/*"
+  ]
+}

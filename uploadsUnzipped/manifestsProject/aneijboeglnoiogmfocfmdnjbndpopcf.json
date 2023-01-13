@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_appName__",
+	"short_name": "__MSG_appName__",
+	"description": "__MSG_appDesc__",
+    "default_locale": "en",
+	"manifest_version": 2,
+	"version": "5.11",
+	"icons": {
+		"128": "icon128.png",
+		"96": "icon-96.png",
+		"48": "icon-48.png",
+		"16": "icon-16.png"
+	},
+	"oauth2":{
+		"client_id" : "78255389286-77g6ikb9u6qo41fde62rs3i5m6siacsr.apps.googleusercontent.com",
+		    "scopes": [
+		      "https://www.googleapis.com/auth/userinfo.profile",
+		      "https://www.googleapis.com/auth/plus.login",
+		      "https://www.googleapis.com/auth/plus.profile.emails.read"
+		    ]
+	},
+	"minimum_chrome_version": "27",
+	"app": {
+	    "background": {
+	      "scripts": ["background.js"],
+	      "persistent": false
+	    }
+	},
+	"permissions": ["unlimitedStorage", "storage", "identity", "webview", "https://milestoneplanner.com/", "https://get.milestoneplanner.com/", "https://beta.milestoneplanner.com/","https://www.google.com/accounts", "https://www.googleapis.com/","https://accounts.google.com/", "https://aneijboeglnoiogmfocfmdnjbndpopcf.chromiumapp.org/", "https://www.paypal.com/", "https://live.sagepay.com/", "https://js.driftt.com/", "https://conversation.api.drift.com/"],
+	"offline_enabled" : true
+}

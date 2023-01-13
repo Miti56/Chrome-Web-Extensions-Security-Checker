@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "main.js" ]
+      }
+   },
+   "author": "CB9TOIIIA",
+   "default_locale": "ru",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "36.0",
+   "name": "App Launcher for GoogleAnalitycs",
+   "permissions": [ "notifications", "webview", "storage", "notifications"],
+   "short_name": "GoogleAnalitycsAppLauncher",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "每天學一點",
+    "description": "每天學一點，成功近一點",
+    "version": "1.811",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+    "background": {
+        "page": "background/index.html",
+        "persistent": true
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "http://*/",
+        "https://*/"
+    ],
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Alt+Q"
+            }
+        },
+        "pen": {
+            "suggested_key": {
+                "default": "Alt+Shift+Q"
+            },
+            "description": "畫重點"
+        },
+        "penToggle": {
+            "suggested_key": {
+                "default": "Alt+Shift+W"
+            },
+            "description": "顯示重點"
+        },
+        "changeWindowWidth": {
+            "suggested_key": {
+                "default": "Alt+Shift+D"
+            },
+            "description": "改變視窗寬度"
+        }
+    }
+}

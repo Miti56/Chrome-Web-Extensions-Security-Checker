@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Screen Lapse",
+  "description": "Capture time lapse frame sequences of a window or your entire desktop.",
+  "version": "1.1.1",
+  "icons": {
+    "128": "/assets/icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    "desktopCapture",
+    {"fileSystem": ["write", "retainEntries", "directory"]},
+    "storage"
+  ],
+  "manifest_version": 2
+}

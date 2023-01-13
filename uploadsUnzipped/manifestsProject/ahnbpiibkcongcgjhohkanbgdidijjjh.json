@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"Puffle Bounce","manifest_version":2,"description":"Fluffle the Puffle cant stop bouncing, and you have to make sure he doesnt bump into any objects","version":"1.1","icons": {"128":"chrome-icon.png","16":"chrome-icon16.png"},"app": {"background": { "scripts": ["background.js"]}}}

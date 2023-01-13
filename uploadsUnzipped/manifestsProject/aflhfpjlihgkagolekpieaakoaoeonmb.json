@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "URI Academic",
+	"description": "URI Online Judge - Academic",
+	"version": "1.0.216",
+	"manifest_version": 2,
+	"app": {
+		"urls": [
+			"http://www.urionlinejudge.com.br/academic"
+		],
+		"launch": {
+			"web_url": "http://www.urionlinejudge.com.br/academic/"
+		}
+	},
+	"icons": {
+		"128": "academic.png"
+	},
+	"permissions": [
+		"notifications"
+	]
+}

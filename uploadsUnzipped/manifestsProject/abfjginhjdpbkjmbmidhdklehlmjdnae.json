@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Winning Lotto Numbers",
+
+  "description": "This app will help you pick your winning lotto numbers.",
+
+  "version": "1.0",
+
+  "icons": {
+
+    "128": "128.png"
+
+  },
+
+  "app": {
+
+    "urls": [
+
+      "http://www.taketwoapps.com/apps/20/lotto/app.html"
+
+    ],
+
+    "launch": {
+
+      "web_url": "http://www.taketwoapps.com/apps/20/lotto/app.html"
+
+    }
+
+  },
+
+  "permissions": [
+
+    "unlimitedStorage",
+
+    "notifications"
+
+  ]
+
+}

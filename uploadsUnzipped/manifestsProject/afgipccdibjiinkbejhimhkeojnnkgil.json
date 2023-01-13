@@ -1,0 +1,10 @@
+{
+  "app": {"launch": {"web_url": "http://g4803.funnygames.ws/?utm_source\u003dcws\u0026utm_medium\u003dapp\u0026utm_campaign\u003dcws\u0026utm_term\u003dsolitaire_cards"}},
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "name": "__MSG_appName__",
+  "icons": {"128": "128_128_solitaire_cards.png"},
+  "manifest_version": 2,
+  "version": "13.6688.4418"
+}

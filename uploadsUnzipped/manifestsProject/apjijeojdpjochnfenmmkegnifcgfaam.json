@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Merge Slides",
+  "short_name": "Merge Slides",
+  "description": "Merge multiple Slides decks into a single deck",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "ico-mgs-128x128.png",
+	"16":  "ico-mgs-16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE", "GOOGLE_DRIVE"],
+  "api_console_project_id": "79318749743",
+  "app": {
+    "urls": [
+      "https://oleksiyrudenko.github.io/merge-google-slides/"
+    ],
+    "launch": {
+      "web_url": "https://oleksiyrudenko.github.io/merge-google-slides/"
+    }
+  },
+  "gdrive_mime_types": {
+    "http://drive.google.com/intents/opendrivedoc": [
+      {
+        "type": ["application/pdf", "application/vnd.google.drive.ext-type.pdf",
+          "application/vnd.google-apps.presentation"],
+        "href": "https://oleksiyrudenko.github.io/merge-google-slides/",
+        "title": "Open",
+        "disposition": "window"
+      }
+    ]
+  }
+}

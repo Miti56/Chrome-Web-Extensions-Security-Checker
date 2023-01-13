@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.png","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.jpeg"},"colors":{"frame":[125,213,229],"toolbar":[238,237,222],"tab_text":[43,123,253],"tab_background_text":[68,147,219],"bookmark_text":[36,105,217],"ntp_background":[255,255,255],"ntp_text":[40,115,237],"button_background":[0,0,0,0]},"tints":{"buttons":[0.56,0.23,0.54]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}},"name":"Koi fish","version":"1","description":""}

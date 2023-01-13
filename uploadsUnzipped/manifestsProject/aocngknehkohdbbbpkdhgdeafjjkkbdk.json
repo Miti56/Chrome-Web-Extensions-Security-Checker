@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "PUBG MOBILE 0.12.0 Apk Mod OBB",
+    "description": "PUBG MOBILE 0.12.0 Apk Mod OBB Latest Version Action Game Free Download", 
+    "browser_action": {
+        "default_icon": {
+            "38": "icon.png"
+            }, 
+        "default_title": "PUBG MOBILE 0.12.0 Apk Mod OBB", 
+        "default_popup": "apktd.com"
+    }, 
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+    "version": "0.12.0"
+}
+
+

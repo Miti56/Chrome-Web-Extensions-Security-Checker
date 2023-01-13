@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Hobsons Gmail Integration",
+  "version": "0.0.0.1",
+  "description": "Hobsons Gmail Integration allows you to archive messages directly to Radius.",
+  "icons": {
+    "128": "icons/implicitweb.png",
+    "16": "icons/implicitweb.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "1007254703926",
+  "app": {
+     "launch": {
+        "web_url": "https://static.askadmissions.net/_EMTFILES/resources/secure/Radius/gmail/implicitsync-addin.xml"
+     }
+  }
+}

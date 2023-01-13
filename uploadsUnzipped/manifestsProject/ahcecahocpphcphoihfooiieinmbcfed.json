@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "d20pfsrdHover",
+  "description": "This lets you hover over links on d20pfsrd to see them without having to go to a new page.",
+  "version": "1.0",
+  "background":{
+    "page": "popup.html"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.d20pfsrd.com/*/*", "https://*.d20pfsrd.com//*"],
+      "js": ["jquery.js","app.js"],
+      "all_frames":true
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "proxy"
+  ]
+}

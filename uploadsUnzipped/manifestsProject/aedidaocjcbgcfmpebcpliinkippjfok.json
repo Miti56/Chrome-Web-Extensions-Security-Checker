@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "AdTrackRemover",
+  "description": "Stops some ad tracking in FB by removing the middle redirection links just replacing it with the actual destination.",
+  "homepage_url" : "https://github.com/robjbone/AdTrackRemover",
+  "version": "1.0.2",
+  "permissions": ["*://www.facebook.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["jquery-3.2.1.min.js", "content_script.js"]
+    }
+  ]
+}

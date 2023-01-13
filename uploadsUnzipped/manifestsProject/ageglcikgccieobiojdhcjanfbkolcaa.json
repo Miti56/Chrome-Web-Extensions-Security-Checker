@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Automated Campaign Entering",
+  "version": "1.53",
+  "manifest_version": 2,
+"background": {
+    "scripts": ["background.js"],
+	"background_page": ["background.html"], 
+"persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://secure-ausomxjta.crmondemand.com/OnDemand/user/*"],
+      "js": ["content.js"]
+	}],
+
+
+
+
+
+"permissions": [
+     "webNavigation",   "tabs"
+    ],
+
+
+"browser_action": {
+        "default_icon": "icon.png" }
+		}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CMaps Analytics Designer",
+  "description": "Enterprise geo maps visualization designer",
+  "version": "3.0.0",
+  "manifest_version": 2,
+  "short_name": "CMaps Analytics",
+  "app": {
+"urls": [
+"https://cmapsconnect.com/designerapp"
+],
+"launch": {
+"web_url": "https://cmapsconnect.com/designerapp"
+}
+},
+  "icons": { "16": "icon16.png", "128": "icon128.png" }
+  
+}

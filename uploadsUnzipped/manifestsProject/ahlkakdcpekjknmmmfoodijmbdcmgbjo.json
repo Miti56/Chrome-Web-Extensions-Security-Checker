@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Briscoletta",
+  "description": "Vieni a farti una partitella a briscola!",
+  "version": "4",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.briscoletta.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.briscoletta.com/"
+    }
+  },
+  "icons": {
+    "128": "briscoletta-chrome-icon.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

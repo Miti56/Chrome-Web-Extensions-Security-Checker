@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version" : 2,
+    "name": "Новости Харькова - 057.ua",
+    "version" : "1.1.4",
+
+    "default_locale" : "ru",
+    "description" : "Самые свежие новости Харькова",
+    "icons" : {
+        "128" : "images/browse-logo.png"
+    },
+
+    "browser_action" : {
+        "default_icon" : {
+            "19" : "images/browse-logo.png"
+        },
+        "default_title" : "Новости Харькова",
+        "default_popup" : "views/news.html"
+    },
+
+    "author" : "Aslanov Ivan",
+    "background": {
+        "scripts": ["js/jquery.min.js","js/background.js"]
+    },
+    "options_page": "views/options.html",
+    "permissions" : [
+        "http://www.057.ua/*",
+        "storage"
+  	]
+}

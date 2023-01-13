@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Music Library",
+  "version": "1.2.4",
+  "short_name": "Music Library",
+  "description":
+    "Play albums with lyrics from your favourites artists and improve YouTube music experience",
+  "icons": {  "128": "logo_128_1.png"},
+  "permissions": [
+   "unlimitedStorage", "tabs", "notifications", "cookies" ,    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "logo_128_1.png",
+    "default_title": "Music Library",
+    "default_popup": "options.html"
+
+  },
+ "content_scripts": [
+        {
+            "js": [
+               "jquery.min.js",
+                "content.js"
+            ],
+            "matches": [ "*://*.youtube.com/*" ]
+        }
+    ],
+  "options_page": "options.html",
+  "background": { "scripts": ["background.js"] },
+  "manifest_version": 2,
+
+  "web_accessible_resources": [
+    "128.png","ext_data/youtube.txt"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Stories for iemb",
+  "description": "This extension adds stories to iemb",
+  "version": "1.0.3",
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [ {
+    "matches": ["https://iemb.hci.edu.sg/Board/*"],
+    "css": ["zuck.css", "skins/snapgram.css"],
+    "js": ["zuck.min.js", "content_script.js"],
+    "run_at": "document_end"
+  } ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Stories for iemb!"
+  },
+  "permissions": [
+    "http://iemb.hci.edu.sg/*"
+  ]
+}

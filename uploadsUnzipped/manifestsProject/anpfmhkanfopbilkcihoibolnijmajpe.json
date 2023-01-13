@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "./libs/jquery/jquery.min.js", "./libs/ga/analytics.js", "./scripts/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "./libs/jquery/jquery.min.js", "./libs/jquery/jquery.mousewheel.js", "./libs/ga/analytics.js", "./scripts/main.js" ],
+      "matches": [ "https://twitter.com/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "Auto refresh Twitter when there are new posts.",
+   "manifest_version": 2,
+   "name": "Twitter Auto Refresh",
+   "permissions": [ "notifications" ],
+   "version": "0.7.4"
+}

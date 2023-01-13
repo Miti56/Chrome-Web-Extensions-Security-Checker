@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "AMZリサーチ",
+    "version": "1.0.2",
+    "manifest_version": 2,
+    "description": "Amazon の検索結果および商品詳細にASIN等の情報を追加します。",
+    "background": {
+        "scripts": ["jquery-3.3.1.min.js", "c.js", "p.js", "background.js"]
+    },
+    "content_scripts": [
+        {
+        "matches": ["https://www.amazon.co.jp/*"],
+        "js": ["jquery-3.3.1.min.js", "c.js", "p.js", "content_script01.js"],
+        "run_at": "document_end"
+        },
+        {
+        "matches": ["https://sellercentral.amazon.co.jp/*"],
+        "js": ["jquery-3.3.1.min.js", "c.js", "p.js", "content_script02.js"],
+        "run_at": "document_end"
+        }
+    ],
+    "browser_action":
+        {
+        "default_icon": "chinagate_logo.png",
+        "default_popup":"popup.html"
+        },
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}

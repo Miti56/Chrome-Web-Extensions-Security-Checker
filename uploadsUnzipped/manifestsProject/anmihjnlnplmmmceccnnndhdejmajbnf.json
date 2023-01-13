@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version" : 2,
+  "name" : "Aesop Notify Extension",
+  "version" : "5.0.1",
+  "description" : "Refreshes Aesop's search page and plays sound when assignment is available",
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+  "icons": { "16": "Aesop.png", "48": "Aesop.png", "128": "Aesop.png" },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "Aesop.png",
+    "default_popup": "options.html"
+  },
+  "background": { "scripts" : ["AesopJobs.js","bg.js"] },
+  "content_scripts": [ {
+    "matches": ["http://www.aesopeducation.com/*",
+                "https://sub.aesoponline.com/*",
+                "http://sub.aesoponline.com/*",
+                "https://www.aesoponline.com/*",
+                "http://www.aesoponline.com/*",
+                "https://login.frontlineeducation.com/*",
+                "file://*"],
+    "js": ["AesopJobs.js", "AesopContent.js"],
+    "all_frames": true
+  }]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Crypto Lite (Free)",
+  "description": "A light AES encryption client",
+  "version": "2.0.0",
+  "author": "Thomas Sudore",
+  "app": {
+    "background": {
+      "scripts": ["main.js"],
+      "persistent": false
+    }
+  },
+  "externally_connectable":{},
+  "offline_enabled": true,
+  "minimum_chrome_version": "61",
+  "icons": { "16": "padlock16.png", "48": "padlock48.png", "128": "padlock128.png" }
+}

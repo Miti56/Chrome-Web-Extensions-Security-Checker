@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "page": "bg.html",
+      "persistent": true
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+   "browser_action": {
+      "default_icon": "i/38.png"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_extDesc__",
+   "icons": {
+      "16": "i/16.png",
+      "128": "i/128.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "28.0",
+   "name": "__MSG_extName__",
+   "offline_enabled": true,
+   "permissions": [
+      "alarms",
+      "cookies",
+      "tabs",
+      "storage",
+      "unlimitedStorage",
+      "webRequest",
+      "webRequestBlocking",
+      "\u003Call_urls>"
+   ],
+   "version": "1.0.1"
+}

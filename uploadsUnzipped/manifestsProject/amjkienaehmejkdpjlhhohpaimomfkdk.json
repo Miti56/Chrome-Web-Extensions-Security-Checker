@@ -1,0 +1,26 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "I-cone.net",
+  "description": "Ecouter la musique indépendante et autoproduite et achetez directement la musique aux artistes sans intermédiaires",
+  "version": "2",
+  "manifest_version": 2,
+
+  "app": {
+    "urls": [
+      "http://www.i-cone.net/",
+      "http://www.i-cone.net/archives-i-cone-autoproductions.php"
+    ],
+    "launch": {
+      "web_url": "http://www.i-cone.net/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}
+
+

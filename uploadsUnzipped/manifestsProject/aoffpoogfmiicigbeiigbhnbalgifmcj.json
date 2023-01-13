@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "GoCD Filter",
+    "description": "Extension for filtering environments on the administration page",
+    "version": "0.0.1",
+    "author": "Lyubomir Mitkov",
+    "icons": {
+        "128": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "style.css"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://*/go/environments"
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'",
+    "permissions": [
+        "storage",
+        "https://*/go/environments"
+    ]
+}

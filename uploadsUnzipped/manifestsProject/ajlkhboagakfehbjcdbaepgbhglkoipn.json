@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Not So Simple",
+  "version": "0.2.0",
+  "description": "Simple Chrome extension utilizing the \"simply\" rule. If a tutorial contains the word simply, it's probably not for beginners.",
+  "author": "Rob J Loranger",
+  "homepage_url": "https://github.com/robjloranger/not-simple",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "css": ["highlightSimply.css"],
+      "js": ["vendor/padolsey/findAndReplaceDOMText.js","highlightSimply.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://*/*"],
+      "css": ["highlightSimply.css"],
+      "js": ["vendor/padolsey/findAndReplaceDOMText.js","highlightSimply.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "notifications"
+  ]
+}

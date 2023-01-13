@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Efflux tracker",
+  "short_name" : "Efflux",
+  "description": "Create music using multiple synthesizers within the tracker style interface",
+  "version": "1.0.20",
+  "manifest_version" : 2,
+  "author" : "Igor Zinken",
+  "offline_enabled" : true,
+  "permissions": [
+    "storage",
+    "fullscreen",
+    "http://www.igorski.nl/",
+    "https://fonts.googleapis.com/"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "logo_16.png", "48" : "logo_48.png", "128": "logo_128.png" }
+}

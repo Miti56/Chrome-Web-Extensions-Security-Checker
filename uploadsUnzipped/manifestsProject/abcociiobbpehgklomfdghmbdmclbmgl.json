@@ -1,0 +1,45 @@
+{
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "img/icon48.png",
+      "38": "img/icon48.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["js/script.js"],
+      "matches": ["http://www.livestream.com/*"],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy":
+    "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "default_locale": "en",
+  "description": "__MSG_ext_description__",
+  "icons": {
+    "128": "img/icon128.png",
+    "16": "img/icon16.png",
+    "48": "img/icon48.png"
+  },
+  "manifest_version": 2,
+  "name": "__MSG_ext_name__",
+  "permissions": [
+    "tabs",
+    "*://*/*",
+    "downloads",
+    "storage",
+    "cookies",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "short_name": "__MSG_ext_short_name__",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "2.0.3",
+  "web_accessible_resources": ["img/icon128.png"]
+}

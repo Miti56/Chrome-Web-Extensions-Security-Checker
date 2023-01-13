@@ -1,0 +1,18 @@
+{
+   "browser_action": {
+      "default_icon": "img/icon128.png",
+      "default_popup": "popup.html"
+   },
+   "description": "FIEL.VC é o encurtador de links oficial do Corinthians.",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArxjhUOvg/XsYcZY/tz3+9X+Ggf0YmZ4C/SWKOp6+JasGAKNG9Jj/9lwrqzKqS567PeOGAisTtrfODg3hLPlodudr/sKwVH0BgQUCDvpN9gQDkYu13kW5XjuYwhzKGWNS2OJVklj2yLbpem3a+k22hT3VneFoEsB869ZoIv7b1aowAhLEdkYDnZat5A0VOZhuGuV0+lAg8jBAF1AKh5ayyD2hEod+bvD9O7yY3DfbB2TcSFiytL2umIQdDpLU3EpDvHokS7ALPq9JYi/w23E1MDQEagoVYxwOTXAEKj02BY3iz7DZmSMhXtaUmiKpWjj1aPf9YNvzn+JabjPGS5ib8wIDAQAB",
+   "manifest_version": 2,
+   "name": "FIEL.VC",
+   "permissions": [ "activeTab", "http://fiel.vc/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FREE Press Release Distribution Worth £350",
+  "description": "Get Your Business Known with Links from Major Sites Like Yahoo, Bloomberg and Reach Over 5,500 more from PR Newswire",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.huddlebuy.co.uk/goldcard/deals/marketing/get-a-pr-release-for-free"
+    ],
+    "launch": {
+      "web_url": "http://www.huddlebuy.co.uk/goldcard/deals/marketing/get-a-pr-release-for-free"
+    }
+  }
+}

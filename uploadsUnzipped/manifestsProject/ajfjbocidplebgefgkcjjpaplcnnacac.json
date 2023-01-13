@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "BRSulGames Forum",
+	"manifest_version": 2,
+	"description": "Veja todo pelo seu Chrome",
+	"version": "0.0.1",
+	"browser_action": {
+		"default_icon": "icon19.png",
+		"default_popup": "popup.html"
+	},
+	"icons": { 
+		"48": "icon48.png",
+		"128": "icon64.png" 
+	},
+	"background": {
+	"page": "background.html",
+	"persistent": true
+	},
+	"permissions": [
+"http://forum.brsulgames.com.br/*",
+"alarms",
+"notifications"
+]
+}

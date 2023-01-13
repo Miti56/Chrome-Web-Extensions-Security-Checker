@@ -1,0 +1,28 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "My Cell Phone Is A Cash Machine",
+"version": "2.0",
+ "manifest_version": 2,
+"description": "Make Money Just Using Your Cell Phone",
+"version": "2.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.pavlokeyross.info/"
+],
+"launch": {
+"web_url": "http://chromeapps.pavlokeyross.info/mcpiacm/"
+}
+},
+"permissions": [
+"unlimited_storage",
+"notifications"
+]
+}
+
+
+

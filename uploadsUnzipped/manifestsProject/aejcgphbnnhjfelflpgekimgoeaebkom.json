@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "popup.js" ]
+	  
+   },
+   
+   "browser_action": {
+      "default_icon": "ico2.png",
+	  
+      "default_popup": "popup.html"
+   },
+   
+   "content_scripts": [ {
+      "js": [ "jquery-2.1.1.min.js", "jquery-ui.min.js", "testScript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   
+   "description": "This will assist you by providing which means and clarification of elite hindi expressions to assist you perceive them.",
+   "icons": {
+
+   },
+   
+   "manifest_version": 2,
+   "name": "Hindiz Wordiz",
+   "permissions": [ "http://*/*", "https://*/*"  ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.6"
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Hello Kitty Party Time",
+	"description": "Party with Hello Kitty on Facebook!",
+	"version": "0.0.4",
+	"browser_action": {
+	   "default_icon": "images/Hello_kitty_nerd.png",
+	   "default_popup": "popup.html"
+	},
+	"content_scripts":[
+		{
+			"matches": ["*://www.facebook.com/*"],
+			"js": ["chromeExt.js"]
+		}
+	]
+}

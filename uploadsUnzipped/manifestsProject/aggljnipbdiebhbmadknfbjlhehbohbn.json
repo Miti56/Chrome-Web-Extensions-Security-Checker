@@ -1,0 +1,27 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "USA TODAY",
+   "version": "3.0",
+   "manifest_version": 2,
+
+   "description": "The latest news, scores, weather, stocks and photos from USA TODAY are now available in the Chrome Web Store.",
+   "icons": {
+      "16": "logo_16x16.ico",
+      "48": "logo_48x48.png",
+      "128": "logo_128x128.png"
+    },
+
+   "app": {
+	   "urls": [
+	      "http://www.usatoday.com/"
+	    ],
+	    "launch": {
+	      "web_url": "http://www.usatoday.com/"
+	    }
+   },
+
+   "permissions": [
+      "unlimitedStorage",
+      "geolocation"
+   ]
+}

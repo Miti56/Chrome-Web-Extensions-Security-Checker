@@ -1,0 +1,83 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "亮文插件",
+	"manifest_version": 2,
+	"version": "5.0.999",
+	"description": "保存引用到亮文",
+	"browser_action": {
+		"default_icon": "images/treeitem-webpage-gray.png",
+		"default_title": "保存到亮文"
+	},
+	"permissions": ["http://*/*", "https://*/*", "tabs", "contextMenus", "cookies"],
+	"background": {
+		"scripts": [
+			"zotero.js",
+			"zotero_config.js",
+			"promise.js",
+			"errors_webkit.js",
+			"api.js",
+			"http.js",
+			"oauthsimple.js",
+			"zotero/connector/connector.js",
+			"zotero/connector/cachedTypes.js",
+			"zotero/date.js",
+			"zotero/debug.js",
+			"zotero/xregexp/xregexp.js",
+			"zotero/xregexp/addons/build.js",
+			"zotero/xregexp/addons/matchrecursive.js",
+			"zotero/xregexp/addons/unicode/unicode-base.js",
+			"zotero/xregexp/addons/unicode/unicode-categories.js",
+			"zotero/xregexp/addons/unicode/unicode-zotero.js",
+			"zotero/openurl.js",
+			"zotero/connector/repo.js",
+			"zotero/translation/tlds.js",
+			"zotero/connector/translator.js",
+			"zotero/connector/typeSchemaData.js",
+			"zotero/utilities.js",
+			"messages.js",
+			"messaging.js",
+			"tools/testTranslators/translatorTester_messages.js",
+			"tools/testTranslators/translatorTester.js",
+			"tools/testTranslators/translatorTester_global.js",
+			"background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": [
+				"injectCheck.js"
+			],
+			"run_at": "document_idle",
+			"all_frames": true
+		}
+	],
+	"web_accessible_resources": [
+		"images/*"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"homepage_url": "https://www.noteassist.net/liangwen/",
+	"icons": {
+		"16": "Icon-16.png",
+		"48": "Icon-48.png",
+		"96": "Icon-96.png",
+		"128": "Icon-128.png"
+	},
+	"options_ui": {
+		"page": "preferences/preferences.html",
+		"open_in_tab": true
+	},
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+S"
+			}
+		}
+	},
+	"applications": {
+		"gecko": {
+			"id": "liangwen@noteassist.net"
+		}
+	}
+}

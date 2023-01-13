@@ -1,0 +1,24 @@
+{
+	"background": {
+		"scripts": [
+			"js/bg.js"
+		]
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"description": "__MSG_description__",
+	"manifest_version": 2,
+	"default_locale": "en",
+	"browser_action": {
+		"default_icon": "icons/icon-small.png",
+		"default_popup": "popup.html"
+	},
+	"version": "0.0.1",
+	"name": "__MSG_name__",
+	"icons": {
+		"48": "icons/icon-small.png",
+		"128": "icons/buca-128.png"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

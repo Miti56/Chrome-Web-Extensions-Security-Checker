@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Simple New Tab",
+  "description": "Replaces the new tab page with a very simple page with no 'Last Visited' and an empty address bar for searching.",
+  "version":"0.0.1",
+
+  "chrome_url_overrides": {
+    "newtab": "simpleNewTab.html"
+  }
+}

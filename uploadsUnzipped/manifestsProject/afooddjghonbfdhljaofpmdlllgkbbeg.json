@@ -1,0 +1,36 @@
+{
+   "background": {
+      "scripts": [ "js/analytics.js", "background.js"]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "img/128.png",
+         "48": "img/48.png",
+         "64": "img/64.png"
+      },
+      "default_title": "whatsapp web / ватсап веб "
+   },
+    "content_scripts" : [
+{ 
+  "matches" : [ 
+    "http://*.whatsapp.com/*", "https://web.whatsapp.com/*", "http://web.whatsapp.com/*", "https://*.aliexpress.com/*"
+  ], 
+  "js" : [ "js/jquery-3.0.0.min.js" ], 
+  "run_at" : "document_idle", 
+  "all_frames" : false 
+}
+],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "whatsapp web / ватсап веб",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png"
+   },
+   "manifest_version": 2,
+   "name": "whatsapp web / ватсап веб",
+   "permissions": [  "storage", "alarms", "notifications" ],
+   "short_name": "whatsapp web / ватсап веб",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.4"
+}

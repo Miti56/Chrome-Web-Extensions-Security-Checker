@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "radiko.jp Hide Popping Balloon",
+	"version": "1.0.1",
+	"description": "radiko.jpで再生中に飛び跳ねるバルーンを非表示にします",
+	"content_scripts": [{
+	  "matches": ["http://radiko.jp/*", "https://radiko.jp/*"],
+		"js": ["handler.js"],
+		"run_at": "document_end"
+	}],
+  "icons": {
+    "128": "extension-icon.png"
+  },
+	"manifest_version": 2
+}

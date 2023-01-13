@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"Death Note (1920x1080)",
+	"version":"1.1.2",
+	"description":"",
+	"theme":
+		{
+		"images":
+			{
+				"theme_frame":"img\/theme_frame.png",
+				"theme_toolbar":"img\/theme_toolbar.png",
+				"theme_tab_background":"img\/theme_tab_background.png",
+				"theme_ntp_background":"img\/theme_ntp_background.png",
+				"theme_ntp_attribution":"img\/theme_ntp_attribution.png"
+			},
+			"colors":
+				{
+				"frame":[40,37,40],
+				"toolbar":[0,0,0],
+				"tab_text":[224,223,225],
+				"tab_background_text":[161,161,161],
+				"bookmark_text":[224,223,225],
+				"ntp_background":[255,255,255],
+				"ntp_text":[224,223,225],
+				"button_background":[0,0,0,0]
+				},
+			"tints":
+				{
+					"buttons":[0.51,0.97,0.4]
+				},
+			"properties":
+				{
+				"ntp_background_alignment":"top",
+				"ntp_background_repeat":"no-repeat"
+				}
+		}
+}

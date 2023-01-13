@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Gatekeeper: Supplier & Contract Management",
+  "short_name": "Gatekeeper",
+  "description": "Gatekeeper is a simple to use, powerful, cloud based Supplier and Contract Management solution",
+  "version": "0.0.1.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.gatekeeperhq.com/"
+    ],
+    "launch": {
+      "web_url": "https://www.gatekeeperhq.com/?utm_source=chromestore&utm_medium=listing&utm_campaign=accountingandfinance/"
+    }
+  }
+}

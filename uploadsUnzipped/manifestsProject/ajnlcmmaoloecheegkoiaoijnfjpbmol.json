@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Please Don't Do It (PDDI)",
+  "short_name": "PDDI",
+  "version": "1.0",
+  "description": "Chrome Extension to help you be more focus",
+  "permissions": [
+    "alarms",
+    "<all_urls>",
+    "storage", 
+    "identity", 
+    "identity.email"],
+  "web_accessible_resources": [
+    "images/*.png"
+  ],
+  "browser_action": {
+    "default_title": "PDDI Event",
+    "default_popup": "popups/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/jquery-2.2.1.min.js",
+      "js/uri.min.js",
+      "js/functions.js",
+      "background.js"
+    ]
+  },
+  "icons": {
+    "16": "images/logo_16.png",
+    "32": "images/logo_32.png",
+    "64": "images/logo_64.png",
+    "128": "images/logo_128.png"
+  },
+  "options_page": "options.html",
+  "manifest_version": 2
+}

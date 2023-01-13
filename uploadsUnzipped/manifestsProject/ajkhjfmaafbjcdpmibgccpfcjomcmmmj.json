@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://*.ngntele.dg-m.de/*",
+      "https://*.dbn.de/*"
+    ]
+  },
+  "manifest_version": 2,
+  "name": "DBN TV Plug-in Helper",
+  "permissions": [
+    "nativeMessaging",
+    "background"
+  ],
+  "version": "19.31.2",
+  "version_name": "19.31.2"
+}

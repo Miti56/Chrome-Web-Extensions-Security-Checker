@@ -1,0 +1,36 @@
+{
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icon/icon48.png",
+      "64": "icon/icon64.png",
+      "128": "icon/icon128.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "小丰二维码"
+  },
+  "content_scripts": [{
+    "css": [ "css/app.css" ],
+    "js": ["js/lib/jquery.js", "js/lib/lib.js","js/lib/jquery.qrcode.js","js/lib/qrcode.js", "js/content.js"],
+    "matches": ["http://*/*", "https://*/*"],
+    "run_at": "document_end"
+  }],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "小丰二维码可以方便将网页转换为二维码，也可以简单识别网页中的二维码图片。",
+  "icons": {
+    "48": "icon/icon48.png",
+    "64": "icon/icon64.png",
+    "128": "icon/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "小丰二维码",
+  "permissions": ["http://*/*", "https://*/*", "storage", "unlimitedStorage", "tabs", "contextMenus"],
+  "version": "1.0.1",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "web_accessible_resources": [
+    "js/lib/jquery.js",
+    "icon/close.png"
+  ]
+}

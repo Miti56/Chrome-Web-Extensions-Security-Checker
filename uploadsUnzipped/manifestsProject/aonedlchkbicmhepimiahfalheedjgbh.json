@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Помощник",
+  "description": "Простой способ найти лучшие цены",
+  "icons": {
+    "128": "icons/128.png",
+    "32": "icons/32.png",
+    "64": "icons/64.png",
+    "16": "icons/16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["includes/tab.js"],
+      "run_at": "document_end"
+    },
+    {
+      "js": [
+        "profiler.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "profiler.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/", "https://*/",
+    "storage",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "version": "5.2"
+}

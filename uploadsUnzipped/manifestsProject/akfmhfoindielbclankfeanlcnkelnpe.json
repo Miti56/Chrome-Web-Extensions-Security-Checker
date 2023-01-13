@@ -1,0 +1,118 @@
+{
+  "browser_action": {"name": "Dashboard"},
+  "options_page": "options.html",
+  "version": "0.0.10",
+  "content_security_policy": "script-src \u0027self\u0027 https://cdn.mxpnl.com; object-src \u0027self\u0027",
+  "web_accessible_resources": [
+    "anunnaki.png",
+    "html/bookmarkingBar.html"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "A Bookmarking Service from Space. Easily Save, Find, and Browse your Favorite Web Pages.",
+  "name": "Anunnaki",
+  "background": {
+    "scripts": [
+      "js/zepto.min.js",
+      "js/underscore.js",
+      "js/eventPage.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "notifications",
+    "contextMenus",
+    "tabs"
+  ],
+  "icons": {
+    "48": "anunnaki.png",
+    "128": "anunnaki.png",
+    "16": "anunnaki.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "all_frames": false,
+      "js": [
+        "js/jquery.js",
+        "js/jquery.notification.js",
+        "js/ank.js"
+      ],
+      "css": ["css/ank.css"]
+    },
+    {
+      "matches": [
+        "*://www.google.com/*",
+        "*://google.com/*",
+        "*://www.google.co.uk/*",
+        "*://google.co.uk/*",
+        "*://www.google.ca/*",
+        "*://google.ca/*",
+        "*://www.google.de/*",
+        "*://google.de/*",
+        "*://www.google.jp/*",
+        "*://google.jp/*",
+        "*://www.google.fr/*",
+        "*://google.fr/*",
+        "*://www.google.au/*",
+        "*://google.au/*",
+        "*://www.google.us/*",
+        "*://google.us/*",
+        "*://www.google.ru/*",
+        "*://google.ru/*",
+        "*://www.google.ch/*",
+        "*://google.ch/*",
+        "*://www.google.it/*",
+        "*://google.it/*",
+        "*://www.google.nl/*",
+        "*://google.nl/*",
+        "*://www.google.se/*",
+        "*://google.se/*",
+        "*://www.google.it/*",
+        "*://google.it/*",
+        "*://www.google.nl/*",
+        "*://google.nl/*",
+        "*://www.google.se/*",
+        "*://google.se/*",
+        "*://www.google.no/*",
+        "*://google.no/*",
+        "*://www.google.es/*",
+        "*://google.es/*",
+        "*://www.google.com.eg/*",
+        "*://google.com.eg/*",
+        "*://www.google.ae/*",
+        "*://google.ae/*",
+        "*://www.google.ps/*",
+        "*://google.ps/*",
+        "*://www.google.com.sa/*",
+        "*://google.com.sa/*",
+        "*://www.google.com.lb/*",
+        "*://google.com.lb/*",
+        "*://www.google.com.qa/*",
+        "*://google.com.qa/*",
+        "*://www.google.dz/*",
+        "*://google.dz/*",
+        "*://www.google.co.ma/*",
+        "*://google.co.ma/*",
+        "*://www.google.tn/*",
+        "*://google.tn/*",
+        "*://www.google.co.za/*",
+        "*://google.co.za/*",
+        "*://www.google.com.iq/*",
+        "*://google.com.iq/*",
+        "*://www.google.com.bh/*",
+        "*://google.com.bh/*"
+      ],
+      "all_frames": false,
+      "js": [
+        "js/jquery.js",
+        "js/jquery.timeago.js",
+        "js/google_search.js"
+      ],
+      "css": ["css/google_search.css"]
+    }
+  ],
+  "manifest_version": 2
+}

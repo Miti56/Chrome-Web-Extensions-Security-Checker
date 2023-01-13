@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Extension Trading",
+  "version": "3.2",
+  "manifest_version": 2,
+  "description": "Extension Trading is a support tool to order follow master on MT6 Broker. This tool were distributed by Richii",
+  "icons": {
+      "128": "images/logo-128.png",
+	  "32": "images/logo-32.png"
+   },
+  "browser_action": {
+    "default_icon": "images/logo-32.png",
+	"default_title": "Extension Trading"
+  },
+  "content_scripts": [{
+    "matches": [
+      "*://order.aibroker.co/",
+	  "*://order.ustrade.global/",
+      "*://order.wealthtrade.live/",
+      "*://order.multifx.co/",
+	  "*://order.primary.vip/",
+	  "*://order.blockchainop.co/",
+	  "*://order.bluecoin.club/",
+	  "*://order.vertex.global/",
+	  "*://order.sp500.live/"
+    ],
+    "js": [
+	  "js/jquery.min.js"
+    ],
+    "css": [
+		"css/style.css"
+    ]
+  }],
+  "permissions": [
+    "tabs",
+	"activeTab",
+    "*://apps.aibroker.co/*",
+	"*://apps.vertex.global/*",
+	"*://apps.ustrade.global/*",
+	"*://apps.wealthtrade.live/*"
+  ],
+  "web_accessible_resources": [
+    "content.html"
+  ]
+}

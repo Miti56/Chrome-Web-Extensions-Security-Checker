@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bảo Hiểm Sức Khoẻ",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Bảo Hiểm Sức Khoẻ Daiichi công ty bảo hiểm nhân thọ đầu tiên tại Nhật Bản với hơn 100 năm hoạt động trên thế giới",
+  "homepage_url": "https://muachungbaohiem.vn/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  }
+}

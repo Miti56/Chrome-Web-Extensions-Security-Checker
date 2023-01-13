@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Qi Network - SSO Admin",
+    "description": "This extension includes a link in Google Apps Cpanel to configure Qi Network SSO.",
+    "version": "2.5.7",
+
+    "background":{
+        "scripts":["background.js"]
+    },
+
+    "permissions": [
+        "tabs",
+        "cookies",
+        "https://*.testetestesso.appspot.com/*",
+        "https://*.qinetworksso.appspot.com/*",
+        "https://accounts.google.com/o/oauth2/token"
+    ],
+
+    "content_scripts": [{
+        "matches": ["https://admin.google.com/*", "https://www.google.com/a/cpanel/*"],
+        "css": ["css/core.css"],
+        "js": ["js/jquery-latest.min.js", "js/jsrender.js", "js/sso.js", "oauth2/oauth2.js", "oauth2/adapters/google.js"]
+    },{
+        "matches": ["http://www.google.com/robots.txt*"],
+        "js": ["oauth2/oauth2_inject.js"],
+        "run_at": "document_start"
+    }
+],
+
+    "web_accessible_resources": [
+        "oauth2/oauth2.js",
+        "oauth2/adapters/google.js",
+        "oauth2/oauth2.html",
+        "js/functions.js",
+        "js/jquery-latest.min.js",
+        "js/jquery.min.map",
+        "js/jquery.min.map.js",
+        "js/jsrender.js",
+        "js/templates.js",
+        "js/template_users.js",
+        "html/create_group.html",
+        "html/group_info.html",
+        "html/rules.html",
+        "html/sso-tab.html",
+        "html/sso-tab-users.html",
+        "html/users.html"
+    ]
+}

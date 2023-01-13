@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Modify unitedbankofindia.com",
+  "version": "0.2.55",
+  "description": "add customised links to unitedbankofindia",
+
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["http://www.unitedbankofindia.com/English/Recruitment.aspx/*"]
+  }],
+
+  "author": "Pratyush Vashisht"
+
+}

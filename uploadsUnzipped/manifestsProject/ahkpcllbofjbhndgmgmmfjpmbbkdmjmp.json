@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon_prod.png",
+    "128": "images/icon_prod.png"
+  },
+  "default_locale": "en",
+  "externally_connectable": {
+    "matches": [
+      "*://*.trygrok.com/*",
+      "*://*.grok-prod.firebaseapp.com/*",
+      "*://*.grok-stage.firebaseapp.com/*",
+      "*://localhost/*"
+    ],
+    "ids": [
+      "*"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js":  [
+        "jQuery.min.js",
+        "scripts/config/config.js",
+        "scripts/recording.js"
+      ],
+      "run_at": "document_end",
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "bower_minified_assets/browser-polyfill.js",
+      "bower_minified_assets/zepto.min.js",
+      "bower_minified_assets/lodash.min.js",
+      "bower_minified_assets/clipboard.min.js",
+      "bower_minified_assets/aws-sdk.min.js",
+      "bower_minified_assets/socket.io.min.js",
+      "scripts/config/config.js",
+      "scripts/chromereload.js",
+      "scripts/sockets.js",
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "desktopCapture",
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon_prod.png",
+      "38": "images/icon_prod.png"
+    },
+    "default_title": "Grok-extension-development"
+  },
+  "web_accessible_resources": [
+    "/images/icon.png",
+    "/images/icon_stage.png",
+    "/images/icon_prod.png",
+    "/images/recording_icon.png",
+    "/images/record_button_text.png",
+    "/images/cancel_button.png",
+    "/images/audio_on_button.png",
+    "/images/audio_off_button.png",
+    "/images/loading.gif"
+  ]
+}

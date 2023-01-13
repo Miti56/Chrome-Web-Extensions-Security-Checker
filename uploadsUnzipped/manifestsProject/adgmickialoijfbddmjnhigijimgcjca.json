@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDescription__",
+    "version": "0.0.0.24",
+    "manifest_version": 2,
+    "background": {
+        "persistent": true,
+        "scripts": ["/js/one.js", "/js/gpf/background/allbg.min.js"]
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com https://api.bing.com/osjson.aspx; object-src 'self'",
+    "default_locale": "en",
+    "icons": {
+        "16": "icons/icon16.png",
+        "19": "icons/icon19.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "web_accessible_resources": ["img/*", "css/*", "html/*", "fonts/*"],
+    "short_name": "Girnar Delite",
+    "permissions": ["tabs", "storage", "unlimitedStorage", "geolocation", "identity", "http://*/*", "https://*/*", "notifications", "management", "gcm", "<all_urls>"],
+    "app_data": {
+        "app_id": 6,
+        "link_rewrite": "delite",
+        "name": "Girnar Delite",
+        "home_page": "https://chrome.google.com/webstore/detail/girnar-delite/adgmickialoijfbddmjnhigijimgcjca"
+    },
+    "wlGIds": ["ffkdeelgblbcmgebjaonadbhhoknmocp", "nfgiomdbklbajoehfoaiijdogmlacjha", "knhdpaoljmnpbegfgkegfnnpfakdhlcl", "nlkfgofefdkbcpejicifjoiildgdpffk"],
+    "oauth2": {
+        "client_id": "912059841106-pekr98a78ne0itfe5sdtcjp1ukt8fdnq.apps.googleusercontent.com",
+        "scopes": ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"]
+    },
+    "writeKey": "2mLBdYoDyfzpZLPs",
+    "snid": "501332629651",
+    "custom_serach": {
+        "url": "https://www.googleapis.com/customsearch/v1element?hl=en&prettyPrint=false&source=gcsc&gss=.com&filter=1&sort=&googlehost=www.google.com",
+        "params": {
+            "key": "AIzaSyCVAXiUzRYsML1Pv6RwSG1gunmMikTzQqY",
+            "num": "20",
+            "rsz": "20",
+            "sig": "0c3990ce7a056ed50667fe0c3873c9b6",
+            "cx": "010353907162097255379:_huwuckfgbo",
+            "callback": "google.search.Search.apiary"
+        }
+    },
+    "secret": "TVjBXmtDuNlC78gLwz1hRuos",
+    "projectId": "58523f716412f54c0639d8a1",
+    "gcmAPIKey": "AAAAdLnA2JM:APA91bH_lGGn8fxKmIqeDeJcniiz1Qh97KMoZxQGoPlUDT0CFXiXovpRzFekNJs5-wib5D8KkAQ3uVANL3uhPlcAARzIt8WuAmyn-G3Hnr8ZKS3FwyL93qDRB0jiVZxNG8NsLnGPtuLxjBQxssVYYIsbB1RzMliarA",
+    "chrome_url_overrides": {
+        "newtab": "html/delite/newtab.html"
+    }
+}

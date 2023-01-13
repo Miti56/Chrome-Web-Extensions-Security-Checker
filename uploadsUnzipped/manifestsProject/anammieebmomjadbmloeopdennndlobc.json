@@ -1,0 +1,17 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Orb",
+  "description": "Arcade game in Canvas 2D",
+  "version": "0.7",
+  "manifest_version": 2,
+  "icons": {
+	  "16": "icon16.png",
+	  "48": "icon48.png",
+	  "128": "icon128.png"
+  },
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  }
+}

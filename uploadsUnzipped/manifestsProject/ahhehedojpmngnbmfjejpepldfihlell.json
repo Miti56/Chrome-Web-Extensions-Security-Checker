@@ -1,0 +1,15 @@
+{"version": "0.4.10", 
+"chrome_url_overrides": {"newtab": "newtab_index.html"},
+
+ "default_locale": "en", 
+"description": "__MSG_addinfo__", 
+"background": {"scripts": ["script.js"]},
+
+ "icons": {"128": "128-pics.png"},
+
+ "browser_action": {"default_icon": "128-pics.png", 
+"default_title": "Sailor Moon Wallpapers & New Tab"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"name": "Sailor Moon Wallpapers & New Tab", 
+"manifest_version": 2}

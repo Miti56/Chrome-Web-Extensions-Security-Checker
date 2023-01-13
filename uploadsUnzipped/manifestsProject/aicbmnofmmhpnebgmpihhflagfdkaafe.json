@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Pierre Bounce",
+  "description": "Pierre has some fun on your screen.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://scontent-a-sea.xx.fbcdn.net/",
+    "https://fbcdn-sphotos-g-a.akamaihd.net/",
+    "https://photos-4.dropbox.com/"
+  ],
+  "content_scripts": [ {
+  "matches": ["http://*/*"],
+  "js": ["jquery.js","pierre.js"],
+  "css": [ "pierre.css" ]
+} ]
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "邮编库",
+  "description": "中国大陆各省份、地市、区县的邮政编码，涵盖超过180万条地址邮编信息，农村细化到村组、城市精确到街道，可以正查、反查，邮编库专为移动设备优化，适用于各种智能手机、平板电脑浏览。",
+  "version": "1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://m.youbianku.com/"
+    ],
+    "launch": {
+      "web_url": "http://m.youbianku.com/"
+    }
+  },
+  "icons": {
+    "128": "youbianku.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

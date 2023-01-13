@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "author": "Plugtopus Agency",
+  "manifest_version": 2,
+  "name": "__MSG_name__",
+  "short_name": "__MSG_short__",
+  "version": "3.9.18.1",
+  "homepage_url": "https://plugtopus.agency",
+  "default_locale": "ru",
+  "description": "__MSG_desc__",
+  "permissions": [
+    "tabs"
+  ],
+  "icons": {
+    "128": "icon/icon-128.png",
+    "16": "icon/icon-16.png",
+    "48": "icon/icon-48.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icon/icon-19.png",
+      "38": "icon/icon-38.png"
+    },
+    "default_title": "__MSG_title__",
+    "default_popup": "options.html"
+  }
+}

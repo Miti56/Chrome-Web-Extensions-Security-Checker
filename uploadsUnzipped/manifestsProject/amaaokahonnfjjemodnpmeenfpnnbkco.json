@@ -1,0 +1,89 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Grepper",
+"description": "The Query & Answer System for the Coder Community",
+"version": "0.0.3.5",
+"browser_action": {
+	  "default_icon": {  
+		"16": "icon128.png",
+		"24": "icon128.png",
+		"32": "icon128.png"
+	  },
+	  "default_title": "Grepper",  
+	  "default_popup": "popup.html"
+},
+"permissions": [
+    "identity",
+    "identity.email",
+    "storage",
+    "activeTab",
+    "<all_urls>"
+],
+"background": {
+    "scripts": ["background.js"],
+    "persistent": false
+},
+
+"icons": { "16": "img/icon128_hand.png",
+           "48": "img/icon128_hand.png",
+          "128": "img/icon128_hand.png" },
+"content_scripts":[
+{
+	"matches": [
+	  "https://www.google.com/*"
+	],
+    "run_at": "document_start",
+	"js":[
+        "content.js",
+        "prism/prism.js"
+    ],
+    "css":[
+        "prism/prism.css",
+        "codemirror/lib/codemirror.css",
+        "codemirror/theme/prism-okaidia.css",
+        "codemirror/theme/midnight.css",
+        "main.css"
+    ]
+},
+{
+	"matches": [
+	  "http://*/*",
+	  "https://*/*"
+	],
+	"exclude_matches": [
+	  "https://www.google.com/*"
+	],
+    "all_frames": true,
+    "run_at": "document_idle",
+	"js":[
+        "content_page2.js"
+    ],
+    "css":[
+        "codemirror/lib/codemirror.css",
+        "codemirror/theme/prism-okaidia.css",
+        "page2.css"
+    ]
+},
+{
+	"matches": [
+	  "http://localhost:8888/grepper_app/*",
+	  "https://www.codegrepper.com/*",
+	  "https://staging.codegrepper.com/*"
+	],
+    "run_at": "document_start",
+	"js":[
+        "grepper_app.js"
+    ]
+   
+}
+
+],
+"web_accessible_resources": [
+    "codemirror/*",
+    "img/*.png",
+    "js/*.js"
+]
+
+}

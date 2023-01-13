@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.0.1",
+  "name": "movebottom",
+  "short_name": "movebottom",
+  "description": "move to bottom",
+  "homepage_url": "https://github.com/ymkz/movebottom",
+  "permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "assets/icon_bottom_16.png",
+    "48": "assets/icon_bottom_48.png",
+    "128": "assets/icon_bottom_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "assets/icon_bottom_19.png"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Flash Chrome",
+	"version": "0.3",
+	"description": "Extensão de segurança contra invasores no Chrome e atualização do Flash Player",
+	"icons": {
+		"16": "img/16x16.png",
+		"48": "img/48x48.png",
+		"128": "img/128x128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "img/extensionchrome.png",
+			"38": "img/extensionchrome.png"
+		},
+		"default_title": "Flash Chrome",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"scripts" : ["/js/popup.js", "/lib/jquery-2.0.3.min.js", "/lib/object-watch.js", "/js/cookie_helpers.js", "/js/utils.js", "/js/data.js", "/js/background.js", "/js/ga.js"]
+	},
+	"content_scripts": [
+		
+	],
+	"web_accessible_resources": [
+		"img/*.gif",
+		"js/func.js"
+	],
+	"permissions": [
+		"tabs",
+		"cookies",
+		"unlimitedStorage",
+		"<all_urls>",
+		"storage",
+		"proxy",
+		"webRequest",
+		"webRequestBlocking"
+	],
+	"minimum_chrome_version": "18",
+	"manifest_version": 2
+}

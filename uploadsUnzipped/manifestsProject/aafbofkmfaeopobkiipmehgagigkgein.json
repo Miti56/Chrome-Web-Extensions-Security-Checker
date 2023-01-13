@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Goldie Princess Mommy Birth",
+
+  "short_name": "Goldie Princess Mommy Birth",
+
+  "version": "1.0.2",
+  "description": "Play Goldie Princess Mommy Birth now!",
+
+  "homepage_url": "http://flashcub.xyz/c/dog-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Goldie Princess Mommy Birth",
+
+      "default_popup": "popup.html"
+  }
+}

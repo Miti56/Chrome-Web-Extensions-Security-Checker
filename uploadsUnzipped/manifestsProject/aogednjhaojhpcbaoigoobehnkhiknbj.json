@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "version": "1.4",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "description": "__MSG_appDesc__",
+  
+ 
+  "permissions": [
+    "activeTab"
+  ],
+
+  "icons": {
+      "128": "icons/ainsta-128.png",
+      "48": "icons/ainsta-48.png",
+	  "16": "icons/ainsta-16.png"
+   },
+
+   
+  "browser_action": {
+    "default_title": "Advanced Instagram enabled Copy Text. \n\nPlease Reload page for the first time!",
+	 "default_icon": "icons/ainsta-64.png"
+  },
+   
+   "content_scripts": [ {
+      "js": [ "script.js" ],
+      "matches": [ "https://instagram.com/*", "https://www.instagram.com/*" ]
+   } ]
+
+
+}

@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Conector para Plataformas IOIO",
+  "description": "Permite conectar plataformas IOIO con sitios Web.",
+  "version": "0.0.1",
+  "options_page" : "settings.html",
+  "icons": {"48":"images/wplatform.png"},
+  "browser_action": {
+    "default_icon": {
+    "19": "images/icon_offline19.png",
+    "38": "images/icon_offline38.png"
+    },
+    "default_popup": "popup.html",
+    "default_title" : "Plataforma IOIO (sin conexion)"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "file://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches" : ["<all_urls>"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["webscale.js", "app.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": ["images/*.png"]
+  
+}

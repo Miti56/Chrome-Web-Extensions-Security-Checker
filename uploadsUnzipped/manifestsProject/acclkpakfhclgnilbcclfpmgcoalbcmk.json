@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Reminder",
+  "short_name": "Reminder",
+  "version": "1.0.0",
+  "version_name": "v1.0",
+  "description": "Reminds you about your todos via desktop notifications",
+  "icons": { "16": "assets/icons/reminder-logo-16x16.png",
+          "48": "assets/icons/reminder-logo-48x48.png",
+          "128": "assets/icons/reminder-logo-128x128.png" },
+  "permissions": ["notifications", "background"],
+  "background": {"scripts": ["js/notification.min.js"]},
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": {
+            "19": "assets/icons/reminder-logo-19x19.png",
+            "38": "assets/icons/reminder-logo-38x38.png"
+          },
+    "default_popup": "reminder.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "assets/images/alarm_48x48.png", "assets/images/success_green_thumb_48_48.png"
+  ]
+}

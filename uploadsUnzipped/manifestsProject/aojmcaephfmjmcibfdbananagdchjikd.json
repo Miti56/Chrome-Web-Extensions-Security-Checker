@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "GmailTracker: Email Tracking and more",
+    "description": "Make your email communication more powerful with features like email tracking and scheduling.",
+    "version": "2.1",
+    "default_locale": "en",
+    "icons": {
+        "16": "icons/16x16.png",
+        "32": "icons/32x32.png",
+        "48": "icons/48x48.png",
+        "64": "icons/64x64.png",
+        "128": "icons/128x128.png"
+    },
+    "browser_action": {
+        "default_icon": "icons/browser_action_icon.png",
+        "default_title": "Gmail plugin for GmailTrack"
+    },
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "js/lib/underscore-min.js",
+            "js/lib/socket.io.js",
+            "js/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://mail.google.com/*",
+                "https://inbox.google.com/*"
+            ],
+            "js": [
+                "js/timezone.js",
+                "js/shapp.js",
+                "js/shapp_db_api.js",
+                "js/lib/inboxsdk.js",
+                "js/lib/auto-complete.js",
+                "js/features/welcome_compose.js",
+                "js/features/helpers.js",
+                "js/features/schedule_dropup.js",
+                "js/features/gmail-compose-encoder.js",
+                "js/elements.js",
+                "js/content.js",
+                "js/lib/moment.js",
+                "js/lib/moment-timezone.js",
+                "js/lib/flat_picker.js",
+                "js/lib/minMaxTimePlugin.js",
+                "js/lib/underscore-min.js"
+            ],
+            "css": [
+                "css/compose_window.css",
+                "css/content.css",
+                "css/popup.css",
+                "css/flat_picker.css",
+                "css/auto-complete.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+            "https://mail.google.com/",
+            "https://inbox.google.com/",
+            "https://fonts.gstatic.com/s/materialicons/",
+            "notifications",
+            "storage",
+            "webRequest",
+            "webRequestBlocking",
+            "*://*.matmiho.com/*",
+            "*://*.googleusercontent.com/*"
+    ],
+    "web_accessible_resources": [
+        "icons/*",
+        "images/*"
+    ]
+}

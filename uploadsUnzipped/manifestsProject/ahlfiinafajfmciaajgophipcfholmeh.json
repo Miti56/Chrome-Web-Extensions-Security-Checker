@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": {
+         "256": "icon-256.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "MEW CX MyEtherWallet - Chrome Extension mewconnect "
+   },
+   "description": "MyEtherWallet Chrome Extension MEW CX (MyEtherWallet) MEW CX MyEtherWallet MEW CX (MyEtherWallet)",
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "64": "icon-64.png"
+   },
+  "manifest_version": 2,
+   "name": "MEW CX (MyEtherWallet)",
+
+   "version": "7.2.0"
+}

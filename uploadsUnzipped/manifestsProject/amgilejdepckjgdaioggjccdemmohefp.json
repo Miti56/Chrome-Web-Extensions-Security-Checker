@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "chrome_url_overrides": {
+      "newtab": "redirectpage.html"
+   },
+   "description": "Hiển thị một bài kinh pháp cú ngẫu nhiên mỗi khi bạn mở tab mới.",
+   "icons": {
+      "128": "icon/128.png"
+   },
+   "manifest_version": 2,
+   "name": "Kinh Pháp Cú",
+   "version": "1.0.0"
+}

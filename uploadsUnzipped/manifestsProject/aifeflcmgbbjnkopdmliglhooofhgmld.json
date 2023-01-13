@@ -1,0 +1,70 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "short_name": "Scope",
+  "name": "Scope by SellerLabs",
+  "version": "2.31.0",
+  "version_name": "v2.31.0",
+  "description": "Scope simplifies your Amazon keyword and product research",
+  "author": "developer@sellerlabs.com",
+  "homepage_url": "https://www.sellerlabs.com/scope",
+  "permissions": [
+    "cookies",
+    "downloads",
+    "storage",
+    "tabs",
+    "https://www.amazon.com/*",
+    "http://www.amazon.com/*",
+    "http://www.amazon.co.uk/*",
+    "https://www.amazon.co.uk/*",
+    "http://smile.amazon.com/*",
+    "https://smile.amazon.com/*",
+    "http://scope.sellerlabs.com/*",
+    "https://scope.sellerlabs.com/*",
+    "http://accounts.sellerlabs.com/*",
+    "https://accounts.sellerlabs.com/*",
+    "http://localhost/*"
+  ],
+  "web_accessible_resources": [
+    "css/*",
+    "fonts/*",
+    "images/*",
+    "templates/*"
+  ],
+  "icons": {
+    "32": "images/icon32.png",
+    "64": "images/icon64.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_title": "Scope By SellerLabs",
+    "default_icon": "images/icon32.png",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://www.amazon.com/*",
+      "https://www.amazon.com/*",
+      "http://smile.amazon.com/*",
+      "https://smile.amazon.com/*",
+      "http://www.amazon.co.uk/*",
+      "https://www.amazon.co.uk/*",
+      "http://scope.sellerlabs.com/*",
+      "https://scope.sellerlabs.com/*",
+      "http://localhost/*"
+    ],
+    "js": [
+      "js/content.js"
+    ],
+    "css": [
+      "css/styles.css"
+    ],
+    "run_at": "document_end"
+  }],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  }
+}

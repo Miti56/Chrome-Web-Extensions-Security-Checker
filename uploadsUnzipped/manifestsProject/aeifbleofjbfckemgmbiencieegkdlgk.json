@@ -1,0 +1,26 @@
+{
+  "browser_action": {
+    "default_icon": "icons/furylogo.png",
+    "default_title": "Ignoramos las X-Frame-Options",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "description": "Descarta los headers HTTP de X-Frame-Options, permitiendo que todas las páginas sean iframed.",
+  "manifest_version": 2,
+  "name": "Fury ignore X-Frame-Options",
+  "icons": {
+    "48": "icons/furylogo.png",
+    "96": "icons/furylogo.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "update_url": "http://clients2.google.com/service/update2/crx",
+  "version": "1.0"
+}

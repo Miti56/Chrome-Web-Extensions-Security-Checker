@@ -1,0 +1,16 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.freecodeformat.com/indexnumber.php"
+      },
+      "urls": [ "http://www.freecodeformat.com/indexnumber.php" ]
+   },
+   "description": "Number Converter for developers, including Hex decimal Octal Binary string converter and so on! ",
+   "icons": {
+      "128": "icon-128.png"
+   },
+   "manifest_version": 2,
+   "name": "Number Converter online",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

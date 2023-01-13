@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "parental control",
+  "version": "0.5.0",
+  "manifest_version": 2,
+  "description": "HTTP Request redirector.",
+  "default_locale": "en",
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": ["common/punycode.min.js", "common/info.js", "common/utils.js", "background/default.js", "background/upgrade.js", "background/index.js"]
+  },
+  "options_page": "options/index.html",
+  "permissions": ["webRequest", "<all_urls>", "webRequestBlocking", "downloads"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

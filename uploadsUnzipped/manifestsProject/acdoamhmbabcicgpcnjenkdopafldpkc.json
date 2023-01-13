@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "aRede | Aconteceu. Tá na rede!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Acesse as últimas notícias do portal aRede direto em seu navegador.",
+  "icons": { "30": "img/botao_arede_30x30.png", "128": "img/botao_arede_128x128.png", "128": "img/botao_arede_16x16.png"},
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": ["*://*.arede.info/", "tabs", "webNavigation"],
+  "browser_action": {
+    "default_title": "aRede | Aconteceu. Tá na rede!",    
+    "default_icon": "img/botao_arede_16x16.png",
+    "default_popup": "arede.html"
+  },
+  "short_name": "aRede",
+  "author": "Carlos Henrique Lavezo"
+}	

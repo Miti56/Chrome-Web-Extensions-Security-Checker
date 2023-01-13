@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+    "name": "Cookies handler",
+    "description": "Handle incoming cookies",
+    "version": "1.0.4",
+	"background":
+	{
+		"scripts": ["background.js"]
+    },
+    "content_scripts": [{
+		"matches": ["<all_urls>"],		
+		"js": ["popup.js"]
+	  }],
+    "browser_action": {
+        "name": "Handle incoming cookies",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "icon16.png"
+	},
+	"permissions":
+	[
+	    "cookies",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"<all_urls>"
+	]
+}

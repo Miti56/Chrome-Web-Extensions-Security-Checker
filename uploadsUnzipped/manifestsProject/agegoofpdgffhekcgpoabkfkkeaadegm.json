@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"description": "A Tribute To NBA basketball and Los Angeles Clippers star Blake Griffin.",
+  "version": "1.8", "manifest_version": 2,
+  "name": "Blake Griffin",
+  "short_name": "Blake Griffin",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/frame.png",
+      "theme_ntp_background" : "images/blakegriffin.png",
+      "theme_tab_background" : "images/tab.png",
+      "theme_toolbar" : "images/toolbar.png",
+      "theme_ntp_attribution" : "images/logo.png"  	
+    },
+    "colors" : {
+	"ntp_background": [0 , 0 , 0],
+    "ntp_header": [255,255,255],
+	"ntp_link": [255,255,255], 
+	"ntp_section": [255,255,255], 
+	"ntp_section_link": [255,255,255],
+	"ntp_section_link_underline": [255,255,255], 
+	"ntp_section_text": [255 , 255 , 255],
+	"ntp_text": [255,255,255], 
+	"bookmark_text": [225,225,225],
+	"tab_background_text": [50 , 50 , 50], 
+	"tab_text": [225,225,225],
+	"button_background": [0 , 0 , 0], 
+	"control_background": [0 , 0 , 0],   
+	"frame": [0 , 0 , 0],
+	"frame_inactive": [0 , 0 , 0],
+	"frame_incongnito": [0 , 0 , 0],
+	"frame_incognito_inactive": [0 , 0 , 0],
+	"toolbar": [218 , 15 , 15] 
+    },
+    "tints" : {
+		"background_tab": [0.99, 0.99, 0.99],
+		"buttons": [0.99, 0.99, 0.95],
+		"frame_inactive": [0.00, 0.00, 0.00],
+		"frame_incongnito": [0.00, 0.00, 0.00], 
+		"frame_incognito_inactive": [0.00, 0.00, 0.00] 
+    },
+    "properties" : {
+     	"ntp_background_alignment" : "center",
+	"ntp_background_repeat": "no-repeat",
+	"ntp_logo_alternate" : 0
+    }
+  }
+}

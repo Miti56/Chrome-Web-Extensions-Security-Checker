@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "楽天市場へ",
+  "description": "素早く楽天市場へアクセスしてお買い物！",
+  "version": "1.5",
+  "app": {
+    "launch": {
+      "web_url": "http://rakuten-app.sppig.com/"
+    }
+  },
+   "icons": { "128": "128.png" },
+  "manifest_version": 2
+}

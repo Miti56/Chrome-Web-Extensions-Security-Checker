@@ -1,0 +1,29 @@
+{
+  "version": "3.4.2",
+  "manifest_version": 2,
+  "name": "Avito Доставка+",
+  "description": "Обновленное расширение для покупок в интернете. Совершайте покупки с надежной защитой от мошенничества",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "page_action": {
+    "default_icon": "1.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.avito.ru/*",
+        "https://*.avito.ru/*"
+      ],
+      "js": [
+        "jquery.js",
+        "main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

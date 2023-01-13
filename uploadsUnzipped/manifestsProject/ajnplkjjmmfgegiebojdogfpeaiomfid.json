@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "New images on tab",
+    "version": "1.0",
+    "description": "This extension will show new images when tabs opened",
+    "browser_action": {
+        "default_title": "shows images"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+  "permissions": [
+   "tabs","storage"
+  ],
+    "background": {
+        "scripts": ["eventPage.js"],
+        "persistent": false
+      }
+}

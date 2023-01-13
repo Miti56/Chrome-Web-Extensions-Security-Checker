@@ -1,0 +1,4 @@
+{"manifest_version": 2, "default_locale": "en", "update_url": "https://clients2.google.com/service/update2/crx", "description": "__MSG_addinfo__", "background": {"scripts": ["my_js.js"]},
+ "name": "Incredibles 2 Themes", "browser_action": {"default_icon": "128-image.png", "default_title": "Incredibles 2 Themes"},
+ "icons": {"128": "128-image.png"},
+ "version": "3.0.1", "chrome_url_overrides": {"newtab": "page.html"}}

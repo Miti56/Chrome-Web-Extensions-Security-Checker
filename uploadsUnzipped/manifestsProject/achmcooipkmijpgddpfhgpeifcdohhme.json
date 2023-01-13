@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Zetseat Apostolic Reformation Church",
+  "version": "1.0",
+  "manifest_version":2,
+  "description": "Zetseat Apostolic Reformation Church 'Preparing a generation to Christ.",
+  "icons": {
+    "128": "zetseat-logo.png"
+  },
+  "app": {
+  "urls": [
+    "http://www.zetseatchurch.org/"
+  ],
+  "launch":{
+  "web_url": "http://www.zetseatchurch.org/"
+  }
+  }
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Slither.io - Install Game",
+  "version": "1.5",
+  "manifest_version": 2,
+  "description": "Enjoy a twist on an old classic phone game snake with Slither.io!",
+  "homepage_url": "http://slither.littlealchemyunblocked.net/",
+  "icons": {
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/22x22.png",
+    "default_title": "Slither.io",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://slither.littlealchemyunblocked.net/"
+  ]
+}

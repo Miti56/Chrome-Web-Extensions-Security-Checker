@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "js/background.js", "js/lib/jquery-1.8.2.min.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "js/lib/jquery-1.8.2.min.js", "js/contentScript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+   "description": "¿Cansado de los anuncios del PRI en Facebook? con 'suPRImelo', puedes bloquear y eliminar sus anuncios y nunca verlos de nuevo!",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon.png",
+      "48": "img/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "suPRImelo",
+   "offline_enabled": true,
+   "page_action": {
+      "default_icon": {
+         "19": "img/icon19.png",
+         "38": "img/icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "suPRImelo"
+   },
+   "permissions": [ "tabs", "notifications", "webRequest", "*://*/*", "contextMenus", "webNavigation", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

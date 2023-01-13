@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Slack Tracker",
+	"description": "A useful tracker to control how much you've slacked",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+
+	"options_page" : "options.html",
+
+	"background": {
+		"scripts": ["eventPage.js"],
+		"persistent": false
+	},
+
+	"permissions": [
+		"storage",
+		"notifications",
+		"contextMenus"
+	]
+}

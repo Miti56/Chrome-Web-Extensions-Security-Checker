@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "SJW Bot -- Browse Twitter Conservatively",
+  "short_name": "SJW Bot",
+  "description": "Free tool that helps you identify and avoid dangerous SJWs on Twitter.",
+  "browser_action": {
+     "default_icon": "sjw128.png"
+   },
+  "version": "0.2",
+  "icons": { "16": "sjw16.png",
+           "48": "sjw48.png",
+          "128": "sjw128.png" },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "background":{
+    "scripts": ["jquery.min.js", "icon.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.twitter.com/*",
+        "https://*.twitter.com/*"
+        ],
+      "js":["jquery.min.js","content.js" ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "app": {
+    "urls": ["http://www.duckiedeck.com/play/paper-bits?ref\u003dcws"],
+    "launch": {"web_url": "http://www.duckiedeck.com/play/paper-bits?ref\u003dcws"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Try to compose a beautiful mosaic by pasting little colorful squares together.",
+  "name": "Decorating Games - Paper Bits at Duckie Deck",
+  "permissions": ["notifications"],
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "1.1"
+}

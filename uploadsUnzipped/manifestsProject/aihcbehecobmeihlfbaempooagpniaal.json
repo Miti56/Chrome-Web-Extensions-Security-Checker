@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "todo",
+    "description": "keep track of things",
+    "author": "Akshay Shekhawat",
+    "version": "0.0.8",
+    "oauth2": {
+        "client_id": "745206349349-dnvt5m056s1c6q0ld5ke2g7eg6sc1flq.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar.readonly"
+        ]
+    },
+    "chrome_url_overrides" : {
+        "newtab": "index.html"
+    },
+    "permissions": ["activeTab", "storage", "identity"]
+}

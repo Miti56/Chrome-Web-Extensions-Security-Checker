@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Inline Image Converter",
+  "description": "Converts external images to inline(data URI) images.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "Inline Image Converter",
+    "default_popup": "html/popup.html"  
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "background",
+    "<all_urls>"
+  ],
+   "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "icons": { 
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "web_accessible_resources": [
+    "js/*.js"
+  ]
+}

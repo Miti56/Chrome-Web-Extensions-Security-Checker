@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "空气的博客",
+  "description": "打开空气的博客",
+  "version": "1.0",
+  "icons": { "128": "ico128.png"},
+  "manifest_version": 2,
+  "app": {
+    "launch": {"web_url": "http://wzh.me/"}
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

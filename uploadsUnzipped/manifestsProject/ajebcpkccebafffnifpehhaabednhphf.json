@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background":
+   {
+      "persistent": true,
+      "scripts": ["jquery.js","background.js"]
+   },
+   "popup":
+   {   		"scripts": ["jquery.js","firstground.js","game_table.js"],
+        "css": ["style.css"]   },
+   "description": "BePlGa Record",
+   "externally_connectable":
+   {
+      "matches": "*://beplga.com/*"
+   },
+   "icons":
+   {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "49": "icon49.png",
+      "19": "icon_recording19.png",
+      "38": "icon_recording38.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "34",
+   "name": "BePlGa.com Desktop Streamer",
+   "permissions": ["storage",
+   				   "desktopCapture",
+   				   "https://beplga.com/*",
+   				   "tabs",
+   				   "notifications"],
+   "version": "0.3.3",
+   "browser_action": {
+       "default_title": "Расширение для стриминга Вашей игры на ресурс BePlGa",
+       "default_icon": "icon49.png",
+       "default_popup": "popup.html"
+    },
+    "content_scripts":
+    [
+    {
+      "matches": ["https://beplga.com/*"],
+      "js": ["content_script.js"]
+    }
+    ],
+    "externally_connectable":
+    {
+ 	"matches": ["https://beplga.com/*"]
+	},
+	"content_security_policy": "script-src 'unsafe-eval' 'unsafe-inline'; object-src 'self'"
+}

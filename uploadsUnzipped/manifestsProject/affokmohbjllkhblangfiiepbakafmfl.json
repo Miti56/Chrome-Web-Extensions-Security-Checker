@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"Watch Red Sparrow Online full Movie Free HD","version":"1.0","description":"Watch Red Sparrow Online full Movie Free HD","manifest_version":2,"theme":{"images":{"theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.png"},"colors":{"frame":[203,203,203],"toolbar":[204,104,104],"tab_text":[48,4,4],"tab_background_text":[48,4,4],"bookmark_text":[48,4,4],"ntp_background":[255,255,255],"ntp_text":[48,4,4],"button_background":[203,203,203,0.9]},"tints":{"buttons":[0,0,0.44]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}}}

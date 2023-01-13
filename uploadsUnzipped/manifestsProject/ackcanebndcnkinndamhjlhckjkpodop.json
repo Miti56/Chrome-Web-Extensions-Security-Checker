@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "新疆度盘传送门",
+  "description": "新疆地区打不开度盘,此插件可以将度盘转到第三方来解析.",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "background", "tabs", "webRequest", "webRequestBlocking", "*://pan.baidu.com/s/*"  
+   ]
+}

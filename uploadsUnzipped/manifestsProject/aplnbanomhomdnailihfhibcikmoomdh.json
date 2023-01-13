@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "최강의군단 크롬 플러그인(다음)",
+  "short_name": "최강의군단 크롬 플러그인(다음)",
+  "version": "1.53",
+  "manifest_version": 2,
+
+  "description": "Launching HeroWarz Launcher",
+  "background": {
+    "persistent": false,
+    "scripts": ["exec.js"]
+  },
+  "page_action": {
+    "default_title": "최강의군단 실행(다음)"
+  },
+  "icons": {
+    "16" : "hw_icon16.png",
+    "48" : "hw_icon48.png",
+    "128": "hw_icon128.png"
+  },
+  "externally_connectable": {
+    "matches": ["*://localhost/*","*://*.game.daum.net/*"]
+  },
+  "permissions": [
+    "nativeMessaging"
+  ]
+}

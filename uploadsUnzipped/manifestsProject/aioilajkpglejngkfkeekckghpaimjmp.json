@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_app_name__",
+  "version": "0.5.14",
+  "manifest_version": 2,
+  "short_name": "__MSG_app_short_name__",
+  "description": "__MSG_app_description__",
+  "default_locale": "en",
+  "author": "Tennison Chan",
+  "homepage_url": "https://pxbomb.com",
+  "minimum_chrome_version": "26",
+  "icons": {
+    "16": "assets/icons/icon_pb_16x16.png",
+    "48": "assets/icons/icon_pb_48x48.png",
+    "128": "assets/icons/icon_pb_128x128.png"
+  },
+  "background": {
+    "page": "html/background.html"
+  },
+  "browser_action": {
+    "default_title": "__MSG_browser_action_title__",
+    "default_icon": "assets/icons/icon_on.png"
+  },
+  "sandbox": {
+    "pages": [
+      "html/iframe/template.html"
+    ]
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "run_at": "document_end",
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/pixelbomb.js"
+      ],
+      "css": [
+        "css/pxlbomb.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "html/iframe/*",
+    "assets/images/pxlButton/pxlButton.gif",
+    "assets/images/pxlButton/pxlButton-off.png",
+    "assets/icons/pxlbomb.png"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "webRequest",
+    "<all_urls>"
+  ]
+}

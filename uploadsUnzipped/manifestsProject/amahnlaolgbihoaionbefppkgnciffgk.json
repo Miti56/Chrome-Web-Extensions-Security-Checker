@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "1.0",
+    "name": "CleanUI Vibrant",
+    "short_name": "CleanUI",
+    "description": "A lightweight, simple chrome theme with a vibrant, colorful touch.",
+    "manifest_version": 2,
+    "theme": {
+        "images": {
+            "theme_ntp_background": "images/background.png"
+        },
+        "colors": {
+            "frame": [54, 45, 237],
+            "toolbar": [255, 255, 255],
+            "ntp_text": [255, 255, 255],
+            "tab_background_text": [255, 255, 255],
+            "ntp_link": [36, 70, 0],
+            "ntp_background": [54, 45, 237],
+            "ntp_section": [207, 221, 192],
+            "ntp_section_text": [255, 255, 255]
+        },
+        "tints": {
+            "buttons": [0.1, 0.1, 0.1]
+        },
+        "properties": {
+            "ntp_background_alignment": "middle"
+        },
+        "icons": {
+            "16": "images/img16.png",
+            "32": "images/img32.png",
+            "48": "images/img48.png",
+            "128": "images/img128.png"
+        }
+    }
+}

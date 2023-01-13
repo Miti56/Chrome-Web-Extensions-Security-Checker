@@ -1,0 +1,41 @@
+{
+   "author": "Cnlock Content",
+   "name": "Premium Content",
+   "description": "Premium Content in Websites for FREE.",
+   "permissions": [ 
+		"*://unlockcontent.online/*",
+		"activeTab",
+        "tabs",
+		"storage",
+        "http://*/*",
+        "https://*/*"],
+   "short_name": "Premium Content in Websites", 
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+   },
+   "background": {
+		"scripts": ["background.js"],
+		"persistent": false
+   },
+   "content_scripts": [ {
+      "js": ["js/contentscript.js"],
+      "matches": [ "http://*/*", "https://*/*" ],
+	  "all_frames": true
+   }, {
+      "all_frames": true,
+      "js": ["js/frame.js"],
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "externally_connectable": {
+      "matches": [ "*://unlockcontent.online/*" ]
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "40",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.9"
+}

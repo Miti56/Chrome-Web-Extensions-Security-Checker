@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "価格比較 最安値 検索ツール : 最安サーチ.com",
+  "version": "1.4",
+  "description": "Amazon (アマゾン)、楽天市場、ヤフーショッピング、セブンイレブン、ポンパレモールの最安値を検索できる価格比較サイト【最安サーチ.com】を、より速く便利に使える拡張機能です。「テキストを選択、右クリックメニューで検索」するだけで、最安値を検索できます",
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "16": "img/icon_16.png",
+    "48": "img/icon_48.png",
+    "128": "img/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "『最安サーチ.com』価格比較チェッカー",
+    "default_icon": "img/icon_128.png"
+  }
+}

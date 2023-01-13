@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Openmat",
+"description": "Your martial arts training companion",
+"version": "0.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"http://openmat.training/"
+],
+"launch": {
+"web_url": "http://openmat.training/"
+}
+}
+}

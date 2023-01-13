@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"Calculator","description":"","version":"2","app":{"urls":["https://script.google.com/macros/s/AKfycbzscC0bAD3dvS1oGhgpuD00poSc8NxconM-xfkvfRb4CH2s6evw/exec"],"launch":{"web_url":"https://script.google.com/macros/s/AKfycbzscC0bAD3dvS1oGhgpuD00poSc8NxconM-xfkvfRb4CH2s6evw/exec"}},"icons":{"128":"script-icon.png"},"manifest_version":2}

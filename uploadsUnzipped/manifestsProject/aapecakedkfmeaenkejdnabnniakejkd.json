@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Menu Trailers",
+  "version": "0.1",
+  "description": "Fique por dentro das novidades do cinema",
+  "permissions": [
+    "storage", "<all_urls>",    "webRequest",    "webRequestBlocking",    "background",    "activeTab" ],
+   "content_scripts": [ {
+      "js": ["insere.js" ],
+      "matches": [ "\u003Call_urls>" ],
+	  "run_at": "document_end"
+   } ],
+   "icons": {
+      "128": "128x128.png",
+      "48": "48x48.png"
+   },
+  "browser_action": {
+      "default_title": "Menu Trailers",
+	  "short_name": "Menu Trailers",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}

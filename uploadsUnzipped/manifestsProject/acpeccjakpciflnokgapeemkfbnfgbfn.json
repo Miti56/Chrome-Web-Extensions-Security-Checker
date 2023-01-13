@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "People Search",
+  "description": "Find contact information for over 90% of all US adults. ",
+  "version": "2.1.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://iphoneseek.com/"
+    ],
+    "launch": {
+      "web_url": "http://iphoneseek.com"
+    }
+  }
+}

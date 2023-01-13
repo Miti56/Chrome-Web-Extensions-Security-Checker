@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "name": "Кнопки социальных сетей",
+  "version": "1.2",
+  "description": "Кнопки для быстрого доступа к любимым социальным сетям",
+  "web_accessible_resources": ["styles/*"],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*"
+      ],
+      "js": [ "scripts/content.js" ],
+      "css":["styles/style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://*/*"
+  ],
+  "icons": {
+    "128": "okvk.png"
+  }
+
+}

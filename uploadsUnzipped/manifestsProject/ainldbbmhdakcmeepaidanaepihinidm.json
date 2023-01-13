@@ -1,0 +1,32 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Sword art online 1440*900",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "sword art online theme",
+  "theme": {"images" : {
+      "theme_frame" : "images/theme_frame_sao.png", 
+      "theme_toolbar" : "images/theme_toolbar_sao.png",
+      "theme_tab_background" : "images/theme_tab_background_sao.png",
+      "theme_ntp_background" : "images/theme_ntp_background_sao.png"
+    },
+    "colors" : {
+      "frame" : [66, 116, 201],
+      "toolbar" : [7, 72, 169],
+      "ntp_text" : [237, 96, 14],
+      "tab_text" : [255, 223, 223],
+      "tab_background_text" : [203, 244, 249],
+      "bookmark_text" : [255, 255, 255],
+      "ntp_background" : [255, 255, 255],
+      "ntp_link" : [36, 70, 0],
+      "ntp_section" : [207, 221, 192],
+      "button_background" : [0, 0, 0, 0]
+    },
+    "tints" : {
+      "buttons" : [0, 0, 1]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom"
+    }
+  }
+}

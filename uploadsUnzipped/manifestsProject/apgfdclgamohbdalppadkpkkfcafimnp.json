@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Job4Joy.com",
+  "description": "find job & hire freelancers",
+  "author": "Job4Joy.com",
+  "homepage_url": "https://job4joy.com/",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://job4joy.com/"
+    ],
+    "launch": {
+      "web_url": "https://job4joy.com/"
+    }
+  }
+}

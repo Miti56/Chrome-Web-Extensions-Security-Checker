@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "http cats",
+    "description": "A simple chrome extension for http cats",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "http cats"
+    },
+    "icons": {
+        "16": "httpstatus-icon.png",
+        "48": "httpstatus-icon.png",
+        "128": "httpstatus-icon.png"
+    }
+}

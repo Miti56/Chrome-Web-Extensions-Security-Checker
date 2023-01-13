@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "name": "Cameras RJ",
+    "version": "0.0.3",
+    "manifest_version": 2,
+
+    "description": "Cameras da CET-RIO (CET-RJ) em tempo real. Condições do trânsito ao vivo gratuitamente.",
+    "icons": {
+        "128": "icon_128.jpg"
+    },
+
+    "app": {
+        "urls": [
+            "http://www.camerasrj.com.br/"
+        ],
+        "launch": {
+            "web_url": "http://www.camerasrj.com.br/"
+        }
+    }
+}
+

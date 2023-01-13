@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Singapore Cruises",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Singapore Cruises offered by leading cruise liners Dream Cruises, Royal Caribbean, Star Cruises. Book Singapore Cruises Online.",
+  "homepage_url": "https://www.mydreamholiday.in/cruise-package/singapore-cruises",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  }
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ArkhamNetwork",
+    "description": "An easy tool to quickly access to the voting links, total players online, and a list of the staff!",
+    "version": "1.2",
+    "author": "SquareboxMedia",
+    "permissions": ["https://www.arkhamnetwork.org/chrome_extension.php"],
+    "browser_action": {
+        "default_icon": "images/icon128.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "images/icon128.png",
+        "48": "images/icon48.png",
+        "16": "images/icon16.png"
+    }
+}

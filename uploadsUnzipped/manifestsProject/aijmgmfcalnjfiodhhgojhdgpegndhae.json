@@ -1,0 +1,21 @@
+{"icons": {"128": "128-main.png"}, 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"version": "3.8.1", 
+
+"chrome_url_overrides": {"newtab": "page.html"}, 
+
+"name": "__MSG_extHead__", 
+
+"background": {"scripts": ["bgscript.js"]}, 
+
+"manifest_version": 2, 
+
+"description": "Star Wars 'Rogue One' New Tab - Get a Better Looking Browser With Star Wars 'Rogue One' Themes Extension", 
+
+"browser_action": {"default_icon": "128-main.png", 
+
+"default_title": "Star Wars 'Rogue One' Wallpapers & New Tab"}, 
+
+"default_locale": "en"}

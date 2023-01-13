@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "aMarkdownWriter",
+    "description": "aMarkdownWriter app.",
+    "version": "0.2",
+    "manifest_version": 2,
+    "minimum_chrome_version": "31",
+    "default_locale": "en",
+    "offline_enabled": true,
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "permissions": [ "clipboardRead", "clipboardWrite", "storage", "unlimitedStorage", "contextMenus", "notifications", {
+        "fileSystem": ["write", "retainEntries", "directory"]
+    } ],
+
+    "icons": {
+        "128": "assets/icon/128x128.png",
+        "16": "assets/icon/16x16.png",
+        "256": "assets/icon/256x256.png",
+        "32": "assets/icon/32x32.png",
+        "48": "assets/icon/48x48.png",
+        "64": "assets/icon/64x64.png",
+        "96": "assets/icon/96x96.png"
+    }
+}

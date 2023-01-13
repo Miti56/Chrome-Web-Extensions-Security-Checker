@@ -1,0 +1,24 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "installer.js" ]
+      }
+   },
+   "description": "Emoji Keyboard (2017) by EmojiOne Bitmoji Emojicopy",
+   "file_handlers": {
+      "text": {
+         "types": [ "application/javascript", "application/json", "application/x-shellscript", "application/xml", "text/*" ]
+      }
+   },
+   "icons": {
+      "128": "Emoji_Keyboard_128.png"
+   },
+   "container": "GOOGLE_DRIVE",
+   "manifest_version": 2,
+   "name": "Emoji Keyboard by EmojiOne Bitmoji Emojicopy",
+   "permissions": [ "clipboardRead", "clipboardWrite","browser", "alarms", "contextMenus", "storage", "notifications", "syncFileSystem", "app.window.fullscreen.overrideEsc", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   } ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

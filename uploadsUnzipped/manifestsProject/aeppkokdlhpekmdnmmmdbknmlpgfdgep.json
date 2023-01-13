@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hotmail available Checker",
+  "version": "0.1",
+  "manifest_version" : 2,
+  "description": "Hotmail available Checker By -Cyber hermit-",
+  
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background" : {
+    "scripts" : ["jquery-3.4.1.min.js","background.js"]
+  },
+  "content_scripts": [
+    {
+      "css":    ["bootstrap.min.css"],
+      "matches": ["http://*/*"],  
+      "js": ["work.js","jquery-3.4.1.min.js","bootstrap.min.js"]
+    }
+    ], 
+  "browser_action": {
+    "default_icon": "icon128.png"
+  },
+  "web_accessible_resources": [
+    "index.html"
+],
+  "permissions": ["*://*.login.live.com/*","*://*.funee.xyz/*","storage","cookies"],
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'"
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Webhook selection helper",
+	"version": "1.2",
+	"description": "",
+	"icons": { "128": "icon128.png", "48": "icon48.png" },
+	"web_accessible_resources" : ["/selector.js"],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://developers.facebook.com/apps/*"
+			],
+			"js": ["inject.js"],
+			"run_at": "document_start"
+		}
+	],
+	"manifest_version": 2
+}

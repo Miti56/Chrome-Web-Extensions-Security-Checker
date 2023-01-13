@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "elmaelma.com",
+  "short_name" : "elmaelma",
+  "version" : "0.7",
+  "manifest_version" : 2,
+  "description" : "Bu Elma'da kadınlar için her şey var.",
+  "browser_action" : {
+    "default_icon" : "48.png",
+    "default_popup" : "haber.html"
+  },
+  "icons" : {
+    "16" : "16.png",
+    "48" : "48.png",
+    "128" : "128.png"
+  },
+  "background" : { "scripts" : ["eklenti.js"] }
+}

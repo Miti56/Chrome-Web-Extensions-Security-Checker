@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ECS Desktop Streamer",
+  "description": "A simple extension that allows you to stream your desktop into https://meet.enroute-computer.com",
+  "version": "1.0.2",
+  "minimum_chrome_version": "63",
+  "icons": {
+    "16": "ecs_logo-16x16.png",
+    "48": "ecs_logo-48x48.png",
+    "128": "ecs_logo-128x128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://meet.enroute-computer.com/*"
+      ]
+  }
+}

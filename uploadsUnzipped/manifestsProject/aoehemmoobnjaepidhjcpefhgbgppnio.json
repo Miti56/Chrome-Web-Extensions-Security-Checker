@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*", 
+                "https://*/*"
+            ], 
+            "all_frames": true, 
+            "run_at": "document_start", 
+            "js": [
+                "includes/content.js"
+            ]
+        }
+    ], 
+    "name": "Zen Music", 
+    "icons": {
+        "128": "icons/icon128.png", 
+        "48": "icons/icon48.png", 
+        "16": "icons/button.png"
+    }, 
+    "web_accessible_resources": [
+        "res/*", 
+        "assets/*", 
+        "icons/*"
+    ], 
+    "description": "Listen, download and share your favorite music with ZenMusic extension", 
+    "background": {
+        "page": "background.html"
+    }, 
+    "homepage_url": "http://my-zenplayer.rhcloud.com/", 
+    "version": "0.1.4", 
+    "manifest_version": 2, 
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'", 
+    "browser_action": {
+        "default_popup": "popup.html", 
+        "default_icon": "res/play.png", 
+        "default_title": "ZenMusic Ext."
+    }, 
+    "permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*", 
+        "contextMenus", 
+        "webNavigation", 
+        "cookies"
+    ]
+}

@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "deedapp per cifa",
+  "version": "2.1.1",
+  "manifest_version": 2,
+  "description": "Dona una percentuale dei tuoi acquisti online a CIFA tramite deedfactory",
+  "author": "deedfactory s.r.l.",
+
+  "icons": {
+    "16": "images/icon.16.png",
+    "48": "images/icon.48.png",
+    "128": "images/icon.128.png"
+  },
+  "browser_action": {
+    "default_icon": {"48": "images/icon.48.png",
+      "49": "images/icon.48_logged.png"
+    },
+    "default_popup": "popup.html",
+    "defaul_title": "Deedreminder"
+  },
+  "background": {
+      "page": "background.html",
+      "permanent": true
+  },
+  "content_scripts": [
+    {
+	     "matches": ["<all_urls>"],
+      "js": [
+	    "js/jquery-3.1.1.min.js",
+    "js/dfdata.js",
+    "js/jquery.urlparser.js"
+      ],
+	  "css": ["css/jquery-ui.min.css"],
+    "run_at": "document_start",
+    "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+	"dialogPopupNotLogged.html",
+	"dialogPopupLogged.html",
+  "css/main.css",
+  "css/alert.css",
+  "css/googledf.css",
+  "images/icon.18.png"
+   ],
+  "permissions": [
+    "*://*/*",
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+	"<all_urls>",
+	 "cookies",
+   "alarms",
+   "https://deedfactory.com/"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

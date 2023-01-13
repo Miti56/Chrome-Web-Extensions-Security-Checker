@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Arba++",
+  "version": "1",
+  "description": "Interface de esta decada para el sistema de arba.",
+  "manifest_version": 2,
+  "permissions": [ "webRequest", "webRequestBlocking", "http://*/*", "https://*/*" ],
+  "browser_action": {
+		"default_icon": {
+			"16": "icon-16.png",
+			"48": "icon-48.png",
+			"128": "icon-128.png"
+		}
+  },
+	"icons": {
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	},
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+	"content_scripts": [
+    {
+      "matches": [ "http://www2.arba.gov.ar/*" ], 
+      "js":      [ "index.js" ], 
+      "css":     [ "web.css", "jquery-ui.css" , "jquery-ui.css" ]
+    }
+  ]
+}

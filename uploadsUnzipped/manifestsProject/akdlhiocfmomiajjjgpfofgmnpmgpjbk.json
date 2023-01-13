@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "VitalityGames.com",
+	"description": "Free online games for everyone.",
+	"version": "1.0",
+	
+	"icons": {
+		"16": "icon_16.png",
+		"128": "icon_128.png"
+	},
+	
+	"author": "VitalityGames.com",
+	
+	"app": {
+		"urls": [
+			"http://www.vitalitygames.com/"
+		],
+		"launch": {
+			"web_url": "http://www.vitalitygames.com/"
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "JeuxMobilesTV Chrome live addon", 
+ "description": "Vous informe si la télé mobile JeuxMobilesTV est en live", 
+ "version": "1.0", 
+ "browser_action": { 
+  "default_popup": "demo.html" 
+ },
+ "icons": { 
+  "64" : "img/logo_off.png" 
+ },
+  "permissions": [
+    "notifications",
+	"storage",
+	"tabs"
+  ],
+ "background": { 
+    "scripts": ["background.js"]
+ }
+}

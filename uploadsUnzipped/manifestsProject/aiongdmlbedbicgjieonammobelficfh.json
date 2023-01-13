@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Plant Protection",
+"version": "2",
+"manifest_version": 2,
+
+
+"description": "Συνδρομητική Γεωπονική εφαρμογή για τα φυτοπροστατευτικά προϊόντα",
+"icons": {
+"16": "favicon.ico",
+"48": "vibe_48.png",
+"128": "vibe_128.png"
+},
+
+
+ "app": {
+ "urls": [
+ "https://plantpro.gr/"
+ ],
+ "launch": {
+ "web_url": "https://plantpro.gr/"
+ }
+ }
+
+}
+

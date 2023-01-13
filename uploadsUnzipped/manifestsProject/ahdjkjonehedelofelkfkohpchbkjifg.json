@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "DaygoF",
+  "description": "DaygoF",
+  "version": "0.0.0.1",
+
+  "permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+"content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["manage.js"],
+      "all_frames": true
+    }
+  ],
+  "default_locale": "en"
+}

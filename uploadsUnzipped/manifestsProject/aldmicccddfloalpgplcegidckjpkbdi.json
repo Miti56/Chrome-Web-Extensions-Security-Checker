@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Motocross Madness",
+
+  "short_name": "Motocross Madness",
+
+  "version": "1.0.2",
+  "description": "Play Motocross Madness now!",
+
+  "homepage_url": "http://recoleta.xyz/c/farm-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Motocross Madness",
+
+      "default_popup": "popup.html"
+  }
+}

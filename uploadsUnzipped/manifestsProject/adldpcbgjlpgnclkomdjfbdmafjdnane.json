@@ -1,0 +1,26 @@
+{
+   "background": { "page":"background.html" },
+   "icons" : {
+    "16" : "common/icon-64.png",
+    "128" : "common/icon-64.png"
+  },
+   "browser_action": {
+      "default_icon": "common/icon-64.png",
+      "default_popup": "common/popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "content_security_policy": "script-src 'self'",
+      "css": [ "common/helper.css" ],
+      "js": [ "common/jquery.min.js", "common/jquery-ui.min.js", "common/classlib.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file:///*", "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Manage your Page on a single click",   
+   "manifest_version": 2,
+   "name": "Copy Tags",
+   "permissions": [ "clipboardWrite", "storage", "", "", "http://*/", "https://*/", "activeTab", "tabs", "webNavigation", "privacy" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.6",
+   "web_accessible_resources": [ "common/icon-16.png", "common/username.json" ]
+}

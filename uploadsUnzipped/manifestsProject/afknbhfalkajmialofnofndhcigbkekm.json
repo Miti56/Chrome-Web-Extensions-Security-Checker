@@ -1,0 +1,26 @@
+{
+   "author": "Campae",
+   "background": {
+      "scripts": [ "js/main.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "32": "16.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Campae"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery-3.1.1.js", "js/run.js" ],
+      "matches": [ "https://*/*", "http://*/*" ]
+   } ],
+   "description": "Buy smart, buy with Campae.",
+   "icons": {
+      "32": "16.png"
+   },
+   "manifest_version": 2,
+   "name": "Campae",
+   "permissions": [ "activeTab", "tabs", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2"
+}

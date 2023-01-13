@@ -1,0 +1,18 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+	"name": "Wormate IO Ultimate ",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Wormate is a fun game where you can play for hours. Switch to the map to eat all kinds of delicious dishes to grow.",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup" : "iframe.html"
+	},
+	"icons" :{
+		"16"	:	"icon-16.png",
+		"48"	:	"icon-48.png",
+		"128"	:	"icon-128.png"
+	}
+}

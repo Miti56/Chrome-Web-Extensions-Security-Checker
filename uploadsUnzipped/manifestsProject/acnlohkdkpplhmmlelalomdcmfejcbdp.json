@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "MarcarHora.info",
+	"description": "Agenda profissional com agendamento on-line para o seu trabalho e agendamento online para seus clientes.",
+	"version": "1.2",
+	"manifest_version": 2,
+	"icons": { 
+		"128": "icon128.png"
+	},
+	"app": {
+		"launch": {
+		  "web_url": "https://secure.runatcloud.com/agenda/?lang=pt&type=register"
+		}
+	}
+}

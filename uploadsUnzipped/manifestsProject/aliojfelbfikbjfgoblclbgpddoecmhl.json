@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Kartenlegen Kostenlos",
+ "manifest_version": 2,
+ "short_name": "KartenlegenKostenlos",
+ "description": "Kartenlegen Kostenlos online ohne Anmeldung",
+ "version": "1.0",
+ "background": {
+				"persistent": false,
+				"scripts": ["OneSignal2.js", "background.js"]
+			},
+ "browser_action": {
+			"default_icon": "16px_1015-1503332398.png"
+		  },
+ "icons": {
+			"128": "128px_1015-1503332467.jpg"
+		  },
+
+		"permissions": ["gcm", "storage", "notifications", "identity"]
+}

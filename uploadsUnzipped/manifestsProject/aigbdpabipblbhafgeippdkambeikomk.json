@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "jquery.min.js", "PrimeWireCleaner.js" ],
+      "matches": [ "*://www.primewire.ag/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "jquery.min.js", "BestStreamCleaner.js" ],
+      "matches": [ "*://bestreams.net/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "jquery.min.js", "streamin.toCleaner.js" ],
+      "matches": [ "http://streamin.to/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "jquery.min.js", "thevideo.meCleaner.js" ],
+      "matches": [ "*://www.thevideo.me/*" ]
+   } ],
+   "description": "Get rid of those ads.",
+   "manifest_version": 2,
+   "name": "LessAds",
+   "permissions": [ "http://*/*", "https://*/*", "https://www.primewire.ag/*", "*://www.thevideo.me/*", "http://streamin.to/*", "http://bestreams.net/*", "*://*.directrev.com/*", "*://*.adtrace.org/*", "*://srvpub.com/*", "*://onclickads.net/*", "*://s7.addthis.com/*", "*://s.ad134m.com/*", "*://s.ad131m.com/*", "*://ads.pubmatic.com/*", "webRequest", "*://www.adshost2.com/*", "*://cdn.engine.trklnks.com/*", "*://wwwpromoter.com/*", "*://tags.crwdcntrl.net/*", "*://gefhasio.com/*", "*://cdn.gefhasio.com/*", "*://cdn1.clkmon.com/*", "*://clkmon.com/*", "*://b.scorecardresearch.com/*", "*://static.polldaddy.com/*", "*://d31qbv1cthcecs.cloudfront.net/*", "*://*.doubleclick.net/*", "*://pagead2.googlesyndication.com/*", "*://legisland.net/*", "*://cdn.popcash.net/*", "*://jsc.mgid.com/*", "webRequestBlocking", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.2"
+}

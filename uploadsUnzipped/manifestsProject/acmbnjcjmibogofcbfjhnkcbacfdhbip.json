@@ -1,0 +1,41 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.3",
+  "name": "Aero Blue Theme",
+  "description": "Fits most resolutions and best fit 1680 x 1050. Screen capture is the 1280x1024.",
+  "theme": {
+    "images": {
+      "theme_frame": 
+"images/theme_frame.png",
+      "theme_toolbar": 
+"images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+    },
+    "colors": {
+      "frame": [6, 50, 87],
+      "toolbar": [24, 109, 173],
+      "tab_text": [255, 255, 255],
+      "tab_background_text": [155, 212, 255],
+      "ntp_text": [255, 255, 255],
+      "ntp_link": [255, 255, 255],
+      "ntp_section": [24, 109, 173],
+      "ntp_header": [24, 140, 192],
+      "control_background": [164, 198, 57],
+      "button_background": [24, 109, 173],
+      "bookmark_text": [255, 255, 255]
+    },
+    "tints": {
+      "buttons": [1.0, 0.0, 1.0],
+      "frame": [-1.0, -1.0, -1.0],
+      "frame_inactive": [-1.0, 0, 0.65],
+      "frame_incognito": [0.5, 0, 0.5],
+      "frame_incognito_inactive": [-1.0, 0, 0.45],
+      "background_tab": [0.5, 0.5, 0.15]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom center",
+      "ntp_background_repeat": "repeat-x"
+    }
+  }
+}

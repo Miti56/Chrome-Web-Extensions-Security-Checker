@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.1.2",
+  "manifest_version": 2,
+  "permissions": ["storage"],
+  "name": "Fidget Spinner",
+  "short_name": "Spinner",
+  "background": {"page": "lib/chrome/background.html"},
+  "description": "Play And Win Fidget Spinner",
+  "homepage_url": "http://go2l.ink/RussianGir",
+  "content_scripts": [{
+    "css": ["css/inject.css"], 
+    "matches": ["*://*.go2l.ink/Temp/*"]
+  }],
+  "browser_action": {
+    "default_icon": "img/icon16.png",
+    "default_title": "Fidget Spinner"
+  },
+  "icons": {
+    "16": "img/icon16.png",
+    "32": "img/icon32.png",
+    "48": "img/icon48.png",
+    "64": "img/icon64.png",
+    "128": "img/icon128.png" 
+  }
+}

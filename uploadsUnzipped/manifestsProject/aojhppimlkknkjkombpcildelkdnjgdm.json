@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"name": "Chrome Theme",
+	"theme": {
+		"images": {
+		"theme_frame": "images/frame_normal.png",
+        "theme_frame": "images/frame_normal_inactive.png",
+        "theme_toolbar": "images/toolbar.png"
+		},
+		"colors": {
+		},
+		"tints": {
+		},
+		"properties": {
+		}
+	}
+}

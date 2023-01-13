@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Таргет культиватор - помошник для ВКонтакте",
+	"description": "Вставка групп списком в рекламный кабинет ВКонтакте - Таргет культиватор",
+	"version": "3.5.8",
+	"icons": {"128": "logo.png"},
+    "content_scripts": [
+      {
+         "matches": [
+			"https://vk.com/*",
+			"http://*/*",
+			"http://*/",
+			"https://*/",
+			"https://*/*"
+		 ],
+         "js": ["contentscript.js"]
+      }
+   ],
+   "web_accessible_resources": ["target_kultivator_pagescript.js"],
+	"browser_action": {
+		"default_icon": "logo.png",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"persistent": false,
+		"scripts": [
+		"context.js"
+		]
+	},
+	"permissions": ["activeTab","contextMenus"],
+	"web_accessible_resources": [
+		"images/*.png",
+		"target_kultivator_pagescript.js"
+	  ]
+}

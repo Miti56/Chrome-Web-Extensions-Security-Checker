@@ -1,0 +1,60 @@
+{
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "background": {
+        "scripts": [
+            "js/jquery.js","background.js"
+        ]
+    },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://s3.amazonaws.com https://ssl.google-analytics.com/ga.js https://www.google-analytics.com/analytics.js https://cdnjs.cloudflare.com https://connect.facebook.net https://dw4sx0xk0hu8c.cloudfront.net; object-src 'self'",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png"
+   },
+   "content_scripts": [{
+        "match_about_blank": false,
+        "matches": ["http://*/*", "https://*/*"],
+        "js": [
+            "js/jquery.js","js/timer.js"
+        ],
+        "run_at": "document_start",
+        "all_frames": false
+    }],
+   "manifest_version": 2,
+   "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://*/",
+        "http://*/",
+        "tabs",
+        "storage"
+    ],
+   "default_locale": "en",
+   "name": "__MSG_appName__",
+   "description": "__MSG_appDesc__",
+   "short_name": "Rocket Tab Suspender",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2",
+   "commands": {
+    "suspendtab" : {
+        "suggested_key": {
+             "default": "Alt+Shift+S" 
+        },
+        "description": "Suspend Tab"
+    },
+    "unsuspendtab": {
+        "suggested_key": {
+            "default": "Alt+Shift+U"
+        },
+        "description": "Unsuspend Tab"
+    },
+    "whitelisttab": {
+        "suggested_key": {
+            "default": "Alt+Shift+W"
+        },
+        "description": "White List Tab"
+    }
+   }
+}

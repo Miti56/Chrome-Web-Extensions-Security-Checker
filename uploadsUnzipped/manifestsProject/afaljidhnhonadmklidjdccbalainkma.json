@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "name": "Emotify",
+        "version": "1.0",
+        "author": "Ben Kahan Development",
+        "homepage_url": "https://www.bkdev.co.uk/",
+        "incognito": "spanning",
+        "short_name":"Emotify",
+        "manifest_version": 2,
+        "browser_action": {
+            "name": "Click to make sense of those Wiki pages!",
+            "default_icon":{"19": "icon.png", "38":"icon.png"}
+        },
+        "background":{
+            "scripts":["background.js"]
+        },
+        "permissions":["https://*.wikipedia.org/*"],
+        "icons": {"32": "icon.png", "16":"icon.png", "64":"icon.png"}
+ }

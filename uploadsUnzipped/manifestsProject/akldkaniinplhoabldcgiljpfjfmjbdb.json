@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Right-Click2Tweet",
+    "description": "Easy tweet to your Twitter account from any webpage just Right-Click it.",
+    "version": "1.0.2",
+    
+    "permissions": [
+        "contextMenus",
+        "tabs"
+    ],
+    
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    
+    "icons": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
+    },
+  
+    "background": {
+        "page": "background.html"
+    },
+    
+    "content_security_policy": "script-src 'self'; object-src 'self'"
+}

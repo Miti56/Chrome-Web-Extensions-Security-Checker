@@ -1,0 +1,63 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Digital Halo Reignited",
+  "description": "Visualizes and otherwise conveys the extend of users data harvesting by internet actors, 3rd parties particularly.",
+  "version": "0.2.1",
+
+   "homepage_url": "https://github.com/OpenSensing/OpenPDS.Digital-Halo",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "See your halo"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js":      ["get_data.js"],
+      "run_at":  "document_start"
+    }
+  ],
+
+  "background": {
+    "scripts":    [
+      "trackers/vendor/port/port.js",
+      "trackers/vendor/jquery/jquery.js",
+      "trackers/vendor/moment/moment.js",
+      "trackers/vendor/sitename/alttlds.js",
+      "trackers/vendor/sitename/tldpatch.js",
+      "trackers/vendor/sitename/sitename.js",
+      "trackers/services.js",
+      "trackers/catch.js",
+      "deepcopy.js",
+      "scrapped_us.js",
+      "domain_trackers.js",
+      "compute/model.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+
+
+
+  "icons": {
+    "16": "pics/icon-16.png",
+    "48": "pics/icon-16.png",
+    "128": "pics/icon-16.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "cookies",
+    "history",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "storage"
+  ]
+}

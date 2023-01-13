@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "W-P-Integration",
+  "description" : "WhatsApp => Planfix integration application",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "popover.html"
+  },
+  "icons": {
+    "128": "128.png"
+  },
+  "background": {
+    "scripts": ["./background.js"],
+    "persistent": true
+  },
+  "permissions": ["activeTab", "storage", "declarativeContent", "https://*/"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.whatsapp.com/*"],
+      "css": ["./content.css"],
+      "js": ["./content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

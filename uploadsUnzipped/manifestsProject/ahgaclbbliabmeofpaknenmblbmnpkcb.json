@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Codethue Google Map",
+  "version": "1.0",
+  "description": "Kết nối với phần mềm LayThongTinGoogleMap của dịch vụ codethuegiare",
+  "permissions": ["activeTab", "tabs","*://*/*", "storage", "\u003Call_urls>" ],
+  "options_page": "options.html",
+  "background": {
+	"page": "background.html",
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js", "Scripts/jquery.signalR-2.0.3.min.js", "Scripts/jquery-1.6.4.min.js", "server.js", "popup.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+	  "32": "images/icon.png",
+	  "48": "images/icon.png",
+	  "128": "images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "manifest_version": 2
+}

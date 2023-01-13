@@ -1,0 +1,43 @@
+{
+   "background": {
+      "scripts": [ "js/ya_search_bg.js" ]
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://doublesearch.azurewebsites.net/icon-16.png",
+         "is_default": true,
+         "keyword": "newtab.club",
+         "name": "__MSG_searchName__",
+         "search_url": "https://doublesearch.azurewebsites.net/find?q={searchTerms}",
+         "suggest_url": "http://doublesearch.azurewebsites.net/suggest.php?q={searchTerms}"
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "css/ds.css" ],
+      "js": [ "js/ds_fg.js" ],
+      "matches": [ "*://doublesearch.azurewebsites.net/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/ya.css" ],
+      "js": [ "js/ya_fg.js" ],
+      "matches": [ "*://yandex.ru/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmANhBnvapXuAJ0OI8U+FYbpTVNYUECNBpzXBxr/XoX9kFL15uhujjUBURCzDrIqijIj4BzQYpx835ffvgl7b/jCM4Os/vO1HvxCUSzu3RQdOyQjQYXx+vdMt/0QJN9BKTtPfNlWcxR590m5gAdaDdI0h7DaKvBwJsVG4QxyrJvb61C/eYxJfnH2/NgSjDiu9a+mnkL/lX+Z/UOuiGtP1CNvzapl4P101dghpNGsF/jk5xP9lPpTKuuPgFhxoCPrEQ1NvMW6MlVyrdq5UyGcl2BqhON4NgWzxJv98BbkVhAB+2A5WQ+FQq9q3mIDgUInJ3GX2KK0/6Syo9BlsCN1VMQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "offline_enabled": true,
+   "permissions": [ "webRequestBlocking", "webRequest", "*://*.yandex.ru/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.7",
+   "web_accessible_resources": [ "ya_logo.png" ]
+}

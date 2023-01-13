@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Thief - Screenshot & Record Web Inspiration",
+    "short_name": "Thief",
+    "version": "1.0.6",
+    "manifest_version": 2,
+    "description": "__MSG_appDescription__",
+    "icons": {
+        "16": "icons/icon-16.png",
+        "128": "icons/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/livereload.js",
+            "scripts/RecordRTC.min.js",
+            "scripts/background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "tabCapture",
+        "storage",
+        "unlimitedStorage",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/imagecrop.js",
+                "scripts/contentscript.js",
+                "scripts/tool.js"
+            ],
+            "css": [
+                "styles/content.css"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "19": "icons/icon-19.png",
+            "38": "icons/icon-38.png"
+        },
+        "default_title": "Thief"
+    },
+    "web_accessible_resources": [
+        "icons/*",
+        "svg/*"
+    ]
+}

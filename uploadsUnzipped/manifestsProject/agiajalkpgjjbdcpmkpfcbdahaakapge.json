@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "From Dust - Install Game",
+  "version": "2.6",
+  "manifest_version": 2,
+  "description": "From Dust is the award winning game where you control Nature and master the elements for the survival of your people.",
+  "homepage_url": "http://scoreoid.net/from-dust",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "From Dust",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://scoreoid.net/from-dust"
+  ]
+}

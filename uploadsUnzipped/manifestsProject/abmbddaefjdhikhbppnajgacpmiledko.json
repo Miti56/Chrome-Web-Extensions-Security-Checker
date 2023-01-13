@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "app": {
+      "background": {
+         "scripts": [ "/background.js" ]
+      }
+   },
+   "sandbox": {
+      "pages": ["/sandbox.html"]
+    },
+   "icons": {
+      "128":"images/icons/oici-D-128.png"
+   },
+
+   "manifest_version": 2,
+   "name": "openlab 백신 D",
+   "description": "openlab에서 만든 IT백신 D! 견적서 검수 in NAVER 가격비교",
+
+
+   "permissions": [ "webview", "alwaysOnTopWindows", "storage", "unlimitedStorage", "http://*/*", "https://*/*" ],
+
+   "short_name": "openlab 백신 D",
+
+   "version": "0.0.3"
+}

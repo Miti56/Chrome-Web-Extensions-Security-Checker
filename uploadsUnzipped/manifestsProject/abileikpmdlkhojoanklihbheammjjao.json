@@ -1,0 +1,71 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "JOYBUY Search Filter",
+  "author": "Fabio Mereu",
+  "description": "Shows the delivery estimate and filters by shipping options for joybuy products.",
+  "version": "1.0.1",
+
+  "browser_action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "128": "png/joybuy-128.png",
+      "48": "png/joybuy-48.png",
+      "32": "png/joybuy-32.png",
+      "16": "png/joybuy-16.png"
+    }
+  },
+
+  "icons": {
+    "128": "png/joybuy-128.png",
+    "48": "png/joybuy-48.png",
+    "32": "png/joybuy-32.png",
+    "16": "png/joybuy-16.png"
+  },
+
+  "permissions": [
+    "storage",
+    "https://*.joybuy.com/*",
+    "https://*.joybuy.es/*",
+    "https://*.jd.ru/*"
+  ],
+
+  "background": {
+    "scripts": [
+      "js/debug.js",
+      "js/ajax.js",
+      "js/cache.js"
+    ]
+  },
+
+  "content_scripts": [{
+    "matches": [
+      "https://*.joybuy.com/*",
+      "https://*.joybuy.es/*",
+      "https://*.jd.ru/*"
+    ],
+    "css": ["css/joybuy.css"],
+    "js": [
+      "js/debug.js",
+      "js/ajax.js",
+      "js/lib.js",
+      "js/json5.js",
+      "js/data.js",
+      "js/cache.js",
+      "js/api.js",
+      "js/settings.js",
+      "js/jquery.js",
+      "js/conject-browser.js",
+      "js/joybuy.js"
+    ],
+    "run_at": "document_start"
+  }],
+
+  "web_accessible_resources": [
+    "png/*.png",
+    "svg/*.svg",
+    "gif/*.gif"
+  ]
+}

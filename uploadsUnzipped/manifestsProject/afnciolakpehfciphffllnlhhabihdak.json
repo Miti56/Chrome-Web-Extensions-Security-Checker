@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Seavus Project Viewer Online",
+  "description": "Seavus Project Viewer Online is a free mpp Viewer for Microsoft Project files.",
+  "container" : "GOOGLE_DRIVE",
+  "api_console_project_id" :"294677608259",
+    "gdrive_mime_types": {
+      "http://drive.google.com/intents/opendrivedoc": [
+        {
+          "type": ["application/mpp", "text/html"],
+          "href": "https://app.seavusprojectviewer.com/ExternalEntry/OpenFromGoogleDrive",
+          "title" : "Open",
+          "disposition" : "window"
+        }
+      ]
+    },
+  "version": "2.1",
+  "app": {
+    "urls": [
+      "https://app.seavusprojectviewer.com/"
+    ],
+    "launch": {
+      "web_url": "https://app.seavusprojectviewer.com"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

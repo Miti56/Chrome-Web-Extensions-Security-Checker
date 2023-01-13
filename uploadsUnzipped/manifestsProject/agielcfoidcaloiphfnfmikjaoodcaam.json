@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Fitness Gram",
+  "description": "is a multistage aerobic…",
+  "version": "1.69.4",
+
+  "browser_action": {
+   "default_icon": "icon.jpg",
+   "default_popup": "fitness.jpg"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}

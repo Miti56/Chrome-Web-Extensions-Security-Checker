@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "CopyTabs",
+  "description": "Copy URLs of all open tabs",
+  "version": "0.1",
+  
+  "browser_action": {
+    "default_title": "CopyTabs"
+  },
+
+	"permissions": ["tabs", "clipboardWrite"],
+
+  "background":{"scripts": ["background.js"]},
+    
+  "icons": {"128": "128px-copy.png",
+  			 		"48": "48px-copy.png",
+  			 		"16": "16px-copy.png" }    
+}

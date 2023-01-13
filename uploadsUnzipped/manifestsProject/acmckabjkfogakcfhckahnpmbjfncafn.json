@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "🐍 Slither Friends - by Creators of Agar.pw",
+  "short_name": "Slither Friends",
+  "version": "0.9.5",
+  "manifest_version": 2,
+  "description": "Play slither.io with friends by sharing short id's, design your own custom skins, use custom antennas, etc.",
+  "homepage_url": "http://slitherfriends.pw",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+  	"storage",
+  	"webRequest",
+    "http://slither.io/*",
+	"*://slitherfriends.pw/*"
+  ],
+  "externally_connectable": {
+	"matches": [ "*://slitherfriends.pw/*" ]
+  },
+  "browser_action": {
+  	"default_icon": {
+  		"38": "popup/logo38.png"
+  	},
+  	"default_title": "Slither Friends",
+  	"default_popup": "popup/popup.html"
+  },
+  "background": {
+	"scripts": [ "background.js", "jquery-1.11.3.min.js" ]
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://*.slither.io/", "*://*.slither.io/index.php" ],
+      "js": [ "inject.js" ],
+	  "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [ "slitherfriends.min.js", "jquery-2.2.0.min.js", "gamepad.min.js" ],
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true
+	}
+}

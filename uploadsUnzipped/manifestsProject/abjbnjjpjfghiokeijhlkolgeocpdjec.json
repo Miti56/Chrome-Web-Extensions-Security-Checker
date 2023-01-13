@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "MOBI.BI Browser Extension",
+  "description": "Use this extension to easily make draft post to the mobi.bi which contains the actual website url.",
+  "version": "1.1.5",
+  "permissions": [ "http://*/*", "https://*/*", "unlimitedStorage", "contextMenus", "tabs", "background" ],
+  "web_accessible_resources": [ "views/view.html", "views/login.html", "views/post.html"],
+
+  "icons": {
+    "128": "img/icons/logo/PF/logo-icon-128.png",
+    "48": "img/icons/logo/PF/logo-icon-48.png",
+    "16": "img/icons/logo/PF/logo-icon-16.png"
+  },
+
+  "background": {
+    "scripts": ["js/controller/eventController.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "38": "img/icons/logo/PF/logo-icon-38.png",
+      "19": "img/icons/logo/PF/logo-icon-19.png"
+    },
+    "default_title": "Share with MOBI.BI"
+  },
+
+  "minimum_chrome_version": "50"
+}

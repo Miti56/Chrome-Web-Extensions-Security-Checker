@@ -1,0 +1,18 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "description": "Siz de Mynet'i anasayfanız yapın ve tek tıkla kolayca ulaşın.",
+
+   "browser_action": {},
+   "permissions": [
+      "storage"
+   ],
+   "icons": {
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "Mynet Anasayfa",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1"
+}

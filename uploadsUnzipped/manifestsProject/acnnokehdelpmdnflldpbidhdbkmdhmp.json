@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Coduri Voucher Pentru Discount",
+  "short_name": "Coduri Voucher de Reducere",
+  "description": "Coduri Voucher si Cupoane de Reducere Pentru Discount",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "logo.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.codvoucher.ro/"
+    ],
+    "launch": {
+      "web_url": "https://www.codvoucher.ro/"
+    }
+  }
+}

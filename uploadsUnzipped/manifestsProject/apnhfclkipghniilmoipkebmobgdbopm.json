@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Influencer HUB",
+	"short_name": "Influencer HUB",
+	"version": "1.0.1",
+	"description": "Convert web pages into draft gigs in no time. (For Influencer HUB subs only.)",
+	"permissions": [
+		"cookies",
+		"storage",
+		"tabs",
+		"https://*.influencerhub.com/"
+	],
+	"browser_action": {
+		"default_icon": "images/icon-19.png",
+		"default_title": "Influencer HUB",
+		"default_popup": "app.html"
+	},
+	"icons": {
+		"16": "images/icon-16.png",
+		"48": "images/icon-48.png",
+		"128": "images/icon-128.png"
+	},
+	"background": {
+		"scripts": ["assets/background.js"],
+		"persistent": false
+	}
+}

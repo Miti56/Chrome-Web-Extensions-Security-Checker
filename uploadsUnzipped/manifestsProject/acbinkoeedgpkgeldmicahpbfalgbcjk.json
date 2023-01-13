@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "1.1.0",
+    "name": "Fizila - агрегатор кэшбэк",
+    "short_name": "Fizila",
+    "description": "Поиск максимального кэшбэка",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "activeTab", "tabs", "http://*/*", "https://*/*"
+    ],
+    "browser_action": {
+        "default_title": "Показать доступные кэшбэки"
+    },
+    "icons": {
+        "16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
+    }
+}

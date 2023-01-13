@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Bob Pony Wiki",
+"description": "The Bob Pony Wiki community",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"https://wiki.bobpony.org/"
+
+],
+"launch": {
+"web_url": "https://wiki.bobpony.org/"
+}
+},
+"permissions": [
+]
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "jira助手",
+  "description": "方便jira问题的操作",
+  "version": "2.2",
+  "content_scripts": [{
+    "matches": ["https://jira.cvte.com/*"],
+    "js": ["js/jquery.min.js", "js/bootstrap.min.js", "script.js"],
+    "css": ["css/bootstrap.min.css"],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "permissions": [
+    "cookies",
+    "tabs",
+    "notifications",
+    "http://swqa.gz.cvte.cn/*",
+    "https://jira.cvte.com/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["js/jquery.min.js", "background.js"]
+  }
+}

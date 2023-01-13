@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Persuasion",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "description": "An original and challenging puzzle game",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://persuasiongame.codesimple.net/persuasion/"
+    ],
+    "launch": {
+      "web_url": "http://persuasiongame.codesimple.net/persuasion/"
+    }
+  }
+}

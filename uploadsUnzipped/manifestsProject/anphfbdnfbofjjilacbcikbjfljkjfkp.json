@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PathCon",
+  "description": "Convert the file path for Windows and Mac. Simply copy!",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://bootgraph.com/pathcon/"
+    ],
+    "launch": {
+      "web_url": "http://bootgraph.com/pathcon/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}

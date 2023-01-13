@@ -1,0 +1,184 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "0.5.12",
+  "name": "MBS Retriever",
+  "short_name": "MBSRetriever",
+  "description": "Amazon and FBA product research tool. See rank, sales volume, estimated revenue and more for the products in an Amazon search.",
+  "options_page": "popup.html",
+  "minimum_chrome_version": "65.0.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "externally_connectable": {
+    "matches": [
+      "*://*.managebystats.com/*",
+      "*://localhost/*",
+      "*://192.168.56.2/*"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://amazon.com/*",
+        "*://www.amazon.com/*",
+        "*://amazon.co.uk/*",
+        "*://www.amazon.co.uk/*",
+        "*://amazon.ca/*",
+        "*://www.amazon.ca/*",
+        "*://amazon.fr/*",
+        "*://www.amazon.fr/*",
+        "*://amazon.de/*",
+        "*://www.amazon.de/*",
+        "*://amazon.com.br/*",
+        "*://www.amazon.com.br/*",
+        "*://amazon.mx/*",
+        "*://www.amazon.mx/*",
+        "*://amazon.co.jp/*",
+        "*://www.amazon.co.jp/*",
+        "*://amazon.it/*",
+        "*://www.amazon.it/*",
+        "*://amazon.es/*",
+        "*://www.amazon.es/*",
+        "*://amazon.cn/*",
+        "*://www.amazon.cn/*",
+        "*://amazon.in/*",
+        "*://www.amazon.in/*",
+        "*://amazon.nl/*",
+        "*://www.amazon.nl/*",
+        "*://amazon.com.au/*",
+        "*://www.amazon.com.au/*"
+      ],
+      "css": [
+        "css/font-awesome-fonts.css"
+      ],
+      "font": [
+        "fonts/fa-brands-400.woff2",
+        "fonts/fa-brands-400.ttf",
+        "fonts/fa-light-300.woff2",
+        "fonts/fa-light-300.ttf",
+        "fonts/fa-regular-400.woff2",
+        "fonts/fa-regular-400.ttf",
+        "fonts/fa-solid-900.woff2",
+        "fonts/fa-solid-900.ttf"
+      ],
+      "js": [
+        "widget.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://amazon.com/*",
+        "*://www.amazon.com/*",
+        "*://amazon.co.uk/*",
+        "*://www.amazon.co.uk/*",
+        "*://amazon.ca/*",
+        "*://www.amazon.ca/*",
+        "*://amazon.fr/*",
+        "*://www.amazon.fr/*",
+        "*://amazon.de/*",
+        "*://www.amazon.de/*",
+        "*://amazon.com.br/*",
+        "*://www.amazon.com.br/*",
+        "*://amazon.mx/*",
+        "*://www.amazon.mx/*",
+        "*://amazon.co.jp/*",
+        "*://www.amazon.co.jp/*",
+        "*://amazon.it/*",
+        "*://www.amazon.it/*",
+        "*://amazon.es/*",
+        "*://www.amazon.es/*",
+        "*://amazon.cn/*",
+        "*://www.amazon.cn/*",
+        "*://amazon.in/*",
+        "*://www.amazon.in/*",
+        "*://amazon.nl/*",
+        "*://www.amazon.nl/*",
+        "*://amazon.com.au/*",
+        "*://www.amazon.com.au/*"
+      ],
+      "css": [],
+      "font": [],
+      "js": [
+        "widget-loading.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://managebystats.com/*",
+        "*://*.managebystats.com/*"
+      ],
+      "css": [],
+      "js": [
+        "mbs.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/*.*",
+    "css/font-awesome-fonts.css",
+    "fonts/fa-brands-400.woff2",
+    "fonts/fa-brands-400.ttf",
+    "fonts/fa-light-300.woff2",
+    "fonts/fa-light-300.ttf",
+    "fonts/fa-regular-400.woff2",
+    "fonts/fa-regular-400.ttf",
+    "fonts/fa-solid-900.woff2",
+    "fonts/fa-solid-900.ttf"
+  ],
+  "page_action": {
+    "default_icon": {
+      "19": "images-greyed/icon19.png",
+      "38": "images-greyed/icon38.png"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "background",
+    "storage",
+    "cookies",
+    "notifications",
+    "contextMenus",
+    "*://192.168.56.2/*",
+    "*://managebystats.com/*",
+    "*://*.managebystats.com/*",
+    "*://amazon.com/*",
+    "*://*.amazon.com/*",
+    "*://amazon.co.uk/*",
+    "*://*.amazon.co.uk/*",
+    "*://amazon.ca/*",
+    "*://*.amazon.ca/*",
+    "*://amazon.fr/*",
+    "*://*.amazon.fr/*",
+    "*://amazon.de/*",
+    "*://*.amazon.de/*",
+    "*://amazon.com.br/*",
+    "*://*.amazon.com.br/*",
+    "*://amazon.mx/*",
+    "*://*.amazon.mx/*",
+    "*://amazon.co.jp/*",
+    "*://*.amazon.co.jp/*",
+    "*://amazon.it/*",
+    "*://*.amazon.it/*",
+    "*://amazon.es/*",
+    "*://*.amazon.es/*",
+    "*://amazon.cn/*",
+    "*://*.amazon.cn/*",
+    "*://amazon.in/*",
+    "*://*.amazon.in/*",
+    "*://amazon.nl/*",
+    "*://*.amazon.nl/*",
+    "*://amazon.com.au/*",
+    "*://*.amazon.com.au/*"
+  ]
+}

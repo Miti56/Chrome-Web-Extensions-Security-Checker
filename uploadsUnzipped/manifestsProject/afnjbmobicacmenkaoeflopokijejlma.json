@@ -1,0 +1,27 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "eSpeedDownload",
+ "version": "1.0.1",
+ "manifest_version": 2,
+ "description": "Fast and Secure Download Manager",
+ "icons": {"128": "images/icons/icon128.png"},
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+ "browser_action": {
+   "default_icon": {
+     "19": "images/icons/icon_19x19.png",
+     "38": "images/icons/icon_38x38.png"},
+   "default_title": "My Download Manager",
+   "default_popup": "popup.html"},
+ "background": {"persistent": false, "scripts": ["js/jquery.min.js","js/main.js","js/background.js","js/background2.js"]},
+ "default_locale": "en",
+ "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+ "optional_permissions": ["management"],
+ "web_accessible_resources": [
+    "icon38.png"
+  ],
+ "permissions": ["downloads", "downloads.open", "downloads.shelf","notifications","http://*/","tabs","storage","cookies"]}
+ 

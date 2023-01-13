@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "2amigos.us - New Tab",
+  "version": "0.0.0.1",
+  "description": "2amigos.us - New Tab Replacement",
+  "icons": {
+    "16": "icons/2amigos-16x16.png",
+    "48": "icons/2amigos-48x48.png",
+   "128": "icons/2amigos-128x128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}

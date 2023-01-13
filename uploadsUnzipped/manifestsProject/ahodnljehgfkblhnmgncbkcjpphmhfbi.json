@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Truthyisms",
+  "version": "0.0.1",
+  "author": "Sarah Joy Calpo",
+  "description": "Sprinkle your internet browsing experience with Jenny Holzer truisms and similar truthy-isms.",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+      {
+          "matches": ["http://*/*","https://*/*"],
+          "js": ["truisms.js"],
+          "css": ["style.css"],
+          "run_at": "document_end" 
+      }
+  ],
+  "web_accessible_resources": [
+    "imgs/*.jpg",
+    "truisms.json",
+    "truthyisms.json"
+  ]
+}

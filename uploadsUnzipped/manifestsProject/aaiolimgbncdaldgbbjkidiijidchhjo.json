@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "homepage_url": "https://www.shopper.com/?source=plugin",
+  "default_locale": "en",
+  "background": {
+    "persistent": true,
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/default_icon_16.png",
+      "32": "images/default_icon_32.png"
+    },
+    "default_title": "__MSG_extDefaultTitle__"
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "js": ["js/browser-polyfill.js", "js/jquery.js", "js/install.js"],
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_start"
+    },
+    {
+      "all_frames": false,
+      "css": ["css/content.css"],
+      "js": ["js/config.js", "js/shoppers.js", "js/content.js"],
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self'  https://cdn.segment.com; object-src 'self'",
+  "icons": {
+    "120": "images/active_icon_120.png",
+    "16": "images/active_icon_16.png",
+    "32": "images/active_icon_32.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "cookies",
+    "storage",
+    "unlimitedStorage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "version": "4.2.0",
+  "manifest_version": 2,
+  "short_name": "Shopper.com",
+  "web_accessible_resources": ["images/*", "iframes/*", "css/*"]
+}

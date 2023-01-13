@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "领券吧",
+"version": "1.0.6",
+"manifest_version": 2,
+"description": "领券吧",
+"icons": {
+    "16": "images/main_16.png",
+    "128": "images/main_128.png"
+},
+"homepage_url": "http://www.yoyolqb.com",
+"browser_action": {
+    "default_title": "领券吧",
+    "default_icon": "images/main.png"
+},
+"background":{
+    "scripts":["scripts/jquery-1.12.3.min.js","scripts/md5.js","scripts/background.js"]
+},
+"content_scripts": [
+{
+    "js": ["scripts/jquery-1.12.3.min.js","scripts/include.js"],
+
+    "matches": [
+        "http://item.taobao.com/*",
+        "https://item.taobao.com/*",
+        "http://detail.tmall.com/*",
+        "https://detail.tmall.com/*"
+    ],
+    "run_at": "document_start"
+}
+],
+"permissions": [
+    "<all_urls>", "contextMenus", "tabs", "storage", "cookies", "alarms", "activeTab", "webRequest", "webRequestBlocking"
+],
+"content_security_policy": "script-src 'self'; object-src 'self'"
+}

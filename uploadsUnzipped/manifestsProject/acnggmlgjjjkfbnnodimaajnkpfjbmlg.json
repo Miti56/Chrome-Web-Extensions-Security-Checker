@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Little Alchemy Unblocked",
+  "description": "Play Little Alchmy - Start with four basic items and use them to find dinosaurs, unicorns and spaceships!",
+  "version": "1.0.0.5",
+  "manifest_version": 2,
+  "app": {
+	"launch": {
+      "web_url": "http://littlealchemyunblocked.net/"
+    }
+  },
+  "icons": {"128": "128.png" }
+}

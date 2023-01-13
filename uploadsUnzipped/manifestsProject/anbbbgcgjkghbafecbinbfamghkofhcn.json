@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "cashitback",
+	"version": "1.8",
+	"description": "cashitback",
+	 "homepage_url": "http://www.cashitback.com/",
+    "icons": {
+      "128": "images/logo_128.gif",
+	   "16": "images/logo_16.gif",
+      "48": "images/logo_48.gif"
+   },
+	"browser_action": {
+		"default_icon": "images/logo_48.gif",
+		"default_title": "cashitback"
+   },
+	"manifest_version": 2,
+ 	
+	"options_page": "options.html",
+	"background": {
+      "page": "background.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"css": [
+				"styles/inject.css","styles/notifypanel.css"
+			],
+			"js": [
+				"javascripts/jquery.min.js","locale/en/messages.js","javascripts/urlEncode.js","javascripts/search_panel.js","javascripts/sitenotifypanel.js","javascripts/toolnotifypanel.js","javascripts/settings.js","javascripts/corelib.js", "javascripts/inject.js"
+			],
+			"run_at": "document_idle"
+		}
+	],
+
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>",
+		"notifications",
+		"http://*/*",
+		"https://*/*"
+	],
+	
+
+	"web_accessible_resources": [
+			"searchnotifypanel.html",
+			"sitenotifypanel.html",
+			"toolnotifypanel.html",
+			"images/search-icon-left-corner.gif",
+			"images/search-icon-right-corner.gif",
+			"images/ymt_notifypanle_coupons-t.png",
+			"images/ymt_notifypanle_coupons-b.png",
+			"images/ymt_notifypanle_coupons-m.png",
+			"images/ymt_search_ico.png",
+			"images/ymt_notifypanle_bg.gif",
+			"images/tool-bar-box.png",
+			"images/main-small_icon.png",
+			"images/divider.png",
+			"images/close-icon.png",
+			"images/btn-save.png",
+			"images/body-bg.gif",
+			 "images/logo.png",
+			"locale/en/btn-getoffer.png",
+			"locale/en/btn-search.png",
+			"locale/en/ymt_notifypanle_coupons.png",
+			"locale/en/ymt_notifypanle_details.png",
+			"images/export-icon.png",
+			"images/favorite-icon.png",
+			"images/logoout-icon.png"
+		]
+}

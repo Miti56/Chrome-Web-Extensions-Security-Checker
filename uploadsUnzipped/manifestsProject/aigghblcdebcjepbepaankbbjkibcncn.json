@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Online Webcam Capture",
+    "version": "1.0",
+    "description": "Take a picture from your webcam, and you can save the snapshot image to Google Drive.",
+    "icons": {
+        "512": "icon-512.png",
+        "256": "icon-256.png",
+        "128": "icon-128.png",
+        "96": "icon-96.png",
+        "64": "icon-64.png",
+        "48": "icon-48.png",
+        "32": "icon-32.png",
+        "16": "icon-16.png"
+    },
+    "container": [ "DOMAIN_INSTALLABLE", "GOOGLE_DRIVE" ],
+    "api_console_project_id": "484390691914",
+    "app": {
+        "launch": {
+            "web_url": "https://online-webcam.freebusinessapps.net/webcam-capture"
+        }
+    },
+    "gdrive_mime_types": {
+        "http://drive.google.com/intents/opendrivedoc": [
+            {
+                "type": ["image/png","image/jpg", "image/gif","application/vnd.google.drive.ext-type.jpg","application/vnd.google.drive.ext-type.png","application/vnd.google.drive.ext-type.gif"],
+                "href": "https://online-webcam.freebusinessapps.net/webcam-capture",
+                "title": "Open",
+                "disposition": "window"
+            }
+        ]
+    }
+}

@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "Google Translate (with omnibox support)",
+   "description": "Adds omnibox support. Type 'translate' into the omnibox and type what you want to translate.",
+   "background": {
+      "persistent": false,
+      "scripts": [ "injection.js", "main_compiled.js", "main_compiled.js", "omnibox.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/19.png",
+         "38": "icons/38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Google Translate"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "bubble_gss.css" ],
+      "js": [ "bubble_compiled.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],  
+   "web_accessible_resources": [
+    "options.html",
+    "popup_css_compiled.css",
+    "popup.html",
+    "omnibox.css",
+    "omnibox.html",
+    "bubble_gss.css",
+	"jquery-3.3.1.min.js"
+  ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://translate.googleapis.com; object-src 'self'",
+   "default_locale": "en",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "19": "icons/19.png",
+      "32": "icons/32.png",
+      "38": "icons/38.png",
+      "48": "icons/48.png"
+   },
+  "omnibox": {
+    "keyword": "translate"
+  },
+   "manifest_version": 2,
+   "options_page": "options.html",
+   "permissions": [ "activeTab", "contextMenus", "storage" ],
+   "version": "2.0.7"
+}

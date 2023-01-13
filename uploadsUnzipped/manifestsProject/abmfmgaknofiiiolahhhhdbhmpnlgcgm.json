@@ -1,0 +1,25 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "facebookをMSゴシックで",
+  "version": "0.2",
+  "permissions": ["geolocation"],
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+	"http://*.facebook.com/*",
+	"https://*.facebook.com/*"
+	],
+      "js": [
+        "jquery.min.1.8.2.js",
+        "font-change.js"
+	]
+    }
+  ],
+  "page_action": {
+    "default_icon": "facebook-devicon.png",
+    "default_title": "Do action"
+  },
+  "manifest_version": 2
+
+}

@@ -1,0 +1,68 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Travel Club: Compras Online",
+  "version": "1.0.5",
+  "description": "Travel Club: Compras Online",
+  "background": {
+    "scripts": [
+		"libs/jquery/jquery.min.js", 
+		"config.js", 
+		"assets/js/common.js",
+		"assets/js/analytics.js",
+		"assets/js/background.js"
+	]
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "content_scripts": [
+	{
+		"matches": ["http://*/*", "https://*/*"],
+		"js": [
+			"libs/jquery/jquery.min.js",
+			"config.js",
+			"assets/js/common.js",
+			"assets/js/analytics.js",
+			"assets/js/logged.js",
+			"assets/js/login.js"
+		]
+	}
+  ],
+  "options_ui": {
+    "page": "html/options.html",
+	"chrome_style": true
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "https://www.google-analytics.com/",
+    "http://*/",
+    "https://*/",
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "assets/images/logo_16.png",
+    "32": "assets/images/logo_32.png",
+    "48": "assets/images/logo_48.png",
+    "128": "assets/images/logo_128.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/images/logo_32.png",
+    "default_title": "Travel APP",
+    "default_popup": "html/login.html"
+  },
+  "web_accessible_resources": [
+	"html/logged.html",
+	"html/login.html",
+	"libs/google-analytics-bundle.js",
+	"libs/jquery/jquery.min.js",
+	"config.js",
+	"assets/js/common.js",
+	"assets/js/analytics.js",
+	"assets/js/login.js",
+	"assets/js/logged.js",
+	"assets/images/LOGO_TC_2018.png",
+	"assets/css/style.css"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "offline_enabled": true,
+  "version": "1.1",
+  "name": "Message360 Click2Call/Click2SMS",
+  "description": "Message360 - Click2Call/Click2SMS extension for Chrome.",
+  "icons": {
+    "16": "./img/icon16.png",
+    "128": "./img/icon128.png"
+  },
+  "browser_action": {
+    "default_title": "Message360 Click2Call/Click2SMS",
+    "default_icon": "./img/icon16.png",
+    "default_popup": "index.html"
+  },
+  "options_page": "index.html",
+  "background": {
+    "scripts": [ "./lib/jquery/jquery.js", "background.js" ]
+  },
+  "content_scripts": [{
+    "js": [ "./lib/jquery/jquery.js", "content.js" ],
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google.com https://www.google-analytics.com; object-src 'self' https://www.google.com https://www.google-analytics.com",
+  "permissions": [
+      "<all_urls>",
+      "tabs",
+      "storage",
+      "unlimitedStorage",
+      "cookies",
+      "contextMenus",
+      "webRequest",
+      "webRequestBlocking",
+      "webNavigation"
+  ],
+  "manifest_version": 2
+}

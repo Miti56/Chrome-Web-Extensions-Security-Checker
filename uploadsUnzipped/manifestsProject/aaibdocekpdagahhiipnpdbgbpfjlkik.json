@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Chrome Torrent Auto Follow",
+  "description": "Auto follow torrent page",
+  "version": "1.1",
+
+  "browser_action": {
+   "default_icon": "icon.png"
+  },
+  "content_scripts": [
+	{
+      "matches": ["https://kat.cr/*"],
+      "js": ["magnet-kat-cr.js"]
+    },
+	{
+      "matches": ["https://1337x.to/torrent/*"],
+      "js": ["magnet-1337x.js"]
+    }
+  ],
+  "permissions": [
+   "activeTab"
+   ]
+}

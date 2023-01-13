@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Bing Cheats",
+"description": "Get Easy bing points with this Browser app",
+"version": "2.0.1",
+"icons": {
+"128": "128.png"
+},
+"permissions": [
+"fileBrowserHandler",
+"notifications"
+]
+}

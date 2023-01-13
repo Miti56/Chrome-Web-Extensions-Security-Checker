@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+   "name": "Sobrancelha Perfeita",
+   "version": "1.0",
+   "description": "Designer de Sobrancelha Profissional",
+   "browser_action":{
+	"default_popup": "popup.html"
+   },
+   "icons": {
+	"16": "imagens/icon16.png"
+   }
+}

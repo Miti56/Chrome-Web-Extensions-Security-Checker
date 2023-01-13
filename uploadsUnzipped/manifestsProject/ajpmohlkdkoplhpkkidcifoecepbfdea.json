@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "main.js" ]
+      }
+   },
+   "author": "Damian Hill",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "36.0",
+   "name": "Detective For WhatsApp",
+   "permissions": [ "audio", "audioCapture", "notifications", "videoCapture", "webview", "tabs", "storage", "notifications", "http://*.facebook.com/", "https://*.facebook.com/", "http://*.messenger.com/", "https://*.messenger.com/", "http://*.twitter.com", "http://*.peoplespy.com/", "https://*.twitter.com", "https://*.infopay.com/"],
+   "short_name": "WhatsApp",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1"
+}

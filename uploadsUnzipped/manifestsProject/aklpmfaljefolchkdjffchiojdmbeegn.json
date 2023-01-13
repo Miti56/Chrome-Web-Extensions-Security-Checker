@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  
+  "name": "Calorie Calculator Plus",
+  "description": "Calculate the exact amount of calories that you are allowed to have daily and how many are in your drink.",
+  "version": "0.0.0.2",
+  "offline_enabled": false,
+  
+"app": {
+
+    "urls": [
+
+      "http://calories-in-alcohol.com/"
+
+    ],
+
+    "launch": {
+
+      "web_url": "http://calories-in-alcohol.com/"
+    }
+  },
+  
+  "icons": {
+    "128": "icon.png"
+  },
+  
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

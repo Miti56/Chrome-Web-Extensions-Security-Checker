@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "TSE Box",
+  "version": "0.3",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "title": "TSE Box",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://tsetmc.com/*",
+    "https://tsetmc.com/*",
+    "http://www.tsetmc.com/*",
+    "https://www.tsetmc.com/*",
+    "https://tse.ir/*",
+    "https://www.tse.ir/*"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "MacCtrl+Shift+S"
+      }
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Best Price Finder",
+    "description": "Save time and money with Best Price Finder.",
+    "version": "1.0.5",
+    "manifest_version": 2,
+    "icons": {
+        "48": "img/BestPriceFinder_48x48.png",
+        "128": "img/BestPriceFinder_128x128.png"
+    },
+    "content_security_policy": "script-src 'self'  https://*.google-analytics.com https://ssl.google-analytics.com; object-src 'self'",
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "storage",
+        "tabs",
+        "<all_urls>",
+        "webRequest",
+        "management"
+    ],
+    "background": {
+        "page": "background.html"
+    }
+}

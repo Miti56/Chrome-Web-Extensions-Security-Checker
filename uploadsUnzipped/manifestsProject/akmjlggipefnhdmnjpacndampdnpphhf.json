@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Cisco - CDETS/QDDTS ID Search",
+    "version": "1.0.0",
+    "description": "Search for a CDETS IDs",
+    "icons": {"16": "img/icon-16.png", "48": "img/icon-48.png", "128": "img/icon-128.png"},
+    "background": {
+        "page": "background.html"
+    },
+
+    "browser_action": {
+      "default_icon": "img/icon-48.png",
+      "default_title": "SR Search",
+      "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*"],
+            "js": ["js/jquery-1.9.1.min.js", "js/common.js", "js/injected.js", "js/cry.js", "js/popup.js"]
+        }
+    ],
+
+    "permissions": ["*://*/*", "tabs", "webRequest", "webRequestBlocking", "notifications"],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'"
+}

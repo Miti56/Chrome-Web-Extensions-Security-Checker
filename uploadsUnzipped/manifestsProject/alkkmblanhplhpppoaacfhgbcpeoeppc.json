@@ -1,0 +1,112 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "manifest_version": 2,
+    "version": "0.1.0",
+    "default_locale": "en",
+    "icons": {
+        "128": "icon.png"
+    },
+    "theme": {
+        "tints": {
+            "frame": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_inactive": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_incognito": [
+                -1,
+                -1,
+                -1
+            ],
+            "frame_incognito_inactive": [
+                -1,
+                -1,
+                -1
+            ],
+            "background_tab": [
+                -1,
+                -1,
+                -1
+            ],
+            "buttons": [
+                0.9083333333333333,
+                1,
+                0.65
+            ]
+        },
+        "properties": {
+            "ntp_background_alignment": "center",
+            "ntp_background_repeat": "no-repeat",
+            "ntp_logo_alternate": 1
+        },
+        "clear_new_tab": {
+            "size": "cover_screen"
+        },
+        "images": {
+            "theme_ntp_background": "theme_ntp_background.jpg",
+            "theme_toolbar": "theme_toolbar.png",
+            "theme_tab_background": "theme_tab_background.png",
+            "theme_tab_background_incognito": "theme_tab_background_incognito.png"
+        },
+        "colors": {
+            "frame": [
+                14,
+                21,
+                69
+            ],
+            "bookmark_text": [
+                234,
+                99,
+                173
+            ],
+            "ntp_text": [
+                255,
+                255,
+                255
+            ],
+            "tab_text": [
+                234,
+                99,
+                173
+            ],
+            "tab_background_text": [
+                137,
+                141,
+                255
+            ],
+            "toolbar": [
+                14,
+                21,
+                69
+            ],
+            "frame_inactive": [
+                24,
+                31,
+                109
+            ],
+            "frame_incognito_inactive": [
+                24,
+                31,
+                109
+            ],
+            "tab_background_text_incognito": [
+                207,
+                152,
+                255
+            ],
+            "ntp_background": [
+                8,
+                7,
+                21
+            ]
+        }
+    }
+}

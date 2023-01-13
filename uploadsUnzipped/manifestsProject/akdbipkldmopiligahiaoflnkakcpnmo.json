@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "商家后台百宝箱",
+  "description": "接口转发，Gitlab扩展等功能",
+  "icons": {
+    "128": "images/mct128.png"
+  },
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "images/mct128.png",
+    "default_title": "msfe extension",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "http://gitlab.hutaojie.com/*",
+    "webRequest",
+    "webNavigation",
+    "tabs",
+    "storage",
+    "webRequestBlocking",
+    "http://dev.mms.com/*",
+    "https://mms.corp.yiran.com/*",
+    "http://mms.qa3.test.yiran.com/*",
+    "unlimitedStorage",
+    "https://*.yiran.com/*",
+    "http://*.yiran.com/*",
+    "https://*.yiran.com/*",
+    "http://*.pinduoduo.com/*",
+    "https://*.pinduoduo.com/*",
+    "http://*.yangkeduo.com/*",
+    "https://*.yangkeduo.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js", "jquery-2.0.3.min.js"],
+    "persistent": true
+  },
+  "version": "0.0.11"
+}

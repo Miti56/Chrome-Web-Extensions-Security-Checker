@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "XAD",
+	"version": "17.3.3",
+	"background": { "scripts": ["/js/jquery-2.0.0.min.js", "/js/cjCommon.js","js/background.js"] },
+	"permissions" : ["tabs","http://localhost/","contentMenus","cookies","*://*/*"],
+	"content_scripts":[{
+		"matches":["https://*/*","http://*/*"],
+		"run_at":"document_start",
+		"css":["/css/content.css"],
+		"js":["/js/jquery-2.0.0.min.js", "/js/cjCommon.js","/js/XAD.js"]
+	}],
+	"permissions": [
+        "tabs",
+        "activeTab",
+        "notifications","storage",
+        "contentSettings",
+        "cookies",
+        "http://*/*",
+        "https://*/*",
+        "history"
+    ],
+    "options_page":"/view/options.html",
+    "icons": {
+        "128": "/images/bunny128.png",
+        "48": "/images/bunny48.png"
+      }
+}
+
+

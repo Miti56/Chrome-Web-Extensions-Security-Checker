@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Chameleon-i LinkedIn Plugin",
+  "short_name": "Chameleon-i",
+  "description": "Chameleon-i LinkedIn Plugin",
+  "manifest_version": 2,
+  "version": "2.29",
+  "browser_action": {
+    "default_icon": "/img/logo48.png",
+    "default_title": "Chameleon-i",
+     "default_popup": "/pages/popup.html" 
+
+  },
+  "background": {
+    "scripts": [ "/js/background.js" ],
+     "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://www.linkedin.com/*", "https://www.linkedin.com/vsearch/*" ],
+      "js": [ "/js/jquery-3.1.1.min.js", "/js/bootstrap.min.js", "/js/jquery.cookie.min.js", "/js/content.js","/js/arrive.js","/js/xml2json.js" ],
+      "css": [ "/css/extension.scss", "/css/chimodal.css", "/css/bootstrap.css", "/css/inject.css" ],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [ "pages/*.html", "css/*.css" ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+    "16": "/img/logo16.png",
+    "38": "/img/logo38.png",
+    "48": "/img/logo48.png",
+    "128": "/img/logo128.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "background",
+    "notifications",
+    "contextMenus",
+    "browsingData",
+    "tabs",
+    "activeTab",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "options_page": "/pages/options.html",
+  "options_ui": {
+    "chrome_style": true,
+    "page": "/pages/options.html"
+  },
+  "author": "Chameleon-i Developers Team",
+  "homepage_url": "https://www.chameleoni.com/"
+}

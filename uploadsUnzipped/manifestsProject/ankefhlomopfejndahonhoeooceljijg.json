@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+ 
+    "name": "Province Radio Tool",
+    "description": "This Province Radio Tool by kirillzver",
+    "version": "1.0.4",
+ 
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "background": {
+        "scripts":["background.js"]
+    },
+    "permissions": [
+    ],
+
+    "permissions": [
+        "activeTab"
+    ]
+}

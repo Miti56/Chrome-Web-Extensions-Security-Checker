@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ingilizce-türkçe ve türkçe-ingilizce sözlük",
+  "description": "ingilizce-türkçe ve türkçe-ingilizce sözlük ve örnek cümle çevirilerinin yer aldığı cumleicinde.com sitesinin uygulamasıdır",
+  "version": "1.3",
+  "browser_action": {
+   "default_icon": "chrome.png",
+   "default_popup": "chrome.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}

@@ -1,0 +1,22 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+ 	"manifest_version": 2,
+ 	"name": "A Good Movie to watch",
+  "short_name": "A Good Movie to watch",
+ 	"version": "1.1",
+	"description": "Are you a movie maniac, with not being able to find something cool and interesting to watch always?",
+	"icons": {
+		"128": "icon.png"
+	},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "default_icon.png",
+    "default_title": "A Good Movie to watch"
+  },
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "background": {
+    "scripts": [ "background.js" ]
+  }
+
+}

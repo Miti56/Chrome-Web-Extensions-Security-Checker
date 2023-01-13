@@ -1,0 +1,32 @@
+{
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "img/icon-128.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["js/jquery.js", "js/content.js"],
+      "matches": ["*://www.facebook.com/", "*://www.facebook.com/?*"]
+    }
+  ],
+  "description": "Use Bigbigads' browser add-on to find out all ads on your fb newsfeed with a single click.",
+  "icons": {
+    "128": "img/icon-128.png",
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhtv38kFHpKv2SdZbTh7zYNxspNNinL+KopgSbPw5OzDl8oiwxVnqWRGL9tK2hnzHsbyr7bJ+vpQk1vqcGkLXBPhamDKWM3t/rrfxtUHNNw95D5EF7nthnyPUFCG1xE3qGG2oKCbidqQkg4Q70+reSxPT1cD3FxKqA2NWfr8d6c0NML5tbpmnmcNXgrpnocP1KL9QrR9l6Zo5aD1KIn9QmEUvgc3yPd9F00cbe3Ye+SU6v/BW1vk7HZo/JioIUNLeHNwFd57ZS77rOTn5gOQIRmrEKXqn3FGMp7ey6Vow3UojjZ9O2KVWKP0I5IsD0BzGs0blyUuHpkeK6eGsLXY/FQIDAQAB",
+  "manifest_version": 2,
+  "name": "Bigbigads(Online Ad Examples)",
+  "permissions": [
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "2.7.5"
+}

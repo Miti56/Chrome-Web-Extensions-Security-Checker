@@ -1,0 +1,73 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "bower_components/traceur-runtime/traceur-runtime.min.js", "bower_components/angular/angular.min.js", "bower_components/chrome-platform-analytics/google-analytics-bundle.js", "components/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon19.png",
+         "38": "images/icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": ""
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Ctrl+Shift+S",
+            "default": "Alt+Shift+S"
+         }
+      },
+      "focus-tab": {
+         "description": "Change Recording Focus to Current Tab",
+         "suggested_key": {
+            "default": "Alt+Shift+F"
+         }
+      },
+      "toggle-pause": {
+         "description": "Pause/Resume Recording",
+         "suggested_key": {
+            "default": "Alt+Shift+P"
+         }
+      },
+      "toggle-recording": {
+         "description": "Start/Stop Recording",
+         "suggested_key": {
+            "default": "Alt+Shift+R"
+         }
+      }
+   },
+   "content_security_policy": "script-src 'self' http://localhost:9008 https://www.google-analytics.com https://apis.google.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_application_description__",
+   "externally_connectable": {
+      "matches": [ "https://*.screencastify.com/*", "https://screencastify-staging.appspot.com/*", "http://localhost:9000/*" ]
+   },
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "48",
+   "name": "Recordify (Free Screen Recorder)",
+   "oauth2": {
+      "client_id": "242262968495-vam8ele6sc3j5q90mcn3sd29l2bq5m1s.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/plus.me", "email", "https://www.googleapis.com/auth/drive.file" ]
+   },
+   "optional_permissions": [ "activeTab", "tabCapture", "\u003Call_urls>", "webNavigation" ],
+   "options_page": "app.html#options",
+   "permissions": [ "storage", "alarms", "identity", "notifications", "unlimitedStorage", "desktopCapture", "clipboardWrite", "system.cpu", "system.memory" ],
+    "platforms": [ {
+      "nacl_arch": "x86-64",
+      "sub_package_path": "_platform_specific/x86-64/"
+   } ],
+   "short_name": "Recordify",
+   "storage": {
+      "managed_schema": "managed_schema.json"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.22.2.183",
+   "version_name": "1.22.2-6f1e6df",
+   "web_accessible_resources": [ "components/castifyDraw/release/roboto/*.woff2", "components/castifyDraw/release/cam-frame.html", "connect.html" ]
+}

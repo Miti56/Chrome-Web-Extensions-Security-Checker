@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TVife: TV Finder and Watchlist",
+  "short_name": "TVife Watchlist",
+  "description": "TVife - tool for organizing TV life. Comment and review your favorite tv shows - movies, series and anime!",
+  "version": "3.1.2",
+  "manifest_version": 2,
+  "icons": {
+    "16": "storage/app/icons/wb_icon_16.png",
+    "48": "storage/app/icons/wb_icon_48.png",
+    "64": "storage/app/icons/wb_icon_64.png",
+    "128": "storage/app/icons/wb_icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "TVife",
+    "default_popup": "popup/popup.html"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+
+  "optional_permissions": [ "identity", "identity.email" ],
+
+  "oauth2": {
+    "client_id": "727644731764-ndqvtj32b2ol22t5dnp69tughi5m4kaj.apps.googleusercontent.com",
+    "scopes": ["profile", "email"]
+  }
+}

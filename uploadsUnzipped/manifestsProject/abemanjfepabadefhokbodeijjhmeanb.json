@@ -1,0 +1,7 @@
+{"name": "Dead By Daylight Wallpapers & Themes", "description": "__MSG_description__", "default_locale": "en", "update_url": "https://clients2.google.com/service/update2/crx", "background": {"scripts": ["background_script.js"]},
+
+ "manifest_version": 2, "version": "3.10.2", "browser_action": {"default_icon": "128-image.png", "default_title": "Dead By Daylight Wallpapers & Themes"},
+
+ "icons": {"128": "128-image.png"},
+
+ "author":"Cade Blake","permissions":["storage"], "chrome_url_overrides": {"newtab": "main.html"}}

@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PartyMode for XBMC",
+  "short_name": "PartyMode",
+  "description": "An XBMC, party mode centered, remote control built with Ember.js.",
+  "version": "1.2.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": [
+        "background.js"
+      ]
+    }
+  },
+  "permissions": [
+    "webview"
+  ],
+  "webview": {
+    "partitions": [
+      {
+        "name": "partymode",
+        "accessible_resources": [
+          "*.css",
+          "*.eot",
+          "*.html",
+          "*.js",
+          "*.svg",
+          "*.ttf",
+          "*.woff"
+        ]
+      }
+    ]
+  },
+  "icons": {
+    "16": "icon16.png",
+    "128": "icon128.png"
+  }
+}

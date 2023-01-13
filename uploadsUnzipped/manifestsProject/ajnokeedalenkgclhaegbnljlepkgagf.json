@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Redirect 4 Chan",
+  "version": "1.0",
+  "description": "Redirects you to 8chan",
+  "background": { 
+     "page":"bg.html"
+     },
+    "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+   "manifest_version": 2,
+  "background": {"scripts":["redirect.js"]},
+  "permissions": [
+    "webRequest",
+    "*://4chan.org/*",
+    "*://www.4chan.org/*",
+    "webRequestBlocking"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Deutsch - Englisch Übersetzer",
+ "manifest_version": 2,
+ "short_name": "Deutsch - Englisch Übersetzer",
+ "description": "Übersetzung schnell vom Deutschen ins Englisch",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1482984834_United-States-Flag.png"
+  },
+ "icons": {
+	"128": "spain-flag.png"
+  }
+}

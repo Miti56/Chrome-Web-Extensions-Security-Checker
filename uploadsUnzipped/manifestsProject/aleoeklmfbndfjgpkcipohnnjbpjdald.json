@@ -1,0 +1,35 @@
+{
+   "background": {
+      "page": "src/background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "32": "src/icon_32.png"
+      },
+      "default_popup": "src/popup.html",
+      "default_title": "CopyInCalcoloIUC"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "src/content.css" ],
+      "html": [ "src/myform.html" ],
+      "js": [ "src/content.js" ],
+      "matches": [ "https://*.agenziaentrate.gov.it/*"]	  
+   } ],
+   "description": "Carica in Calcolo IUC la tabella dei tuoi immobili sul sito dell'Agenzia delle Entrate.",
+   "homepage_url": "http://www.riscotel.it",
+   "icons": {
+      "128": "src/ico128.png",
+      "16": "src/icon_16.png",
+      "32": "src/icon_32.png",
+      "48": "src/ico48.png",
+      "64": "src/icon_64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjHKMdsX65eky5Fl4farZRmDk9RPLlv0vSV9ocJ0mifVUZhFc4CYEa+jXNZp3o8Oy/2Uol6234oD2qvNSqex/KiibE2WT9D4HOkL8kdwNVQmqS7iFuzvWj/08eoBZCRFKApYg+8oOE4GJ1x21Dj6p4HXULVvsY69FvYcREChQBcJw5wwfW/t/xThHVJopx8TShf/vjwjt3nY0K9ISYvpe4TUz8vJKdmQFgd9+b9yZArKu9ko5NHbhHGbL7cFZbPgBdW9fZf2pupDzW84oTMOrQg/LN84agZRyIyOCQ3mde1rrv/G8dhm4GPTy0j29xMjN3hfSaQKKCFxynenEPURz3QIDAQAB",
+   "manifest_version": 2,
+   "name": "CopyInCalcoloIUC",
+   "permissions": ["contextMenus", "storage"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.4"
+}

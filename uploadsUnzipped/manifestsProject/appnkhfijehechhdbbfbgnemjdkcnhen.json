@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "WorkSmart",
+	"author": "DesignLinks International",
+	"description": "WorkSmart",
+	"version": "1.0",
+	"permissions": [
+		"webview"
+		, "app.window"
+	],
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": {
+		"16": "16.png", 
+		"48": "48.png", 
+		"128": "128.png"
+	}
+}

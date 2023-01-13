@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "128.png",
+      "default_title": "Mope IO Game New Tab"
+   },
+   "default_locale": "en_US",
+   "description": "__MSG_appDesc__",
+   "manifest_version": 2,
+   "name": "Mope IO Game New Tab",
+   "author":"TOPIOGAME",
+   "icons": {
+      "128": "128.png"
+   },    
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.1"
+}

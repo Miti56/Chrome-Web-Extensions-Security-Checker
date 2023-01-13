@@ -1,0 +1,24 @@
+{
+  "web_accessible_resources": [
+    "badge.png",
+    "x.png"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Raderar alla förekomster av länkar till dagensnyheter.se",
+  "name": "Dagensnyheter.se-minus",
+  "permissions": ["*://*.dn.se/*"],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png",
+    "16": "icon16.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.dn.se/*"],
+    "js": [
+      "jquery-1.9.1.min.js",
+      "script.js"
+    ]
+  }],
+  "manifest_version": 2,
+  "version": "0.1"
+}

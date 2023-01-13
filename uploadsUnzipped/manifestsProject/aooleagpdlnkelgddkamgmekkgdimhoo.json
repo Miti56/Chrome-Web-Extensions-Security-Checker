@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "PPA Phishing Detector",
+    "version": "0.1",
+    "icons": {
+        "16": "detector.png",
+        "48": "detector.png",
+        "128": "detector.png"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "web_accessible_resources": [
+        "data.json"
+    ],
+
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs",
+        "activeTab",
+        "http://localhost/*"
+    ],
+
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["jquery-3.3.1.min.js", "content1.js"]
+    }]
+}

@@ -1,0 +1,57 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2, 
+  "short_name":"PropertyGum - Property Comparison, Reviews & Price Tracker", 
+  "name":"PropertyGum", 
+  "description":"Properties for sale reviewed & rated by community. PropertyGum also tracks changes to property prices on the RightMove website.", 
+  "version":"0.7.4", 
+  "author":"PropertyGum.com", 
+
+  "icons": {
+    "48":"images/logo.png"
+  }, 
+
+  "browser_action": {
+    "default_title":"PropertyGum", 
+    "default_icon": {
+      "19":"images/logo.png", 
+      "20":"images/logo.png", 
+      "38":"images/logo.png"
+    }, 
+    "default_popup":"popup.html"
+  }, 
+
+  "background": {
+    "scripts":[
+      "scripts/background.js"
+    ], 
+    "persistent":false
+  }, 
+
+  "content_scripts":[ {
+      "matches":[
+        "*://*.rightmove.co.uk/*",
+        "*://*.zoopla.co.uk/*",
+        "*://*.onthemarket.com/*",
+        "*://*.propertygum.com/*"
+      ], 
+      "js":[
+        "scripts/popup.js"
+      ], 
+      "run_at":"document_start"
+    }
+  ], 
+
+  "permissions":[
+    "webNavigation", 
+    "*://*.rightmove.co.uk/*",
+    "*://*.zoopla.co.uk/*",
+    "*://*.onthemarket.com/*",
+    "*://*.propertygum.com/*"
+  ], 
+
+  "web_accessible_resources":[
+    "*.png"
+  ]
+}

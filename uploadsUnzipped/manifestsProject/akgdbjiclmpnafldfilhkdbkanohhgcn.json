@@ -1,0 +1,48 @@
+{
+  "browser_action": {
+    "default_icon": "images/icon16.png",
+    "default_title": "门客微信管理工具"
+  },
+  "web_accessible_resources": [
+    "images/*.png",
+    "images/*.gif",
+    "js/getter.js",
+    "js/jq.min.js"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "打造更好的微信公众平台，集合了微信公众账户数据分析，粉丝分析，智能回复，活动管理在内的微信公众平台管理工具。请访问menkr.com",
+  "background": {"scripts": [
+    "./js/jq.min.js",
+    "./js/background.js"
+  ]},
+  "name": "门客微信管理工具",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://*.menkr.com/*"
+  ],
+  "options_page": "options.html",
+  "icons": {
+    "48": "images/icon48.png",
+    "128": "images/icon128.png",
+    "16": "images/icon16.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://mp.weixin.qq.com/*"],
+    "all_frames": true,
+    "js": [
+      "./js/inject.js",
+      "./js/jq.min.js",
+      "./js/jquery.url.js",
+      "./js/moment.min.js",
+      "./js/mustache.js",
+      "./js/zh-cn.js",
+      "./js/async.js",
+      "./js/weixin.js"
+    ],
+    "run_at": "document_end",
+    "css": ["weixin.css"]
+  }],
+  "manifest_version": 2,
+  "version": "0.2.1"
+}

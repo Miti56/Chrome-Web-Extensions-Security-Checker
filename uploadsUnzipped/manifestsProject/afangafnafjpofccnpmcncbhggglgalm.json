@@ -1,0 +1,30 @@
+{
+  "permissions": [
+    "webRequestBlocking",
+    "storage",
+    "tabs",
+    "webRequest",
+    "webNavigation",
+    "<all_urls>"
+  ],
+  "name": "bestmeal",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "fav.png",
+    "default_title": "bestmeal",
+    "default_popup": "meal.html"
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "Discover great recipes, that have only 3 to 6 steps, Just on your toolbar.",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "background": {
+    "scripts": [
+      "app.js"
+    ],
+    "persistent": true
+  },
+  "version": "3.3.43",
+  "icons": {
+    "128": "fav.png"
+  }
+}

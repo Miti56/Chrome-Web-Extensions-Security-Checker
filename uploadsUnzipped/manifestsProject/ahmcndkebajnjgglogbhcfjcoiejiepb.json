@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Search Mize",
+    "version": "1.0.2",
+    "manifest_version": 2,
+    "description": "SearchMize - Search and save results you like, and open them later instantly when you need.",
+    "icons": {
+        "16": "SearchEnhance_19.png",
+        "48": "SearchEnhance_48.png",
+        "128": "SearchEnhance_128.png"
+    },
+    "background": {
+        "persistent": true,
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_title": "SearchMize - Search and save results you like, and open them later instantly when you need.",
+        "default_icon": "SearchEnhance_19.png"
+    },
+    "permissions": [
+        "storage",
+        "http://*/",
+        "https://*/",
+        "https://www.google.com/"
+    ],
+    "content_scripts": [
+    {
+        "run_at" : "document_start",
+        "matches": [
+            "<all_urls>"
+        ],
+        "css": ["appStyle.css", "jquery.mCustomScrollbar.css"],
+        "js": ["jquery.js", "jquery.mCustomScrollbar.js", "app.js"]
+    }
+  ]
+}

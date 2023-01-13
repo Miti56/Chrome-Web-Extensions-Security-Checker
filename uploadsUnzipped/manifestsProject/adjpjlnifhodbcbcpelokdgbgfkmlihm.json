@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Portal: Aperture Laboratories",
+"short_name": "Portal",
+"author": "Thunderclaww",
+"version": "1.0.2",
+"manifest_version": 2,
+"theme": {
+"images" : {
+"theme_frame" : "images/frame.png",
+"theme_toolbar" : "images/toolbar.png",
+"theme_tab_background" : "images/tab.png",
+"theme_tab_background_incognito" : "images/tab.png",
+"theme_ntp_background" : "images/background.png",
+"theme_ntp_attribution" : "images/theme_ntp_attribution.png",
+"theme_window_control_background": "images/window_control_background.png"
+},
+
+"colors" : 
+{
+"frame": [20,61,104],
+"toolbar": [237,239,238],
+"tab_text": [0,0,0],
+"tab_background_text": [160,160,160],
+"bookmark_text": [0,0,0],
+"ntp_background": [20,61,104],
+"ntp_text": [255,255,255],
+"ntp_link": [0,0,0]
+},
+
+"tints" : 
+{
+"buttons" : [0.066, 0, 0.25],
+"frame_inactive" : [-1,0.4,0.6]
+},
+
+"properties" : 
+{
+"ntp_background_alignment" : "top",
+"ntp_background_repeat": "repeat"
+}
+
+}
+
+}

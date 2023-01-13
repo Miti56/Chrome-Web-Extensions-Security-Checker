@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Tufts CS Dash",
+    "description": "Everything you need as a CS major at Tufts",
+    "version": "0.0.5",
+    "manifest_version": 2,
+    "permissions": [],
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}

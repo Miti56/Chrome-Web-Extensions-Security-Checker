@@ -1,0 +1,48 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.2",
+  "name": "Devil May Cry 4",
+  "theme": {
+      "images" : {
+      "theme_frame": "images/theme_frame.png",
+      "theme_frame_inactive": "images/theme_frame_inactive.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+    },
+    "colors" : {
+      "frame" : [255, 255, 255],
+      "frame_inactive" : [255, 255, 255],
+      "frame_incognito" : [163, 163, 163],
+      "frame_incognito_inactive" : [232, 232, 232],
+      "toolbar" : [255, 255, 255],
+      "tab_text" : [0, 0, 255],
+      "tab_background_text" : [71, 71, 71],
+      "bookmark_text" : [255, 0, 0],
+      "ntp_background" : [255, 255, 255],
+      "ntp_text" : [255, 0, 0],
+      "ntp_link" : [0, 0, 255],
+      "ntp_link_underline" : [209, 209, 209],
+      "ntp_header" : [255, 0, 0],
+      "ntp_section" : [0, 0, 0],
+      "ntp_section_text" : [255, 255, 255],
+      "ntp_section_link" : [209, 209, 209],
+      "ntp_section_link_underline" : [255, 0, 0],
+      "control_background" : [0, 0, 0],
+      "button_background" : [255, 0, 0]
+    },
+    "tints" : {
+      "buttons" : [0.70, 1.00, 0.50],
+      "frame" : [-1.00, -1.00, -1.00],
+      "frame_inactive" : [-1.00, -1.00, 0.75],
+      "frame_incognito" : [-1.00, 0.20, 0.35],
+      "frame_incognito_inactive" : [-1.00, 0.30, 0.60],
+      "background_tab" : [-1.00, 0.50, 0.75]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "right top",
+      "ntp_background_repeat" : "no-repeat",
+      "ntp_logo_alternate" : 0
+    }
+  }
+}

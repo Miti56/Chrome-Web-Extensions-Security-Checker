@@ -1,0 +1,41 @@
+{
+	"version": "4.7.0",
+	"description": "__MSG_description__",
+	"name": "__MSG_name__",
+	"icons": {
+		"48": "outlast-icons/icon-48.png",
+		"128": "outlast-icons/icon-128.png"
+	},
+	"default_locale": "en",
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"browser_action": {
+		"default_title": "Outlast"
+	},
+	"chrome_url_overrides": {
+		"newtab": "main.html"
+	},
+	"optional_permissions": [
+		"management"
+	],
+	"background": {
+		"scripts": [
+			"js/background.js"
+		]
+	},
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

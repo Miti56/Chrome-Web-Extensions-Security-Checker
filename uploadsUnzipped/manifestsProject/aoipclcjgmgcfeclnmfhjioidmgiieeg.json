@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "BCIT ProgressTracker",
+  "version": "1.3",
+  "manifest_version": 2,
+  "description": "Highlights and calculates credits for the courses you've completed across BCIT website!",
+  "homepage_url": "http://neeksandhu.com",
+  "icons": {
+    "19": "icons/icon19.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "http://neeksandhu.com/"
+  ],
+  "background": {
+    "scripts": ["dist/scripts/background/main.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bcit.ca/*"
+      ],
+      "js": [
+        "bower_components/classnames/index.js",
+        "bower_components/react/react.js",
+        "bower_components/react/react-dom.js",
+        "bower_components/sweetalert/dist/sweetalert.min.js",
+        "dist/scripts/content/main.js"
+      ],
+      "css": [
+        "bower_components/sweetalert/dist/sweetalert.css",
+        "dist/styles/styles.css"
+      ],
+      "run_at" : "document_start"
+    }   
+      
+  ]
+}

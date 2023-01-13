@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Flexblog",
+  "description": "Créez votre blog gratuitement et partagez simplement tout ce que vous aimez.",
+  "version": "1.0.2",
+  "manifest_version": 2,
+   "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.flexblog.fr/"
+    ],
+    "launch": {
+      "web_url": "http://www.flexblog.fr/"
+    }
+  }
+}

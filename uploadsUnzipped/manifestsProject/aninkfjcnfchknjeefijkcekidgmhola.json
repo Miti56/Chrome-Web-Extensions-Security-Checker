@@ -1,0 +1,35 @@
+{
+   "author": "3CX",
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "description": "Share your screen and co browse with 3CX WebRTC Meetings",
+   "externally_connectable": {
+      "matches": [ "*://*.powerself.com.mx/*" ]
+   },
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "19": "icon19.png",
+      "38": "icon38.png",
+      "48": "icon48.png"
+   },
+  
+   "manifest_version": 2,
+   "name": "3CX Webmeeting",
+   "page_action": {
+      "default_icon": {
+         "128": "icon128.png",
+         "16": "icon16.png",
+         "19": "icon19.png",
+         "38": "icon38.png",
+         "48": "icon48.png"
+      },
+      "default_title": "Send page link to others participants"
+   },
+   "permissions": [ "desktopCapture", "tabs" ],
+   "short_name": "3CX WebRTC",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "8.2"
+}

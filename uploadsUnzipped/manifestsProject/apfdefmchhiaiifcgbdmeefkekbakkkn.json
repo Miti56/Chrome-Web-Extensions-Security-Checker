@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "简书助手",
+	"description": "提升简书玩耍体验！",
+	"version": "0.1.2",
+
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"http://jianshu.io/",
+		"http://jianshu.io/*",
+		"http://jianshu.io/*/*"
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "menu.html"
+	},
+	"icons": {"48": "icon.png"},
+
+	"background": {
+		"scripts": ["servo.js"]
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://jianshu.io/", "http://jianshu.io/*", "http://jianshu.io/*/*"],
+			"css": ["page.css"],
+			"js": ["common.js", "kernel.js"],
+			"run_at": "document_start"
+		}
+	]
+}

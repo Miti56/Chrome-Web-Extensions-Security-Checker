@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "js/background.js", "js/ga.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "img/icon_128.png",
+         "24": "img/icon_24.png",
+         "32": "img/icon_32.png",
+         "48": "img/icon_48.png",
+         "64": "img/icon_64.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ 
+      {
+         "matches": ["<all_urls>"],
+         "js": ["js/analyzer.js", "js/content.js"],
+         "all_frames": true,
+         "match_about_blank": true
+      }
+   ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://code.jquery.com https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Check ranking and statistics of the current web page.",
+   "icons": {
+      "128": "img/icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "Z-Tools",
+   "options_page": "docs/options.html",
+   "permissions": [ "tabs", "storage", "<all_urls>" ],
+   "version": "1.0.3"
+}

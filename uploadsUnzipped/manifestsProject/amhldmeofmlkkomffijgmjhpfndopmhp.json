@@ -1,0 +1,21 @@
+{
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "skipad.js" ],
+      "matches": [ "*://*.youtube.com/*" ],
+      "run_at": "document_end"
+   } ],
+      "background": {
+      "scripts": [ "background.js" ]
+   },
+    "description": "Automatic Skip Youtube Ads, automatic skip ad youtube, Skip YouTube Ads, Youtube Ad Skipper",
+   "homepage_url": "http://newapptome.com/automatic-skip-youtube-ads/",
+   "manifest_version": 2,
+    "icons": {
+      "128": "youtube_skip_128.png"
+   },
+   "name": "Automatic Skip Youtube Ads",
+   "short_name": "Automatic Skip Youtube Ads",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}

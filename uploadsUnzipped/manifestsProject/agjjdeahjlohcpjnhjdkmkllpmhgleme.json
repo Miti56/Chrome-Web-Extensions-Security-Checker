@@ -1,0 +1,25 @@
+{
+  "background": {
+    "page": "background.html"
+  },
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html",
+      "default_title": "Google Home Background"
+   },
+  "content_scripts": [ {
+    "js": [ "jquery.js", "content_script.js" ],
+    "matches": [ "*://*/*" ],
+    "run_at": "document_end"
+  }],
+  "description": "Change the boring white background of your Google home page to an awesome wallpaper",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "Google Home Background",
+   "permissions": [ "tabs", "*://*/*", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "*.css", "imgs/*.jpg" ]
+}

@@ -1,0 +1,39 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "short_name": "KeepVid Video Downloader",
+    "version": "2.35",
+    "default_locale": "en",
+    "description": "__MSG_appDesc__",
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "img/icon24.png",
+		"default_title": "KeepVid Video Downloader",
+        "default_popup": "popup/window.html"
+    },
+	"web_accessible_resources": [
+		"*.png"
+	],
+	"content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+			"css": ["lib/css/alertify.min.css"],
+            "js": [ "lib/alertify.js", "scripts/detect.js" ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "downloads",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "scripts": ["scripts/background.js"]
+    }
+}

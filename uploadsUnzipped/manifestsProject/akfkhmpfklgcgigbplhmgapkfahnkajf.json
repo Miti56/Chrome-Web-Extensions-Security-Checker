@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Spanning Backup for Google Apps (Free Trial)",
+ "description": "Spanning Backup for Google Apps is the most trusted backup and restore solution for Gmail, Drive, Calendar, Contacts, and Sites.",
+ "version": "4.0.0.1",
+ "manifest_version": 2,
+ "container": ["DOMAIN_INSTALLABLE"],
+ "api_console_project_id": "632855923494",
+ "icons": {
+  "16" : "sbga_icon_16x16.png",
+  "128" : "sbga_icon_128x128.png"
+ }
+}
+

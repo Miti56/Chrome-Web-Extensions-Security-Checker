@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "AnimeFLV - Clean",
+  "version": "1.6",
+  "description": "Modifica el aspecto y mejora la experiencia visual del sitio AnimeFlv.",
+  "icons": { "16": "afc16.png",
+           "48": "afc48.png",
+          "128": "afc128.png" },
+  "author": "GSUNDESIGNS",
+  
+  "background": {
+      "scripts": ["first_vanilla.js"],
+	  "persistent": false
+  },
+  "page_action": {
+    "default_icon": "afc16.png"
+  },
+  "content_scripts": [
+    {
+	  "all_frames": true,
+      "matches": ["*://*.animeflv.net/*", "*://*.animeflv.net/*/*"],
+	  "exclude_matches" : ["*://*.animeflv.net/api.php*", "*://animeflv.net/img/*"],
+      "js": ["scripts/jquery.js", "scripts/jquery.cookie.js", "first.orig.js", "scripts/functions.js", "scripts/myscript.min.js", "scripts/jqui.js"],
+	  "css": ["first_style.css", "styles/navbardetails.css", "styles/mystyles.css", "styles/jqui.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "short_name": "AFC",
+  "minimum_chrome_version": "18.0"
+}

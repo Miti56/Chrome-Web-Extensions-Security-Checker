@@ -1,0 +1,17 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon4.png"
+   },
+   "description": "Free Gold & Gems For Clash Of Clans  - no survey.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Free Gold & Gems for Clash Of Clans ",
+   "short_name": "Clash Of Clans Free Gold & Gems",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

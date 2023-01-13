@@ -1,0 +1,18 @@
+{
+   "manifest_version": 2,
+   "app": {
+      "launch": {
+         "web_url": "http://bible.com"
+      },
+      "urls": [ "http://www.bible.com/" ]
+   },
+   "description": "The Bible from YouVersion",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDM52lid1V5OH7vCTMYngSVQPoc9XeVwtXEZ38jlta3G3mLu1StbquDrFlRUxnxeD11oGwzFr3fpy1dsVrfcnT0UMUjoX5I9WleM66Xh7PxL4WiSq3lg6Izlfe0UKUjOr0YX+Yw2IXcCIj0++UrmGSg40x0GfMezWkDpyKsbQhG4QIDAQAB",
+   "name": "Bible",
+   "permissions": [ "unlimitedStorage", "notifications", "clipboardRead", "clipboardWrite", "geolocation" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.3"
+}

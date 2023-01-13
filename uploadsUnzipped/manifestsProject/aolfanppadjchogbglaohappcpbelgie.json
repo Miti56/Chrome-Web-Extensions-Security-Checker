@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "1.0.0",
+    "name": "Developer Edition",
+    "manifest_version": 2,
+    "theme": {
+        "colors": {
+            "frame": [0, 0, 0],
+            "toolbar": [50, 50, 52],
+            "tab_text": [255, 255, 255],
+            "frame_inactive": [10, 10, 10],
+            "bookmark_text": [190, 190, 190],
+            "ntp_background": [190, 190, 190],
+            "button_background": [255, 255, 255, 0],
+            "tab_background_text": [128, 128, 128]
+        },
+        "tints": {
+            "buttons": [0, 0, 0.75]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "VerandataNotifier",
+  "version": "1.0",
+  "description": "Monitoring VERANDATA * Developed by Sideral Project Ltd. *  http://sideral-project.com",
+  "background": { "scripts": ["background.js"] },
+  "permissions": [
+    "tabs",     
+	"http://verandata.com/books/include/",
+	"https://verandata.com/books/include/",
+	"storage"
+  ],
+  "browser_action": {
+    "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+    "default_popup": "chLibMon.html"
+  },
+  "minimum_chrome_version": "27"
+}

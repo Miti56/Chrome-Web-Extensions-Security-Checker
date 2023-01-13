@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   
+   "content_scripts": [ {
+      "all_frames": true,
+	  "js": [ "jquery.js","elmaz.js" ],
+      "matches": [ "http://www.elmaz.ro/index.php?page=profile&aid=*" ],
+      "run_at": "document_end"
+   } ],
+    
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "get member photos.",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png"
+   },
+   "incognito": "spanning",
+   "manifest_version": 2,
+   "name": "Elmaz.ro photos",
+   "permissions": [ ],
+   "version": "1.5"
+}

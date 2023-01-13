@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Gmail Notes",
+  "version": "1.14",
+  "description": "Write notes within Gmail.",
+  "homepage_url": "http://gmail.com",
+  "icons": {
+    "128": "./images/gmailnotes-128.png",
+    "48": "./images/gmailnotes-48.png"
+  },
+  "permissions": ["tabs",
+                  "storage"],
+  "background" : {
+    "scripts" : ["background-util.js",
+                 "background.js"]
+  },
+  "browser_action": {
+    "default_icon": "images/gmailnotes-38.png",
+    "default_title": "GmailNotes",
+    "default_popup": "gmailnotes-ba.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://gmail.com/*", "https://gmail.com/*", "http://mail.google.com/*", "https://mail.google.com/*"],
+    "css": ["gmailnotes.css"],
+    "js": ["vendor/jquery-1.7.js",
+           "gmailnotes-util.js",
+           "gmailnotes.js"],
+    "run_at": "document_end"
+  }],
+  "web_accessible_resources": ["images/modal-close.png"]
+ }

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Currently Now",
+  "version": "2.8.1",
+  "options_page": "app/index.html#/drawer/settings",
+  "description": "Replace the new tab with the current weather and time.",
+  "chrome_url_overrides": {
+    "newtab": "app/index.html"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "geolocation",
+    "unlimitedStorage",
+    "https://maps.googleapis.com/maps/api/",
+    "http://api.wunderground.com/api",
+    "https://ssl.google-analytics.com/",
+    "https://s3.amazonaws.com/",
+	"tabs",
+		"\u003Call_urls>"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://widget.uservoice.com/ 'unsafe-eval'; object-src 'self'"}

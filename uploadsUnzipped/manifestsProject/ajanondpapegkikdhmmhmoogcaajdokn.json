@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Video Downloader For Facebook™",
+  "short_name": "Video  Downloader For Facebook™",
+  "description": "Easily and quickly download videos from Facebook™.",
+  "version": "2.7.2",
+  "content_security_policy": "script-src 'self' https://connect.facebook.net https://ssl.google-analytics.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": "./resources/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "css": ["./styles/style.css"],
+      "js": [
+        "./resources/jquery-2.1.1.min.js",
+        "./scripts/content/onVideoIcon.js",
+        "./scripts/content/pageLoad.js",
+        "./scripts/content/helper.js",
+        "./scripts/content/scriptsFuncs.js",
+        "./scripts/content/scripts.js",
+        "./scripts/content/browserIcon.js"
+      ],
+      "all_frames": false,
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "128": "./resources/icon.png",
+    "16": "./resources/icon.png",
+    "48": "./resources/icon.png"
+  },
+  "permissions": ["contextMenus", "activeTab"],
+  "background": {
+    "scripts": [
+      "./scripts/background/ga.js",
+      "./scripts/background/browserAction.js",
+      "./scripts/background/badgeIcon.js",
+      "./scripts/background/runtime.js",
+      "./scripts/background/parser.js",
+      "./scripts/background/fb_helper.js"
+    ]
+  },
+  "web_accessible_resources": ["/resources/loader.gif", "/resources/icon.png"]
+}

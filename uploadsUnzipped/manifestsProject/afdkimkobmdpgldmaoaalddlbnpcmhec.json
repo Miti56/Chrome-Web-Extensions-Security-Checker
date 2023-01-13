@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Helix Online",
+
+  "short_name": "Helix Online",
+
+  "version": "1.0.2",
+  "description": "Play Helix Online now!",
+
+  "homepage_url": "http://flashcub.xyz/c/board-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Helix Online",
+
+      "default_popup": "popup.html"
+  }
+}

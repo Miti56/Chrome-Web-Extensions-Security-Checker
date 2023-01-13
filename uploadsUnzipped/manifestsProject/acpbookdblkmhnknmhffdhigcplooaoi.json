@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "FlyCloud2.0",
+  "description": "娱乐、追星、办公？从此快人一步，无需等待!",
+  "version": "2.0.0",
+  "icons": {
+    "16": "image/logo/16.png",
+    "19": "image/logo/19.png",
+    "32": "image/logo/32.png",
+    "38": "image/logo/38.png",
+    "48": "image/logo/48.png",
+    "64": "image/logo/64.png",
+    "72": "image/logo/72.png",
+    "96": "image/logo/96.png",
+    "128": "image/logo/128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "image/logo/19.png",
+      "38": "image/logo/38.png"
+    },
+    "default_title": "FlyCloud"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "management",
+    "proxy",
+    "system.display",
+    "system.memory",
+    "system.cpu",
+    "idle",
+    "tabs",
+    "cookies",
+    "notifications",
+    "webRequest",
+    "clipboardWrite",
+    "clipboardRead",
+    "webRequestBlocking",
+    "http://*/",
+    "https://*/",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' object-src"
+}

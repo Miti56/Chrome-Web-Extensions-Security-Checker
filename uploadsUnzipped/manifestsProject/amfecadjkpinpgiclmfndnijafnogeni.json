@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Premium Website Design - RiaEnjolie",
+  "description": "From custom to mobile websites, RiaEnjolie helps small businesses make a great impression with industry-specific content and design.",
+  "version": "0.0.0.4",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.RiaEnjolie.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.RiaEnjolie.com/?utm_source=chrome-webstore&utm_medium=banner&utm_campaign=Developer-Tools"
+    }
+  }
+}

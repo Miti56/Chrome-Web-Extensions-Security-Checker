@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "NCTU New e3 加速器",
+  "version": "2.0",
+  "description": "大幅降低交大新e3 Loading時間",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://e3new.nctu.edu.tw/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Replace Copy",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "URLを置換してコピー",
+    "permissions": ["clipboardRead", "contextMenus", "tabs", "http://*/*", "https://*/*"],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "options_page": "options.html"
+}

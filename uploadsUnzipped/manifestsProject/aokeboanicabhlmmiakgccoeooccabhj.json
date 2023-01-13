@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Desaturated",
+  "version": "1.2",
+  "description": "Minimalist gray-and-default-blue theme",
+  "theme": {
+    "images": {
+      "theme_button_background": "images/button_background.png",
+      "theme_frame": "images/frame.png",
+      "theme_tab_background": "images/tab_background.png",
+      "theme_toolbar": "images/toolbar.png"
+    },
+    "colors" : {
+      "frame" : [132, 145, 172],
+      "toolbar" : [227, 227, 227]
+    }
+  }
+}

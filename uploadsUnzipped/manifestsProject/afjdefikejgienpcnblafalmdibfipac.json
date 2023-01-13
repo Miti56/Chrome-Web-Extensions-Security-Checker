@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  
+  "name": "Financial Calculator",
+  "description": "13 financial calculators to calculate payments.",
+  "version": "1.1",
+  "offline_enabled": false,
+  
+  "app": {
+    "urls": [
+		"http://www.dcalculator.com/"
+	],
+    "launch": {
+      "web_url": "http://www.dcalculator.com/"
+    }
+  },
+  
+  "icons": {
+    "128": "icon.png"
+  },
+  
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

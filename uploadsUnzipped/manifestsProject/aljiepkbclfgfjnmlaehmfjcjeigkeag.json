@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+      "exclude_globs": [  ],
+      "exclude_matches": [  ],
+      "include_globs": [ "http://*.newsblur.com/*", "https://*.newsblur.com/*", "http://*.newsblur.com/", "http://newsblur.com/", "https://newsblur.com/" ],
+      "js": [ "script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "converted_from_user_script": true,
+   "description": "Show the number of unread items in Newsblur on the favicon. Enable 'Show unread counts in the window title' in preferences.",
+   "name": "Newsblur Favicon Count",
+   "version": "2.0",
+	 "manifest_version": 2
+}

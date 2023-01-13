@@ -1,0 +1,79 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"manifest_version": 2,
+	"name": "zhejiangGSCTools",
+	"version": "1.0.1",
+	"description": "__zhejiangGSCTools__",
+	"icons":
+	{
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"background":
+	{
+		"page": "background.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*.ikandy.cn/*"],
+			"js": ["js/jquery-1.8.3.js", "js/content-script.js"],
+			"css": ["css/custom.css"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions":
+	[
+		"nativeMessaging",
+		"contextMenus", 
+		"tabs",
+		"notifications", 
+		"webRequest", 
+		"webRequestBlocking", 
+		"storage", 
+		"cookies",
+        "*://localhost/*",
+        "*://116.236.245.205/*",
+        "*://10.1.14.127/*",
+        "*://192.168.1.63/*",
+        "*://192.168.1.65/*",
+        "*://127.0.0.1/*",
+        "*://114.215.199.163/*",
+        "*://121.43.109.238/*",
+        "*://121.43.173.249/*",
+        "*://112.124.117.58/*",
+        "*://mcc.ikandy.cn/*",
+        "*://s.mcc.ikandy.cn/*",
+        "*://codepen.io/*",
+        "*://s.codepen.io/*",
+        "*://dev.ikandy.cn/*",
+        "*://*.ikandy.cn/*",
+        "*://s.dev.ikandy.cn/*",
+        "*://pivosgroup.com.cn/*",
+        "*://s.pivosgroup.com.cn/*",
+        "*://127.0.0.1/*",
+        "*://116.236.245.204/*",
+        "*://10.1.117.151/*",
+        "*://unicom.ikandy.cn/*",
+        "*://222.73.100.163/*",
+        "*://220.248.37.51/*",
+        "*://12.100.227.92/*",
+        "*://10.94.41.139/*",
+        "*://192.168.16.44/*",		
+        "*://kf.tp.com/*",
+        "*://yds.ikandy.cn/*"
+	],
+	"web_accessible_resources": ["js/inject.js"],
+	"homepage_url": "https://www.baidu.com",
+	"options_page": "options.html",
+	"options_ui":
+	{
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"omnibox": { "keyword" : "go" },
+	"default_locale": "zh_CN"
+}

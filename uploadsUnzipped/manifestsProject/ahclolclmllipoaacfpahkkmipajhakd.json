@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "qqruza - тренажер английских слов",
+  "short_name" : "qqruza",
+  "icons": {
+    "16": "icon-e16.png",
+    "48": "icon-e48.png",
+    "128": "icon-e128.png"
+  },
+  "version": "1.0.0",
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "activeTab",
+    "management",
+    "notifications",
+    "*://*/*"
+  ],
+  "browser_action": {
+    "default_title": "qqruza - тренажер английских слов",
+    "default_icon": "icon-e.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "main.css"
+      ],
+      "js": [
+        "jquery-3.2.1.min.js",
+        "mousetrap.min.js",
+        "mousetrap.bindglobal.min.js",
+        "main.js"
+      ]
+    }
+  ]
+}

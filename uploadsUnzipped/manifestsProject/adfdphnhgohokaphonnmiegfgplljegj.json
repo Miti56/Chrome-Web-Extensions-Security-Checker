@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Victor Nettoyeur",
+  "version": "0.0.3",
+  "icons": {
+  "128": "icon_128.png"
+  },
+  "manifest_version": 2,
+  "author": "Jean-Christophe Meillaud",
+  "description": "Victor, nettoyeur, replace stuff",
+  "homepage_url": "http://www.houseofagile.com",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Nettoyer!"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "InmegaDIF Test",
+  "version": "0.1.8",
+  "description": "Para uso interno",
+  "content_scripts": [{
+    "js": ["jquery.js","content.js"],
+    "matches": ["https://dirnutmex.org/*"]
+  }]
+
+}

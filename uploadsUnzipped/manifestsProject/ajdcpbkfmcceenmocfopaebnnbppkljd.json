@@ -1,0 +1,29 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "VR Player Launcher",
+	"version": "0.1",
+	"description": "Finds videos on a page and provide a link to open them in VR Player",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"webRequest",
+		"tabs", 
+		"background",
+		"<all_urls>"
+	],
+	"icons": { 
+		"16":"img/icon16.png", 
+		"48":"img/icon48.png", 
+		"128":"img/icon128.png"
+	},
+	"browser_action": {
+		"default_title": "VR Player Launcher",
+		"default_icon": {
+		  "19": "img/icon19.png",
+		  "38": "img/icon38.png"
+		},
+		"default_popup": "popup.html"
+	}
+}

@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version" : "6",
+    "manifest_version" : 2,
+    "name" : "Personal Fest 2013 Tema Deluxe",
+    "short_name" : "Personal Fest",
+    "description" : "La nueva edición deluxe del Personal Fest llegó a Chrome y vas a poder vivirlo como nunca.",
+    "theme" :{
+        "images" : {
+            "theme_window_control_background" : "control_background.png",
+            "theme_button_background" : "theme_button_background.png",
+            "theme_frame_inactive" : "theme_frame_inactive.png",
+            "theme_frame_incognito_inactive" : "theme_frame_incognito_inactive.png",
+            "theme_frame" : "theme_frame.png",
+            "theme_ntp_attribution" : "theme_ntp_attribution.png",
+            "theme_ntp_background" : "theme_ntp_background.jpg",
+            "theme_tab_background_incognito" : "theme_tab_background_incognito.png",
+            "theme_tab_background" : "theme_tab_background.png",
+            "theme_toolbar" : "theme_toolbar.png"
+        },
+        "icons": {
+            "16": "19.png",
+            "48": "38.png",
+            "128": "128B.png"
+        },
+        "colors" : {
+            "frame" : [226,101,128],
+            "frame_inactive" : [231,129,151],
+            "frame_incognito" : [231,129,151], 
+            "frame_incognito_inactive" : [170,101,128],
+            "toolbar" : [144,57,84],
+            "tab_text" : [255,255,255],
+            "tab_background_text" : [114,57,84],
+            "bookmark_text": [0,0,0],
+            "ntp_background":[226,101,28],
+            "ntp_text": [0,0,0],
+            "ntp_link": [0,50,255],
+            "ntp_link_underline" : [0,50,255],
+            "ntp_header" : [123,61,118],
+            "ntp_section" : [190,100,130],
+            "ntp_section_text": [0,0,0],
+            "ntp_section_link" : [0,50,255],
+            "ntp_section_link_underline" : [0,50,255],
+            "control_background" : [255,240,0],
+            "button_background" : [144,57,84]
+        }
+    }
+}

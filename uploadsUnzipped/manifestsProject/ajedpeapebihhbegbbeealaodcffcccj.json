@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name" : "NoSpoilTwi",
+	"description" : "Description du script",
+	"version" : "1.2",
+
+
+	"browser_action":{
+		"default_icon" : "NoSpoilTwi.jpg",
+		"default_popup" : "popup.html"
+	},
+
+	"permissions": ["https://twitter.com/*"],
+	
+	"content_scripts":[
+		{
+			"matches":[
+				"<all_urls>"
+			],
+			"js":["content.js"]
+		}
+		
+	]
+}

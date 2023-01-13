@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "APK Mod",
+  "version": "1.8",
+  "description": "Daily updates of the Best Android Games. APK Mod Download.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "homepage_url": "https://apkgame.com/",
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "APK Mod"
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  }
+}

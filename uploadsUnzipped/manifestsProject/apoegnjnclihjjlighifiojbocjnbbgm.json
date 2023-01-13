@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Atcoder Friend Standings",
+  "version": "1.14",
+  "manifest_version": 2,
+  "description": "Atcoder の Standings に Friend 機能を追加します",
+  "background" : {
+    "scripts": [
+      "background.js", "jquery-1.11.1.min.js"
+    ],
+    "persistent": false
+  },  "content_scripts": [
+    {
+      "matches": [
+        "http://*.contest.atcoder.jp/standings*"
+      ],
+      "js": [
+        "content-script.js", "jquery-1.11.1.min.js"
+      ]
+    },
+    {
+      "matches": [
+        "http://*.atcoder.jp/users*"
+      ],
+      "js": [
+        "addFriend.js"
+      ]
+    }
+  ],
+  "permissions": [
+          "storage"
+        ],
+  "web_accessible_resources": [
+    "embeded-script.js", "yellow.png", "gray.png"
+  ]
+}

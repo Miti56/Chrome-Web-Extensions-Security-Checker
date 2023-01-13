@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version" : 2,
+  "version" : "1.4.31",
+  "name" : "Bellgram - Click To Call",
+
+  "description" : "This extension allows you to click to call from the Bellgram App.",
+  "icons" : {
+    "128" : "128.png",
+    "48" : "48.png",
+    "16" : "16.png"
+  },
+
+  "author": "Bellgram Inc.",
+
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "js/ContentPage.js"
+      ],
+      "matches": [
+        "*://*.salesforce.com/*",
+        "*://*.pipedrive.com/*",
+        "*://*/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "homepage_url": "https://bellgram.com/",
+  "minimum_chrome_version": "34",
+
+  "web_accessible_resources": [
+    "512.png"
+  ]
+}

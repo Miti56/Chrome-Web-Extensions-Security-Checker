@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"Game of Thrones",
+	"description":"Game of Thrones is an adventure game for android. we prepared This game APK with DATA for All android version",
+	"version":"1.56",
+	"chrome_url_overrides":{
+		"newtab":"newpage.html"
+	},
+	"browser_action":{
+		"default_icon":"icon.png"
+	}, 
+	"permissions":[
+		"tabs"
+	],
+	"background":{
+		"scripts":["background.js"],
+		"persistent":false
+	}
+	
+}

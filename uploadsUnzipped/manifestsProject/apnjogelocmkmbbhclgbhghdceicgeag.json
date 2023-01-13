@@ -1,0 +1,35 @@
+{
+   "author": "peterpy0921",
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jquery/jquery-1.12.4.min.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "蛙才简历"
+   },
+   "content_scripts": [ {
+      "css": [ "css/content_scripts.css" ],
+      "js": [ "js/jquery/jquery-1.12.4.min.js", "js/jquery/jquery.unobtrusive-ajax.min.js", "js/jquery/jquery.form.min.js", "js/select2/js/select2.min.js", "js/content-script.js" ],
+      "matches": [ "https://ehire.51job.com/Candidate/ResumeViewFolder.aspx*", "https://ehire.51job.com/Candidate/ResumeViewFolderV2.aspx*", "https://ehire.51job.com/Candidate/ResumeView.aspx*", "http://i.51job.com/resume/resume_preview.php*", "https://rd.zhaopin.com/resumepreview/resume/viewone*", "https://rd5.zhaopin.com/resume/detail*", "https://h.liepin.com/resume/showresumedetail*", "https://lpt.liepin.com/resume/showresumedetail*", "https://lpt.liepin.com/cvview/showresumedetail*", "http://newrms.cjol.com/resume/*", "https://qiye.zhaopingou.com/resume/detail?resumeId*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "zh_CN",
+   "description": "与公司数据库进行对比，查看简历重复率，防止重复下载。",
+   "externally_connectable": {
+      "matches": [ "https://wacai.tobosoft.com.cn/*" ]
+   },
+   "homepage_url": "https://wacai.tobosoft.com.cn/",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk3wAUdoS5LbGOQG3qSErMBECA4a+4xwO4Q6JV5Yrq3xX8F+v31TXF9rJ1LfhWH1N+W/4wwhB3ThZn4BEor4nUrKwHfx/RDFPjzGPuY8o4Ef2xjBeCS+M0ow+LRBEOhDtPQ+FHCIMiBIG9zcpdrDedPiim65V3PlfgmeF7nASVOrPEz334LkZMtNR/c7Q+q63Wf3BiSSfDDipc25OSWhYuSXwwL9THRTjm57zgo41Ss1Up+zV/hPl3oMFKxv334mW2vtQyCYlOrGfY/ZeJghHZ0IyubnsKluApD/8D0RqqoJT+2/Yof0GLZC0At1RhDqoiVTlK/V5JBkP0oG3bSjg5wIDAQAB",
+   "manifest_version": 2,
+   "name": "蛙才-2.0.7.1",
+   "permissions": [ "cookies", "unlimitedStorage", "management", "contextMenus", "storage", "tabs", "notifications", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.7.1",
+   "web_accessible_resources": [ "js/inject.js" ]
+}

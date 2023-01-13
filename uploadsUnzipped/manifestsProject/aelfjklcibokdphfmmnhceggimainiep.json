@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icon.png"
+    }, 
+    "default_popup": "options.html", 
+    "default_title": "Skippy links settings"
+  }, 
+  "content_scripts": [
+    {
+      "include_globs": [
+        "http://192.168.99.100:1731/transport/*"
+      ], 
+      "js": [
+        "skippy_links_localizer.js"
+      ], 
+      "matches": [
+        "<all_urls>"
+      ]
+    }, 
+    {
+      "include_globs": [
+        "http://192.168.99.100:1731/transport/*pricing_model=budget*"
+      ], 
+      "js": [
+        "deeplinks_combiner.js"
+      ], 
+      "matches": [
+        "<all_urls>"
+      ]
+    }, 
+    {
+      "include_globs": [
+        "http://192.168.99.100:1731/transport/*", 
+        "*://jacquard*/transport/*"
+      ], 
+      "js": [
+        "dayview_link_fixer.js"
+      ], 
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ], 
+  "description": "An extension to make Skippy links point to local Skippy instead of pre-prod one.", 
+  "icons": {
+    "48": "icon.png"
+  }, 
+  "manifest_version": 2, 
+  "name": "Skippy Links Localizer", 
+  "options_ui": {
+    "page": "options.html"
+  }, 
+  "permissions": [
+    "storage"
+  ], 
+  "version": "0.6"
+}

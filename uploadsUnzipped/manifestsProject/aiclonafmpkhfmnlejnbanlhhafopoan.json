@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Pixeldraw",
+    "description": "Draw by coloring grids. Create drawings, background images for websites and more.",
+    "short_name": "Pixeldraw",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_paint.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.netexl.com/pixeldraw"
+    ],
+    "launch": {
+      "web_url": "http://www.netexl.com/pixeldraw"
+    }
+  }
+}

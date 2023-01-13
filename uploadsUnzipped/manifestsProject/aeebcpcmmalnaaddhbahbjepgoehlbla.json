@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Routecue",
+  "description": "Highlight & send text snippets, notes, emails, messages to any app.",
+  "version": "1",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon32.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "jquery.js",
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "identity",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "script/popover.html",
+    "chrome-extension://fgfcahcpdhancifeldbjdbbeogljcbkd/script/popover.html"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "chrome-extension://fgfcahcpdhancifeldbjdbbeogljcbkd/script/popover.html"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "script/jquery.js",
+        "script/ChromeExtension-GoogleDocsUtil/googleDocsUtil.js",
+        "script/script.js"
+        
+      ],
+      "matches": [
+        "\u003Call_urls>"
+      ],
+      "css": [
+        "script/style.css"
+      ],
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "344173301288-c6s212bv32sfdaev057ucshie62uq1l2.apps.googleusercontent.com",
+    "scopes": [
+      "profile",
+      "email",
+      "https://www.googleapis.com/auth/documents",
+      "https://www.googleapis.com/auth/drive.metadata.readonly",
+      "https://www.googleapis.com/auth/spreadsheets"
+    ]
+  }
+}

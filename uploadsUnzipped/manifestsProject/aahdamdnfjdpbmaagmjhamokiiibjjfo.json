@@ -1,0 +1,85 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+	"scripts": ["background.js", "js/chrome.js"]
+   },
+	"name": "KBookPromo",
+	"description": "KBookPromotions is the #1 All In One Amazon Publishing Suite. We Help Publishers Uncover Markets, Automate Marketing And Admin Tasks",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "commands": {
+	    "_execute_browser_action": { 
+            "suggested_key": {
+              "windows": "Ctrl+Shift+F",
+              "mac": "Command+Shift+F",
+              "chromeos": "Ctrl+Shift+F",
+              "linux": "Ctrl+Shift+F",
+              "default": "Ctrl+Shift+F" 
+            }
+          }
+	},
+   "browser_action": {
+      "default_icon": {
+         "38": "icon48.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "KBookPromotions"
+   },
+   "permissions": ["tabs", "webRequest", "*://*/*", "storage", "background"],
+   "version": "7.9.9",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["js/jquery.js", "js/functions.js", "startExtension.js", "script.js", "nichePicker/updatePage.js", "nichePicker/topCategories.js", "nichePicker/wordCloud.js", "nichePicker/profitability.js", "nichePicker/competition.js", "nichePicker/market.js", "nichePicker/marketUS.js", "nichePicker/marketDE.js", "nichePicker/marketMX.js", "nichePicker/marketFR.js", "nichePicker/marketCOUK.js", "nichePicker/marketCA.js", "nichePicker/marketES.js", "nichePicker/marketIT.js",  "nichePicker/marketAU.js"]
+			,
+			"run_at": "document_start"
+		},
+		{
+			"matches": ["*://*/*"],
+			"js": ["nichePicker/amazonScraper.js", "nichePicker/book.js", "nichePicker/siteFunctions.js", "nichePicker/checkRTT.js"]
+			,
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://*.facebook.com/*"],
+			"js": ["fbPromotion/loadPluginScraper.js", "fbPromotion/loadPluginPosting.js", "fbPromotion/automaticPosting.js"]
+			,
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://*.twitter.com/*"],
+			"js": ["twPromotion/loadPluginScraper.js", "twPromotion/loadPluginPosting.js", "twPromotion/automaticPosting.js"]
+			,
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://*.amazon.com.au/*", "*://*.amazon.com/*", "*://*.amazon.ca/*", "*://*.amazon.com.mx/*", "*://*.amazon.co.uk/*", "*://*.amazon.it/*", "*://*.amazon.es/*", "*://*.amazon.de/*", "*://*.amazon.fr/*"],
+			"js": ["nichePicker/profitability.js", "nichePicker/competition.js", "nichePicker/topCategories.js", "nichePicker/bookStorage.js", "nichePicker/market.js", "nichePicker/marketUS.js", "nichePicker/marketDE.js", "nichePicker/marketMX.js", "nichePicker/marketFR.js", "nichePicker/marketCOUK.js", "nichePicker/marketCA.js", "nichePicker/marketES.js", "nichePicker/marketIT.js", "nichePicker/marketAU.js", "nichePicker/nichePickerAmazon.js"]
+			,
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://*.kbookpromo.com/*", "*://localhost/*"],
+			"js": ["updated.js", "nichePicker/profitability.js", "nichePicker/competition.js", "nichePicker/topCategories.js", "nichePicker/amazonScraper.js", "nichePicker/market.js", "nichePicker/marketUS.js", "nichePicker/marketDE.js", "nichePicker/marketMX.js", "nichePicker/marketFR.js", "nichePicker/marketCOUK.js", "nichePicker/marketCA.js", "nichePicker/marketES.js", "nichePicker/marketIT.js", "nichePicker/marketAU.js", "nichePicker/nichePicker.js"]
+			,
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://*.kbookpromo.com/*/reviewersFinderBeta.php", "*://*.kbookpromo.com/*/reviewersFinder.php", "*://localhost/*"],
+			"js": ["nichePicker/reviewersFinder.js", "nichePicker/amazonProfiles.js"]
+			,
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://*.kbookpromo.com/*/kwTracker.php", "*://localhost/*"],
+			"js": ["nichePicker/kwTracker.js"]
+			,
+			"run_at": "document_end"
+		}
+	]
+}

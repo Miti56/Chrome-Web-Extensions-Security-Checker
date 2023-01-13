@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Simple Sports ",
+	"description": "An awesome game I made in my free time!",
+	"version": "2.0.0",
+	"manifest_version": 2,
+	"homepage_url": "http://dovergames.com/home.html",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"storage",
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

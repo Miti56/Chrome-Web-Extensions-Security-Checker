@@ -1,0 +1,16 @@
+{
+    "name": "VipStars.org",
+    "description": "Andriychuk Oleg & Alla - VipStars.org",
+    "app": {
+        "urls": ["http://VipStars.org/"],
+        "launch": {
+            "web_url": "http://VipStars.org/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

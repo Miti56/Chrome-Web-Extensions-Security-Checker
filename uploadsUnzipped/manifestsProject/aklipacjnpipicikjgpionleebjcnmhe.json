@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hearts Blocks Collapse",
+  "description": " This is a block removal game where you can remove horizontally or vertically connected blocks which are of the same color. ",
+  "version": "1.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://netfreedomgames.com/chrome_apps/hearts_blocks_collapse/index.html"
+    ],
+    "launch": {
+      "web_url": "http://netfreedomgames.com/chrome_apps/hearts_blocks_collapse/index.html"
+    }
+  }
+}

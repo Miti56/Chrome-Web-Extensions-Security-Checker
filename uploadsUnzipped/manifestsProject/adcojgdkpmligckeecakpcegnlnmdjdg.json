@@ -1,0 +1,22 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "Axcess Internet®",
+"description": "Axcess Internet® Home Page",
+"version": "1.0.0.3",
+"manifest_version": 2,
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://axcess.us/r.ashx?1"
+],
+"launch": {
+"web_url": "http://axcess.us/r.ashx?1"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "BH SERP Collector",
+	"short_name": "BH SERP Collector",
+	"description": "Brain Hardware SERP collector",
+	"author": "Fran Díaz",
+	"icons": {
+		"128": "img/icon128.png",
+		"16": "img/icon16.png",
+		"32": "img/icon32.png",
+		"48": "img/icon48.png",
+		"64": "img/icon64.png"
+	},
+	"browser_action": {
+		"default_title": "BH SERP Collector",
+		"default_popup": "main.html",
+		"default_icon": {
+            "19": "img/icon19.png",
+            "38": "img/icon38.png"
+		}
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"permissions": [ "http://*/*", "https://*/*", "tabs", "chrome://favicon/", "unlimitedStorage", "idle" ],
+	"version": "1.2.0",
+	"manifest_version": 2,
+	"background": {
+		"scripts": ["js/test.js"],
+		"persistent": false
+	},
+	"offline_enabled": false
+}

@@ -1,0 +1,18 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://hi5.quickmap.me"
+      }
+   },
+   "description": "Hi5 better app icon. Quickly access all Hi5 links",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+    "manifest_version": 2,
+   "short_name": "Hi5",
+   "name": "Hi5 \u2122",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}

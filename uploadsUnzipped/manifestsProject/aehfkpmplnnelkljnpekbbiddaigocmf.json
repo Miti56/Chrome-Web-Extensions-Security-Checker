@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "description": "Request pollution - Requests random websites everytime you visit a webpage, making your browsing data worthless to ISPs",
+   "manifest_version": 2,
+   "name": "Decoy Requests",
+   "permissions": [ "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+   "version": "1.0",
+     "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["popup.js"]
+    }
+  ],
+
+   "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+}

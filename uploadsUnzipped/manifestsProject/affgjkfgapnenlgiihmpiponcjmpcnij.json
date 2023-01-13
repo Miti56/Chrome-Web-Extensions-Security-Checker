@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Tumblr Likes - Missing Button",
+  "version": "2.3",
+  "description": "A simple extension that adds a Tumblr Likes button that goes to a user's 'Liked By' page.",
+  "permissions": [
+    "http://*.tumblr.com/", "http://*.tumblr.com/*", "https://*.tumblr.com/", "https://*.tumblr.com/*"
+  ],
+  "icons": {
+                  "16": "icon16.png",
+                  "48": "icon48.png",
+                  "128": "icon128.png" 
+           },
+  "content_scripts": [
+    {
+      "matches": ["*://*.tumblr.com/*"],
+      "js": ["jquery.min.js", "background.js"],
+      "css": ["css.css"],
+      "run_at": "document_end",
+      "all_frames": false
+    },
+    {
+      "matches": ["*://assets.tumblr.com/assets/html/iframe/o.html*", "*://www.tumblr.com/dashboard/iframe*"],
+      "js": ["jquery.min.js", "background-iframe.js"],
+      "css": ["css.css"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "images/*"
+  ]
+}

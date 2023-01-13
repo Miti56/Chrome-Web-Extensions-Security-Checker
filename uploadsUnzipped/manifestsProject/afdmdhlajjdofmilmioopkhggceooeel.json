@@ -1,0 +1,61 @@
+{
+  "manifest_version": 2,
+  "name": "Asia5b购物助手",
+  "update_url":"http://clients2.google.com/service/update2/crx",
+  "web_accessible_resources": [ "image/*" ],
+  "description": "Asia5b购物助手",
+  "version": "1.0.7",
+  "browser_action": {
+    "default_icon": "image/icon48.png",
+    "default_title": "Asia5b购物助手",
+    "default_popup": "asia5b.html"
+  },
+  "permissions": [
+    "cookies",
+    "webNavigation",
+    "webRequest",
+    "https://buyertrade.taobao.com/*",
+    "https://detail.tmall.com/*",
+    "https://item.taobao.com/*",
+    "https://asia5b.com/*",
+    "https://item.jd.com/*",
+    "https://192.168.2.52:85/*",
+    "http://shop.mogujie.com/*",
+    "http://item.meilishuo.com/*",
+    "https://detail.1688.com/*",
+    "http://chaoshi.detail.tmall.com/*",
+    "https://detail.tmall.hk/*"
+  ],
+  "icons":
+  {
+    "16": "image/icon16.png",
+    "48": "image/icon48.png",
+    "128": "image/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/jquery-1.9.1.min.js",
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://buyertrade.taobao.com/*",
+        "https://detail.tmall.com/*",
+        "https://item.taobao.com/*",
+        "https://item.jd.com/*",
+        "http://shop.mogujie.com/*",
+        "http://item.meilishuo.com/*",
+        "https://detail.1688.com/*",
+        "http://chaoshi.detail.tmall.com/*",
+        "https://detail.tmall.hk/*"
+      ],
+      "css":["css/Asia5b.css"],
+      "js": ["js/jquery-1.9.1.min.js","js/iscroll-probe.js","js/Asia5b.js","js/jQ_MD5.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Blue Pixel Art",
+  "offline_enabled": true,
+  "permissions": [
+          "storage"
+        ],
+  "description": "Blue Pixel Art",
+  "version": "0.0.0.4",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "img/bluepixlogo-16.png", "128": "img/bluepixlogo-128.png" }
+}
+
+
+  

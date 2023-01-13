@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"short_name": "App",
+  "manifest_version": 2,
+  "name": "YouTube Video Downloader",
+  "container": "GOOGLE_DRIVE",
+  "description": "Download music & videos from YouTube, our free downloader",
+     "permissions": [ "webview", "power", "storage", "videoCapture", "geolocation", "pointerLock", "system.display", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "accessibilityFeatures.read", "accessibilityFeatures.modify" ],
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "1.1.2",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

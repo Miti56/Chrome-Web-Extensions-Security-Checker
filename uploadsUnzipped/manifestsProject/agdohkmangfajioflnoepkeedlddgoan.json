@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Fatih Ferforje Web",
+ "description": "Türkiye'nin Ferforje Markası, The Wrought Iron Brand From Turkey",
+ "version": "1.1",
+ "icons": { "16": "16-16.png", "48": "48-48.png", "128": "128-128.png" },
+ "omnibox": { "keyword" : "ferforje" },
+ "app": {
+	"urls": [
+	"http://www.fatih.com.tr/"
+	],
+	"launch": {
+	"web_url": "http://www.fatih.com.tr/"
+	}
+},
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+ "manifest_version": 2
+}

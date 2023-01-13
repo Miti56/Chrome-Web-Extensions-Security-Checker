@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Block United Airlines",
+    "version": "2.0",
+    "content_scripts": [ {
+        "all_frames": true,
+        "js": [ "jquery.min.js", "content.js", "inline.js"],
+        "run_at": "document_end",
+        "matches": [ "http://*/*", "https://*/*" ]
+    } ],
+    "description": "Block United Airlines from search results on various websites, including Google, Expedia and Kayak.",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "icons": {
+      "128": "icon.png"
+    },
+    "background": {
+        "page": "background.htm"
+    },  
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/*",
+        "https://*/*",
+        "storage"
+    ]
+}

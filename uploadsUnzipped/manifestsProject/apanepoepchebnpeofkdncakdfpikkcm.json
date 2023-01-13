@@ -1,0 +1,25 @@
+{
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "McAfee.js" ]
+      }
+   },
+  "container": "GOOGLE_DRIVE",
+  "description": "McAfee Security Scan Plus is free virus scanning software. McAfee SECURE Safe Browsing, McAfee SiteAdvisor Enterprise.",
+  "default_locale": "en",
+  "locale code": "en_US",
+  "icons": {
+    "16": "16.png",
+    "24": "24.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "manifest_version": 2,
+  "minimum_chrome_version": "25.1.1480.2",
+  "name": "McAfee Endpoint Security Web Control",
+  "permissions": [ "notifications", "storage", "browser", "alarms" ],
+  "short_name": "McAfee",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.10"
+}

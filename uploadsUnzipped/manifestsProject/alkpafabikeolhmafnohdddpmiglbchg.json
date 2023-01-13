@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Notificaciónes SGDEA Personeria de Ibague-PDI",
+  "description": "Extención que notifica las alertas del Sistema de Gestion Documental Electronico de Archivo de la Personeria de Ibague-PDI",
+  "version": "1.0.3",
+  "background":{
+    "page":"alerta.html"
+  },
+  "browser_action": {
+    "default_icon": "image/65.png",
+    "default_title": "Notificaciones PDI",
+    "default_popup": "index.html"
+  },
+  "icons":{
+      "64" : "image/128.png"
+  },
+  "permissions": [
+    "notifications",
+    "alarms",
+    "tabs",
+    "http://",
+    "https://",
+    "cookies",
+    "http://pdi.colombiaceropapel.org/*",
+    "http://chrome-extension.pdi.colombiaceropapel.org/*",
+    "https://pdi.colombiaceropapel.org/*",
+    "https://chrome-extension.pdi.colombiaceropapel.org/*"
+  ]
+}

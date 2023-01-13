@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+	
+	"name" : "D.Launcher",
+	"version" : "0.9.0.0",
+	"description" : "Rozšírenie pre komunikáciu s aplikáciou D.Launcher.",
+	"background" : {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+
+	"page_action" : {		
+		"default_icon": {
+			"19": "d.launcher_19.png",
+			"38": "d.launcher_38.png"
+		},
+		"default_title" : "D.Launcher Chrome"
+	},
+
+	"permissions": [
+		"declarativeContent",
+		"tabs",
+		"nativeMessaging",
+		"http://*/*",
+		"https://*/*"
+	],
+	
+	"icons": {
+		"16": "d.launcher_16.png",
+		"48": "d.launcher_48.png",
+		"128": "d.launcher_96_128.png"
+	},
+		
+	"manifest_version": 2,
+	
+	"content_scripts": [
+		{
+			"js": ["content.js"],
+ 			"matches": ["http://*/*", "https://*/*"] ,
+ 			"run_at" : "document_start"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Doom - Souls theme by toxic",
+"description":"Resolution: 1366x768 - visit www.facebook.com/toxicthemesv2 - DOOM - Souls theme by toxic",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 217 , 217 , 216 ],
+"ntp_text": [ 217 , 217 , 216 ],
+"ntp_section_link": [ 217 , 217 , 216 ],
+"ntp_section_text": [ 217 , 217 , 216 ],
+"ntp_background": [ 113 , 112 , 110 , 0.5 ],
+"ntp_header": [ 21 , 20 , 18 , 0.15 ],
+"ntp_section": [ 21 , 20 , 18 , 0.15 ],
+"frame": [ 21 , 20 , 18 ],
+"toolbar": [ 113 , 112 , 110 ],
+"tab_text": [ 217 , 217 , 216 ],
+"tab_background_text": [ 217 , 217 , 216 ],
+"bookmark_text": [ 217 , 217 , 216 ]
+},
+"tints":
+{
+"buttons": [ 0.111111111111111 , 0.0134529147982062 , 0.437254901960784 ],
+"frame_incognito": [ 0.104575163398693 , 0.0723981900452489 , 0.0719723183391004 ],
+"frame_inactive": [ 0.111111111111111 , 0.0134529147982062 , 0.85 ],
+"frame_incognito_inactive": [ 0.111111111111111 , 0.0134529147982062 , 0.85 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

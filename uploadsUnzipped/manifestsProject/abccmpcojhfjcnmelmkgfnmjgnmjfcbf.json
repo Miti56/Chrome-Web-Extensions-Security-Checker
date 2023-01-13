@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "sketchometry online",
+    "manifest_version": 2,
+    "version": "1.4.4",
+    "description": "sketchometry is a construction tool for Euclidean geometry. Points, circles and lines can be sketched with fingers or stylus.",
+
+    "app": {
+        "urls": ["https://start.sketchometry.org/index.html"],
+        "launch": { 
+            "web_url": "https://start.sketchometry.org/index.html"
+        }
+    },
+
+    "icons": {
+        "16": "sketchometry_16x16_green.png",
+        "128": "sketchometry_chrome_128x128_green.png"
+    },
+  
+    "permissions": ["unlimitedStorage", "notifications"]
+}

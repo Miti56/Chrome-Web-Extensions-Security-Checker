@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TypeTerra - Virtual Online Keyboard",
+  "version": "2.5",
+  "description": "TypeTerra is a virtual online keyboard. Right now it supports more than 80 different languages with a virtual keyboard!",
+    "icons": {
+"128": "icon_128.png"
+},
+    "browser_action":	{ "default_icon": "icon_128.png",
+      "default_popup": "popup.html"  
+  }, 
+
+  "manifest_version": 2
+}

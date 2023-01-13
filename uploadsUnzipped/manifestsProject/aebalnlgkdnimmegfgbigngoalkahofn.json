@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "temporizador de pagina",
+  "version" : "0.7",
+  "description" : "Ejemplo de temporizador de pagina",
+  "background" : {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions" : [ "idle" ,"background"],
+  "browser_action" : {
+    "default_icon" : "sample-19.png"
+  },
+
+  "web_accessible_resources": [
+    "background.js"
+  ],
+
+  "icons" : {
+    "16" : "sample-16.png",
+    "48" : "sample-48.png",
+    "128" : "sample-128.png"
+  },
+  "manifest_version": 2
+}

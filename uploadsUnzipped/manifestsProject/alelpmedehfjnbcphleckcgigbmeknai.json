@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "华资浏览器-版本检测",
+	"version": "1.0.1",
+	"description": "华资浏览器-版本检测：检测华资浏览器的版本升级情况，及时提醒你进行升级。",
+	"icons": {
+        "16": "images/logo-16.png",
+        "48": "images/logo-48.png",
+        "128": "images/logo-128.png"
+    },
+	"browser_action": {
+		"default_icon": {
+            "19": "images/logo-16.png",
+            "38": "images/logo-48.png"
+        },
+		"default_title": "华资浏览器-版本检测"
+	},
+	"background" : { "scripts": ["js/background.js"] },
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"alarms",
+		"http://*/*",
+		"https://*/*",
+		"nativeMessaging",
+		"tabs",
+		"activeTab",
+		"bookmarks",
+		"chrome://favicon/",
+		"cookies",
+		"contextMenus",
+		"geolocation",
+		"history",
+		"idle",
+		"management",
+		"notifications",
+		"unlimitedStorage",
+		"browsingData",
+		"clipboardWrite",
+		"contentSettings",
+		"pageCapture",
+		"topSites",
+		"webNavigation"
+	]
+}

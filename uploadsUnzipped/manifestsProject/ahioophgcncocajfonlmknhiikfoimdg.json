@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Gépipari EduPage",
+	"description": "Gépipari Edupage oktatási oldala",
+	"version": "1.0.5",
+	"icons": {"128": "128.png"},
+	"app": {
+		"urls": ["http://gepipari-szolnok.hu/redirect/edupage/"],
+		"launch": {"web_url": "http://gepipari-szolnok.hu/redirect/edupage/"}
+	},
+	"permissions": ["unlimitedStorage","notifications"]
+}

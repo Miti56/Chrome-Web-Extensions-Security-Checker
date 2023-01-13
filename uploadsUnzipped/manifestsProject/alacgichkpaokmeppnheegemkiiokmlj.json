@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Fresher Tweets",
+    "version": "1.1.1",
+    "content_scripts": [{
+        "matches": ["https://twitter.com/"],
+        "js": ["mainreload.js"],
+        "css": ["frsh.css"]
+    }],
+    "icons": {
+        "16": "ic16.png",
+        "32": "ic32.png",
+        "48": "ic48.png",
+        "64": "ic64.png",
+        "128": "ic128.png"
+    }, 
+        "web_accessible_resources": [
+        "frsh.css"
+    ]
+
+}

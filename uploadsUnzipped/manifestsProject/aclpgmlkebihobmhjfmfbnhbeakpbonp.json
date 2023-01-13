@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+        "background": {
+          "scripts": ["jquery.js"],
+          "persistent": true
+        },
+         "default_locale": "es",
+         "name": "__MSG_manifest_name__",
+         "description": "__MSG_manifest_desc__",
+         "icons": {
+           "16": "16.png",
+           "48": "48.png",
+           "128": "128.png"
+         },
+         "browser_action": {
+             "default_title": "__MSG_manifest_name__",
+             "default_popup": "popup.html",
+             "default_icon": "128.png"
+         },
+         "manifest_version": 2,
+         "permissions": [ "<all_urls>", "tabs", "storage" ],
+         "version": "0.0.1",
+         "offline_enabled": true
+      }

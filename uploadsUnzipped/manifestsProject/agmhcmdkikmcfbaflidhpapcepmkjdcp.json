@@ -1,0 +1,20 @@
+{
+  "update_url": "http://clients2.google.com/service/update2/crx",
+  "name": "__MSG_extension_name__",
+  "version": "3.6",
+  "manifest_version": 2,
+  "description": "__MSG_extension_description__",
+  "default_locale": "en",	
+ "app": {
+    "urls": [
+      "http://scientificcalculators.info/"
+
+    ],
+    "launch": {
+      "web_url": "http://scientificcalculators.info/"
+    }
+  },
+  "icons": {
+       "128": "128.png"
+  }
+}

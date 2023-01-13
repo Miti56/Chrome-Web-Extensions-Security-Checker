@@ -1,0 +1,60 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    
+    "name": "__MSG_Avalba_title__",
+    "short_name": "__MSG_Avalba_short_title__",
+    "description": "__MSG_Avalba_shortdesc__",
+    "version": "2.4.0",
+    "default_locale": "en",
+    "content_security_policy": "script-src 'self'",
+    "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+         },
+        "browser_action": {
+        "default_title": "__MSG_Avalba_icon_title__",
+        "default_icon": "icons/icon128.png"
+         },
+        "background": {
+        "scripts": [
+        "js/background.js"
+        ],
+        "persistent": true
+        },
+        "permissions": [
+        "https://avalba.net/*",
+        "storage",
+        "tabs"
+         ],
+        "web_accessible_resources": [
+    	"icons/icon48.png",
+        "icons/icon128.png"
+        ],
+        "chrome_settings_overrides": {
+        "search_provider": {
+        "name": "Avalba",
+        "keyword": "avalba",
+        "search_url": "https://avalba.net/__MSG_Avalba_default_search__search/?q={searchTerms}",
+        "favicon_url": "https://avalba.net/assets/icons/favicon.ico",
+        "suggest_url": "https://avalba.net/search/?q={searchTerms}",
+        "encoding": "UTF-8",
+        "is_default": true
+           }
+        },
+        "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+        },
+        "externally_connectable": {
+        "matches":  ["https://avalba.net/*"]},
+        "content_scripts": [
+        {
+        "matches": ["https://avalba.net/*"],
+        "css": ["css/hide.css"],
+        "run_at": "document_start",
+        "all_frames": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Mouse Inverter Prank",
+	"version": "1.0",
+	"description": "Inverts the mouse discreetly.",
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [ "jquery.min.js", "content.js"],
+			"css": ["main.css"]
+	  }
+	],
+	"web_accessible_resources": ["mouse.png"],
+	"icons": { 
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png" 
+	}
+}

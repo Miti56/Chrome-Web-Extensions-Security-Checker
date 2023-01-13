@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Hands On Turkish",
+	"description": "A comprehensive eLearning course of Turkish for business purposes",
+	"version": "2",
+	"manifest_version": 2,
+	"icons": { "24": "24.png", "128": "128.png" },
+	"app": {
+		"launch": {
+		"web_url": "http://www.handsonturkish.com/neptune/indexFSUK.htm"
+		}
+	}
+}

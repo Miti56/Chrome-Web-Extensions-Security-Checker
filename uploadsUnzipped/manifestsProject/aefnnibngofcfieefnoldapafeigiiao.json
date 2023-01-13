@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "description": "__MSG_description__", 
+   "manifest_version": 2,
+   "default_locale":"en",
+   "name": "Bot Binomo",
+   "short_name": "Bot Binomo",
+   "permissions": [ "tabs", "activeTab", "storage", "https://kibertraider.ru/*" ],
+   "version": "1.0",
+   "browser_action": {
+      "default_icon": {
+         "38": "logo/38icon.png"
+      },
+      "default_popup": "poup.html",
+      "default_title": "__MSG_title__"
+   },
+   "icons": {
+      "128": "logo/128icon.png",
+      "16": "logo/16icon.png",
+      "48": "logo/48icon.png"
+   },
+   "content_scripts": [ {
+      "css": [ "css/sweetalert.css" ],
+      "js": [ "lib/content.js", "lib/sweetalert.min.js" ],
+      "matches": [ "https://binomo.com/*"]
+   } ]
+}

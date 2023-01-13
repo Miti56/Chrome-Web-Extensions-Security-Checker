@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Itinerari Venezia - Youvenice",
+  "short_name": "Youvenice",
+  "description": "Scopri gli itinerari enogastronomici a Venezia",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "youvenice-16.png", "128": "youvenice-128.png" },
+  "app": {
+  "urls": [
+  "http://www.youvenice.it/it/tour/itinerari-a-venezia/"
+
+],
+  "launch": {
+  "web_url": "http://www.youvenice.it/it/tour/itinerari-a-venezia/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

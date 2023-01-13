@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Screenreaper",
+  "version": "1.0",
+  "description": "A chrome extension that can capture the viewport, downloads the offline page in html and mhtml ",
+  "background": {
+    "persistent": true,
+    "scripts": ["timestamp.js", "background.js"]
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": "snap.png",
+    "default_title": "snap the browser"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "options_page": "options.html",
+  "icons": {
+    "128": "snap.png"
+  },
+  "manifest_version": 2,
+  "permissions": ["<all_urls>", "activeTab", "downloads", "pageCapture", "storage"]
+}

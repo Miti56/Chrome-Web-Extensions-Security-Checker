@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "PointMp3",
+  "content_scripts": [ {
+    "css": [ "youtubeToPointMp3.css" ],
+    "js": [ "youtubeToPointMp3.js"],
+    "matches": [ "http://*.youtube.com/*",  "https://*.youtube.com/*"],
+    "run_at": "document_end"
+  } ],
+  "description": "Add a button to Youtube video directly, allowing you to download it's audio content as mp3 file instantly using www.pointmp3.com",
+  "icons": {
+    "32": "32.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+
+  "permissions": [ "tabs", "http://*.youtube.com/*", "https://*.youtube.com/*" ],
+  "version": "1.1.0"
+}

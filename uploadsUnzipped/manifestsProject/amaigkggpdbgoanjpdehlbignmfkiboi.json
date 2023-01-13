@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ChromEMMET TGO",
+  "description": "Adicona o Emmet (https://emmet.io) nas textareas",
+  "version": "18.0.2",
+   "short_name": "ChromEMMET",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [ "tabs", "storage", "identity", "webRequest", "http://*/*", "https://*/*" ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*","https://*/*"
+      ],
+      "js": ["jquery-2.2.4.min.js", "emmet.min.js", "content.js", "emmet.js", "run.js"]
+    }
+  ],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+}
+		

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Hide Flickr Search Pane",
+  "description": "As you scroll through search results, the plugin will maximize the viewable scroll area by hiding fixed tools at the top.",
+  "version": "1.0.3",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "http://www.flickr.com/",
+    "https://www.flickr.com/"    
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.flickr.com/*",
+        "https://www.flickr.com/*"],
+      "js": ["controller.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}

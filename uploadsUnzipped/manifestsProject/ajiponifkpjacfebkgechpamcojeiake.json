@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AskMonaちょっとだけ拡張",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "AskMona.orgを開いているとき、ちょっとした機能を加えます。",
+  "content_scripts": [
+    {
+      "matches": ["http://askmona.org/*"],
+      "js": ["jQuery.js", "main.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon.png"
+  }
+}

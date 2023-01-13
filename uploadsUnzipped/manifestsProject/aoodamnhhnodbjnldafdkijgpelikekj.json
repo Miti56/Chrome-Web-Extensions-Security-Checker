@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "manifest_version": 2,
+  "name": "Ouino Italian Complete",
+  "version": "3.1.2",
+  "description": "WARNING: This App requires a valid Ouino account or activation key, otherwise you will NOT be able to use the program.",
+   "icons": {
+    "128": "icon128.png"
+  },
+  "minimum_chrome_version": "36",
+  "permissions": [
+          "webview", "audioCapture", "fullscreen"
+        ],
+        "webview": {
+          "partitions": [
+            {
+              "name": "ouino",
+              "accessible_resources": ["*.ogg", "*.png","*.html", "*.js", "*.css", "*.jpg", "*.mp3", "*.svg", "*.woff", "*.ttf"]
+            }
+          ]
+        }
+ 
+}

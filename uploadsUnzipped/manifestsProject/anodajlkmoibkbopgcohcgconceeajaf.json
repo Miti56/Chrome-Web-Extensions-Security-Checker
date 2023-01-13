@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "name": "umbrella",
+        "version": "1.3",
+        "manifest_version": 2,
+        "description": "Umbrella is a minimal, lightweight weather application",
+        "app": {
+        "launch": {
+            "web_url": "http://rohitjha.in/weanew/"
+        },
+        "urls": [
+            "http://rohitjha.in/weanew/"
+        ]
+            
+    },
+    
+         "icons":{
+             "128": "128.png",
+             "96" : "96.png",
+             "512" : "512.png"
+         
+                  },
+    "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+    "permissions": ["webview"]
+
+} 

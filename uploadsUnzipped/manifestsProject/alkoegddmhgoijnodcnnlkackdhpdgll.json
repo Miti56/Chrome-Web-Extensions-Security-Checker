@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "Background Page Requester",
+   "description": "This extension will automatically request a given page in a given time period and close it afterwards",
+   "author": "Felix Eckhardt",
+   "version": "2.1",
+
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "popup.html"
+   },
+
+   "content_scripts": [{
+      "js": [ "js/jquery-3.4.1.min.js", "js/popup.js"],
+      "css": [ "css/style.css"],
+      "matches": [ "http://*/*" ]
+   }],
+
+   "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+   },
+
+   "icons": {
+      "128": "img/icon128x128.png",
+      "16": "img/icon.png",
+      "48": "img/iconLauncher.png"
+   },
+
+   "permissions": [ "tabs", "activeTab", "storage", "alarms" ]
+}

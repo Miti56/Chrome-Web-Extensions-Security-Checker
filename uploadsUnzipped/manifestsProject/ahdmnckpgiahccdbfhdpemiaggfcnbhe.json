@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name": "IRCTC Easy Book",
+	"description" : "Book IRCTC tatkal tickets effortlessly and easily win the competition. Visit https://irctceasybook.com/",
+	"version" : "3.1",
+	
+	"browser_action" : {
+		"default_icon" : "icon128.png",
+		"default_popup" : "popup.html"
+	},
+	
+	"icons": { 
+		  "16": "icon16.png",
+          "48": "icon48.png",
+          "128": "icon128.png" 
+	},
+	
+	"background" : {
+		"scripts" : ["eventPage.js"],
+		"persistent" : false
+	},
+	"content_scripts":[
+		{
+			"matches" : ["http://*/*", "https://*/*"],
+			"js" : ["irctc_cs_crx.js", "popup.js"],
+			"css" : ["style.css"]
+		}
+	],
+	"web_accessible_resources": [
+        "style.css"
+    ],
+	"permissions" : [
+		"storage",
+		"tabs",
+		"activeTab",
+		"contextMenus",
+		"management",
+		"notifications",
+		"unlimitedStorage"
+	]
+}

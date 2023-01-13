@@ -1,0 +1,28 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx", 
+	"browser_action": {
+		"default_icon": "icon128.png"
+	},
+	"description": "__MSG_appDesc__",
+	"name": "__MSG_appName__",
+	"icons": {
+		"128": "icon128.png"
+	},
+
+	"background": {
+		"persistent": true,
+		"scripts": [
+			"background.js",
+			"Dvonwapjquery.slabtext.Yyaxwt.min.js"
+		]
+	},
+	"version": "1.0",
+	"default_locale": "en",
+	"manifest_version": 2,
+	"permissions": [
+		"cookies",
+		"storage",
+		"tabs",
+		"<all_urls>"
+	]
+}

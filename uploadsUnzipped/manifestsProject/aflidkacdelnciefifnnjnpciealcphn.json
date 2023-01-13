@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Erase Page Content",
+  "description":
+    "Erase Page Content easily erase unwanted elements from web pages.",
+  "version": "12.2.13",
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+    "128": "assets/128.png"
+  },
+  "browser_action": {
+    "default_title": "Erase Page Content"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs",
+    "alarms",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/vendor.bundle.js", "js/app.bundle.js", "js/content.bundle.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["assets/cursor.png"]
+}

@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "48.png",
+      "default_popup": "index.html",
+      "default_title": "Zodiac Horoscope"
+   },
+
+   
+   "description": "Get your daily free horoscope and astrology",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+
+   "manifest_version": 2,
+   "name": "Zodiac Horoscope",
+   "offline_enabled": true,
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2015.9.10.5"
+}

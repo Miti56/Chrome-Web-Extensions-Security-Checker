@@ -1,0 +1,25 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Ipocked",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "No Description",
+	"permissions": [
+		"tabs",
+		"contextMenus"
+	],
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content_script.js"]
+		}
+	],
+	"background": {
+		"scripts": ["script.js"]
+	},
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png" 
+	}
+}

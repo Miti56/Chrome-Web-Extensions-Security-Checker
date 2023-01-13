@@ -1,0 +1,67 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "",
+  "name": "Dragon Sage (version2)",
+  "theme": {
+    "tints": {"buttons": [
+      0,
+      0,
+      0.5
+    ]},
+    "colors": {
+      "button_background": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ntp_text": [
+        251,
+        251,
+        251
+      ],
+      "bookmark_text": [
+        18,
+        50,
+        114
+      ],
+      "tab_background_text": [
+        64,
+        64,
+        64
+      ],
+      "tab_text": [
+        243,
+        243,
+        243
+      ],
+      "toolbar": [
+        223,
+        223,
+        223
+      ],
+      "frame": [
+        66,
+        116,
+        201
+      ],
+      "ntp_background": [
+        255,
+        255,
+        255
+      ]
+    },
+    "images": {
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_frame": "images/theme_frame.png"
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "manifest_version": 2,
+  "version": "2"
+}

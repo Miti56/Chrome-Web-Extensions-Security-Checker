@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Assassins Creed Unity Elise Guillotine",
+"description":"RES: 1366x768 Elise and Guillotine from the Assassins Creed Unity game.",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar.png",
+"theme_frame":"images/frame.png",
+"theme_tab_background":"images/tab.png",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 32 , 40 , 44 ],
+"ntp_text": [ 32 , 40 , 44 ],
+"ntp_section_link": [ 32 , 40 , 44 ],
+"ntp_section_text": [ 32 , 40 , 44 ],
+"ntp_background": [ 115 , 141 , 154 , 0.5 ],
+"ntp_header": [ 23 , 68 , 99 , 0.15 ],
+"ntp_section": [ 23 , 68 , 99 , 0.15 ],
+"frame": [ 23 , 68 , 99 ],
+"toolbar": [ 115 , 141 , 154 ],
+"tab_text": [ 32 , 40 , 44 ],
+"tab_background_text": [ 32 , 40 , 44 ],
+"bookmark_text": [ 32 , 40 , 44 ]
+},
+"tints":
+{
+"buttons": [ 0.555555555555555 , 0.161825726141079 , 0.527450980392157 ],
+"frame_incognito": [ 0.534571723426213 , 0.586306653809065 , 0.225144175317186 ],
+"frame_inactive": [ 0.555555555555555 , 0.161825726141079 , 0.15 ],
+"frame_incognito_inactive": [ 0.555555555555555 , 0.161825726141079 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"left top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

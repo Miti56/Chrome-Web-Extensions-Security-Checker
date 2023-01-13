@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "StoryWorth - record your family stories",
+  "short_name": "StoryWorth",
+  "description": "StoryWorth is the easiest way to privately record your family stories.",
+  "author": "StoryWorth, Inc.",
+  "version": "1.0.2",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "*://www.storyworth.com/",
+      "*://storyworth.com/"
+    ],
+    "launch": {
+      "web_url": "https://www.storyworth.com/"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

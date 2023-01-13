@@ -1,0 +1,28 @@
+
+	{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+		"name": "Matching Game - The Royal Court",
+		"description": "Match the scattered elements with the right people. This game broadens the child's knowledge and develops logical thinking.",
+		"version": "1.1",
+		"manifest_version": 2,
+		"app":
+		{
+			"urls": 
+			[
+				"http://www.duckiedeck.com/play/the-royal-court?ref=cws"	
+			],
+			"launch":
+			{
+				"web_url": "http://www.duckiedeck.com/play/the-royal-court?ref=cws"
+			}
+		},
+		"icons":
+		{
+			"128": "icon_128.png"
+		},
+		"permissions":
+		[
+			"notifications"	
+		]
+	}

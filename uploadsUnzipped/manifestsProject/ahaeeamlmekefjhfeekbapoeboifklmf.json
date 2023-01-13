@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "description": "Red",
+  "version": "1.2", "manifest_version": 2,
+  "name": "* * * Red * * *",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/active_tab.png",
+      "theme_frame_inactive" : "images/inactive_tab.png",
+      "theme_toolbar" : "images/toolbar.png",
+      "theme_ntp_background" : "images/background.png"
+    },
+    "colors" : {
+      "ntp_text" : [255, 0, 255],
+      "ntp_background" : [30, 172, 37], 
+      "frame" : [37, 218, 0],
+      "toolbar" : [37, 218, 0],
+      "tab_text" : [255, 255, 255],
+      "tab_background_text" : [157, 255, 0],
+      "bookmark_text" : [255, 255, 255]
+    },
+    "tints" : {
+      "buttons" : [0.99, 0.99, 0.99]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "center"
+    }  
+  }  
+}  

@@ -1,0 +1,24 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "Duque con crayones",
+    "version": "2.1",
+    "description": "Cambia la fuente del twitter del actual titere en cargo en Colombia",
+    "permissions": [
+        "https://twitter.com/*", 
+        "http://twitter.com/*"
+    ],
+    "content_scripts": [
+
+        {
+            "matches": [ "https://twitter.com/*", 
+        "http://twitter.com/*"],
+            "js": ["web.js"],
+                "run_at": "document_idle",
+    "all_frames": false
+        }
+    ],
+"web_accessible_resources":[
+    "fonts/*"
+    ]
+}

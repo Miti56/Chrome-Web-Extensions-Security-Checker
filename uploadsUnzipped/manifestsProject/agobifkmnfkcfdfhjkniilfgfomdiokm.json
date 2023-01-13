@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Family Online Guy Play Freaking Mobile Game",
+  "description": "Family Guy Freakin Mobile Game, Fastlane: Road to Revenge, Can You Escape Prison Pro, Card Wars Adventure Time, Castle",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

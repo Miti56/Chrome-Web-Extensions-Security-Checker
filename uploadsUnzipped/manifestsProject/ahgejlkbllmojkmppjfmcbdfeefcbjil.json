@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Sea Wolf",
+  "description": "Play battleship online",
+  "version": "1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://playships.appspot.com/"
+    ],
+    "launch": {
+      "web_url": "http://playships.appspot.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

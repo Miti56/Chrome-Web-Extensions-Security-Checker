@@ -1,0 +1,23 @@
+{"permissions":["alarms","bookmarks"], 
+
+"description": "__MSG_description__", 
+
+"background": {"scripts": ["javas.js"]},
+
+ "manifest_version": 2, 
+
+"browser_action": {"default_icon": "128-picture.png", 
+
+"default_title": "Dolphins Backgrounds & New Tab"},
+
+ "default_locale": "en", 
+
+"chrome_url_overrides": {"newtab": "my_index.html"},
+
+ "name": "__MSG_titleHead__", 
+
+"version": "2.0.6", 
+
+"icons": {"128": "128-picture.png"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx"}

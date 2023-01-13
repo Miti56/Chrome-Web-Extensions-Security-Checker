@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Easly - Preisvergleich + Wunschliste",
+  "version": "1.0.6",
+  "default_locale": "de",
+  "description": "Easly findet automatisch den günstigen Preis für ein Produkt.",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "css/main.css"
+      ],
+      "js": [
+        "scripts/vendor/jquery-3.1.1.min.js",
+        "scripts/content.js",
+        "scripts/iframe.js"
+      ],
+      "all_frames": false,
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {},
+  "background": {
+    "scripts": [
+      "scripts/vendor/jquery-3.1.1.min.js",
+      "scripts/background.js"
+    ]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "tabs",
+    "notifications",
+    "https://*/"
+  ],
+  "web_accessible_resources": [
+    "img/*.png",
+    "css/*.css",
+    "html/navbar.html",
+    "html/index.html"
+  ],
+  "sandbox": {
+    "pages": ["html/index.html"]
+  }
+}

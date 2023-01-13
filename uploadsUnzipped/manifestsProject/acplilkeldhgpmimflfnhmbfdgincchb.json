@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Video Poker",
+  "version": "1.0.0.1",
+  "manifest_version": 2,
+  "icons": { "128": "icon.png" },
+  "description": "Get instant VIP status with 247 Video Poker, the video poker game you can play on your computer, tablet or phone!",
+  "app": {
+    "urls": [
+      "http://www.247videopoker.org/?chromestore=1"
+    ],
+    "launch": {
+      "web_url": "http://www.247videopoker.org/?chromestore=1"
+    }
+  }
+}

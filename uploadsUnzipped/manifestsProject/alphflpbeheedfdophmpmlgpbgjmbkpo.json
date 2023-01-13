@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Greyloft",
+	"manifest_version": 2,
+	"description": "Property shortlisting tool",
+	"version": "1.1",
+	"background" : { 
+		"scripts": ["background.js", "hs-background.js"] 
+	},
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_title": "Greyloft"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://www.propertyguru.com.sg/listing/*"],
+			"js": ["jquery-3.1.0.min.js", "script.js"],
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://app.hubspot.com/sales/*/deal/*"],
+			"js": ["jquery-3.1.0.min.js", "hubspot-script.js"],
+			"run_at": "document_end"
+		}
+	],
+	"web_accessible_resources": ["upload-modal.js", "spider.js", "artoo.js", "jquery.formatCurrency.js", "geocomplete.js", "mapsapi.js", "jquery-3.1.0.min.js", "jquery-ui.min.js", "logo.png", "attachments.html", "popup.html"],
+	"permissions": [
+		"tabs", "*://*.greyloft.com/*", "storage"
+	]
+}

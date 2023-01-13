@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Mystic 8 ball",
+  "version": "0.82",
+  
+  "icons": {
+    "128": "icon128.png"
+  },
+
+      "browser_action": {
+        "default_title": "Mystic 8 ball",
+        "default_icon": "icon128.png",
+        "default_popup": "index.html"
+    }
+    
+}

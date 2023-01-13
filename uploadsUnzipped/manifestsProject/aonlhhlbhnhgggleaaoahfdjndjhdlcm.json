@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Synesthesia trainer",
+  "version": "1.12",
+  "manifest_version": 2,
+  "description": "Color code individual characters on pages you view -- induce color-graphemic synesthesia",
+  "options_page": "options.html",
+  "permissions": ["activeTab"],
+  "content_scripts": [{ 
+    "matches": ["http://*/*","https://*/*","file:///*/*"],
+    "js": ["jquery-1.7.2.min.js","jquery.highlight-3.js","swap.js"],
+    "css": ["mystyles.css"],
+    "all_frames": false
+  }],
+  "browser_action": {
+    "default_title": "Edit and Download page",
+    "default_icon": { "128": "128-t.png" }
+  },
+  "background": { "scripts": ["background.js"]}
+}

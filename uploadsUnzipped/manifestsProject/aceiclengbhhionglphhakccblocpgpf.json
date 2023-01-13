@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "author": "https://www.screengrub.net",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+      "default_title": "Screen shot this page",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+  },
+  "description": "Easily take and share screenshots of webpages from Chrome.",
+  "externally_connectable": {
+    "matches": ["*://www.screengrub.net/*"]
+  },
+  "manifest_version": 2,
+  "name": "screengrub.net",
+  "permissions": [
+    "tabs", "<all_urls>"
+  ],
+  "version": "1.0.1"
+}

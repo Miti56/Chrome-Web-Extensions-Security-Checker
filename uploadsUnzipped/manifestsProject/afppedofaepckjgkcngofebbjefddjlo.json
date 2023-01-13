@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Miraculous Ladybug Valentine Paris",
+
+  "short_name": "Miraculous Ladybug Valentine Paris",
+
+  "version": "1.0.2",
+  "description": "Play Miraculous Ladybug Valentine Paris now!",
+
+  "homepage_url": "http://chromapp.xyz/c/logic-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Miraculous Ladybug Valentine Paris",
+
+      "default_popup": "popup.html"
+  }
+}

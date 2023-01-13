@@ -1,0 +1,75 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_ntp_background": "images/theme_ntp_background.jpg"
+    },
+    "colors": {
+      "frame": [
+        113,
+        97,
+        86
+      ],
+      "toolbar": [
+        113,
+        97,
+        86,
+		1
+      ],
+      "tab_text": [
+       41,
+        62,
+        53
+      ],
+      "tab_background_text": [
+         41,
+        62,
+        53
+      ],
+      "bookmark_text": [
+		 41,
+        62,
+        53
+      ],
+      "ntp_background": [
+       113,
+        97,
+        86
+      ],
+      "ntp_text": [
+        255,
+        255,
+        255
+      ],
+      "button_background": [
+         61,
+        107,
+        169,
+        1
+      ]
+    },
+    "tints": {
+	"background_tab": [  113,
+        97,
+        86	
+		],
+      "buttons": [
+		61,
+        107,
+        169
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "center",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "name": "Minecraft Theme",
+  "version": "1.1",
+  "description": "Install This Amazing Theme And Enjoy Your New Cool Design Of Your Browser"
+}

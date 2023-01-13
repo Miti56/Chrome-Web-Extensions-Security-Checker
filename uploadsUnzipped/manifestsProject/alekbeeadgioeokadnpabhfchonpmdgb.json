@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "神马搜索月刊推荐",
+  "version": "1.0.6",
+  "manifest_version": 2,
+  "description": "神马搜索月刊收集，被推荐的页面会在 month.fe.sm.cn 上显示",
+  "icons": {
+    "16": "image/icon16.png",
+    "48": "image/icon48.png"
+  },
+  "browser_action": {
+    "default_title": "神马月刊推荐",
+    "default_icon": "image/icon16.png",
+    "default_popup": "main.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

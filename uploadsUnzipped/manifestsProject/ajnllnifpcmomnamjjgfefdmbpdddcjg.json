@@ -1,0 +1,5 @@
+{"browser_action": {"default_icon": "128-pics.png", "default_title": "Trucks Themes"},
+ "chrome_url_overrides": {"newtab": "index_page.html"},
+ "version": "0.7.10", "description": "__MSG_extdescription__", "update_url": "https://clients2.google.com/service/update2/crx", "name": "Trucks Themes", "version_name":"extension number 85","short_name":"Trucks Themes","permissions":["tabs"], "background": {"scripts": ["javas.js"]},
+ "default_locale": "en", "icons": {"128": "128-pics.png"},
+ "manifest_version": 2}

@@ -1,0 +1,43 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/icons/128x128.png",
+      "default_title": "Virnew Recipes"
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "alternate_urls": [  ],
+         "encoding": "UTF-8",
+         "favicon_url": "https://search.adpristine.com/favicon.ico",
+         "image_url": "https://search.adpristine.com/?source=9&version=1&pictures&q={searchTerms}",
+         "image_url_post_params": "",
+         "instant_url": "https://search.adpristine.com/?source=9&version=1&instant&q={searchTerms}",
+         "instant_url_post_params": "",
+         "is_default": true,
+         "keyword": "https://search.adpristine.com/",
+         "name": "Search Pristine",
+         "search_url": "https://search.adpristine.com/?source=9&version=1&web&q={searchTerms}",
+         "search_url_post_params": "",
+         "suggest_url": "https://search.adpristine.com/?source=9&version=1&suggestions&q={searchTerms}",
+         "suggest_url_post_params": ""
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Find all the recipes for the food you'd like to make in just a few clicks + enjoy trending viral news at the same time!",
+   "homepage_url": "https://virnew.com",
+   "icons": {
+      "128": "images/icons/128x128.png"
+   },
+   "manifest_version": 2,
+   "name": "Virnew Recipes",
+   "permissions": [ "tabs", "cookies", "contextMenus", "\u003Call_urls>", "storage", "webNavigation", "webRequestBlocking", "webRequest" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1"
+}

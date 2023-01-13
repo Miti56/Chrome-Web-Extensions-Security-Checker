@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Годвилль. Город богов и героев.",
+    "version": "1.0",
+  
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "description": "Годвилль. Город богов и героев. ",
+    "icons": { 
+                "16": "images/icon16.png",
+                "48": "images/icon48.png",
+                "64": "images/icon64.png",
+                "128": "images/icon128.png"
+    },
+    "browser_action": {
+            "default_icon": {                    
+                "38": "images/icon38.png"
+            },
+            "default_title": "Годвилль",
+            "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "author": "Denis V Kenig",
+    "homepage_url": "http://godville.net",
+    "background": { "page": "background.html"},
+    "permissions": ["tabs", "background","notifications", "storage", "webRequest", "http://godville.net/*", "https://godville.net/*"],
+    "short_name": "Годвилль"
+}

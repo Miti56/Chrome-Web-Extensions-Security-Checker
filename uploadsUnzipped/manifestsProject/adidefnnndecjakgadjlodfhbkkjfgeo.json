@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "__MSG_appName__",
+"description": "__MSG_appDesc__",
+"default_locale": "nl",
+"version": "2.0",
+"manifest_version": 2,
+"icons": {"128": "128.png"},
+"app": {
+"urls": ["http://www.csmbvba.be/kloket/mobile/index.html", "http://www.csmbvba.be/kloket/mobile/app.html", "http://www.csmbvba.be/kloket/mobile/load.html",
+   	  "http://www.csmbvba.be/kloket/mobile/mag-11-14.pdf", "http://www.csmbvba.be/kloket/mobile/mag-02-15.pdf"],
+"launch": {"web_url": "http://www.csmbvba.be/kloket/mobile/"}
+}
+}

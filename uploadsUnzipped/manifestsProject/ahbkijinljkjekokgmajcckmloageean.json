@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "CouponLime",
+    "description": "CouponLime helps you save money with coupon codes at over 200,000+ stores.",
+    "version": "1.0.2",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "CouponLime"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "icons": {
+        "16": "img/logo-16.png",
+        "48": "img/logo-48.png",
+        "128": "img/logo-128.png"
+    },
+    "permissions": [
+        "tabs",
+		"storage",
+		"activeTab"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Webcall",
+  "version": "1",
+  "description": "Call direct",
+  "icons": { "128": "128.png" },
+  "browser_action": {"default_popup": "appel.html" }
+}

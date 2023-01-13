@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+    "name": "__MSG_name__",
+	  "short_name": "__MSG_name__",
+  "default_title": "__MSG_name__",
+  "container": "GOOGLE_DRIVE",
+  "version": "3.7.2",
+  "description": "__MSG_description__",
+  "default_locale": "en",
+   "app": {
+    "urls": [
+      "http://www.btcgames.site/2017/02/05/earn-to-die-2012/"
+    ],
+    "launch": {
+      "web_url": "http://www.btcgames.site/2017/02/05/earn-to-die-2012/"
+	  } 
+	  },
+   "icons": {
+    "128": "icons/ic128.png"},
+	
+  "homepage_url": "http://www.btcgames.site/2017/02/05/earn-to-die-2012/",
+  "default_icons": {
+      "128": "icons/ic128.png"
+  }
+  }

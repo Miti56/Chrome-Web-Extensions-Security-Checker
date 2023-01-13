@@ -1,0 +1,21 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "app/requirejs-config.js", "bower_components/requirejs/require.js", "app/background-main.js" ]
+   },
+    "name": "Thatsup - Soap Opera TV Guide",
+    "description": "Thatsup is the source and guide that keeps you up to date with that's up news and updates on Soap Opera drama, TV and The Web.", 
+    "browser_action": {
+        "default_icon": {
+            "38": "icon.png"
+            }, 
+        "default_title": "Thatsup", 
+        "default_popup": "index.html"
+    }, 
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyrlUMTV/bJmwozhQ5zCywu5if7VBLp0OxlXhMURKhSbek/Vok6XPH8++sdzX3GrVpTXKBYZ05ieieuOVp/TOKnFZhttd8XYV0327eJsr92g44ksOu2zlz4RtBwFrnHv2NRI+0lsO6Dw0TQlrlEMKlWXbVb0I/NCmqpkUwguCok/9y/eilFFr3seLg00kFlGO52IB82F168MEepYe21092etyWkWNLImpRBHqcOCPooBFaDXQIr5ezRDtzOj6Mp4awNIdTOAIId2Ktd8zDaOhGU9gpuf4J+3ZAZF8cRXKGWmGhApwwHmXiItpu7NKr/DDIIVWa4R88nMn7+u4fZwWxQIDAQAB",
+   "manifest_version": 2,
+   "update_url": "http://clients2.google.com/service/update2/crx",
+    "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+    "version": "2.1"
+}
+

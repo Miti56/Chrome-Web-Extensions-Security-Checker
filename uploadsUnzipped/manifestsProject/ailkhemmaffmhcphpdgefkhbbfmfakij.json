@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Hello English",
+  "short_name": "Hello English",
+  "description": "Grammar correction service by Hello English - Asia’s #1 language learning platform",
+  "homepage_url": "https://helloenglish.com/", 
+  "version": "1.0.6",
+  "icons": {
+		"16": "icons/16px.png",
+		"48": "icons/48px.png",
+		"128": "icons/128px.png"
+   },
+	
+  "browser_action": {
+    "default_icon": "images/29px.png",
+    "default_popup": "popup.html",
+    "persistent": false
+  },
+  "background": {
+  	"scripts": ["js/ca_chrome_background.js"]
+  },
+  "externally_connectable": {
+    "matches": ["https://mail.google.com/*"]
+  },
+  "permissions": [
+    "https://mail.culturealley.com/*",
+    "storage",
+    "tabs",
+	"contextMenus",
+  "activeTab",
+  "https://mail.google.com/*"
+	
+  ],
+  
+
+  "web_accessible_resources" : ["js/jquery-1.10.2.min.js","js/gmail.js",
+    "js/main.js", "/images/*"],
+  "content_scripts": [
+    {
+		"js": ["js/jquery-1.10.2.min.js","js/ca_content_script.js"],
+		"css": ["css/ca_chrome_jquery-ui.css","css/ca_chrome_loginSignupMainV1.1.css","css/ca_grammarly_chrome.css","css/ca_chrome_style.css","css/ca_chrome_animate.css","css/ca_chrome_misc_styles.css","css/CA_4color.css","css/ca_chrome_jquery.mobile.structure-1.4.1.min.css"],
+		"matches": ["https://helloenglish.com/","https://mail.google.com/*"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://stats.g.doubleclick.net; object-src 'self'"
+}

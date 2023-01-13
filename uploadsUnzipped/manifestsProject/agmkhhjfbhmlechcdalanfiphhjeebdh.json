@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Pray To Fart",
+    "version": "1.0.0",
+    "description": "Replaces occurrences of 'pray' to 'fart'.",
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": ["content_script.js"],
+        "run_at": "document_end"
+    }]
+}

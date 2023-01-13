@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Designers.MX Enhanced",
+  "description": "This extension adds improvements to the website Designers.MX.",
+  "version": "1.0",
+  "icons": { "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png" },
+  "content_scripts": [
+    {
+      "css": [ "extStyle.min.css" ],
+      "matches": [
+        "https://designers.mx/*", "http://designers.mx/*"
+      ],
+      "js": ["jquery-2.2.4.min.js", "filter.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "content.html"
+  ]
+}

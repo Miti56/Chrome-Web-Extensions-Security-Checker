@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+	"manifest_version": 2,
+	"name": "QuickMovies",
+	"description": "Stay up to date on the best new movies on new tabs.", 
+	"version": "1.01", 
+	"author": "Marcus Loureiro - Estrada",
+	"browser_action": {"default_popup": "popup.html"},
+	"browser_action": {"default_icon": "tab-icon.png", "default_title": "Movies"},
+	"chrome_url_overrides" : { "newtab": "newtab.html"},
+	"permissions": ["activeTab"]
+}

@@ -1,0 +1,62 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "ThaiTweetSummarizer",
+	"version": "1.5.0",
+	"author": "Prayote Boonchaisuk",
+	"description": "ThaiTweetSummarizer",
+	"icons": {
+		"19": "img/icon19.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	
+	"permissions": [
+		"http://twitter.com/*",
+		"https://twitter.com/*",
+		"http://fb.kku.ac.th:8080/"
+	],
+	
+	"content_scripts": [
+		{
+			"matches": [
+				"http://twitter.com/*",
+				"https://twitter.com/*",
+				"http://fb.kku.ac.th:8080/"
+			],
+			"js": [
+				"js/jquery-1.10.2.min.js",
+				"js/insQ.js",
+				"js/app.js"
+			],
+			"css": [
+				"css/mycss.css",
+				"css/font-awesome.min.css",
+				"css/bootstrap.css",
+				"css/style.css"
+			],
+			"run_at": "document_end"
+		}
+	],
+	
+	"background": {
+		"scripts": [
+			"js/background.js"
+		],
+		"persistent": false
+	},
+	"page_action": {
+		"default_icon": {
+			"19": "img/icon19.png",
+			"48": "img/icon48.png",
+			"128": "img/icon128.png"
+		},
+		"default_title": "Click to give feedback about TweetCred."
+	},
+	"web_accessible_resources": [
+		"img/*",
+		"js/*",
+		"css/*"
+	]
+}

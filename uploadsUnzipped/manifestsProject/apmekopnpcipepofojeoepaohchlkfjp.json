@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "OneCm StoreCRM",
+  "short_name": "OneCm StoreCRM",
+  "author": "One Cm Web Design & Development - Skopje, Macedonia",
+  "description": "OneCm StoreCRM Google Chrome extension.",
+  "version": "2.2",
+  "incognito": "split",
+  "icons": {
+    "16": "onecm_storecrm_16x16.png",
+    "48": "onecm_storecrm_48x48.png",
+    "128": "onecm_storecrm_128x128.png"
+  },
+  "browser_action": {
+    "default_icon": "onecm_storecrm_128x128.png",
+    "default_title": "OneCm StoreCRM"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "background",
+    "storage",
+    "alarms",
+    "http://*.1cm.com.mk/*",
+    "https://*.1cm.com.mk/*",
+    "http://store.local/",
+    "http://store.local/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://*.1cm.com.mk/*",
+      "https://*.1cm.com.mk/*",
+      "http://store.local/",
+      "http://store.local/*"
+    ]
+  },
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "onecm_storecrm_16x16.png"
+  ],
+  "manifest_version": 2
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Toripelit",
+    "description": "This extension will Redirect you  to https://toripelit.com/",
+    "version": "1.0",
+    "permissions": [
+    "tabs","activeTab","http://*/*", "https://*/*" 
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+	"icons":{
+	 "128":"icon.png"
+	}, 
+     
+	"background":{
+	  "scripts":["background.js"]
+	}, 
+	
+    "manifest_version":2
+}

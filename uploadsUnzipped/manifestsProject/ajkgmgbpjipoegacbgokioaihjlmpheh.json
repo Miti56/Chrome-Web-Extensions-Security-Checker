@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "SLiMG Upload",
+	"short_name": "SLiMG Upload",
+	"version": "1.20",
+	"background": { 
+		"page":"background.html"
+	},
+	"description": "Add a context menu item to upload Images directly to SLiMG.",
+	"icons": {
+		"16":"icon16.png",
+		"48":"icon48.png"
+	},
+	"minimum_chrome_version": "6",
+	"permissions": [ "contextMenus", "tabs", "activeTab", "http://*/*", "https://*/*"]	
+}

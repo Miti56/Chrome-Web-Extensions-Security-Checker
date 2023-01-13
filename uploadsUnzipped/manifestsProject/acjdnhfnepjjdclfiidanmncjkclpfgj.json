@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_extName__",
+    "description": "__MSG_extDescription__",
+    "default_locale": "en",
+    "incognito": "split",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "/images/icon19.png",
+        "default_popup": "/action/action.htm",
+        "default_title": "Web Defender - Popup Blocker"
+    },
+    "icons": {
+        "128": "/images/icon128.png",
+        "16": "/images/icon16.png",
+        "48": "/images/icon48.png"
+    },
+    "background": {"scripts": ["/libs/jquery.min.js", "/js/background.js"]},
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "css": ["/content/toast.css"],
+            "js": ["/libs/jquery.min.js", "/content/content.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_start"
+        }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "options_page": "options/options.htm",
+    "permissions": [
+        "<all_urls>",
+        "storage",
+        "activeTab",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "tabs"
+    ],
+    "web_accessible_resources": ["images/*.png"],
+    "version": "1.0"
+}

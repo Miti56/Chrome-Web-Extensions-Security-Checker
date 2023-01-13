@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SS3C協訊通信門號專案報價系統",
+  "description": "SS3C協訊通信門號專案報價系統",
+  "version": "0.50",
+  "manifest_version": 2,
+  "icons": { "16": "icon_16.png", "128": "icon_128.png" },
+  "app": {
+    "urls": [
+      "http://pm.ss3c.com.tw/",
+      "http://api.ss3c.com.tw/"
+    ],
+    "launch": {
+      "web_url": "http://pm.ss3c.com.tw/",
+      "container": "panel"
+    },
+    "externally_connectable": {
+      "matches": [
+        "*://*.ss3c.com.tw/*",
+        "file://*"]
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://pm.ss3c.com.tw/*",
+        "http://api.ss3c.com.tw/*",
+        "http://pm.ss3c.com.tw:8080/pm/rest/*"
+        ]
+    }],
+    "permissions": [
+      "http://pm.ss3c.com.tw/",
+      "http://api.ss3c.com.tw/",
+      "http://*.ss3c.com.tw/",
+      "http://*.google.com/",
+      "alarms",
+      "desktopCapture",
+      "location",
+      "sessions",
+      "system.storage",
+      "pushMessaging",
+      "system.storage",
+      "background", 
+      "clipboardRead", 
+      "clipboardWrite", 
+      "geolocation",
+      "unlimitedStorage",
+      "notifications",
+      "tabs",
+      "cookies",
+      "webRequest",
+      "webRequestBlocking",
+      "contentSettings",
+      "privacy"
+    ],
+    "homepage_url": "http://pm.ss3c.com.tw/"
+  }
+}

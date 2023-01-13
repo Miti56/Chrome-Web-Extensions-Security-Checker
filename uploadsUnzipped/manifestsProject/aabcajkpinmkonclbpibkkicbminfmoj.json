@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version":2,
+"name": "Christmas",
+"version":"1",
+"description":"Happy Christmas",
+"theme":
+{
+	"images":
+	{
+		"theme_toolbar": "images/theme_toolbar.jpg",
+		"theme_tab_background": "images/theme_tab_background.jpg",
+		"theme_ntp_background": "images/theme_ntp_background.jpg",
+		"theme_frame": "images/theme_frame.jpg",
+		"theme_ntp_attribution":"images/theme_ntp_attribution.png",
+		"theme_window_control_background": "images/window_control_background.jpg"
+
+		
+	},
+	"colors":
+	{
+		"tab_text": [255,255,255],
+		"tab_background_text": [255,255,255],
+		"bookmark_text": [255,255,255],
+		"frame":[128,0,0],
+		"ntp_text": [ 255,255,255 ],		
+		"ntp_link": [ 255,255,255],
+		"ntp_link_underline": [255,255,255],
+		"toolbar": [128,0,0],
+		"ntp_background": [128,0,0]
+	},
+	"tints":
+	{
+		"buttons": [0.000000, 0.000000, 1.000000]
+	},
+	"properties":
+	{
+		"ntp_background_alignment": "center",
+		"ntp_background_repeat": "Center",
+		"ntp_logo_alternate": 0
+		
+	}
+}
+}

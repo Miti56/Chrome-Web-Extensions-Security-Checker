@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Sage Office Online",
+"description": "Software für Buchhaltung und Warenwirtschaft",
+"version": "1.0",
+"manifest_version": 2,
+"icons": {
+"128": "sage-128x128.png"
+},
+"app": {
+"launch": {
+"web_url": "https://www.sage-office-online.de/"
+}
+}
+}

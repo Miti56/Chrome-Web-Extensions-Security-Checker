@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Simple Interest Calculator",
+	"short_name": "Simple Interest",
+    "description": "Simple Interest Calculator - Calculate simple interest, principal amount, interest rate, tenure for loans and mortagages",
+    "version": "0.0.0.2",
+	"manifest_version": 2,
+    "icons": {
+       "128": "ramven.png"
+    },
+    "app": {
+        "urls": [
+             "http://apps.ramven.com/finance/simple-interest-calculator/?utm_campaign=apps&utm_source=crome&utm_medium=store&utm_content=html5&utm_term=sinterest"
+         ],
+        "launch": {
+            "web_url": "http://apps.ramven.com/finance/simple-interest-calculator/?utm_campaign=apps&utm_source=crome&utm_medium=store&utm_content=html5&utm_term=sinterest"
+        }
+    }
+}

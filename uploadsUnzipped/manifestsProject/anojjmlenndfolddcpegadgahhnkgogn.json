@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Data Needs Extension",
+  "description": "This extension highlights when there are visible iframes on the page, finds DataLayers and shows what HTML is sent to the CS servers",
+  "version": "2.9",
+
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["context.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "web_accessible_resources" : ["/DLfile.js", "/PIIfile.js"],
+
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "storage",
+    "webRequest",
+    "*://t.content-square.net/"
+  ]
+}

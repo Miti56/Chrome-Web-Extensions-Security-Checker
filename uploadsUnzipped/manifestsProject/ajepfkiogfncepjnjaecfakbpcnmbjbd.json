@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Zapier - App Integrations",
+  "version": "1.0.3",
+  "description": "The easiest way to integrate Google Apps, Gmail, Sheets, Forms, Calendar, Contacts, Docs, Drive and Tasks with hundreds of web apps.",
+  "icons": {
+    "128": "icons/zapier-logomark-128.png",
+    "16": "icons/zapier-logomark-16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "927538837578",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://zapier.com/google-sso/start/"
+    }
+  }
+}

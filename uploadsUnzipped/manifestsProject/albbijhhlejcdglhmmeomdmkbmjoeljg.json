@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Udemy Instructor Tools",
+    "version": "1.0",
+    "description": "Udemy instructors can find profitable course or follow their competitors.",
+	
+	"background": {
+        "scripts": ["background.js"],
+		"persistent": false
+  	},
+
+	
+    "browser_action": {
+      "default_popup": "popup.html",
+     	"css": ["style.css"],
+	  "default_icon": {
+        "16": "images/logo.png",
+        "32": "images/logo.png",
+        "48": "images/logo.png",
+        "128": "images/logo.png"
+      }
+    },
+
+    "web_accessible_resources": ["style.css"],
+	
+	
+	
+	"icons": {
+      "16": "images/logo.png",
+      "32": "images/logo.png",
+      "48": "images/logo.png",
+      "128": "images/logo.png"
+    },
+		
+    "manifest_version": 2,
+	 	
+	
+	"permissions":[
+       "*://*.udemy.com/*",
+        "*://*.btcile.com/*"
+	]
+
+	
+	
+	
+}

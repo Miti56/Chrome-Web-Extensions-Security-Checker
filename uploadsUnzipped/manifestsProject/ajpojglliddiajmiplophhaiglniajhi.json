@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "The Pricesearcher Browser Extension",
+  "description": "Tells me if the product I'm looking at is being offered cheaper elsewhere!",
+  "version": "1.1.6",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+
+    ]
+      
+        ,
+        "persistent": true
+    
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "run_at": "document_idle",
+      "js": [ "content.js" ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "storage",
+    "https://prod-browser-extension-api.pricesearcher.com/api/v1.0/browser_extension//*"
+  ],
+  "icons":{
+    "48": "images/48px_icon.png",
+    "128": "images/128px_icon.png"
+  },
+  "browser_action":{
+    "browser_style": true,
+    "default_icon": "images/greyicon.png",
+    "default_popup": "popup.html"
+  }
+}

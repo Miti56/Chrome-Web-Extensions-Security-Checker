@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ajduke's blog",
+  "description": "technical notes on software development",
+  "version": "1.0",
+  "icons": {
+    "128": "128-ajduke.png"
+  },
+  "app": {
+    "urls": [
+      "http://ajduke.in/"
+    ],
+    "launch": {
+      "web_url": "http://blog.ajduke.in/"
+    }
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

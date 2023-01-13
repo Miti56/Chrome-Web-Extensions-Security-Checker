@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Moriya Suwako theme",
+  "version": "1.31",
+  "manifest_version": 2,
+  "description": "suwako theme",
+  "theme": {"images" : {
+      "theme_frame" : "images/theme_frame_moriya.png", 
+      "theme_toolbar" : "images/theme_toolbar_moriya.png",
+      "theme_tab_background" : "images/theme_tab_background_moriya.png",
+      "theme_ntp_background" : "images/theme_ntp_background_moriya.png"
+    },
+    "colors" : {
+      "frame" : [66, 116, 201],
+      "toolbar" : [114, 82, 62],
+      "ntp_text" : [230, 83, 14],
+      "tab_text" : [231, 133, 87],
+      "tab_background_text" : [241, 206, 107],
+      "bookmark_text" : [249, 245, 239],
+      "ntp_background" : [255, 255, 255],
+      "ntp_link" : [36, 70, 0],
+      "ntp_section" : [207, 221, 192],
+      "button_background" : [0, 0, 0, 0]
+    },
+    "tints" : {
+      "buttons" : [0.11, 0.84, 0.85]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom"
+    }
+  }
+}

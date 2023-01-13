@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "version": "1.1",
+	"name": "FusionFall",
+	"theme": {
+	    "images": {
+		"theme_frame": "images/frame_normal.png",
+		"theme_frame_incognito": "images/frame_normal.png",
+		"theme_frame_inactive": "images/frame_normal.png",
+		"theme_toolbar": "images/toolbar.png",
+		"theme_tab_background": "images/tab.png",
+		"theme_tab_background_incognito": "images/tab.png",
+		"theme_button_background": "images/button.png",
+		"theme_ntp_background": "images/background.png"
+	    },
+	    "colors": {
+		"frame": [0, 64, 128],
+		"frame_inactive": [0, 64, 128],
+		"toolbar": [0, 64, 128],
+		"tab_text": [255, 255, 255],
+		"tab_background_text": [255, 255, 255],
+		"bookmark_text": [255, 255, 255],
+		"ntp_background": [0, 0, 0],
+		"ntp_text": [255, 255, 255],
+		"ntp_link": [255, 255, 255],
+		"ntp_link_underline": [255, 255, 255],
+		"ntp_header": [255, 255, 255],
+		"button_background": [0, 64, 128]
+	    },
+	    "tints": {
+		"buttons": [1, 1, 1]
+	    },
+	    "properties": {
+		"ntp_background_alignment": "top"
+	    }
+	}
+}

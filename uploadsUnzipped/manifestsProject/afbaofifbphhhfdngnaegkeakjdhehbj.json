@@ -1,0 +1,15 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.websiteplanet.com/review/hire-the-world/?utm_source=webstrore&utm_medium=webstore&utm_campaign=webstore&utmx=webstore"
+      }
+   },
+   "description": "Hire Online Professionals and Get the Job Done",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "Hire the World- Review",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

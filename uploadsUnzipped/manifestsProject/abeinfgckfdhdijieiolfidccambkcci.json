@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "BNM Desktop Capturing",
+    "author": "Hasan ÇELİK",
+    "version" : "1.0",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Masaüstü paylaşım özelliği için gerekli uzantı",
+    "homepage_url": "http://canli.video724.com/",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content.js" ],
+       "all_frames": true,
+       "run_at": "document_start",
+       "matches": ["*://canli.video724.com/*","*://canli.video724.test/*","*://canli.video724.rtc/*"]
+    }],
+    "icons" : {
+        "64" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "tutorland.de - Share screen",
+    "author": "Muaz Khan",
+    "version" : "3.6",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Online tutoring - tutorland.de - if you are a tutor, install this plugin.",
+    "homepage_url": "https://tutorland.de",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_start",
+       "matches": ["https://frontend.tutorland.de/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

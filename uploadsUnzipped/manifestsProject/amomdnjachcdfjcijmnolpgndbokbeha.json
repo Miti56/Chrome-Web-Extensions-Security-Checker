@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Lazy Search on Youtube",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Simple and quick way to search for highlighted text on YouTube via right-click context menu or from popup. YouTube Helper.",
+    "homepage_url": "https://github.com/allekss90/",
+    "default_locale": "en",
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "contextMenus",
+        "tabs",
+        "*://*.google.com/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "options_ui": {
+        "page": "./options/options.html",
+        "open_in_tab": false
+    },
+    "page_action": {
+        "default_popup": "./popup/popup.html",
+        "default_title": "Lazy Search on Youtube",
+        "default_icon": {
+            "16": "images/ico16.png",
+            "32": "images/ico32.png",
+            "48": "images/ico48.png",
+            "128": "images/ico128.png"
+        }
+    },
+    "icons": {
+        "16": "images/ico16.png",
+        "32": "images/ico32.png",
+        "48": "images/ico48.png",
+        "128": "images/ico128.png"
+    },
+    "commands": {
+        "_execute_page_action": {
+          "suggested_key": {
+            "default": "Ctrl+Y",
+            "windows": "Ctrl+Y",
+            "mac": "Command+Y"
+          }
+        }
+      }
+}

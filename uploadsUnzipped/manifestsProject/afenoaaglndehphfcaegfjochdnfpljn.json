@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"page": "background.html"
+	},
+	"browser_action": {
+		"default_icon": "lingualeo/images/i19bw.png",
+		"default_popup": "popup.html",
+		"default_title": "LinguaLeo"
+	},
+	"chrome_url_overrides": {
+		"newtab": "newtab.html"
+	},
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"js": [
+				"includes/content.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*",
+				"file:///*",
+				"file://*"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"default_locale": "en",
+	"description": "__MSG_info_description__",
+	"icons": {
+		"128": "icons/icon128.png",
+		"48": "icons/icon48.png"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_info_name__",
+	"options_page": "options.html",
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"contextMenus",
+		"webNavigation",
+		"notifications",
+		"cookies"
+	],
+	"version": "1.0",
+	"web_accessible_resources": [
+		"res/*",
+		"assets/*",
+		"icons/*"
+	]
+}

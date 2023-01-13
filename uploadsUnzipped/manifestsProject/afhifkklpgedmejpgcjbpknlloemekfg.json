@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Ame chat + bot",
+  "version": "1.18",
+  "short_name": "Ame",
+
+  "description": "Ame chat + bot",
+  "icons": {
+    "48": "icons/favicon.png",
+    "96": "icons/favicon.png"
+  },
+
+    "background": {
+    "scripts": [
+      "jquery-3.4.1.min.js",
+      "content_scripts/background.js"
+    ],
+    "persistent": true
+  },
+
+  "permissions": [
+    "contextMenus",
+    "activeTab", 
+    "tabs",
+    "cookies",
+    "fontSettings", 
+    "*://*/*"
+  ],
+
+  "content_security_policy": 
+    "script-src https://query.yahooapis.com/ 'self'"
+  ,
+
+  "web_accessible_resources": [
+    "Casino-Hand/*"
+  ],
+
+  "externally_connectable": {
+    "matches": ["https://i.ame.im/*"]
+  },
+
+  "browser_action": {
+    "default_icon": "icons/favicon.png",
+    "default_title": "Ame chat + bot",
+    "default_popup": "popup/index.html"
+  },
+
+  "content_security_policy":
+    "script-src 'self' https://i.ame.im https://ajax.googleapis.com;  object-src 'self'"
+}

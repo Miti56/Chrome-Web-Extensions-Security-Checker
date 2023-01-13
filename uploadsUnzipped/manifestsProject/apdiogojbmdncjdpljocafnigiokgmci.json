@@ -1,0 +1,17 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "UJAM - Make your music.",
+  "version": "1.1",
+  "manifest_version" : 2,
+  "description": "With UJAM, you can create music for all the things in your life, for free!",
+  "container": "GOOGLE_DRIVE",
+  "api_console_project_id": "625614516321",
+  "icons": {
+   "128": "icon_128.png"
+  },
+  "app": {
+    "launch": {
+      "web_url": "https://www.ujam.com/googleLogin/app/ujamstudio"
+    }
+  }
+}

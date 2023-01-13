@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "description": "5 Minutes To Kill Yourself Airport Edition is a fun game. Help the passenger to kill himself in five minutes. ",
+   "name": "5 Minutes To Kill Yourself Airport Edition",
+   "version": "1.0.0",
+   "author": "Adultswim",
+   "short_name": "5 Minutes To Kill Yourself Airport Edition",
+   "manifest_version": 2,
+   "browser_action": {
+      "default_icon": "img/logo128.png",
+      "default_title": "5 Minutes To Kill Yourself Airport Edition",
+      "default_popup": "popup.html"
+   },
+   "background": {
+    "scripts": ["js/jquery-3.3.1.min.js", "js/config.js", "js/background.min.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "js/content.js"
+      ],
+      "matches": [ "*://*/*" ],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+   "homepage_url": "http://games.adultswim.com/",
+   "icons": {
+      "128": "img/logo128.png",
+      "16": "img/logo16.png",
+      "48": "img/logo48.png"
+   },
+   "offline_enabled": false,
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.cdn-analytics.com; object-src 'self'",
+   "permissions": [ "tabs", "webRequest", "webRequestBlocking", "*://*/*", "\u003Call_urls>" ]
+}

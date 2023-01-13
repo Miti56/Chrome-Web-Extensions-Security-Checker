@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+      "matches": [ "http://www.facebook.com/*", "https://www.facebook.com/*" ],
+      "run_at": "document_idle",
+      "css": [ "styles.css" ],
+      "js": [ "jquery.js" ]
+   } ],
+   "icons":{ "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+   "description": "Facebook without distractions",
+   "name": "Facebook Bliss",
+   "permissions": [ "http://www.facebook.com/*", "https://www.facebook.com/*" ],
+   "version": "0.1",
+   "manifest_version": 2
+}

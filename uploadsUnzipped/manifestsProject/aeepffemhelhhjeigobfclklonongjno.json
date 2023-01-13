@@ -1,0 +1,33 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version":"1.0",
+  "name":"Earthy+",
+  "theme":{
+    "images":{
+      "theme_frame":"images/frame.png",
+      "theme_toolbar":"images/toolbar.png",
+      "theme_tab_background":"images/tab_background.png",
+      "theme_button_background":"images/button_background.png"
+    },
+    "colors":{
+      "frame":[92,82,73],
+      "toolbar":[158,163,139],
+      "tab_text":[15,8,0],
+      "tab_background_text":[179,163,148],
+      "bookmark_text":[15,8,0],
+      "ntp_background":[235,234,211],
+      "ntp_text":[105,96,87],
+      "ntp_link":[105,96,87],
+      "ntp_section":[158,163,139,1],
+      "ntp_section_text":[15,8,0],
+      "ntp_section_link":[15,8,0]
+    },
+    "properties":{
+      "ntp_background_alignment":"bottom",
+      "ntp_background_repeat":"no-repeat"
+    },
+    "tints":{
+      "buttons":[0.136,0.056,0.5]
+    }
+  }
+}

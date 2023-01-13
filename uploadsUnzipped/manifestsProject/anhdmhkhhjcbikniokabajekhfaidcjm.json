@@ -1,0 +1,36 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "short_name": "img-downloader-free",
+
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "version": "1.1",
+  "author": "Anatolij Suhomlin",
+
+  "icons": {
+    "128": "icon/128.png"
+  },
+
+  "permissions": [
+    "downloads",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage",
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_popup": "menu.html",
+    "default_icon": {
+      "19": "icon/19.png"
+    }
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "background": {
+    "page": "webrequest.html"
+  },
+  "default_locale": "en"
+}

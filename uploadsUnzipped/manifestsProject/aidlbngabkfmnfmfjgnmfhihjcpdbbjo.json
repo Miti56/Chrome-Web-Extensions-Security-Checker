@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Laranotti",
+  "version": "2.1.1",
+  "description": "Laranotti notifies you of new lessons from Laracasts, and lets you view the latest.",
+  "icons": {
+    "16": "graphics/laranotti-logo-16.png",
+    "48": "graphics/laranotti-logo-48.png",
+    "128": "graphics/laranotti-logo-128.png"
+  },
+  "permissions": [
+    "http://laracasts-feed.mariobasic.com/api/v1/feed/lessons",
+    "notifications",
+    "alarms",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "public/js/eventPage.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "graphics/laranotti-logo-19.png",
+      "38": "graphics/laranotti-logo-38.png"
+    },
+    "default_title": "Laranotti",
+    "default_popup": "popup.html"
+  }
+}

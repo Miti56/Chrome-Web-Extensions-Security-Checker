@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Flash Win",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "notifications",
+    "storage",
+    "gcm",
+    "storage",
+    "notifications",
+    "identity"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "https://www.flipkart.com/mi-a1*",
+      "http://www.flipkart.com/mi-a1*",
+      "https://www.flipkart.com/honor-9*",
+      "http://www.flipkart.com/honor-9*",
+      "https://www.flipkart.com/redmi-note-5-pro*",
+      "http://www.flipkart.com/redmi-note-5-pro*",
+      "https://www.flipkart.com/mi-led-smart-tv*",
+      "http://www.flipkart.com/mi-led-smart-tv*"
+    ],
+    "js": [
+      "/js/jquery.min.js",
+      "/js/flashSale.js"
+    ]
+  }],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ProdPad",
+  "version": "1.0.1",
+  "description": "ProdPad is end-to-end product management software that supports the complete product journey.",
+  "icons": {
+    "128": "128x128.png",
+    "16": "16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "845200762436"
+}

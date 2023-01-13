@@ -1,0 +1,22 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "background.js" ]
+      }
+   },
+   "description": "A native MyCloud standalone webview app for your Chrome Browser.",
+   "icons": {
+      "128": "assets/128.png",
+      "16": "assets/16.png",
+      "32": "assets/32.png",
+      "64": "assets/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkszcgJuPIN7XiPukWu25y8mbus+Qi004m9/JNBo0EyjgRGXwY1mSCthAUgASqxuOas1PEtz5Ryybg4OxZo1VFf+OvGlzs/xjo/hbvpDTM6Juys9plvoIkBl56y1PB0E17hnf4Lr+A4XHNHs9349vUgHAF0y9TTlFNVZMoPb8Ep91tAoj6oCi3ppIzS0Bc5uFY3hNTVL5lfA3v2v+FFr3huhNJyNgu1L6w0mOc1spJ/ILQpYg2znviRzF3LSq2RfoBwAAJ8KtaZJIxV09jPQanJr1EPxkF32JSD3yZxVEIczMl7Z6JKNHlQV0J3r0yLq8Y1h3SBid9ViI52XM/XNOZQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "38",
+   "name": "MyCloud",
+   "permissions": [ "webview", "storage", "fileSystem", "unlimitedStorage", "http://*/", "https://*/" ],
+   "short_name": "MyCloud",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Fuxit",
+  "description": "Let's call it what is is! Replace the word the media has given us - 'Brexit' and replace it with what is actually is. A Clusterfuck",
+  "version": "1.1",
+  "permissions": [ "http://*.google.com/", "http://*.com/", "tabs" ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "browser_action": {
+      "default_icon": "icon.png",     
+      "default_title": "Fuxit"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ]
+}
+

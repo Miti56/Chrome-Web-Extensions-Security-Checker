@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+
+"name" :"Multiserve Tchat",
+"version" :"1.0",
+"description" :"Votre tchat multiserve où que vous soyez!",
+"background":{
+    "scripts": ["bgp.js"],
+    "persistent": true
+  },
+"browser_action" :
+{
+	"default_icon" : "icone.png"
+	},
+"permissions": [
+   "<all_urls>","activeTab","webRequest", "webRequestBlocking"
+   ],
+   
+   "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery.js", "popup.js"]
+    }
+  ]
+}

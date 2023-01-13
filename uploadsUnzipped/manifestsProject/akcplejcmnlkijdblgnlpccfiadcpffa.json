@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "RestoJi Billing App",
+  "description": "RestoJi Cloud Based Application",
+  "version": "1.0.88",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "sandbox": {
+    "pages": ["sandbox.html"]
+  },
+  "icons": { "16": "restoji-16.png", "128": "restoji-128.png" },
+  "permissions": [{"fileSystem": ["write", "retainEntries"]},"storage", "alarms", "notifications", "unlimitedStorage", "syncFileSystem", "http://*/","http://funduz.restoji.com/public/images/"]
+}

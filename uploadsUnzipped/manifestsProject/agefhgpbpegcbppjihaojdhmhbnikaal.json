@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "RTFA",
+  "version": "0.1",
+  "description": "Hides anything that distracts away from Reading The F*ing Article.",
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_title": "RTFA!",
+    "default_icon": "icon_22.png"
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "22": "icon_22.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
+    "72": "icon_72.png",
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "css": ["rtfa.css"]
+    }
+  ]
+}

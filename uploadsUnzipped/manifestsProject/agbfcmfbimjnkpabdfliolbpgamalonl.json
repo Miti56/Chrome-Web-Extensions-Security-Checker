@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+
+	"name": "Qualtrics Site Intercept",
+	"version": "1.0.2",
+	"manifest_version": 2,
+		
+	"description": "Quickly create, target, and launch dynamic content on your website, without your IT department.",
+	
+	"app": {
+		"urls": [
+			"https://www.qualtrics.com/si/"
+		],
+		"launch": {
+			"web_url": "https://www.qualtrics.com/si/"
+		}
+	},
+	
+	"icons": {
+		"128": "icon_128.png"
+	}
+
+}

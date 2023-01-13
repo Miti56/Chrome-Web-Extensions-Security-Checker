@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Jenpa's Personalized CSS",
+  "author": "Jennifer Apacible",
+  "version": "1.91",
+  "manifest_version": 2,
+  "description": "Personalize the CSS of websites to Jenpa's preferences.",
+  "content_scripts": [{
+    "matches": [
+      "http://*.facebook.com/*",
+      "https://*.facebook.com/*",
+      "https://www.messenger.com/*",
+      "https://play.google.com/music/*",
+      "https://plus.google.com/*"
+    ],
+    "js": [
+      "main.js"
+    ]
+  }],
+  "web_accessible_resources": [
+    "facebook.css",
+    "messenger.css",
+    "playmusic.css",
+    "plus.css"
+  ]
+}

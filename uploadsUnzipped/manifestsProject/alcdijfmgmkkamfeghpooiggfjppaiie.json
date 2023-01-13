@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "JobINC Screen Capturing",
+    "author": "hiral Gajjar",
+    "version" : "1.0",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Capture full-screen or specific application's screen on any HTTPs domain!",
+    "homepage_url": "https://jobinc.sapphiresolutions.net/",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_end",
+       "matches": ["https://jobinc.sapphiresolutions.net/*", "https://localhost:44388/*", "https://192.168.1.141:1804/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "0.0.0.4",
+  "name": "MenuVersity",
+  "description": "Menu service for restaurants. Allow your customers to order online instantly.",
+  "icons": {"16": "resources/images/main/favicon-16x16.png",
+    "36": "resources/images/main/android-icon-36x36.png",
+    "48": "resources/images/main/android-icon-48x48.png",
+    "72": "resources/images/main/android-icon-72x72.png",
+    "96": "resources/images/main/android-icon-96x96.png",
+    "128": "resources/images/main/android-icon-128x128.png",
+    "144":"resources/images/main/android-icon-144x144.png",
+    "192": "resources/images/main/android-icon-192x192.png"
+  },
+  "app": {
+    "urls": [
+      "https://MenuVersity.com/"
+    ],
+    "launch": {
+      "web_url": "https://MenuVersity.com/"
+    }
+  }
+
+}

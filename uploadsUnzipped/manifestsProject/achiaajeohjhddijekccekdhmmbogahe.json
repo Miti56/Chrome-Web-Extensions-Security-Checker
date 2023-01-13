@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Chit Chat City",
+	"description": "Online virtual world for creative teens",
+	"version": "1.5",
+	"icons": {
+		"128": "icon_128.png"
+	},
+	"app": {
+		"urls": [
+			"http://www.chitchatcity.com/"
+		],
+		"launch": {
+			"web_url": "http://play.chitchatcity.com/"
+		}
+	}
+}

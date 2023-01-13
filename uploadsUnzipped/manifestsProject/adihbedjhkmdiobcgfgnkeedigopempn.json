@@ -1,0 +1,19 @@
+{"name": "Doom New Tab Page", 
+
+"background": {"scripts": ["bg_script.js"]},
+ "version": "2.2.7", 
+
+"chrome_url_overrides": {"newtab": "newtab_index.html"},
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+
+"manifest_version": 2, 
+
+"icons": {"128": "128-size.png"},
+ "browser_action": {"default_icon": "128-size.png", 
+
+"default_title": "Doom New Tab Page"},
+ "author":"Alejandro Holloway", 
+
+"default_locale": "en", 
+
+"description": "__MSG_desc__"}

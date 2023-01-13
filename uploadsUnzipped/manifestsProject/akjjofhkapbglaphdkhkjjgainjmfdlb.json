@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "SSS Extension for KKS",
+	"version": "1.0",
+	"permissions": [
+		"activeTab"
+	],
+	"icons": {
+    	"16": "clock.png",
+    	"48": "clock.png",
+    	"128": "clock.png"
+  	},	
+	"content_scripts": [
+		{
+			"matches": [
+					"*://*/cgi-bin/sss/s3.cgi?*"
+			],
+			"css": [
+					"bootstrap.css"
+			],
+			"js" : [
+					"jquery-3.1.1.min.js",
+					"sss4kks.js"
+			]
+		}
+	]
+}

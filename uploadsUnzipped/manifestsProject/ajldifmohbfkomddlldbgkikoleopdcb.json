@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ラノベセンス - ライトノベル情報のまとめと、ゆるやかコミュニティ",
+  "description": "ラノベ（ライトノベル）に関する情報と、みんなの反応が分かる登録不要のアプリ「ラノベセンス」。注目のラノベやラノベ発売日、レビューなどのニュースをまとめてお届けします。",
+  "short_name": "ラノベセンス",
+  "version": "1.0.2.1",
+   "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://meme-sense.info/"
+    ],
+    "launch": {
+      "web_url": "http://meme-sense.info/ranobe/"
+    }
+  },
+  "icons": {
+    "128": "chrome-icon-128.png"
+  }
+}

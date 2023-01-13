@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+"short_name": "Super Mario Run Free Flash Game",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "name": "Super Mario Run Free Flash Game",
+  "container": "GOOGLE_DRIVE",
+  "description": "Super Mario Online are waiting for you to discover the exciting atmosphere with fantastic game.",
+     "permissions": [ "webview", "power", "storage", "videoCapture", "geolocation", "pointerLock", "system.display", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "accessibilityFeatures.read", "accessibilityFeatures.modify" ],
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "2.3",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "permissions": [
+    "notifications", "webRequest", "webRequestBlocking", 
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

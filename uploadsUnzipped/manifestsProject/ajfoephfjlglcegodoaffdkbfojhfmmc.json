@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "audiosLocalStorage.js", "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "replaceCss.css" ],
+      "matches": [ "https://new.vk.com/*", "http://new.vk.com/*", "https://vk.com/*", "http://vk.com/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "downloader.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Скачивает музыку с вк.сом",
+   "externally_connectable": {
+      "matches": [ "*://vk.com/*", "*://new.vk.com/*" ]
+   },
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "25",
+   "name": "Ru Savefrom NET",
+   "options_page": "popup.html",
+   "permissions": [ "*://*.vk.com/*", "*://vk.com/", "*://*.vk.me/*", "*://*.vk-cdn.net/*", "downloads" ],
+   "short_name": "Vk mp3 downloader",
+   "version": "0.0.1",
+   "web_accessible_resources": [ "audio_icons.png", "download.gif", "download_new.gif", "icon_video.png", "icon_album.png", "icon_album_white.png", "pageScript.js" ]
+}

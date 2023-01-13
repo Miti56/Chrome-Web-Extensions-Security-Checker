@@ -1,0 +1,15 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "L\u0027Accélérateur de recherche pour CanLII.org",
+  "background": {"scripts": ["accelerator.js"]},
+  "name": "Accélérateur de recherche CanLII",
+  "permissions": ["contextMenus"],
+  "icons": {
+    "48": "canlii48x48.png",
+    "128": "canlii128x128.png",
+    "16": "canlii16x16.png"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "default-src \u0027self\u0027",
+  "version": "2.1"
+}

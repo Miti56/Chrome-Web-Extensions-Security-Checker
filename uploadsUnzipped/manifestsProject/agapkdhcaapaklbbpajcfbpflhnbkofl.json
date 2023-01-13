@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Arcade Basketball",
+
+  "short_name": "Arcade Basketball",
+
+  "version": "1.0.2",
+  "description": "Play Arcade Basketball directly on your browser",
+
+  "homepage_url": "https://appfront.pw/c/juegos-3d/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Arcade Basketball",
+
+      "default_popup": "popup.html"
+  }
+}

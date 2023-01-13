@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Outirl",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Outirl Extension",
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://graph.facebook.com/*",
+    "https://www.facebook.com/events/*",
+    "https://www.facebook.com/connect/*",
+    "*://outirl.com/*"
+  ],
+  "content_security_policy": "script-src 'self' https://graph.facebook.com 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon48.png",
+    "default_title": "Outirl"
+  },
+  "background" : {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons" : {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://outirl.com/*"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches" : ["https://outirl.com/auth/chrome-extension*"],
+      "run_at": "document_start",
+      "js": [
+        "auth_content_script.js"
+      ]
+    }
+  ]
+}

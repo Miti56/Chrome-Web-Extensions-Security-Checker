@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Browser clock",
+  "description": "Clock in the browser corner",
+  "version": "1.1",
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*" ],
+      "js": ["myscript.js"],
+      "css": ["clock-styles.css"]
+    }
+  ],
+
+  "web_accessible_resources": ["myscript.js"],
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16" : "icon.png",
+    "48" : "icon.png",
+    "128" : "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

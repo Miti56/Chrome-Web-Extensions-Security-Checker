@@ -1,0 +1,62 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Vk musicr",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"description": "Аудио плеер вконтакте",
+	"browser_action": {
+		"default_icon": "img/play.png",
+		"default_title": "Vk audio player (controls)"
+	},
+	"icons": {
+		"16": "img/play.png",
+		"24": "img/128.png",
+		"32": "img/128.png",
+		"48": "img/128.png",
+		"128": "img/128.png"
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	
+	"permissions": [ "notifications", "tabs" ],
+	
+	"content_scripts": [
+		{
+			"matches": [ "http://vkontakte.ru/*", "https://*.vkontakte.ru/*", "http://vk.com/*", "https://vk.com/*",
+			"http://*.vk.com/*", "https://*.vk.com/*"],
+			"js": ["contentScr.js"]
+		}
+	],
+
+	"commands": {
+		"next": {
+			"description": "Next track",
+			"global": true,
+			"suggested_key": {
+				"default": "Alt+R"
+			}
+		},
+		"playpause": {
+			"description": "Play/Pause",
+			"global": true,
+			"suggested_key": {
+				"default": "Alt+E"
+			}
+		},
+		"prev": {
+			"description": "Previous track",
+			"global": true,
+			"suggested_key": {
+				"default": "Alt+W"
+			}
+		}
+	},
+	
+	"browser_action": {
+		"difault_title": "vk music control",
+		"default_icon": "img/128.png",
+		"default_popup": "popup.html"
+	}
+}

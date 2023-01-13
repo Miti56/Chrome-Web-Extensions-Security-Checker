@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "aBirchWords",
+  "version": "2.1",
+  "manifest_version": 2,
+  "description": "BirchWords",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.facebook.com/*"
+      ],
+      "js": [
+        "jquery-3.1.1.min.js",
+        "src/birchWordsCollector.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "aBirchWords",
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  },
+  "minimum_chrome_version": "29",
+  "permissions": [
+    "activeTab",
+    "background",
+    "identity",
+    "storage",
+    "*://*.facebook.com/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' https://*.facebook.com  https://connect.facebook.net https://graph.facebook.com ; object-src 'self'"
+}

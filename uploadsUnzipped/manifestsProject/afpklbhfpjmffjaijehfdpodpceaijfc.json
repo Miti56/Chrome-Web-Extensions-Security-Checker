@@ -1,0 +1,15 @@
+{"chrome_url_overrides": {"newtab": "main.html"},
+
+ "default_locale": "en", 
+"version": "3.1.0", 
+"browser_action": {"default_icon": "128-icons.png", 
+"default_title": "Bruno Mars Wallpapers & Themes"},
+
+ "background": {"scripts": ["javas.js"]},
+
+ "description": "__MSG_info__", 
+"icons": {"128": "128-icons.png"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"name": "Bruno Mars Wallpapers & Themes"}

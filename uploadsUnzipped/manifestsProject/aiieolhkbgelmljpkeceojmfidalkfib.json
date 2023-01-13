@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"short_name": "Ruler of Kings Text RPG",
+"name": "Ruler Of Kings Medieval Fantasy Text RPG",
+"description": "Medieval fantasy text RPG: you are the author and protagonist. Nothing to install, you play via your web browser for free!",
+"version": "2.1",
+"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+"app": {
+"urls": [
+"https://www.rulerofkings.com/"
+],
+"launch": {
+"web_url": "https://www.rulerofkings.com/"
+}
+}
+}

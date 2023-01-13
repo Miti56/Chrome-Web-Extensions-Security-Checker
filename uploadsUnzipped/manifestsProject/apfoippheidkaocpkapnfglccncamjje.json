@@ -1,0 +1,44 @@
+{
+    "background": {
+      "scripts": ["public/js/jquery.min.js","public/js/underscore.min.js","public/js/jquery.csv.js", "js/settings.js","js/background.js"],
+      "persistent": true
+    },
+    "browser_action": {
+       "default_icon": "public/logo128.png",
+       "default_popup": "popup.html",
+       "default_title": "Nerd Level GHL Affiliate Checker"
+    },
+    "content_security_policy": "script-src 'self' https://code.jquery.com https://ssl.google-analytics.com https://js.stripe.com 'unsafe-eval'; object-src 'self';",
+    "description": "Nerd Level GHL Affiliate Checker",
+    "icons": {
+       "128": "public/logo128.png",
+       "16": "public/logo16.png",
+       "256": "public/logo256.png",
+       "48": "public/logo48.png",
+       "96": "public/logo96.png"
+    }, 
+    "manifest_version": 2,
+    "name": "Nerd Level GHL Affiliate Checker ",
+    "commands":{
+       "_execute_browser_action": {
+          "suggested_key": {
+            "default": "Alt+7"
+          }
+       }
+    },
+    "content_scripts": [{
+      "js": [ "public/js/jquery.min.js", "public/js/content-script.js" ],
+      "matches": [ "*://*.firstpromoter.com/*" ],
+      "run_at": "document_end",
+      "all_frames": true
+    }],
+    "oauth2": {
+      "client_id": "506066033398-ic2g9nhrc1tr0k5m7dugdq12l9137e40.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/spreadsheets" ]
+    },
+    "permissions": [ "tabs", "storage","notifications", "identity", "activeTab","*://*.firstpromoter.com/*","*://*.stripe.com/*"],
+    "short_name": "Seale FP Checker",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.0.1"
+ }
+ 

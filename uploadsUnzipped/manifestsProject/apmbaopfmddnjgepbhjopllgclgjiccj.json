@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Tabel Firme - lista firme din România",
+    "short_name": "Tabel Firme",
+    "description": "Lista firme cu 3,5 milioane de firme românești din 1990-2016 cu informații financiare și date de contact.",
+    "homepage_url": "https://tabelfirme.ro/?utm_source=google&utm_medium=chrome&utm_campaign=extension",
+    "version": "1.4.0",
+    "icons": {
+        "128": "static/apple-touch-icon_128x128.png",
+        "256": "static/apple-touch-icon_256x256.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "19": "static/apple-touch-icon_19x19.png",
+            "38": "static/apple-touch-icon_38x38.png"
+        },
+        "default_title": "Navighează la TabelFirme.ro"
+    },
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "https://tabelfirme.ro/*"
+        ],
+        "css": [
+            "default.css"
+        ]
+    }]
+}

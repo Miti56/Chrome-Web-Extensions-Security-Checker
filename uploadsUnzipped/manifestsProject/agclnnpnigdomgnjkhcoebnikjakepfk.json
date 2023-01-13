@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Salesforce Web2Lead LinkedIn Plugin",
+    "description": "Salesforce Web2Lead For LinkedIn, Plugin Filters LinkedIn Profile and Create Lead In SalesforceCRM",
+    "author": "Madhusudan Singh",	
+    "version": "3.2",
+    "background": {
+        "scripts": ["event.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+	"options_page": "sign_in.html",
+    "permissions": [
+		"storage",
+        "tabs", 
+        "http://*/*", 
+        "https://*/*"
+    ]
+}

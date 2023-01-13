@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "GuruGram",
+  "description": "Fully created to let the robotic instagram. Auto Likes, Auto Follows, Auto Unfollows and Auto Comments.",
+  "short_name":"GuruGram",
+  "default_locale":"en",
+  "version": "1.0.3",
+"icons": {
+      "16": "img/16.png",
+      "48": "img/48.png",
+      "64": "img/64.png",
+      "128": "img/128.png"
+   },
+   "browser_action": {
+    "default_title": "GuruGram",
+    "default_icon": "img/128.png"
+  },
+  "permissions": [
+  "history",
+  "storage",
+"tabs",
+"cookies",
+"browsingData",
+      "unlimitedStorage",
+      "background",
+      "identity",
+    "*://*.guruit.com.br/*",
+    "*://*.instagram.com/*"
+  ],
+"background": {
+    "scripts": ["js/jquery.js","js/background.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": ["img/*","fonts/*","js/*","css/*"] ,
+"content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["js/jquery.js","js/bootstrap.js", "js/content.js"],
+      "css": ["css/bootstrap.css"]
+    }
+  ]
+}

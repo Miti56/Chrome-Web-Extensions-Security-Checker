@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "World of retail",
+  "short_name": "World of retail",
+  "version": "2.1.9",
+  "description": "World of retail - Максимум кэшбэка",
+  "default_locale": "en",
+  "author": "World of retail",
+  "homepage_url": "https://wr.market",
+  "icons": {
+    "16": "popup/assets/images/logo/16.png",
+    "32": "popup/assets/images/logo/32.png",
+    "48": "popup/assets/images/logo/48.png",
+    "96": "popup/assets/images/logo/96.png",
+    "128": "popup/assets/images/logo/128.png"
+  },
+  "content_scripts": [{
+    "all_frames": true,
+    "js": ["content/check_cashback.js"],
+    "matches": ["http://*/*", "https://*/*", "file:///*"],
+    "run_at": "document_start"
+  }],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "popup/assets/images/icon/default/icon19.png",
+      "38": "popup/assets/images/icon/default/icon38.png"
+    },
+    "default_title": "World of retail",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": ["tabs", "storage", "unlimitedStorage", "idle", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "management"],
+  "web_accessible_resources": ["popup/assets/js/*", "popup/assets/fonts/*", "popup/assets/images/*", "chrome://**/*"]
+}

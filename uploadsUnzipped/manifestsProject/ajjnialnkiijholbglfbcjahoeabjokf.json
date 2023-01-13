@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CleanFB",
+  "version": "0.2",
+  "description": "Hide FB comments you don't like.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["*://*.facebook.com/*"],
+    "js": ["jquery.js","content.js"]
+  }],
+  "page_action" :
+  {
+    "default_icon" : "icon-19.png",
+    "default_title" : "ClearFB"
+  },
+  "permissions" : [
+    "declarativeContent"
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "manifest_version": 2
+}

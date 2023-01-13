@@ -1,0 +1,63 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+
+   "name": "Tìm nguồn hàng quảng châu",
+   "description": "Tìm nguồn hàng quảng châu, công cụ đặt hàng online taobao, tmall, 1688",
+   "version": "0.0.1",
+
+   "page_action": {
+      "default_icon": "images/144x144.png",
+      "default_popup": "popup.html"
+   },
+
+   "icons": {
+      "16": "images/144x144.png",
+      "32": "images/144x144.png",
+      "64": "images/144x144.png",
+      "128": "images/144x144.png"
+   },
+
+   "permissions": [
+      "activeTab",
+      "storage",
+      "https://timnguonhangquangchau.com/",
+      "http://timnguonhangquangchau.com/",
+      "https://2.taobao.com/item.htm"
+   ],
+
+   "web_accessible_resources": [
+      "images/*"
+   ],
+
+   "short_name" : "timnguonhangquangchau.com",
+
+   "input_components": {
+      "rate": 3470,
+      "homepage_url": "http://timnguonhangquangchau.com",
+      "storage": "tnhqc",
+      "storage_new": "tnhqc_new",
+      "storage_token": "tbe_tnhqc_token",
+      "alt_name": "TNHQC"
+
+   },
+
+   "content_scripts": [{
+      "matches": [
+         "https://*.timnguonhangquangchau.com/*",
+         "http://*.timnguonhangquangchau.com/*",
+         "http://*.taobao.com/*",
+         "https://*.taobao.com/*",
+         "http://*.tmall.com/*",
+         "https://*.tmall.com/*",
+         "https://*.tmall.hk/*",
+         "http://detail.1688.com/*",
+         "https://detail.1688.com/*",
+         "http://wwww.amazon.com/*",
+         "https://wwww.amazon.com/*"
+      ],
+      "css": ["/css/all.min.css"],
+      "js": ["/dist/all.min.js"]
+   }]
+}

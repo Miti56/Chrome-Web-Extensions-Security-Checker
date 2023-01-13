@@ -1,0 +1,14 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "CCU: Show the Account PLZ",
+    "version": "0.2",
+    "description": "Show the fxxking text of account column in CCU pages.",
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": ["https://miswww1.ccu.edu.tw/pt_proj/index.php", "https://ecourse.ccu.edu.tw/"],
+        "js": ["show.js"]
+      }
+    ]
+  }

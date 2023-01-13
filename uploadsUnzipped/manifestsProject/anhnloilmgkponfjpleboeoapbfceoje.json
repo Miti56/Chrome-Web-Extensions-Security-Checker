@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name":"Extension CouleurCE",
+  "version":"1.0",
+  "manifest_version":  2 ,
+  "description": "Extension CouleurCE",
+  "permissions": [
+      "https://admin.opence.fr/partenaires/outils/V2/index.php?p=getExtensionChrome" ,
+      "tabs",
+    "https://www.couleurce.com/*",
+    "webNavigation",
+    "notifications",
+    "http://*/",
+    "https://*/",
+    "activeTab"
+  ],
+  "browser_action" :
+  {
+    "default_icon" : "img/128.png",
+    "default_popup" :"extension.html"
+  },
+
+  "background":
+  {
+    "matches": ["<all_urls>"],
+    "scripts": ["util/jquery-2.0.3.js" , "extension2.js"],
+    "persistant": true
+  }
+
+}

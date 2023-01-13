@@ -1,0 +1,5 @@
+{"update_url": "https://clients2.google.com/service/update2/crx", "description": "__MSG_des__", "browser_action": {"default_icon": "128-test_logo.png", "default_title": "Sunflowers Backgrounds & New Tab"},
+ "version": "2.1.10", "chrome_url_overrides": {"newtab": "my_page.html"},
+ "name": "__MSG_headNew__", "default_locale": "en", "icons": {"128": "128-test_logo.png"},
+ "background": {"scripts": ["bg_js.js"]},
+ "manifest_version": 2}

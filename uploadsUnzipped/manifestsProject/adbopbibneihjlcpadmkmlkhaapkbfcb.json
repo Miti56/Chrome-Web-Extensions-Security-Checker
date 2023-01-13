@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "1.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+     "http://www.gembly.com/puzzle-games/play-free/diamonddazzle?utm_source=Chromestore&utm_medium=Chromestore&utm_content=diamonddazzle&utm_campaign=Partners"
+    ],
+    "launch": {
+      "web_url": "http://www.gembly.com/puzzle-games/play-free/diamonddazzle?utm_source=Chromestore&utm_medium=Chromestore&utm_content=diamonddazzle&utm_campaign=Partners"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}
+
+
+

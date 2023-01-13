@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.0.1",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "default_locale": "en",
+  "offline_enabled": true,
+  "chrome_url_overrides": {
+    "newtab": "/root/index.html"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "/root/external/jquery-2.1.1.min.js",
+      "/root/search/search-engines.js",
+      "/root/chrome/settings.js",
+      "/root/common/prefs-sys.js",
+      "/root/chrome/utils.js",
+      "/root/chrome/common.js",
+      "/root/chrome/background.js",
+      "/root/chrome/setup.js",
+      "/root/chrome/analytics.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "root/skin/icons/128.png",
+      "16": "root/skin/icons/16.png",
+      "48": "root/skin/icons/48.png"
+    }
+  },
+  "icons": {
+    "128": "root/skin/icons/128.png",
+    "16": "root/skin/icons/16.png",
+    "48": "root/skin/icons/48.png"
+  },
+  "web_accessible_resources": ["*"],
+  "permissions": [
+    "https://*.colorwallpaper.net/*",
+    "https://*.google.com/*",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "topSites",
+    "cookies",
+    "contextMenus",
+    "notifications",
+    "management"
+  ],
+  "optional_permissions": [
+    "bookmarks"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://www.google.com; object-src https://www.google-analytics.com https://www.google.com 'self'",
+  "manifest_version": 2
+}

@@ -1,0 +1,12 @@
+{"description": "Get Minecraft Wallpapers and Themes - Enjoy HD Themes Each Time You Open a New Tab", 
+"background": {"scripts": ["bscript.js"]},
+ "offline_enabled": true, 
+"chrome_url_overrides": {"newtab": "index.html"},
+ "icons": {"128": "128-minecraft-themes.png", 
+"48": "48-minecraft-themes.png"},
+ "browser_action": {"default_icon": "128-minecraft-themes.png", 
+"default_title": "Minecraft Wallpapers and Themes"},
+ "version": "2.5.3", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"name": "Minecraft Wallpapers and Themes"}

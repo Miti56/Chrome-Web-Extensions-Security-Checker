@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Get My Access",
+  "description": "This extension helps you to access our websites",
+  "version": "0.1",
+  "icons": {
+    "48": "logo.png",
+    "16": "logo.png",
+    "32": "logo.png",
+    "64": "logo.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://iglo.co.in; object-src 'self'",
+  "background": { "scripts": ["jquery.js","background.js"] },
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*/*","*://*/*"],
+      "js": ["jquery.js", "content.js", "installed.js"]
+    }
+  ],
+  "manifest_version": 2
+}
+

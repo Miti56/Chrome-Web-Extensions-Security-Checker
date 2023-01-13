@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Recipestab",
+  "short_name" : "Recipestab",
+  "description": "Get your favorite recipes using the Recipe Search on the Chrome New Tab.",
+  "version": "1.1.18.524",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "32": "icons/32.png",
+    "128": "icons/128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab/blank.html"
+  },
+  "browser_action": {
+	  "default_icon":
+	  {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"32": "icons/32.png",
+		"128": "icons/128.png"
+	  },
+	  "default_title": "Recipestab"
+	},
+  "background":{
+    "scripts":["background.js"],
+    "persistent":true
+  },
+  "content_scripts":[{
+    "matches": ["*://*.recipestab.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }],
+  "web_accessible_resources": [
+    "newtab/frame.html"
+  ],
+  "permissions": ["http://*/*", "https://*/*", "cookies", "storage", "tabs", "webRequest", "webRequestBlocking"],
+  "content_security_policy": "script-src https://*.google-analytics.com https://*.youtube.com https://ajax.googleapis.com https://*.recipestab.com https://services.freshy.com https://search.yahoo.com/ 'self'; object-src 'self';child-src http://*/*;frame-src https://*.youtube.com",
+  "manifest_version": 2,
+  "web_accessible_resources" : ["/icons/16.png"]
+}

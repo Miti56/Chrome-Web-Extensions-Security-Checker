@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "jez link app",
+  "short_name": "jez link app",
+  "description": "jez link app",
+  "version": "1.0",
+  "version_name": "1.0 beta",
+  "background": {
+	"scripts": ["button.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+	  "run_at": "document_end",
+	  "matches": ["<all_urls>"],
+	  "js": [ "jquery.min.js", "background.js" ]
+   }]
+}

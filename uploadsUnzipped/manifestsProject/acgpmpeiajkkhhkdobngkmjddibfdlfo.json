@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Mudcompare - Compare Amazon Prices",
+	"description": "An addon that compares between 6 leading Amazon sites.",
+	"version": "2.56",
+
+  "background": {
+    "persistent": false,
+    "scripts": [ "background.js" ]
+  },
+
+  "page_action": {
+    "default_icon": "Images/favicon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "https://www.mudcompare.com/",
+    "https://www.amazon.co.uk/",
+    "https://www.amazon.com/",
+    "https://www.amazon.de/",
+    "https://www.amazon.it/",
+    "https://www.amazon.fr/",
+    "https://www.amazon.es/"
+  ]
+}

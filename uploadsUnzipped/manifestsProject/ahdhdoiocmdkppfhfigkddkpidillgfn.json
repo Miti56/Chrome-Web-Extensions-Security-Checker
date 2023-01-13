@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Siųsk iš Pakartot.lt",
+  "version": "0.5.0",
+  "author": "Tuscias",
+  "description": "Atsisiųsk dainą ar net visą albumą iš https://www.pakartot.lt",
+  "content_scripts": [{
+    "matches": ["https://www.pakartot.lt/*"],
+    "js": ["lib/jquery-2.2.4.min.js", "lib/FileSaver.min.js", "lib/jszip.min.js", "lib/id3writer.js", "content.js"]
+  }],
+ "background": {
+    "scripts": ["event.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs", "https://stream1.pakartot.lt/"],
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "web_accessible_resources": [
+       "images/spinner.gif",
+       "images/icon.png",
+       "images/download.png",
+       "images/wait.png"
+     ]
+}

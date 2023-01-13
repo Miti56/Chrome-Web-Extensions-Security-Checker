@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "treatsoft",
+	"description": "treatsoft chrome app",
+	"version": "1",
+	"manifest_version": 2,
+	"app": {
+		"urls": ["https://athene.treatsoft.at/controller.php"],
+		"launch": {
+			"web_url": "https://athene.treatsoft.at/controller.php"
+		}
+	},
+	"icons": {
+		"16": "App_Icon_16.png",
+		"128": "App_Icon_128.png"
+	}
+}

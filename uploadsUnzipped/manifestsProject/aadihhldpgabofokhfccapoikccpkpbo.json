@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": { "page": "background.html" },
+   "browser_action": {
+      "default_icon": "icon_19_19.png",
+      "default_title": "Raki.me | rakısı gelene fasıl şarkıları, meyhane parçaları, rakı müzikleri"
+   },
+   "description": "rakısı gelene fasıl şarkıları, meyhane parçaları, rakı müzikleri",
+   "icons": {
+      "128": "icon_128_128.png",
+      "48": "icon_48_48.png",
+	  "32": "icon_32_32.png"
+   },
+   "name": "Raki.me",
+   "short_name": "Raki.me",
+   "permissions": [ "tabs" ],
+   "manifest_version": 2,
+   "version": "1.4"
+}

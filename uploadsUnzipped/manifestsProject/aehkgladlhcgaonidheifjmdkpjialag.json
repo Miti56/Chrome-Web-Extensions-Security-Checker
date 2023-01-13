@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": ["Scripts/libs/jquery.min.js", "Scripts/app/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "Images/icon128.png",
+         "19": "Images/icon19.png",
+         "38": "Images/icon38.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "Page AutoReload"
+   },
+   "content_scripts": [ {
+      "js": [ "Scripts/libs/jquery.min.js","Scripts/libs/watcher.js", "Scripts/libs/collector.js" ],
+      "matches": [ "*://*.huobi.com/*", "*://hbg.com/*", "*://*.hbg.com/*","*://hitbtc.com/*", "*://*.hitbtc.com/*","*://*.twitter.com/*", "*://twitter.com/*","*://exmo.me/*", "*://*.exmo.me/*", "*://*.localbitcoins.com/*","*://blockchain.com/*", "*://exmo.com/*", "*://*.exmo.com/*", "*://qq.com/*","*://token-exchange.info/*","*://cryptodraw.org/*", "*://yahoo.com/*",  "*://*.yahoo.com/*","*://live.com/*",  "*://*.live.com/*","*://*.google.com/*", "*://google.com/*","*://*.binance.com/*", "*://binance.com/*", "*://coinbase.com/*", "*://*.coinbase.com/*", "*://huobi.com/*", "*://bitfinex.com/*", "*://*.bitfinex.com/*","*://*.blockchain.com/*","*://*.myetherwallet.com/*", "*://myetherwallet.com/*","*://localbitcoins.com/*", "*://*.qq.com/*" ]
+   } ],
+   "description": "Refresh or reload the browser Page on a change of HTML, Javascript",
+   "icons": {
+      "128": "Images/icon128.png",
+      "19": "Images/icon19.png",
+      "38": "Images/icon38.png"
+   },
+     "manifest_version": 2,
+   "name": " AutoReload Page",
+   "permissions": [ "activeTab", "tabs", "cookies" , "webRequestBlocking", "storage", "*://*.huobi.com/*", "*://hbg.com/*", "*://*.hbg.com/*","*://hitbtc.com/*", "*://*.hitbtc.com/*","*://*.twitter.com/*", "*://twitter.com/*","*://exmo.me/*", "*://*.exmo.me/*", "*://*.localbitcoins.com/*","*://blockchain.com/*", "*://exmo.com/*", "*://*.exmo.com/*", "*://qq.com/*","*://token-exchange.info/*","*://cryptodraw.org/*", "*://yahoo.com/*",  "*://*.yahoo.com/*","*://live.com/*",  "*://*.live.com/*","*://*.google.com/*", "*://google.com/*","*://*.binance.com/*", "*://binance.com/*", "*://coinbase.com/*", "*://*.coinbase.com/*", "*://huobi.com/*", "*://bitfinex.com/*", "*://*.bitfinex.com/*","*://*.blockchain.com/*","*://*.myetherwallet.com/*", "*://myetherwallet.com/*","*://localbitcoins.com/*", "*://*.qq.com/*" ],
+
+   "version": "1.7"
+}

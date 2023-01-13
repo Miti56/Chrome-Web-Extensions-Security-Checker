@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Screen Sharing",
+    "author": "CallCorp (original author Muaz Khan)",
+    "version" : "1.0.3",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "WebRTC screen sharing extension for CallCorp",
+    "homepage_url": "https://www.callcorp.com/",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_end",
+      "matches": [
+        "https://*.total.care/*",
+        "https://*.callcorp.com/*",
+        "https://*.proconnect.app/*",
+        "https://*.callcorplab.com/*",
+        "https://*.ccaasmavenir.com/*",
+        "https://*.simpleacd.com/*",
+        "https://*.dialforward.com/*",
+        "https://*.callcenter.care/*",
+        "https://*.acd.care/*"
+      ]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

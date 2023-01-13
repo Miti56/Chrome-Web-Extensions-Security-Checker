@@ -1,0 +1,35 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Sport Lisboa e Benfica",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "frame": [ 166, 25, 16 ],
+         "ntp_background": [ 167, 15, 0 ],
+         "ntp_link": [ 255, 255, 255 ],
+         "ntp_section": [ 255, 184, 0, 0.75 ],
+         "ntp_section_link": [ 0, 0, 0 ],
+         "ntp_section_text": [ 0, 0, 0 ],
+         "ntp_text": [ 0, 0, 0 ],
+         "tab_background_text": [ 216, 143, 143 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 255, 184, 0 ]
+      },
+      "images": {
+         "theme_frame": "SLB/www.slbenfica.pt_theme_frame.slb",
+         "theme_ntp_attribution": "SLB/www.slbenfica.pt_theme_ntp_attribution.slb",
+         "theme_ntp_background": "SLB/www.slbenfica.pt_theme_ntp_background.slb",
+         "theme_tab_background": "SLB/www.slbenfica.pt_theme_tab_background.slb",
+         "theme_toolbar": "SLB/www.slbenfica.pt_theme_toolbar.slb"
+      },
+      "properties": {
+         "ntp_background_alignment": "top left",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 1
+      },
+      "tints": {
+         "buttons": [ 0.001, 0.27, 0.5 ]
+      }
+   },
+   "version": "0.9"
+}

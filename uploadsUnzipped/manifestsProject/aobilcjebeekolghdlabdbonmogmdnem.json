@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "version": "1.20.0.3101",
+  "icons": {
+    "16": "avast16.png",
+    "24": "avast24.png",
+    "32": "avast32.png",
+    "48": "avast48.png",
+    "64": "avast64.png",
+    "128": "avast128.png"
+  },
+  "browser_action": {
+    "default_icon": "avast32.png",
+    "default_title": "Avast AntiTrack Premium"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": [ "index.html" ],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "js": [ "js/jquery.min.js", "contentscript.js" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAirLNLe6cP+2JZpkKU4/IPjVPPTVDk7rhpg9bd23v0T2fgQK5fO3L5EbT6VXSpfGJt2K5aFiVh81Xg2c+Kd5DOGjHNW51ZygXSwWZc7aAVzuZHbzcBoY+w0eV/F1HOGhEueIDrY/EP7zmCbGj0mt3QkhvhengY3pkcmfWRbYo1ft1FRhY2thCUqj97yVKp0SWgn74dkjGKrhHFYWGubWe8HfqdHuJMw07L7URVJNPMwY2C9Ksi26vi9wCIniDH6NjrO/U9jj7nTF0y5Y54SQ1444GJtL7q9HV2nkkB/SRIA2OQdHCxFxMacSSRIG9jr63VDSLuiWYia19pWzOTcQyHQIDAQAB",
+  "permissions": [ "storage", "cookies", "nativeMessaging", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*" ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "background": {
+    "scripts": [ "main.js" ]
+  }
+}

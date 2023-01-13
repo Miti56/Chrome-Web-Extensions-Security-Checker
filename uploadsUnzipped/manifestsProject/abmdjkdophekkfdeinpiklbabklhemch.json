@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HEXFOLD",
+  "description": "Hexagonal path-building puzzle game based on Cool Circuits.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "favicon.png", "128": "icon128.png" },
+  "permissions": [
+    "storage"
+  ]
+}

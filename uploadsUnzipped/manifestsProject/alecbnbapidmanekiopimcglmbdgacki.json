@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MSI HelpSpot Configuration",
+  "version": "0.0.0.42",
+  "manifest_version": 2,
+  "description": "A HelpSpot plug-in.",
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "author": "Manufacturing Solutions",
+  "content_scripts": [{
+     "css": [ "style/content.css"],
+     "js": ["content.js"],
+     "matches": [ "http://10.243.236.7/*" ],
+     "run_at": "document_idle"
+  }],
+  "browser_action": {
+    "default_title": "MSI HelpSpot Configuration"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

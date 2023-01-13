@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "GoDaddy URL Shortener",
+	"description": "GoDaddy Shortener Chrome Extension",
+	"version": "1.5.0.0",
+
+	"browser_action": {
+		"default_icon": "img/transparent_head_19.png",
+		"default_title": "GoDaddy URL Shortener",
+		"default_popup": "popup.html"
+	},
+
+	"permissions": [
+		"tabs",
+		"cookies",
+		"https://shortener.godaddy.com/*"
+	],
+
+	"web_accessible_resources": [
+	],
+
+	"icons": {
+		"128": "img/transparent_head_128.png",
+		"48": "img/transparent_head_48.png",
+		"16": "img/transparent_head_16.png"
+	}
+}

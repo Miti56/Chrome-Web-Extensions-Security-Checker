@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Mathilda News",
+  "description": "Watson Love Mathilda",
+  "version": "0.6",
+  "icons": {
+    "128": "ic_launcher.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "management",
+    "http://123.206.116.112:3013/"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "myPage.html"
+  }
+}

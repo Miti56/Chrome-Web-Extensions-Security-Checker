@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Scratch Semicolon Glitch Recreated",
+	"version": "1.0",
+	"description": "The Scratch semicolon glitch recreated to work again! ",
+  "permissions": [
+    "http://*.google.com/", "http://*.com/", "tabs"
+  ],
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": [ "jquery.min.js", "script.js"],
+			"run_at": "document_end"
+		}
+	],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "; -qwazwsx"
+  }
+}

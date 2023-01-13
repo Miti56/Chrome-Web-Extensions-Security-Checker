@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "nRicardo",
+  "name": "nRicardo",
+  "manifest_version": 2,
+  "version": "2.0.1",
+  "description": "A Chrome extension which replaces all images on all pages to Ricardo Milos dancing.",
+  "icons": [
+    {
+      "src": "/images/icon128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/images/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "",
+  "background_color": "#3367D6",
+  "display": "browser",
+  "scope": "",
+  "theme_color": "#3367D6"
+}

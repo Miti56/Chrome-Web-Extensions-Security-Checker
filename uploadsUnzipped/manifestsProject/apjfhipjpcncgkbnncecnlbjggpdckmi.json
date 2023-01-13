@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Best iPhone Apps",
+ "manifest_version": 2,
+ "short_name": "Top Best Apple iTunes iPhone Apps",
+ "description": "Quick search for latest top, best itunes apps for apple iOS iphone, ipad, mac free download online",
+ "version": "1",
+ "icons": {
+	"128": "screen-shot-2017-01-16-at-12-2.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://appleitunesapp.weebly.com/"
+	}
+  }
+}

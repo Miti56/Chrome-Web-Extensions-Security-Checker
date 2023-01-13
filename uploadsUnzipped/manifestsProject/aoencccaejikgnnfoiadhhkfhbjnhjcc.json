@@ -1,0 +1,24 @@
+{
+	"default_locale": "en",
+	"icons": {
+		"48": "icons/ic48.png",
+		"128": "icons/casual-crossword-128.png"
+	},
+	"browser_action": {
+		"default_icon": "icons/ic48.png",
+		"default_popup": "sigma.html"
+	},
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"background": {
+		"scripts": [
+			"assets/bg.js"
+		]
+	},
+	"version": "0.0.1",
+	"description": "__MSG_description__",
+	"name": "__MSG_name__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

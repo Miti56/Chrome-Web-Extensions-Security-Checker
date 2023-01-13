@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Color Switch: Challenges",
+  "description": "Click the ball through the obstacles to reach the finish line as quickly as possible!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://games.poki.com/781350/colorswitchchallenges"
+    ],
+    "launch": {
+      "web_url": "https://games.poki.com/781350/colorswitchchallenges"
+    }
+  }
+}

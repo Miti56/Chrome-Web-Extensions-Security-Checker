@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Prank The Nanny Baby Jessie",
+
+  "short_name": "Prank The Nanny Baby Jessie",
+
+  "version": "1.0.2",
+  "description": "Play Prank The Nanny Baby Jessie on your browser",
+
+  "homepage_url": "http://apiengine.xyz/c/action-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Prank The Nanny Baby Jessie",
+
+      "default_popup": "popup.html"
+  }
+}

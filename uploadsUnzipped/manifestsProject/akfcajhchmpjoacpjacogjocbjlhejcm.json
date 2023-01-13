@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "description": "An initiative of Projekt:ONI to protect users' privacy by altering tracking data.",
+  "manifest_version": 2,
+  "name": "WhatCampaign",
+  "version": "1.0.8",
+  "homepage_url": "https://home.oniprojekt.ninja",
+  "icons": {
+    "48": "WhatCampaign-48.png"
+  },
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "*://*/*"
+  ],
+  "background": {
+    "scripts": [
+        "plugin-background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": [
+        "plugin.js"
+       ]
+    }
+  ]
+
+}

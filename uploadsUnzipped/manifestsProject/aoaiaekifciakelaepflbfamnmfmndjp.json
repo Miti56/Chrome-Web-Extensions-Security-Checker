@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Image Slider",
+  "short_name": "Image Slider",
+  "description": "A beautiful, responsive slider for images and photos!",
+  "version": "1.1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128x128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.powr.io/plugins/image-slider/"
+    ],
+    "launch": {
+      "web_url": "https://www.powr.io/plugins/image-slider/standalone?platform=chrome"
+    }
+  }
+}

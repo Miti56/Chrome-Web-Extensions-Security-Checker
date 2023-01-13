@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "version": "1.1",
+  "default_locale": "en",
+  "manifest_version": 2,
+  "icons": {
+    "16": "public/assets/icon16.png",
+    "48": "public/assets/icon48.png",
+    "128": "public/assets/icon128.png" 
+  },
+  "content_scripts": [
+   {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["src/content-scripts/instagram-popup.js"],
+      "css": ["public/stylesheets/style.css"]
+   }
+ 	],
+  "web_accessible_resources": [
+    "public/assets/*"
+  ]
+}

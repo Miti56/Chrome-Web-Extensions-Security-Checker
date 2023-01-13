@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Zam",
+    "version": "0.71",
+    "description": "Easily monitor any website change",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.zam.io/*",
+                "*://zam.io/*"
+            ],
+            "js": [
+                "scripts/content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "cookies",
+        "https://zam.io/*"
+    ],
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "background": {
+        "scripts": [
+            "scripts/jquery.min.js",
+            "scripts/background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon.png",
+            "38": "images/icon.png"
+        },
+        "default_title": "Track with Zam"
+    },
+    "web_accessible_resources": [
+        "widget.html",
+        "scripts/widget.js",
+        "scripts/inject.js",
+        "scripts/login.js",
+        "scripts/jquery.min.js",
+        "scripts/getPath.js",
+        "styles/style.css",
+        "styles/widget.css"
+    ]
+}

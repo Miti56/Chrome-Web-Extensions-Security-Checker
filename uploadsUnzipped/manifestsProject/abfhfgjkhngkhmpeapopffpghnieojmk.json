@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "IDEXX Viewer Dark Theme",
+  "short_name": "Viewer Theme",
+  "description": "Dark Theme to support optimal use of IDEXX Viewer Extension",
+  "version": "0.3",
+  "icons": {
+    "16": "wp_icon16.png",
+    "48": "wp_icon48.png",
+    "128": "wp_icon128.png"
+  },
+  "theme": {
+    "colors" : {
+      "frame": [60,61,62],
+      "frame_overlay": [60,61,62],
+      "frame_inactive": [76,77,78],
+      "background_tab": [76,77,78],
+      "bookmark_text": [186,189,191],
+      "button_background": [60,61,62],
+      "tab_background_text": [186,189,191],
+      "tab_text": [186,189,191],
+      "toolbar": [60,61,62],
+      "toolbar_button_icon": [186,189,191],
+      "ntp_background":[60,61,62],
+      "ntp_header": [60,61,62],
+      "ntp_link": [136,216,223],
+      "ntp_text": [186,189,191]
+    }
+  }
+}

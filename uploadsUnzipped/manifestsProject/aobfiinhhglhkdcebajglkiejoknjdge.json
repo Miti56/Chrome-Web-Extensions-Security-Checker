@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "简历助手",
+  "version": "1.0.1",
+  "description": "招聘的辅助工具类",
+  "manifest_version": 2,
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["thirdParty/jquery-3.4.1.js", "menus.js"]
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "64": "images/icon-64.png"
+  }
+}

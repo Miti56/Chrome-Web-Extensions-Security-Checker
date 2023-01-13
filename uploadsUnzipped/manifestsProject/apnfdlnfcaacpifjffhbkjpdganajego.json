@@ -1,0 +1,71 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+   "name":"Hot Spring Weather Arkansas",
+   "short_name":"Hot Spring Weather Arkansas",
+   "version":"1",
+   "manifest_version":2,
+   "description":"Hot Spring Weather Arkansas",
+   "name":"Hot Spring Weather Arkansas",
+   "description":"Happy Hot Spring Weather Arkansas",
+   "theme":{  
+      "images":{  
+         "theme_ntp_background":"images/theme_ntp_background.png",
+         "theme_frame":"images/theme_frame.png",
+         "theme_toolbar":"images/theme_toolbar.png",
+         "theme_tab_background":"images/theme_tab_background.png"
+      },
+      "colors":{  
+         "tab_text":[  
+            0,
+            0,
+            0
+         ],
+         "tab_background_text":[  
+            0,
+            0,
+            0
+         ],
+         "bookmark_text":[  
+            0,
+            0,
+            0
+         ],
+         "frame":[  
+            230,
+            230,
+            230
+         ],
+         "ntp_text":[  
+            0,
+            0,
+            0
+         ],
+         "ntp_link":[  
+            0,
+            0,
+            0
+         ],
+         "ntp_link_underline":[  
+            0,
+            0,
+            0
+         ],
+         "toolbar":[  
+            228,
+            228,
+            228,
+            0.6
+         ],
+         "ntp_background":[  
+            255,
+            255,
+            255
+         ]
+      },
+      "properties":{  
+         "ntp_background_repeat":"no-repeat",
+         "ntp_background_alignment":"middle"
+      }
+   }
+}

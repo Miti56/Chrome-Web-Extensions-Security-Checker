@@ -1,0 +1,53 @@
+{
+   "browser_action": {
+      "default_icon": "favicon19.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "jquery.js", "tpg.js" ],
+      "matches": [ "https://www.tpg.ua/*" ],
+      "run_at": "document_idle"
+   },
+   {
+      "all_frames": false,
+      "js": [ "jquery.js", "joinup.js" ],
+      "matches": [ "https://online.joinup.ua/*" ],
+      "run_at": "document_idle"
+   },
+   {
+      "all_frames": false,
+      "js": [ "jquery.js", "kompas.js" ],
+      "matches": [ "http://online.kompastour.com.ua/*" ],
+      "run_at": "document_idle"
+   },
+   {
+      "all_frames": false,
+      "js": [ "jquery.js", "anex.js" ],
+      "matches": [ "http://online3.anextour.com.ua/*", "http://anextour.com.ua/*" ],
+      "run_at": "document_idle"
+   },
+   {
+      "all_frames": false,
+      "js": [ "jquery.js", "tui.js" ],
+      "matches": [ "https://b2b.tui.ua/*", "https://tui.ua/*" ],
+      "run_at": "document_idle"
+   } ],
+   "background": {
+    "scripts": ["jquery.js","background.js"]
+  },
+   "description": "Плагин для удобной работы с Travellist CRM",
+   "icons": {
+      "128": "favicon128.png",
+      "19": "favicon19.png",
+      "38": "favicon38.png",
+      "48": "favicon48.png"
+   },
+   "manifest_version": 2,
+   "name": "TravelList CRM",
+   "offline_enabled": false,
+   "permissions": [ "activeTab", "storage", "notifications", "https://b2b.tui.ua/*",
+    "http://online3.anextour.com.ua/*", "https://www.tpg.ua/*", "https://crm.tourspo.com/*","http://crm.travellist.ua/*", "https://api.tourspo.com/*", "http://online.kompastour.com.ua/*"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.21"
+}

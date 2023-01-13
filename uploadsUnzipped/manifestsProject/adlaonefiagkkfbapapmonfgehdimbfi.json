@@ -1,0 +1,53 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "HelloPlatform",
+  "version": "1.20",
+  "description": "Hello-Platform Login.",
+  "background": { "scripts": ["backgroundscript.js"] },
+  "icons": { "128": "icon.png" },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "https://*.hellotvsource.com/*", "https://*.hellocloudplatform.com/*", "https://*.hellocloudcms.com/*"],
+  "content_scripts": [ {
+	  "matches": ["https://*.hellotvsource.com/editor/edit.html?TID=*"],
+      "js": ["screenshot.js"],
+	  "run_at": "document_idle"
+	  },{
+	  "matches": ["https://*.hellocloudplatform.com/editor/edit.html?TID=*"],
+      "js": ["screenshot.js"],
+	  "run_at": "document_idle"
+	  },{
+	  "matches": ["https://*.hellocloudcms.com/editor/edit.html?TID=*"],
+      "js": ["screenshot.js"],
+	  "run_at": "document_idle"
+	  }, {
+	  "matches": ["https://*.hellotvsource.com/editor/preview.html?TID=*"],
+      "js": ["newpage.js"],
+	  "run_at": "document_idle"
+	  }, {
+	  "matches": ["https://*.hellotvsource.com/*"],
+      "js": ["extentioncheck.js"],
+	  "run_at": "document_end"
+	  },{
+	  "matches": ["https://*.hellocloudplatform.com/editor/preview.html?TID=*"],
+      "js": ["newpage.js"],
+	  "run_at": "document_idle"
+	  }, {
+	  "matches": ["https://*.hellocloudplatform.com/*"],
+      "js": ["extentioncheck.js"],
+	  "run_at": "document_end"
+	  },{
+	  "matches": ["https://*.hellocloudcms.com/editor/preview.html?TID=*"],
+      "js": ["newpage.js"],
+	  "run_at": "document_idle"
+	  }, 
+	  {
+	  "matches": ["https://*.hellocloudcms.com/*"],
+      "js": ["extentioncheck.js"],
+	  "run_at": "document_end"
+	  }
+  ]
+}

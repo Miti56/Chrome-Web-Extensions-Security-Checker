@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"1.0",
+"name":"Help For Heroes",
+"description":"Reading the description for this theme is VERY important.",
+"manifest_version": 2,
+"theme":
+{
+"images":
+{
+"theme_toolbar":"images/toolbar_toxic",
+"theme_frame":"images/frame_toxic",
+"theme_tab_background":"images/tab_toxic",
+"theme_ntp_background":"images/background_toxic"
+},
+"colors":
+{
+"ntp_link": [ 26 , 41 , 50 ],
+"ntp_text": [ 26 , 41 , 50 ],
+"ntp_section_link": [ 26 , 41 , 50 ],
+"ntp_section_text": [ 26 , 41 , 50 ],
+"ntp_background": [ 110 , 151 , 179 , 0.5 ],
+"ntp_header": [ 120 , 194 , 241 , 0.15 ],
+"ntp_section": [ 120 , 194 , 241 , 0.15 ],
+"frame": [ 120 , 194 , 241 ],
+"toolbar": [ 110 , 151 , 179 ],
+"tab_text": [ 26 , 41 , 50 ],
+"tab_background_text": [ 26 , 41 , 50 ],
+"bookmark_text": [ 26 , 41 , 50 ]
+},
+"tints":
+{
+"buttons": [ 0.567632850241546 , 0.312217194570136 , 0.566666666666667 ],
+"frame_incognito": [ 0.531518392480959 , 0.764311093564943 , 0.666205305651672 ],
+"frame_inactive": [ 0.567632850241546 , 0.312217194570136 , 0.15 ],
+"frame_incognito_inactive": [ 0.567632850241546 , 0.312217194570136 , 0.15 ]
+},
+"properties":
+{
+"ntp_background_alignment":"top",
+"ntp_background_repeat":"no-repeat"
+}
+}
+}

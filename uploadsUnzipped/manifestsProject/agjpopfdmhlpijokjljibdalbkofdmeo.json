@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "zungl",
+	"version": "4.0",
+	"description": "zungl. Follow our news.",
+
+	
+
+
+	"browser_action": {
+		"default_title": "zungl",
+		"default_icon": "images/icon.png",
+		"default_popup": "popup.html"
+	},
+
+	"options_page": "options.html"
+}

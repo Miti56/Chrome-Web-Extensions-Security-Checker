@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "百度搜索去广告推荐",
+  "version": "1.0.0",
+  "description": "清除百度搜索的广告以及右侧推荐",
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.baidu.com/*", "*://baidu.com/*"],
+      "js": ["js/clear.js"]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Connect with a proxy",
+	"version": "2.3",
+	"description": "Proxy list connect.",
+	
+	"icons": {
+		"128": "img/open.png"
+	},
+	"content_security_policy": "script-src 'self' https://proxyhidemy.com; object-src 'self'",
+	"browser_action": {
+          "default_title": "Proxy List",
+          "default_popup": "index.html",
+		  "default_icon": {
+		      "19": "img/disabled.png"
+		  }
+        },
+	
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"proxy",
+		"cookies",
+		"webRequestBlocking",
+		"<all_urls>"
+	],
+	
+	"background": {
+		"scripts": ["jquery.min.js","bg.js"]
+	}
+}

@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bubblehunt Chrome Extension",
+  "short_name": "BubblehuntChromeExt",
+  "version": "1.2.2",
+  "manifest_version": 2,
+  "description": "Save resources in your personal web",
+  "homepage_url": "https://bubblehunt.com/",
+  "icons": {
+    "16": "/assets/images/icons/48.png",
+    "48": "/assets/images/icons/48.png",
+    "128": "/assets/images/icons/128.png"
+  },
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": "/assets/images/icons/48.png",
+    "default_title": "Bubblehunt",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "activeTab",
+    "cookies",
+    "tabs",
+    "*://*.bubblehunt.com/*"
+  ],
+  "web_accessible_resources": [
+    "vendor.bundle.js",
+    "inject.bundle.js"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "https://*.bubblehunt.com/*"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://bubblehunt.com/*"
+      ],
+      "js": [
+        "make-injection.js"
+      ]
+    }
+  ],
+  "content_security_policy": "default-src 'self'; script-src 'self'; connect-src https://bubblehunt.com; style-src * 'unsafe-inline'; img-src 'self' https://bubblehunt.com data:;"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "目の体操",
+  "description": "目のトレーニングをするゲームです。",
+  "manifest_version": 2,
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://90ch.net/eye/"
+    ],
+    "launch": {
+      "web_url": "http://90ch.net/eye/"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  }
+}

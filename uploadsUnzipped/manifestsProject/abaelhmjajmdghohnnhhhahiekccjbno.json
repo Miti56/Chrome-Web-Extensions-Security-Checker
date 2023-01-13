@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Điện mặt trời của GPsolar",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "GPsolar cung cấp hệ thống điện mặt trời, gói lắp điện mặt trời cao cấp bảo hành dài",
+  "homepage_url": "https://gpsolar.vn/dien-mat-troi",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  }
+}

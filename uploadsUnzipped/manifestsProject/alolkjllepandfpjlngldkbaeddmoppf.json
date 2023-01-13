@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Alza.cz",
+  "description": "Největší obchod s počítači a elektronikou",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "alza_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.alza.cz/"
+    ],
+    "launch": {
+      "web_url": "http://www.alza.cz/"
+    }
+  }
+}

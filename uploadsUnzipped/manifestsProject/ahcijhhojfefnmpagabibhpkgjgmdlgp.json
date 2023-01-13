@@ -1,0 +1,25 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.1",
+  "name": "Teo's Star Wars Theme",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/theme_frame.png",
+	  "theme_frame_incognito" : "images/theme_frame.png",
+      "theme_frame_overlay" : "images/theme_frame_overlay.png",
+      "theme_toolbar" : "images/theme_toolbar.png",
+      "theme_ntp_background" : "images/theme_ntp_background.png"
+    },
+    "colors" : {
+	  "toolbar" : [160, 160, 160],
+	  "button_background" : [0, 0, 0, 0],
+	  "bookmark_text" : [255, 255, 255]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "left bottom"
+    },
+	"tints": {
+	  "buttons": [1,0.8,1]
+	}
+  }
+}

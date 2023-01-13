@@ -1,0 +1,46 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "NeoGAF Mobile on Desktop",
+	"description": "Forces the NeoGAF mobile layout by pretending to be an iPad. Also adds infinite scrolling and other custom options.",
+	"version": "1.1.2",
+
+	"options_page": "options.html",
+	
+	"background": {
+		"scripts": [
+			"js/background.js"
+		]
+	},
+	
+	"permissions": [
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>",
+		"tabs"
+	],
+
+	"content_scripts": [ {
+		"css": [
+			"css/infinitescroll.css"
+		],
+		"js": [
+			"js/jquery.min.js",
+			"js/jquery.infinitescroll.min.js",
+			"js/neogaf.js"
+		],
+		"matches": [
+			"http://*.neogaf.com/*",
+			"http://*.neogaf.net/*"
+		],
+		"run_at" : "document_idle",
+		"all_frames" : true
+	} ],
+
+	"icons": {
+		"128": "img/icon128.png",
+		"48": "img/icon48.png"
+	},
+
+	"manifest_version": 2
+}

@@ -1,0 +1,37 @@
+{
+   "browser_action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "iStream.link Streaming Search"
+   },
+	"background": {
+      "persistent": true,
+      "page": "html/background.html"
+	},
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://www.istream.link/favicon.ico",
+         "is_default": true,
+         "keyword": "istream.link",
+         "name": "iStream",
+         "search_url": "http://www.istream.link/search.php?query={searchTerms}&type=web",
+         "suggest_url": "http://www.istream.link/suggest.php?client=chrome&q={searchTerms}"
+      }
+   },
+	"chrome_url_overrides" : {
+		"newtab": "html/newtab.html"
+	},
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://cdnjs.cloudflare.com https://suggestqueries.google.com; object-src 'self'",
+	"description": "Use iStream.link Media Search tool to find streaming content from the Web's top licensed platforms",
+	"icons": {
+		"128": "images/icons/icon128.png",
+		"48": "images/icons/icon48.png"
+	},
+	"manifest_version": 2,
+	"name": "iStream.link Media Search",
+    "permissions": [ "<all_urls>", "webRequest", "webRequestBlocking", "cookies", "tabs", "contextMenus", "cookies"],
+	"short_name": "iStream.link",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "0.0.1.1",
+	"web_accessible_resources": [ "images/pixel.gif" ]
+}

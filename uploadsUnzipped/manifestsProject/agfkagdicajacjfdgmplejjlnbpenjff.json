@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ADFC Lünen",
+  "description": "ADFC Lünen Touren & Termine 2014",
+  "version": "1.2",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon-16.png", "128": "icon-128.png"
+  },
+  "app": {
+    "launch": {
+      "local_path": "adfc-luenen.html"}
+  },
+  "sandbox": {
+  "pages": ["map1.html", "map2.html", "map3.html", "map4.html"]
+},
+  "permissions": [
+	"notifications"
+  ]
+}

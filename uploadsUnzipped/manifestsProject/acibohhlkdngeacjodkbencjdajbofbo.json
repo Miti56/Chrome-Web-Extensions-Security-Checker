@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.js", "js/cookie.js", "js/content.live.js" ],
+      "matches": [ "*://*.top-dates.net/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Svadba ChatOS admin finance analitics",
+   "page_action": {
+      "default_icon": "images/16.png",
+      "default_popup": "index.live.html",
+      "default_title": "ChatOS - finance analizer top-dates.net"
+   },
+   "permissions": [ "tabs", "*://*.top-dates.net/*", "*://*.chatoptimizer.com/*", "windows", "storage", "unlimitedStorage", "cookies", "webRequest", "webRequestBlocking" ],
+   "version": "1.2.5"
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Angry Gran Run Halloween Village",
+  "short_name": "Angry Gran Run Halloween Village",
+  "version": "1.0.2",
+  "description": "PlayAngry Gran Run Halloween Villagenow!",
+  "homepage_url": "http://myclubgames.xyz/c/basketball-games/",
+  
+  "icons": {
+      "128": "icon.png"
+  },
+  
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Angry Gran Run Halloween Village",
+
+      "default_popup": "popup.html"
+  }
+}

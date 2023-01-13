@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Justhost - Review",
+"description": "Professional Web Hosting from Just Host",
+"version": "1.1",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.websiteplanet.com/review/Justhost/"
+],
+"launch": {
+"web_url": "http://www.websiteplanet.com/review/Justhost/?utm_source=webstrore&utm_medium=webstore&utm_campaign=webstore&utmx=webstore"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "taxibutton.info Taxi & Minicab",
+  "description": "The simplest taxi app: Passengers/Stations/Drivers.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "button-icon-chrome-16.png", "128": "button-icon-chrome-128.png"
+  },
+  "permissions": [
+  "geolocation"
+	],
+  "app": {
+    "urls": [
+      "http://taxibutton.info/"
+    ],
+    "launch": {
+      "web_url": "http://taxibutton.info/ChromeApp.html"
+    }
+  }
+}

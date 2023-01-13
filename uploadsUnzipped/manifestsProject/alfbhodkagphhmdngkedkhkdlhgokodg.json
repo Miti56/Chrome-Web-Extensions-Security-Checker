@@ -1,0 +1,27 @@
+{
+   "author": "GPT",
+   "background": { "scripts": ["background.js"] },
+   "content_scripts": [ {
+      "exclude_globs": [  ],
+      "exclude_matches": [  ],
+      "include_globs": [ "*://*" ],
+      "js": [ "SAW.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "converted_from_user_script": true,
+   "description": "Tools avanzato ITALIANO per Stormfall",
+   "homepage_url": "https://saitomeg.x10.bz/phpbb/",
+   "icons": {
+      "16": "images/sm16.png",
+      "32": "images/sm32.png",
+      "64": "images/sm64.png",
+      "128": "images/sm128.png"
+   },
+   "manifest_version": 2,
+   "name": "SAW Saito Meg Tools - (The Original)*",
+   "permissions": [ "tabs", "storage", "webRequest", "webRequestBlocking", "notifications", "unlimitedStorage", "*://*.google.com/", "*://*.saitomeg.x10.bz/", "*://*/" ],
+   "short_name": "saw beta",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

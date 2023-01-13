@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Zendesk Chat Ticket Bubbles",
+  "short_name": "Chat Ticket Bubbles",
+  "version": "0.2",
+  "description": "Add conversation bubbles to Zendesk tickets created from Chat",
+  "icons": {"16": "assets/img/icon.png",
+           "48": "assets/img/icon.png",
+           "128": "assets/img/icon.png"},
+  "page_action": {
+    "name": "Zendesk Chat Ticket Bubbles",
+    "default_icon": {"16": "assets/img/icon.png",
+                     "24": "assets/img/icon.png",
+                     "32": "assets/img/icon.png"}
+  },
+  "author": "Alex Culligan",
+  "background": {
+    "scripts": ["assets/js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [ {
+    "run_at": "document_end",
+    "js": [ "assets/js/jquery-3.1.1.min.js", "assets/js/content.js"],
+    "matches": [ "https://*.zendesk.com/agent/*"]
+  }],
+  "permissions" : [
+    "declarativeContent",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}

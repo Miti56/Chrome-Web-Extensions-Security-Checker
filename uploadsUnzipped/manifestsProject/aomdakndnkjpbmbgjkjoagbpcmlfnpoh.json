@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons128.png"
+   },
+ 
+	  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+  
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icons128.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [
+    "activeTab",
+	"https://bestvpnext.com/*",
+	"https://ssl.google-analytics.com/ga.js",
+	"tabs"
+  ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

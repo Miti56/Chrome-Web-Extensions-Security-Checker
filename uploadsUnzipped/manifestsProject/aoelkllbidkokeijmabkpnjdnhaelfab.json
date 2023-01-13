@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Immaginirelax",
+"description": "It's all about photos. Photo Search engine with ability to sort commercial and non-commercial photos",
+"version": "1.1",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.immaginirelax.com/"
+],
+"launch": {
+"web_url": "http://www.immaginirelax.com/"
+}
+},
+"permissions": [
+"unlimitedStorage"
+]
+}

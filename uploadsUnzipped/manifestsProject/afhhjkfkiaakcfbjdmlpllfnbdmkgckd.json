@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Project Scribe - Faster Online Transcription",
+  "description": "Transcribe your interviews and audio online faster with Project Scribe",
+  "version": "2.0.0",
+  "icons": {
+    "128": "public/img/logo-128.png",
+    "256": "public/img/logo-256.png"
+  },
+  "app": {
+    "urls": [
+      "http://scribe.storynatives.com/"
+    ],
+    "launch": {
+      "web_url": "http://scribe.storynatives.com/"
+    }
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications",
+    "https://ajax.googleapis.com/"
+  ]
+}

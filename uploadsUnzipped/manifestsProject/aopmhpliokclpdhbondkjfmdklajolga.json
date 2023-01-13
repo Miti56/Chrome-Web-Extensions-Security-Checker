@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "CommitStrip Feed",
+  "description": "Stay tuned to CommitStrip(www.commitstrip.com/en/)",
+  "version": "1.0.4",
+  "icons" : {
+      "16"  : "images/icon-32.png",
+      "48"  : "images/icon-32.png",
+      "128" : "images/icon-32.png"
+  },
+  "homepage_url" : "http://www.phinisistudio.com",
+  "background" :{
+      "page" : "bgWork.html"
+  },
+  "permissions" : [
+        "http://www.commitstrip.com/*",
+        "storage",
+        "tabs",
+        "notifications"
+  ],
+  "content_scripts" : [{
+        "matches" : ["http://www.commitstrip.com/en/","http://www.commitstrip.com/en/*"],
+        "js" : ["js/jquery.js","js/contentScript.js"]
+  }],
+  "browser_action": {
+    "default_icon": "images/icon-32.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources":[
+      "images/icon-32.png"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "app": {
+      "launch": {
+         "local_path": "main.html"
+      }
+   },
+   "description": "Supports weight and balance loading problems for Cessna Model 152 type aircraft.",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png"
+   },
+   "manifest_version": 2,
+   "name": "C152 W & B",
+   "version": "0.0.0.2"
+}

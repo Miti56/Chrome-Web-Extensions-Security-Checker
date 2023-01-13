@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "name": "XRPTipBot One Click Twitter Tip",
+  "description": "Add a tip button for a simple one click tip.",
+  "author": "xel leo",
+  "homepage_url": "https://www.xrptipbot.com/",
+  "applications": {
+	"gecko": {
+	  "id": "xelleofreya@gmail.com",
+	  "strict_min_version": "43.0"
+	}
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self';img-src 'self';style-src 'unsafe-inline';",
+  "content_scripts": [
+	{
+	  "js": [ "js/jquery.min.js", "js/background.js" ],
+	  "css": [ "css/style.css" ],
+	  "matches": ["*://*.twitter.com/*"],
+	  "run_at": "document_start"
+	}
+  ],
+  "permissions": [
+	"<all_urls>"
+  ],
+  "browser_action": {
+	"browser_style": false,
+	"default_icon": {
+	  "19": "icons/26.png",
+	  "38": "icons/48.png"
+	},
+	"default_title": "One Click Twitter Tip",
+	"default_popup": "popup.html"
+  },
+  "icons": {
+	"192": "icons/192.png",
+	"128": "icons/128.png",
+	"48": "icons/48.png",
+	"26": "icons/26.png"
+  }
+}

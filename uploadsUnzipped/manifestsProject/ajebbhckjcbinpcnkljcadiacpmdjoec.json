@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Thaisingles.de",
+  "description": "Thailand Singles",
+  "version": "4.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.thaisingles.de/"
+    ],
+    "launch": {
+      "web_url": "http://www.thaisingles.de/"
+    }
+  },
+  "icons": {
+    "128": "thaisingles-128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

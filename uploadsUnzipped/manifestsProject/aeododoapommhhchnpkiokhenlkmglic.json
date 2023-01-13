@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "theme black Circuit",
+  "version": "2.0",
+  "description": "fix of firt version.",
+  "theme": {
+		"images":{
+			"theme_frame":"i/theme_frame.png",
+			"theme_toolbar":"i/theme_toolbar.png",
+			"theme_tab_background":"i/theme_tab_background.png",
+			"theme_ntp_background":"i/theme_ntp_background.png"
+			},
+		"colors":{
+			"frame":[0,0,0],
+			"toolbar":[110,110,110],
+			"tab_text":[255,255,255],
+			"tab_background_text":[155,155,155],
+			"bookmark_text":[255,255,255],
+			"ntp_background":[255,255,255],
+			"ntp_text":[0,0,0],
+			"ntp_link":[0,0,0],
+			"ntp_section":[0,0,0],
+			"ntp_section_text":[255,255,255],
+			"ntp_section_link":[255,255,255]
+			},
+		"properties":{
+			"ntp_background_alignment":"top left",
+			"ntp_background_repeat": "repeat",
+			"ntp_logo_alternate":0
+			},
+		"tints":{
+			"buttons" : [0.6,0,0.5],
+			"background_tab": [0.5, 0.5, 0.15]
+		}
+	}
+}

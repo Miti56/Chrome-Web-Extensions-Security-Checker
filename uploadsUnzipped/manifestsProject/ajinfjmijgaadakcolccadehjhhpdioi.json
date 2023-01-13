@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Time of Crime",
+  "description": "Das reality Browsergame - Bandenkriminalität",
+  "version": "2",
+	"manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://game.timeofcrime.de/"
+    ],
+    "launch": {
+      "web_url": "http://game.timeofcrime.de/"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}

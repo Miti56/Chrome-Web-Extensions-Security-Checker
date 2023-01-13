@@ -1,0 +1,16 @@
+{
+    "name": "Varsom.no",
+    "description": "Snoskred, flom- og jordskredvarsler fra NVE.",
+    "app": {
+        "urls": ["http://www.varsom.no/"],
+        "launch": {
+            "web_url": "http://www.varsom.no/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Cloudstream  - Workflow for Google Apps",
+  "short_name" : "Cloudstream",
+  "version": "0.0.0.12",
+  "description": "Convert your Business Processes into Automated Workflows on the Cloud",
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "737240650353",
+  "app" : {
+    "launch" : {
+      "web_url" : "http://www.thecloudstream.com"
+    }
+  }
+}

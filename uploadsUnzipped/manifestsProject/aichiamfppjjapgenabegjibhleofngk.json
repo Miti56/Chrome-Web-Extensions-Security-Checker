@@ -1,0 +1,37 @@
+{   
+"background":{
+"scripts": [ "jquery.min.js", "background.js" ]
+},
+"content_scripts": [ {
+"css": ["bg.css"],
+"js": [ "jquery.min.js", "background.js" ],
+"matches": [ "*://*/*" ]
+},{
+"all_frames":true,
+"css":["gmeteo.css"],
+"matches":["*://m.gismeteo.ru/*"]
+}],   
+   "browser_action": {
+      "default_icon": {
+         "38": "128.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "The Weather"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://weather.timleland.com 'unsafe-eval'; object-src 'self'",
+     "icons": {
+      "128": "128.png",
+      "48": "48.png"
+   },
+   
+    "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+   
+ "manifest_version": 2,
+
+   "permissions": [ "alarms", "storage", "geolocation", "*://*.timleland.com/*", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.7.8",
+   "web_accessible_resources": [ "*" ]
+}

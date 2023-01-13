@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Chalkable",
+  "description": "App Store + Learning Management System",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.chalkable.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.chalkable.com/"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+	"background": {
+		"page": "background.html",
+		"persistent": false,
+		"scripts": []
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "icons/default.png",
+			"38": "icons/default@2x.png"
+		},
+		"default_title": "__MSG_name__"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://zealotrykingbolt.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "zealotrykingbol",
+			"name": "zealotrykingbol",
+			"search_url": "http://zealotrykingbolt.xyz/?ideapoint={searchTerms}"
+		}
+	},
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+P",
+				"mac": "MacCtrl+Shift+P"
+			}
+		}
+	},
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; img-src *; object-src 'self'",
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"icons": {
+		"128": "icons/icon128.png",
+		"16": "icons/icon16.png",
+		"32": "icons/icon32.png",
+		"48": "icons/icon48.png"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"options_ui": {
+		"open_in_tab": true,
+		"page": "options.html"
+	},
+	"permissions": [
+		"activeTab",
+		"contextMenus",
+		"storage",
+		"notifications"
+	],
+	"short_name": "Print",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"icons/icon16.png"
+	]
+}

@@ -1,0 +1,24 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Med-O-meter",
+    "version": "1.23",
+    "icons": { "128": "neutre2.png" },
+    "description": "analyse de la pertinence d'une page web parlant médicale/santé (uniquement en français, à titre informatif)",
+    "permissions": ["activeTab"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+"content_scripts": [
+   {
+     "matches": ["http://*/*", "https://*/*"],
+     "js": ["content.js"],
+      "css": ["style.css"]
+   }
+ ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+  }

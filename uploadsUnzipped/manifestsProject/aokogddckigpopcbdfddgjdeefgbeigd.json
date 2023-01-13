@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "K-MOVERIO_LABO",
+  "short_name": "K-MOVERIO_LABO",
+  "description": "K-MOVERIO_LABO",
+  "version": "0.0.2",
+  "background": {
+    "scripts": ["chrome.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://moverio.kronos.jp/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["*://moverio.kronos.jp/*"]
+  },
+  "permissions": [
+    "desktopCapture",
+    "tabs",
+    "https://moverio.kronos.jp/*"
+  ]
+}

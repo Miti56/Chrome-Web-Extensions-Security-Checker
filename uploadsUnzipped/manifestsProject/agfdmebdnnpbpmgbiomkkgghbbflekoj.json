@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version": 2,
+	"name": "Roblox Value Traders",
+	"version": "1.3.8.8",
+
+	"description": "Presented to you by WebGL3D",
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "*://ajax.googleapis.com/",
+        "cookies",
+        "*://*.roblox.com/",
+        "background",
+        "alarms",
+        "notifications"
+    ],
+    "background": {
+        "scripts": ["backgroundWorker.js"]
+	}
+}

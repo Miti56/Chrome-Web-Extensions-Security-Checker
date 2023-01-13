@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Döviz ve Alarm Kur",
+  "description": "Döviz ve altın istediğiniz değerle alarm kurun.",
+  "version": "1.0",
+ "manifest_version": 2,
+  "icons": { "256": "icon.png" },
+  "permissions": [
+    "tabs", "http://*/", "https://*/"
+  ],
+  "browser_action": {
+    "name": "AlarmKUR",
+    "icons": ["icon.png"],
+ 	"default_icon": "icon.png",
+ 	 "popup": "window.html",
+ 	   "default_popup": "window.html"     
+ 	
+  }
+}

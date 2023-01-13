@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "動画コンテナモザイク除去装置",
+  "description": "created by 9ketsuki.info",
+  "version": "1.1",
+ "homepage_url": "http://9ketsuki.info/",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+"content_scripts": [
+  {
+    "matches": ["https://movie-container.com/download/*"],
+    "js": ["jquery.js", "myscript.js"]
+  } 
+]
+}

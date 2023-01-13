@@ -1,0 +1,69 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "version": "0.0.10",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/douban-16.png",
+    "128": "images/douban-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/douban-24.png"
+    },
+    "default_title": "douban movie"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://bitsnoop.com/*",
+        "https://bitsnoop.com/*",
+        "http://tpb.piraten.lu/*",
+        "http://thepiratebay.sx/*",
+        "http://www.mininova.org/*",
+        "http://*.youku.com/*"
+      ],
+      "css": [
+        "styles/main.css",
+        "styles/bootstrap-popover.min.css"
+      ],
+      "js": [
+        "bower_components/bootstrap/docs/assets/js/jquery.js",
+        "scripts/bootstrap-popover.min.js",
+        "libs/underscore-min.js",
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    "libs/jquery.min.js",
+    "libs/underscore-min.js",
+    "libs/json2.js",
+    "libs/backbone-min.js",
+    "libs/sinon-1.3.4.js",
+    "libs/jquerypp.js",
+    "libs/sugar-1.3-full.min.js",
+    "libs/jquery.cookie.js",
+    "bower_components/jquery/jquery.min.js",
+    "bower_components/bootstrap/docs/assets/js/jquery.js",
+    "bower_components/bootstrap/docs/assets/css/bootstrap.css",
+    "bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css",
+    "bower_components/bootstrap/docs/assets/js/bootstrap.min.js"
+  ]
+}

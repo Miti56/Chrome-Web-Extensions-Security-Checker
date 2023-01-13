@@ -1,0 +1,37 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	
+		"background": {
+		"page": "background.html"
+	},
+	"browser_action": {
+		"default_icon": "128.png"
+	},
+	"description": "รวม Tool ต่างๆช่วยอำนวยความสะดวกเกี่ยวกับ Facebook Marketing",
+	"icons": {
+		"16": "16.png",
+		"32": "32.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
+	"manifest_version": 2,
+	"name":"Adverra Facebook Tool",
+	"short_name":"AFT",
+	"permissions": [
+	"power", "storage" ,
+		"*://ssl.google-analytics.com/*",
+		"*://*.facebook.com/*",
+		"*://*.adverra.com/*",
+		"*://*.apppost.net/*"
+		
+
+	],
+	"version": "4.6.8.1",
+	"web_accessible_resources": [
+		"script/gui/fst_box_analytics.js",
+		"images/*",
+		"ui/*",
+		"css/*"
+	],
+	"author": "Weera Deesri"
+}

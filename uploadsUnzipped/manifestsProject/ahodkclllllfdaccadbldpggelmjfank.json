@@ -1,0 +1,88 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "_version": "0.8.0rc7",
+  "version": "0.8.0.7",
+  "previous_version": "0.8.0.6",
+  "name": "Amazing TTV",
+  "description": "Enhances the usability of Twitch with numerous new features.",
+  "author": "Robert Hartung",
+  "homepage_url": "https://attv.rhscripts.de/",
+  "default_locale": "en",
+  "icons": {
+    "16": "images/16x16.png",
+    "19": "images/19x19.png",
+    "32": "images/32x32.png",
+    "64": "images/64x64.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "storage",
+    "notifications",
+    "*://*.twitch.tv/*",
+    "*://static-cdn.jtvnw.net/*",
+    "https://attv.rhscripts.de/static/config.json",
+    "https://api.imgur.com/3/*",
+    "https://gamewisp.com/api/*",
+    "https://api.twitch.tv/kraken/*",
+    "https://api.betterttv.net/*",
+    "https://api.gamewisp.com/*",
+    "declarativeContent"
+  ],
+  "optional_permissions": [
+    "management"
+  ],
+  "options_ui": {
+    "page": "ui.html"
+  },
+  "page_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "images/16x16.png",
+      "19": "images/19x19.png",
+      "32": "images/32x32.png",
+      "64": "images/64x64.png"
+    },
+    "default_title": "Amazing TTV",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "*.png",
+    "*.jpg",
+    "amazingttv-inject.js",
+    "amazingttv-options.js",
+    "sounds/*.mp3"
+  ],
+  "background": {
+    "scripts": [
+      "amazingttv-backend.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "*://twitch.tv/*",
+        "*://www.twitch.tv/*"
+      ],
+      "css": [
+        "amazingttv.min.css"
+      ],
+      "js": [
+        "jquery-3.2.1.min.js",
+        "amazingttv-frontend.js"
+      ],
+      "__js": [
+        "jquery-2.1.4.min.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "@ttvenhancer",
+      "strict_min_version": "51.0"
+    }
+  }
+}

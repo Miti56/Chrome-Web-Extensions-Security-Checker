@@ -1,0 +1,39 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "libs/jquery-2.0.3.min.js", "src/background.js", "src/code.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/icon-19.png",
+         "38": "icons/icon-38.png"
+      },
+      "default_title": "Online Dating Booster"
+   },
+   "content_scripts": [ {
+      "js": [ "libs/jquery-2.0.3.min.js", "src/Home.js", "src/code.js" ],
+      "matches": [ "*://www.adopteunmec.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "libs/jquery-2.0.3.min.js", "src/Final.js", "src/code.js" ],
+      "matches": [ "*://www.adopteunmec.com//events*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "libs/jquery-2.0.3.min.js", "src/Home.js", "src/code.js" ],
+      "matches": [ "*://www.adopteunmec.com/" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Online Dating Booster extension",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkiPym1twPsj6vrX3GfnSg44SHd+v4dE0PH4NDHGc7TONikjXhg67zFX7SSxWDBBleNC3GeCWqxil0ivquCn0zpoKGwJcE+8r6bG3wJvbjX2TeycMSuG+R38z7Uulgh+h26KRu1wNtKXvdXIxf07cn29v+WeHkJlD2DTcOpJa00lSY+ZEWfEwT7GO+oQVvW4sqwY4HcsC+nM/PmT/HN7KVD32+ckUSE8OmNYnlvcsXI2SPnTM3yLIhDhaec7L2bilPU9kbovZmalzAGhBIyV4QgOiFHU66Sxuy2p6S+vSJjVlnuwtvBntiMzg5H21Q70QlDqm53291+oPSerZ61+U9wIDAQAB",
+   "manifest_version": 2,
+   "name": "Online Dating Booster",
+   "permissions": [ "webNavigation", "storage", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2.0",
+   "web_accessible_resources": [ "images/banner.png", "images/logo-3000x679.png" ]
+}

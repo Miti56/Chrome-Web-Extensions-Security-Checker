@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "short_name": "Fishing Legend",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "offline_enabled": true,
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.webfungame.com/game/fishing-legend.html"
+    ],
+    "launch": {
+      "web_url": "http://www.webfungame.com/game/fishing-legend.html"
+    }
+  }
+}

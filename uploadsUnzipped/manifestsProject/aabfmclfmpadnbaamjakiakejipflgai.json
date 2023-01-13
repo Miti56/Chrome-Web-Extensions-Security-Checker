@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Dashboard",
+    "description": "The BLACKBX Dashboard App ",
+    "version": "3.0.1",
+    "manifest_version": 2,
+    "app": {
+        "urls": [
+            "https://dashboard.blackbx.io/"
+        ],
+        "launch": {
+            "web_url": "https://dashboard.blackbx.io/"
+        }
+    },
+	"icons" : {
+		"128": "android-chrome-128x128.png"
+	}
+	
+}

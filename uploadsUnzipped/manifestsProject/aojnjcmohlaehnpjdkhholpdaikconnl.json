@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "TimeToEat",
+	"description": "Set a time for eating, and wait for it!",
+	"version": "0.4",
+
+	"permissions": [
+		"tabs"
+	],
+
+	"background": {
+		"scripts": [
+			"bower_components/jquery/dist/jquery.min.js",
+			"eventPage.js"
+		],
+		"persistent": false
+	},
+
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": [
+			"bower_components/jquery/dist/jquery.min.js", 
+			"bower_components/moment/min/moment.min.js",
+			"contentScript.js"            
+		],
+		"css": ["compass/css/index.css"]
+	}],
+
+	"web_accessible_resources": [
+		"image/*",
+		"content.html"
+	]
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "1001 Spiele Kostenlos Spiele Online",
+  "description": "1001 Spiele wurden für Sie veröffentlicht. Möchtest du jetzt anfangen zu spielen?",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["tabs", "bookmarks"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon" : "icon.png",
+      "default_title": "1001 Spielen Spiel"
+  }
+
+}

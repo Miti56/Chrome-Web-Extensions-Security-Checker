@@ -1,0 +1,65 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Pearson Realize Reader",
+    "short_name": "Realize Reader",
+    "version": "18.3.1",
+    "manifest_version": 2,
+    "minimum_chrome_version": "32",
+    "icons": {
+        "16": "square_icon_32.png",
+        "40": "square_icon_40.png",
+        "48": "square_icon_48.png",
+        "64": "square_icon_64.png",
+        "128": "icon_128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "chrome-app.js",
+                "js/lib/pouchdb.js",
+                "lib/asmcrypto/asmcrypto.js",
+                "js/server.js"
+            ]
+        }
+    },
+    "permissions": [
+        "alarms",
+        "power",
+        "system.network",
+        "browser",
+        "notifications",
+        {
+            "fileSystem": [
+                "write",
+                "retainEntries",
+                "directory"
+            ]
+        },
+        "storage",
+        "unlimitedStorage",
+        "fullscreen",
+        "webview",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "file_handlers": {
+        "text": {
+            "types": [
+                "text/*"
+            ]
+        }
+    },
+    "offline_enabled": true,
+    "sockets": {
+        "tcpServer": {
+            "listen": "*"
+        }
+    },
+    "webview": {
+        "partitions": [{
+            "name": "ereader",
+            "accessible_resources": ["*.*"]
+        }]
+    }
+}

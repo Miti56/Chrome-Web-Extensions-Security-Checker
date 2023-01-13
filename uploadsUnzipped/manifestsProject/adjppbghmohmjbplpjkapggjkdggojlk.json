@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+
+"name": "Антиконкурент",
+"version": "1.0.10",
+"description" : "Просмотр конкурентной рекламы Яндекс Директ.",
+
+"background": {"scripts": ["popup.js"] },
+
+"icons": {
+"16": "16x16.png",
+"32": "32x32.png",
+"48": "48x48.png",
+"128": "128x128.png"
+},
+
+"permissions": ["<all_urls>","tabs", "activeTab", "webRequest", "webRequestBlocking"],
+
+"content_scripts": [ 
+
+	{
+	"matches": ["<all_urls>"],	"js": ["script.js"]
+	}
+	
+],
+
+"page_action": 
+{
+"default_title": "Антиконкурент",
+"default_icon": "48x48.png",
+"default_popup": "popup.html"
+},
+
+"web_accessible_resources": [ "/images/*.gif"]
+	
+}

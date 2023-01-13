@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "蛙才简历",
+   "version": "1.0.1",
+   "background": {
+      "persistent": true,
+      "scripts": [
+         "js/libs/jquery/jquery-1.12.4.min.js",
+         "js/libs/hashmap/hashmap.js",
+         "js/background.js"
+      ]
+   },
+   "browser_action": {
+      "default_icon": "/images/logo.png",
+      "default_title": "蛙才简历"
+   },
+   "content_scripts": [{
+      "css": ["css/background.css"],
+      "js": [
+         "js/libs/jquery/jquery-1.12.4.min.js",
+         "js/content-script.js",
+         "js/getcontent.js"
+      ],
+      "matches": ["\u003Call_urls>"],
+      "run_at": "document_end"
+   }],
+   "description": "蛙才简历信息",
+   "homepage_url": "https://wacai.tobosoft.com.cn/",
+   "icons": {
+      "16": "/images/logo.png",
+      "48": "/images/logo.png",
+      "128": "/images/logo.png"
+   },
+   "manifest_version": 2,
+   "options_page": "",
+   "permissions": [
+      "storage",
+      "unlimitedStorage",
+      "management",
+      "contextMenus",
+      "cookies",
+      "tabs",
+      "webRequest",
+      "webRequestBlocking",
+      "notifications",
+      "http://*/*",
+      "https://*/*",
+      "\u003Call_urls>"
+   ],
+   "web_accessible_resources": ["images/logo.png", "css/background.css", "popup.css", "popup.html"]
+}

@@ -1,0 +1,22 @@
+{
+   "background": {
+      "page": "html/background.html",
+      "persistent": false
+   },
+   "browser_action": {
+      "default_icon": "img/favicon.png",
+      "default_popup": "html/popup.html",
+      "default_title": "FFESSM MFT"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Vérification des mises à jour des MFT de la FFESSM",
+   "icons": {
+      "128": "img/icon_128.png"
+   },
+   "web_accessible_resources": [ "fonts/*.*" ],
+   "manifest_version": 2,
+   "minimum_chrome_version": "22",
+   "name": "FFESSM MFT",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.9.2"
+}

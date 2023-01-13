@@ -1,0 +1,18 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "./bingo/bundle_be.js" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "description": "Enjoy wallpaper images of Bingo Blitz characters with every new tab",
+   "icons": {
+      "128": "images/icons/icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "Bingo Blitz Wallpapers",
+   "permissions": [ "activeTab", "tabs", "storage", "chrome://favicon/", "webRequest", "webRequestBlocking", "background", "topSites" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

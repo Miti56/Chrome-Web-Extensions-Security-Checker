@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Discount Mantra Coupon Finder",
+	"description": "Coupon Codes, Offers, Discounts in India",
+	"version": "2.0.2",
+	"permissions": [
+		"notifications","storage", "tabs", "http://*/*", "https://*/*"
+	],
+	"background": {
+		"scripts": ["lib/jquery-1.11.1.min.js","background.js"],
+		"persistent": true
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["lib/jquery-1.11.1.min.js","lib/jquery.plugs.js","lib/DM.js"],
+			"run_at": "document_start"
+		}
+	],
+	"icons": { 
+		"16": "icon/icon16.png",
+		"48": "icon/icon48.png",
+		"128": "icon/icon128.png"
+	},
+	"browser_action": {
+		"default_icon": "icon/icon38.png",
+		"default_title": "Show/Hide Discount Mantra"
+	},
+	"manifest_version": 2
+}

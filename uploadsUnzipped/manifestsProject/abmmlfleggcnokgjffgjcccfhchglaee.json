@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "persistent": false,
+      "scripts": [ "jquery-1.11.1.min.js","background.js" ]
+   },
+   
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "content-script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   
+   "default_locale": "en",
+   
+   "description": "(How to) Know WordPress Version of any website",
+   
+   "homepage_url": "http://watchmouse.blogspot.com",
+   
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   
+   "manifest_version": 2,
+   
+   "name": "Know WordPress Version",
+   
+   "offline_enabled": true,
+   
+   "page_action": {
+      "default_title": "How to Know WordPress Version of any website"
+   },
+   
+   "permissions": [ "identity", "management", "storage", "https://www.googleapis.com/" ],
+   
+   "version": "1.0.1"
+}

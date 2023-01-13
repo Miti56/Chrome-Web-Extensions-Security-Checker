@@ -1,0 +1,36 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.4",
+	"name": "Republic of Côte d'Ivoire - Ivory Coast",
+	"theme": {
+		"images" : {
+			"theme_frame" : "assets/frame.png",
+			"theme_toolbar" : "assets/toolbar.png",
+			"theme_ntp_background" : "assets/new_tab.jpg",
+			"theme_tab_background" : "assets/bg_tab.png",
+			"theme_button_background" : "assets/button.png"
+		},
+		"colors" : {
+			"frame":[253,113,52],
+			"toolbar":[0,73,28],
+			"tab_text":[255,255,255],
+			"tab_background_text":[1,102,40],
+			"bookmark_text":[255,255,255],
+			"ntp_background":[255,224,201],
+			"ntp_text":[0,0,0],
+			"ntp_link":[0,0,0],
+			"ntp_header":[1,102,40,1],
+			"ntp_section":[1,102,40,0.7],
+			"ntp_section_text":[255,255,255],
+			"ntp_section_link":[255,255,255]
+		},
+		"properties":{
+			"ntp_background_alignment":"bottom",
+			"ntp_background_repeat":"no-repeat",
+			"ntp_logo_alternate":0
+		},
+		"tints":{
+			"buttons":[0.05,1,0.6]
+		}
+	}
+}

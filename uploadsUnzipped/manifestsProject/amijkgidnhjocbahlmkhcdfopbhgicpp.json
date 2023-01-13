@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "author": "Alauddin Ansari",
+  "name": "Bill Manager",
+  "short_name": "Billmanager",
+  "description": "Bill Manager with synced data online-offline on chrome, android, browser etc",
+  "version": "0.4.8",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "images/icon-16.png",
+    "default_popup": "index.html",
+    "default_title": "Bill Manager"
+  },
+  "background": {
+    "scripts": ["js/chromeProvider.min.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "storage", "tabs", "notifications"
+  ],
+  "icons": { "16": "images/icon-16.png", "32": "images/icon-32.png", "64": "images/icon-64.png", "128": "images/icon-128.png" },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

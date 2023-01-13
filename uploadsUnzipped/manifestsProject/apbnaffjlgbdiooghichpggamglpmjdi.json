@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Hey Presto Ordering",
+  "version": "0.2",
+  "description": "Purchasing add on for Hey Presto",
+  "browser_action": {
+      "default_icon": {
+        "16": "assets/heyprestologo.png",
+        "32": "assets/heyprestologo.png",
+        "48": "assets/heyprestologo.png",
+        "128": "assets/heyprestologo.png"
+      },
+      "default_title": "Click to save Purchase Request",
+      "default_popup": "pages/popup.html"
+  },
+  "icons": {
+    "16": "assets/heyprestologo.png",
+    "32": "assets/heyprestologo.png",
+    "48": "assets/heyprestologo.png",
+    "128": "assets/heyprestologo.png"
+  },
+  "author": "Alastair Ayliffe",
+  "background": {
+      "page": "pages/background.html"
+  },
+  "permissions": [ 
+    "tabs",
+    "cookies",
+    "http://www.heypres.to/"],
+  "minimum_chrome_version": "60"
+}

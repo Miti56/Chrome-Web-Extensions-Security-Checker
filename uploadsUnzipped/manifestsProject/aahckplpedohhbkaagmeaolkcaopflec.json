@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Wurm Calc by Seedlings",
+  "description": "Wurm Online optimal skill gain calculator",
+  "version": "0.0.0.1",
+
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html",
+    "default_title": "Wurm Calc by Seedlings"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "hwplugin",
+    "version" : "1.0.0",
+    "description" : "communicate with hid dev",
+    "background" : { "scripts": ["background.js"] },
+    "icons": {
+        "16": "16.png",
+        "128": "128.png"
+    },
+    "permissions" : [
+    "nativeMessaging",
+    "contextMenus",
+    "tabs",
+    
+    "http://127.0.0.1/*"
+    ],
+	"content_scripts":[
+{
+"matches":[ 
+	   "http://127.0.0.1/*"],
+"js":["content.js"],
+"all_frames":true
+}
+],
+    "minimum_chrome_version" : "6.0.0.0",
+    "manifest_version": 2
+}

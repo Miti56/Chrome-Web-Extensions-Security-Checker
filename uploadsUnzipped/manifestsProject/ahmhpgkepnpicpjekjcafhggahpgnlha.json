@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Remove Notifications New Tab",
+  "description": "Remove Notifications - New Tab",
+  "version": "1.1",
+  "manifest_version": 2,
+  "permissions": [ "tabs", "webRequest", "webRequestBlocking", "*://*.removenotifications.com/*" ],
+  "background": {
+    "page": "common/background.html",
+    "persistent": true
+  },
+  "content_scripts": [ {
+    "js": [ "common/contentscript.js" ],
+    "matches": ["*://*.removenotifications.com/*"],
+    "run_at": "document_end"
+  } ],
+  "chrome_url_overrides": {
+    "newtab": "newtab/newtab.html"
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Remove Notifications",
+      "keyword": "query",
+      "search_url": "https://searchapi.removenotifications.com/searchresults.aspx?q={searchTerms}&src=ds&pid=reno",
+      "suggest_url": "http://search.removenotifications.com/ntapi/suggestions/rd?q={searchTerms}",
+      "search_url_post_params": "",
+      "favicon_url": "https://www.removenotifications.com/favicon.ico",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+  },
+  "browser_action": {
+    "default_icon": "img/logo_128x.png",
+    "default_title": "Remove Notifications"
+  },
+  "icons": {
+    "128": "img/logo_128x.png",
+    "16": "img/logo_16x.png",
+    "48": "img/logo_48x.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

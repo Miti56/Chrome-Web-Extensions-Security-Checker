@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bookmark organiser",
+  "version": "1.0",
+  "description": "Organises your bookmarks",
+  "permissions": ["storage", "bookmarks", "history"],
+  "icons": {
+    "16": "images/bookmark-icon-16.png",
+    "48": "images/bookmark-icon-48.png",
+    "128": "images/bookmark-icon-128.png"
+  },
+  "chrome_url_overrides" : {
+    "newtab" : "newTab.html"
+  },
+  "background":{
+    "scripts": ["base.js", "popular.js", "bookmarkFolder.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "iconClick.html",
+    "default_title": "Manage bookmarks",
+    "default_icon": "images/bookmark-icon-128.png"
+  },
+  "content_security_policy":
+  "script-src 'self' https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js https://fonts.googleapis.com ;  object-src 'self'",
+  "manifest_version": 2
+}

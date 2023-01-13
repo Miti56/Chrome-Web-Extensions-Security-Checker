@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Giles Closet for Minimalists",
+    "short_name": "Giles",
+    "description": "Apparel management for minimalists",
+    "version": "1.0.1",
+    "icons": {
+        "16": "common/logo/icon_16.png",
+        "48": "common/logo/icon_48.png",
+        "128": "common/logo/icon_128.png"
+    },
+    "permissions": [
+        "identity",
+        "storage",
+        "https://ssl.gstatic.com/",
+        "https://www.googleapis.com/",
+        "https://accounts.google.com/"
+    ],
+    "app": {
+        "background": {
+            "scripts": [ "background.js" ]
+        }
+    },
+    "minimum_chrome_version": "28"
+}

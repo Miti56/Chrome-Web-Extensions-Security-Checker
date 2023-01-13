@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"minimum_chrome_version": "22",
+
+	"name": "Locker Login",
+
+	"description": "Locker lets you safely and easily manage your all your passwords using a Locker hardware key.",
+
+	"version": "2.0.0",
+
+	"icons": {
+		"128": "images/icon-128.png",
+		"48": "images/icon-48.png",
+		"16": "images/icon-16.png"
+	},
+
+	"web_accessible_resources": [
+		"images/icon-48.png"
+	],
+
+	"permissions": [
+		"tabs",
+		"webNavigation",
+		"storage",
+		"notifications"
+	],
+
+	"background": {
+		"scripts": ["utility.js", "background.js"]
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["cryptojs/aes.js", "cryptojs/sha256.js", "utility.js", "login.js"]
+		}
+	],
+
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon-19.png",
+			"38": "images/icon-38.png"
+			},
+		"default_popup": "popup_menu.html"
+	}
+
+
+}

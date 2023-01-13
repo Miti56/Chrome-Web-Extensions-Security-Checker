@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "클린 가가",
+  "description": "가가라이브 채팅을 쾌적하게 도와주는 크롬 확장프로그램",
+  "version": "0.9.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://gagalive.com/live/random_chat*",
+      "http://*.gagalive.com/live/random_chat*"
+    ],
+    "css": ["nanumgothic.css", "dist/main.css"],
+    "js": ["dist/main.js"],
+    "run_at": "document_end"
+  }],
+  "browser_action": {
+    "default_title": "클린 가가"
+  },
+  "permissions": [
+    "webRequest",
+    "http://m.gagalive.com/live/random_chat*"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 2
+}

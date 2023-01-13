@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "TechHiring.com Talent Detective",
+  "description": "Developed by TechHiring.com to help technical recruiters discover and research talent.",
+  "version": "1.2",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "view_pane.html"
+  },
+  
+  "icons": {
+  	"16": "icon.png",
+  	"48": "icon.png",
+  	"128": "icon.png"
+  },
+  
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "notifications",
+    "storage",
+    "tabs",
+    "downloads",
+    "cookies",
+    "https://talentdetective.techhiring.com/*",
+    "https://techhiring.com/*"
+  ],
+
+  "background": {
+  	"scripts": [ "js/lib/jquery.js", "js/background.js" ]
+  },
+
+  "content_scripts": [{
+  	"matches": ["*://*/*"],
+    "js": ["js/fetch_content.js"]
+  }]
+}

@@ -1,0 +1,43 @@
+{
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvC9xbHC1UJ7YDfxo075Yx+Ph6gIc3MwDcO6ukTXo2x+4iO3O5ze+GXTXcRXj/ATmUt9j3fLgsSyfUEEBQNZpf7/XN9DNGvjslZA8sv37ZjMmD/4wPaq+dGKuToY3XKANeeYQFufL1bLMabPDpvnS7gVIkhCREUEHMbiXkpjlTcDjeKXM3yCNqRfeSIIdIJU7w61qgxwIgj5q89qZTD2/N+C1xcsiOAQZetG9DQWi93+yDhlVrmvt1Bx025INFwQT6f4b2GLpRy1YuyHfN4FXs1GMl7rlUp08NCFZIJpFkGvQnLqeugnsOzHcOakdYqEtrDeHAHGlM6UqpTSNudO/PwIDAQAB",
+   "manifest_version": 2,
+   "name": "Overwatch Pixel D. Va",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 50, 50, 50 ],
+         "button_background": [ 0, 0, 0, 0 ],
+         "control_background": [ 0, 0, 0, 0 ],
+         "frame": [ 0, 0, 0 ],
+         "frame_inactive": [ 0, 0, 0 ],
+         "frame_incognito": [ 0, 0, 0 ],
+         "frame_incognito_inactive": [ 0, 0, 0 ],
+         "ntp_background": [ 89, 183, 214 ],
+         "ntp_header": [ 181, 181, 181 ],
+         "tab_background_text": [ 0,0,0 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 255, 220, 241 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_ntp_attribution": "images/theme_ntp_attribution.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "center ",
+         "ntp_background_repeat": "repeat",
+	 "ntp_logo_alternate": 0
+      },
+      "tints": {
+         "background_tab": [ 255, 255, 255 ],
+         "buttons": [ 255, 255, 255 ],
+         "frame": [ -1, -1, -1 ],
+         "frame_inactive": [ -1, -1, -1 ],
+         "frame_incognito": [ -1, -1, -1 ],
+         "frame_incognito_inactive": [ -1, -1, -1 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.1"
+}

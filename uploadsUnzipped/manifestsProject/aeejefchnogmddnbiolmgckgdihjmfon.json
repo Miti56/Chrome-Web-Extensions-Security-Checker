@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bittrex Trading Tool",
+  "version": "1.0.3",
+  "description": "A powerful tool for trading on Bittrex.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": {
+      "19": "icon.png"
+    }
+  },
+  "permissions": ["*://bittrex.com/Market/Index?MarketName*", "https://bittrex.com/Manage/GetSummary", "https://bittrex.com/api/*",
+    "storage"
+  ],
+  "content_scripts": [{
+    "matches": ["*://bittrex.com/Market/Index?MarketName*"],
+    "js": ["js/jquery.min.js", "js/jquery-ui.min.js",
+      "languages.js",
+      "js/crypto/aes.js",
+      "js/hmac-sha512.js",
+      "js/bittrex.js",
+      "js/all.js"],
+    "css": ["css/bootstrap.min.css", "css/style.css", "css/jquery-ui.css"],
+    "all_frames": true
+  }]
+,
+  "web_accessible_resources": [
+    "index.html",
+    "logo.png",
+    "exchange.png",
+    "show.png",
+    "horizontal-line.png",
+    "css/bootstrap.css",
+    "images/ui-bg_flat_75_ffffff_40x100.png",
+    "images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+    "images/ui-bg_glass_75_e6e6e6_1x400.png",
+    "images/ui-bg_glass_75_dadada_1x400.png",
+    "images/ui-bg_glass_65_ffffff_1x400.png",
+
+    "images/ui-icons_222222_256x240.png",
+    "images/ui-icons_888888_256x240.png",
+    "images/ui-icons_454545_256x240.png",
+
+    "images/ui-bg_flat_0_aaaaaa_40x100.png"
+  ],
+  "manifest_version": 2
+}

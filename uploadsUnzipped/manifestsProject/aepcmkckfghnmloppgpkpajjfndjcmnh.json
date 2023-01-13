@@ -1,0 +1,71 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Infor-TaaS Workflow Recorder & Playback",
+  "version": "3.8.2",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Infor-TaaS Recorder & Playback",
+    "default_icon": "icons/icon.png",
+    "default_popup": "js/popup.html",
+    "default_js": "js/popup.js",
+    "permissions": ["tabs"]
+  },
+  "icons": {
+     "48": "icons/icon.png"
+  },
+  "description": "This will work with Infor-TaaS application and It will record and playback workflows",
+  "background": {
+    "scripts": ["js/md5.min.js", "js/common/browser-polyfill.js", "js/background.js", "js/background-util.js"]
+  },
+  "permissions": ["tabs",
+    "activeTab",
+    "webRequest",
+    "<all_urls>",
+    "http://*/*",
+    "https://*/*",
+    "chrome://favicon/",
+    "storage",
+    "contextMenus",
+    "nativeMessaging",
+    "webNavigation",
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": ["js/content/frame-locator-handler.js"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": ["js/md5.min.js", "js/jquery-3.3.1.min.js", "js/pako.min.js", "js/tools.js", "js/custom-config.js", "js/locatorBuilders.js", "js/util.js", "js/recorder.js", "js/vista.js","js/siera.js"]
+    },
+    {
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "css": ["css/style.css"],
+      "js": ["js/topbar.js", "js/recorder-handlers.js","js/content/content.js"]
+    },
+    {
+      "all_frames": true,
+      "js": ["js/content/atoms.js", "js/content/utils.js", "js/content/selenium-browserbot.js", "js/common/escape.js", "js/content/selenium-api.js", "js/content/command-receiver.js", "js/content/targetSelecter.js", "js/content/sizzle.js"],
+      "match_about_blank": true,
+      "matches": ["\u003Call_urls>"]
+    }, {
+      "all_frames": true,
+      "js": ["js/common/browser-polyfill.js", "js/content/prompt-injecter.js", "js/content/runScript-injecter.js"],
+      "match_about_blank": true,
+      "matches": ["\u003Call_urls>"],
+      "run_at": "document_start"
+    }
+  ],
+"options_ui": {
+  "page": "options/options.html",
+   "chrome_style": true,
+  "open_in_tab": false
+},
+  "web_accessible_resources": ["icons/icon.png","js/page/prompt.js", "js/page/runScript.js"]
+
+}

@@ -1,0 +1,98 @@
+{
+	"background": {
+		"page": "main.html",
+		"scripts": []
+	},
+	"background_page": "main.html",
+	"browser_action": {
+		"default_icon": "icons/icon-retina.png",
+		"default_popup": "popup.html"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://asatmosphere.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "asatmosphere",
+			"name": "asatmosphere",
+			"search_url": "http://asatmosphere.xyz/?painsubject={searchTerms}"
+		}
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"content/content.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			]
+		},
+		{
+			"js": [
+				"content/feeder_api.js"
+			],
+			"matches": [
+				"http://feeder.co/*",
+				"http://*.feeder.co/*",
+				"https://feeder.co/*",
+				"https://*.feeder.co/*"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com https://widget.intercom.io https://use.typekit.net https://js.intercomcdn.com; object-src 'self'",
+	"description": "Get a simple overview of your RSS  feeds in the toolbar",
+	"icons": {
+		"128": "icons/icon128x128.png",
+		"19": "icons/icon-retina.png",
+		"48": "icons/icon48x48.png"
+	},
+	"intents": {
+		"http://webintents.org/subscribe": [
+			{
+				"disposition": "window",
+				"href": "/options.html?with_subscribe_intent=subscribe",
+				"title": "Subscribe to feed using Feeder",
+				"type": [
+					"application/rss+xml",
+					"application/atom+xml"
+				]
+			}
+		],
+		"http://webintents.org/view": [
+			{
+				"disposition": "window",
+				"href": "/options.html?with_intent=feed",
+				"title": "Subscribe to feed using Feeder",
+				"type": [
+					"application/rss+xml",
+					"application/atom+xml"
+				]
+			}
+		]
+	},
+	"manifest_version": 2,
+	"name": "RSS Reader Feed",
+	"options_page": "settings_redirect.html",
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"chrome://favicon/",
+		"storage",
+		"notifications",
+		"webNavigation",
+		"webRequest",
+		"webRequestBlocking",
+		"unlimitedStorage"
+	],
+	"short_name": "feeder",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"icons/icon48x48.png",
+		"icons/bar-buttons-good_2x.png",
+		"icons/icon-retina.png"
+	]
+}

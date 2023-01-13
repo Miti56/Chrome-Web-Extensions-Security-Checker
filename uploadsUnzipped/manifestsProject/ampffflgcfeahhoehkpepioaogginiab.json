@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "S360 Hyperlinks ",
+  "description": "Add http(s)/tel/email hyperlink to S360 web application",
+  "version": "1.0",
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+  "permissions": [
+    "activeTab"
+  ],
+	"content_scripts": [
+		{
+		"matches": [
+			"http://*.oncloud.gr/s360/web/index.html",
+			"https://*.oncloud.gr/s360/web/index.html"
+            ],			
+		"js": ["url.js"]
+		}
+	]
+}

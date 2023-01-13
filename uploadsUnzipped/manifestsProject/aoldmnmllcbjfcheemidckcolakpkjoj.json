@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "全屏图片查看器",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "全屏打开任何图片",
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "<all_urls>"
+    ],
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/chromereload.js",
+            "scripts/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/jquery.js",
+                "scripts/intense.js",
+                "contentscripts.js"
+            ]
+        }
+    ]
+}

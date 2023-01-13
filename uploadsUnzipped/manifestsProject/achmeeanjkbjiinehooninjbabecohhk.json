@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Start a videochat on Talky.io",
+  "short_name": "Talky.io",
+  "description": "Start a videochat on Talky.io by &yet.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon_128.png",
+    "default_popup": "popup.html"
+  }
+}

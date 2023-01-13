@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"manifest_version": 2,
+   
+	"name": "__MSG_appName__",
+	
+	"short_name": "__MSG_appShortName__",
+	
+	"description": "__MSG_appDescription__",
+   
+	"version": "3.1.12",
+   
+	"default_locale": "en",
+   
+	"icons": {
+		"128": "images/wd_common_icons/wd-128.png",
+		"16": "images/wd_common_icons/wd-16.png",
+		"32": "images/wd_common_icons/wd-32.png",
+		"48": "images/wd_common_icons/wd-48.png",
+		"64": "images/wd_common_icons/wd-64.png"
+	},
+	
+	"background": {
+		"persistent": true,
+		"page": "background.html"
+	},
+	
+	"options_page": "options.html",
+   
+	"page_action": {
+		"default_title": "__MSG_appDefaultTitle__",
+		"default_icon": "images/toolbar_animation_icons/default/default-19_icon.png",
+		"default_popup": "popup.html"
+	},
+   
+	"content_scripts": [ {
+		"all_frames": false,
+		"js": [ "scripts/content/phishtrack.js" ],
+		"match_about_blank": true,
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_start"
+	}, {
+		"all_frames": true,
+		"js": [ "scripts/content/preload.js" ],
+		"match_about_blank": true,
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_start"
+	}, {
+		"all_frames": true,
+		"js": [ "scripts/content/postload.js" ],
+		"match_about_blank": true,
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_end"
+   } ],
+   
+   "permissions": ["activeTab", "tabs", "http://*/*", "https://*/*", "contextMenus", "webRequest", "webRequestBlocking", "webNavigation", "storage", "unlimitedStorage", "notifications"]
+   
+}

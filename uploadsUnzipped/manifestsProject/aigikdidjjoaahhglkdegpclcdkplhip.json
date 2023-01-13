@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "百度音乐快捷键",
+	"version": "0.0.2",
+	"manifest_version": 2,
+	"description": "在百度音乐播放页面使用快捷键",
+	"icons": {
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	},
+
+	"web_accessible_resources": ["shortcut.js", "shortcut.css", "keymaster.js"],
+
+	"content_scripts": [{
+		"matches": ["http://*.baidu.com/*"],
+		"js": ["inject.js"]
+	}],
+	"permissions": ["tabs", "http://*.baidu.com/*"]
+}
+

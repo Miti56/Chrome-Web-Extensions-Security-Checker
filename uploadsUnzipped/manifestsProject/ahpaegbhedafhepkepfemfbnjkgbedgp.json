@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Webchemy",
+	"version": "0.1.2",
+	"manifest_version": 2,
+	"description": "Idea sparking sketching",
+	"icons": { "128": "icon_128.png" },
+	"app": {
+		"urls": [
+			],
+		"launch": {
+		  "web_url": "http://webchemy.org"
+		}
+	},
+	"short_name": "Webchemy"
+}

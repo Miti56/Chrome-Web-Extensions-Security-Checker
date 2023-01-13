@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "减码",
+	"version" : "2.0.1",
+	"manifest_version" : 2,
+	"description" : "减码科技致力为用户解决所有二维码问题，不仅可以解析二维码，还可以生存二维码哦；让您的互联网浏览没有障碍",
+	"permissions" : ["http://*/*", "https://*/*",  "tabs", "contextMenus"],
+	"background" : {
+		"page" : "background.html"
+	}
+}

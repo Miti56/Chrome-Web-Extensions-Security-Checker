@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.0.1",
+  "name": "Learnicus",
+  "description": "Learnicus",
+  
+  "browser_action": {
+    "default_icon"    : "icons/icon19.png",
+    "default_popup"   : "learnicusOptions.html",
+    "default_title"   : "Learnicus"
+  },
+  "background": {
+    "scripts": ["js/learnicusRun.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+	"gcm",
+    "https://ajax.googleapis.com/",
+    "notifications",
+    "storage"
+  ],
+  "options_page" : "learnicusOptions.html",
+  "icons"        : { 
+    "512"        : "icons/icon512.png",
+    "256"        : "icons/icon256.png",
+    "128"        : "icons/icon128.png",
+    "96"         : "icons/icon96.png",
+    "64"         : "icons/icon64.png",
+    "48"         : "icons/icon48.png",
+    "32"         : "icons/icon32.png",
+    "24"         : "icons/icon24.png",
+    "19"         : "icons/icon19.png",
+    "16"         : "icons/icon16.png"
+  },
+  "content_security_policy" : "script-src 'self' https://example.com;              object-src 'self'",
+  "content_security_policy" : "script-src 'self' http://ssl.google-analytics.com;  object-src 'self'",
+  "content_security_policy" : "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "content_security_policy" : "script-src 'self' http://ajax.googleapis.com;       object-src 'self'",
+  "content_security_policy" : "script-src 'self' https://ajax.googleapis.com;      object-src 'self'",
+  "content_security_policy" : "script-src 'self' http://spreadsheets.google.com;   object-src 'self'",
+  "content_security_policy" : "script-src 'self' https://spreadsheets.google.com;  object-src 'self'",
+  
+"web_accessible_resources": [
+  "learnicusOptions.html",
+  "icons/*",
+  "img/*",
+  "js/*",
+  "offline/*",
+  "offline/en/*",
+  "offline/uk/*",
+  "offline/ru/*"
+  ],
+
+  "manifest_version": 2
+}

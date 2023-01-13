@@ -1,0 +1,21 @@
+{
+  "version": "11",
+  "version_name": "r11",
+  "name": "Strictly Stack Overflow",
+  "description": "Hides noise on Stack Overflow, including links to meta, jobs, and network sites, and notifications for rep changes and achivements.",
+  "content_scripts": [
+    {
+      "matches": ["https://stackoverflow.com/*"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "92": "icon92.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 2,
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh78Z35mefz4b+jML61F92QZDevR+Fo4ldAgwJcRgD/2J6exg6iPF0tc7hjAbyRnP6vP/WTuihQ3mpy1iG6KVx8MO1RCfB5KVgLHX9GHb9G/5U6b0d3RKfQkxz29lgoYdmXGNHH9P+/AIuMcM2Vfh+7EPaz3jM4K2JJsf/c6VsXLHhLoEPXvmoUP3z09Ga0ZEjbaZ7sP2Xxyyw4wEmF9hsmJOPiQRnrsSDR3kYhk0dkHes2Cw6TDMUjWIEBlAD9CjPcvawkEUOP3UgboXnMgfV48bZ+trXs7NvKShRdkgfNWbwHwMsAJZARdA0QiKhFuLH3oRTy4CRlZF2IrsN2MOrwIDAQAB"
+}

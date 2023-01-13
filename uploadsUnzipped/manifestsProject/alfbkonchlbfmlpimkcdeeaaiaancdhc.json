@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	
+    "name": "TaxPro DSC Sign",
+    "description": "Digital Signing from webpage",
+    "version": "0.1",
+	"author":"Chartered Information Systems Pvt. Ltd",
+    "permissions": [
+    "tabs","nativeMessaging"
+    ],
+    "page_action": {
+        "default_icon": "icon.png"
+    },
+
+    "content_scripts": [
+        {
+		"all_frames": true,
+        "matches": [ "*://*/*", "file:///*" ],
+        "js": ["content.js"],
+        "run_at": "document_end" 
+        }
+    ], 
+	"background": { "scripts": ["background.js"] }
+    
+}

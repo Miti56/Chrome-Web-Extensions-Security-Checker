@@ -1,0 +1,24 @@
+{
+	"name": "__MSG_name__",
+	"icons": {
+		"48": "temple-puzzle-icons/icon-48.png",
+		"128": "temple-puzzle-icons/temple-puzzle-128.png"
+	},
+	"default_locale": "en",
+	"browser_action": {
+		"default_icon": "temple-puzzle-icons/icon-48.png",
+		"default_popup": "index.html"
+	},
+	"background": {
+		"scripts": [
+			"js/back.js"
+		]
+	},
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"description": "__MSG_description__",
+	"version": "0.0.1",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

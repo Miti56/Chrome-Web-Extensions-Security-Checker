@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hide Fedora",
+  "version": "1.8.6",
+  "manifest_version": 2,
+  "description": "Removes fedora Youtube commenters.",
+  "homepage_url": "http://hidefedora.hadalin.me",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "src/content.css"
+      ],
+      "js": [
+        "assets/jquery/jquery.min.js",
+        "assets/underscore/underscore-min.js",
+        "assets/moment/moment.min.js",
+        "src/content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "resources/*"
+  ],
+  "permissions": [
+    "storage",
+    "https://jhvisser.com/hidefedora/reports",
+    "https://jhvisser.com/hidefedora/reports/profiles.json"
+  ],
+  "options_page": "options/options.html"
+}

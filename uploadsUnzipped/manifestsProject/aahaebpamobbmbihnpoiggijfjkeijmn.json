@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+  
+    "name": "TEST",
+    "description": "TEST",
+    "version": "1",
+  
+    "browser_action": {
+      "default_icon": "icon.png"
+    },
+
+    "permissions": [
+      "activeTab",
+      "storage",
+      "background"
+    ],
+
+    "content_scripts": [{
+      "js": ["newcastle.js"],
+      "matches": ["https://www.fmkorea.com/*"],
+      "run_at": "document_end"
+    }],
+
+    "icons": {
+      "16": "16.png",
+      "48": "48.png",
+     "128": "128.png"
+    }
+}

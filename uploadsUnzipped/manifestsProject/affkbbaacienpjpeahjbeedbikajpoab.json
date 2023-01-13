@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Punch Games",
+ "manifest_version": 2,
+ "short_name": "Punch Games",
+ "description": "Fighting games are loaded with fun and full of action",
+ "version": "1",
+ "icons": {
+	"128": "icon.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://recoleta.xyz/c/punch-games/"
+	}
+  }
+}

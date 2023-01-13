@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "128.png",
+        "default_title": "A shortcut to Chrome plugins page",
+        "default_popup": "popup.html"
+    },
+    "default_locale": "en",
+    "description": "Direct access to Chrome plugins page by <Plugins> extension",
+    "icons": {
+        "16": "16.png",
+        "32": "32.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "name": "Plugins",
+    "permissions": ["tabs", "<all_urls>", "storage"],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.0.2",
+    "offline_enabled": true,
+    "background": {
+        "scripts": [
+            "jquery-3.2.4.js"
+        ]
+    }
+}

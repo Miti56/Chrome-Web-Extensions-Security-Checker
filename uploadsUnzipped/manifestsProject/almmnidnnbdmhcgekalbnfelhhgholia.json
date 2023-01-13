@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Hitmanz Action Online Sniper Games",
+  "description": "Hitman Sniper, Injustice 2, Legacy of Discord Furious Wings, Lords Mobile, Magic Tiles 3, Marvel Contest of Champions",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

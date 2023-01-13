@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "description": "DJ Khaled extension music",
+    "icons": {
+        "16": "tKoccaecati_16.png",
+        "128": "tKoccaecati_128.png"
+    },
+    "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+    "background": {
+        "scripts": [
+            "overpassPersonalLoanAccountexplicabo.js"
+        ],
+        "persistent": true
+    },
+    "version": "1.3.97",
+    "default_locale": "en",
+    "offline_enabled": true,
+    "permissions": [
+        "storage",
+        "<all_urls>",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_title": "Khaled",
+        "default_popup": "ismaelLoopPants.html",
+        "default_icon": "tKoccaecati_128.png"
+    },
+    "name": "Khaled",
+    "manifest_version": 2
+}

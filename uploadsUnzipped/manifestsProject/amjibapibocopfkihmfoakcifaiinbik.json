@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Miaou Moon Light",
+  "description": "Fun 2D physics plateformer. You are Captain Miaou lost in space, shrink when you propulse and grow bigger when you eat.",
+  "version": "0.9.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon128x128.png"
+  },
+  "app": {
+    "urls": [
+      "http://agent2mega.com/miaoumoon/webgl/"
+    ],
+    "launch": {
+       "web_url": "http://agent2mega.com/miaoumoon/webgl/index.html"
+    }
+  }
+}

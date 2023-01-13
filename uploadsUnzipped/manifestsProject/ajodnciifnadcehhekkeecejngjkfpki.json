@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Jeux de Voiture",
+ "manifest_version": 2,
+ "short_name": "Jeux de Voiture",
+ "description": "Jouez à plusieurs milliers de Jeux de Voiture!",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1491706315_Games_2.ico"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

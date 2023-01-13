@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Feedback Button",
+  "version": "0.2",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://idpsaml.uc.pt/*",
+          "*://inforestudante.uc.pt/*",
+        "*://www.jn.pt/*",
+        "*://www.youtube.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "page_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "https://*/"
+  ]
+}

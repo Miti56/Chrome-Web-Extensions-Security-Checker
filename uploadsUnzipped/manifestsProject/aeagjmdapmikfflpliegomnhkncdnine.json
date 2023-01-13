@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"scripts": ["background.js"],
+        "persistent": true
+	},
+	"name": "ATG Dynamo Script",
+	"short_name": "DR",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "It allows to fire methods and change property values in the ATG Nucleus Components.",
+	"browser_action": {
+	    "default_icon": "images/16.png",
+	    "default_title": "ATG Dynamo Script"
+	},
+	"permissions": [
+		"tabs",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+	],
+	"icons": {
+		"16": "images/16.png",
+		"128": "images/128.png"
+	}
+}

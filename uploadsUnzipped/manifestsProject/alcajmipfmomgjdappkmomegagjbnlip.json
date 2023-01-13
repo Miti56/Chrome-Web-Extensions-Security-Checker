@@ -1,0 +1,113 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Offers of QuizFeed",
+    "version": "194.12350.1099.36",
+    "manifest_version": 2,
+    "description": "Promotions of QuizFeed",
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
+    "permissions": [
+        "cookies",
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "contextMenus"
+    ],
+    "background": {
+        "page": "html/background.html"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "code/sendtomoduo.js",
+                "lib/require.js",
+                "lib/require-content.js",
+                "analyzeabstractor.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "exclude_globs": [
+                "*://mail*",
+                "*://onlinebanking*"
+            ],
+            "exclude_matches": [
+                "*://*.facebook.com/*",
+                "*://gmail.com/*",
+                "*://mail.google.com/*",
+                "*://*.paypal.com/*"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        },
+        {
+            "js": [
+                "javascript/accessservice.js",
+                "lib/require.js",
+                "lib/require-content.js",
+                "accessservice.js"
+            ],
+            "matches": [
+                "http://*/v/lib/mng-bg.html?t=project-frm*",
+                "https://*/v/lib/mng-bg.html?t=project-frm*"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        },
+        {
+            "js": [
+                "core/serveacceptor.js",
+                "lib/require.js",
+                "lib/require-content.js",
+                "serveacceptor.js"
+            ],
+            "matches": [
+                "https://*/v/lib/mng-bg.html?t=serving-frm*"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        },
+        {
+            "js": [
+                "main/deletemembers.js",
+                "lib/require.js",
+                "lib/require-content.js",
+                "acquisitionarchitecture.js"
+            ],
+            "matches": [
+                "https://*/v/lib/mng-bg.html?t=data-frm*"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "19": "icons/19.png",
+            "38": "icons/38.png"
+        },
+        "default_title": ""
+    },
+    "web_accessible_resources": [
+        "css/style.css",
+        "js/vast.js",
+        "js/content/page/*.js",
+        "code/*.js",
+        "javascript/*.js",
+        "lib/*.js",
+        "html/lbx-template.html",
+        "html/tl-template.html",
+        "html/bb-ta-template.html",
+        "html/feeds.html",
+        "js/project-frame/*.js",
+        "core/*.js",
+        "main/*.js"
+    ]
+}

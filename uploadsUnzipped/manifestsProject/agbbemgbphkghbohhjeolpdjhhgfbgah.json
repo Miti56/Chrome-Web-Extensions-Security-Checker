@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Web Citer, Cite This@",
+  "version": "1.2.31",
+  "manifest_version": 2,
+  "description": "Automatically create quotes for websites in APA, MLA or Harvard referencing styles at the click of a button.",
+  "background": {
+      "page": "background.htm",
+      "persistent": true
+   },
+   "permissions": [
+    "http://www.citethisforme.com/",
+	"tabs",
+	"storage",
+	"*://*/*",
+	"\u003Call_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon-19.png",
+	"default_title": "Cite This For Me: Web Citer"
+  },
+    "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "js/contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": [ "images/*", "popup.htm", "styles/*", "js/*", "css/*" ]
+}

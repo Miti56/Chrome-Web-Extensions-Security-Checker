@@ -1,0 +1,17 @@
+{
+   "content_scripts": [ {
+      "js": [ "content-inject.js" ],
+      "matches": [ "*://app.hubstaff.com/*/invoices/*", "*://app.hubstaff.com/invoices/*/edit" ]
+   } ],
+   "description": "Fixes Hubstaff Invoice numbers.",
+   "icons": {
+      "16": "hubstaff_16x16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjCmzXrpbELy/2VPQmMP4FwGCDDIaYbfHdcYZ2ZJr5eAW6uMbA+4wYSXMh5xL7fxIVOzpXW/93Tn30MXqRYqPsKPfaJy20avPi9qgoLHJSZNs/CjHwX6kV3d34acI4XojHWXHNBzWKHCSUZJcs2Qa2SxeK/hdtiSku2w0RPi2XREWql85wYOhQyGrBa10jhiCQp1SeR67sO+/23JkACo4SRjl5cVbyxGw+9zEcCWqZSVc9qqV1qyJVUU0QY2gPU/hTbn91W3uRTyYmefHmNYGusfN2Oa7teZC3m4s2iAC3X/cvsstTcqwmvSFWHsXP1QN2Mqk2QFAJQyptBruo4ByKQIDAQAB",
+   "manifest_version": 2,
+   "name": "Fix Hubstaff Invoice",
+   "permissions": [ "*://app.hubstaff.com/*/invoices/*", "*://app.hubstaff.com/invoices/*/edit" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3",
+   "web_accessible_resources": [ "hubstaff.js" ]
+}

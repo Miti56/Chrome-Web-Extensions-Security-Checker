@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Dystopian Wikipedia",
+	"version": "1.0",
+	"description": "Makes Wikipedia past tense.",
+  "icons": {                   
+    "16": "radioactive-16.png",
+    "48": "radioactive-48.png",
+    "64": "radioactive-64.png"  
+  },    
+  "browser_action": {
+    "default_icon": {                   
+    "16": "radioactive-16.png",
+    "48": "radioactive-48.png",
+    "64": "radioactive-64.png"  
+    }
+     },
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
+

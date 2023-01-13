@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*", 
+                "https://*/*"
+            ], 
+            "all_frames": true, 
+            "run_at": "document_start", 
+            "js": [
+                "includes/content.js"
+            ]
+        }
+    ], 
+    "name": "Recepty", 
+    "icons": {
+        "128": "icons/icon128.png", 
+        "48": "icons/icon48.png", 
+        "16": "icons/button.png"
+    }, 
+    "web_accessible_resources": [
+        "images/*.png", 
+        "images/*.jpg", 
+        "images/*.gif"
+    ], 
+    "description": "Vyhled\u00e1v\u00e1n\u00ed recept\u016f", 
+    "background": {
+        "page": "background.html"
+    }, 
+    "homepage_url": "http://www.drumlo.com/", 
+    "version": "2.0.12", 
+    "manifest_version": 2, 
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; object-src 'self'", 
+    "chrome_url_overrides": {
+        "newtab": "tab/index.html"
+    }, 
+    "permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*", 
+        "contextMenus", 
+        "webNavigation"
+    ]
+}

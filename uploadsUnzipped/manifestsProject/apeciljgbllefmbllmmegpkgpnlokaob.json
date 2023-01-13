@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Postman",
+    "description": "Postman makes API development faster, easier, and better. The free app is used by more than 3.5 million developers and 30,000…",
+    "icons": {
+        "128": "img/128.png",
+        "64": "img/64.png",
+        "32": "img/32.png"
+    },
+    "browser_action": {
+        "default_icon": "img/64.png"
+    },
+    "background": {"scripts": ["js/background.js"]},
+    "permissions": ["webRequest", "webRequestBlocking", "storage", "tabs", "alarms"],
+
+"content_scripts": [{
+        "matches": ["https://www.getpostman.com/"],
+
+
+        "js": [
+            "js/sizzle.min.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": true
+    }],
+    "manifest_version": 2,
+    "version": "1.0"
+}

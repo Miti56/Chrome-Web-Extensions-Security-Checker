@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Email Marketing - SimplyCast ",
+  "description": "SimplyCast's email marketing software makes it easy to create, send and track email newsletters and campaigns.",
+  "version": "8.3.2",
+  "app": {
+    "launch": {
+      "web_url": "http://chrome.email.simplycast.com"
+    }
+  },
+  "icons": {
+    "128": "128x128.png"
+  }
+}

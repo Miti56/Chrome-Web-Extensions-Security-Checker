@@ -1,0 +1,14 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "name": "Straighten",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "description": "Straightens out shortened links on Twitter so that you can see the end.",
+
+    "content_scripts": [
+        {
+         "matches": ["https://twitter.com/"],
+         "js": ["jquery-1.7.2.min.js", "straighten.js"]
+         }
+    ]
+}

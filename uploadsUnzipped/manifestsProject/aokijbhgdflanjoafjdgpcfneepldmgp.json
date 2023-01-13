@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Two Man Hockey",
+	"version": "1",
+	"description": "Two Man Hockey - is a two player Air Hockey game. Get a friend and get started playing one of the best air hockey games around.",
+	"icons": { "128": "icon128.png" },
+	"app": {
+	"urls": [
+	    "http://www.twomanhockey.com/tmh"
+	],
+	"launch": {
+	    "web_url": "http://www.twomanhockey.com/tmh/default.html"
+	}
+	},
+	"manifest_version": 2
+}

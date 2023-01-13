@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "zaimsheet",
+    "version": "1.0.0",
+    "description": "Zaimからスプレッドシートに簡単に転記できます",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://zaim.net/money",
+                "https://zaim.net/money?month=*"
+            ],
+            "js": [
+                "money.js"
+            ]
+        }
+    ],
+    "manifest_version": 2
+}

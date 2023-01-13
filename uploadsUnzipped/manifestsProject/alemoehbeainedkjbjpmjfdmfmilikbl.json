@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "URL Pack",
+  "description": "URLPACK helps you to easily store and reopen a group of urls.",
+  "version": "1.1.13",
+  "browser_action": {
+    "default_icon": "app/icons/icon-star48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://dev.urlpackapp.com/auth/signInCallBack*", "https://url-pack.appspot.com/auth/signInCallBack*"],
+      "js": ["lib/jquery/jquery-2.0.3.min.js", "app/js/access_token_extract.js"],
+      "run_at":"document_end" 
+    }
+  ],
+  "content_security_policy" : "script-src 'self'; object-src 'self'",
+  "permissions": [
+	"storage",
+    "tabs",
+    "contextMenus",
+    "activeTab",
+	"http://*/",
+	"https://*/"
+  ],
+  "icons" : {
+      "16"  : "app/icons/icon-star32.png",
+      "48"  : "app/icons/icon-star48.png",
+      "128" : "app/icons/icon-star128.png"
+  },
+  "background": {
+    "page": "chrome/background.html"
+  },
+  "omnibox": { "keyword" : "urlpack" },
+  "web_accessible_resources" : [
+  		"index.html"
+  ]
+}

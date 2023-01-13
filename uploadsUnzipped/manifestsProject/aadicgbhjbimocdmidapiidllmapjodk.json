@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	
+	"name": "UYAP APAL",
+  
+	"description": "UYAP APAL eklentisi.",
+  
+	"version": "1.0.3", 
+  
+	"icons": {
+		  "16":"eimza_16.png",
+		  "48":"eimza_48.png",
+		  "128":"eimza_128.png"
+  },
+  
+	"background": {
+    "scripts": ["background.js"],
+	"persistent": false
+  },
+  
+    "browser_action": {
+    
+  },
+
+	"externally_connectable": {
+	"matches": ["*://localhost:*/*",
+				"http://*.uyap.gov.tr/*",
+				"https://*.uyap.gov.tr/*"
+				 ]
+  },
+
+	"permissions": [
+	"nativeMessaging",
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+   "browser_action": {
+      "default_icon": "128.png",
+      "default_popup": "popup.html"
+   },
+   "description": "ATP - TOKEN",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "ATP - TOKEN",
+   "permissions": [
+     "notifications",
+     "cookies",
+     "*://*.facebook.com/",
+     "*://*.atpsoftware.vn/",
+
+     "notifications",
+     "background",
+     "storage",
+     "unlimitedStorage",
+	 "identity",
+	 "identity.email"
+   ],
+
+   "background": {
+         "scripts": [
+             "js/jquery.js",
+             "js/background.js"
+         ],
+         "persistent": true
+   },
+
+   "version": "1.0.9",
+   "update_url": "https://clients2.google.com/service/update2/crx"
+}

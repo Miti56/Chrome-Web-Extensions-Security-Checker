@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"manifest_version": 2,
+	"name":"Pickles Jar generator",
+	"description":"Quick generator - Pickles Jar",
+	"version":"1.0.0",
+	"icons":{ "128":"icon_128.png" },
+	"browser_action":{
+		"default_icon":"icon.png",
+		"default_popup":"popup.html",
+		"page_script":"popup.js"
+	},
+	"permissions": [ 
+		"activeTab"
+    ]
+}

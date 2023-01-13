@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "clipboarder",
+  "description" : "It's made for controlling clipboards in chrome browser",
+  "version": "1.2",
+  "browser_action": {
+    "default_popup": "copy_extension.html",
+    "default_icon": "Icon-128.png"
+  },
+  "short_name":"clipboarder",
+  "icons":{
+    "16":"Icon-16.png",
+    "128":"Icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "https://*.fontawesome.com/",
+    "https://*.cloudflare.com/",
+    "https://*.bootstrapcdn.com/",
+    "https://*.herokuapp.com/",
+    "https://*.google.com/"
+  ],
+  "content_security_policy": "script-src 'self' https://use.fontawesome.com https://cdnjs.cloudflare.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com/ https://apis.google.com/; object-src 'self'",
+  "manifest_version": 2,
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens Clipboards,clipboarder, clipboard extension"
+    }
+  }
+}

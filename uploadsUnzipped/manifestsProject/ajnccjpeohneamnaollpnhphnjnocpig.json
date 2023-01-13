@@ -1,0 +1,55 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "manifest_version": 2,
+  "theme": {
+    "images": {
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_ntp_background": "images/theme_ntp_background.jpg",
+      "theme_frame": "images/frame.png"
+    },
+    "colors": {
+      "toolbar": [
+        24, 25, 56
+      ],
+      "tab_text": [
+        236,
+        236,
+        236
+      ],
+      "tab_background_text": [
+        242,
+        241,
+        239
+      ],
+      "bookmark_text": [
+        228,
+        241,
+        254
+      ],
+      "ntp_background": [
+        24, 25, 56
+      ],
+      "ntp_text": [
+        24, 25, 56
+      ],
+      "button_background": [
+        24, 25, 56
+      ]
+    },
+    "tints": {
+      "buttons": [
+        1,
+        1,
+        1
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "center",
+      "ntp_background_repeat": "no-repeat"
+    }
+  }
+}

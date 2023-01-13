@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Capsule CRM",
+ "description": "Simple, flexible CRM for small businesses and sales teams",
+ "version": "2.0.0.0",
+ "manifest_version": 2,
+ "container": ["DOMAIN_INSTALLABLE"],
+ "api_console_project_id": "689204729644",
+ "icons": {
+  "16" : "icon_128.png",
+  "128": "icon_128.png"
+ }
+}

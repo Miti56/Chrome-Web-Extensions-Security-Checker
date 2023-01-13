@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"version":"4.0","name":"Networking Tag","manifest_version":2,"description":"Die FHS Alumni ist die Ehemaligen-Organisation der Fachhochschule St.Gallen (FHS St.Gallen) mit rund 1'600 Mitgliedern. Sie f\u00fchrt","app":{"urls":["http:\/\/apps.apps-builder.com\/655671"],"launch":{"web_url":"http:\/\/apps.apps-builder.com\/655671"}},"icons":{"128":"icon128.png"},"permissions":["unlimitedStorage","notifications"]}

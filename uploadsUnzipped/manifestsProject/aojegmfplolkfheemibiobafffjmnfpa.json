@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "src/plugins/jQuery/jquery-2.2.1.min.js", "src/js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon19.png",
+      "default_popup": "src/browser_action/releases.html",
+      "default_title": "UnidCinemídia"
+   },
+   "chrome_url_overrides": {
+      "newtab": "src/newtab/releases.html"
+   },
+   "content_scripts": [ {
+      "css": [ "src/css/style-override.css", "src/css/style-browser-action.css" ],
+      "matches": [ "http://*.cinemedia.com.br/*", "https://*.cinemedia.com.br/*" ]
+   }, {
+      "js": [ "src/js/util.js", "src/js/script-override.js", "src/js/script-browser-action.js" ],
+      "matches": [ "http://*.cinemedia.com.br/*", "https://*.cinemedia.com.br/*" ]
+   } ],
+   "default_locale": "pt_BR",
+   "description": "__MSG_extensionDescription__",
+   "homepage_url": "http://www.unidcinemidia.com/",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh5ZrmeVZ+lPATc3Xng1jZI8pU5nCWQYlmz1MU+e067X55/Utj+oyVT9vFESebjCs6KcOd3FjtyXPne5IrOv6/Wx/QubFN5dGMmRbCK+pVDDwuW6Fs9cAQJ2tiCrltgq1XVDxgIfFKrkOBkESyZguYMLDuIV8naEuu0ZBzfZhsb5Ar8ciebL1XhLD9bsUbN4QOzHhll6kFIdVQgQpv7oSZOsydQmo86hxxSIWv0bRQUSnjRazFMbthXOGGEZg2eJKi/6ln3ctOQP4an0RUaEXQWe+1Fw0pw1yuQYkbN5KXENWmKgT2AcjnqTA4RWro7gYTI/zZ0m3Q61zRB8iGOfbeQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extensionName__",
+   "options_page": "src/options/index.html",
+   "permissions": [ "notifications", "gcm", "storage", "identity", "identity.email" ],
+   "version": "1.0.26"
+}

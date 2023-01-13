@@ -1,0 +1,12 @@
+{
+"manifest_version":2,
+"name":"Atomic Blonde Wallpapers HD",
+"description":"Install this extension to get a random background theme with HD wallpapers of Atomic Blonde heroes",
+"icons":{"128":"img/icone/128.png"},
+"permissions":["\u003Call_urls\u003E","*://*/*","chrome://favicon/*","bookmarks","management","history","bookmarks","storage","sessions","unlimitedStorage","tabs","activeTab","tabCapture","contextMenus","webRequest","cookies","geolocation","topSites"],
+"short_name":"Full HD NewTab",
+"chrome_url_overrides":{"newtab":"pages/newtab.html"},
+"update_url":"https://clients2.google.com/service/update2/crx",
+"version":"0.2.31",
+"browser_action":{"default_icon": "img/icone/128.png","default_title":"Full HD NewTab"},
+"web_accessible_resources":["pages/newtab.html"]}

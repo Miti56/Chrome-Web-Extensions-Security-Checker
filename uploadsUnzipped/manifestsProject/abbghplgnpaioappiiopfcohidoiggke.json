@@ -1,0 +1,13 @@
+{"offline_enabled": true, 
+"background": {"scripts": ["main_script.js"]},
+ "name": "__MSG_extName__", 
+"chrome_url_overrides": {"newtab": "newtab.html"},
+ "version": "2.0.4", 
+"browser_action": {"default_icon": "128-size.png", 
+"default_title": "My Hero Academia Wallpapers"},
+ "icons": {"128": "128-size.png", 
+"48": "48-size.png"},
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"description": "__MSG_extDesc__", 
+"default_locale": "en", 
+"manifest_version": 2}

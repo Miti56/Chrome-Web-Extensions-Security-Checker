@@ -1,0 +1,82 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "manifest_version": 2,
+    "version": "2.0.2",
+    "default_locale": "en",
+    "icons": {
+        "128": "icon.png"
+    },
+    "theme": {
+        "colors": {
+            "toolbar": [
+                229,
+                134,
+                96
+            ],
+            "frame_incognito": [
+                102,
+                102,
+                102
+            ],
+            "ntp_text": [
+                255,
+                255,
+                255
+            ],
+            "frame": [
+                224,
+                203,
+                99
+            ],
+            "frame_inactive": [
+                224,
+                210,
+                139
+            ],
+            "frame_incognito_inactive": [
+                128,
+                128,
+                128
+            ]
+        },
+        "images": {
+            "theme_toolbar": "theme_toolbar.png",
+            "theme_ntp_background": "theme_ntp_background.jpg",
+            "theme_tab_background": "theme_tab_background.png",
+            "theme_tab_background_incognito": "theme_tab_background_incognito.png"
+        },
+        "properties": {
+            "ntp_background_alignment": "bottom",
+            "ntp_background_repeat": "no-repeat",
+            "ntp_logo_alternate": 1
+        },
+        "tints": {
+            "frame": [
+                255,
+                255,
+                255
+            ],
+            "frame_inactive": [
+                255,
+                255,
+                255
+            ],
+            "frame_incognito": [
+                255,
+                255,
+                255
+            ],
+            "frame_incognito_inactive": [
+                255,
+                255,
+                255
+            ]
+        },
+        "clear_new_tab": {
+            "size": "cover_screen"
+        }
+    }
+}

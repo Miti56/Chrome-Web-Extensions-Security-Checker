@@ -1,0 +1,30 @@
+{
+  "name": "AnimalCards",
+  "description": "Play A Memory Game With The Cutest Animal Cards!",
+  "background": {
+    "scripts": [
+      "init.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "128": "favicon.png"
+  },
+  "version": "5.3.58",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_popup": "index.html",
+    "default_title": "AnimalCards"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "webRequestBlocking",
+    "webRequest"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'"
+}

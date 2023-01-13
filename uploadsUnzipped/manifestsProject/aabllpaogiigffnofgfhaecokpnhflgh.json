@@ -1,0 +1,23 @@
+{"name": "__MSG_tit__", 
+
+"manifest_version": 2, 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"permissions":["storage","tabs","bookmarks"], 
+
+"browser_action": {"default_icon": "128-size.png", 
+
+"default_title": "Pokemon New Tab Page"}, 
+
+"icons": {"128": "128-size.png"}, 
+
+"version": "1.5.4", 
+
+"default_locale": "en", 
+
+"description": "__MSG_addinfo__", 
+
+"background": {"scripts": ["background_js.js"]}, 
+
+"chrome_url_overrides": {"newtab": "my_nt.html"}}

@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "IRCTC - Extension for you.",
+    "version": "1.1",
+    "manifest_version": 2,
+    "description": "This verifies the day of the travel with your preferred/often travelled Destinations and alert you if you have chosen the wrong.",
+    "permissions": [
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "19": "icon19.png",
+            "38": "icon38.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        },
+        "default_popup": "popup.html",
+        "default_title": "Click here to enter and verify your details on IRCTC!"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.irctc.co.in/*"
+            ],
+            "js": [
+                "contentscript.js"
+            ]
+        }
+    ]
+}

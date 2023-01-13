@@ -1,0 +1,40 @@
+  {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,  
+    "default_locale": "zh_TW",
+    "version": "1.0.7",
+    "icons" : {
+      "16" :  "/img/search16.png"
+    },
+    "name": "FinDiy",
+    "description": "網站整合搜尋工具,讓搜尋更輕鬆,更精準！",
+    "web_accessible_resources": ["/css/*","/js/*","/html/*","/img/*","/data/*","chrome://apps/"],
+    "background": {
+        "persistent": true,
+        "scripts": ["/js/jquery-2.0.0.min.js","/js/background.js"]
+    },
+    "browser_action": {
+      "default_icon": { 
+        "16": "/img/search16.png",
+        "19": "/img/search19.png",
+        "38": "/img/search38.png",
+        "128": "/img/search128.png" 
+      },
+      "default_title": "自訂搜尋引擎",
+      "default_popup": "/html/popup.html"
+      },
+
+      "content_security_policy": "object-src 'unsafe-eval'; script-src 'unsafe-eval' https://suggestqueries.google.com; connect-src *",
+      "chrome_url_overrides":{
+      "newtab":"/html/newpage.html"
+    },
+  "options_page":"/html/options.html",
+  "permissions" : ["history","management","contextMenus","tabs","http://suggestqueries.google.com/","https://suggestqueries.google.com/","https://www.google.com/","http://www.google.com/","https://www.google.com.tw/","http://www.google.com.tw/","https://www.google.com/complete/*","http://localhost/","storage","http://*/*"],
+  "content_scripts":[{
+    "matches":["<all_urls>"],
+    "all_frames": false,
+    "js":["/js/jquery-2.0.0.min.js", "/js/jquery-ui.min.js" ,"/js/jquery-hotkeys-min.js","/js/main.js","/js/iframe.js","/js/detection.js"],
+    "css":["/css/findiy.css"]
+    }]
+  }

@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ByteContainer chrome extension",
+    "description": "Allows you to submit the current URL to https://ByteContainer.com without leaving your tab",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": {
+            "19": "icon19.png",
+            "38": "icon38.png"
+        },
+        "default_popup": "popup.html",
+        "default_title": "Submit current URL to ByteContainer"
+    },
+    "permissions": [
+        "activeTab",
+        "https://bytecontainer.com/"
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "homepage_url" : "https://bytecontainer.com/",
+    "short_name" : "ByteContainer"
+}

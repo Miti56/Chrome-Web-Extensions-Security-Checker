@@ -1,0 +1,32 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+  	
+  	"name": "Yayin Takip Ext",
+  	"description": "Güncel Yayinlari takip etmek üzere gelistirdigimiz eklentinin son surumu.",
+  	"version": "0.0.9",
+  	
+  	"background": {
+      "scripts": [ "js/jquery-4.1.0.min.js", "js/pups.js" ]
+   	},
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://videon.icu; object-src 'self'",   
+
+  "browser_action": {
+	"default_title": "Pups News",
+    "default_icon": "images/defIcon.png",
+    "default_popup": "pups.html"
+    
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["js/jquery-4.1.0.min.js", "js/pups.js"]
+    }
+  ],
+  "icons": {
+    "128": "images/defIcon.png"
+  },
+  "permissions": ["tabs", "http://*/*","https://*/*","activeTab"]
+
+}

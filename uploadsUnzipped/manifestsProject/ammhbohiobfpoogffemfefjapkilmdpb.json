@@ -1,0 +1,19 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "name":"Cautare pe F64",
+    "version":"0.1",
+    "manifest_version":2,
+    "description":"Menu contextual pentru cautare de produse pe F64 (plecand de la textul selectat).",
+    "icons":{
+        "16":"icon16.png",
+        "48":"icon48.png",
+        "128":"icon128.png"
+    },
+    "background":{
+        "persistent":false,
+        "scripts":["f64_context.js"]
+    },
+    "permissions":[
+        "contextMenus", "tabs"
+    ]
+}

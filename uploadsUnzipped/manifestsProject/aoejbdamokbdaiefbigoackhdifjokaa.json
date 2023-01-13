@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.0",
+  "name": "Doplin",
+  "manifest_version": 2,
+  "description": "Dopelin Chrome Extension",
+  "page_action": {
+    "default_title": "Dopelin",
+    "default_icon": "images/get_started32.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "images/get_started16.png",
+    "32": "images/get_started32.png",
+    "48": "images/get_started48.png",
+    "128": "images/get_started128.png"
+  },
+  "web_accessible_resources": [
+    "popup.html",
+    "images/*",
+    "webfonts/fa-regular-400.otf",
+    "webfonts/fa-regular-400.svg",
+    "webfonts/fa-regular-400.ttf",
+    "webfonts/fa-regular-400.woff",
+    "webfonts/fa-regular-400.woff2",
+
+    "images/success.png",
+     "images/get_started128.png"
+  ],
+  "content_scripts": [
+    {
+      "css": [
+        "css/style.css"
+      ],
+      "js": [
+        "js/jquery-3.4.1.slim.js",
+        "js/content.js",
+        "js/pusher.min.js",
+
+        "js/loading.min.js"
+      ],
+      "images": "images/*",
+      "matches": [
+        "*://*.amazon.de/*", "*://*.amazon.com/*",
+        "https://www.amazon.com/*"
+      ]
+    }
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens popup.html"
+    }
+  },
+  "permissions": [
+    "management",
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/*",
+    "*://*/*"
+  ],
+  "content_security_policy": "object-src 'self'; script-src 'self' http://localhost:3000 https://localhost:3001 https://stats.pusher.com 'unsafe-eval'; connect-src https://qa-mws.myus.com https://gateway.myus.com/ https://s3.amazonaws.com https://s3.us-east-2.amazonaws.com https://images-na.ssl-images-amazon.com http://localhost:3000 https://localhost https://localhost:3001; style-src * 'unsafe-inline' 'self' blob:; img-src * 'self' data: https:;"
+}
+
+
+
+
+

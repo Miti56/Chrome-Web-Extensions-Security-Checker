@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "name": "Wowin Solitaire",
+    "version": "1.0.1",
+    "manifest_version": 2,
+    "icons": {
+        "128": "images/icon_128.png"
+    },
+    "app": {
+        "urls": [
+        "https://www.wowin.com/game/wowin-solitaire/practice"
+        ],
+        "launch": {
+            "web_url": "https://www.wowin.com/game/wowin-solitaire/practice?utm_source=google&utm_medium=store&utm_content=WowinSolitaire&utm_campaign=games"
+        }
+    },
+    "permissions": [
+    "unlimitedStorage"
+    ]
+}

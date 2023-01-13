@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "CafeX Assist Demo Extension",
+  "permissions": [
+          "storage",
+          "tabs",
+	  "<all_urls>"
+  ],
+  "description": "This extension adds Assist client code to all web pages when active",
+  "version": "1.2",
+  "background": { "scripts": ["background.js"] },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "icons" : { 
+	"16" : "icon16.png",
+	"48" : "icon48.png",
+	"128" : "icon128.png" 
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "CafeX LiveAssist Demo ON/OFF"
+  }
+}

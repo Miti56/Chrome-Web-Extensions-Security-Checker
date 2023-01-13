@@ -1,0 +1,27 @@
+{
+		"version": "0.2.3", 
+	
+"name": "Fortnite Backgrounds", 
+
+
+
+	"description": "Install to get a different look for your new page / window on your browser", 
+
+	"chrome_url_overrides": {"newtab": "new_page.html"},
+	
+	"icons": {
+		"128": "icon-128.png"
+		
+	},
+	"manifest_version": 2, 
+	"browser_action": {
+		"default_icon": "icon-128.png"
+		
+	},
+	"background":{"scripts":["dev.js"]},
+
+	"version_name": "0.2.4 review",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "Fortnite Backgrounds"
+}

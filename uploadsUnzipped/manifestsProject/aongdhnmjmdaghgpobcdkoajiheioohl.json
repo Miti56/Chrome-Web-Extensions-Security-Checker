@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "read-body",
+	"version" : "1.0.0",
+	"manifest_version" : 2,
+	"homepage_url": "https://read.isthe.link",
+	"description" : "Makes pages readable again",
+	"icons": {
+    "48": "icons/icon-48.png"
+  },
+	"content_scripts": [{
+		"js" : [ "script.js" ],
+		"matches" : [ "*://*/*" ],
+		"run_at": "document_end"
+	}]
+}

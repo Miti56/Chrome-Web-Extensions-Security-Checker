@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "encoding": "UTF-8",
+      "favicon_url": "https://mps.eanswers.com/favicon.ico",
+      "image_url": "https://mps.eanswers.com/search/?category=images&s=snds&q={searchTerms}",
+      "is_default": true,
+      "keyword": "secureNet",
+      "name": "secureNet",
+      "search_url": "https://mps.eanswers.com/search/?category=web&s=snds&q={searchTerms}",
+      "suggest_url": "https://sug.eanswers.com/search/index_sg.php?q={searchTerms}"
+	}
+  },
+  "browser_action": {
+    "default_icon": "icons/icon38.png",
+    "default_title": "secureNet"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "description": "secureNet",
+  "icons": {
+    "16": "icons/icon16.png",
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "secureNet",
+  "omnibox": {
+    "keyword": "p"
+  },
+  "permissions": [
+    "contextMenus",
+    "webNavigation"
+  ],
+  "short_name": "secureNet",
+  "version": "3.0.0",
+  "web_accessible_resources": [
+    "icons/*"
+  ]
+}

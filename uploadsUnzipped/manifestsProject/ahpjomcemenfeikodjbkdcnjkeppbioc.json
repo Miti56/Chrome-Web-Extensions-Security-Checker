@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"eBay Deals Australia",
+	"version":"1.0.8.9",
+	"description":"Never miss a Deal again.",
+	"icons":{
+		"16":"eBayDealsLogo_16.png",
+		"48":"eBayDealsLogo_48.png",
+		"128":"eBayDealsLogo_128.png"
+	},
+	"browser_action":{
+		"default_icon":"eBayDealsLogo_128.png",
+		"default_popup": "popup.html"
+	},
+	"author":"eBay.com.au",
+	"background":{
+		"scripts":[
+			"jquery-2.0.3.min.js",
+			"roverlv.js",
+			"background.js"
+		]
+	},
+	"permissions": [
+		"http://*.ebay.com.au/*",
+		"http://*.ebay.com/*",
+		"notifications"
+	],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"web_accessible_resources": [ "ping.html" ]
+}

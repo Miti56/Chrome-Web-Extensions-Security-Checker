@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Send2",
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4G4Do5cfEnLadtdizJyykPTeMhFIGX8GEO1GZ0MllaEVXEuGQsGR8C8l2VgNnBfYKhoGSaio45BVt/qsm32h5Cc0Og/Xkgu7VBJRqwmimbvpWvQ5tdZT/NvFPginEkdP2yRugMPExZQq5yzI8FnatSvxNdSCK3ygNJLseqDn3Kh0f9Y257PGUcUe1bKGKbJWTF8AZw5CqUdwyNtPEKNYENS8Ej+VJpEcoLnL9I6BiCZysDfsMYxfkK0n1abXTW3GZI0CSZI2MVadzUoP2Q4WDpRdoqynBWgCd7sKkxLlQ44dkBBpSH848FJiIkZXPswLb2jBmJ2kjlG4PBmcBWjpJwIDAQAB",
+  "description": "Send selected text from the browser to a google doc.",
+  "version": "1.22",
+  "author": "Gus Leyva",
+  "background": {
+  "scripts": ["background.js"],
+  "js":["s2.js","buy.js"],
+  "persistent":true
+  },
+  "icons": {
+    "16": "send2.png",
+    "32": "send2.png",
+    "48": "send2.png",
+    "128": "send2.png"},
+  "permissions":["https://docs.google.com/*","https://apis.google.com/*","https://www.googleapis.com/",
+    "https://docs.googleapis.com/*","identity","contextMenus","storage","notifications","tabs","https://api.twilio.com/*"],
+  "oauth2": {
+    "client_id": "481015228871-q4rf7lfga87fu752pr2tnrgc49tmrv1h.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/documents","https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/chromewebstore.readonly"]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com/ https://docs.google.com/* ; object-src 'self'",
+  
+  "browser_action": {
+   "default_icon": "send2.png",
+   "default_popup": "sendto.html"
+  }     
+}

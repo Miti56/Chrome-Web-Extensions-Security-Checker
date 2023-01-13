@@ -1,0 +1,239 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "Pavel Agarkov",
+   "background": {
+      "scripts": [ "js/background-page.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "38": "img/ml-toolbar-icon-38.png"
+      },
+      "default_popup": "ui/popup.html",
+      "default_title": "Midnight Lizard"
+   },
+   "commands": {
+      "current-toggle": {
+         "description": "__MSG_currentToggleKey__",
+         "suggested_key": {
+            "default": "Alt+Shift+L"
+         }
+      },
+      "global-toggle": {
+         "description": "__MSG_globalToggleKey__",
+         "suggested_key": {
+            "default": "Alt+Shift+M"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/preload.css", "css/content-vars.css", "css/dynamic-loading.css", "css/dynamic-complete.css", "css/dynamic-universal.css", "css/custom/bookmark-sidebar.css" ],
+      "js": [ "js/content-script.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "css/custom/chrome-new-tab.css" ],
+      "matches": [ "https://*/*/chrome/newtab*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/youtube.css" ],
+      "matches": [ "https://www.youtube.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-mail.css" ],
+      "include_globs": [ "https://mail.google.*/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google.css" ],
+      "include_globs": [ "http?://www.google.*/*" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-plus.css" ],
+      "include_globs": [ "https://plus.google.*/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-forms.css" ],
+      "include_globs": [ "https://docs.google.*/forms/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-docs.css" ],
+      "include_globs": [ "https://docs.google.*/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-documents.css" ],
+      "include_globs": [ "https://docs.google.*/document/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-spreadsheets.css" ],
+      "include_globs": [ "https://docs.google.*/spreadsheets/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-slides.css" ],
+      "matches": [ "https://docs.google.com/document/*", "https://docs.google.com/presentation/*", "https://docs.google.com/drawings/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/poeditor.css" ],
+      "matches": [ "https://poeditor.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-accounts.css" ],
+      "include_globs": [ "https://accounts.google.*/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-maps.css" ],
+      "include_globs": [ "https://www.google.*/maps/*", "https://www.google.*/maps?*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "include_globs": [ "https://www.bing.*/maps/*", "https://www.bing.*/maps?*" ],
+      "js": [ "js/custom/bing-maps.js" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_idle"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/bing-maps.css" ],
+      "include_globs": [ "https://www.bing.*/maps/*", "https://www.bing.*/maps?*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/mozilla.css" ],
+      "matches": [ "https://developer.mozilla.org/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/wikipedia.css" ],
+      "include_globs": [ "https://*.wikipedia.org/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/wikibooks.css" ],
+      "include_globs": [ "https://*.wikibooks.org/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/facebook.css" ],
+      "matches": [ "https://www.facebook.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/medium.css" ],
+      "matches": [ "https://www.medium.com/*", "https://medium.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/quora.css" ],
+      "matches": [ "https://www.quora.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/twitter.css" ],
+      "matches": [ "https://www.twitter.com/*", "https://twitter.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/producthunt.css" ],
+      "matches": [ "https://www.producthunt.com/*", "https://producthunt.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/trello.css" ],
+      "matches": [ "https://www.trello.com/*", "https://trello.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/reddit.css" ],
+      "matches": [ "https://www.reddit.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/crowdin.css" ],
+      "matches": [ "https://www.crowdin.com/*", "https://crowdin.com/*", "https://translate.midnight-lizard.org/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-photos.css" ],
+      "matches": [ "https://photos.google.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-groups.css" ],
+      "matches": [ "https://groups.google.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/opencollective.css" ],
+      "matches": [ "https://opencollective.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/slack.css" ],
+      "matches": [ "https://*.slack.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": [ "js/custom/chrome-runtime-connect-external-polyfill.js" ],
+      "matches": [ "*://*.midnight-lizard.org/*" ],
+      "run_at": "document_idle"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/stackoverflow.css" ],
+      "matches": [ "https://*.stackoverflow.com/*", "https://*.stackexchange.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/github.css" ],
+      "matches": [ "https://github.com/*", "https://*.github.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/yahoo.css" ],
+      "matches": [ "https://yahoo.com/*", "https://*.yahoo.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/custom/google-translate.css" ],
+      "include_globs": [ "https://translate.google.*/*" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "img/ml-icon-128+.png",
+      "16": "img/ml-icon-16.png",
+      "32": "img/ml-icon-32.png",
+      "48": "img/ml-icon-48++.png"
+   },
+   "manifest_version": 2,
+   "name": "Midnight Lizard",
+   "offline_enabled": true,
+   "short_name": "Mid.Lizard",
+   "version": "10.2.0",
+   "web_accessible_resources": [ "js/page-script.js" ]
+}

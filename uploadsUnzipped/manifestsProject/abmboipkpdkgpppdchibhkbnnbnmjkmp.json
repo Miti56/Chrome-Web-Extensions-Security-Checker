@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Crozdesk Web App Explorer",
+  "short_name": "Crozdesk",
+  "description": "Discover and compare the best web apps with ease. Access crowdsourced user reviews, rankings and competing services whilst browsing.",
+  "version": "1.7.4",
+  "browser_action": {
+    "default_icon": "images/cloud-icon-grey.png",
+    "default_popup": "popup.html", 
+    "default_title": "Crozdesk"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "storage",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": [
+    "fonts/fontawesome-webfont.woff", 
+    "fonts/fontawesome-webfont.woff2",
+    "frame.html"
+  ], 
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "256": "images/icon-256.png",
+    "64": "images/icon-64.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/frame.js",
+        "js/iframeResizer.min.js"
+      ],
+      "css": ["css/frame.css"],
+      "run_at": "document_end"
+    }
+  ]
+}

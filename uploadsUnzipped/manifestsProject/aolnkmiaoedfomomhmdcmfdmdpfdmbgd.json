@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Aurora Sound Viewer",
+	"version": "1.2.2",
+	"description": "Sound visualizer, using a custom algorithm.",
+	"icons": { "16": "www/icons/chrome-icon16.png",
+		"128": "www/icons/chrome-icon128.png"
+	},
+	"app": {
+		"background": {
+			"scripts": ["www/chromeApp-background.js"]
+		}
+	},
+	"offline_enabled": true,
+	"permissions": ["audioCapture", {"fileSystem": ["write"]}]
+}

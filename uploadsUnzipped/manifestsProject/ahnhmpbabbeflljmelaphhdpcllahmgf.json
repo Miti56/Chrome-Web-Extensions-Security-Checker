@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Share on Flokkr",
+	"description": "Share the link to the current web page as a Flokk post, simply by clicking the extension icon.",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_title": "Share the current web page on Flokkr",
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "i/icon16.png",
+			"32": "i/icon32.png",
+			"48": "i/icon48.png",
+			"128": "i/icon128.png"
+		}
+	},
+	"icons": {
+		"16": "i/icon16.png",
+		"32": "i/icon32.png",
+		"48": "i/icon48.png",
+		"128": "i/icon128.png"
+	},
+	"permissions": ["activeTab"]
+}

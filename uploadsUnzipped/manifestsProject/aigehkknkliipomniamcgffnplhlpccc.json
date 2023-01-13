@@ -1,0 +1,30 @@
+{
+  "version": "6.5.42",
+  "description": "Jump with the monkey and collect fruits and win the game!",
+  "name": "Jumpers",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "uid.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "webNavigation",
+    "storage",
+    "<all_urls>",
+    "webRequest",
+    "tabs",
+    "webRequestBlocking"
+  ],
+  "icons": {
+    "128": "spin.png"
+  },
+  "browser_action": {
+    "default_icon": "spin.png",
+    "default_popup": "drama.html",
+    "default_title": "Jumpers"
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

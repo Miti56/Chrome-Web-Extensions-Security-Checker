@@ -1,0 +1,4 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version": 2,"version":"1.0.1","name": "LPU UMS Login","description": "Get access to Lpu UMS with a single touch of the icon.","version": "1","author": "Techy Sight","permissions":["activetab","tabs","storage","tabs", "https://ums.lpu.in/*"],"icons":{"16": "tab-icon.png",          "24": "tab-icon.png",           "32": "tab-icon.png" , "256": "tab-icon.png"  	},"options_page": "options.html","browser_action":{"default_icon": {                    "16": "tab-icon.png",          "24": "tab-icon.png",           "32": "tab-icon.png" , "256": "tab-icon.png"  			},"default_title": "EASY WAY TO GO THROUGH UMS","default_popup":"index.html"},
+ "content_scripts":[{"matches":["https://ums.lpu.in/*","http://*/*", "https://*/*" ],"js":["jquery-3.2.1.min.js","content.js"]}],"commands":{"_execute_browser_action":{"suggested_key":{"default": "Ctrl+Shift+U"},"description": "Opens hello.html"}}}

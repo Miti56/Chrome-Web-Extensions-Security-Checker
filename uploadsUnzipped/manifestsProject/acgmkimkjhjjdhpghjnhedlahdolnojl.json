@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Krunker.io cheats",
+  "version": "0.7.70",
+  "description": "Krunker.io chrome extension",
+  "homepage_url": "https://github.com/PowerOfUniverse/Krunker.io-Cheats",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "storage",
+    "*://*/*",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "background"
+  ],
+  "externally_connectable": {
+      "matches": [
+        "*://*.Krunker.io/"
+      ]
+  },
+  "web_accessible_resources": [
+    "init.js"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

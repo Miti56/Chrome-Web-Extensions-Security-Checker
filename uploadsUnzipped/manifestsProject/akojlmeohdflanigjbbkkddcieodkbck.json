@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Get Age",
+  "version" : "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["http://*.vk.com/*", "http://vk.com/*", "https://vk.com/*"],
+      "js": ["jquery-1.11.1.min.js", "my.user.js"]
+    }
+  ],
+
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version" : 2,
+  "content_security_policy": "script-src 'self' https://api.vk.com; object-src 'self'"
+}

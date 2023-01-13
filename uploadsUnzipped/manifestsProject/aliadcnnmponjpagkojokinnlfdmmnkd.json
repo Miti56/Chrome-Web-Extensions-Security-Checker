@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "instela",
+    "description": "bu eklentiyle gezilen herhangi bir sayfayı kolayca instela'da paylaşabilirsiniz.",
+    "version": "3.0.2",
+    "browser_action": {
+        "default_icon": "browser_action.png",
+        "default_popup": "popup.html",
+        "default_title": "bu sayfayı instela'da paylaş"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "page": "bg.html"
+    },
+    "icons": {
+        "128": "browser_action.png"
+    }
+}

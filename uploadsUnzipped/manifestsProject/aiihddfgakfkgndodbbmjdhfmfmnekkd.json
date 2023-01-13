@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Say something!",
+  "version": "0.0.1",
+  "manifest_version": 2,
+
+  "description": "'Say something' allows you to write and keep all your to-do list by a simple voice command.",
+  "icons": {
+    "16": "app-logo-16.png",
+    "128": "app-logo-128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+
+  "permissions": ["audioCapture", "storage", "unlimitedStorage"],
+  "minimum_chrome_version": "23"
+}

@@ -1,0 +1,46 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.0",
+  "name": "Twilight Eclipse Small",
+  "theme": {
+      "images" : {
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+    },
+    "colors" : {
+      "frame" : [0, 0, 0],
+      "frame_inactive" : [83, 83, 83],
+      "frame_incognito" : [45, 83, 140],
+      "frame_incognito_inactive" : [71, 71, 71],
+      "toolbar" : [0, 0, 0],
+      "tab_text" : [204, 0, 51],
+      "tab_background_text" : [64, 64, 64],
+      "bookmark_text" : [204, 0, 51],
+      "ntp_background" : [0, 0, 0],
+      "ntp_text" : [255, 255, 255],
+      "ntp_link" : [255, 255, 255],
+      "ntp_link_underline" : [204, 0, 51],
+      "ntp_header" : [71, 71, 71],
+      "ntp_section" : [0, 0, 0],
+      "ntp_section_text" : [204, 0, 51],
+      "ntp_section_link" : [209, 209, 209],
+      "ntp_section_link_underline" : [204, 0, 51],
+      "control_background" : [0, 0, 0],
+      "button_background" : [0, 0, 0]
+    },
+    "tints" : {
+      "buttons" : [1.00, 1.00, 1.00],
+      "frame" : [0.00, 0.00, 0.00],
+      "frame_inactive" : [0.00, 0.00, 0.30],
+      "frame_incognito" : [0.00, 0.00, 0.00],
+      "frame_incognito_inactive" : [0.00, 0.00, 0.20],
+      "background_tab" : [0.00, 0.00, 0.20]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "center bottom",
+      "ntp_background_repeat" : "no-repeat",
+      "ntp_logo_alternate" : 0
+    }
+  }
+}

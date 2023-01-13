@@ -1,0 +1,66 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_appName__",
+	"version": "0.0.4",
+	"manifest_version": 2,
+	"description": "__MSG_appDescription__",
+	"icons": {
+		"16": "images/icon-16.png",
+		"128": "images/icon-128.png"
+	},
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"permissions": [
+		"tabs",
+		"*://mp3.zing.vn/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://mp3.zing.vn/bai-hat/*"
+			],
+			"js": [
+				"bower_components/jquery/dist/jquery.min.js",
+				"scripts/bai_hat.js"
+			],
+			"run_at": "document_end",
+			"all_frames": false
+		},
+		{
+			"matches": [
+				"*://mp3.zing.vn/album/*",
+				"*://mp3.zing.vn/playlist/*"
+			],
+			"js": [
+				"bower_components/jquery/dist/jquery.min.js",
+				"scripts/album.js"
+			],
+			"run_at": "document_end",
+			"all_frames": false
+		},
+		{
+			"matches": [
+				"*://mp3.zing.vn/video-clip/*"
+			],
+			"js": [
+				"bower_components/jquery/dist/jquery.min.js",
+				"scripts/video.js"
+			],
+			"run_at": "document_end",
+			"all_frames": false
+		}
+	],
+	"page_action": {
+		"default_icon": {
+			"19": "images/icon-19.png",
+			"38": "images/icon-38.png"
+		},
+		"default_title": "Mp3StreamURLReader",
+		"default_popup": "popup.html"
+	}
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Mind maps",
+  "description": "The clear way to share complex information. Mind maps is a collaborative tool that helps you make sense of complex things.",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "48": "img/icon-48x48.png",
+    "128": "img/icon-128x128.png"
+  },
+  "browser_action": {
+    "default_title": "Mind maps"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

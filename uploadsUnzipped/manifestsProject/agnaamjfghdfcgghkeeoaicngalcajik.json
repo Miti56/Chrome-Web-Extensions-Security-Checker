@@ -1,0 +1,27 @@
+{
+   "author": "Oğuzhan Atabek",
+   "background": {
+      "scripts": [ "main.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+	  "19": "Nisanyan19.png",
+	  "38": "Nisanyan38.png"
+       },
+       "default_title": "__MSG_appDefaultTitle__"
+   },
+   "icons": {
+      "16": "Nisanyan16.png",
+      "32": "Nisanyan32.png",
+      "48": "Nisanyan48.png",
+      "128": "Nisanyan128.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "short_name": "__MSG_appShortName__",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "permissions": [ "contextMenus", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4"
+}

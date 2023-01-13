@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "GA Browser Control",
+	"description": "Allows you to control actions in your PC browser using Google Assistant, IFTTT and PushBullet",
+	"version": "1.8.1",
+	"author": "Jan Stemberk",
+	"permissions": [ "tabs", "activeTab", "contextMenus", "notifications", "idle", "https://*/*", "http://*/*", "storage"],
+	"options_page": "options.html",
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"128": "128.png" },
+	"background": {
+		"scripts": ["api.js", "actions.js"]
+
+    }
+}

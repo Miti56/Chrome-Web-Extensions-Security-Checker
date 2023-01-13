@@ -1,0 +1,23 @@
+{"icons": {"128": "128-ico.png"}, 
+
+"browser_action": {"default_icon": "128-ico.png", 
+
+"default_title": "Akatsuki No Yona Backgrounds & Themes"}, 
+
+"default_locale": "en", 
+
+"chrome_url_overrides": {"newtab": "page.html"}, 
+
+"manifest_version": 2, 
+
+"description": "__MSG_locDescription__", 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"version_name":"fixed47", 
+
+"name": "__MSG_localeHead__", 
+
+"background": {"scripts": ["main.js"]}, 
+
+"version": "0.8.9"}

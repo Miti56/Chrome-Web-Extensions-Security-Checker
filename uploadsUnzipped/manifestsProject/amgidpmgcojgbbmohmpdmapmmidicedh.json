@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Fix Github Projects",
+    "description": "This extension fixes some issues with Github Projects",
+    "version": "1.2",
+    "icons": { "48": "icon48.png",
+          "128": "icon128.png" 
+    },
+    "content_scripts": [
+    {
+      "matches": ["*://*.com/*/projects/*"],
+      "js": ["fix_projects.js"]
+    }
+    ]
+}

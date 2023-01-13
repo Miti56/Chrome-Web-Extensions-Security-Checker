@@ -1,0 +1,68 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2, 
+  "name": "Scrape Hawk",
+  "version": "1.0.2", 
+  "description": "Scrape Hawk is the best point and click Scraper to get the info you need",
+  "background": {
+    "scripts": ["js/jquery-3.3.1.min.js", "js/uri.all.min.js", "js/date.js", "scrapehawk.js"]
+  },  
+  "icons": { "16": "img/hawk_16x16.png",
+           "48": "img/hawk_48x48.png",
+          "128": "img/hawk_128x128.png"
+  },   
+  "browser_action": 
+  {
+    "default_icon": "img/hawk_128x128.png",
+    "default_popup": "popup.html",
+	"default_title": "Scrape Hawk"
+  },
+  "options_page": "options.html",  
+  "permissions": [
+    "https://www.scrapehawk.com/",
+    "http://fonts.googleapis.com/",
+    "https://fonts.googleapis.com/",        
+    "tabs",
+    "activeTab",     
+    "storage",
+    "contextMenus",
+    "unlimitedStorage",
+    "alarms"
+  ],   
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+        "css": [
+          "css/scrapehawk_styles.css",
+          "css/jquery.qtip.css",
+          "css/scrapehawk_svg.css"
+        ],
+      "js": [
+        "js/jquery-3.3.1.min.js",			
+        "js/underscore-min.js",       
+        "js/sniptools.js",
+        "js/hawk_flyer.js",                
+        "js/selectionBox.js",
+        "js/selectElemListeners.js",
+        "js/uri.all.min.js",
+        "js/svg.js",
+        "js/jquery.qtip.min.js",        
+        "js/draggabilly.pkgd.min.js",    
+	    "contentscript.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "externally_connectable": {
+     "matches": ["*://*.scrapehawk.com/*"]
+  },  
+  "web_accessible_resources": [
+    "templates/*",
+    "css/*",
+    "img/*",
+    "fonts/*.ttf",        
+    "sound/*",
+    "js/*"	
+  ] 
+}

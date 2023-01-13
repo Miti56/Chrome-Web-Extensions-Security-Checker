@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "tapsafe",
+  "version": "0.0.1",
+  "description": "Browser extension to launch Tapsafe.",
+  "author": "Barnaby <b@zi.is>",
+  "license": "GPL-2.0",
+  "repository": "github/tapsafe/tapsafe-ext",
+
+  "icons": {
+    "19": "icon-19.png",
+    "48": "icon-48.png",
+    "96": "icon-96.png",
+    "128": "icon-128.png"
+  },
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "19": "icon-19.png",
+      "38": "icon-38.png"
+    },
+    "default_title": "Tapsafe"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+}

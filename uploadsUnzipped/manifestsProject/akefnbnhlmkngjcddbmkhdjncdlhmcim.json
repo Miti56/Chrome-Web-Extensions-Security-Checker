@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "打卡提醒器 feat. Magic",
+  "description": "昨天又忘了打卡！是时候来个提醒器了！更有Magic经典表情温馨提醒打卡！",
+  "version": "0.4.22",
+  "author": "shxqsylb@gmail.com",
+  "background": {
+    "scripts": ["common.js", "reminder.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "打卡打卡！吃饭吃饭！"
+  },
+  "icons": {
+      "128": "icon128.png"
+  },
+  "commands": {
+    "open-monitor-page": {
+      "suggested_key": {
+        "default": "Alt+2"
+      },
+      "description": "打开所有设置的日报页面"
+    },
+    "capture-monitor-all": {
+      "suggested_key": {
+        "default": "Alt+3"
+      },
+      "description": "触发当前窗口日报截图功能"
+    },
+    "capture-page": {
+      "suggested_key": {
+        "default": "Alt+1"
+      },
+      "description": "触发当页完整截图功能"
+    },
+    "capture-screen": {
+      "description": "触发当前屏幕截图功能"
+    },
+    "capture-monitor-page": {
+      "description": "触发当前页日报截图功能"
+    }
+  },
+  "minimum_chrome_version": "55",
+  "permissions": [
+      "notifications",
+      "alarms",
+      "tabs",
+      "activeTab",
+      "<all_urls>",
+      "downloads"
+  ]
+}

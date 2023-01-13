@@ -1,0 +1,42 @@
+{
+   "manifest_version": 2,
+   "name": "Inspirational & Motivational Quotes New Tab",
+   "description": "Inspirational & Motivational - Rewiring Your Brain Towards Achieving Your Desired Goals | RewiringYourMind.com",
+   "version": "2.8",
+   
+   "browser_action": {
+    "default_popup": "settings.html"
+   },
+   "permissions": [
+    "activeTab",
+    "storage",
+    "cookies",
+	"contextMenus",
+	"*://*.rewiringyourmind.com/*"
+   ],
+   "homepage_url": "http://RewiringYourMind.com/",   
+   "background": {
+    "scripts": ["background.js"]
+   },
+   
+   "externally_connectable": {
+    "matches": ["*://rewiringyourmind.com/*"]
+   },
+ 
+   "chrome_url_overrides": {
+      "newtab": "popup.html"
+   },
+
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   
+   "web_accessible_resources": [ "*://rewiringyourmind.com/*" ] ,
+	
+   "icons": {
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "64": "icon_64.png"
+   },
+
+   "update_url": "https://clients2.google.com/service/update2/crx"
+
+}

@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://boost.ur-search.com/favicon.ico",
+         "instant_url": "http://boost.ur-search.com/?ref=omnibox&q={searchTerms}",
+         "is_default": true,
+         "keyword": "UR Boost",
+         "name": "UR Boost",
+         "search_url": "http://boost.ur-search.com/?ref=omnibox&q={searchTerms}",
+		 "suggest_url": "http://api.ur-search.com/?query={searchTerms}"
+      }
+   },
+   "description": "UR Search, amazingly fast search experience",
+  "browser_action": {
+    "default_icon": "images/128-s.png"
+  },
+  "web_accessible_resources": [ "images/*.png" ],
+   "icons": {
+      "128": "images/128-s.png",
+      "16": "images/16-s.png",
+      "48": "images/48-s.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnaeMZafFZDYUTCYKAW/lOidUHDi3k2uvK45oxYYgswjJ1tdWMlftKH42YUngZPBt26tDz4Rw6OjQ5ThubRtK+0Y+rMB0/ONPDjmXId/F1TPpG+CAertHjGbWwuFMx9vZRTREgiwLkxOQfpKtMIzQb0tIEHvLXaOUTraivv06SZG3yMAQZofmCdtS/dd+C9VrYE7cZnRVjZ/k6Hl0HTSwxXm+jt5UoBEaiVJSdyu6wGfUMaofQHXguGi9FCfDFtfyAHoOvxDi3l3N0PdSLLpIB66YJteV84gG8zxcroIaO3Gfpk1UcCQetcWZBkFX4ValcDFIvLAmvAdomX6+2wmEGQIDAQAB",
+   "manifest_version": 2,
+   "name": "UR Search",
+   "version": "1.0.0.7"
+}

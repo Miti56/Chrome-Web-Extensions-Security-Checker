@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Move Tabs to New Window",
+  "short_name": "New Window",
+  "description": "Move selected tabs to new window",
+  "version": "1.0",
+  "minimum_chrome_version": "61",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "assets/icon.png",
+    "default_title": "Move Tabs to New Window"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "commands": {
+    "move-tabs-to-new-window": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "MacCtrl+Shift+M"
+      },
+      "description": "Move selected tabs to new window"
+    }
+  }
+}

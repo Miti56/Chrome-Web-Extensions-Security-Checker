@@ -1,0 +1,7 @@
+{"background": {"scripts": ["my_js.js"]},
+
+ "version": "1.2.4", "default_locale": "en", "icons": {"128": "128-main.png"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", "version_name":"id14","permissions":["bookmarks"], "description": "__MSG_locDesc__", "name": "__MSG_AddHead__", "manifest_version": 2, "browser_action": {"default_icon": "128-main.png", "default_title": "Klay Thompson Backgrounds & New Tab"},
+
+ "chrome_url_overrides": {"newtab": "new_tab.html"}}

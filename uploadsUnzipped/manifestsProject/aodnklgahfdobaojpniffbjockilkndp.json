@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "URL Buddy",
+    "version": "1.0.1",
+    "description": "A tool to make your URL just a little bit better.",
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "48": "images/icon.png"
+    },
+    "permissions": ["activeTab", "tabs"]
+}

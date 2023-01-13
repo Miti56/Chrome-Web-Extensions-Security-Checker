@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"QQR",
+"description":"右键快速生成二维码.",
+"version":"1.0.0",
+"manifest_version":2,
+"icons": {
+      "48": "logo.png"
+   },
+"browser_action": {
+  "default_icon": "logo.png",
+  "default_title": "Quick QR Code"
+},
+"content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./js/jq3.4.1.min.js", "./js/qrcode.js", "./js/content-script.js"],
+      "css": ["./css/custom.css"],
+      "run_at": "document_start"
+    }
+],
+"web_accessible_resources": ["js/jq3.4.1.min.js", "js/inject.js"],
+"background":
+{
+	"scripts": ["./js/jq3.4.1.min.js", "./js/qrcode.js", "./js/background.js"]
+},
+"permissions":[
+		"contextMenus",
+		"activeTab"
+],
+	"homepage_url": "https://zxx.im"
+}

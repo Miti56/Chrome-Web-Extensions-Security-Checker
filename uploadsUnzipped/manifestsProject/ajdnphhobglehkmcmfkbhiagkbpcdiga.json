@@ -1,0 +1,22 @@
+{
+     "name":  "Zoho Survey: Make surveys and questionnaires",
+     "description" :  "Zoho Survey is easy-to-use online survey and questionnaire building software.",
+      "short_name":"Zoho Survey",
+     "version":"1.3",
+     "update_url":"http://clients2.google.com/service/update2/crx",
+     "manifest_version":2,
+     "container": ["DOMAIN_INSTALLABLE","GOOGLE_DRIVE"],
+     "api_console_project_id":"83588307665",
+     "app":  {
+         "urls"  :   [
+               "https://survey.zoho.com/"  
+               ],
+         "launch":{
+               "web_url":"https://survey.zoho.com"
+               }
+               },
+         "icons" :  {
+               "128":"survey_icon_128.png"
+               }
+               }
+    

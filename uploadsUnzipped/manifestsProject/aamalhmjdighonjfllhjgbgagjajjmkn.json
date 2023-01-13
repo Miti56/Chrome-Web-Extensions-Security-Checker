@@ -1,0 +1,40 @@
+{	"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "viewtubes",
+	"version": "4.5.6",
+     "manifest_version": 2,
+	"description": "viewtubes proxy",
+	"icons": {
+		"128": "icon_128.png"
+	},
+      "options_page": "fancy-settings/source/index.html",
+	"browser_action": {
+		"default_icon": "icon_128.png",
+		"default_title": "viewtubes"
+	},
+
+    "content_scripts": [
+        {
+            "matches": ["http://www.youtube.com/*"],
+            "js": ["js/suspender.js"],
+            "run_at" : "document_start"
+        },
+        {
+            "matches": ["http://www.youtube.com/*"],
+            "js": ["js/checker.js"],
+            "run_at" : "document_end"
+        }
+    ],
+
+	"permissions": [
+		"<all_urls>",
+		"proxy",
+		"tabs",
+           "webRequest",
+		"webRequestBlocking",
+        "http://www.youtube.com/watch*",
+        "http://www.youtube.com/results*"
+	],
+
+    "background": {
+    		"page": "background.html"  }
+}

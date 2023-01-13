@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Check SSL",
+  "short_name": "Check SSL",
+  "description": "Checks if websites have weak SHA-1 SSL certificates.",
+  "version": "1.0",
+  "permissions": [
+    "https://*/",
+    "http://*/",
+    "https://shaaaaaaaaaaaaa.com/api/check/*",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["app.js"]
+    }
+  ],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "web_accessible_resources": ["https://shaaaaaaaaaaaaa.com/api/check/*"]
+}

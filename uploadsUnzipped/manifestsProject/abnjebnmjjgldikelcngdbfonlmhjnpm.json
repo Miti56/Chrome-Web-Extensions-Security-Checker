@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "TMS-Analysis",
+  "description": "TMS-Analysis",
+  "version": "3.17",
+  
+  "permissions": [
+    "*://*/*",
+    "http://www.trademe.co.nz/*",
+    "https://www.trademe.co.nz/*",
+    "https://www.google.co.nz/*",
+    "activeTab",
+    "downloads",
+    "browser",
+    "fileSystem",
+    "storage",
+    "unlimitedStorage",
+    "webview",
+    "identity",
+    "tabs"
+
+  ],
+
+
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "web_accessible_resources": [
+    "img/*.png",
+    "html/*.html",
+    "css/*.css"
+
+  ],
+
+  "background": {
+    "scripts": [      
+      "Library/jQuery/jquery-3.1.1.min.js"
+      
+      
+    ],
+    "persistent": false
+  },
+
+  "content_security_policy": "script-src 'self' https://apis.google.com https://www.googleapis.com/auth/spreadsheets https://sheets.googleapis.com/$discovery/rest?version=v4 https://*.google.com https://*.googleapis.com; object-src 'self'",
+
+  
+
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "css": [ "css/styles.css" ],
+      "js": [
+
+       
+      ],
+      "matches": [
+        
+       
+      ]
+
+    }
+  ],
+
+  "oauth2": {
+    "client_id": "231695525373-im3ap3t7fh884qklvuvcknkjga7bcl5r.apps.googleusercontent.com",
+    "scopes": [ "https://www.googleapis.com/auth/spreadsheets" ]
+  }
+
+
+}

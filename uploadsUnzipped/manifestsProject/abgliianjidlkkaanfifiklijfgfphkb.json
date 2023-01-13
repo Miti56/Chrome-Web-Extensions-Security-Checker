@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "锐仕方达简历助手",
+    "version": "4.1.8",
+    "description": "锐仕方达助手",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "锐仕方达简历助手"
+    },
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "content_scripts": [{
+            "matches": ["*://*.liepin.cn/*","*://*.liepin.com/*"],
+            "run_at": "document_end",
+            "js": ["libs/jquery.min.js", "js/common.js", "js/main.js"],
+            "css": ["css/main.css"]
+        },
+        {
+            "matches": ["http://h.highpin.cn/*", "https://h.highpin.cn/*", "http://hr.highpin.cn/Resume/*"],
+            "run_at": "document_end",
+            "js": ["libs/jquery.min.js", "js/common.js", "js/main.highpin.js"],
+            "css": ["css/main.css"]
+        },
+        {
+            "matches": ["https://rd5.zhaopin.com/resume/detail*", "http://ihr.zhaopin.com/resume/details/*", "https://rd.zhaopin.com/resumepreview/resume/viewone*", "http://rd.zhaopin.com/resumepreview/resume/viewone*"],
+            "run_at": "document_end",
+            "js": ["libs/jquery.min.js", "js/common.js", "js/main.zhaopin.js"],
+            "css": ["css/main.css"]
+        },
+        {
+          "matches": [
+            "http://www.51jingying.com/manager/cv.php?act=showCv&managerId*",
+            "https://www.51jingying.com/manager/cv.php?act=showCv&managerId*",
+            "*://www.51jingying.com/manager/showcv.php?managerId=*"
+          ],
+            "run_at": "document_end",
+            "js": ["libs/jquery.min.js", "js/common.js", "js/main.51jy.js"],
+            "css": ["css/main.css"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "http://www.linkedin.com/in/*",
+        "https://www.linkedin.com/in/*",
+        "http://staff.risfond.com/extension/*"
+    ]
+}

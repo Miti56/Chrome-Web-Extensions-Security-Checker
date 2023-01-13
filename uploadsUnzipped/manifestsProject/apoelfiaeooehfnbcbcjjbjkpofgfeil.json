@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "easy Aspect Ratio Calculator",
+	"description": "Easily calculate aspect ratios from sizes or sizes from an aspect ratio",
+	"version": "1.0",
+	"manifest_version": 2,
+	"app": {
+		"urls": ["http://www.easyaspectratio.com/"],
+		"launch": {
+			"web_url": "http://www.easyaspectratio.com"
+		}
+	},
+	"icons": {
+		"128": "icon_128.png"
+	}
+}

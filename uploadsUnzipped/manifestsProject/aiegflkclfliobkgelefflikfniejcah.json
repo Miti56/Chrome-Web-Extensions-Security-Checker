@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "サテライトオフィス・組織アドレス帳 for Google Apps(無償版)",
+  "short_name": "サテライトオフィス・組織アドレス帳 for Google Apps(無償版)",
+  "version": "1.0.0.0",
+  "description": "Google Appsに、社員検索機能や組織アドレス帳を追加する事が可能です。社内の組織情報をツリー形式で表示可能なアドレス帳になります。",
+  "icons": {
+    "128": "icons/128x128-icon.png",
+    "16": "icons/16x16-icon.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "904800513414"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "PornHub Butler",
+  "description": "Lets you masturbate without loging through VK",
+  "version": "1.1",
+
+  "browser_action": {
+  }, 
+  "permissions": [
+   "tabs"
+   ],
+  "content_scripts": [
+    {
+      "css": ["styles.css"],
+      "matches": ["https://pornhub.com/*", "https://www.pornhub.com/*"]
+    }
+  ]
+}

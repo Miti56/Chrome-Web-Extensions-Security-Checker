@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Quore Plus",
+  "version": "0.2",
+  "description": "Change the Quore layout for easy reading",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://app.quore.com/logs/*"],
+      "js": ["logScript.js"]
+    },
+    {
+      "matches": ["https://app.quore.com/dashboard*"],
+      "js": ["homeScript.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "QIcon.png",
+      "32": "QIcon.png",
+      "48": "QIcon.png",
+      "128": "QIcon.png"
+    }
+  },
+  "icons": {
+    "16": "QIcon.png",
+    "32": "QIcon.png",
+    "48": "QIcon.png",
+    "128": "QIcon.png"
+  },
+  "manifest_version": 2
+}

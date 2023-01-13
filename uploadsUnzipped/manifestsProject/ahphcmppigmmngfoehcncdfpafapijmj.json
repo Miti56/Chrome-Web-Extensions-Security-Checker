@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "1-Click Share Link",
+    "description": "Share and receive links with 1 click",
+    "version": "1.7.18",
+
+    "browser_action": {
+        "default_icon": "icon16.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "oauth2": {
+        "client_id": "100034805102-o3r46n0tgplh56teffldavp3ekoi68ji.apps.googleusercontent.com",
+        "scopes": [
+      "https://www.googleapis.com/auth/userinfo.profile",
+            "https://www.googleapis.com/auth/userinfo.email"
+    ]
+    },
+    "options_page": "options.html",
+    "permissions": [
+    "identity",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "https://one-click-share-link.herokuapp.com/*"
+  ]
+}

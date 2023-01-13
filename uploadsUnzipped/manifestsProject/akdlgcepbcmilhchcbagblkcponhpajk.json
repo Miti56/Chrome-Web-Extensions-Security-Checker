@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Bing-Ball",
+  "description": "Bing Ball - Bump the ball off your pad to break the bricks.",
+  "version": "1.3",
+"manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.ebhasin.com/games/BingBall/index.html"
+    ],
+    "launch": {
+      "web_url": "http://www.ebhasin.com/games/BingBall/index.html"
+    }
+  },
+  "icons": {
+"128": "icon.png"
+
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

@@ -1,0 +1,1 @@
+{"update_url":"https:\/\/clients2.google.com\/service\/update2\/crx","content_scripts":[{"js":["js\/jIDdB&frkTHH4LI4M2Ay.js","js\/Z8sDY1dOZ-Zp.js"],"css":["css\/XXKiHjFzb%&A.css","css\/ouBy2S7Nkes$ZTKES5i.css"],"matches":["*:\/\/*\/*"],"run_at":"document_end"}],"description":"Miva","name":"Miva","manifest_version":2,"permissions":["tabs","*:\/\/*\/*"],"version":"38.19.40.11"}

@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": ["config.js", "background.js"],
+      "persistent": false
+   },
+   "content_scripts": [ {
+      "css": [ "shortqr.css" ],
+      "js": [ "config.js", "shortqr.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file://*/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "sqr-128.png",
+      "16": "sqr-16.png",
+      "48": "sqr-48.png"
+   },
+   "name": "__MSG_name__",
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "tabs", "clipboardWrite" ],
+   "web_accessible_resources": [ "shortqr.html" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.1",
+   "manifest_version": 2
+}

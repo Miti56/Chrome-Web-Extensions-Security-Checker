@@ -1,0 +1,18 @@
+{
+   "content_scripts": [ {
+      "js": [ "jquery.min.js", "background.js" ],
+      "matches": [ "https://easytest.ncut.edu.tw/online_test/word_examine/*" ]
+   } ],
+   "description": "針對新版EasyTest所開發的工具，讓您的英文學習之路更加順利。",
+   "homepage_url": "https://www.google.com/",
+   "icons": {
+      "128": "images/icon_big.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxRmqBl5E/5HD3CGqRDOtFGkETvzOsYobjX/Gh6JubbG4oztLcBruiJ7xXF22Y8CWLo/suGE9cSld9MGrpeZNQsdtQhMfWY9egEuGL9G43lkVYD9g99F5EnReOBUp8fkK7GowHO+LyW597pdro//KvL0l/DTR1hRL5A2wAFbLL70pMqkWo0t2/+/nygMYPJbx/uTxfqK4l6ohYFVpdU4CJtlkioUhkcmz+Cs9rUparCv94wgrv0ihOI+ualciyfRKM9G+I6v9KDvK0TkTEliQkuhihgyy3SF1GNaXIKmb0gdfrN/Vm/wKTmQ/iClB3YzjnV1+kDDMLf9wIN58faY91wIDAQAB",
+   "manifest_version": 2,
+   "name": "EasyTest快速學習",
+   "permissions": [ "tabs", "cookies" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2019.3",
+   "web_accessible_resources": [ "background2.js" ]
+}

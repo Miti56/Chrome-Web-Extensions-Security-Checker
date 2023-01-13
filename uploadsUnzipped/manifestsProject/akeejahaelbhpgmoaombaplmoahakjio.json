@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "CropToFit",
+  "description" : "Professional Image Resizing & Cropping Tool",
+  "version" : "1.0",
+  "manifest_version" : 2,
+  "icons" : {
+    "16" : "CropToFitIcon_16x16.png",
+    "32" : "CropToFitIcon_32x32.png",
+    "42" : "CropToFitIcon_42x42.png",
+    "128" : "CropToFitIcon_128px_w_boarder.png",
+    "1024" : "CropToFitIcon_1024x1024.png"
+  },
+  "app" : {
+    "urls" : [
+      "http://www.croptofit.com/"
+    ],
+    "launch" : {
+      "web_url" : "http://www.croptofit.com/"
+    }
+  }
+}

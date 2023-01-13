@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "eFraud Prevention",
+  "description": "Consumer education, news and fraud alerts",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://efraudprevention.net/home/"
+    ],
+    "launch": {
+      "web_url": "https://efraudprevention.net/home/"
+    }
+  }
+}

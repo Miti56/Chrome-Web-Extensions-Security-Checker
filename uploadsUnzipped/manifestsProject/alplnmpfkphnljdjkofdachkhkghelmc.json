@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Ksort",
+  "description": "This extension will sort Kabum promos by discount",
+  "version": "1.4",
+
+  "permissions": [
+    "activeTab",
+    "http://kabum.com.br/",
+    "https://kabum.com.br/",
+    "http://www.kabum.com.br/",
+    "https://www.kabum.com.br/"
+  ],
+
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  },
+
+  "browser_action": {
+      "default_icon": "icono.png",
+      "default_title": "Sort Kabum Promos"
+  }
+}

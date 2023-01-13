@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Slice Watch",
+  "description": "Get an email when an item you've added to your list drops in price!",
+  "version": "4.0.0",
+  "icons": {
+    "16": "assets/SliceWatchLogo_gray_16x16.png",
+    "19": "assets/SliceWatchLogo_gray_19x19.png",
+    "38": "assets/SliceWatchLogo_teal_38x38.png",
+    "48": "assets/SliceWatchLogo_teal_48x48.png",
+    "128": "assets/SliceWatchLogo_teal_128x128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action":{
+    "default_popup": "closed.html"
+  },
+  "permissions": [
+    "tabs",
+    "background",
+    "identity",
+    "identity.email",
+    "storage",
+    "webNavigation",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://slice-watch.slice.com/*", "https://slice-watch.slice.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "clicker.png",
+    "ic_PriceDropFlag.png",
+    "ic_PriceDropIcon.png",
+    "list.css",
+    "logo.png",
+    "logo_teal_28.png",
+    "popup.css",
+    "reminder.css",
+    "sample_item.png",
+    "spinner.gif"
+  ]
+}

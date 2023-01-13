@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Deal Hunt",
+  "version": "1.0.6",
+  "description": "Gets vouchers and coupons while you're shopping online. Works with most online retailers.",
+  "manifest_version": 2,
+  "permissions": [
+    "cookies",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["lodash.js", "psl.js", "sweetalert2.all.js", "ext.js"],
+      "css": ["st.css"],
+      "run_at": "document_end",
+      "match_about_blank": false,
+      "all_frames": false
+    }
+  ],
+  "browser_action": {
+    "default_icon": "images/16.png",
+    "default_title": "DealHunt"
+  },
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  }
+}

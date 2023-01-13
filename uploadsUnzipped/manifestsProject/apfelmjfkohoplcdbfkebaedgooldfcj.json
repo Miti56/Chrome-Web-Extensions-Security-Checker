@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Quadriga Fee Adder",
+  "version": "1",
+  "description": "Shows cost including fees on QuadrigaCX trades page.",
+  "background": {"page": "background.html"},
+  "manifest_version": 2,
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.js", "background.js" ],
+    "css": ["styles.css"],
+    "matches": [ "http://www.quadrigacx.com/trade/*", "https://www.quadrigacx.com/trade/*"]
+  }]
+}

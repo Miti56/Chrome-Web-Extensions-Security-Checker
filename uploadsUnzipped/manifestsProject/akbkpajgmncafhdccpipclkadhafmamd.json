@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hoelang Nog?",
+  "version": "1.3.14",
+  "manifest_version": 2,
+  "description": "Met deze extensie kun je precies zien hoelang je les nog duurt!",
+  "homepage_url": "http://hoelangnog.marisch.nl",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+	
+  "default_locale": "en",
+  "options_page": "src/options_custom/index.html",
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "GLU: Hoelang Nog?",
+    "default_popup": "src/browser_action/browser_action.html"
+  }
+}

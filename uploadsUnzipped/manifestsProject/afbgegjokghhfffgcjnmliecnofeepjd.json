@@ -1,0 +1,16 @@
+{
+  "app": {
+    "urls": ["http://tradefair.ecplaza.net/"],
+    "launch": {"web_url": "http://tradefair.ecplaza.net/?utm_source\u003dgoogle\u0026utm_medium\u003dcrome-app\u0026utm_campaign\u003dtradefairv1"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "The latest trade fair \u0026 show, Trade Fair and Exhibition information for 41 categories of trade fair around the world",
+  "name": "World Trade Fairs,Tradeshow,event,conference",
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "icons": {"128": "TradeFair_128x128.png"},
+  "manifest_version": 2,
+  "version": "1.0.0.0"
+}

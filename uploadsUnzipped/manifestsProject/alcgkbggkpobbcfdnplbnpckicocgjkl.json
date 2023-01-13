@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "mandatum - The Shopping Planner",
+  "description": "mandatum is dedicated to creating a smarter way for the consumer to shop online.",
+  "version": "2020.2.16",
+  "background": {
+    "scripts": ["js/lib/jquery-3.1.0.min.js",
+      "js/config.js",
+      "js/common.js",
+      "js/controller/background.js",
+      "js/lib/base64.min.js"
+    ]
+  },
+  "externally_connectable": {
+      "matches": ["*://localhost/*", "https://www.mandatum.co/adminmandatum/web/PriceDrop/home",
+        "http://www.mandatum.co/adminmandatum/web/PriceDrop/home", "http://www.mandatum.co/", "https://www.mandatum.co/"]
+  },
+  "content_scripts": [{
+    "matches": ["https://www.amazon.com/*", "http://www.amazon.com/*", "https://www.bestbuy.com/*", "http://www.bestbuy.com/*",
+      "https://www.walmart.com/*", "http://www.walmart.com/*", "https://www.lowes.com/*", "http://www.lowes.com/*", "https://store.hp.com/*",
+      "http://store.hp.com/*",  "https://www.mandatum.co/adminmandatum/web/PriceDrop/home",
+      "http://www.mandatum.co/adminmandatum/web/PriceDrop/home", "http://www.mandatum.co/", "https://www.mandatum.co/"],
+    "js": ["js/lib/jquery-3.1.0.min.js",
+    "js/config.js",
+      "js/controller/content.js",
+      "js/controller/contentscript.js"
+    ],
+    "css": [
+      "css/content.css"
+    ]
+  }],
+  "web_accessible_resources": ["sidebar.html","forget-password.html", "sidebarNonAmazon.html"],
+  "icons": {
+    "16": "/images/icon_16.png",
+    "128": "/images/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "Mandatum",
+    "default_icon": "/images/icon_16.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["http://*/*", "https://*/*", "tabs","notifications"],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}

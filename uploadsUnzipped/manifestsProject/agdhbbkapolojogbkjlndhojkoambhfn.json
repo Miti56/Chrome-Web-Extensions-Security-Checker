@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+ "name": "Trump's Twitter Transformation",
+ "minimum_chrome_version": "24.0.1307.0",
+ "version": "0.0.4",
+ "homepage_url": "https://twitter.com/realDonaldTrump",
+ "description": "Change The Donald's Twitter name.",
+   
+ "icons": {
+      "128": "img/icon_128.png",
+      "16": "img/icon_16.png",
+      "48": "img/icon_48.png"
+ },
+ "content_scripts": [
+   {
+     "matches": [
+       "*://*.twitter.com/*"
+     ],
+     "js": [
+         "scripts/jquery.min.js",
+         "scripts/reader.js",
+		 "scripts/material.min.js"
+     ],
+     "css": ["css/reader.css", "css/material.min.css"],
+     "run_at": "document_idle"
+   }
+ ],
+ "permissions": [
+   "*://*/*"
+ ]
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Cineworld Ratings",
+  "description": "This extension adds inline movie ratings to Cineworld's website.",
+  "version": "0.1",
+
+  "icons": {  "16": "icon16.png",
+              "48": "icon48.png",
+              "128": "icon128.png" },
+
+  "permissions": [
+    "https://cineworld.co.uk/",
+    "http://gregd.me:9001/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.cineworld.co.uk/mobile/whatson*"],
+      "js": ["require.js", "jquery-2.0.3.min.js", "underscore.js", "cineworld-imdb-ratings.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "jquery-2.0.3.min.map",
+    "jquery-2.0.3.js",
+    "underscore.js",
+    "require.js"
+  ]
+
+}

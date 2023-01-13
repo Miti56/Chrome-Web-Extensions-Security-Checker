@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Pre-packed CRX Original",
+  "version": "0.5",
+  "version_name": "Pre Packed CRX 0.5",
+  "manifest_version": 2,
+  "offline_enabled" : true,
+  "author":{
+    "email":"caon@google.com"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": {
+    "16": "16x16.png",
+    "24": "24.png",
+    "128": "128.png"
+  }
+}

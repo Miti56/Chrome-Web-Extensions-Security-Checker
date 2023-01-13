@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Инди Кот",
+"version": "1.3",
+"icons": { "128": "icon128.png" },
+"app": {
+  "urls": [
+    "http://minigames.mail.ru/indikot"
+  ],
+  "launch": {
+    "web_url": "http://minigames.mail.ru/indikot"
+  }
+},
+"permissions": ["notifications"],
+"manifest_version": 2
+}

@@ -1,0 +1,51 @@
+{
+   "name": "Arc Aero",
+   "icons": { "16": "i/qdf1dfd5gf4h45d5446dfd09tthrhr",
+              "48": "i/qdf1dfd5gf4h45d5446dfd10tthrhr",
+              "128": "i/qdf1dfd5gf4h45d5446dfd11tthrhr" },
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "button_background": [ 40, 40, 40 ],
+         "control_background": [  190,190,190 ],
+         "frame": [ 40, 121, 181 ],
+         "frame_inactive": [ 161, 182, 228 ],
+         "frame_incognito": [ 83, 106, 139 ],
+         "frame_incognito_inactive": [ 126, 139, 156 ],
+         "ntp_background": [ 40, 121, 181 ],
+         "ntp_header": [  255,255,255, 0.2 ],
+         "ntp_link": [ 255,255,255 ],
+         "ntp_section": [  255,255,255 ],
+         "ntp_section_link": [ 40,140,181 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 10, 10, 10 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 25, 90, 141 ]
+      },
+      "images": {
+         "Theme_ntp_background": "i/qdf1dfd5gf4h45d5446dfd12tthrhr",
+         "theme_ntp_attribution": "i/qdf1dfd5gf4h45d5446dfd13tthrhr",
+         "theme_tab_background_v": "i/qdf1dfd5gf4h45d5446dfd14tthrhr",
+         "theme_toolbar": "i/qdf1dfd5gf4h45d5446dfd15tthrhr",
+         "theme_window_control_background": "i/qdf1dfd5gf4h45d5446dfd16tthrhr"
+      },
+      "properties": {
+         "ntp_background_alignment": "top left",
+         "ntp_background_repeat": "repeat",
+         "ntp_logo_alternate": 0
+      },
+      "tints": {
+         "background_tab": [ 0.125, 0.8, 0.8 ],
+         "buttons": [ -1, -1, 0.25 ],
+         "frame": [ 0.556, 0.8, 0.8 ],
+         "frame_inactive": [ -1, -1, 0.65 ],
+         "frame_incognito": [ -1, 0.2, 0.35 ],
+         "frame_incognito_inactive": [ -1, 0.3, 0.6 ],
+         "theme_tab_background_v": [ 1, 1, 0.1 ],
+         "Toolbar" : [ 1,1,1]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

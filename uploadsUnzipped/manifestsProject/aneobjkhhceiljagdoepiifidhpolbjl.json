@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Chatwork ++",
+  "version": "0.1.0.1",
+  "manifest_version": 2,
+  "description": "Chatwork ++ to faster",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "scripts": []
+  },
+  "options_page": "options.html",
+  "omnibox": {
+    "keyword": "Chatwork++"
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "jquery.min.js",
+        "index.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "index.js"
+  ],
+  "permissions": ["https://www.chatwork.com/*"]
+}

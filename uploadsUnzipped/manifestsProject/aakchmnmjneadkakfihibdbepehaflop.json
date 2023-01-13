@@ -1,0 +1,66 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "Script Blocker for Chrome™",
+   "description": "This extension allows JavaScript execution only for trusted domains of your choice.",
+   "background": {
+      "scripts": ["js/background.js"],
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "img/icon19.png",
+      "default_title": "Script Blocker for Chrome™",
+      "default_popup": "search.html"
+   },
+   "icons": {
+      "16": "img/icon16.png",
+      "32": "img/icon32.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+   },
+   "web_accessible_resources": [
+     "filter/hostsfile.txt",
+     "filter/malwaredomains.txt",
+     "filter/malwaredomainlist.txt",
+     "filter/someonewhocares.txt",
+     "filter/winhelp2002.txt",
+     "filter/hosts.txt",
+     "filter/yoyo.txt"
+   ],
+   "commands": {
+	"myCommandSDCtrlQ": {
+		"suggested_key": {
+			"default": "Alt+V"
+		},
+		"description": "Send Command event"
+	},
+	"myCommandSDCtrlShiftQ": {
+		"suggested_key": {
+			"default": "Alt+B"
+		},
+		"description": "Send Command event"
+	},
+	"_execute_browser_action": {
+		 "suggested_key": {
+		    "default": "Alt+S"
+		 },
+	 "description": "Send tab command"
+	}
+  },
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "minimum_chrome_version": "22",
+   "permissions": [ 
+      "tabs",
+      "contextMenus",
+      "webNavigation",
+      "webRequest",
+      "webRequestBlocking",
+      "unlimitedStorage",
+      "storage",
+      "downloads",
+      "<all_urls>"
+	],
+   "options_page": "options.html",   
+   "version": "4.0"
+}

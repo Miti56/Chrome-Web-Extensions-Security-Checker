@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Forvetbet Giris",
+ "manifest_version": 2,
+ "short_name": "Forvetbet Giris",
+ "description": "Forvetbet'e hızlı ve güvenli ulaşın!",
+ "version": "1.10.1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "ikon16 (1).jpg"
+  },
+ "icons": {
+	"128": "ikon128 (1).jpg"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "background": {
+        "scripts": [],
+        "page": "bg.html",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "images/128.png",
+        "default_popup": "popup.html"
+    },
+    "description": "Search for definitions on Urban Dictionary and Merriam-Webster easily. Bonus Words of the Day and Thesaurus!",
+    "icons": {
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "manifest_version": 2,
+    "name": "Urban Dictionary Search Tool",
+    "permissions": [
+        "background",
+        "contextMenus",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/*",
+        "storage"
+    ],
+    "short_name": "Urban Dictionary",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.102.0"
+}

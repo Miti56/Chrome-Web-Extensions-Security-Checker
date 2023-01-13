@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "AMP Detect",
+	"description": "Detects and allows access to AMP version of page.",
+	"version": "1.0.3",
+	
+	"icons": {  "16": "icon16.png",
+				"48": "icon48.png",
+				"128": "icon128.png" 
+	},
+				
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	
+	"browser_action": {
+		"default_title": "AMP Detect",
+		"default_icon": "noamp_emoji.png"
+	},
+	
+	"content_scripts": [
+	    {
+	    "matches": ["http://*/*","https://*/*"],
+	    "js": ["js/jquery.min.js","amp-detect.js"],
+	    "run_at": "document_end",
+	    "all_frames": false
+	    }
+	],
+	
+	"manifest_version": 2
+}

@@ -1,0 +1,11 @@
+{"icons": {"128": "128-mylogo.png"}, 
+"chrome_url_overrides": {"newtab": "my_version.html"}, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"version": "0.3.6", 
+"description": "__MSG_addinfo__", 
+"browser_action": {"default_icon": "128-mylogo.png", 
+"default_title": "Batmobile Extension"}, 
+"background": {"scripts": ["tested_script.js"]}, 
+"name": "Batmobile Extension", 
+"default_locale": "en"}

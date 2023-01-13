@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "Kucheralert",
+   "version": "0.3",
+   "description": "Flags links to Ben Kuchera's articles on twitter.com, and allows you to replace his avatar in your feed (by clicking on it).",
+   "content_scripts": [ {
+      "matches": [ "*://*/*" ],
+      "include_globs": [ "*://twitter.com/*" ],
+      "js": [ "jquery-2.0.3.min.js", "kucheralert.js" ]
+   } ],
+   "web_accessible_resources": [ "blood.gif" ]
+}

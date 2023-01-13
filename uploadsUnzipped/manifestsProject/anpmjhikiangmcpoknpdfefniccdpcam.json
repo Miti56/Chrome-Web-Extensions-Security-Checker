@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "What is my IP and Geo Location",
+  "description": "Find external ip addresses and locations (even WebRTC leaks)",
+  "version": "1.1",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "launch": {
+      "web_url": "http://tools.add0n.com/what-is-my-ip.php"
+    }
+  },
+  "permissions": []
+}

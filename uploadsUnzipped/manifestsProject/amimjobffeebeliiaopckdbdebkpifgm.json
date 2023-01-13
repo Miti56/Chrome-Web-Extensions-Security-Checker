@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Princesses Manicure Expert",
+
+  "short_name": "Princesses Manicure Expert",
+
+  "version": "1.0.2",
+  "description": "Play Princesses Manicure Expert Now!",
+
+  "homepage_url": "https://appmgr.pw/c/juegos-de-mascotas/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Princesses Manicure Expert",
+
+      "default_popup": "popup.html"
+  }
+}

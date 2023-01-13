@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "BTC Price Tracker - Crypto Trading Platform",
+  "description": "Cryptocurrencies Trading Ext. The quickest way to view blockchain information and global price and bitstamp price.",
+  "default_locale": "en",
+  "author": "Bitstamp2016",
+  "version": "1.1.2",
+  "browser_action": {
+    "default_popup": "components/popup/popup.html",
+    "default_icon": {
+      "128": "ico/icon.png"
+    }
+  },
+  "icons": {
+        "128": "ico/icon.png"
+    },
+  "permissions": [
+    "cookies",
+    "storage",
+    "alarms",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "build/background.bundle.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "components/lookup/images/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "components/lookup/style.css"
+      ],
+      "js": [
+        "components/lookup/jquery.min.js",
+        "components/lookup/bitcore.min.js",
+        "build/lookup.bundle.js",
+        "components/lookup/tool.js"
+      ]
+    }
+  ],
+  "options_page": "components/option/option.html"
+}

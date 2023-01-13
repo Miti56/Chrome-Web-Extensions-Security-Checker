@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "XL24ONE Filesharing",
+ "manifest_version": 2,
+ "short_name": "XL24ONE",
+ "description": "Simply exchange documents with each other!",
+ "version": "3.4.4",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "favicon.png"
+  },
+ "icons": {
+	"128": "favicon.png"
+  }
+}

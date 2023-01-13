@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "贴吧助手chrome增强器",
+  "version": "4.2",
+  "description": "百度贴吧签到时，以百度手机浏览器方式签到，获取额外经验。安装后，请再安装 百度贴吧助手，用贴吧助手自动签到功能即可。教程看这里：http://blog.sina.com.cn/s/blog_b1dffc3b01014iem.html",
+  "permissions": ["webRequest", "webRequestBlocking","cookies",
+                  "*://*.baidu.com/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "manifest_version": 2
+}

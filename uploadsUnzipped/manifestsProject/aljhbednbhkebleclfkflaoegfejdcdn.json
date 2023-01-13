@@ -1,0 +1,13 @@
+{
+   "browser_action": {
+      "default_icon": "Icon_Turquoise@2x.png",
+      "default_popup": "domainBuddy.html",
+      "default_title": "Placester Domain Buddy"
+   },
+   "description": "Quickly determine the account owner's email address",
+   "manifest_version": 2,
+   "name": "Placester Domain Buddy",
+   "permissions": [ "activeTab", "http://*/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

@@ -1,0 +1,21 @@
+{
+   "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html",
+      "default_title": "Live Football Score"
+   },
+   "description": "Live Football Score Provides the latest football results and other information about all matches from around the world.",
+   "icons": {
+      "128": "logo128.png",
+      "16": "logo.png",
+      "32": "logo.png",
+      "48": "logo.png"
+   },
+    "manifest_version": 2,
+   "name": "Live Football Score",
+   "permissions": [ "tabs", "notifications" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "offline_enabled": true,
+   "container": "GOOGLE_DRIVE",
+   "version": "0.4"
+}

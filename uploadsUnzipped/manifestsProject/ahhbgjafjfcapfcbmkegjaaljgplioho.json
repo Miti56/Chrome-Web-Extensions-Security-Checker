@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "rev.html"
+   },
+   "content_scripts": [ {
+      "js": [ "lib/jquery.js", "lib/pako.js", "ok.js", "ter.js", "data/base_territories.js", "data/territories.js", "data/town_maps.js", "map.js" ],
+      "matches": [ "*://vk.com/app4870583*","*://new.vk.com/app4870583*" ]
+   }, {
+      "js": [ "lib/jquery.js", "links.js" ],
+      "matches": [ "*://vk.com/feed*","*://new.vk.com/feed*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Отображает скрытую игровую информацию, значительно облегчает игровой процесс и помогает принимать оптимальные игровые решения.",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Реагент Солдат Удачи",
+   "permissions": [ "notifications", "webRequest", "tabs", "http://vk.com/","http://new.vk.com/", "http://95.213.132.37/*" ],
+   "version": "1.3.7"
+}

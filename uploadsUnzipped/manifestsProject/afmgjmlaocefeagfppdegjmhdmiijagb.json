@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Wolfteam Chrome Eklentisi",
+  "description": "Joygame’in vazgeçilmez oyunlarından biri olan MMO FPS oyunu Wolfteam’ e kısa yoldan ulaşabilmenin tam zamanı!",
+  "version": "0.9",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://wt.joygame.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.joygame.com/wolfteam/"
+    }
+  }
+}

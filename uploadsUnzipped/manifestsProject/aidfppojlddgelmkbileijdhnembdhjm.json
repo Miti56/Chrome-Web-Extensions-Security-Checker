@@ -1,0 +1,18 @@
+{
+   "content_scripts": [ {
+      "css": [ "trelloscrum.css" ],
+      "js": [ "jquery-1.7.1.min.js", "trelloscrum.js" ],
+      "matches": [ "https://trello.com/*" ]
+   } ],
+   "description": "Adds Scrum to your Trello and more if affinity (versioning)",
+   "icons": {
+      "128": "trello-scrum-icon.png"
+   },
+   "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtIFPZs0QvrDC8FBtDrjTD27E0aHw/O00l2lD4SUe8kRNQBog2ndHw5U0gGSYe0Eqe6cEJf12/ooizPohhDvgRlAHDFtpsPKcwM2UQW8wg1MfT0+XWUFo77NpeRM5h4FziM3o3EPEz3mv0e2x8ffWZce3fKAy97oT+vRp/+O+Bf2RZUO7uMaP6Czub5Vdlr+d1C21Iwqf5B/P8KDfszeArpUM+gPwKg2/PcoE5EuRKB13uKGH1mYoP4wOuNf74tmonqKON6g4gku3xdlHh1EdBbPum8ElbUVqk+CQDWRyOrKq6WyxiPoUw3JDTz+rxQdUKNrYX5dp+qpXkGV/hu0SrQIDAQAB",
+   "manifest_version": 2,
+   "name": "Scrum for Trello Custom",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "web_accessible_resources": [ "images/storypoints-icon.png", "images/points-done.png", "images/burndown_for_trello_icon_12x12.png", "images/burndown_for_trello_icon_18x18.png", "images/trello-scrum-icon_12x12.png", "images/trello-scrum-icon_18x18.png" ]
+}

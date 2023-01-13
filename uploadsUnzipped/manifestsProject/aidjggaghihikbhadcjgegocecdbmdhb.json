@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Instant Domain Search — Search & Suggestions",
+  "description": "Find domain names instantly by searching as you type. Supports many TLDs, suggests other domain names, and names for sale.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://instantdomainsearch.com/"
+    ],
+    "launch": {
+      "web_url": "https://instantdomainsearch.com/"
+    }
+  }
+}

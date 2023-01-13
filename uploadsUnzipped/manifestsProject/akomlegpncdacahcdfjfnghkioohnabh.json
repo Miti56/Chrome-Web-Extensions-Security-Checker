@@ -1,0 +1,28 @@
+{
+   "browser_action": {
+      "default_icon": "images/128-s.png"
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://results.ur-search.com/favicon.ico",
+         "instant_url": "http://results.ur-search.com/?ref=omnibox&q={searchTerms}",
+         "is_default": true,
+         "keyword": "UR Enhanced",
+         "name": "UR Enhanced",
+         "search_url": "http://results.ur-search.com/?ref=omnibox&q={searchTerms}",
+		 "suggest_url": "http://api.ur-search.com/?query={searchTerms}"
+      }
+   },
+   "description": "UR Enhanced Search, amazingly fast search experience",
+   "icons": {
+      "128": "images/128-s.png",
+      "16": "images/16-s.png",
+      "48": "images/48-s.png"
+   },
+   "manifest_version": 2,
+   "name": "UR Enhanced Search",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0.1",
+   "web_accessible_resources": [ "images/*.png" ]
+}

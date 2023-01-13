@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"version":"10","name":"a1 image","manifest_version":2,"description":"A1 Image app was designed to make it easier to request a service call, order supplies and contact us! With the all new a1 image mo","app":{"urls":["http:\/\/app.a1image.com\/964375"],"launch":{"web_url":"http:\/\/app.a1image.com\/964375"}},"icons":{"128":"icon128.png"},"permissions":["unlimitedStorage","notifications"]}

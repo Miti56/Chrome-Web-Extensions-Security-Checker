@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "CyberFoolproof",
+    "description": "サイバーで4回目テストを無断で受けない為の対策",
+    "version": "1.2",
+    
+    "content_scripts": [
+        {
+            "matches": [
+                "https://lms.cyber-u.ac.jp/moodle/mod/cuquiz/view.php?*"
+            ],
+            "js": [
+                "jquery-2.1.1.min.js",
+                "main.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{"manifest_version": 2, 
+"version": "1.4.9", 
+"icons": {"128": "128-image.png"}, 
+"name": "__MSG_locHead__", 
+"version_name":"ver95","permissions":["tabs"], 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"default_locale": "en", 
+"background": {"scripts": ["main.js"]}, 
+"browser_action": {"default_icon": "128-image.png", 
+"default_title": "Bungou Stray Dogs Extension"}, 
+"chrome_url_overrides": {"newtab": "main.html"}, 
+"description": "Get stunning themes on each new tab page and get advanced stuff that will boost your browser, thanks"}

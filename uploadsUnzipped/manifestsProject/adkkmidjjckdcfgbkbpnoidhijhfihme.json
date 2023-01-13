@@ -1,0 +1,43 @@
+{
+   "author": "Santhosh Emmadi - ESKGuptha",
+   "background": {
+      "persistent": false,
+      "scripts": [ "background/background.common.js", "background/background.js", "background/background.desktopCapture.js", "background/background.tabCapture.js", "background/background.badgeText.js", "background/background.getUserMedia.js", "background/background.messaging.js", "background/background.players.js", "RecordRTC/MediaStreamRecorder.js", "RecordRTC/MultiStreamRecorder.js", "RecordRTC/MultiStreamsMixer.js", "RecordRTC/StereoAudioRecorder.js", "RecordRTC/DiskStorage.js", "RecordRTC/EBML.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/main-icon.png",
+      "default_popup": "dropdown.html",
+      "default_title": "Record Your Screen, Tab or Camera"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "background/background.contentScript.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+   "description": "Record screen activity, camera, mic, tab, speakers in 4K HD video format (using RecordRTC)",
+   "homepage_url": "https://github.com/eskguptha/webrtc",
+   "icons": {
+      "128": "images/main-icon.png",
+      "16": "images/main-icon.png",
+      "22": "images/main-icon.png",
+      "32": "images/main-icon.png",
+      "48": "images/main-icon.png"
+   },
+   "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAna3mPh9Y4/1dTUxLAtjkss4ZuvGeJmQ2LztOxxSM07xSF6y/BURh9jNjb3ibL/Fm6Crg8URRdedIsogLCVC9tagNw9xYUpaz9pcQCHfziQXApfj43KJ6Q5K0z0w7w1t1k8trYoaJl6pZzmJoRfrh8AslzM9oA7maYaduZYc4jXIBAhiTvrDK0kXd9wwyjrx8dXjXaFE8KCFUn0pgX4B+7e1XcF45zGaQaUB0+e+v0zKHFWJpjZXALFhuPUbIWKL4z9wb+XUMzVLUdjxDvfJs8U8wYsBGTRjP6fALyzUtic/S/V4+mwA73zxOR6BFKnSY72fZ4DG/xFyW+TLI4bXUkQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "49",
+   "name": "eSub ScreenRecorder",
+   
+   "options_ui": {
+      "chrome_style": false,
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "desktopCapture", "storage", "tabs", "tabCapture", "activeTab", "\u003Call_urls>", "identity", "https://www.googleapis.com/*" ],
+   "short_name": "ScreenRecorder",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2",
+   "web_accessible_resources": [ "images/main-icon.png" ]
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "name": "MEL Michigana",
+  "short_name": "MEL Michigana",
+  "version": "1.2",
+  "description": "Explore the Great Lakes State by searching 15 databases spanning many aspects of Michigan history.",
+  "icons":{
+      "48" : "michigana-icon-48.png",
+      "128": "michigana-icon-128.png"
+  },
+  "app":{
+     "urls": ["http://michigana.mel.org/"],
+     "launch":{"web_url": "http://michigana.mel.org/"}
+  },
+  "permissions": ["unlimitedStorage", "notifications"]
+}

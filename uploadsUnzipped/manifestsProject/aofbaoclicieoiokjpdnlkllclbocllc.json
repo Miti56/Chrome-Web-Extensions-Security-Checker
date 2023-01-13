@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Jogos de Futebol",
+ "manifest_version": 2,
+ "short_name": "Jogos de Futebol",
+ "description": "Jogos de Futebol sao são divertidos",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1496641473_Games_2.ico"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Helvetia Application Launcher",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "description": "Start a local application from an internal web client.",
+  "permissions": [
+	"nativeMessaging",
+	"webRequest",
+	"activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "file:///C:/Program%20Files/Helvetia/chromeextension/dispatcher/Client-Test/client.html",
+		"*://*.helvetia.com/*",
+		"*://*.helvetia.ch/*",
+		"*://*.helvetia.group/*"
+      ],
+      "js": [    
+        "content.js"
+      ] ,
+	  "all_frames": true
+    }
+  ]
+}

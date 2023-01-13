@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Woodata para WooCommerce",
+    "version": "0.0.0.2",
+    "description": "Estadísticas para tu tienda WooCommerce",
+    "icons": {
+        "16": "img/icon16.png",
+        "32": "img/icon32.png",
+        "128": "img/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "img/icon16.png",
+            "24": "img/icon24.png",
+            "32": "img/icon32.png"
+        },
+        "default_title": "Ir a Woodata"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "自動開水龍頭",
+    "version": "1.1.9",
+    "manifest_version": 2,
+    "description": "如果有什麼好賺的水龍頭歡迎告訴作者唷。",
+	"content_scripts": [
+		{
+		  "matches": ["*://freebitco.in/*", "*://www.freebitco.in/*"],
+		  "js": ["jquery.js", "freebitco.in.js"]
+		},
+		{
+		  "matches": ["*://swissadspaysfaucet.com/*", "*://www.swissadspaysfaucet.com/*"],
+		  "js": ["jquery.js", "swissadspaysfaucet.com.js"]
+		},
+		{
+		  "matches": ["*://swissadspaysethfaucet.com/*", "*://www.swissadspaysethfaucet.com/*"],
+		  "js": ["jquery.js", "swissadspaysethfaucet.com.js"]
+		},
+		{
+		  "matches": ["*://adbtc.top/*", "*://www.adbtc.top/*"],
+		  "run_at": "document_end",
+		  "js": ["jquery-2.1.1.min.js", "adbtc.top.js"]
+		},
+		{
+		  "matches": ["*://xbtc.eu/*", "*://www.xbtc.eu/*"],
+		  "run_at": "document_end",
+		  "js": ["jquery-2.1.1.min.js", "xbtc.eu.js"]
+		},
+		{
+		  "matches": ["*://btcheat.com/*", "*://www.btcheat.com/*"],
+		  "js": ["jquery-2.1.1.min.js", "btcheat.com.js"]
+		},
+		{
+		  "matches": ["*://multicoinfaucet.com/*", "*://www.multicoinfaucet.com/*"],
+		  "js": ["jquery.js", "multicoinfaucet.com.js"]
+		},
+		{
+		  "matches": ["*://freeripple.com/*", "*://www.freeripple.com/*", "*://www.coinfaucet.io/*", "*://coinfaucet.io/*"],
+		  "js": ["jquery.js", "freeripple.com.js"]
+		}
+	],
+	"background": {
+		"page": "background.html"
+	},
+	  "options_ui": {
+		"page": "options/options.html",
+		"chrome_style": true
+	  },
+    "permissions": [
+        "tabs",
+        "storage",
+		"*://*/", 
+		"webRequest", 
+		"webRequestBlocking", 
+		"contextMenus", 
+		"unlimitedStorage", 
+		"notifications"
+    ]
+}

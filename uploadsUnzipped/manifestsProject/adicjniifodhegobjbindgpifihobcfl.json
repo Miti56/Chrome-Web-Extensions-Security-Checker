@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Github_Helper",
+  "version": "2.0",
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "activeTab"
+  ],
+  "icons": 
+    { 
+        "16": "images/icon16.png",
+        "20": "images/icon20.png",
+        "24": "images/icon24.png",
+        "48": "images/icon48.png",
+        "64": "images/icon64.png",
+        "128": "images/icon128.png",
+        "256": "images/icon256.png",
+        "512": "images/icon512.png"
+    },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Collapse!"
+  },
+  "manifest_version": 2
+}

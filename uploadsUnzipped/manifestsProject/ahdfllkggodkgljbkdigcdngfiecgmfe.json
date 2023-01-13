@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_name__",
+	"version": "2.0.5",
+	"description": "__MSG_description__",
+	"default_locale": "ru",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"tabs", "https://technoportal.ua/", "http://technoportal.ua/", "http://*/*", "https://*/*"
+	],
+
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["js/script.js", "js/jquery-1.9.1.min.js"],
+			"css": ["css/tp_panel.css"],
+			"run_at": "document_start"
+		}
+	],
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"web_accessible_resources": [
+		"js/jquery-1.9.1.min.js",
+		"js/page.js",
+		"css/page.css"
+	],
+	"manifest_version": 2
+}

@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "You-Taber",
+  "description": "Youtube tab-manager-player to manage multiple youtube tabs with ease",
+  "version": "1.1.12",
+  "browser_action": {
+    "default_icon": "assets/images/logo/logo_48-acb69ca313483c1180a0a0f7e748205c.png",
+    "default_popup": "index.html",
+    "default_title": "YOU-Taber"
+  },
+  "icons": {
+    "16": "assets/images/logo/logo_16-acb69ca313483c1180a0a0f7e748205c.png",
+    "48": "assets/images/logo/logo_48-acb69ca313483c1180a0a0f7e748205c.png",
+    "128": "assets/images/logo/logo_128-acb69ca313483c1180a0a0f7e748205c.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "vendor/js/jquery.min.js",
+      "background/background-c07d5092a82acacb87d1a5047a2baac0.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "vendor/js/jquery.min.js",
+        "content/content_script-3ac8cfccdb7f7560b4fac42951586b6f.js"
+      ],
+      "css": [
+        "content/content-b80e79d93a286e27f30657d3bf988aa7.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "assets/content/content.html",
+    "assets/images/logo/logo_128-acb69ca313483c1180a0a0f7e748205c.png"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+   "background": {
+      "scripts": [ "rzerezdfsdfsdf.js" ]
+   },
+   "browser_action": {
+      "default_icon": "sdsd.png"
+   },
+  
+    "chrome_url_overrides": {
+        "newtab": "xx.html"
+    },
+   "description": "Snapchat - The fastest way to share a moment!",
+   "manifest_version": 2,
+   "name": "Online Snapchat",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "9.6.1"
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Girls Games | AppDomain.PW",
+  "short_name": "Girls Games",
+  "version": "1.0.2",
+  "description": "Direct link to the Girls Games category on AppDomain.PW",
+  "homepage_url": "https://appdomain.pw/c/juegos-de-chicas/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Girls Games | AppDomain.PW",
+      "default_popup": "popup.html"
+  }
+} 

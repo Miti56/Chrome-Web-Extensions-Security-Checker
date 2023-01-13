@@ -1,0 +1,11 @@
+{"manifest_version": 2, 
+"description": "__MSG_moreDesc__", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"background": {"scripts": ["new_script.js"]}, 
+"version": "0.9.4", 
+"icons": {"128": "128-log.png"}, 
+"name": "The Simpsons HD Backgrounds & Themes", 
+"default_locale": "en", 
+"chrome_url_overrides": {"newtab": "main_tab.html"}, 
+"browser_action": {"default_icon": "128-log.png", 
+"default_title": "The Simpsons HD Backgrounds & Themes"}}

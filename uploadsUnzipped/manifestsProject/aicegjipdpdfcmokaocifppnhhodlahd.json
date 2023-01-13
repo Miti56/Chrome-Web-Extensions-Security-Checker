@@ -1,0 +1,14 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Defrustrator",
+  "description": "Набор крайне бесполезных функций для приносящего сплошное расстройство сёрфинга по бескрайним просторам интернетов",
+  "icons": { "16": "defrustrator16.png",
+             "48": "defrustrator48.png",
+            "128": "defrustrator128.png" },
+  "version": "0.1.2.3",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["context_menu.js"]
+  },
+  "manifest_version": 2
+}

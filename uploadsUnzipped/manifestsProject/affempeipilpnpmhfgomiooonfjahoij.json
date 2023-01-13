@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Elections Filter",
+  "description": "Hide text related to the 2016 US Elections",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["controls.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["filter.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Show/Hide elections",
+    "default_icon": "icon.png"
+  },
+  "manifest_version": 2
+}

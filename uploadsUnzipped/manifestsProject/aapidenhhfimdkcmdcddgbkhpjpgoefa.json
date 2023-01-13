@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version": 2,
+
+  "name": "Whatsapp ChromePlus Extension",
+  "description": "Use Whatsapp Plus Extension on your Chrome.And we Offers Whatsapp, Twitter, Skype, Linkedin, Instagram...",
+  "permissions": [
+    "storage"
+  ],
+
+  "icons": { "16": "img/16.png",
+             "19": "img/19.png",
+             "38": "img/38.png",
+             "48": "img/48.png",
+             "96": "img/96.png",
+            "128": "img/128.png" },
+
+  "version": "1.4",
+
+  "options_page": "options.html",
+
+  "browser_action": {
+    
+  },
+
+  "background": {
+    "scripts": ["popup.js"
+	]
+  }
+}

@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "tlo.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/19.png",
+         "38": "images/38.png"
+      },
+      "default_title": "Top Sports Eleven Online Be a Soccer Manager Games"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "skrypt.js" ],
+      "matches": [ "*://*.minecraft-roy.blogspot.com/*" ]
+   } ],
+   "description": "Top Eleven Be a soccer manager, True Skate, Word Cookies, Zombie Gunship Survival, NBA Jam, Need for Speed Most Wanted",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "Top Sports Eleven Online Be a Soccer Manager",
+   "permissions": [ "*://*.minecraft-roy.blogspot.com/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "Top Sports Eleven Online Be a Soccer Manager Games",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+  "name": "KML | iNovmapping",
+  "description": "Download, Upload, Host & Share free KML / KMZ files",
+  "version": "1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://kml.inovmapping.com/"
+    ],
+    "launch": {
+      "web_url": "http://kml.inovmapping.com/"
+    }
+  },
+  "icons": {
+	"16":"icon_16.png",
+	"48":"icon_48.png",
+	"128":"icon_128.png" 
+  }
+}
+

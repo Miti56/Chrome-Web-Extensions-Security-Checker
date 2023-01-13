@@ -1,0 +1,25 @@
+{
+   "browser_action": {
+      "default_icon": "trump128.png"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "default_locale": "en_US",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "trump128.png",
+      "16": "trump16.png",
+      "256": "trump256.png",
+      "32": "trump32.png",
+      "64": "trump64.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "offline_enabled": true,
+   "permissions": [ "activeTab", "tabs" ],
+   "short_name": "__MSG_shortname__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.2.22.3"
+}

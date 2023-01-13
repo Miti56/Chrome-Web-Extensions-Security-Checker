@@ -1,0 +1,33 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Clean Hulu Filter",
+  "version": "1.1",
+  "description": "Adds automatic profanity filtering to Hulu videos that are subtitled.",
+  "icons": {
+    "128": "images/icon-128.png",
+    "16": "images/icon-16.png"
+  },
+  "homepage_url": "http://jacobwg.com/projects/clean-hulu/",
+  "permissions": [ "tabs" ],
+  "background": {
+    "scripts": ["scripts/background.js"]
+  },
+  "page_action": {
+    "default_icon" : "images/icon-19.png",
+    "default_title": "Clean Hulu Filter Enabled",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [ "scripts/filter.js"  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*.hulu.com/*",
+        "https://*.hulu.com/*"
+      ],
+      "js" : ["scripts/app.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "manifest_version": 2
+}

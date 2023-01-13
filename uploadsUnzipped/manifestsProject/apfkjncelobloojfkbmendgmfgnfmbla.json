@@ -1,0 +1,30 @@
+{
+   "background": {
+      "page": "popup.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/checkweather_icon-16px.png",
+         "38": "icons/checkweather_icon-32px.png"
+      },
+      "default_title": "Check Weather",
+      "default_popup": "popup.html"
+  },
+   "description": "Accurate weather forecast with multiple locations support.",
+   "icons": {
+      "128": "icons/checkweather_icon-256px.png",
+      "16": "icons/checkweather_icon-32px.png",
+      "32": "icons/checkweather_icon-32px.png",
+      "48": "icons/checkweather_icon-96px.png"
+   },
+   "web_accessible_resources": [
+       "icons/checkweather_icon-16px.png"
+   ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval';object-src 'self'",
+   "manifest_version": 2,
+   "name": "Check-Weather for Chrome",
+   "permissions": [ "storage", "webRequest", "webRequestBlocking", "<all_urls>", "tabs", "activeTab", "management", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

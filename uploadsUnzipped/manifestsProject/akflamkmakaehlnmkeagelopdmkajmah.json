@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "The Chris Almighty",
+  "description": "Chris's name does not fully embody the greatness that is Chris. This extension corrects this.",
+  "version": "1.1",
+  "icons": { "128": "icon_cake48.png" },
+  "content_scripts": [
+      {
+          "matches": [
+              "http://*/*",
+              "https://*/*"
+          ],
+          "js": [
+              "content.js"
+          ],
+          "run_at": "document_end"
+      }
+    ],
+"browser_action": {
+  "default_icon": "icon_cake48.png",
+  "default_popup": "popup.html",
+  "default_title": "Click here!"
+},
+"permissions": [
+  "activeTab",
+  "https://ajax.googleapis.com/"
+]
+}

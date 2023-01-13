@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Better Tube",
+	"version": "4.2.0",
+	"description": "Makes the YouTube home page wider, lets you remove videos from feed, quick video watch mode and more.",
+	"permissions": [ "cookies", "http://*.youtube.com/*", "https://*.youtube.com/*" ],
+	"content_scripts": [ {
+		"js": [ "jquery.min.js", "bytui.js"],
+		"matches": [
+			"http://*.youtube.com/*",
+			"https://*.youtube.com/*"
+		],
+		"css": [ "bytui.css"]
+	}],
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"manifest_version": 2
+}

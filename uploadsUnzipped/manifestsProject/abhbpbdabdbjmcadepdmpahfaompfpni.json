@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Utopic Radio",
+  "description": "Utopic Radio - Bonne humeur garantie !",
+  "version": "1.3",
+  "background": { 
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+      "name": "Cliquer pour lancer ou arrêter l'écoute",
+      "default_icon": {
+        "19": "19.png",
+        "38": "38.png",
+        "128": "128.png",
+        "256": "256.png"
+      }
+  },
+  "homepage_url": "https://utopicradio.com/",
+  "icons": {
+  	"16": "16.png",
+  	"48": "48.png",
+  	"128": "128.png",
+        "256": "256.png"
+  },
+  "permissions": ["contextMenus", "background", "tabs", "http://*/*", "https://*/*"],
+  "manifest_version": 2
+}

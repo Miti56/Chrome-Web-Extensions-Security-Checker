@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "パスワード倉庫",
+	"description": "ログイン情報を管理できます。",
+	"version": "1.2.2",
+
+	"permissions": ["tabs", "http://*/*", "https://*/*", "storage", "unlimitedStorage"],
+
+	"icons": {
+		"16": "icons/icon.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+
+	"background": {
+		"scripts": ["jquery-1.10.2.min.js", "cryptico/cryptico.min.js", "jquery.cookie.js", "common.js", "background.js"]
+	},
+
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"run_at": "document_end",
+			"js": ["jquery-1.10.2.min.js", "common.js", "content.js"],
+			"matches": ["http://*/*", "https://*/*", "file:///*"]
+		}
+	],
+
+	"options_page": "options.html",
+
+	"browser_action": {
+		"default_icon": "icons/icon.png",
+		"default_title": "パスワード倉庫",
+		"default_popup": "popup.html"
+	}
+}

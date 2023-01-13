@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "jquery-3.3.1.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "24.png"
+   },
+   "content_scripts": [
+    {
+	   "include_globs": [
+		  "*://1chess.org/*",
+		  "*://chess.com/*",
+		  "*://lichess.org/*",
+          "*://chess24.com/*",
+          "*://*.chessbase.com/*",
+
+		  "*://www.1chess.org/*",
+		  "*://www.chess.com/*",
+		  "*://www.lichess.org/*",
+		  "*://www.chess24.com/*",
+		  "*://www.*.chessbase.com/*"
+       ],
+        "matches":[  
+            "<all_urls>"
+         ],
+
+      "js": ["jquery-3.3.1.js", "ltpgnviewer.js", "content_script.js"  ]
+    }],
+   "description": "Chess strongest move calculator.",
+   "icons": {
+      "128": "128.png",
+	  "48": "64.png",
+      "16": "24.png"
+   },
+  "web_accessible_resources":[
+    "chess-style.css"
+	],
+   "manifest_version": 2,
+   "name": "Chess Master",
+   "options_page": "options/options.html",
+   "permissions": ["storage"],
+   "version": "1.0.3"
+}

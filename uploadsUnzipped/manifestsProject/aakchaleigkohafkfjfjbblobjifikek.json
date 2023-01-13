@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "assets/icons/ButtonOn.png"
+    },
+    "default_popup": "assets/html/popup.html",
+    "default_title": "ProxFlow"
+  },
+  "default_locale": "en",
+  "description": "__MSG_description__",
+  "homepage_url": "http://proxflow.com",
+  "icons": {
+    "128": "assets/icons/icon128.png",
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png"
+  },
+  "manifest_version": 2,
+  "name": "__MSG_name__",
+  "permissions": [
+    "proxy",
+    "tabs",
+    "storage",
+    "https://loadbalancer-api.herokuapp.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "short_name": "ProxFlow",
+  "version": "2.3.4",
+  "web_accessible_resources": [
+    "assets/icons/icon48.png",
+    "assets/icons/waitajax.gif",
+    "assets/icons/close.png",
+    "js/content/yt.polymer.injected.js"
+  ],
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXyM/XoPrpGXA+JxM4EpRJXgQ0xgOilxE52QvL/jsMaccVP1ZlmT7kXFLr0YD+zSijzteQjgxNHhbXb5TN2aR8VPPX+1IBfQ7q7bmo2/pppM6akF/n3src4hMIuC79KmnZ5C/FLBGZPVaXccIiFq4G6vu4+vecM8bKxV5ri8Pf1QIDAQAB"
+}

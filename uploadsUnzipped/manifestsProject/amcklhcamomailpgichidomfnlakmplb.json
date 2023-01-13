@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Nội dung mới trên hoho.vn",
+  "description": "Cập nhật những hình ảnh mới nhất trên hoho.vn / Update newest photos from hoho.vn",
+  "version": "1.2.2",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+   "background": {
+        "page": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+ "permissions": [
+ "webNavigation",
+	"alarms",
+    "webRequest",
+    "http://wcf.hoho.vn/home/ext",
+	"http://hoho.vn/"
+  ]
+}

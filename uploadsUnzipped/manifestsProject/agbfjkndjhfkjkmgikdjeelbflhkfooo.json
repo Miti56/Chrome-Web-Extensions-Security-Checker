@@ -1,0 +1,26 @@
+{
+   "author": "TailorTab",
+   "background": {
+      "scripts": [ "js/jquery-1.11.1.min.js", "js/ga-background.min.js", "js/background.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "img/icon.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [{
+       "matches": ["http://*/*","https://*/*"],
+       "js": ["js/contentscript.js"],
+       "run_at": "document_start"
+   }],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com/analytics.js; object-src 'self'",
+   "description": "TailorTab extension for Chrome helps you buy clothes that fit while shopping your favorite online boutiques.",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/1X2GgB8vhpHz010dxH+2/7zGBGMbqAIgktLov0Y33qqTldVVnRShE3lAD21BzD7mU2qNT5gMeYPKpAaLuPmvuIn/MwT+3LTbR7VGum4B7XxF+oXmHh8v+5LGJGY3/r6rgfVYMpy5tvrEF4Fijbgt5xJpGBT2SkecsA3896YKXIVIszCcDa9lnV4GzmXokT66ZxHZlytiZ7bzkUFNOhEt7kBw2s7IEamPhiNtkphoEnCg61BLH/WPeDtuuiapfyG9S4dfpPCuMKkk8Rc8iUM3155U8GyapE73MXGgArlqihWg4+3FzgE7S5KCHKKlFyfNy9CalBzCHuRZOsPUY4AwIDAQAB",
+   "manifest_version": 2,
+   "name": "TailorTab",
+   "permissions": [ "*://*/", "storage", "tabs", "background" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.4600",
+   "version_name": "1.0.4600-stable"
+}

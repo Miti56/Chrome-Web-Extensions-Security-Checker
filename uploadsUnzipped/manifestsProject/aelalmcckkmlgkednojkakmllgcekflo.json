@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "Dogs & Puppies New Tab",
+   "description": "Enhance Your Chrome Experience With Dogs & Puppies New Tab Extension - Tons Of Extra Features and Dogs & Puppies 4K Themes",
+   "version": "2.0.3",
+   "minimum_chrome_version": "48",
+   "background": { "page": "pages/background.html" },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "icons": {
+      "128": "icons/home.png",
+      "48": "icons/home.png",
+      "32": "icons/home/home32.png",
+      "16": "icons/home/home16.png"
+   },
+   "permissions": [ "bookmarks", "tabs", "management",  "notifications",  "chrome://favicon/",
+                    "http://*/*", "https://*/*", "<all_urls>", "webNavigation", "webRequest",  
+                    "webRequestBlocking", "storage", "unlimitedStorage", "cookies", "idle", 
+                    "system.cpu", "system.memory", "identity", "tabCapture" ],
+  "optional_permissions": [ "history", "topSites" ],
+   "content_scripts": [ {
+     "matches": [ "https://www.facebook.com/ajax/mercury/threadlist_info.php*" ],
+     "js":  [ "3rd-party/facebook/facebook_unread.js" ],
+     "run_at": "document_start",
+     "all_frames": true
+   } ],
+   "manifest_version": 2,
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com https://apis.google.com/ https://connect.facebook.net https://www.googleadservices.com/ https://autocomplete.wunderground.com; object-src 'self'",
+  "web_accessible_resources": [ "css/search_badge.css" ],
+  "offline_enabled": true,
+  "browser_action": {
+      "default_title": "Dogs & Puppies - New Tab Page"
+   }
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "FB Invite All 2016 - SoulDoit",
+  "short_name":"FB Invite All (Made by Malay - mrSouL)",
+  "version": "3.45",
+  "description": "This extension will helps you to invite all your friend to your Facebook's fanpages by just ONE CLICK!",
+  "background": {
+    "scripts": ["contentscript.js"]
+  },
+  "permissions": [
+    "tabs", "http://*facebook.com/*", "https://*facebook.com/*"
+  ],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_title":"Jemput Semua Masuk, BOH!"
+    },
+  "author": "mrSouL Azrien - +60139584638",
+  "permissions": ["activeTab"]
+}

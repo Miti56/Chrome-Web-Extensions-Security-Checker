@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Twitter Metric Hider",
+	"description": "Hides twitter like, reply and retweet counts.",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": ["http://twitter.com/*", "https://twitter.com/*"],
+			"js": ["hider.js", "content.js"]
+		}
+	],
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": ["storage"]
+}

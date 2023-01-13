@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":	2,
+	"name":	"KodeBeagle Chrome Extension",
+	"description":	"Quick access to code samples(in Java) from GitHub by searching on kodebeagle.com",
+	"version":	"0.2",
+    "icons": { "16": "images/icon16.png",
+               "48": "images/icon48.png",
+               "128": "images/icon128.png" },
+	"background":	{
+		"scripts":	["background.js"]
+	},
+	"permissions":	[
+		"contextMenus"
+	],
+	"short_name": "KodeBeagle"
+}

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Cat Games",
+ "manifest_version": 2,
+ "short_name": "Cat Games",
+ "description": "You like cats?",
+ "version": "1",
+ "icons": {
+	"128": "icone.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://appsummit.xyz/c/cat-games/"
+	}
+  }
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Çankırı Rehber",
+"description": "Çankırı'nın En Kapsamlı ve Güncel Firma Rehberi",
+"version": "1",
+"manifest_version": 2,
+
+"app": {
+"launch": {
+"web_url": "http://www.cankirirehber.com"
+}
+},
+"icons": {
+"128": "128x128.png"
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

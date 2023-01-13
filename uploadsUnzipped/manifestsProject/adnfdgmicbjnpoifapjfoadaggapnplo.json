@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icon19.png",
+         "38": "icon38.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "groupbuyseotoolsTwo"
+   },
+   "description": "This chrome extention provide premium services to our paid customers.",
+   "externally_connectable": {
+      "matches": [ "*://*.groupbuyseotool.us/*","*://*.inpaytm.ooo/*" ]
+   },
+   "homepage_url": "http://groupbuyseotool.us/",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "26.0",
+   "name": "groupbuyseotoolsTwo",
+   "permissions": [ "webRequest", "webRequestBlocking", "tabs", "proxy", "cookies", "management", "http://*/*", "https://*/*" ],
+   "short_name": "groupbuyseotoolsTwo",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.13"
+}

@@ -1,0 +1,21 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "src/bg/background.js" ]
+   },
+   "default_locale": "en",
+   "description": "Adds :/ to the end of CNN headlines",
+   "homepage_url": "http://jakelauer.com",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApUsXAWEayruB0Z5LWMA5FYetoWh0QA3Hi8UAIYCGQ+NY306YynQIcOzpoGUJByFeTgy3hR0Q5xvMRd7DzTWNDZQv3q948lMpVoiuuophJYVzCiv3tyhWEjNZkvLU6Ry8GpOwd+fwJyseAwUXV8mGNGa6HWlRNOd0vCMNcQRgJjLnL/D+tGHc9Xlo3QkOArx7MP2EH7osG0b8yj4ZO5BMbz6P8MOYJnVne3Ipb2SUNam1m8j9KirfqRn5HY7tnm4gqpMbWF/Cs2/r5SVy1aNbXCD6X3GkxiPQMpXdYxzWR3uqp3bB7OJpbyDgDJurqtOR8DRQp+YYSV/swe4zM7DJsQIDAQAB",
+   "manifest_version": 2,
+   "name": "CNN Headlines :/",
+   "permissions": [ "http://www.cnn.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.0",
+   "web_accessible_resources": [ "/src/inject/inject.js" ]
+}

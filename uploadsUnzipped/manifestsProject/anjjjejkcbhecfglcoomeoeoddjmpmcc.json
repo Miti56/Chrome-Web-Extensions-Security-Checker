@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Full Res Insta",
+  "short_name": "FullResInsta",
+  "description": "This extension adds direct links to show full resolution images on instagram.",
+  "version": "1.0",
+  "author": "Vikram Joshi",
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Click to create full res links on Instagram"
+  },
+  "manifest_version": 2
+}

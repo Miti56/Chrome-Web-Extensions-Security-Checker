@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "OANDA fxTradeNOW",
+  "version": "2.0.0",
+  "manifest_version": 2,
+  "description": "Trade Forex with OANDA from the convenience of your browser!",
+  "browser_action": {
+    "default_icon": "oandablack.png",
+    "default_title": "OANDA fxTradeNOW",
+    "default_popup": "htdocs/trade-anywhere.html"
+  },
+  "icons": {
+    "16": "OANDA-16x16.png",
+    "48": "OANDA-48x48.png",
+    "128":"OANDA-128x128.png"
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+      "/jslib/scanner.js"
+  ],
+  "content_scripts": [
+      {
+          "matches": ["http://*/*"],
+          "js": [
+              "/jslib/jquery/jquery-1.7.2.min.js",
+              "/jslib/iso_table.js",
+              "/jslib/scanner.js"
+          ],
+          "run_at": "document_end"
+      }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "All Social Secret Emoji",
+  "description": "The easiest way to search, 1-click copy and paste, or auto-input emoji any Social",
+  "version": "1.1.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icons/icon-128.png",
+    "default_popup": "panel.html#init"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png",
+    "256": "icons/icon-256.png"
+  },
+  "background": {
+    "page": "bg.html",
+    "persistent": true
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+Shift+E",
+        "mac": "Ctrl+Shift+E",
+        "chromeos": "Alt+Shift+E",
+        "linux": "Alt+Shift+E"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "https://www.google-analytics.com/*"
+      ],
+      "js": ["js/jquery-3.1.1.min.js", "js/jquery.cookie.js","contentScript.data.js","contentScript.concat.js"]
+    }
+  ],
+  "web_accessible_resources": ["js/*"],
+  "permissions": [
+    "tabs",
+	"storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*/*",
+	"http://*/*"
+  ]
+}

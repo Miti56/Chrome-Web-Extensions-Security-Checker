@@ -1,0 +1,5 @@
+{"default_locale": "en", "version": "2.9.10", "description": "__MSG_moreDesc__", "background": {"scripts": ["script.js"]},
+ "manifest_version": 2, "browser_action": {"default_icon": "128-pic.png", "default_title": "Boom Beach Backgrounds & New Tab"},
+ "update_url": "https://clients2.google.com/service/update2/crx", "icons": {"128": "128-pic.png"},
+ "chrome_url_overrides": {"newtab": "new_tab.html"},
+ "name": "Boom Beach Backgrounds & New Tab"}

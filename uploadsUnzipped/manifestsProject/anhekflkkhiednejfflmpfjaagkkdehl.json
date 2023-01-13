@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+	
+    "name": "Nuudeli",
+    "description": "Korvaa kaikki Moodle-sanat Nuudeli-sanalla.",
+    "version": "0.2",
+	
+    "content_scripts": [ {
+       "js": ["nuudeli.js"],
+       "matches": [ "*://*/*" ]
+    } ],
+	
+    "icons": { "16": "logo.png", "128": "logo.png" }
+}

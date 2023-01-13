@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Scala Enterprise Player",
+    "description": "(Build ID: 6d132c)",
+    "manifest_version": 2,
+	"icons": {
+		"128": "images/scala_icon_128.png",
+		"16": "images/scala_icon_16.png"
+	},
+    "version": "1034",
+    "version_name": "Release-11.02.00 2017-11-14 English",
+    "app": {
+        "background": {
+            "scripts": ["background.js","message.js"]
+        }
+    },
+    "permissions": ["unlimitedStorage", "fileSystem", "webview", "storage", "power", "serial", "system.cpu", "system.network", "alarms", "http://*/", "http://*/*", "https://*/", "https://*/*", "system.memory", "system.storage", "system.display", "enterprise.deviceAttributes" ],
+	
+    "sockets": {
+      "tcpServer" : {
+        "listen": ["*"]
+      },
+	  "tcp": {
+         "connect": "*"
+	  }
+    },
+
+    "offline_enabled" : true,
+	
+    "kiosk_enabled" : true
+}
+
+
+  

@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Bricks New Tab Page",
+	"version": "1.1.6",
+	"description": "A Tab, Bookmark, and History homepage with Keyboard, Mouse, and Touch navigation.",
+	"permissions": ["tabs","bookmarks","history","storage","chrome://favicon/","commands"],
+    "icons": { "128": "bricks.png" },
+	"short_name": "Bricks",
+    "options_page": "options.html",
+	"chrome_url_overrides" : {
+		"newtab": "newtab.html"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"commands": {
+		"up": {
+			"suggested_key": {
+				"default": "Ctrl+Up"
+			},
+			"description": "Enter Fullscreen"
+		},
+		"down": {
+			"suggested_key": {
+				"default": "Ctrl+Down"
+			},
+			"description": "Leave Fullscreen"
+		},
+		"left": {
+			"suggested_key": {
+				"default": "Ctrl+Left"
+			},
+			"description": "Previous Tab"
+		},
+		"right": {
+			"suggested_key": {
+				"default": "Ctrl+Right"
+			},
+			"description": "Next Tab"
+		}
+	}
+}

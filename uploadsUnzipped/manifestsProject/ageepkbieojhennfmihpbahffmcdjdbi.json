@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Copado Selenium Recorder EU",
+    "short_name": "Copado Recorder EU",
+    "version": "2.0.0",
+    "manifest_version": 2,
+    "description": "Copado tool to record the best Selenium tests, salesforce-compatible!",
+    "author": "Copado Solutions SL",
+    "homepage_url": "https://copa.do/",
+    "icons":  {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "content_scripts": [{
+        "run_at": "document_end",
+        "js": ["constants.js", "messaging.js", "copado_locators1.js", "copado_locators2.js", "copado_events.js", "copado_recorder.js"],
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "all_frames": true,
+        "match_about_blank": true
+    }],
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "browser_action": {
+        "default_icon": "icon48.png",
+        "default_title": "Copado Recorder"
+    },
+    "permissions": [
+        "tabs",
+        "contextMenus",
+        "notifications",
+        "storage",
+        "tts",
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+    ],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxHjS99uTHjLOMJ8mMaLe/WRYyfEIRO+oj8irjVuUSh6LL0wfVTm+vNPXSsNmsjEYyX1pOtAjybs8W/gqbeE7UyKWGrus1z8UdHdZOm2n8tqg3RSmJTouVkuKdHguV5+ihNk3pIRY/tw8HCb3A2VNBh2HtEjFov3sQyXbFi/J9xYOqZAf3as4bTJhjUzpIzWObVVUrVvEr/uFdRZOVVVb9pWVhvhFr9VuIzaK1ycbgVLEyhyIaQBdGc+2fbI8DhFCN1PdkIEFy2PGGShPj3vjOiiFDl6C97pCzl93XL991/8FtnxAbgV2jnmMdc79PoeQALIqwhrD/GAQfdRZxuC7FQIDAQAB"
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "popup.js", "jquery.js", "jquery.countdown.js", "moment.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon48.png",
+      "default_popup": "popup.html"
+   },
+   "description": "იყიდეთ და გაყიდეთ სასურველი ნივთები აუქციონის მეშვეობით",
+   "icons": {
+      "128": "icons/icon128.png",
+      "48": "icons/icon48.png",
+      "18": "icons/icon16.png"
+   },
+   "manifest_version": 2,
+   "name": "Ibid.ge Online action",
+   "permissions": [ "http://ibid.ge/" ],
+   "short_name": "Ibid.ge ონლაინ აუქციონი",
+   "version": "1.1.5"
+}

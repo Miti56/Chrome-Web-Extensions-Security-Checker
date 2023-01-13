@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Followup for Facebook",
+  "description": "This extension allows Boomerang-style follow-up tracking for Facebook chats.",
+  "version": "0.0.1.3",
+
+  "background": {
+    "scripts": ["apis/firebase.js", "apis/firebase-app.js",
+      "apis/firebase-database.js", "apis/firebase-auth.js",
+      "apis/moment.js", "background.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": "images/lifesaver-icon-color.png",
+    "default_title": "Followup for Facebook"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["apis/jquery.js", "apis/moment.js", "facebook.js"],
+      "css": ["css/facebook.css"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "images/lifesaver-icon-grey.png",
+    "images/lifesaver-icon-color.png",
+    "https://www.gstatic.com/firebasejs/3.1.0/firebase.js"
+  ],
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "content_security_policy": "script-src 'self' https://*.firebaseio.com; object-src 'self'"
+}

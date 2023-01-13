@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SmartBookmark",
+  "description": "SmartBookmark可以智能优化你的书签栏",
+  "version": "2.0",
+  "author":"tanbowensg@gmail.com",
+
+  "browser_action": {
+    "default_icon": "image/icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "image/icon.png",
+    "48": "image/icon.png",
+    "128": "image/icon.png" 
+  },
+
+  "permissions": [
+    "tabs",
+    "history",
+    "activeTab",
+    "storage",
+    "webNavigation",
+    "bookmarks"
+  ],
+
+  "options_page":"options.html",
+
+  "background": {
+    "page": "bg.html",
+    "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "webNavigation"
+  ]
+  }
+}

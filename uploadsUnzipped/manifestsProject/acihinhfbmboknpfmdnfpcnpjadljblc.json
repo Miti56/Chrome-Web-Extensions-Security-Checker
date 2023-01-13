@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.1",
+  "name": "Fallen London game",
+  "description": "This extension was created for Fallen London players",
+  "offline_enabled": true,
+  "browser_action": {
+    "default_icon": {
+      "16": "fire.png",
+      "24": "fire.png",
+      "32": "fire.png"
+    },
+    "default_title": "_keyword_"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "icons": {  "128": "fire.png" },
+  "manifest_version": 2
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Turn Back Hoax",
+  "version" : "2.0.7",
+  "description" : "Laporkan HOAX.",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "matches":    ["http://*/*","https://*/*"],
+    "js":         ["js/content.js"]
+  }],
+  "icons": { "16": "icon128.png",
+             "48": "icon128.png",
+            "128": "icon128.png" },
+  "browser_action": {
+     "default_icon": "icon128.png",
+     "default_popup": "index.html",
+     "default_title": "Laporkan HOAX!"
+  },
+  "permissions": [ "background","tabs","notifications","http://*/","https://*/"]
+  ,"content_security_policy": "script-src 'self' 'unsafe-eval' https://www.gstatic.com; object-src 'self'"
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "YouTube Wolf",
+  "icons": { "16": "wolf.png", "48": "wolf.png", "128": "wolf.png"},
+  "version": "0.1.4",
+  "description": "Hide YouTube Like/Dislike Bar, Comments, View Count and Related Videos",
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["main.js"],
+    "matches": ["https://www.youtube.com/*"]
+  }],
+
+  "permissions": [
+   "storage"
+ ],
+ "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+      "default_icon": { "16": "wolf.png", "48": "wolf.png", "128": "wolf.png"},
+      "default_title": "Options",
+      "default_popup": "options.html"
+  }
+}

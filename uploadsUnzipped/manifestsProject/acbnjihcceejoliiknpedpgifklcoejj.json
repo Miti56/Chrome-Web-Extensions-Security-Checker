@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/bg.js" ]
+   },
+   "content_scripts": [{
+      "js": [ "js/jquery.js","js/inj_vk.js","js/script.js"  ],
+      "css": [ "css/inj_vk.css" ],
+      "matches": [ "*://vk.com/search*", "*://vk.com/al_search.php*" ],
+      "run_at": "document_idle"
+   }],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "",
+   "icons": {
+      "128": "icons/icon128.png"
+   },
+    "browser_action": {
+      "default_icon": "icons/icon48.png",
+      "default_popup": "html/popup.html"
+   },
+   "manifest_version": 2,
+   "name": "Vk dating",
+   "permissions": [ "activeTab", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "web_accessible_resources": [ "*" ],
+   "version": "1.2"
+}

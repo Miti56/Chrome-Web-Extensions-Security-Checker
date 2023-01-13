@@ -1,0 +1,24 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "installer.js" ]
+      }
+   },
+   "description": "Session Buddy for Chrome, Manage Your Browser Sessions",
+   "file_handlers": {
+      "text": {
+         "types": [ "application/javascript", "application/json", "application/x-shellscript", "application/xml", "text/*" ]
+      }
+   },
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "container": "GOOGLE_DRIVE",
+   "manifest_version": 2,
+   "name": "Session Buddy for Chrome",
+   "permissions": [ "clipboardRead", "clipboardWrite","browser", "alarms", "contextMenus", "storage", "notifications", "syncFileSystem", "app.window.fullscreen.overrideEsc", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   } ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

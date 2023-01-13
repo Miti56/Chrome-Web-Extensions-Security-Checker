@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Canada Express Entry Updates",
+  "version": "1.2.3",
+  "description": "Canada Express Entry Updates",
+  "icons": { "128": "ExtImages/fav.ico" },
+  "background":  {  "page":"Background.html"},
+  "browser_action": {
+    "default_title": "Canada Express Entry Updates",
+    "default_icon": "images/128.png",
+    "default_popup": "Pop.html"
+  },
+  "icons": {
+    "16": "images/16.ico",
+    "48": "images/48.ico",
+    "128": "images/128.ico"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "http://*.cic.gc.ca/*",
+    "http://*.canadavisa.com/*",
+    "notifications"
+  ],
+ "manifest_version": 2,
+ "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google.com https://ssl.google-analytics.com/ https://malah-code.github.io; object-src 'self';connect-src  https://malah-code.github.io http://www.canadavisa.com http://www.cic.gc.ca  'self'"
+
+}

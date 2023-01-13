@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "NetSuite Connector for Google Apps",
+  "short_name": "NS Connector",
+  "version": "1.61",
+  "description": "A contextual gadget for Gmail providing integration with NetSuite Emails, Contacts, Companies, Opportunities and Tasks",
+  "icons": {
+    "128": "icon-128.png",
+    "96": "icon-96.png",
+	"64": "icon-64.png",
+    "48": "icon-48.png",
+	"32": "icon-32.png",
+    "16": "icon-16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "627994758177"
+}

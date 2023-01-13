@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self';",
+  "name": "mote: voice commenting for Google Docs",
+  "short_name": "mote",
+  "author": "@justmoteHQ",
+  "icons": {
+    "16": "images/logos/mote-round-16.png",
+    "48": "images/logos/mote-round-48.png",
+    "128": "images/logos/mote-round-128.png"
+  },
+  "version": "0.0.2.6",
+  "description": "mote - the faster, friendlier way to comment and feedback",
+  "content_scripts": [
+    {
+      "matches": [ "https://docs.google.com/*"],
+      "all_frames" : true,
+      "css": [
+        "/bootstrap/css/birdi.min.css",
+        "/static/css/content.css"
+      ],
+      "js": ["/static/js/content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["/static/js/background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/logos/mote-round-16.png",
+      "48": "images/logos/mote-round-48.png",
+      "128": "images/logos/mote-round-128.png"
+    },
+    "default_title": "mote: the faster, friendlier way to comment on docs",
+    "default_popup": "index.html"
+  },
+  "externally_connectable": {
+    "matches": ["https://www.justmote.me/*", "https://justmote.me/*"]
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources" : ["images/*", "sounds/*"]
+}

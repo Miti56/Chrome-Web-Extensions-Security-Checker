@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Krl Shorten",
+    "version": "1.0",
+    "description": "Shorten your links with krl",
+    "manifest_version": 2,
+    "background":{
+        "scripts": ["core.js"]
+    },
+    "permissions": [
+          "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Krl it"
+    },
+    "icons": {
+        "128":"icon.png"
+    }
+}

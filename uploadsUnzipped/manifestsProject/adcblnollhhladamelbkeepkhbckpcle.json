@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "short_name": "Machine Sourcer - LinkedIn Automation",
+  "name": "Machine Sourcer",
+  "version": "1.3.12",
+  "manifest_version": 2,
+  "icons": {
+    "25": "MACHINE-SOURCER_ICON_RGB_25px.png",
+    "50": "MACHINE-SOURCER_ICON_RGB_50px.png",
+    "100": "MACHINE-SOURCER_ICON_RGB_100px.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "downloads",
+    "tabs"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["static/js/background.js"]
+  },
+  "page_action": {
+    "default_popup": "index.html"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+  "content_scripts" : [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "css": ["static/css/content.css"],
+      "js": ["static/js/3.js", "static/js/4.js", "static/js/content.js"]
+    }
+  ]
+  
+}

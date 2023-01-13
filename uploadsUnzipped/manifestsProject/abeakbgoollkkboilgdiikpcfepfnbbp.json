@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "VK Silent Typing",
+  "version": "2.0",
+  "manifest_version": 2,
+  "description": "Отключает отправку оповещений о наборе сообщений ВК. При нажатом Alt позволяет открывать сообщения, не помечая их прочитанными.",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "*://vk.com/*",
+    "*://*.vk.com/*",
+    "*://*.vk.me/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://vk.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "inject.js"
+  ]
+}

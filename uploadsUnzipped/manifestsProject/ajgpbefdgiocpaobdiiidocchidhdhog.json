@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Monster Games",
+ "manifest_version": 2,
+ "short_name": "Monster Games",
+ "version": "1",
+ "icons": {
+	"128": "icon.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://myclubgames.xyz/c/monster-games/"
+	}
+  }
+}

@@ -1,0 +1,19 @@
+{
+   "author": "Plugtopus Agency",
+   "browser_action": {
+      "default_popup": "html/popup.html"
+   },
+   "default_locale": "en_US",
+   "description": "__MSG_desc__",
+   "homepage_url": "https://plugtopus.agency",
+   "icons": {
+      "128": "img/128.png",
+      "64": "img/64.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "https://api.coinmarketcap.com/*" ],
+   "short_name": "__MSG_shortname__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.3.28.3"
+}

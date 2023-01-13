@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "LibreOffice Impress on rollApp",
+  "description": "Fastest and easiest way to create effective multimedia presentations. Powered by rollApp.",
+  "version": "1.2",
+  "app": {
+    "urls": [
+      "*://www.rollapp.com/launch/loimpress",
+      "*://www.rollapp.com/app/loimpress"
+    ],
+    "launch": {
+      "web_url": "https://www.rollapp.com/launch/loimpress?ref=chrome-app",
+      "container": "panel",
+      "width": 900,
+      "height": 600
+    }
+  },
+  "icons": { "16": "loimpress-16.png", "128": "loimpress-128.png" }
+}

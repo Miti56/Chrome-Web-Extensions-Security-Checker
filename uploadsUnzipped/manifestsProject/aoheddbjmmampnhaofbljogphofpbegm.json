@@ -1,0 +1,13 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name":"CARDINFO FOR SDSAM",
+	 "description":"SDSAM CARDINFO BY TAESAN CLAN",
+   "version": "1.0.0.1",
+   "manifest_version": 2,
+   "content_scripts": [ {
+      "matches": [ "http://*.nexon.com/*", "http://*.paran.com/*" ],
+      "include_globs": [ "http://sdsam-w*.nexon.com/*", "http://sdsam-w*.paran.com/*" ],
+      "js": ["sd3k-cardinfo.user.js"],
+      "run_at": "document_end"
+   } ]
+}

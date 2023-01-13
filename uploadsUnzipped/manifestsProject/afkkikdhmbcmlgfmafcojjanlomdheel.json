@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Sunny Stream",
+    "short_name": "Sunny",
+    "version": "1.2.3",
+    "manifest_version": 2,
+    "description": "Esta extensión te avisara cuando Sunny inicie stream.",
+    "icons": { 
+        "16": "img/img16.png",
+        "48": "img/img48.png",
+        "128": "img/img128.png"
+    },
+    "browser_action": {
+        "default_icon": "img/img72.png",
+        "default_popup":"popup.html"
+    },
+    "author": "Twitter: @GustavoRsz",
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "permissions": ["notifications", "https://api.twitch.tv/"],
+    "content_security_policy": "script-src 'self'; object-src 'self';"
+}

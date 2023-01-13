@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GoGoBrain",
+  "description": "Помощь в развитии силы воли",
+  "version": "1.1",
+
+  "permissions": [
+    "activeTab", 
+    "webNavigation", 
+    "tabs",
+    "storage",
+    "background"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ],
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+  "background": {
+    "scripts": ["background.js", "content_ph.json", "jquery.min.js", "alertifyjs/alertify.min.js"],
+    "persistent": true
+  },  
+  
+
+
+  "browser_action": {
+    "default_title": "Make this page red",
+    "default_popup": "popup.html"
+  },
+  
+  "manifest_version": 2,
+   
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'", 
+
+
+   "web_accessible_resources": [		
+  	"alertifyjs/css/alertify.css",
+  	"alertifyjs/css/alertify.min.css",
+  	"alertifyjs/css/alertify.rtl.css",
+  	"alertifyjs/css/alertify.rtl.min.css",
+  	"alertifyjs/css/themes/bootstrap.css",
+  	"alertifyjs/css/themes/default.min.css",
+  	"alertifyjs/alertify.js",
+  	"alertifyjs/alertify.min.js",
+    "images/logo_icon.png",
+    "styles/raketa_main_styles.css"
+  	
+    ]
+   
+  
+}

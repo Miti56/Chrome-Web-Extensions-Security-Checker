@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Spark Chess 9 - Install Game",
+  "version": "9.5",
+  "manifest_version": 2,
+  "description": "The only chess game that puts fun first. Play against the computer or challenge your friends online!",
+  "homepage_url": "http://sparkchess.littlealchemyunblocked.net/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Spark Chess 9",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://sparkchess.littlealchemyunblocked.net/"
+  ]
+}

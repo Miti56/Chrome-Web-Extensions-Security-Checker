@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Through proxy",
+  "description": "Route all http(s) traffic through secured https proxy",
+  "version": "0.1",
+  "background": { "scripts": ["background.js"] },
+  "icons": {"48": "icon_true.png"},
+  "browser_action": {
+	  "default_icon": {
+            "48": "icon_false.png"
+          }
+  },
+  "permissions": [
+      "proxy",
+	  "webRequest",
+	  "webRequestBlocking",
+	  "http://*/*",
+	  "https://*/*"
+  ],
+  "manifest_version": 2
+}

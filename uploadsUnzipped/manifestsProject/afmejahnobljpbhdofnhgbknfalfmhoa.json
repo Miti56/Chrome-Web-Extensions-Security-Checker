@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "NBA Sport Online 2K17 Games",
+  "description": "NBA 2K17, Five Night at Freddy's, Fruit Ninja, Game of War, GardenScapes New Acres, Geometry Dash, Goat Simulator PayDay",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

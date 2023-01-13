@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Enhanced GitHub Projects",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "A chrome extension for better GitHub Projects",
+  "homepage_url": "https://github.com/kechol/enhanced-github-projects",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "storage",
+    "https://github.com/*",
+    "https://api.github.com/*"
+  ],
+  "options_ui": {
+    "open_in_tab": false,
+    "page": "options.html"
+  },
+  "content_scripts": [{
+    "run_at": "document_start",
+    "matches": [
+      "https://github.com/*"
+    ],
+    "css": [
+      "content.css"
+    ],
+    "js": [
+      "content.js"
+    ]
+  }]
+}

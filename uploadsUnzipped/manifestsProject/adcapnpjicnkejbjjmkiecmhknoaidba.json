@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Klingen.dk Fix",
+  "description": "This extension removes the annoying hover effects and replaces them with click events.",
+  "version": "1.2",
+  
+  "content_scripts": [ {
+	"js": [ "jquery.js", "fix.js" ],
+	"matches": [ "http://www.klingen.dk/*", "http://klingen.dk/*" ]
+  }],
+  "icons": {
+    "16": "icon16.png",
+	"48": "icon48.png",
+	"128": "icon128.png"
+  },
+  "permissions": [
+    "http://klingen.dk/"
+  ]
+}

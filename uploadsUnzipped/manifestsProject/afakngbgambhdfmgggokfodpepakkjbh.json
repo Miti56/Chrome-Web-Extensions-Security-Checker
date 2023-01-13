@@ -1,0 +1,46 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  	
+   "name": "Board of European Students of Technology",
+  
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 0,0,0 ],
+         "frame": [ 0,100,0 ],
+         "ntp_background": [ 0,100,0 ],
+         "ntp_header": [ 250, 165, 25, 1 ],
+         "ntp_link": [ 250, 165, 25 ],
+         "ntp_section": [ 105, 205, 40 ],
+         "ntp_section_link": [ 0,0,0],
+         "ntp_section_text": [ 0, 0, 0 ],
+         "ntp_text": [ 0, 0, 0 ],
+         "tab_background_text": [ 0, 0, 0 ],
+         "tab_text": [ 0,0,0 ],
+         "toolbar": [ 164,200,228 ],
+         "button_background":[164,200,228]
+      },
+      "images": {
+         "theme_frame": "i/chrome_theme_all-01.png",
+         "theme_frame_inactive": "i/chrome_theme_all-02.png",
+         "theme_frame_incognito":"i/chrome_theme_all-03.png",
+         "theme_frame_incognito_inactive":"i/chrome_theme_all-04.png",
+         "theme_toolbar":"i/chrome_theme_all-05.png",
+         "theme_tab_background":"i/chrome_theme_all-06.png",
+         "theme_tab_background_incognito":"i/chrome_theme_all-07.png",
+         "theme_ntp_background":"i/chrome_theme_all-10.png",
+         "theme_frame_overlay_inactive":"i/chrome_theme_all-09.png",
+         "theme_frame_overlay":"i/chrome_theme_all-08.png",
+         "theme_button_background":"i/chrome_theme_all-11.png"
+        
+         
+      },
+      "properties": {
+         "ntp_background_alignment" : "center",
+         "ntp_background_repeat": "repeat",
+         "ntp_logo_alternate": 1	
+      }
+     
+      
+   },
+   "version": "1.1"
+}

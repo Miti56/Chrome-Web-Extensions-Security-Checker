@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"version": "1.2.1",
+	"name": "Work Hour Calculator",
+	"description": "Can be helpful in calculating your work hours",
+	"permissions": [
+		"tabs",
+		"declarativeContent",
+		"alarms",
+		"storage"
+	],
+	"optional_permissions": [
+		"notifications"
+	],
+	"icons": {
+		"32": "timeIcon32.png",
+		"48": "timeIcon48.png",
+		"128": "timeIcon128.png"
+	},
+	"page_action": {
+		"default_icon": "timeIcon.png",
+		"default_popup": "timeSheet_PopUp.html"
+	},
+	"background": {
+		"scripts": [
+			"background.js",
+			"alarmBackground.js"
+		],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*/timesheet",
+				"https://*/*/timesheet",
+				"https://*/*/timesheet?*"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	]
+}

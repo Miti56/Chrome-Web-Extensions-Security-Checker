@@ -1,0 +1,87 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "1.0.2",
+    "manifest_version": 2,
+    "homepage_url": "https://www.searchlock.com/privacypal",
+    "icons":
+    {
+        "16": "icons/icon_16.png",
+        "48": "icons/icon_48.png",
+        "128": "icons/icon_128.png"
+    },
+    "permissions": [
+        "contextMenus",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/*",
+        "activeTab",
+        "tabs",
+        "cookies",
+        "storage",
+        "<all_urls>",
+        "alarms",
+        "management"
+    ],
+    "background":
+    {
+        "scripts": [
+            "js/polyfill.js",
+            "js/loglevel.js",
+            "js/jquery.js",
+            "js/background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action":
+    {
+        "default_icon":
+        {
+            "19": "icons/icon_19.png",
+            "38": "icons/icon_38.png"
+        },
+        "default_popup": "html/popup.html"
+    },
+    "omnibox":
+    {
+        "keyword": "sl"
+    },
+    "chrome_settings_overrides":
+    {
+        "search_provider":
+        {
+            "name": "SearchLock",
+            "keyword": "searchlock.com",
+            "favicon_url": "https://www.searchlock.com/assets/images/favicon.png",
+            "search_url": "https://results.searchlock.com/search/?q={searchTerms}&sr=pps-def-search",
+            "suggest_url": "https://www.searchlock.com/search/suggest?q={searchTerms}",
+            "encoding": "UTF-8",
+            "is_default": true
+        }
+    },
+    "content_scripts": [
+    {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "css": [
+            "css/contentScripts.css"
+        ],
+        "js": [
+            "js/polyfill.js",
+            "js/loglevel.js",
+            "js/jquery.js",
+            "js/insecureFields.js",
+            "js/contentScripts.js"
+        ],
+        "all_frames": true
+    }],
+    "web_accessible_resources": [
+        "img/*"
+    ]
+}

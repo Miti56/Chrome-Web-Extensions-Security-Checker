@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+      "js": [ "content_script.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "manifest_version": 2,
+   "version": "1.1",
+   "name": "Fsck",
+   "description": "Replaces f*ck with fsck. Inspired by xkcd.com/1678."
+}

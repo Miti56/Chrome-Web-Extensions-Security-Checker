@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "My Chrome Pet",
+  "description": "Love and care for your pet as you feed, poke, scratch and nurture it in the corner of your screen!",
+  "version": "1.0.8",
+  "icons": { "128": "icon_128.png" },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "game/popup.html"
+  },
+  "permissions": ["activeTab"]
+}

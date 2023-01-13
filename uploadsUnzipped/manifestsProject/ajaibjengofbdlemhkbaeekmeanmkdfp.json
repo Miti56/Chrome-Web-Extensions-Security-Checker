@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Dora Utforskaren",
+"description": "Upptäck Dora Utforskaren",
+"short_name": "DoraUtforskaren.se - Allt du behöver veta om Dora Utforskaren",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"https://www.dorautforskaren.se/"
+],
+"launch": {
+"web_url": "https://www.dorautforskaren.se/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

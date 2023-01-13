@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "long finger",
+  "description": "This extension change cursor index finger to long finger.",
+  "version": "3.1",
+  "browser_action": {
+    "default_icon": "longFinger.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "css": ["longFinger.css"],
+      "js": ["longFinger.js"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Is It on Github?",
+  "description": "See something interesting? Wonder if there is a related project on github? Do a quick search and find out!",
+  "version": "1.0",
+  "permissions": ["contextMenus"],
+  "icons": {
+    "16": "icon-bitty.png",
+    "32": "icon-small.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "manifest_version": 2
+}

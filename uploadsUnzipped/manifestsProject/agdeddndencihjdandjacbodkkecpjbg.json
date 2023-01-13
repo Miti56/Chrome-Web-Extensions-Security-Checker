@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Jaagaa - a Visual Bookmarklet",
+  "version": "3.0.51",
+  "manifest_version": 2,
+  "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "img/16.png",
+      "default_popup": "popup.html",
+      "default_title": "Capture, Organize and Share your thoughts..."
+   },
+   "description": "jaagaa Extension",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png"
+   },
+   "permissions": [ "storage","tabs","<all_urls>","contextMenus","webRequest","http://*/*", "https://*/*", "http://*.jaagaa.com/" ],
+   "web_accessible_resources":["ChromeLayout.html","highlightpopup.html"]
+}

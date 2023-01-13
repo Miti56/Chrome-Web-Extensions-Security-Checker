@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"version": "1.0",
+	"name": "Screen capture/recorder",
+	"description": "Screen capture/recorder",
+	"minimum_chrome_version":"1.0",
+	"icons": {
+		"16": "images/icon16.png","32": "images/icon32.png","48": "images/icon48.png","128": "images/icon128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+		  "19": "images/icon19.png","38": "images/icon38.png"
+		},
+		"default_title": "WIKICAP","default_popup": "popup.html"
+    },
+	"background":{
+	    "page": "background.html"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>",
+        "webRequest",
+        "webRequestBlocking",
+        "idle",
+        "storage",
+        "webNavigation",
+        "unlimitedStorage",
+		"tabCapture",
+	  	"cookies",
+		"chrome://favicon/"
+	],
+    "web_accessible_resources": [
+        "images/success.gif","images/icon19.png"
+    ],
+	"content_scripts": [
+		{
+			"js":	["javascripts/libs/jquery-1.7.2.min.js","javascripts/content_script.js","javascripts/libs/dragresize.js", "javascripts/jquery.draggable.js"	],
+			"css": 	["stylesheets/selected.css","stylesheets/injectCursorHighlight.css"],
+			"matches": ["http://*/*", "https://*/*"],
+			"run_at": "document_end"
+		}
+	]
+}

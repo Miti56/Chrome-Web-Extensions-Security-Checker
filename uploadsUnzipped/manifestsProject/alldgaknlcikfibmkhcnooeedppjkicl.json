@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "tlo.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/19.png",
+         "38": "images/38.png"
+      },
+      "default_title": "Roller Adventure Coaster Online Tycoon Games"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "skrypt.js" ],
+      "matches": [ "*://*.minecraft-wat.blogspot.com/*" ]
+   } ],
+   "description": "Roller Coaster Tycoon, Rolling Sky, Scribblenauts Remix, Scribblenauts Unlimited, Smash or Pass, Solitaire, Star Wars",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "Roller Adventure Coaster Online Tycoon Games",
+   "permissions": [ "*://*.minecraft-wat.blogspot.com/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "Roller Adventure Coaster Online Tycoon Games",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

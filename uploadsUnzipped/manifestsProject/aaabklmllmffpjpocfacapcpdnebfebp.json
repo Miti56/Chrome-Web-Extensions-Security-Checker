@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Toucan",
+  "description": "Dashboard for your Toucan product pages",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "images/icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.usetoucan.com/"
+    ],
+    "launch": {
+      "web_url": "https://www.usetoucan.com/"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+   "manifest_version": 2,
+   
+   "name": "Dedicated Fast VPN and Proxy | VPN.EXPRESS",
+   "description": "VPN.Express provide you Dedicated Fast VPN and PROXY. Easy to use to Access any blocked website and navigate securely.",
+   "version": "1.1.2",
+   "icons": {
+      "24": "assets/img/icon-24.png",
+      "128": "assets/img/icon-128.png"
+   },
+   
+   "background": {
+      "page": "background.html"
+   },
+   "sandbox": {
+    "pages": ["webrtc.html"]
+  },
+   "browser_action": {
+      "default_icon": "assets/img/off.png",
+      "default_title": "VPN.Express",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "run_at": "document_start",
+        "all_frames": true,
+        "match_about_blank": true,
+        "js": ["nowebrtc.js"]
+    }
+   ],
+   "permissions": [ "tabs", "activeTab", "proxy", "<all_urls>", "webRequest", "webRequestBlocking", "https://*/*", "http://*/*" ],
+   "web_accessible_resources": [ "assets/js/*", "assets/img/*", "assets/css/*", "assets/fonts/*", "nowebrtc.js" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "minimum_chrome_version":"22.0.0"
+}

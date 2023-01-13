@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HumanTag Helper",
+  "version": "3.3.3.3",
+  "manifest_version": 2,
+  "description": "HumanTag for the masses",
+  "homepage_url": "http://areyouahuman.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "options_page": "src/options/index.html",
+  "permissions": [
+      "storage",
+      "cookies",
+      "https://n-cdn.areyouahuman.com/*"
+    ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

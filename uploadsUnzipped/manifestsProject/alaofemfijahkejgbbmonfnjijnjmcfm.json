@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FunSafeTab",
+  "description": "Easy access to security tools and useful links. Overrides the newtab with funsafetabsearch.com",
+  "version": "0.6",
+  "chrome_url_overrides": {
+    "newtab": "redirect.html"
+  },
+  "permissions": [
+          "storage",
+          "cookies",
+          "*://*.funsafetabsearch.com/"
+        ],
+    "browser_action": {
+          "default_icon": {
+            "128": "logo.png"
+          },
+          "default_title": "Open Newtab By FunSafeTab"
+        },
+  "icons": { "128": "logo.png" },
+  "background": {
+    "scripts": ["background.js"]
+  },  
+  "manifest_version": 2
+}

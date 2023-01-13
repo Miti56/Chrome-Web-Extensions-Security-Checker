@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Minion for Me BETA",
+  "version": "0.5",
+  "description": "Make a snapshot of the current screen for private use OR public sharing.",
+  "browser_action": {
+     "default_icon": "camera.png",
+     "default_title": "Save your memories!",
+     "default_popup": "popup.html"
+  },
+  "permissions": ["<all_urls>","tabs"],
+  "manifest_version": 2
+}
+
+

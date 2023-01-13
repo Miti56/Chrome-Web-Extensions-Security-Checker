@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "maxFynd Long Range Detector Collection",
+	"description": "World's best long range gold and metal detection instruments in the largest collection on the net.",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": {
+		"128": "icon_128.png"
+	},
+	"app": {
+		"urls": [
+			"http://www.maxfynd.com/"
+		],
+		"launch": {
+			"web_url": "http://www.maxfynd.com/"
+		}
+	}
+}
+	

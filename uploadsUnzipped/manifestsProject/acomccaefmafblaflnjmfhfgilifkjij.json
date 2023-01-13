@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "ATV Games | Concho.XYZ",
+  "short_name": "ATV Games",
+  "version": "1.0.2",
+  "description": "Direct link to the ATV Games category on Concho.XYZ",
+  "homepage_url": "http://concho.xyz/c/atv-games/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "ATV Games | Concho.XYZ",
+      "default_popup": "popup.html"
+  }
+}

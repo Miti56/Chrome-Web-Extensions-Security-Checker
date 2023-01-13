@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version" : 2,
+    "name" : "Acroplia Demo Screen Sharing",
+    "author": "Voxeet",
+    "version" : "1.5",
+    "minimum_chrome_version": "39",
+    "description" : "Enables screen sharing with Acroplia.com",
+    "homepage_url": "https://www.acroplia.com/",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_end",
+       "matches": ["https://*.acroplia.com/*", "http://localhost:3000/*", "http://localhost:3001/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture",
+        "pageCapture",
+        "storage",
+        "tabs",
+        "https://*.acroplia.com/*"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

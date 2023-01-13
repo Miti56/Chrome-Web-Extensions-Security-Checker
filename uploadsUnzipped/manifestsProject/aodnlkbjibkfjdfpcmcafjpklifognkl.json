@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Multi Messenger Apk",
+  "description": "Multi messenger Launcher combines services like whatsapp and others into one simple",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+      "scripts": ["background.js" ]
+   },
+  "browser_action": {
+      "default_title": "Multi Messenger.",
+      "default_icon": "128.png",
+      "default_popup": "index.html"
+  },
+  "icons": { "16": "16.png",
+              "48": "48.png",
+              "128":"128.png" },
+  "manifest_version": 2,
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

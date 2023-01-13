@@ -1,0 +1,17 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx", 
+	"name": "YPhilipini",
+	"manifest_version": 2,
+	"version": "0.1",
+	"description": "Philipini for in.gr",
+	
+	"content_scripts": [
+  		{
+			"matches": ["http://www.in.gr/*"],
+			"js": ["philipini.js"]
+		}
+	],
+	"permissions": [ "http://www.in.gr/*" ]
+	
+} 
+

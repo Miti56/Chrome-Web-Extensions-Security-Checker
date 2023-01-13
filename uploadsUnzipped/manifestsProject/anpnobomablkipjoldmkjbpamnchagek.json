@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "main.js" ]
+      }
+   },
+   "author": "Akmal Razali",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqJNLwsOg2r2G9Lkz88Sp7Kee34jToWnLSUpCrBDxs4DRUgMTHzXUHOkaJbtRhDPBEwEOf40lewNWU7b1dYdw1HuVNANzqw5WMqqMYbmY5sHuxrRkxn9v7c6HUpnI+swgUL2kUhZU6BZYZGX5ZE+LGPAFPWC7dDR1FBL8kSJgNtQdfLGey8gB3IKN9Ki1C6emNnrHo+z/0Dcn9PMA2ZL7w6jIdkuTag+LGmfZGM1DkoIeliXti9P2bHY63Fn4xMcNTMAh4KnplG97yEfdwkIBQaLM8uYFJj96WjMrnSFMuctN6T8Neh8AXjC7sVpMufxqCRzBcGB5b2uVqCmTm3BJtwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "36.0",
+   "name": "Tunein Radio",
+   "permissions": [ "webview" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5"
+}

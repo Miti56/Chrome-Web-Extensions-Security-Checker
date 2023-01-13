@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Flight",
+  "description": "Throw a paper plane as far as you can. Collect points and upgrade your plane so you can throw it even further",
+  "version": "1.0.0.12",
+  "manifest_version": 2,
+  "app": {
+	"launch": {
+      "web_url": "http://flight.yumworks.net/"
+    }
+  },
+  "icons": {"128": "128.png" }
+}

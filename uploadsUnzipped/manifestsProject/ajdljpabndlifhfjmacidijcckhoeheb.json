@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "images/i16.png",
+      "default_popup": "popup.html",
+      "default_title": "简单易用的MD5"
+   },
+   "description": "简单易用的MD5:简单易用的MD5密码生成工具，可以生成32位MD5密码。",
+   "icons": {
+      "128": "images/i128.png",
+      "16": "images/i16.png",
+      "48": "images/i48.png"
+   },
+   "manifest_version": 2,
+   "name": "简单易用的MD5",
+   "version": "2.9"
+}

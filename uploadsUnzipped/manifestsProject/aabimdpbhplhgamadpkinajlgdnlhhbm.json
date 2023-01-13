@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "JH Screensharing Extension",
+  "description": "Extension to allow screen sharing in JH applications.",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "all_frames": true 
+    }
+  ],
+  "permissions": [
+    "desktopCapture",
+    "file://*/*",
+    "tabs"
+  ]
+}

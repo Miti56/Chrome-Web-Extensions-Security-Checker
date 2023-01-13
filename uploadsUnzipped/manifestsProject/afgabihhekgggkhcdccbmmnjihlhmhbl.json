@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "YouTube First Playlist Video",
+  "version": "1.0.0.1",
+  
+  "description": "YouTube: adds right click options to open only the first video of a playlist.",
+  "icons": {
+    "16": "extension_icons/youtubeplaylistfirstvideo-16.png",
+    "32": "extension_icons/youtubeplaylistfirstvideo-32.png",
+    "48": "extension_icons/youtubeplaylistfirstvideo-48.png",
+    "128": "extension_icons/youtubeplaylistfirstvideo-128.png"
+  },
+
+  "background": {
+    "scripts": ["background_scripts/context_menu_create_remove.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "js": [
+		"jquery/jquery-3.4.1.min.js",
+        "content_scripts/context_menu_requests.js"
+      ]
+    }
+  ],
+  
+  "permissions": 
+    ["contextMenus"]
+}

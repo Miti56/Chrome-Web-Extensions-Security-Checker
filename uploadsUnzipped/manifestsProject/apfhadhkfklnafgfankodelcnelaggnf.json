@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Информация о субъектах",
+    "version": "1.0.7",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab"
+      ],
+    "icons": {
+        "16": "img/EASOPS16.png",
+        "48": "img/EASOPS48.png",
+        "128": "img/EASOPS128.png"
+    },
+    "browser_action": {
+		"default_icon": "img/EASOPS16.png",
+		"default_popup": "popup.html"
+	}
+}

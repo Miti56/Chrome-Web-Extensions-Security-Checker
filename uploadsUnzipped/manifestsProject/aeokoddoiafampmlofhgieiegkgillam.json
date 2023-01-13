@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Arrivu conference Desktop Sharing",
+  "description": "A Chrome extension that allows you to share your desktop into meetings with Arrivu conference.",
+  "version": "0.1.5",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "arrivu-logo-16x16.png",
+    "48": "arrivu-logo-48x48.png",
+    "128": "arrivu-logo-128x128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://collab.arrivuapps.com/*"
+      ]
+  }
+}

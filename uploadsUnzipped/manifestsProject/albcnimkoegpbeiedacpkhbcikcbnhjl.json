@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Realtime Character Count : numMoji",
+  "description": "numMoji is a tool that you can count the number of characters. Quickly, easily check if you enter the text!",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://www.charactercount.kenjisugimoto.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.charactercount.kenjisugimoto.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "notifications"
+  ]
+}

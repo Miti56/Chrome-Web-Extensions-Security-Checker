@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "name": "__MSG_extName__",
+  "description": "Uses keywords to desuckify your Facebook feed",
+  "version": "1.0.0",
+
+  "default_locale": "en",
+
+  "icons": { "48": "icon48.png", "16":"icon16.png" },
+
+  "permissions": [
+    "https://www.facebook.com/*",
+    "webNavigation",
+    "storage",
+    "tabs",
+	"contextMenus"],
+
+  "content_scripts": [{
+    "matches": ["https://www.facebook.com/*"],
+    "js": ["jquery-1.11.1.min.js","script.js"]
+  }],
+
+  "web_accessible_resources": [
+    "jquery-1.11.1.min.js"
+  ],
+
+  "page_action":{
+    "default_icon": "icon16.png",
+    "default_popup":"setting.html",
+    "default_title":"Facebook DeSuckify"
+  },
+
+  "background": {
+	"scripts": [ "background.js"],
+    "persistent": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Holoholo",
+  "description": "Automatically responds when out of office and deletes/archives emails.",
+  "version": "0.1",
+  "background": {
+      "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*",
+        "https://script.googleusercontent.com/macros/*"
+      ],
+      "js": ["inboxsdk.js","content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "https://mail.google.com/",
+    "https://inbox.google.com/",
+    "https://script.google.com/macros/s/*"
+  ],
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "images/*",
+    "libs/*"
+  ],
+  "icons": {
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+   }
+}

@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "kyg.js", "nt5t.js" ]
+   },
+   "description": "You can use SrchJil to search the best searchers in the world",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "SrchJil",
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "cookies", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "8.14"
+}

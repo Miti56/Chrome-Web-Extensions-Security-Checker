@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"app":{"urls":["http://abc.go.com/"],"launch":{"web_url":"http://abc.go.com/"}},"name":"ABC","icons":{"128":"icon_128.png"},"manifest_version":2,"version":"0.1.0.0"}

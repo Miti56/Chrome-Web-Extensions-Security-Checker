@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Download_Pronuciation_Addon",
+    "version": "1.0.1",
+    "description": "automatic download pronunciation file from Merriam-Webster Unabridged",
+    "permissions": [
+        "activeTab",
+        "downloads",
+        "http://unabridged.merriam-webster.com/**"
+    ],
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+      },
+    "content_scripts": [{
+        "js": ["content.js"],
+        "matches": ["*://unabridged.merriam-webster.com/unabridged/*"],
+        "run_at": "document_end"
+    }],
+    "manifest_version": 2
+}

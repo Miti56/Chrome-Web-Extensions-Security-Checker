@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Colori invertiti per il sito open.online",
+  "version": "0.1.1",
+  "description": "Inverte i colori del sito open.online per migliorare la leggibilità del testo.",
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "matches": ["https://www.open.online/*"]
+  }]
+
+}

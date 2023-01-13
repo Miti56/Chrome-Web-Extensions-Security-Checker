@@ -1,0 +1,28 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Citizens of Antiford",
+  "description": "Nation of Steampunks, an immersive world to explore and adventure in.",
+  "version": "3.1.5",
+  "icons": { "24": "24.png", "128": "128.png" , "512": "512.png" },
+  "app": {
+    "urls": [
+      "https://citizensofantiford.com/onair",
+      "https://citizensofantiford.com/library",
+      "https://citizensofantiford.com/encyclopedia",
+      "https://citizensofantiford.com/directory",
+      "https://citizensofantiford.com/atlas",
+      "https://citizensofantiford.com/calendar",
+      "https://citizensofantiford.com/shop",
+      "https://citizensofantiford.com/admin",
+      "https://citizensofantiford.com/settings",
+      "https://citizensofantiford.com/notifications",
+      "https://citizensofantiford.com/inbox",
+      "https://citizensofantiford.com/messeges"
+    ],
+    "launch": {
+      "web_url": "https://citizensofantiford.com/"
+    }
+  },
+  "permissions": ["notifications"],
+  "manifest_version": 2
+}

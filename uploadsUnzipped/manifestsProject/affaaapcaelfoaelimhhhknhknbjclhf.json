@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Guppit Coupons",
+  "version" : "1.0.3",
+  "description" : "Guppit:  Save More. Shop Through Us.",
+  "options_page" : "options.html",
+  "background" : { "page": "background.html" },
+  "browser_action": {
+  "default_title": "Save more with Guppit. Find coupons before you shop. Get cashback.",
+  "default_icon": "icon.png",
+  "default_popup": "popup.html"
+  },
+	"content_scripts": [
+	{
+		"matches": [
+			"*://www.google.co.in/*",
+			"*://www.google.com/*",
+			"*://google.com/*",
+			"*://google.co.in/*"												
+		],
+		"js": [
+			"jquery.min.js","modal.js","formatResults.css"
+		],
+		"all_frames": true
+	}
+	],  
+  "permissions" : [
+  	"history",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+	"notifications",
+	"storage",
+	"clipboardWrite",
+	"clipboardRead"	
+   ],
+  "web_accessible_resources": [
+    "48.png",
+	"imageinfo-48.png",
+	"imageinfo-16.png",
+	"coupons.png",
+	"nocoupon.png",
+	"background.png",
+	"options_bg.png",
+	"str.png",
+	"couponbg.png",
+	"jquery.min.js",
+	"formatResults.css",
+	"watchlist.png"
+  ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "icons" : {
+    "16" : "imageinfo-16.png",
+    "48" : "imageinfo-48.png",
+    "128" : "imageinfo-128.png"
+  },
+  "manifest_version": 2
+}

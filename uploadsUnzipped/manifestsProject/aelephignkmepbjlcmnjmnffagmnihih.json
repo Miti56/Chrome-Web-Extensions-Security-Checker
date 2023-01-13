@@ -1,0 +1,12 @@
+{
+  "app": {
+    "urls": ["http://www.aceodds.com/"],
+    "launch": {"web_url": "http://www.aceodds.com/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Work out your bet winnings for accumulators, lucky 15\u0027s and more.",
+  "name": "Bet Calculator",
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "0.0.0.1"
+}

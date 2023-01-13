@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Play Minecraft Games Online",
+  "description": "minecraft hd 2017, gta v, clash of clans, minecraft pc, sims, candy crush, fifa, gta san andreas, subway surfers",
+  "version": "1.4",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

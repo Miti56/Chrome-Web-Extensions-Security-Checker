@@ -1,0 +1,24 @@
+{
+	"background" : {
+		"scripts" : ["background.js"]
+	},
+	"browser_action" : {
+		"default_icon" : "icon512.png",
+		"default_title" : "生成二维码"
+	},
+	"content_scripts" : [{
+			"js" : ["detector.js"],
+			"matches" : ["http://*/*", "https://*/*"]
+		}
+	],
+	"content_security_policy" : "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+	"description" : "提供右键菜单生成二维码，方便快速简洁",
+	"icons" : {
+		"128" : "icon512.png"
+	},
+	"manifest_version" : 2,
+	"name" : "二维码",
+	"permissions" : ["contextMenus", "tabs", "http://*/*", "https://*/*", "notifications", "webRequest", "webRequestBlocking"],
+	"update_url" : "https://clients2.google.com/service/update2/crx",
+	"version" : "1.0"
+}

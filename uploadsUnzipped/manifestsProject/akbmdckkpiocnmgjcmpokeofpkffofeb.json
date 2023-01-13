@@ -1,0 +1,11 @@
+{"manifest_version": 2, 
+"description": "__MSG_localeDesc__", 
+"default_locale": "en", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"name": "Jump Force Backgrounds", 
+"background": {"scripts": ["my_script.js"]}, 
+"version": "2.0.9", 
+"icons": {"128": "128-logo_main.png"}, 
+"browser_action": {"default_icon": "128-logo_main.png", 
+"default_title": "Jump Force Backgrounds"}, 
+"chrome_url_overrides": {"newtab": "main_new.html"}}

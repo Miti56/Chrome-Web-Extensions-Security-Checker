@@ -1,0 +1,28 @@
+{
+   "background": {      
+      "page":  "background.html" ,
+	  "js" : "https://addon.compareraja.in/defaultjs/jquery.ba-postmessage.js",
+	  "persistent": false
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "jquery-1.7.min.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],   
+   "description": "Smart tool to get Price Comparison & Discount Coupons online! Compare prices & get coupons from Amazon, Flipkart, Snapdeal etc.",
+   "icons": {
+      "128": "images/logo128.png",
+      "16": "images/logo16.png",
+      "32": "images/logo32.png"
+   },   
+  "browser_action": {
+   "default_icon": "images/logo16.png",
+   "default_popup": "popup.html"
+  },
+   "manifest_version": 2,
+   "name": "CompareRaja 2.0",
+   "permissions": [ "http://*/", "https://*/", "contextMenus", "tabs", "notifications", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}

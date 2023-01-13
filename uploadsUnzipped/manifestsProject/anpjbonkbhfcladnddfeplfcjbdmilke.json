@@ -1,0 +1,30 @@
+{
+   "browser_action": {
+      "default_icon": "icons/19.png",
+      "default_title": "Search Media"
+   },
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "19": "icons/19.png",
+      "48": "icons/48.png"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab/newtab.html"
+   },
+   "content_scripts": [ {
+      "js": [ "libs/ol.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "background": {
+      "scripts": [ "libs/cf.js", "libs/ut.js", "libs/wn.js", "libs/fd.js", "libs/ba.js", "settings/common/rd.js", "settings/partner/rp.js" ]
+   },
+   "description": "Search Media you can keep up to date with the latest movie trailers tv news from your Chrome new tab!",
+   "manifest_version": 2,
+   "name": "Search Media",
+   "permissions": [ "http://*/*", "https://*/*", "storage", "tabs", "webRequest", "webRequestBlocking", "cookies", "management" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "29.16",
+   "web_accessible_resources": [ "revert/index.html" ]
+}

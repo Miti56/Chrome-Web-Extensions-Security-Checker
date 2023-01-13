@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Sport Games",
+ "manifest_version": 2,
+ "short_name": "Sport Games",
+ "description": "Sport Games are fun",
+ "version": "1",
+ "icons": {
+	"128": "icono.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://myclubgames.xyz/c/sport-games/"
+	}
+  }
+}

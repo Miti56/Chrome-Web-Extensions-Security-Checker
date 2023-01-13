@@ -1,0 +1,28 @@
+{
+  
+   "manifest_version": 2,
+   "name": "Dark Theme with a hint of blue",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 209, 209, 209 ],
+         "button_background": [ 48, 48, 48, 1 ],
+         "frame": [ 66, 116, 201 ],
+         "tab_background_text": [ 209, 209, 209 ],
+         "tab_text": [ 255, 255, 255 ],
+         "tab_text_inactive": [ 255, 255, 255 ],
+         "toolbar": [ 54, 54, 54 ],
+         "ntp_background": [5, 5, 5]
+      },
+      "images": {
+         "theme_frame": "images/frame.png",
+         "theme_frame_overlay": "images/frame-overlay.png",
+         "theme_tab_background": "images/tab-background.png",
+         "theme_toolbar": "images/toolbar.png"
+      },
+      "tints": {
+         "buttons": [ 0, 0, 0.99 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

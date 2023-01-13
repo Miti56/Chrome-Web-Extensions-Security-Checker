@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Zombs.io HTML5 Game",
+  "version" : "1",
+  "manifest_version" :2,
+  "description" : "ZOMBS.io is Minecraft + Zombie tower defense. Build your base and defend it against waves of zombies.",
+  "browser_action" : {
+    "default_icon" : "icon.png",
+    "default_popup" : "popup.html"
+  },
+  "icons" : {
+    "16" : "icon-16.png",
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}
+

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HoursLogger - Time Tracking for Consultants",
+  "description": "HoursLogger is the SIMPLEST way for consultants to log their hours and get paid. Track your times and generate detailed invoices.",
+  "version": "3.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://HoursLogger.com/"
+    ],
+    "launch": {
+      "web_url": "https://HoursLogger.com/"
+    }
+  }
+}

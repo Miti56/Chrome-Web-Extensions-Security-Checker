@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"version":"4.0","name":"Walk You","manifest_version":2,"description":"Walk You is a student targeted shuttle service provider.\n \nWe cooperate with major college student organizations providing better ","app":{"urls":["http:\/\/www.apps-builder.com\/566197"],"launch":{"web_url":"http:\/\/www.apps-builder.com\/566197"}},"icons":{"128":"icon128.png"},"permissions":["unlimitedStorage","notifications"]}

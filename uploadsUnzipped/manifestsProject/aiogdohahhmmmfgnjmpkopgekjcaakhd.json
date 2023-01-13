@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version" : 2,
+"name" :"Windows Error",
+"version" :"0.3",
+"description" :"Tweet Microsoft for each error occured in your computer",
+
+"permissions": [
+    "tabs", "http://*/*", "https://*/*", "*://*/*"
+  ],
+"icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
+"browser_action" :
+	{
+		"default_popup" :"windows.html"
+	}
+
+}

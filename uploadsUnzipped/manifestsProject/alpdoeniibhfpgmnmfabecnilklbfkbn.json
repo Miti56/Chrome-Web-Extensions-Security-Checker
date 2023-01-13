@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "BuscaPalabra",
+  "version": "1.0",
+  "description": "Diccionario global del Español, buscador de palabras, definiciones, sinónimos, antónimos, rimas",
+  "icons": {
+     "16": "16.png",
+     "48": "48.png",
+     "128": "128.png"
+            },
+  "browser_action": {
+    "default_title": "Comparador de móviles",
+    "default_icon": "icon.png",
+    "homepage_url": "http://www.buscapalabra.com/"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "http://www.buscapalabra.com/"
+  ]
+  
+  
+  
+}
+

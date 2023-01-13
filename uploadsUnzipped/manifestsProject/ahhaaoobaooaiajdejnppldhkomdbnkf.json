@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "English Memory",
+  "description": "Learn English Vocabulary by remembering and matching the cards with their names!",
+  "version": "0.0.0.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.memory.polylogy.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.memory.polylogy.com/"
+    }
+  }
+}

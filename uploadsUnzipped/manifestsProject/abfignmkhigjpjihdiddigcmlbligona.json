@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bookmark Ninja",
+  "description": "Opens the Bookmark Ninja Dashboard",
+  "version": "1.0.0.1",
+  "permissions": ["tabs", "<all_urls>"],
+  "background" : {
+    "scripts" : ["open-dashboard.js"]
+  },
+  
+  "icons": {"16": "ninja16.png",
+           	"48": "ninja48.png",
+          	"128": "ninja128.png" },
+          	
+  "browser_action": {
+      "default_title": "Ninja Dashboard",
+      "default_icon": {"16": "ninja16.png",
+      			"32": "ninja32.png",
+           		"48": "ninja48.png",
+          		"128": "ninja128.png" }
+  },
+  
+  "manifest_version": 2
+}

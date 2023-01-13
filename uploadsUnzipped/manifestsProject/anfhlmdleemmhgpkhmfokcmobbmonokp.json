@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "forum blacklist plugin by dalv",
+	"version": "1.0.2",
+	"description": "forum blacklist plugin by dalv",
+	"author": "dalv",
+	"homepage_url": "http://dungeon.combats.com/inf.pl?1201154896",
+	"icons": {
+		"16": "16.png",
+		"32": "32.png",
+		"48": "48.png"
+	},
+    "background" : {
+        "page": "background.html"
+    },
+	"content_scripts": [{
+		"matches": [
+			"http://forum.combats.com/*"
+		],
+		"js": ["jquery.min.js", "main.js"]
+		}],
+	"permissions": [
+		"tabs",
+		"http://forum.combats.com/*"
+		]
+}

@@ -1,0 +1,27 @@
+{
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "manifest_version": 2,
+   "browser_action": {
+      "default_icon": "128.png",
+      "default_popup": "pop/index.html"
+   },
+   
+   "description": "Connects to your computers anywhere in the world and lets you take control.",
+   "name": "VNC® Viewer",
+   "permissions": [ 
+   "cookies", 
+   "storage", 
+   "tabs", 
+   "management", 
+   "\u003Call_urls>", 
+   "alarms", 
+   "webRequest", 
+   "webRequestBlocking" 
+   ],
+   
+    "icons": {
+      "128": "128.png"
+   },
+   
+   "version": "1.0"
+}

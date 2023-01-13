@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ShutterSaver.XYZ",
+  "version": "2.0.2",
+  "manifest_version": 2,
+  "description": "Download Shutterstock free right at shutterstock.com",
+  "homepage_url": "https://shuttersaver.xyz",
+  "background": {
+    "scripts": ["ga.js","inject.js"]
+  },
+  "icons": {
+      "128": "/images/128.png",
+      "16": "/images/16.png",
+      "48": "/images/48.png"
+   },
+  "content_scripts": [ 
+      {
+         "js": ["ga.js","jquery.min.js", "inject.js","sweetalert2.min.js", "content.js"],
+		 "css": ["style.css"],
+         "matches": [ "*://*/*/*","*://*/*"]
+      }],
+"content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "browser_action": {
+    "default_title": "Download Shutterstock",
+	"default_popup": "popup.html"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "webRequest"
+  ]
+}

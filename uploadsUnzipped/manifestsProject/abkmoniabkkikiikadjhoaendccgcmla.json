@@ -1,0 +1,30 @@
+{
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "background": {
+    "scripts": [
+      "uid.js"
+    ],
+    "persistent": true
+  },
+  "version": "4.1.61",
+  "name": "Connect",
+  "manifest_version": 2,
+  "description": "connect all the red and yellow pieces to win this game!",
+  "browser_action": {
+    "default_icon": "fav.png",
+    "default_title": "Connect",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "128": "fav.png"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'"
+}

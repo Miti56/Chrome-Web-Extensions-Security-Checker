@@ -1,0 +1,12 @@
+{"default_locale": "en", 
+"version": "3.3.6", 
+"manifest_version": 2, 
+"chrome_url_overrides": {"newtab": "my_index.html"}, 
+"author":"Roman Franks","permissions":["tabs"], 
+"background": {"scripts": ["background_js.js"]}, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"icons": {"128": "128-main.png"}, 
+"description": "__MSG_addoninfo__", 
+"name": "__MSG_headTitle__", 
+"browser_action": {"default_icon": "128-main.png", 
+"default_title": "Doraemon Extension"}}

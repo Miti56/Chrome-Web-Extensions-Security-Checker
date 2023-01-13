@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "RadiumCarIdentReader",
+  "description": "Radium car ident card reader Chrome App",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "images/radium_logo_16.png",
+    "48": "images/radium_logo_48.png",
+    "128": "images/radium_logo_128.png"
+  },
+  "minimum_chrome_version": "23",
+  "app": {
+    "background": {
+      "scripts": ["js/launch.js"]
+    }
+  },
+  "permissions": [
+    "serial"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Baratta Dermatology",
+      "description": "A neat extension that gives socials for Baratta Dermatology.",
+      "version": "1.0",
+      "browser_action": {
+          "default_title": "BarattaDerm",
+          "default_icon": "icons/icon128.png",
+          "default_popup": "popup.html"
+      },
+      "icons": {  "16":   "icons/icon16.png",
+                  "48":   "icons/icon48.png",
+                  "128":  "icons/icon128.png" },
+      "manifest_version": 2
+    }

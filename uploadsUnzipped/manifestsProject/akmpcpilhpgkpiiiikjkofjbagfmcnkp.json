@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["socket.io.js","background.js"]
+    },
+    "name": "Notificações CPC",
+    "description": "Notificações do site CPC e Aprovadores",
+    "version": "1.30",
+    "version_name": "teste",
+    "author": "Filipe Frozza",
+    "icons": {
+        "128": "128.png"
+    },
+    "sockets": {
+        "tcp": {
+            "connect": "*"
+        }
+    },
+    "permissions": [
+        "unlimitedStorage",
+        "notifications",
+        "storage"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+  "name": "Red and Green",
+  "description": "Play Red and Green in your Browser!",
+  "version": "1.1",
+  "app": {
+    "urls": [
+      "http://svejkgames.com/game/red-and-green/"
+    ],
+    "launch": {
+      "web_url": "http://svejkgames.com/game/red-and-green/"
+    }
+  },
+  "icons": {
+    "128": "img_128.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Downl3",
+  "short_name": "D2S3",
+  "description": "Dowloads the link to S3",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [ {
+      "all_frames": true,
+      "js": ["jj.js" ],
+      "matches": ["*://*/*"],
+      "run_at" : "document_start"
+   } ]
+}

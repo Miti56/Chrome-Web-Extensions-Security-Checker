@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "MTalk Screen Share",
+    "author": "Muaz Khan",
+    "version" : "4.4",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "MTalk Screen Share",
+    "homepage_url": "https://www.medialog.co.kr/",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_idle",
+       "matches": ["https://mtalk.medialog.co.kr/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture",
+	"activeTab",
+	"<all_urls>"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

@@ -1,0 +1,65 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "version": "1.0",
+  "default_locale": "en",
+  "icons": {
+    "32": "assets/32.png",
+    "64": "assets/64.png",
+    "128": "assets/128.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [{
+      "js": [
+        "./js/content-script.js"
+      ],
+      "matches": [
+        "\u003Call_urls>"
+      ]
+    },
+    {
+      "js": [
+        "./js/content-listener.js"
+      ],
+      "all_frames": true,
+      "matches": [
+        "\u003Call_urls>"
+      ]
+    }
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+P",
+        "mac": "Alt+P",
+        "chromeos": "Alt+P",
+        "linux": "Alt+P"
+      }
+    }
+  },
+  "browser_action": {
+    "default_title": "__MSG_name__"
+  },
+  "options_page": "./settings.html",
+  "content_security_policy": "script-src 'self' https://www.youtube.com https://s.ytimg.com 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "\u003Call_urls>",
+    "management",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  
+  "web_accessible_resources": ["assets/*"],
+  "minimum_chrome_version": "69.0.3483.0",
+  "manifest_version": 2
+}
+

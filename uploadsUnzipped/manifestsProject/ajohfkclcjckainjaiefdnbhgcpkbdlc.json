@@ -1,0 +1,11 @@
+{
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Red Ball 4. Enjoy this awesome game!.",
+   "manifest_version": 2,
+   "name": "Red Ball 4",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.9"
+}

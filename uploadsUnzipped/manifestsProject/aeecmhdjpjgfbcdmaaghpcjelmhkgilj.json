@@ -1,0 +1,27 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "name": "Cihan Sayın Bildirim Sistemi",
+    "permissions": [
+        "cookies",
+        "tabs",
+        "*://*/*",
+		"notifications"
+    ],
+    "description": "Cihan Sayın Bildirim Aracı",
+    "icons": {
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' http://panel.cihansayin.com.tr; object-src 'self'",
+    "browser_action": {
+        "default_icon": "48.png",
+        "default_popup": "popup.html"
+    }
+}

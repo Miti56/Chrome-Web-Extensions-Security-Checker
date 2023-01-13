@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Juegos de Lucha",
+ "manifest_version": 2,
+ "short_name": "Juegos de Lucha",
+ "description": "Juega a los mejores Juegos de Lucha",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1484370606_Games_2.png"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

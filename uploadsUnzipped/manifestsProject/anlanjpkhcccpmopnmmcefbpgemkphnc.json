@@ -1,0 +1,65 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "description": "Please check out our other themes at: http://mustang-browser.com/themes",
+   "manifest_version": 2,
+   "name": "City Lights",
+   "theme": {
+      "colors": {
+         "bookmark_text":                    [ 255, 255, 255 ],
+         "tab_background_text":              [  66, 141, 116 ],
+         "tab_text":                         [ 255, 255, 255 ],
+         "toolbar":                          [   0, 117,  78 ],
+         "ntp_background":                   [  10,  33,  65 ]
+      },
+      "images": {
+         "newtab_button_mask": "images/newtab_button_mask.png",
+         "newtab_hover": "images/newtab_hover.png",
+         "newtab_normal": "images/newtab_normal.png",
+         "newtab_pressed": "images/newtab_pressed.png",
+
+         "tab_active_left": "images/tab_active_left.png",
+         "tab_active_right": "images/tab_active_right.png",
+         "tab_active_center": "images/tab_active_center.png",
+
+         "tab_inactive_left": "images/tab_inactive_left.png",
+         "tab_inactive_right": "images/tab_inactive_right.png",
+         "tab_inactive_center": "images/tab_inactive_center.png",
+
+         "tab_alpha_left": "images/tab_alpha_left.png",
+         "tab_alpha_right": "images/tab_alpha_right.png",
+
+         "textfield_top": "images/textfield_top.png",
+         "textfield_top_left": "images/textfield_top_left.png",
+         "textfield_top_right": "images/textfield_top_right.png",
+
+         "textfield_bottom": "images/textfield_bottom.png",
+         "textfield_bottom_left": "images/textfield_bottom_left.png",
+         "textfield_bottom_right": "images/textfield_bottom_right.png",
+
+         "textfield_left": "images/textfield_left.png",
+         "textfield_right": "images/textfield_right.png",
+
+         "content_top_center": "images/content_top_center.png",
+
+         "theme_frame": "images/theme_frame.png",
+         "theme_frame_inactive": "images/theme_frame.png",
+         "theme_frame_incognito": "images/theme_frame.png",
+         "theme_frame_incognito_inactive": "images/theme_frame.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png",
+
+         "theme_ntp_background": "images/theme_ntp_background.png"
+      },
+      "tints": {
+         "background_tab": [ -1, 0.5, 0.75 ],
+         "buttons": [ 0, 0, 1 ]
+      },
+      "properties": {
+         "ntp_background_alignment": "center bottom",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 1
+      }
+   },
+   "version": "1.0.0.0"
+}

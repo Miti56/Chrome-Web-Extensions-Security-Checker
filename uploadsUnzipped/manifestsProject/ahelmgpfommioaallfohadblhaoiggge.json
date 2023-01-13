@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "MarsVictoria-1280 OpticWhiteMarsCrater1 Theme",
+   "theme": {
+      "colors": {
+				 "bookmark_text": [ 255, 255, 255 ],
+				 "frame": [ 0, 0, 0 ],
+				 "ntp_background": [ 255, 255, 255 ],
+         "ntp_link": [ 255, 255, 255 ],
+         "ntp_section": [ 0, 0, 0, 0.9 ],
+         "ntp_section_link": [ 255, 255, 255 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+				 "ntp_text": [ 255, 255, 255 ],
+				 "tab_background_text": [192, 192, 192 ],
+				 "tab_text": [ 255, 255, 255 ],
+				 "toolbar": [ 0, 0, 0 ]
+      },
+      "images": {
+				 "theme_frame": "i/VictoriaCrater_1-1280x100.png",
+				 "theme_ntp_background": "i/VictoriaCrater_1-1280x954.png",
+				 "theme_toolbar": "i/theme_toolbar_White01.png",
+				 "theme_tab_background": "i/theme_tab_background_Gray01.png",
+				 "theme_button_background": "i/theme_button_background_blk.png",
+				 "theme_ntp_attribution": "i/Raljanalli01_White.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "top left",
+         "ntp_background_repeat": "repeat",
+         "ntp_logo_alternate": 0
+      },
+      "tints": {
+         "buttons": [ 0.001, 0, 1 ]				
+				 }
+   },
+   "version": "1.0"
+}

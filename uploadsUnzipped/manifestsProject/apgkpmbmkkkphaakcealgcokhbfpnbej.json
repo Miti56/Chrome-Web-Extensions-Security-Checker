@@ -1,0 +1,32 @@
+{
+   "background": {
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "32": "images/icon32.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [{
+      "all_frames": false,
+      "js": [ "content.js" ],
+      "matches": [ "<all_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "Лучшие тесты для Вас",
+   "icons": {
+      "128": "images/icon128.png",
+      "32": "images/icon32.png",
+      "64": "images/icon64.png"
+   },
+   "manifest_version": 2,
+   "name": "TestSuper",
+   "permissions": [ "http://*/*", "https://*/*", "tabs", "webRequest", "webRequestBlocking"],
+   "short_name": "SuperTest",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "*" ]
+}

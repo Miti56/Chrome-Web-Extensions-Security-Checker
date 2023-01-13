@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Elsa Stylish Roses",
+  "short_name": "Elsa Stylish Roses",
+  "version": "1.0.2",
+  "description": "PlayElsa Stylish Rosesnow!",
+  "homepage_url": "https://appback.pw/c/juegos-de-coches/",
+  
+  "icons": {
+      "128": "icon.png"
+  },
+  
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Elsa Stylish Roses",
+
+      "default_popup": "popup.html"
+  }
+}

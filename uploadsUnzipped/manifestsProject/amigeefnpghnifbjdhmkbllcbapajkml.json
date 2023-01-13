@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "LaPrensa Unlock",
+  "version": "1.0",
+
+  "description": "Permite leer el archivo de La Prensa (Nicaragua) sin necesidad de iniciar sesión.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.laprensa.com.ni/*"],
+      "css": ["laprensa-unlock.css"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "icons": {
+      "256": "icons/unlock-icon.png"
+  },
+
+  "permissions": [
+      "tabs", "*://*.laprensa.com.ni/*"
+  ]
+}

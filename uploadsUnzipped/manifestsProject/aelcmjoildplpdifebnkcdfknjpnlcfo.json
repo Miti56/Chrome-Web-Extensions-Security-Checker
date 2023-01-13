@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Flint Sharing",
+    "description": "Sharing your desktop!",
+    "version": "1.0",
+    "manifest_version": 2,
+    "app": {
+        "background": {
+            "scripts": ["js/lib/flint_discovery.js", "js/background/background.js"]
+        }
+    },
+    "icons": {
+        "16": "img/icon-16.png",
+        "128": "img/icon-128.png"
+    },
+    "sockets": {
+        "udp": {
+            "send": ":1900",
+            "bind": ":1900",
+            "multicastMembership": ""
+        }
+    },
+    "permissions": [
+        "desktopCapture"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+      "launch": {
+         "web_url": "http://es.ninemanga.com/?chrome"
+      },
+      "urls": [ "http://es.ninemanga.com/?chrome" ]
+  },
+  "name": "Leer Manga en Español  gratis",
+  "description": "Comic Popular de diez mil visualización en línea gratis, actualiza todos los días!",
+  "version": "0.1",
+  "manifest_version":2,
+  "icons": { "16": "ninemanga-16.png", "128": "ninemanga-128.png" }
+}

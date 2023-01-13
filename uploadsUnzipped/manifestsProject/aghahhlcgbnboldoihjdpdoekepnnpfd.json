@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	
+"name": "GenOne Tool",
+	
+"version": "2.0",
+	
+"manifest_version": 2,
+	
+"description": "First release",
+	
+"browser_action": {
+		
+"default_icon": "icon.png",
+		
+"default_title": " ",
+		
+"default_popup": "extension.html"
+	},
+	
+"content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+"icons": {
+		"128": "icon.png"
+	}
+
+}

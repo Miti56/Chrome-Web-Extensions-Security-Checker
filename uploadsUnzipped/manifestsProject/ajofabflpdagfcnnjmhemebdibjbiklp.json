@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Markdown+ - Preview & Edit Markdown",
+    "short_name": "Markdown+ - Preview, Edit markdown",
+    "description": "Markdown+ - Preview, Edit markdown from Chrome",
+    "version": "1.0.1",
+    "permissions": [
+        "activeTab", "storage"
+    ],
+    "background": {
+        "scripts": [
+            "build/background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*.md", "http://*/*.markdown", "https://*/*.md", "https://*/*.markdown", "file://*/*.md", "file://*/*.markdown"],
+        "js": ["build/content.js"],
+        "run_at": "document_end"
+    }],
+    "browser_action": {
+        "default_icon": "static/images/icon48.png",
+        "default_title": "Markdown+"
+    },
+    "manifest_version": 2,
+    "web_accessible_resources": [
+        "build/app.js",
+        "build/app.css",
+        "static/images/edit.png",
+        "static/images/emoji/*"
+    ],
+    "icons": {
+        "16": "static/images/icon16.png",
+        "48": "static/images/icon48.png",
+        "128": "static/images/icon128.png"
+    },
+    "options_page": "options.html"
+}

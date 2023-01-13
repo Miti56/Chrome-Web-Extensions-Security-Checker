@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "PhishAlert",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Deze extensie beschermt je tegen phishing",
+
+    "background" : {
+        "scripts": ["background.js", "js/jquery-1.10.2.js"]
+    },
+
+    "browser_action": {
+        "default_icon": "plugin-icon.png"
+    },
+
+    "permissions": [
+        "tabs", "storage"
+    ],
+
+    "content_scripts" : [
+        {
+            "matches" : [ "http://*/*", "https://*/*" ],
+            "css": ["css/style-popup.css"],
+            "js" : [ "js/jquery-1.10.2.js", "js/md5.js", "contentscript.js" ],
+            "run_at" : "document_idle",
+            "all_frames" : false
+    }],
+
+    "web_accessible_resources": ["start.html", "js/jquery-1.10.2.js", "js/angular.min.js", "js/activate.js", "js/jquery-1.10.2.js"]
+
+}

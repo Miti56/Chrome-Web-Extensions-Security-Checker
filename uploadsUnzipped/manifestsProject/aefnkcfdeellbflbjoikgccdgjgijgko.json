@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Get Large Pic",
+  "description": "Find higher resolution copy of the picture",
+  "version": "1.1",
+  "manifest_version": 2,
+  "icons": {
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "background": {
+    "scripts": [
+      "lib/fb.js",
+      "lib/utils.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' https://*.firebaseio.com https://www.google.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "content/popup.css"
+      ],
+      "js": [
+        "lib/fbdb.js",
+        "lib/utils.js",
+        "content/popup.js",
+        "content/main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "assets/*"
+  ],
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "downloads"
+  ]
+}

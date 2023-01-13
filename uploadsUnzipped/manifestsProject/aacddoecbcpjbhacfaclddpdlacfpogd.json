@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name":"Digital Picture & File Recovery",
+	"version":"4.1",
+	"description": "Simply recover lost files including video, documents and archives from hard disks, CD-ROMs, and pictures from digital camera memory.",
+		
+	 "icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+ 	 },	
+	
+	"background": {
+	        "scripts": ["background.js"]	
+        },
+
+	"browser_action": {
+    		"default_icon": "icon48.png", 
+   		"default_title": "Digital Picture & File Recovery"
+  	},
+
+	"permissions":["tabs"]
+}

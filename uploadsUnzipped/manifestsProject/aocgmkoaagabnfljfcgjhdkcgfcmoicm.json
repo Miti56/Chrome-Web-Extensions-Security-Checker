@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Price Spy Search NZ",
+  "version": "1.11",
+  "description": "Quick product lookup",
+  
+  "permissions": [
+    "http://*/"
+  ],
+  
+  "browser_action": {
+    "default_icon": "dollar_sign.png",
+    "default_popup": "search_page.html"
+  }
+}

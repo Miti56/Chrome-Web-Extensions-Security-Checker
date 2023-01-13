@@ -1,0 +1,9 @@
+{"icons": {"128": "128-image.png"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", "default_locale": "en", "name": "God Of War New Tab", "browser_action": {"default_icon": "128-image.png", "default_title": "God Of War New Tab"},
+
+ "chrome_url_overrides": {"newtab": "main_page.html"},
+
+ "version": "2.4.2", "manifest_version": 2, "background": {"scripts": ["bg_js.js"]},
+
+ "description": "__MSG_description__"}

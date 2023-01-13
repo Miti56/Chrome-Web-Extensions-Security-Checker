@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "manifest_version": 2,
+  "name": "Lite Job",
+  "version": "1.0.0.1",
+  "description": "Создание актов передачи документов для туристов с ЛК!",
+
+  "web_accessible_resources": [
+    "*.png"
+  ],
+  "icons": {
+    "16": "image/logo_16.png",
+    "32": "image/logo_32.png",
+    "64": "image/logo_64.png",
+    "128": "image/logo_128.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "unlimitedStorage",
+    "notifications",
+    "management",
+    "http://*/",
+    "https://*/"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_title": "Lite Job",
+    "default_icon":  "image/logo.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+   {
+     "matches": ["*://*/*"],
+     "js": [
+       "js/jquery-3.3.1.min.js",
+       "js/content.js"
+     ],
+     "css": ["css/content.css"]
+   },
+   {
+     "all_frames": true,
+     "matches": [
+       "*://online.pinkelephant.ru/claims/*"
+     ],
+     "js": [
+       "js/jquery-3.3.1.min.js",
+       "resource/pinkelephant/js/pinkelephantAct.js"
+     ],
+     "css": ["resource/pinkelephant/css/pinkelephant.css"]
+   }
+
+  ]
+}

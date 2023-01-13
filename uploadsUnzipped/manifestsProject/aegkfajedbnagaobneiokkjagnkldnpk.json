@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "icons": {
+      "16": "Icon16.png",
+      "32": "Icon32.png",
+      "48": "Icon48.png",
+      "128": "Icon128.png" },
+  "name": "Presenter Chrome Extension",
+  "short_name": "PresenterChromeExt",
+  "description": "This extension enables access to the Presenter Plugin from Google Chrome.",
+  "version": "0.0.0.2",
+  "permissions": [
+    "nativeMessaging"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+      "matches": [ "<all_urls>" ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+  }]
+}

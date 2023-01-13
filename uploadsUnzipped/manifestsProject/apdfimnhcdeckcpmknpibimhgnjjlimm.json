@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Spacejunk: Discover high-value, crypto reads",
+  "short_name": "Spacejunk: Discover high-value, crypto reads",
+  "description": "Spacejunk curates crypto long-reads and surfaces them in your new tab. Our mission is to accelerate crypto adoption #crypto #bitcoin",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqwIgSmR+IVspuMRqjqKh2Gza3PH6RjrbDB1XFUBTdZEAX7U1PJvt1OGDjWoeQistjRjom61pEPTzYWv071WDFj2Slnmr6kiywbJlsVUTmnkgW++0KYCjOzybXXrBNicMV4u56nhtOXaTBoHLKWY5m2QK+J50N7929ovilsw8MuBHP5DufHn4QyYmuRLJZCjnC1WpCjM7DCdEtgappcdK/uVVTgJ+kgI1WhrCTwIlllPhoXz0tUTqr95UFa5/FGwSwaaACDCCPbcthFmQs4s91t0t4+UHAj+qquhlQYubgAB5TcbG7yLIUQ6Q7AOJvJBHnHl8a/apccuAJ1EMaqUOBQIDAQAB",
+  "permissions": [
+    "storage",
+    "identity",
+    "identity.email",
+    "<all_urls>",
+    "https://accounts.google.com/*",
+    "https://www.googleapis.com/*",
+    "https://apis.google.com/*"
+  ],
+  "version": "0.0.0.4",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newTab.html"
+  },
+
+    "browser_action": {
+    "default_icon": "images/icon128.png"
+  },
+
+  "oauth2": {
+    "client_id": "333607126881-ohedq1ljcbftm9adfi0lja4i6gr8g3jv.apps.googleusercontent.com",
+    "scopes": [ "https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email" ]
+  },
+  "web_accessible_resources": [ "images/*" ],
+  "content_security_policy": "object-src 'self'; script-src 'self' 'sha256-unHNIoCbl3knWs33IQbw1eTY7iTvnLAb1mfZRQAslWY=' https://apis.google.com/ https://maxcdn.bootstrapcdn.com https://cdnjs.cloudflare.com https://*.google.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com; connect-src 'self' http://* https://* http://localhost:5005; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; default-src 'self'  data: https://apis.google.com/* https://*.googleapis.com/* https://*.google.com/* https://*.medium.com https://medium.com https://*.googleusercontent.com https://thecryptocurrencyinvestor.com https://multicoin.capital https://hackernoon.com https://*.bitmex.com https://*.coinbase.com https://*.blogspot.com https://*.blogspot.com https://www.tonysheng.com https://tokeneconomy.co https://www.getrevue.co https://*.dcg.co https://blog.coinfund.io https://coinshares.co.uk https://*.lightning.engineering http://vitalik.ca https://*.wikimedia.org/ https://*.zhimg.com https://*.wordpress.com https://www.google-analytics.com https://*.doubleclick.net https://*.embedly.com https://vitalik.ca https://*.bp.blogspot.com https://*.squarespace.com https://jessewalden.com",
+  "manifest_version": 2,
+  "minimum_chrome_version": "29"
+}

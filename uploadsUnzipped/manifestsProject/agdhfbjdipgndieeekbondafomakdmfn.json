@@ -1,0 +1,28 @@
+{
+   "browser_action": {
+      "default_icon": "img/icone/48.png",
+      "default_title": "__MSG_appName__"
+   },
+   "default_locale": "en",
+   "chrome_url_overrides": {
+      "newtab": "pages/newtab.html"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-hNWUbwB8ZS/vP+O4TfqZ/mmkMSYSJqGZ/4t5SSwAEk0=' 'sha256-1U43HAOlAXz6irAbXBbIpCr9fs/nLVDSCTx+uGZSAvY='  https://ssl.google-analytics.com https://*.uservoice.com https://www.google.com; object-src 'self'",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "img/icone/128.png",
+      "19": "img/icone/19.png",
+      "48": "img/icone/48.png"
+   },
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/back.js" ]
+   },
+     "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "\u003Call_urls>", "*://*/*","https://*.googleapis.com/*", "chrome://favicon/*", "bookmarks","management", "history", "bookmarks", "storage", "sessions", "unlimitedStorage", "tabs", "activeTab", "tabCapture", "contextMenus", "webRequest", "cookies","geolocation", "topSites" ],
+   "short_name": "__MSG_appName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": ["pages/newtab.html" ]
+}

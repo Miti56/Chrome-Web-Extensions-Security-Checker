@@ -1,0 +1,24 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"name": "Canary Yellow theme",
+	"theme": {
+		"images" : {
+			"theme_ntp_background" : "ntp.png"
+		},
+		"colors" : {
+			"ntp_background" : [255, 255, 192],
+			"ntp_section" : [239, 254, 229],
+			"ntp_header" : [255, 255, 0]
+		},
+		"tints" : {
+			"frame" : [0.167, 1.0, -1.0],
+			"frame_inactive" : [0.167, 1.0, 0.75],
+			"frame_incognito" : [0.167, 0.2, 0.35],
+			"frame_incognito_inactive" : [0.167, 0.3, 0.6]
+		},
+		"properties" : {
+			"ntp_background_alignment" : "right bottom"
+		}
+	}
+}

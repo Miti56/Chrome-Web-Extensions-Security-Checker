@@ -1,0 +1,47 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.0",
+  "name": "lost",
+  "theme": {
+      "images" : {
+      "theme_frame": "images/theme_frame.jpg",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_tab_background": "images/theme_tab_background.png",
+      "theme_ntp_background": "images/theme_ntp_background.jpg"
+    },
+    "colors" : {
+      "frame" : [0, 0, 0],
+      "frame_inactive" : [152, 188, 233],
+      "frame_incognito" : [83, 106, 139],
+      "frame_incognito_inactive" : [126, 139, 156],
+      "toolbar" : [0, 0, 0],
+      "tab_text" : [2, 190, 223],
+      "tab_background_text" : [0, 0, 0],
+      "bookmark_text" : [1, 125, 148],
+      "ntp_background" : [0, 0, 0],
+      "ntp_text" : [203, 247, 254],
+      "ntp_link" : [150, 238, 254],
+      "ntp_link_underline" : [85, 227, 253],
+      "ntp_header" : [23, 23, 23],
+      "ntp_section" : [1, 112, 131],
+      "ntp_section_text" : [0, 0, 0],
+      "ntp_section_link" : [150, 238, 254],
+      "ntp_section_link_underline" : [186, 243, 254],
+      "control_background" : [0, 0, 0],
+      "button_background" : [23, 23, 23]
+    },
+    "tints" : {
+      "buttons" : [0.55, 0.90, 0.60],
+      "frame" : [-1.00, -1.00, -1.00],
+      "frame_inactive" : [-1.00, -1.00, 0.75],
+      "frame_incognito" : [-1.00, 0.20, 0.35],
+      "frame_incognito_inactive" : [-1.00, 0.30, 0.60],
+      "background_tab" : [-1.00, 0.50, 0.75]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "center bottom",
+      "ntp_background_repeat" : "no-repeat",
+      "ntp_logo_alternate" : 0
+    }
+  }
+}

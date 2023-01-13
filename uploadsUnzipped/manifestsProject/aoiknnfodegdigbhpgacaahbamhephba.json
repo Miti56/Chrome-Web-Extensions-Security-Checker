@@ -1,0 +1,31 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon_16.png",
+      "default_popup": "html/signup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "content_script.js" ],
+      "matches": [ "*://localhost/*", "https://test-kms.mroads.com/*", "https://play.mroads.com/*", "https://pramod.mroads.com/*", "https://pannalc.mroads.com/*", "https://pannal-test.mroads.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "A simple extension that allows you to share desktop stream.",
+   "externally_connectable": {
+      "matches": [ "*://localhost/*","*://*.mroads.com/*", "*://*.panna.ai/*" ]
+   },
+   "icons": {
+      "128": "img/icon_128.png",
+      "16": "img/icon_16.png",
+      "48": "img/icon_48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "34",
+   "name": "Panna screen sharing",
+   "permissions": [ "desktopCapture", "tabs", "https://*/", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.6.5",
+   "web_accessible_resources": [ "img/icon_16.png" ]
+}

@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "Olymptrade Robot",
+   "background": {
+      "scripts": [ "affiliate.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "__MSG_title__"
+   },
+   "content_scripts": [ {
+      "css": [ "css/style.css", "css/fontaw.css", "css/sweetalert2.min.css", "css/animate.css" ],
+      "js": [ "jquery.js", "background.js" ],
+      "matches": [ "https://olymptrade.com/*", "https://id-olymptrade.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+   "default_locale": "en_US",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "img/icon-128.png",
+      "16": "img/icon-16.png",
+      "48": "img/icon-48.png",
+      "64": "img/icon-64.png"
+   },
+   
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "tabs", "activeTab", "storage", "cookies", "webNavigation", "https://olymptraderobot.com/", "https://olymptrade.com/*", "https://id-olymptrade.com/*" ],
+   "short_name": "__MSG_shortname__",
+   "version": "5.8.28",
+   "web_accessible_resources": [ "jquery.js", "lang.js", "main.js", "jquery.inputmask.bundle.js", "sweetalert2.min.js", "img/*" ]
+}

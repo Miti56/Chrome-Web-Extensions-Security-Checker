@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Free Government Forms",
+  "version": "1.0.0.12",
+  "description": "Access government forms from one place including: tax, DMV, citizenship, healthcare, and passport forms!",
+  "minimum_chrome_version": "23",
+  "content_security_policy": "script-src 'self' https://query.yahooapis.com https://ssl.google-analytics.com; object-src 'self'",
+  "icons": {
+    "128": "img/freegovicon.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "webNavigation",
+    "webRequest",
+    "*://*.freegovernmentforms.net/*",
+    "*://freegovernmentforms.net/*",
+    "webRequestBlocking",
+    "cookies",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "js/eventTracker.js"
+    ]
+  },
+"externally_connectable": {
+    "matches": ["*://localhost/*", 
+		"*://*.freegovernmentforms.net/*"
+		]
+},
+  "chrome_url_overrides": {
+    "newtab": "index.htm"
+  }
+}

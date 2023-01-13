@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "hide reddit sidebar",
+  "description": "This extension just hides the reddit sidebar, lol",
+  "version": "1.0",
+
+  "background": {
+    "scripts":["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*.reddit.com/*", "*://reddit.com/*"],
+    "js": ["jquery.min.js", "auto-hide.js"],
+    "run_at": "document_end"
+  }],
+
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+             "128": "icon128.png" },
+
+  "browser_action": {
+    "default_title": "hide sidebar"
+  },
+  "permissions": [
+    "activeTab",
+    "*://*.reddit.com/",
+    "*://reddit.com/*"
+  ]
+}

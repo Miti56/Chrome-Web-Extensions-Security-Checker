@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Tweet Marker API.Ver",
+  "version": "3.0.0.412",
+  "version_name": "0.0.2.22",
+  "description": "__MSG_extDescription__",
+  "icons": {
+    "128": "/icon/icon_128.png"
+  },
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://api.twitter.com/*"
+      ],
+      "js": [
+        "/jquery/jquery-3.3.1.min.js",
+        "/js/force_latest_tweets.js",
+        "/js/content_script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": [
+      "/js/lib/oAuth.js",
+      "/js/lib/sha1.js",
+      "/js/lib/twitter.js",
+      "/js/eventpage.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "/html/options.html",
+  "browser_action": {
+    "default_icon": "/icon/icon_off.png"
+  }
+}

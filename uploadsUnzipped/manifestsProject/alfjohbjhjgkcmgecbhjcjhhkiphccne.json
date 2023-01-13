@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "feeduck",
+  "description": "表示ページ内のRSSのリンクを表示する拡張機能です。",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "background": {
+    "scripts": ["background/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": [
+      "lib/jquery/jquery.min.js",
+      "content/content.js"
+    ]
+  }],
+  "browser_action": {
+    "default_title": "feeduck",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "128": "icon/128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage"
+  ]
+}

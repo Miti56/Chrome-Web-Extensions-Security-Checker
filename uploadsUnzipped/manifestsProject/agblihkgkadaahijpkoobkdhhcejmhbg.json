@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "FullCRM app Chrome",
+"description": "APP para Google Chrome",
+"version": "1.0.1",
+"icons": {
+"128": "icon128.png"
+},
+"app": {
+"urls": [
+"https://app.fullcrm.com.br/"
+],
+"launch": {
+"web_url": "https://app.fullcrm.com.br/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

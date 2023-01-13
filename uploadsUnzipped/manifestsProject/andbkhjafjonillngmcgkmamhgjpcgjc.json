@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "app": {
+    "background": {
+      "scripts": [ "config.js", "main.js" ]
+    }
+  },
+  "name": "__MSG_name__",
+  "short_name": "CALL OF DUTY",
+  "description": "__MSG_description__",
+  "version": "1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "default_locale": "en",
+  "author": "The Bats",
+  "permissions": [ "webview" ],
+  "minimum_chrome_version": "24.0.1307.0"
+}

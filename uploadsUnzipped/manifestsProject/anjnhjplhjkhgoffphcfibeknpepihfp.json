@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Magnitude Serial",
+  "version": "1.0.0.1",
+  "description": "Extension for communicating with a serial port through the Magnitude.io platform.",
+  "author": "Magnitude.io",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": true
+  },
+
+  "default_locale": "en_US",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://code.magnitude.io/editor*",
+        "*://*.magnitude.io/sensorplotter*",
+        "*://*.magnitude.io/students/sketches*",
+        "*://*.magnitude.io/students/charts-edge*",
+        "*://*.magnitude.io/*"
+      ],
+      "js": [ "content.js" ],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "*://code.magnitude.io/editor*",
+    "*://*.magnitude.io/sensorplotter*",
+    "*://*.magnitude.io/*",
+    "nativeMessaging",
+    "activeTab"
+  ],
+
+  "icons": {
+      "48": "icon_48.png",
+      "128": "icon_128.png"
+    }
+}

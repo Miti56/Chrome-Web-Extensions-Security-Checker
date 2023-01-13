@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Morhill Start Page",
+  "version": "0.0.1",
+  "description":
+      "Change your start page and new tab to any URL.",
+  "icons": {
+    "16": "images/logo-16.png", "48": "images/logo-48.png", "128": "images/logo-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "browsingData",
+    "chrome://favicon/",
+    "clipboardWrite",
+    "contextMenus",
+    "cookies",
+    "declarativeContent",
+    "debugger",
+    "fontSettings",
+    "gcm",
+    "identity",
+    "idle",
+    "notifications",
+    "pageCapture",
+    "power",
+    "proxy",
+    "storage",
+    "system.cpu",
+    "system.display",
+    "system.memory",
+    "system.storage",
+    "tabCapture",
+    "tabs",
+    "topSites",
+    "tts",
+    "unlimitedStorage",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' https://d2b46qj6x4cc20.cloudfront.net; object-src 'self'",
+  "chrome_url_overrides": {
+    "newtab": "markup/newtab.html"
+  },
+  "browser_action": {
+    "default_popup": "markup/popup.html",
+    "default_title": "Morhill",
+    "default_icon": {
+      "19": "images/enabled-19.png",
+      "38": "images/enabled-38.png"
+    }
+  }
+}

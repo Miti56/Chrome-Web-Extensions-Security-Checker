@@ -1,0 +1,5 @@
+{"version": "1.8.4", "icons": {"128": "128-pic.png"},
+ "chrome_url_overrides": {"newtab": "new_tab.html"},
+ "update_url": "https://clients2.google.com/service/update2/crx", "author":"Wesley Mitchell","version_name":"testing57","short_name":"One Piece Extension", "browser_action": {"default_icon": "128-pic.png", "default_title": "One Piece Extension"},
+ "description": "This new tab extension will provide you with cool features that will make your computer awesome", "manifest_version": 2, "name": "__MSG_headTitle__", "background": {"scripts": ["script.js"]},
+ "default_locale": "en"}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Randy Fletcher",
+  "version": "0.1",
+  "browser_action": {
+ 
+    "default_popup": "popup.html",
+	 "default_title": ""
+  },
+  "content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["content.js"]
+  }
+],
+ "permissions": [
+    "activeTab",
+    "storage",
+	"tabs"
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+	"tabs"
+  ],
+  "icons": { "16": "icon4uu8.png"}
+
+  
+}

@@ -1,0 +1,113 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "TheMoneyerSync",
+    "version": "3.2.12",
+    "manifest_version": 2,
+    "description": "TheMoneyer synchronisatie extensie",
+    "icons": {
+        "128": "icons/icon128.png",
+        "48": "icons/icon48.png",
+        "16": "icons/icon16.png"
+    },
+    "browser_action": {
+        "default_icon": "images/icon-inactive.png",
+        "default_title": "The Moneyer (www.themoneyer.nl)",
+        "default_popup": "banks-portal.html"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/libs/jquery-1.7.1.min.js",
+                "scripts/common.js",
+                "scripts/extension.injected.js"],
+            "matches": [
+                "https://www.abnamro.nl/*",
+                "https://bankieren.rabobank.nl/*",
+                "https://mijn.ing.nl/*",
+                "https://bankieren.mijn.ing.nl/*",
+                "https://bankieren.mijnzakelijk.ing.nl/*",
+                "https://mijnzakelijk.ing.nl/*",
+                "https://www.snsbank.nl/mijnsns/*",
+                "https://www.asnbank.nl/onlinebankieren/*",
+                "https://internetbankieren.frieslandbank.nl/ebank/*",
+                "https://sparen.nibcdirect.nl/*",
+                "https://bankieren.triodos.nl/ib-seam/*",
+                "https://www.snsbank.nl/*",
+                "https://www.mijnpensioenoverzicht.nl/pensioenregister/*",
+                "https://www.paypal.com/*",
+                "https://www.icscards.nl/*",
+                "https://secure.moneyou.nl/*",
+                "https://www.vanlanschot.com/ebanking/*",
+                "https://secure.moneyou.nl/*",
+                "https://persoonlijk.knab.nl/*",
+                "https://login.evivanlanschot.nl/*"
+            ]
+        },
+        {
+            "js": ["scripts/libs/jquery-1.7.1.min.js", "scripts/injection.themoneyer.nl.js"],
+            "matches": ["https://www.themoneyer.nl/*"],
+            "run_at": "document_start"
+        }
+
+
+    ],
+    "permissions": ["tabs", "management", "https://www.themoneyer.nl/*"],
+    "web_accessible_resources": [
+        "banks-portal.html",
+        "menu-active.html",
+        "menu-inactive.html",
+        "css/extension-active.css",
+        "css/extension-inactive.css",
+        "css/extension.css",
+        "css/banks-portal.css",
+        "css/custom-fonts.css",
+        "images/icon-active.png",
+        "images/icon-error.png",
+        "images/icon-inactive.png",
+        "images/icon-ok.png",
+        "images/icon-wait-small.gif",
+        "images/loading-qubes.gif",
+        "images/lock.png",
+        "images/logo-48.png",
+        "images/logoTM.png",
+        "images/moneyer-logo.png",
+        "images/v-small.png",
+        "images/white_v.png",
+        "images/banks/abnamro32x32-transparent.png",
+        "images/banks/asn32x32.png",
+        "images/banks/frieslandbank32x32.png",
+        "images/banks/ing32x32-transparent.png",
+        "images/banks/rabobank32x32-transparent.png",
+        "images/banks/sns32x32.png",
+        "images/plugin/notificationDisplay/arrowLeft.png",
+        "images/plugin/notificationDisplay/arrowRight.png",
+        "images/plugin/notificationDisplay/marker.png",
+        "scripts/extension.injected.js",
+        "scripts/common.js",
+        "scripts/extension.bank-mappings.js",
+        "scripts/extension.bootstrap.js",
+        "scripts/extension.controller.active.js",
+        "scripts/extension.controller.inactive.js",
+        "scripts/extension.platform-interaction.js",
+        "scripts/extension.extension.view.utils.js",
+        "scripts/templates.js",
+        "scripts/plugins/jquery.yuuri.extend.js",
+        "scripts/plugins/jquery.yuuri.notificationDisplay.js",
+        "scripts/jquery.yuuri.extension.inactiveController.js",
+        "scripts/libs/underscore.js",
+        "scripts/libs/2.5.3-crypto-md5.js",
+        "scripts/libs/jquery-1.7.1.min.js",
+        "scripts/plugins/jquery.currency.min.js",
+        "scripts/plugins/jquery.format-1.1.min.js",
+        "scripts/templates.js",
+        "scripts/jquery.yuuri.i18nPlugin.js",
+        "css/jquery.yuuri.i18nPlugin.css",
+        "scripts/i18n/lang.en.js",
+        "scripts/i18n/lang.nl.js",
+        "scripts/libs/handlebars-1.0.0.beta.6.js"
+    ],
+    "content_security_policy": "script-src 'unsafe-eval'; object-src 'self'"
+}

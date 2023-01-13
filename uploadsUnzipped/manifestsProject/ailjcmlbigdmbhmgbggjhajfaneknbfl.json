@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SteamBuster",
+  "version": "1.0",
+  "description": "Hide Steam reviews to relive the 90s game store vibe. Inspired by a Cryaotic tweet.",
+  "content_scripts": [
+  	{
+  		"matches": ["*://store.steampowered.com/app/*"],
+  	    "js": ["/reviewbuster.js"]
+    }
+  ],
+  "page_action": {
+  	"default_icon": {
+  		"16": "images/main.png",
+  		"32": "images/main.png",
+  		"48": "images/main.png",
+  		"128": "images/main.png"
+  	}
+  },
+  "icons": {
+  	"16": "images/main.png",
+  	"32": "images/main.png",
+  	"48": "images/main.png",
+  	"128": "images/main.png"
+  },
+  "manifest_version": 2
+}

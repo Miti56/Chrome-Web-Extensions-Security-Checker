@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ads Skipping Phimmoi.net",
+  "version": "1.0.6",
+  "manifest_version": 2,
+  "description": "Ads Skipping Phimmoi.net, Bỏ quảng cáo trong khi xem phim trên phimmoi.net",
+  "homepage_url": "https://github.com/phonglk/chrome-extension-webpack-boilerplate",
+  "icons": {
+    "16": "assert/icon_16.png",
+    "32": "assert/icon_32.png",
+    "64": "assert/icon_64.png",
+    "128": "assert/icon_128.png",
+    "256": "assert/icon_256.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "permissions": [
+    "http://phimmoi.net/*",
+    "https://phimmoi.net/*",
+    "http://www.phimmoi.net/*",
+    "https://www.phimmoi.net/*"
+  ],
+  "content_scripts": [{
+    "all_frames": false,
+    "js": [
+      "injection.js"
+    ],
+    "css": [
+      "content-style.css"
+    ],
+    "matches": [
+      "http://phimmoi.net/*",
+      "https://phimmoi.net/*",
+      "http://www.phimmoi.net/*",
+      "https://www.phimmoi.net/*"
+    ],
+    "run_at": "document_start"
+  }],
+  "web_accessible_resources": ["assert/*", "common.dll.js", "content.js", "aes-intercept.js"]
+}

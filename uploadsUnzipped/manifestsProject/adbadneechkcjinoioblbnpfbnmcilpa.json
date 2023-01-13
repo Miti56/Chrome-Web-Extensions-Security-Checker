@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "3366go",
+  "short_name": "3366go",
+  "version": "4.7",
+  "icons": { "16": "img/icon16.png",
+           "48": "img/icon48.png",
+          "128": "img/icon128.png" },
+  "browser_action": {
+    "default_icon": "img/inactive.png",
+    "default_title": "3366go",
+	"default_popup": "page/login.html"
+  },
+  "background": {
+    "scripts": [
+		"js/jquery-1.11.3.min.js",
+		"background.js"
+    ]
+  },
+  "permissions": [
+	"alarms",
+	"proxy", 
+	"tabs",
+	"webRequest", 
+	"webRequestBlocking",
+	"notifications",
+	"management",
+	"<all_urls>"
+	],
+  "manifest_version": 2
+}

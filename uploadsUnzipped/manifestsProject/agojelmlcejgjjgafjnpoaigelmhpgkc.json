@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "name": "Gigioskids",
+   "app": {
+      "launch": {
+         "web_url": "http://gigioskids.co?rf=gcw"
+      }
+   },
+   "description": "Cientos de Juegos en un Solo lugar",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "manifest_version": 2,
+   "version": "1.1"
+}

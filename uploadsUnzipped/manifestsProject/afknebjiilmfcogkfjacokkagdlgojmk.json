@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Meb Engelsiz Agar io Oyunu",
+  "description": "Agar .io son dönemlerin popülaritesi en yüksek oyunlarından biri ve oldukça bağımlılık yapan bir oyun.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["tabs", "bookmarks"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon" : "icon.png",
+      "default_title": "Meb Engelsiz Agar io Oyunu"
+  }
+
+}

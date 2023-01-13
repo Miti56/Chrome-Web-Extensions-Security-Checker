@@ -1,0 +1,52 @@
+{
+   "description": "Theme inspired by zootool.com and komodomedia.com",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "name": "Tropic",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 153, 124, 112 ],
+         "button_background": [ 57, 34, 25, 0 ],
+         "control_background": [ 57, 34, 25, 0 ],
+         "frame": [ 35, 111, 109 ],
+         "frame_inactive": [ 75, 50, 39 ],
+         "frame_incognito": [ 75, 50, 39 ],
+         "frame_incognito_inactive": [ 75, 50, 39 ],
+         "ntp_background": [ 26, 26, 26 ],
+         "ntp_header": [ 32, 117, 134 ],
+         "ntp_link": [ 1, 119, 119 ],
+         "ntp_section": [ 33, 33, 33 ],
+         "ntp_section_link": [ 33, 33, 33 ],
+         "ntp_section_text": [ 119, 119, 119 ],
+         "ntp_text": [ 119, 119, 119 ],
+         "tab_background_text": [ 90, 185, 185 ],
+         "tab_text": [ 236, 227, 198 ],
+         "theme_frame": [ 0, 0, 0 ],
+         "toolbar": [ 75, 50, 39 ]
+      },
+      "images": {
+         "theme_frame": "theme_frame.png",
+         "theme_ntp_attribution": "theme_ntp_attribution.png",
+         "theme_ntp_background": "theme_ntp_background.png",
+         "theme_tab_background": "theme_tab_background.png",
+         "theme_toolbar": "theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom left",
+         "ntp_background_repeat": "repeat-x"
+      },
+      "tints": {
+         "background_tab": [ -1, 0.5, 0.75 ],
+         "buttons": [ 0.04,0.62,0.05 ],
+         "frame": [ -1, -1, -1 ],
+         "frame_inactive": [ -1, -1, 0.75 ],
+         "frame_incognito": [ -1, 0.2, 0.35 ],
+         "frame_incognito_inactive": [ -1, 0.3, 0.6 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}

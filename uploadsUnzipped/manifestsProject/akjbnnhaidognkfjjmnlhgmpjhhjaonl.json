@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Spot Of The Day",
+  "description": "Spot Of The Day for Google Chrome",
+  "version": "1.0.0.1",
+  "icons": { "128": "icon_128.png" },
+  "app": {
+    "urls": [
+      "http://sotd.spot24.tv/"
+    ],
+    "launch": {
+      "web_url": "http://sotd.spot24.tv/",
+      "container": "tab"
+    }
+  },
+  "permissions": ["notifications"],
+  "manifest_version": 2
+}

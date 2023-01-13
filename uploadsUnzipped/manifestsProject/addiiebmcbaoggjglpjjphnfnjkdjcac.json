@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bulk Resize Photos",
+  "short_name": "Resize Photos",
+  "manifest_version": 2,
+  "description": "Bulk Resize Photos is a free, online image resizer!",
+  "version": "4",
+  "app": {
+    "urls": ["http://www.bulkresizephotos.com/?utm_medium=app&utm_source=cws"],
+    "launch": {
+      "web_url": "http://www.bulkresizephotos.com/?utm_medium=app&utm_source=cws"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "offline_enabled": true,
+  "permissions": []
+}

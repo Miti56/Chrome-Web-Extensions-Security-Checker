@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "DotaVision",
+  "short_name": "DotaVision",
+  "version": "19.10.14",
+  "description": "Track and get notified favorite media contents from Youtube and Twitch",
+  "background": {
+    "persistent": true,
+    "page": "background.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "icons": {
+    "16": "icons/icon19.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "DotaVision",
+    "default_popup": "./index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.twitch.tv/*"
+      ],
+      "js": [
+        "./js/content_script.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://www.youtube.com/*"
+      ],
+      "js": [
+        "./js/content_script_yt.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com https://api.twitch.tv; object-src 'self';  font-src 'self' 'unsafe-eval'",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "nativeMessaging"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhKZVutDSUhfAuS3jloViZAEGMvuh93JOqqRWck6jgysVh0obxK9RYci+JGBq2+GaGizZJ9T898DiQtH82wXgZKTix7YZ+F7eybI9Io0eGF5V7rZNBd20cqRDlnwkSl1TWelaHugn0Lgr2NJM3JmE2i0/sZtYY5vQp/aiF0Mtti1rRQLfPKQOuEqsQTz8qrsvJtdVuhZsIycIcQWbPZOVGHcdHveYz6oGe2fssuCJ8GKxR3xfreOy2bRFiNqmqHHEf7ExCJaDnf5UQEnv0/SslcF7AiiTb6IgRYEMyL31XkcHCJkKPuM5fcmLPavfX7VNkY1xuELwIU+rSa/0/UncuQIDAQAB",
+  "manifest_version": 2
+}

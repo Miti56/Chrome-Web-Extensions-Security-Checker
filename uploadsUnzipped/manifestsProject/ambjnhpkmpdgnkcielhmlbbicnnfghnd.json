@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "ZipBooks",
+ "description": "Next Gen Cloud Based Accounting & Inventory Software",
+ "version": "1.0.0",
+ "manifest_version": 2,
+ "icons": {
+ "128": "icon_128.png"
+ },
+ "app": { 
+ "urls": [
+ "https://pro.zipbooks.in/"
+ ],
+ "launch": {
+ "web_url": "http://pro.zipbooks.in/"
+ }
+ }
+ }

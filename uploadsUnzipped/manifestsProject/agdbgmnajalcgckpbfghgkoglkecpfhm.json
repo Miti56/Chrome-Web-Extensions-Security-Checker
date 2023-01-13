@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Tamperwolf",
+  "short_name": "Tamperwolf",
+  "version": "0.0.5",
+  "author": "Cristian Lupașcu",
+  "homepage_url": "https://github.com/wolfascu/tamperwolf",
+
+  "description": "Tampermonkey clone",
+  "icons":{
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+  },
+
+  "options_ui": {
+    "page" : "options.html",
+    "chrome_style": true
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["pageScript.js"],
+    "run_at": "document_end"
+  }],
+
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "DJ Checkbox",
+	"author": "Brock Glaze",
+  "version": "0.1.3",
+	"manifest_version": 2,
+	"description": "We ain't tryna forget stuff.",
+	"browser_action": {
+		"default_dj_checkbox": "./images/dj_checkbox.png",
+		"default_title": "You ain't tryna forget stuff.",
+		"default_popup": "index.html"
+	},
+  "permissions": [
+    "storage"
+  ],
+	"icons": {
+		"128": "./images/dj_checkbox.png"
+	}
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Facebook Bookmark",
+  "version": "1.0",
+  "description": "Add a facebook button to toolbar. You can access you facebook application/games from the button quickly.",
+  "permissions": ["storage","webRequest", "webRequestBlocking","<all_urls>"],
+  "background": {
+    "scripts": ["loldogs.js", "background.js"]
+  },
+ "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": { "16": "img/icon.png",
+           "48": "img/icon.png",
+          "128": "img/icon.png" },
+  "manifest_version": 2
+}

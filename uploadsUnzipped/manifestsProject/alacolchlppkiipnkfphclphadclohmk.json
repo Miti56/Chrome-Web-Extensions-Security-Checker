@@ -1,0 +1,23 @@
+
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "丁香园健康互联频道",
+  "description": "香园香园健康互联频道是丁香园旗下专业的资讯平台，致力于为广大医生和科研工作者提供最专业最有价值的基于互联网的医学健康和生命科学信息，内容覆盖基于互联网、移动互联网的医学健康和生命科学信息，以及与之相关的设备、应用、趋势等。",
+  "version": "1.0",
+  "app": {
+    "urls": [
+      "http://ihealth.dxy.cn/" 
+      ],
+      "launch": {
+        "web_url": "http://ihealth.dxy.cn/"
+      }
+      },
+      "icons": {
+        "128": "icon128.png"
+        },
+        "permissions": [
+        "unlimitedStorage",
+        "notifications"
+        ]
+      }

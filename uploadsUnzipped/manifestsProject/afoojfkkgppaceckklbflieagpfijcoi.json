@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"version":"2.0",
+"manifest_version":2,
+"name":"Africa",
+"description": "Visit UltraPeter.com for more themes!",
+"theme":
+	{
+
+	"images":
+		{
+		"theme_frame":"img/frame.jpg",
+		"theme_toolbar":"img/toolbar.jpg",
+		"theme_ntp_background":"img/ntp_background.jpg",
+
+		"theme_ntp_attribution":"img/ntp_attribution.png"
+		},
+
+	"colors" : 
+		{
+		"bookmark_text":[255,255,255],
+		"ntp_link":[255,255,255],
+		"ntp_section": [0,0,0],
+		"ntp_section_link": [255,255,255],
+		"ntp_section_text": [255,255,255],
+		"ntp_background": [0,0,0],
+		"ntp_text": [255,255,255],
+		"tab_background_text":[230,230,230],
+		"tab_text": [255,255,255],
+		"frame":[64,17,3],
+		"toolbar":[88,16,1]
+		},
+
+	"properties":
+		{
+		"ntp_background_alignment":"bottom left",
+		"ntp_background_repeat":"repeat-x"
+		},
+
+	"tints":
+		{
+		"buttons":[1,1,1],
+		"background_tab":[0,0,0]
+		}
+	}
+}

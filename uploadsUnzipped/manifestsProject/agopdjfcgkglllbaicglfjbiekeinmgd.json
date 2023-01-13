@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Mi Talking Angela",
+    "description": "Mi Talking Angela es una pagina de los fans de este bonito juego", 
+	"browser_action": {
+        "default_icon": {
+            "38": "img/angela38.png",
+            "19": "img/angela19.png"
+            }, 
+        "default_title": "Mi Talking Angela", 
+        "default_popup": "popup.html"
+    },
+	"icons": {
+                "16":"img/angela16.png",
+                "48":"img/angela48.png",
+                "128":"img/angela128.png"
+    },	
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+    "version": "2.0"
+}
+
+

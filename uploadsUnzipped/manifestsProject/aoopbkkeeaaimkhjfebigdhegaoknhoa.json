@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Vera Secure Email",
+  "description": "Vera extension to compose secure emails.",
+  "version": "2.0.104.1",
+  "author" : "Vera",
+
+  "permissions": [
+    "storage",
+    "identity",
+    "*://*.google.com/*",
+    "tabs",
+    "https://*/*"
+  ],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*"],
+    "js": ["js/addBtn.js"]
+  }],
+
+  "icons" : {
+    "48"  : "assets/Icon-128x128.png",
+    "128" : "assets/Icon-128x128.png"
+  },
+
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+
+  "browser_action": {
+    "default_title": "Vera Secure Email",
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "32" : "assets/Icon-32.png",
+      "48" : "assets/Icon-48.png"
+    }
+  }
+}

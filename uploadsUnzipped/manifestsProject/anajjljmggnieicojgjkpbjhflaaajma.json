@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Talentguide",
+  "version": "1.0.5",
+  "manifest_version": 2,
+
+  "description": "A quick and easy way to reliably evaluate technical talent.",
+  "icons": { "16": "tg-16.png",
+             "48": "tg-48.png",
+            "128": "tg-128.png" },
+			
+   "app": {
+    "urls": [
+      "http://www.talentguide.co/?utm_source=google_chrome"
+    ],
+    "launch": {
+      "web_url": "http://www.talentguide.co/?utm_source=google_chrome"
+    }
+  }
+}

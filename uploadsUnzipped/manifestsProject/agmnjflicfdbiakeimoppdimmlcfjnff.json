@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"author": "Rémi M.",
+	"name": "SAD__TV streamAlert",
+	"description": "Extension Chrome pour alerte de stream Twitch",
+	"version": "1.0.0", 
+	"browser_action": {
+		"default_popup": "index.html"
+	},
+	"icons": {
+		"128" : "img/icon_128.png"
+	},
+	"background": { 
+		"scripts": [ "js/jquery.js", "js/config.js", "js/background.js"],
+		"persistent": true
+	},
+	"permissions": [
+		"notifications", "storage", "background", "https://api.twitch.tv/*"
+	]
+}

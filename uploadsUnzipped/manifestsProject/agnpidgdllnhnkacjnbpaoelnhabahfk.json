@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "YouQuaChoo",
+  "version": "1.0.0",
+  "description": "Adjust quality of YouTube videos automatically",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["index.js"]
+    }
+  ],
+  "icons": {
+    "16": "assets/external/main/16.png",
+    "24": "assets/external/main/24.png",
+    "32": "assets/external/main/32.png",
+    "48": "assets/external/main/48.png",
+    "96": "assets/external/main/96.png",
+    "128": "assets/external/main/128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "16": "assets/toolbar/fhd/16.png",
+      "24": "assets/toolbar/fhd/24.png",
+      "32": "assets/toolbar/fhd/32.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

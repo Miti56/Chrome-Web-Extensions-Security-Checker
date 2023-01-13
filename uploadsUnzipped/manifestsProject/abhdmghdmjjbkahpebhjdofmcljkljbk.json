@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "YouTube to MP3 Converter",
+  "description": "YouTube to MP3 Converter",
+  "version": "2.0",
+   "background":{
+  "scripts": ["action.js"]
+  },
+  "icons": { 
+   "48": "logo.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+   "browser_action": {
+   "default_icon": "logo.png"
+  }
+}

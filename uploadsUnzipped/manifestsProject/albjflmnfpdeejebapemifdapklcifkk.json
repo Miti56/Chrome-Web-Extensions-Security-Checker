@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MPtable",
+  "short_name": "MPtable",
+  "description": "Statistics Table for Max Pro",
+  "version": "1.15",
+  "manifest_version": 2,
+  "minimum_chrome_version": "33.0.1715.0",
+  "author": "© 2015 InterWorking Labs, All Rights Reserved",
+  "offline_enabled": true,
+  "icons": {
+    "16": "/Chrome_icons/icon_table_16.png",
+    "32": "/Chrome_icons/icon_table_32.png",
+    "36": "/Chrome_icons/icon_table_36.png",
+    "48": "/Chrome_icons/icon_table_48.png",
+    "57": "/Chrome_icons/icon_table_57.png",
+    "58": "/Chrome_icons/icon_table_58.png",
+    "64": "/Chrome_icons/icon_table_64.png",
+    "72": "/Chrome_icons/icon_table_72.png",
+    "78": "/Chrome_icons/icon_table_78.png",
+    "76": "/Chrome_icons/icon_table_76.png",
+    "96": "/Chrome_icons/icon_table_96.png",
+    "120": "/Chrome_icons/icon_table_120.png",
+    "128": "/Chrome_icons/icon_table_128.png",
+    "144": "/Chrome_icons/icon_table_144.png",
+    "152": "/Chrome_icons/icon_table_152.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [
+        "js/launch.js"
+      ]
+    }
+  },
+  "sockets": {
+    "tcp": {
+      "connect": [
+        "*:*"
+      ]
+    }
+  },
+  "permissions": [
+    "storage",
+    "http://*.iwl.com/"
+  ]
+}

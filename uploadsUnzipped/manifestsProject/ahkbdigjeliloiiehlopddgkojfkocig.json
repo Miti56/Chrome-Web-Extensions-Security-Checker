@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Asana Inbox Notifications",
+    "version": "1.0.3",
+    "description": "Adds notifications for Asana Inbox. Requires 'Asana Quick Add +' extension to open tasks.",
+    "minimum_chrome_version": "33",
+    "options_page": "options/index.html",
+    "background": {
+        "persistent": true,
+        "page": "background.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.asana.com/*"],
+            "js": [
+                "notify-foreground.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+    "permissions": [
+        "*://*.asana.com/*",
+        "*://s3.amazonaws.com/*",
+        "webRequest",
+        "webRequestBlocking",
+        "background",
+        "notifications",
+        "cookies"
+    ],
+    "web_accessible_resources": [
+        "icon128.png"
+    ],
+    "content_security_policy": "script-src https://app.asana.com 'self'; object-src 'self'",
+    "manifest_version": 2
+}

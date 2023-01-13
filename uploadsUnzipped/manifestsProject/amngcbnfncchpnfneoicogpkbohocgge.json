@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Amazon.Com.Mx Search",
+  "short_name": "Amazon",
+  "author": "Vitaly Popov",
+  "description": "Search Selected Or Current Viewed Product On Amazon.Com.Mx",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "64": "icon64.png",
+    "96": "icon96.png",
+    "128": "icon128.png"
+},
+  "minimum_chrome_version": "38.0",
+  "permissions": [
+    "tabs", "activeTab", "http://*/*", "https://*/*", "storage", "file://*/*"
+  ],
+  "background" : {
+    "scripts" : ["background.js"]
+  },
+  "content_scripts":[{
+    "all_frames": true,
+    "matches": [
+      "<all_urls>",
+      "http://*/*",
+      "https://*/*",
+      "file://*/*"
+      ],
+    "js": [
+      "content.js"
+    ]
+  }],
+  "browser_action": {
+    "default_title": "Amazon.Com.Mx Search Alt-N",
+    "default_icon": "icon16.png"
+  },
+  "commands": {
+    "_execute_browser_action": { "description": "Amazon.Com.Mx", "suggested_key": { "default": "Alt+N" } }
+  }
+}

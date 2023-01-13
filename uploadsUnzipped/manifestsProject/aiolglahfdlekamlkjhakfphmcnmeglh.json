@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name" : "Medlines",
+	"author" : "@luluwebmaster",
+	"description" : "Extension dans le but d'être averti des lives de Medlines.",
+	"version" : "1.0.1",
+	"homepage_url": "https://www.twitch.tv/medlines",
+	"browser_action" :
+	{
+		"default_icon" : "imgs/fav.png",
+		"default_title" : "Medlines",
+		"default_popup" : "popup.html"
+	},
+	"background":
+	{
+		"page": "background.html"
+	},
+	"permissions" :
+	[
+		"*://api.external.luc-mergault.fr/*",
+		"https://*.twitch.tv/*",
+		"notifications",
+		"storage"
+	],
+	"icons":
+	{
+		"16": "imgs/logo.png",
+		"48": "imgs/logo.png",
+		"128": "imgs/logo.png"
+	}
+}

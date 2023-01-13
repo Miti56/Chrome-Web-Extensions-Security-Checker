@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Zombie: Run or Kill",
+  "description": "Do you have what it takes to be hard core zombie shooter? Decide what to do - run or kill!",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://dralvaro.com/zombie-run-or-kill/"
+    ],
+    "launch": {
+      "web_url": "http://dralvaro.com/zombie-run-or-kill/"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Wicked Big Search",
+  "description": "A wicked big search box that you can use with your search engine of choice.",
+  "version": "1.1",
+  "app": {
+    "urls": [
+      "http://starzonmyarmz.github.com/wicked-big-search/"
+    ],
+    "launch": {
+      "web_url": "http://starzonmyarmz.github.com/wicked-big-search/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage"
+  ],
+  "manifest_version": 2
+}

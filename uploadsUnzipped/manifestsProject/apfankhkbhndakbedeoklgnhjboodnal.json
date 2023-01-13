@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "写作神器",
+    "version": "1.0.0",
+    "description": "AI辅助内容创作 ，人人都有10w+",
+    "icons": {
+        "16": "icon/icon_16.png",
+        "48": "icon/icon_48.png",
+        "128": "icon/icon_128.png"
+    },
+    "browser_action": {
+        "default_title": "写作神器",
+        "default_icon": "icon/icon_128.png"
+    },
+    "background": {
+        "scripts": ["manifest.js", "vendor.js", "background.js"]
+    },
+    "content_scripts": [{
+        "js": ["manifest.js", "content/toutiao.js"],
+        "matches": ["*://mp.toutiao.com/*", "*://sso.toutiao.com/*"]
+    }, {
+        "js": ["manifest.js", "content/qie.js"],
+        "matches": ["*://om.qq.com/*"]
+    }, {
+        "js": ["manifest.js", "content/baijia.js"],
+        "matches": ["*://baijiahao.baidu.com/*"]
+    }, {
+        "js": ["manifest.js", "content/dayu.js"],
+        "matches": ["*://mp.dayu.com/*"]
+    }],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": ["cookies", "*://*/*", "tabs", "webRequest", "contextMenus"],
+    "web_accessible_resources": ["popup.html", "static/*"]
+}

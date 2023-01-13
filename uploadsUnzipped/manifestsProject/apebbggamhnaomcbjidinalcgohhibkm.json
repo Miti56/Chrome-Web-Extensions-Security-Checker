@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "HueHelper",
+	"default_locale": "en_US",
+	
+		"version": "0.9.0",
+	
+	"author": "Michel Gutierrez",
+	"description": "Philips Hue management",
+	"background": {
+		"scripts": [
+			"background/main.js",
+			"background/vibrant.worker.min.js"
+		]
+		
+			,"persistent": true
+		
+	},
+	"icons": {
+		"32": "content/images/icon-idle-32.png",
+		"40": "content/images/icon-idle-40.png",
+		"48": "content/images/icon-idle-48.png",
+		"128": "content/images/icon-idle-128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"40": "content/images/icon-idle-40.png"
+		},
+		"default_title": "HueHelper",
+		"default_popup": "content/popup.html?panel=main"
+	},
+	"options_ui": {
+		"page": "content/settings.html?panel=settings",
+		"open_in_tab": true
+	},
+	"commands": { 
+		"color-from-tab": { 
+			"suggested_key": { 
+				 "default": "Alt+Shift+U"
+			},
+			"description": "Set colors from current tab" 
+		}
+	},
+	"permissions": [
+		"<all_urls>",
+		"tabs",		
+		"downloads",
+		"storage",
+
+		"contextMenus"
+
+	]
+}

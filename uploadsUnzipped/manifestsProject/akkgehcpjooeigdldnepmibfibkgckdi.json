@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Tower of Sages",
+	"description": "Train and collect over 100 minions as you fight to prove yourself in the Tower of Sages.Monster battle RPG that focuses on combat",
+	"version": "1.1.1",
+	"manifest_version": 2,
+	"app": {
+		"launch": {
+			"web_url": "http://tow.games.lionsera.com/"
+		}
+	},
+	"icons": {
+		"16": "icon_16.png",
+		"128": "icon_128.png"
+	},
+	"permissions": [
+		"unlimitedStorage"
+	],
+	"offline_enabled": false
+}

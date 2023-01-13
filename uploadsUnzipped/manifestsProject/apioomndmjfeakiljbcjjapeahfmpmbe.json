@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Flash 4-4-2 Street Football Soccer Game",
+  "description": "A fun flash football soccer game",
+  "version": "2.5",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.flashfootballsoccer.com/flash442streetfootballdemo.html"
+    ],
+    "launch": {
+      "web_url": "http://www.flashfootballsoccer.com/flash442streetfootballdemo.html"
+    }
+  }
+}

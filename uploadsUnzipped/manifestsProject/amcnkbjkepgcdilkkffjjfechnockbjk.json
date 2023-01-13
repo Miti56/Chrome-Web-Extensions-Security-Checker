@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+      "js": [ "lib/angular.min.js", "lib/jquery.min.js", "lib/jaadi-1.0.js", "lib/storage.jaadi.js", "src/background.js" ],
+      "matches": [ "https://*google.com/", "https://*google.com/*"],
+      "run_at": "document_start"
+   } ],
+   "description": "Sort mails based on today, yesterday, current week and last week",
+   "icons": {
+      "128": "resources/icon128.png",
+      "16": "resources/icon16.png"
+   },
+   "manifest_version": 2,
+   "name": "Sort Date for Gmail",
+   "options_page": "src/options.html",
+   "permissions": [ "tabs", "storage", "https://*google.com/", "https://*google.com/*" ],
+   "version": "1.0.1"
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Unicode",
+  "description": "Access all Unicode characters to copy/paste them wherever you feel like.",
+  "version": "0.7",
+
+  "icons": {
+    "128": "128.png"
+  },
+  "permissions": ["clipboardWrite", "notifications", "storage"],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

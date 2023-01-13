@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Jira Backlogs Names",
+  "version": "1.002",
+  "description": "In Jira filter replace parent backlog number with it's name",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "content_scripts": [
+  {
+	"run_at" : "document_idle",
+    "matches": ["https://*/Dashboard*", "https://*/issues/*"],
+    "js": ["jquery-3.3.1.min.js", "BLNames.js"]
+  }
+]
+}

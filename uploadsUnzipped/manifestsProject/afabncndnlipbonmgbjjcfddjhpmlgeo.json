@@ -1,0 +1,79 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "permissions": [
+    "cookies",
+    "storage",
+    "activeTab",
+    "bookmarks",
+    "identity",
+    "identity.email",
+    "https://www.lightuptheweb.net/*",
+    "https://accounts.google.com/*",
+    "webNavigation",
+    "contextMenus",
+    "<all_urls>"
+
+  ],
+  "browser_action": {
+    "default_icon": "img/icon1.png",
+    "default_popup": "popup.html"
+  },
+  "oauth2": {
+    "client_id": "424828955243-t67i4aqf229m7gkeuptmdutnmo479tp0.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive"
+    ]
+  },
+
+  "icons":
+  {
+    "48":"img/icon.png"
+  },
+
+
+  "background":
+  {
+    "scripts":["js/jquery-1.11.3.min.js","js/background.js"],
+    "persistent":true
+  },
+
+  "content_scripts":     [ {
+
+    "matches": ["<all_urls>", "https://techcrunch.com/*", "https://bigthink.com/*", "https://www.engadget.com/*"],
+    "exclude_matches":["https://www.facebook.com/*","http://chudachuda.com/*","https://linkedin.com/*","https://www.linkedin.com/*","https://twitter.com/home/*","https://stackoverflow.com/*","https://mail.google.com/*","https://web.whatsapp.com/*","https://accounts.google.com/*","file://*/*","*://*.lightuptheweb.net/*","*://*.lightuptheweb.in/*","https://www.ask.com/*","https://www.bing.com/*","https://www.youtube.com/*","http://localhost/*","https://console.cloud.google.com/*",
+      "https://console.aws.amazon.com/","https://console.firebase.google.com/*","https://firebase.google.com/*","https://bitbucket.org/*","https://dashboard.stripe.com/*","https://blog.me/*","https://cloud.naver.com/*","https://nid.naver.com/*","https://classroom.google.com/*", "https://drive.google.com/*", "https://inbox.google.com/*","https://classroom.google.com/", "https://analytics.google.com/*", "https://docs.google.com/*", "https://myaccount.google.com/*",
+      "https://api.twitter.com/oauth/*", "https://www.evernote.com/client/*", "https://www.evernote.com/shard/*", "https://www.onenote.com/authredir/*","https://amazon.com/*","https://amazon.in/*","http://www.chudachuda.com/*","https://signin.aws.amazon.com/*"],
+    "js":       [ "js/jquery-1.11.3.min.js","js/navbar.js","js/highlight.js"],
+    "css":["upspring.css"],
+
+    "run_at":"document_end"
+
+  } ],
+
+
+  "Content-Security-Policy": "frame-ancestors 'self' https://twitter.com/",
+  "X-Frame-Options": "ALLOW-FROM https://twitter.com",
+
+  "commands": {
+    "save" : {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
+
+
+      },
+      "description": "Save a link"
+    }
+
+  },
+
+
+  "web_accessible_resources": ["img/spinner_progress.png","img/11.png","img/12.png","img/13.png","img/pencil.png","img/email1.png","img/logo.png","img/pen2.png","fonts/acherus-light.otf","fontawesome.css","upspring.css","fonts/*.otf","fonts/*.woff2","fonts/*.eot","fonts/*.svg","fonts/*.ttf","fonts/*.woff","fonts/Calibri.ttf","img/highlight.png","img/high1.png","img/icon1.png","img/pencil2.png","img/wrapper.png","img/arrow-left-white.png","img/zoom.png","img/blue.png","img/green.png","img/prl.png","img/history-icon.png","img/icon-search.png","img/loader.gif","img/publish1.png", "img/pencil-new-icon.png", "img/pencil-white-new.png", "img/email-icon-new.png", "img/close-white.png", "img/upspring-popup/logo-rounded.png"],
+  "description":              "Highlighter and Personal Search Engine",
+  "name":                     "Light Up The Web ",
+  "version":                  "1.0.99"
+
+}

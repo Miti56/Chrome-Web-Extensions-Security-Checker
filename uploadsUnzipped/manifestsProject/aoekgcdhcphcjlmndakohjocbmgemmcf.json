@@ -1,0 +1,24 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "imgs/icon-small.png",
+		"default_popup": "popup.html"
+	},
+	"description": "__MSG_description__",
+	"background": {
+		"scripts": [
+			"bottle-blast-js/back.js"
+		]
+	},
+	"default_locale": "en",
+	"version": "0.0.1",
+	"icons": {
+		"48": "imgs/icon-small.png",
+		"128": "imgs/bottle-blast-128.png"
+	},
+	"name": "__MSG_name__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"name": "__MSG_name__",
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"background": {
+		"scripts": [
+			"scripts/fly-car-stunt.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "icn/ic48.png",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"48": "icn/ic48.png",
+		"128": "icn/fly-car-stunt-128.png"
+	},
+	"version": "0.0.1",
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

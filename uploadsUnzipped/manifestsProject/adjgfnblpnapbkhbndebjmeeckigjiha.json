@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.0.2",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "name": "Joy Trigger by Thrive Global",
+  "short_name": "Joy Trigger",
+   "browser_action": {
+    "default_icon": "icon128.png"
+  },
+  "description": "Bring more joy, well-being, and productivity into your life with animal GIFS and actionable tips in each new tab.",
+  "author": "Thrive Global",
+  "chrome_url_overrides": {
+      "newtab": "index.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

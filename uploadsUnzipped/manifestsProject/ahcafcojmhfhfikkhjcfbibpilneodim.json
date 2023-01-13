@@ -1,0 +1,16 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Tiny Evolution Adventure",
+  "description": "Reach the top of the food chain in this Ludum Dare 24 game made in under 48 hours!",
+  "version": "2.0",
+"manifest_version": 2,
+  "app": {
+    "launch": {
+      "local_path": "main.html"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  }
+}

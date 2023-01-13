@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Comparateur Gratuit Mutuelle Santé - Dispofi"
+   },
+   "description": "L'extension officielle du Comparateur de mutuelle santé Dispofi pour Chrome.",
+   "homepage_url": "https://mutuelle.dispofi.fr/comparateur-mutuelle-sante",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Comparateur Gratuit Mutuelle Santé - Dispofi",
+   "options_page": "options.html",
+   "permissions": [ "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

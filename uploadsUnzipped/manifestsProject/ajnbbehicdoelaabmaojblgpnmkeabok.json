@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "WDGtool",
+    "manifest_version": 2,
+    "description": "WDG tool",
+    "version": "1.3",
+    "background": {
+        "page": "background.html"
+    },
+    "page_action": {
+        "default_icon": "icons/icon.png",
+        "default_title": "WDGtool"
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["lib/firebase-v4.1.1.js", "lib/jquery-3.2.1.min.js", "lib/lodash.min.js", "wdgtool.js", "wdgen.js"],
+            "css": ["in-page.css", "lib/css/font-awesome.min.css"]
+        }
+    ],
+    "web_accessible_resources": ["lib/fonts/*"]
+}

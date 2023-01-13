@@ -1,0 +1,41 @@
+{
+	"description": "__MSG_description__",
+	"manifest_version": 2,
+	"optional_permissions": [
+		"management"
+	],
+	"chrome_url_overrides": {
+		"newtab": "theme.html"
+	},
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"version": "0.10.6",
+	"default_locale": "en",
+	"name": "__MSG_name__",
+	"browser_action": {
+		"default_title": "Frozen"
+	},
+	"icons": {
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"background": {
+		"scripts": [
+			"assets/bg.js"
+		]
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

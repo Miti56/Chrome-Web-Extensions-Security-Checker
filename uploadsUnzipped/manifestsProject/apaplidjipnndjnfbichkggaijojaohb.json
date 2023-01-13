@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"__MSG_appName__","description":"__MSG_appDesc__","default_locale":"en","version":"13.7846.7677","manifest_version":2,"icons":{"128":"128_128_pacman_1.png"},"app":{"launch":{"web_url":"http://g56.funnygames-4-all.org/?utm_source=cws&utm_medium=app&utm_campaign=cws&utm_term=pacman_1"}}}

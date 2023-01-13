@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Muški Portal",
+  "description": "Prvi bh. lifestyle magazin za muškarce",
+  "version": "1.0",
+    "options_page": "options.html",
+  "content_scripts": [
+    {     
+      "matches": ["http://*/*"],
+      "js": [ "js/popup.js","js/jquery-1.10.2.min.js","js/feednami-client-v1.1.js"]
+    }
+  ],
+  "background": {
+    "matches": ["http://*/*"],
+    "scripts": ["jquery-1.10.2.min.js","background.js","feednami-client-v1.1.js"]
+  },
+  "icons": { "16": "img/icon16.png",
+           "48": "img/icon48.png",
+          "128": "img/icon128.png" },
+  "browser_action": {
+    "default_icon": "img/icon48.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "storage",
+    "notifications"
+  ],
+  "web_accessible_resources": [
+    "img/muski_portal.jpg"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "GitHub Commit Status",
+    "version": "0.4",
+    "description": "Displays commit status of SHAs on GitHub",
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_title": "GitHub Commit Status"
+    },
+    "content_security_policy": "default-src 'self' ",
+    "minimum_chrome_version": "14.0.835.202",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css": [
+                "styles/inject.css"
+            ],
+            "js": [
+                "javascripts/ext/jquery.min.js",
+                "javascripts/ext/URI.min.js",
+                "javascripts/ext/underscore.min.js",
+                "javascripts/ext/underscore.string.min.js",
+                "javascripts/inject.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Gmail Cleaner",
+  "version": "0.0.0.1",
+  "description": "Gmail Cleaner allows Google Apps administrators to search and delete emails from user's mailboxes",
+  "icons": {
+    "128": "gmail-cleaner-128-128.png",
+    "16": "gmail-cleaner-16-16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "579849695992",
+  "app" : {
+    "launch" : {
+      "web_url" : "http://gmail-cleaner.com"
+    }
+  }
+}

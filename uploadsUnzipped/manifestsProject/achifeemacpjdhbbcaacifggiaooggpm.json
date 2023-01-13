@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Gtx Racing 2018",
+
+  "short_name": "Gtx Racing 2018",
+
+  "version": "1.0.2",
+  "description": "Play Gtx Racing 2018 now!",
+
+  "homepage_url": "http://chromapp.xyz/c/ability-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Gtx Racing 2018",
+
+      "default_popup": "popup.html"
+  }
+}

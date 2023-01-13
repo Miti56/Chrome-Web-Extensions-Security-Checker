@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ZenMate - Free Halloween Game",
+    "version": "1.6",
+    "short_name": "Halloween Game",
+    "description": "Trick or Treat? Play our Zen-Monster Halloween Game! Cast a spell to curse the pumpkins and spooky ghosts to win Free Premium!",
+    "icons": {
+        "128": "logo-128x128.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://go.zenmate.com/HalloweenGameChrome"
+        }
+    }
+}

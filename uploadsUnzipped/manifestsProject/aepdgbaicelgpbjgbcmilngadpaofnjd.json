@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "招聘狗-简历抓取",
+  "description": "HR必备简历抓取工具",
+  "version": "1.1.1",
+"browser_action": {
+  "default_title": "保存到招聘狗",
+    "default_icon": "images/icon128.png"
+  },
+"background": {
+	    "scripts": ["js/ajax.js","js/background.js"],"persistent": true },
+
+
+"permissions": [
+"cookies",
+"*://*/*",
+"tabs",
+"activeTab",
+"contextMenus",
+"background"
+  ],
+"icons": {
+    "16": "images/icon16.png",
+ "48": "images/icon48.png"
+},
+"web_accessible_resources": [
+	"zhaopingou_login.html",
+	"zhaopingou_add_resume.html",
+        "images/head_default.png",
+"images/logo1.0.png",
+ 	"images/login_logo.png",
+	"images/zhaopingou_css_close_form.png",
+	"images/zhaopingou_css_icon.png",
+	"images/zhaopingou_css_licon01.png",
+	"images/zhaopingou_css_licon02.png",
+	"images/zhaopingou_css_MRDPCInfoEmail.png",
+     	"images/zhaopingou_css_MRDPCInfoPhone.png",
+	"images/zhaopingou_css_MRDPInfoPullDownIcon.png",
+	"images/zpg_cjzq_MPlugBg.jpg",
+	"css/zhaopingou_css_style.css",
+      	"js/zhaopingou_jquery-1.9.1.min.js",
+	"js/ajax.js",
+	"js/zhaopingou_chajian_add_resume.js",
+	"js/zhaopingou_chajian_login.js","js/zhaopingou_js_sprint_change.js"
+    ],
+"options_page": "options.html"
+
+}

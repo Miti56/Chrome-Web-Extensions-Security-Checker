@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "name":"Crazy Spacecraft",
+  "description":"Are you prepared to achieve high scores across a spaceship?",
+  "version":"1.0.1",
+  "content_security_policy":"script-src 'self' https://clay.io https://clay.io:846; object-src 'self'",
+  
+
+"icons":{
+    "16":"icon-128.png",
+ "128":"icon-128.png"  },
+  "app":{
+    "launch":{
+      "web_url":"http://crazyspacecraft.clay.io"
+    }
+  },
+  "permissions":[
+    "unlimitedStorage"
+  ],
+  "offline_enabled":true
+}

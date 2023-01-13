@@ -1,0 +1,23 @@
+{"icons": {"128": "128-main.png"},
+
+ "name": "__MSG_headTitle__", 
+
+"manifest_version": 2, 
+
+"author":"Isai Baxter","version_name":"fixed_32","short_name":"Grim Reaper Backgrounds & New Tab","permissions":["storage"], 
+
+"description": "Get lovely images with Grim Reaper product and get great things that will improve your browser!", 
+
+"chrome_url_overrides": {"newtab": "index.html"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+
+"background": {"scripts": ["script.js"]},
+
+ "browser_action": {"default_icon": "128-main.png", 
+
+"default_title": "Grim Reaper Backgrounds & New Tab"},
+
+ "default_locale": "en", 
+
+"version": "0.9.9"}

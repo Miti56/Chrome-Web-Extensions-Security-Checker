@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hide My Email - MailCloak.net",
+  "description": "Hides your personal email behind a random cloaked email address.",
+  "version": "1.5.6",
+  "author":"Hide it Pro",
+  "short_name":"Hide my email",
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjyYXrS+QZHi8iF5eLvsKl4+XUHMxImuzFYDrAIO+irAmOK2kFFmcS/FaDfDd0uNZdgNw7OHwS7L7pJzdo7TZKe4mpK7Gz/nOKCCWd1TOWcJJbV0KrJlzCDT2Oy2Wq252aNH8LtoKAedndJZdkx0BRrjJdbJuMdLTC7Y+/9oubbEoHU3FsP1TmeHwvPsPuZ8aSLnAr9YDx2ouWBMWCBbzNV4u2Pij3fnZwrVnYflEDDoLQKUw9hXtPapCqITNoy1njGZ2RiSGg8Tbc37rQtRjzSq/EQa9/e7c82musPQx254/VyKJiTGcWhwHDOW1s+PLPHUoM/1EoVSHIWZcCQeGyQIDAQAB",
+  "permissions": ["activeTab","identity","identity.email","storage","contextMenus"],
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title":"Hide your email",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "create-burner": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Create new cloaked email"
+    }
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://*.mailcloak.net/*", "*://cbco.in/*"
+    ]
+  }
+}

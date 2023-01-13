@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "RK Gorenje Home",
+  "description": "Override homepage and newtab page with home.rk-gorenje.com",
+  "version": "1.5",
+  "chrome_url_overrides": {
+    "newtab": "redirect.html"
+  },
+  "manifest_version": 2,
+  "icons":{
+      "128": "icon-128.png"
+  }
+}

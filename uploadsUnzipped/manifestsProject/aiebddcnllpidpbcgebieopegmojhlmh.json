@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "mVoice Connect2",
+	"version": "8.0.0",
+
+	"description": "Connect2 enables you to click phone numbers on webpages to make a call with your mVoice VoIP service.",
+	"icons": { 
+		"16": "images/mvoice_lrg.png",
+        "48": "images/mvoice_lrg.png",
+        "128": "images/mvoice_lrg.png"
+    },
+	
+	"browser_action": {
+		"default_title": "Connect2",
+		"default_icon": "images/mvoice.png",
+		"default_popup": "menu.html"
+	},
+	
+	"author": "mVoice Pty Ltd",
+	"background": {
+        "scripts": [
+        	"js/type.js",
+            "js/background.js",
+            "js/MD5.js"
+        ]
+    },
+    "homepage_url": "http://www.mvoice.com.au",
+    "options_ui": {
+		"page" :"options.html"
+	},
+	"permissions": [
+	  "tabs",
+	  "<all_urls>",
+	  "webNavigation"
+	],
+	"web_accessible_resources": ["images/mvoice_lrg.png"]
+}

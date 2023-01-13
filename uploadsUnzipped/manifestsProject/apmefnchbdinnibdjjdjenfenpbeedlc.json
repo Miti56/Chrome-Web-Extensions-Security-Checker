@@ -1,0 +1,26 @@
+{
+  "background": {
+    "page": "background.html"
+  },
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html",
+      "default_title": "Fun cursors"
+   },
+  "content_scripts": [ {
+    "js": [ "jquery.js","cursors.js" ],
+    "matches": [ "*://*/*" ],
+    "run_at": "document_end"
+  }],
+   "name": "__MSG_appName__",
+   "description": "__MSG_appDesc__",
+   "default_locale": "en",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "permissions": [ "tabs", "<all_urls>", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ "cursors/*", "*.css" ]
+}

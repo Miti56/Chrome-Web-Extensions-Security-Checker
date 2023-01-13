@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "TicketBox Checkin",
+  "version": "1.4.1",
+  "icons": {
+    "16": "app-icon-16.png",
+    "128": "app-icon-128.png"
+  },
+  "permissions": [
+  	"storage", 
+	"unlimitedStorage",
+    "videoCapture",
+    "http://localhost:37067/*",
+    "http://service.ticketbox.vn/*",
+    "https://service.ticketbox.vn/*",
+    "http://static.ticketbox.vn/*",
+    "usb",
+      {
+          "usbDevices": [
+              { "vendorId": 1254, "productId": 21905 },
+              { "vendorId": 1839, "productId": 8704 }
+          ]
+      },
+    "identity"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "minimum_chrome_version": "23"
+}

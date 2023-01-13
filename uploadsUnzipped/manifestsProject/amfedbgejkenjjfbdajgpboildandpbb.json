@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "MishkaTV",
+ "description": "eXperience the simplicity & Performance. Live TV & VOD services absolutely free",
+ "version": "1.0.0",
+ "manifest_version": 2,
+ "icons": {
+ "128": "logo_128.png"
+ },
+ "app": {
+ "urls": [
+ "http://mishkatv.in/"
+ ],
+ "launch": {
+ "web_url": "http://mishkatv.in/"
+ }
+ }
+ }

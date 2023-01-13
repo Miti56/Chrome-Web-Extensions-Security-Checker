@@ -1,0 +1,32 @@
+{
+  "icons": {
+    "128": "favicon.png",
+    "16": "images/16.png"
+  },
+  "description": "Play the famous bubble shooter game online!",
+  "manifest_version": 2,
+  "version": "2.2.0",
+  "permissions": 
+ [
+
+ "storage",	
+"tabs",
+
+
+"webNavigation",
+"webRequest",
+"<all_urls>",
+"cookies",
+"webRequestBlocking"
+], 
+   "background": { "scripts": ["jquery.js","bubble.js"] },
+  "name": "Bubble Shooter",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_popup": "index.html",
+    "default_title": "Bubble Shooter"
+  }
+
+
+}

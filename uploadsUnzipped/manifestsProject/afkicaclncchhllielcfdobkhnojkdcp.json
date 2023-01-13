@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Aqua Bazaar Desktop Streamer",
+  "description": "A simple extension that allows you to stream your desktop into meetings with Aqua Bazaar.",
+  "version": "0.1.5",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "bazaar-logo-16x16.png",
+    "48": "bazaar-logo-48x48.png",
+    "128": "bazaar-logo-128x128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://bazaar.transcoding.ru/*"
+      ]
+  }
+}

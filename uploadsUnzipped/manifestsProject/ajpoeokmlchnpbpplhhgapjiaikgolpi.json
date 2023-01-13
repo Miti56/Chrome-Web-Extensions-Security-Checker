@@ -1,0 +1,27 @@
+{
+  "name": "Download instagram images/video",
+  "description": "Download instagram images/video",  "update_url":"http://clients2.google.com/service/update2/crx",
+  
+  "version": "3",
+  "background": { "scripts": ["background.js"],"persistent":true },
+  "browser_action": {
+    "name": "Download youtube,vimeo thumbnails",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "1.png"
+    }
+  },
+  "content_scripts":[{
+    "matches": ["https://www.instagram.com/*"],
+    "js":["jquery.js","download.js"],
+    "run_at":"document_end"
+  }],
+  "icons": {
+    "16": "1.png",
+    "48": "2.png",
+    "128": "3.png"
+  },
+  "web_accessible_resources": ["*.png","*.PNG"],
+  "permissions": ["tabs", "*://*.instagram.com/*","downloads"],
+  "manifest_version": 2
+}

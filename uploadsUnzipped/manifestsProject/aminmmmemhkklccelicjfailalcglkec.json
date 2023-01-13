@@ -1,0 +1,22 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Pirendo",
+	"description": "Plataforma en español para monitorizar y medir tanto Twitter como Facebook. Estadísticas  actualizadas y gráficos informativos.",
+	"version": "1.2",
+	"icons": {
+		"24": "24.png",
+		"48": "48.png",
+		"50": "50.png",
+		"96": "96.png",
+		"128": "128.png"
+	},
+	"manifest_version": 2,
+	"app": {
+		"urls": [
+			"http://pirendo.com/dashboard/"
+		],
+		"launch": {
+			"web_url": "http://pirendo.com/dashboard/?ref=cws"
+		}
+	}
+}

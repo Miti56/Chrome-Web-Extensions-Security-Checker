@@ -1,0 +1,24 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "content_scripts": [ {
+      "css": [ "style/main.css" ],
+      "js": [ "libs/zepto.min.js", "build/string_score.js", "build/hook.js" ],
+      "matches": ["<all_urls>"]
+   } ],
+   "description": "Surf with your keyboard. Follow links on the web page using keyboard. Use Ctrl+Shift+k to enable/disable deadmouse plus.",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "name": "DeadMouse Plus",
+   "version": "0.0.2",
+  "manifest_version": 2,
+"permissions": [
+    "tabs","<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+}

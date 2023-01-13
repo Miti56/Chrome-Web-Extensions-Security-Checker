@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Post Dynamo v1.0",
+ "version": "0.3",
+ "description": "This extention lets you create tweets on the fly and save them to your Post Dynamo account.",
+ "options_page": "options.html",
+ "manifest_version": 2,
+ "browser_action": {
+   "default_title": "Post Dynamo",
+   "default_icon": "extension.png",
+   "default_popup": "popup.html" 
+ },
+ "permissions": [
+   "tabs",
+   "storage",
+   "<all_urls>"
+ ],
+ "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "js": ["selection.js"],
+     "run_at": "document_start",
+     "all_frames": true
+   }
+ ]
+}

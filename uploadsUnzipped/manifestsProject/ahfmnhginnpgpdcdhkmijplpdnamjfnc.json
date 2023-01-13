@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "Android Wallpaper",
+"description": "Download Quality and Top Ranked Android Wallpaper!",
+"version": "1.68",
+"manifest_version": 2,
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"http://www.androidwallpaper.me/"
+],
+"launch": {
+"web_url": "http://www.androidwallpaper.me/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

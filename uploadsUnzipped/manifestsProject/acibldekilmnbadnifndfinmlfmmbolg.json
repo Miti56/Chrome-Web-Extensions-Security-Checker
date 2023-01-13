@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "3.0",
+    "manifest_version": 2,
+    "name": "WSS for Chrome",
+    "icons":{"128":"image/logo.png"},
+ 
+  "browser_action": {
+    "default_icon": "image/logo.png",
+    "default_title": "WSS!",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+  "https://www.weshopsmart.com.au/*","tabs",
+    "activeTab",
+	"https://www.google.com/","storage"
+  ],
+ "web_accessible_resources": [
+   
+    "js/background.js"
+  ],
+  
+"content_security_policy": "style-src 'self' data: 'unsafe-inline'; script-src 'self'; object-src 'self' "  
+}
+ 

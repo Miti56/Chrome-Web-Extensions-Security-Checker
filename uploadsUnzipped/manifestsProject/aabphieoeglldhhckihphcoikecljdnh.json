@@ -1,0 +1,127 @@
+
+
+
+
+ 
+ 
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "PremierDownloadManager",
+    "version": "12.202.10.30310",
+    "description": "Achieve faster downloads with free Chrome New Tab and supporting application.",
+    "background": {
+        "page": "bg.html"
+    },    "browser_action": {
+        "default_icon": "icons/icon19on.png",
+        "default_title": "Open PremierDownloadManager New Tab"
+    },    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },"chrome_url_overrides" : {
+        "newtab": "stubby.html"
+    },    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": [
+                "common/js/common.js",
+                "common/js/dynamic.js",
+                "common/js/enableDetect.js",
+                "common/js/unifiedLogging.js"
+            ],
+            "matches": [ "http://*/*", "https://*/*" ],
+            "exclude_matches": [ "http://premierdownloadmanager.dl.myway.com/blank.jhtml" ],
+            "run_at": "document_start"
+        },
+        {
+            "css": [ "contentScript.css" ],
+            "js": [
+                "common/js/underscore-1.5.2.min.js",
+                "js/messaging.js",
+                "js/scriptInjector.js",
+                "common/adapter/adapterUtil.js",
+                "js/mutation_summary-min.js",
+                "js/reservespacefortoolbar.js",
+                "js/reservespaceifenabled.js"
+            ],
+            "matches": [ "http://*/*", "https://*/*" ],
+            "exclude_matches": [ "http://premierdownloadmanager.dl.myway.com/blank.jhtml" ],
+            "run_at": "document_start"
+        },
+        {
+            "js": [
+                "buildVars.js",
+                "contentScript.js",
+                "extension_toolbar_api.js"
+            ],
+            "matches": [ "http://*/*", "https://*/*" ],
+            "exclude_matches": [ "http://premierdownloadmanager.dl.myway.com/blank.jhtml" ],
+            "run_at": "document_end"
+        },
+        {
+            "all_frames": true,
+            "js": [
+                "common/js/navRedirector.js",
+                "superFrame.js"
+            ],
+            "matches": [ "http://*/*" ],
+            "exclude_matches": [ "http://premierdownloadmanager.dl.myway.com/blank.jhtml" ],
+            "run_at": "document_end"
+        },
+        {
+            "all_frames": true,
+            "js": [ "components/radio/radioWrapper/radioWrapper.js" ],
+            "matches": [ "http://ak.imgfarm.com/images/toolbar/radio/radioWrapper.html" ],
+            "exclude_matches": [ "http://premierdownloadmanager.dl.myway.com/blank.jhtml" ],
+            "run_at" : "document_end"
+        },
+        {
+            "all_frames": true,
+            "js": [ "js/readLocalStorage.js" ],
+            "matches": [ "http://premierdownloadmanager.dl.myway.com/blank.jhtml" ],
+            "run_at": "document_start"
+        },
+        {
+            "js": [
+                "js/URILoaderContentScript.js"
+            ],
+            "matches": [ "http://www.videodownloadconverter.com/chromeInstruct.jhtml" ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "toolbarUI.html",
+        "components/api/window/widgetWindow.html",
+        "components/search/html/searchSuggestions.html",
+        "common/widget-api/widgets/rss/rssWidget.html",
+        "components/moviereviews/html/movieReviews.html",
+        "common/components/embedscript/html/embedScriptTemplate.html",
+        "common/components/embedhtml/html/embedHtmlTemplate.html",
+        "common/components/menu/html/menuframe.html",
+        "common/widget-api/widgets/weather/weatherButton.html",
+        "components/supertab/html/supertab.html",
+        "common/widget-api/widgets/radio/radio-widget.html",
+        "js/widgetContentScriptInjectee.js"
+    ],
+    "content_security_policy": "script-src 'self' https://*.imgfarm.com/ https://*.webfetti.com/ https://*.wdgserv.com/ https://*.optimizely.com/ 'unsafe-eval'; object-src 'self' https://*.imgfarm.com/ https://*.webfetti.com/ https://*.wdgserv.com/ https://*.optimizely.com/",
+    "permissions": [
+        "tabs",
+        "cookies",
+        "history",
+        "topSites",
+        "contextMenus",
+        "management",
+        "http://*/*",
+        "https://*/*",
+        "http://127.0.0.1/*",
+        "http://localhost/*",
+        "chrome://favicon/*",
+        "downloads",
+        "nativeMessaging",
+        "storage"
+    ]
+
+}

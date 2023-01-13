@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SFC S4 TOOL",
+  "description": "Set Scenario ID & Release Management",
+  "version": "2.0",
+  "permissions": [
+    "https://*.ondemand.com/*"
+  ],
+  "browser_action": {
+      "default_title": "SFC OPERATIONS TOOL",
+      "default_icon": "cloud-computing.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "K8S Log helper",
+    "version": "1.0",
+    "description": "干掉干扰视线的K8S日志字段，云效团队出品",
+    "icons":
+    {
+        "16": "img/auto_om.png",
+        "48": "img/auto_om.png",
+        "128": "img/auto_om.png"
+    },
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": 
+    {
+        "default_title": "K8S log helper"
+    },
+    "content_scripts": 
+    [
+        {
+            "matches": ["https://sls.console.aliyun.com/*"],
+            "js": ["js/changeValue.js","js/jquery.min.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources":[
+        "js/changeValue.js"
+    ]
+  }

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Click me",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.1.0",
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+     "<all_urls>","activeTab","tabs", "webRequest","webRequestBlocking","storage",    "https://ajax.googleapis.com/"
+  ]
+}

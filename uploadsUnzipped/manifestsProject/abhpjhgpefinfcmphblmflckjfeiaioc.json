@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Symfony Developer Tools for Chrome",
+    "manifest_version": 2,
+    "description": "Symfony Developer Tools for Chrome are adding bookmark with Symfony Debug to Chrome Developer Tools",
+    "version": "0.2.0.0",
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ],
+    "icons": {
+        "16": "img/webstore-icon.png",
+        "48": "img/webstore-icon.png",
+        "128": "img/webstore-icon.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "page_action": {
+        "default_icon": {
+            "19": "img/icon19.png",
+            "38": "img/icon38.png"
+        }
+    },
+    "minimum_chrome_version": "30.0",
+    "devtools_page": "devtools/background.html"
+}

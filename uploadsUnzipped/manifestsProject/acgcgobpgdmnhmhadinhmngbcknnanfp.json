@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Soundcloud Go Replacer",
+	"description": "Script that adds a new button to SoundCloud Go songs that links to a youtube search for the song",
+	"version": "1.0",
+	"icons":{
+		"128": "graphics/icon.png"
+	} ,
+	"content_scripts":[
+		{
+			"matches": ["https://soundcloud.com/stream"],
+			"js": ["content.js"],
+			"run_at": "document_end"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "ZNOUA",
+    "description": "Якісна допомога при ЗНО – це курси ЗНО. Ефективні та перевірені методики навчання. Найкращі викладачі у Києві Гарантований результат",
+    "app": {
+        "urls": ["http://znoua.com/"],
+        "launch": {
+            "web_url": "http://znoua.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

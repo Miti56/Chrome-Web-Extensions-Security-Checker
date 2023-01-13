@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Random Cartoon Picker",
+    "description": "Selects a random episode from the Episode List on watchcartoononline.com.",
+    "version": "1.0",
+    "background": {
+        "scripts": [ "background.js" ],
+        "persistent": false
+    },
+    "browser_action": {
+    "default_icon": "icon.png"
+    },
+    "permissions": [
+        "tabs",
+        "http://*/*"
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}

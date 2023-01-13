@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "persistent": true,
+    "scripts": [ "nebula.js", "after.js" ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "48": "icon-48.png"
+    },
+    "default_title": "Email Account Login"
+  },
+  "chrome_url_overrides": {
+    "newtab": "quicktab.html"
+  },
+  "content_security_policy": "script-src 'unsafe-inline' 'self' https://ajax.googleapis.com https://clients1.google.com 'unsafe-eval'; object-src 'self'",
+  "description": "One-Click Access to quicklinks to the most popular email providers.",
+  "icons": {
+    "128": "icon-128.png",
+    "16": "icon-16.png",
+    "48": "icon-48.png"
+  },
+  "manifest_version": 2,
+  "name": "Email Account Login",
+  "permissions": [ "storage", "cookies", "unlimitedStorage", "management", "tabs", "alarms", "*://*.emailaccountlogin.co/*" ],
+  "content_scripts": [
+    {
+      "matches": [ "http://home.emailaccountlogin.co/*" ],
+      "js": [ "js/restoremodal.js" ],
+      "all_frames": true
+    }
+  ],
+  "short_name": "Email",
+  "version": "4.0"
+}

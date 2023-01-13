@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ニコニコニュースブロッカー",
+  "version": "1.0.13",
+  "manifest_version": 2,
+  "description": "ニコニコニュースのコメント欄にブロック機能を追加します。まずはオプションから設定を行い利用を開始して下さい。",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://news.nicovideo.jp/watch/*"],
+      "js": ["run.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_title": "オプションを表示",
+    "default_popup": "main.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "option.html"
+}

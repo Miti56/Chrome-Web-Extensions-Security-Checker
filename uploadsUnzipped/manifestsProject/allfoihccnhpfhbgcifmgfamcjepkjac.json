@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Linkedin Profile 2 PDF",
+    "version": "1.0.1",
+
+    "description": "Export Linkedin profile to PDF",
+    "homepage_url": "https://vibeehr.com",
+    "icons": {
+        "48": "icon-48.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.linkedin.com/in/*/detail/contact-info/"],
+            "js": ["content-script.js"]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "webRequest",
+        "https://www.linkedin.com/in/*",
+        "https://irisnguyen.top:9090/*",
+        "downloads",
+        "downloads.open"
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Linkedin Profile 2 PDF",
+        "default_popup": "index.html"
+    }
+
+}

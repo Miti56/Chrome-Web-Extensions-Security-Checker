@@ -1,0 +1,95 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [
+      "/lib/jquery.min.js",
+      "/js/currency.js",
+      "/js/task-manager.js",
+      "/js/app.js",
+      "/js/background.js",
+      "/cs/background-2.js",
+      "/cs/background-3.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "/img/19x19.png",
+    "default_popup": "/html/popup.html",
+    "default_title": "__MSG_extName__"
+  },
+  "content_scripts": [{
+    "js": [ "cs/discovery-ali.js" ],
+    "matches": [
+      "*://www.aliexpress.com/*",
+      "*://best.aliexpress.com/*",
+      "*://sale.aliexpress.com/*",
+      "*://flashdeals.aliexpress.com/*",
+      "*://fr.aliexpress.com/*",
+      "*://es.aliexpress.com/*",
+      "*://ru.aliexpress.com/*",
+      "*://pt.aliexpress.com/*",
+      "*://it.aliexpress.com/*",
+      "*://de.aliexpress.com/*"
+    ],
+    "run_at": "document_start"
+  }, {
+    "css": [ "/css/style.css" ],
+    "js": [
+      "/lib/jquery.min.js",
+      "/js/i18n.alias.js",
+      "/js/affiliate.js",
+      "/js/cs-aliexpress.js"
+    ],
+    "matches": [
+      "http://*.aliexpress.com/*",
+      "https://*.aliexpress.com/*"
+    ],
+    "run_at": "document_start"
+  }, {
+    "all_frames": true,
+    "js": ["/lib/jquery.min.js", "/js/cs-store-iframe.js"],
+    "matches": [
+      "http://*.aliexpress.com/store/sale-items/*",
+      "https://*.aliexpress.com/store/sale-items/*",
+      "https://s.click.aliexpress.com/*",
+      "https://s.click.aliexpress.com/*",
+      "http://sec.aliexpress.com/query.htm*",
+      "https://sec.aliexpress.com/query.htm*",
+      "http://cnsec.aliexpress.com/query.htm*",
+      "https://cnsec.aliexpress.com/query.htm*",
+      "https://login.aliexpress.com/*",
+      "http://login.aliexpress.com/*"
+    ],
+    "run_at": "document_start"
+  }, {
+    "js": [ "cs/discovery.js" ],
+    "matches": [ "*://*/*" ],
+    "exclude_matches": [
+      "*://*.aliexpress.com/*",
+      "*://ad.admitad.com/*",
+      "*://pafutos.com/*",
+      "*://*.pafutos.com/*"
+    ],
+    "run_at": "document_start"
+  }],
+  "default_locale": "en",
+  "description": "__MSG_extDescr__",
+  "icons": {
+    "128": "/img/128x128.png"
+  },
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "short_name": "AliExpress Coupons",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*",
+    "storage",
+    "contextMenus"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'",
+  "version": "1.1.3",
+  "web_accessible_resources": [ "img/*" ]
+}

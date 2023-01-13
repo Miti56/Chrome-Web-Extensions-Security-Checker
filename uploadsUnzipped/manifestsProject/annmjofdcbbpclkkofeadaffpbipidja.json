@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "CeriseClub",
+"manifest_version": 2,
+"version": "5.0.0",
+"description": "Incontournable! CeriseClub vous indique les promotions en cours de validité sur les sites marchands que vous visitez",
+"permissions": [
+"http://app.ceriseclub.com/*",
+"https://app.ceriseclub.com/*",
+"http://www.ceriseclub.com/*",
+"https://www.ceriseclub.com/*",
+"https://*/*",
+"http://*/*",
+"storage",
+"tabs"],
+ "background": {
+      "scripts": ["jquery.js","background.js"],
+      "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["contentscript.js"]
+      
+    }
+  ],
+"options_page": "install.html",
+"icons" : {  
+            "48": "48x48icon.png", 
+            "128" : "128x128icon.png"  
+     },
+"browser_action": {
+"default_icon": "icon.png",
+"default_title": "CeriseClub",
+"default_popup": "menu.html"
+
+  }
+}

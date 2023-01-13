@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Chess Cheat"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "js/jquery-3.1.1.min.js",
+        "js/chess.min.js",
+        "js/core.js"
+      ],
+      "matches": [
+        "*://*.chess.com/live",
+        "*://*.chess.com/live?*",
+        "*://*.lichess.org/*"
+      ]
+    }
+  ],
+  "description": "Chess Cheat provides Stockfish 8 analysis with tips for the best moves on chess.com and lichess.org",
+  "icons": {
+    "128": "img/icon.png"
+  },
+  "manifest_version": 2,
+  "name": "Chess Cheat (Chess.com, Lichess.org)",
+  "permissions": [
+    "declarativeContent",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "*://*.chess.com/*",
+    "*://*.lichess.org/*"
+  ],
+  "short_name": "Chess Cheat",
+  "version": "1.0.13"
+}

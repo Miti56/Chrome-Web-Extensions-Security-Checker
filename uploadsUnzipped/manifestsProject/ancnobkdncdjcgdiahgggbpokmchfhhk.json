@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "RSSfeedEX",
+  "short_name": "RSSfeedEX",
+  "description": "__MSG_description__",
+  "version": "0.1.0",
+  "minimum_chrome_version": "38",
+  "default_locale": "en",
+  "permissions": 
+  [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "browser_action": {
+      "default_title": "RSSfeed",
+      "default_icon": "icon_16.png",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "eID Chrome OS",
+    "description": "Chrome OS application for the Belgian eID card",
+    "version": "0.9.2",
+    "minimum_chrome_version": "47",
+    "icons": {
+        "64": "icon64.png",
+        "128": "icon128.png",
+        "38": "icon38.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "offline.js",
+                "background.js",
+                "certificate-provider.js"
+            ]
+        }
+    },
+    "permissions": [
+        "usb",
+        "alwaysOnTopWindows",
+        "certificateProvider",
+        {
+            "fileSystem": ["write"]
+        }
+    ],
+    "sockets": {
+        "tcpServer": {
+            "listen": ":48669"
+        }
+    }
+}

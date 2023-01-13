@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"description": "Remplace le bouton s'abonner par fromage",
+   "name": "fromage",
+ 
+   "manifest_version":2,
+   "version": "1.2",
+   
+   "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["fromage.js"],
+      "run_at" : "document_idle"
+    }
+  ],
+  "icons": {
+      "128": "fromage.png"
+   },
+"browser_action" :
+	{
+		"default_icon" : "fromage.png",
+		"popup" :"fromage.js"
+	}
+}
+
+ 

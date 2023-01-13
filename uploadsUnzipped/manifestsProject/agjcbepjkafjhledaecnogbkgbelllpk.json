@@ -1,0 +1,18 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+ "manifest_version": 2,
+  "name": "Reports4DMARC",
+  "version": "0.0.0.3",
+  "description": "Reports4DMARC",
+  "icons": {
+    "128": "icons/128x128-icon.png",
+    "16": "icons/16x16-icon.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "592879890153",
+  "app" : {
+    "launch" : {
+       "web_url" : "http://sites.google.com/a/g-workplace.com/demo/"
+    }
+  }
+}

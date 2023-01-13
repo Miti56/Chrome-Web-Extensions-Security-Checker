@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "description": "Firefox Developer Edition Theme for Google Chrome",
+   "manifest_version": 2,
+   "name": "Firefox Developer Edition Theme Light Version",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 249, 249, 250 ],
+         "button_background": [ 193, 193, 193, 0.27 ],
+         "frame": [ 0, 0, 0 ],
+         "frame_inactive": [ 0, 0, 0],
+         "frame_incognito": [ 0, 0, 0],
+         "frame_incognito_inactive": [ 0, 0, 0],
+         "ntp_background": [ 58, 58, 58 ],
+         "ntp_text": [ 249, 249, 250 ],
+         "tab_background_text": [ 176, 182, 177 ],
+         "tab_text": [ 249, 249, 250 ],
+         "toolbar": [ 0, 0, 0 ]
+      },
+      "images": {
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0.67, 0, 0.47 ]
+      }
+   },
+   "version": "1"
+}

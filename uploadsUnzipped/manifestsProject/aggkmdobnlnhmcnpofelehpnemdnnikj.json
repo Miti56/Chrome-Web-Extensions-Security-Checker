@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ePages Version Checker",
+  "version": "1.8",
+  "description": "Letting you know when you are visiting an ePages shop.",
+  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/disabled.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+    "128": "images/enabled.png"
+  },
+  "manifest_version": 2
+}

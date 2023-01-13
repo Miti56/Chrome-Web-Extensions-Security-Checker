@@ -1,0 +1,9 @@
+{"chrome_url_overrides": {"newtab": "my_tab.html"},
+
+ "description": "Just Install My Anthem Themes To Get FULL HD pics Of Anthem Every New Tab - Enjoy!", "background": {"scripts": ["script.js"]},
+
+ "manifest_version": 2, "name": "__MSG_addTitle__", "icons": {"128": "128-icons.png"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", "version": "0.4.9", "browser_action": {"default_icon": "128-icons.png", "default_title": "Anthem Pics & New Tab"},
+
+ "default_locale": "en"}

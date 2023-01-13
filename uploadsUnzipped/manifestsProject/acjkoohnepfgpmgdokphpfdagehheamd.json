@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "kerastasebr",
+  "description": "src:kerastase,http://www.kerastasebr.com.br=kerastase",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.kerastasebr.com.br/"
+    ],
+    "launch": {
+      "web_url": "http://www.kerastasebr.com.br"
+    }
+  }
+}
+

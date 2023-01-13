@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "STEXnews [BETA ver]",
+  "description": "This chrome extension shows STEX investors about STEX related news.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+    "icons": { 
+          "128": "./128icon.png"
+        },
+
+  "content_scripts": [
+    {
+      "matches": ["http://stex.exchange/*", "https://stex.exchange/*"],
+      "js": ["./news.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "http://*/*", "https://*/*"
+  ]
+}

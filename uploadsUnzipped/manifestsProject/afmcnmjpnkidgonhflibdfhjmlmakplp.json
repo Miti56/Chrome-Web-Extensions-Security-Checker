@@ -1,0 +1,50 @@
+{
+   
+   "name": "Giro D'Italia Theme",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "button_background": [ 194, 179, 150 ],
+         "control_background": [ 0,0, 0 ],
+         "frame": [ 0, 0, 0 ],
+         "frame_inactive": [ 0, 0, 0 ],
+         "frame_incognito": [ 0, 0, 0 ],
+         "frame_incognito_inactive": [ 0, 0, 0 ],
+         "ntp_background": [ 0, 0, 0 ],
+         "ntp_header": [ 194,179,150 ],
+         "ntp_link": [ 255, 255, 204 ],
+         "ntp_link_underline": [ 255, 255, 204 ],
+         "ntp_section": [ 255, 255, 255 ],
+         "ntp_section_link": [ 255, 255, 255 ],
+         "ntp_section_link_underline": [ 209, 209, 209 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 0,0,0 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 217, 205, 189 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_ntp_attribution": "images/theme_ntp_attribution.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_tab_background_incognito": "images/theme_tab_background_incognito.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "right center",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 0
+      },
+      "tints": {
+         "background_tab": [ -1.0, 0.5, 0.75 ],
+         "buttons": [ 0.25, 1.0, 1.0 ],
+         "frame": [ -1.0, -1.0, -1.0 ],
+         "frame_inactive": [ -1.0, -1.0, 0.75 ],
+         "frame_incognito": [ -1.0, 0.2, 0.35 ],
+         "frame_incognito_inactive": [ -1.0, 0.3, 0.6 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

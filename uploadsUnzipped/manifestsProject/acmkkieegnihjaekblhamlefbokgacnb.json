@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "File Download",
+	"description": "Easily find the files you want to download, while keeping an easy access to searching the web",
+	"version": "0.0.3",
+	"manifest_version": 2,	
+	"icons": {"24": "icons/logo_24.png", "128": "icons/logo_128.png" },
+	"browser_action": {
+		"default_icon": { "16": "icons/logo_16.png", "32": "icons/logo_32.png" },
+		"default_title":""		
+	},
+	"background": {
+		"scripts": ["js/jquery-3.1.1.min.js","js/background.js"]
+	},
+	"permissions":[	
+		"<all_urls>",
+		"management",
+		"storage",
+		"cookies",
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"unlimitedStorage",
+		"contextMenus",
+		"bookmarks",
+		"topSites"
+	],
+	"externally_connectable": {
+	  "matches": ["https://downloading.guru/*"]
+	},
+	"chrome_url_overrides":{
+		"newtab": "searchpage.html"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"name": "Finder Ninja",
+			"params": "__PARAM__",
+			"keyword": "SM",
+			"encoding": "UTF-8",
+			"image_url": "",
+			"is_default": true,
+			"search_url": "https://downloading.guru/s/?s={searchTerms}",
+			"favicon_url": "https://downloading.guru/logo_128.png",
+			"instant_url": ""
+		}
+	},	
+	"content_security_policy":  "script-src 'self'; object-src 'self'"
+}

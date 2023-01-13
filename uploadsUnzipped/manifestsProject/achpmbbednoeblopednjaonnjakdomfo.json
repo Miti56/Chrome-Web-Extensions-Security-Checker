@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Screen Share",
+  "author": "FEV Developer",
+  "short_name" : "Screen Share",
+  "version": "1.3",
+  "manifest_version": 2,
+  "minimum_chrome_version": "34",
+  "description": "Screen Share enables students to share their screen with their tutor on the Whiteboard.",
+  "homepage_url": "http://www.fevtutor.com/",
+  "background": {
+    "scripts": [ "background-script.js" ],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": [ "https://*.fevtutor.com/*" ],
+     "accepts_tls_channel_id": true
+  },
+  "icons": {
+    "16": "logo_16.png",
+    "48": "logo_48.png",
+    "128": "logo_128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Flipkart - Online Shopping App",
+ "manifest_version": 2,
+ "short_name": "Flipkart.com - Best Online Shopping Destination",
+ "description": "Find best of flipkart.com , best online shopping deals & offers",
+ "version": "1",
+ "icons": {
+	"128": "avatar_75dccd291954_128.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://flipkarteoffers.weebly.com/"
+	}
+  }
+}

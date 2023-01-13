@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"app": {
+"launch": {
+"web_url": "http://www.33iq.com/"
+},
+"urls": [ "http://www.33iq.com/" ]
+},
+"description": "晒晒IQ网是一个全新的益智网站，拥有全球最大中文智力题库，通过各类智力题目、益智游戏等内容循环渐进地培养开发您的计算力、创造力、想象力、思维力、观察力，全方面提升您的智力水平，让您越玩越聪明！",
+"icons": {
+"128": "33iq.png" 
+},
+"name": "33IQ",
+"version": "1.0",
+"manifest_version": 2
+}

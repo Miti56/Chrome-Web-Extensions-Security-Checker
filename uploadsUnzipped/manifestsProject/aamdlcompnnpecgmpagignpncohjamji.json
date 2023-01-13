@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "__MSG_extName__",
+    "version": "1.0.6",
+    "description": "__MSG_extDescription__",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "default_locale": "en",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html",
+        "default_title": "SpotThis!"
+    },
+    "permissions": [
+        "activeTab",
+        "http://www.spothis.com/",
+        "https://www.spothis.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "exclude_globs": [
+                "*://*.spothis.com/*",
+                "*://spothis.com/*"
+            ],
+            "js": [
+                "scripts/jquery-2.2.0.min.js",
+                "scripts/lodash.js",
+                "scripts/init.js",
+                "scripts/spotThis.js",
+                "scripts/script.js"
+            ],
+            "css": [
+                "styles/spotThis.css",
+                "styles/style.css"
+            ]
+        }
+    ]
+}

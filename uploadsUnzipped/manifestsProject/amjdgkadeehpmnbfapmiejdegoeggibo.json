@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Рецепты, Новости и Советы c Yummi.club",
+  "short_name": "Yummi.club",
+  "version": "2.3",
+  "manifest_version": 2,
+  "description": "Самые свежие Рецепты, Новости и Советы c Yummi.club",
+  "homepage_url": "https://yummi.club",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  },
+  "default_locale": "ru",
+  "offline_enabled": false,
+  "background": {
+    "page": "YummiBackground.html",
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "options_ui": {
+    "chrome_style": false,
+    "page": "options.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/19.png",
+      "38": "icons/38.png"
+    },
+    "default_icon": "icons/19.png",
+    "default_title": "Рецепты, Новости, Советы c Yummi.club",
+    "default_popup": "YummiPop.html"
+  },
+  "permissions": [
+    "background",
+    "alarms",
+    "notifications",
+    "tabs",
+	"https://yummi.club/*",
+	"http://feeds.feedburner.com/*"
+  ],
+  "content_security_policy": "img-src 'self' http://www.google-analytics.com https://yummi.club http://feeds.feedburner.com/; script-src 'self' https://ssl.google-analytics.com; object-src 'self'; connect-src 'self' https://yummi.club http://feeds.feedburner.com/"
+}

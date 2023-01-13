@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "icons": {
+    "16": "e16.png",
+    "32": "e32.png",
+    "48": "e48.png",
+    "128":"e128.png"
+  },
+  "version": "1.4.3",
+  "background": {
+    "scripts": [
+	"db.js", "prefs.js", "tools.js", "fetchers.js", "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "http://www.google.com/*",
+    "http://toolbarqueries.google.com/*",
+    "http://srank.seznam.cz/*",
+    "http://search.seznam.cz/*"
+   ],
+  "browser_action": {
+      "default_title": "SEO Profesional Toolbar",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [ "tools.js", "highlighter.js" ],
+      "css": [ "highlighter.css" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "options_page": "options.html",
+  "default_locale": "en"
+}

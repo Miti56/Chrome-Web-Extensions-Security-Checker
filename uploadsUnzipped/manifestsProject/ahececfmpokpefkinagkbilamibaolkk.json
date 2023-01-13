@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/icon19.png",
+         "38": "icons/icon38.png",
+         "48": "icons/icon48.png"
+      }
+   },
+   "permissions": [ "storage"],
+   "content_scripts": [ {
+      "matches": [ "https://twitter.com/*","https://mobile.twitter.com/*"],
+     "css": ["cs.css"],
+     "js": [ "jquery-3.3.1.slim.min.js","mij6.js"]
+   } 
+    ],
+   "description": "Hide tweets based on verified status.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "TFilter",
+   "short_name": "TF",
+   "version": "0.0.1.2",
+     "web_accessible_resources": ["*"],
+   "content_security_policy": "script-src 'self'"
+}

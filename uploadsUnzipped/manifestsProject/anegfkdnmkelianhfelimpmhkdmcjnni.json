@@ -1,0 +1,29 @@
+{
+  "app": {
+    "urls": ["http://social-wars.com/"],
+    "launch": {
+      "container": "tab",
+      "web_url": "http://social-wars.com/playnow"
+    }
+  },
+  "launch_path": "/playnow",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "developer": {
+    "name": "RobSmithDev",
+    "url": "http://www.robsmithdev.co.uk"
+  },
+  "screenshots": {
+    "1280x800": "http://social-wars.com/images/ingamelarge.jpg",
+    "640x400": "http://social-wars.com/images/ingamesmall.jpg"
+  },
+  "description": "Join the online battle between Facebook and Twitter!",
+  "promoimages": {
+    "1400x560": "http://social-wars.com/images/promolarge.jpg",
+    "440x280": "http://social-wars.com/images/promosmall.jpg",
+    "920x680": "http://social-wars.com/images/promomedium.jpg"
+  },
+  "name": "Social-Wars",
+  "icons": {"128": "icon128.png"},
+  "manifest_version": 2,
+  "version": "1"
+}

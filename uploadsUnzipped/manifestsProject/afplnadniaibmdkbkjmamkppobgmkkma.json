@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Musement Preferences",
+    "short_name": "MuseCC",
+    "icons": { "438": "favicon.png"},
+    "description": "This extension allows to quickly change preferences on Musement website",
+    "version": "1.1",
+    "homepage_url": "https://www.musement.com",
+    "browser_action": {
+        "default_icon": "favicon.png",
+        "default_popup": "popup.html",
+        "default_title": "Musement Preferences"
+    },
+    "content_scripts": [{
+        "matches": ["*://*.musement.com/*"],
+        "all_frames": true,
+        "js":      ["scripts/jquery.min.js", "scripts/content.js"]
+    }],
+    "permissions": [
+        "tabs",
+        "cookies",
+        "*://*.musement.com/*"
+    ],
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
+}

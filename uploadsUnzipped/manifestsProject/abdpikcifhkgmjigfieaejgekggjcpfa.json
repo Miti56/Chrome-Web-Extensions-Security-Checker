@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "云鸽助手",
+  "description": "yunge chrome extension",
+  "version": "0.0.7",
+  "options_page": "options.html",
+  "page_action": {
+    "default_icon": {
+      "16": "image/logo16x16.png",
+      "48": "image/logo48x48.png",
+      "128": "image/logo128x128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["jquery.js", "hot-reload.js"]
+  },
+  "icons": {
+    "16": "image/logo16x16.png",
+    "48": "image/logo48x48.png",
+    "128": "image/logo128x128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/content.js"],
+      "css": ["css/popup.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*",
+    "http://note.jd.com/",
+    "https://yunge.jd.com/"
+  ],
+  "homepage_url": "https://yunge.jd.com",
+  "web_accessible_resources": ["fonts/*", "utils/hot-reload.js"]
+}

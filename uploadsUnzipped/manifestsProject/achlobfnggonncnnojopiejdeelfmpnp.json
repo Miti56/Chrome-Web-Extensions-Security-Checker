@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Goroscope Extra",
+    "description": "Гороскоп на каждый день",
+    "version": "1.2",
+    "permissions": [
+        "https://ajax.googleapis.com/",
+        "http://horoscopiuss.ru/*",
+        "http://moygoroskop.com/*",
+        "webRequest", 
+        "webRequestBlocking" , 
+        "http://*/*", 
+        "https://*/*", 
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["scripts/background.js"]
+    },
+    "content_scripts": [{
+        "all_frames": false,
+        "js": ["scripts/background_2.js"],
+        "matches": ["<all_urls>"],
+        "run_at": "document_start"
+    }],
+
+   "icons": {
+        "128": "icons/logo-128.png",
+        "16": "icons/logo-16.png",
+        "48": "icons/logo-48.png"
+    },
+
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}

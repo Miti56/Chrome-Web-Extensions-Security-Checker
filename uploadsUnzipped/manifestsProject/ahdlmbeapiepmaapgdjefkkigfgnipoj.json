@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Shieldox Extension v2.0.9",
+  "description": "Shieldox Extension v2.0.9",
+  "version": "2.0.9",
+  "browser_action": {
+    "default_icon": "ext_icon.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://drive.google.com/*",
+        "https://*.sharepoint.com/*",
+        "https://www.dropbox.com/*",
+        "https://account.shieldox.com/extension-login*",
+        "http://localhost:4200/extension-login*",
+        "https://account.shieldox.com/link-accounts*",
+        "http://localhost:4200/link-accounts*"
+      ],
+      "js": [
+        "dist/main.js",
+        "downtime/build.js",
+        "libs/vue.min.js",
+        "libs/jquery-3.2.1.min.js",
+        "libs/materialize/materialize.min.js",
+        "preview/dist/build.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "assets/*",
+    "templats/*",
+    "downtime/*",
+    "protection/*",
+    "preview/*",
+    "libs/*",
+    "manifest.json"
+  ],
+  "content_security_policy": "script-src 'self'  'unsafe-eval'; object-src 'self'",
+  "background": {
+    "scripts": [
+      "dist/background.js"
+    ]
+  }
+}

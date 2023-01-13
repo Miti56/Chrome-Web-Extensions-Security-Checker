@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "tlo.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/19.png",
+         "38": "images/38.png"
+      },
+      "default_title": "Smash Dare or Online Pass Games"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "skrypt.js" ],
+      "matches": [ "*://*.minecraft-roy.blogspot.com/*" ]
+   } ],
+   "description": "Smash or Pass, Solitaire, Star Wars, Survival Online Go, The Escapists, Top Eleven Be a soccer manager, True Skate",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "Smash Dare or Online Pass Games",
+   "permissions": [ "*://*.minecraft-roy.blogspot.com/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "Smash Dare or Online Pass Games",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

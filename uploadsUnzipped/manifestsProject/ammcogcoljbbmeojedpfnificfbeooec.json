@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Antari Chrome Extension - gtrpucpehas",
+  "version" : "1.4",
+  "description" : "Antari Chrome Extension",
+   "manifest_version": 2,
+  "icons": { "16": "antari.png", "48": "antari.png", "128": "antari.png" },
+  "browser_action": {
+    "default_icon": "antari.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [ "background.js"]
+  },
+   "content_scripts": [ {
+     "js": [ "content-script.js" ],
+     "matches": ["https://*/antariweb/teleconsult/*","http://localhost/*","https://antariweb.ehas.org/antariweb/*","https://172.17.21.249/antariweb/*"],
+	 "all_frames": true
+  }],
+	"externally_connectable": {
+	  "ids": ["*"],
+	  "matches": ["https://antariweb.ehas.org/antariweb/*","https://172.17.21.249/antariweb/*", "http://localhost/*"]
+	},
+  "permissions": [
+    "unlimitedStorage",
+    "notifications",
+    "desktopCapture",
+	"tabs",
+	"https://*/antariweb*",
+	"nativeMessaging"
+  ]
+}

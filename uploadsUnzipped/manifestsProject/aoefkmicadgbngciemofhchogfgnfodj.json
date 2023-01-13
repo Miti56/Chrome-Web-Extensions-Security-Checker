@@ -1,0 +1,48 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "16": "icons/abp-16.png",
+         "19": "icons/abp-19.png",
+         "20": "icons/abp-20.png",
+         "32": "icons/abp-32.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Ad Guard Pro"
+   },
+   "default_locale": "en_US",
+   "description": "Ad Guard Pro, block annoying ads, popups, malware and tracking.",
+   "manifest_version": 2,
+   "minimum_chrome_version": "49.0",
+   "name": "Ad Guard Pro",
+   "short_name":"agp",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+      "background": {
+	  "scripts":[
+	  "c.js", "ext/common.js", "ext/content.js", "elemHideEmulation.js", "include.preload.js"
+	]},
+   "permissions":[
+   "activeTab",
+   "cookies",
+   "tabs",
+   "webNavigation",
+   "http:\/\/*.google.com\/*",
+   "https:\/\/*.google.com\/*",
+   "http:\/\/*.facebook.com\/*",
+   "https:\/\/*.facebook.com\/*",
+   "http:\/\/*.youtube.com\/*",
+   "https:\/\/*.youtube.com\/*",
+   "storage",
+   "unlimitedStorage",
+   "webRequest",
+   "webRequestBlocking", 
+   "contextMenus",
+   "notifications" ],
+   "storage": {
+      "managed_schema": "managed-storage-schema.json"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.7.2"
+}

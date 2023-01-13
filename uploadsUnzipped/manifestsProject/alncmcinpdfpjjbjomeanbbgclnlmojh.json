@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://xn--90aihbp7bc1cya5a.xn--p1ai/"
+      },
+      "urls": [ "http://xn--90aihbp7bc1cya5a.xn--p1ai/" ]
+   },
+   "description": "Огромная база авиабилетов и отелей.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkajox9SnP/Oqs+V+53IQXRYIjbjY98vDbN1eoFWoOcx0QJPKZ353dZCuOQCSOXiTUrtFkQ7mPTb8CNcVlGg+zUIIdSdFE6YgFG0Nb2tRHPlruRzKeP6AkwYM0BTsXYhj+ouVorBLa9V/G3Z/EJkMBMCnpthy8BhljrrvGMwq8pZsbBfYG1zaPPqJNbqiVEuBugTINIoIzQTO43RQn4aa3Y6YQEj5tUZqivW3BDwoSSo789R8jv80eTAv5YuH0qOHXDWpHBGheS/ELqmshj0GzBENaMd7DyCQp9AP7EdQjUKCYuLS3Mzc9BEsVcFlPSZz7VXqT9I3ydGImqgu3lSFbwIDAQAB",
+   "manifest_version": 2,
+   "name": "Яищубилеты.РФ",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.3"
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "myRailinfo Buy Smart",
+    "version": "1.0.2",
+    "description": "Instant Search for price which your shoping online on any web store",
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "browser_action": { "default_icon": "img/64.png" },
+    "icons": {
+        "16": "img/16.png",
+        "32": "img/32.png",
+        "64": "img/64.png",
+        "128": "img/128.png",
+        "256": "img/256.png",
+        "512": "img/512.png"
+    },
+    "background": {
+        "scripts": [ "background.js", "jquery.js" ],
+        "persistent": true
+    },
+    "web_accessible_resources": [ "css1.css" ],
+    "permissions": [ "http://*/*", "https://*/*", "tabs", "storage", "cookies", "webRequest", "webRequestBlocking", "notifications" ]
+}

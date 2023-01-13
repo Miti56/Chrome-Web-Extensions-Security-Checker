@@ -1,0 +1,16 @@
+{
+    "name": "Jake Watts",
+    "description": "A portfolio website for the Digital Media Design Student Jake Watts.",
+    "app": {
+        "urls": ["http://www.jake-watts.com/"],
+        "launch": {
+            "web_url": "http://www.jake-watts.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

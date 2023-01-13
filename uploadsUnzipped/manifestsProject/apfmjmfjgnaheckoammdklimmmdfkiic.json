@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Great App Name",
+  "description": "American Cities Montage Painter James Conner. Custom Portraits, Framing and personalized gifts.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.jamesconnergallery.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.jamesconnergallery.com/"
+    }
+  }
+}

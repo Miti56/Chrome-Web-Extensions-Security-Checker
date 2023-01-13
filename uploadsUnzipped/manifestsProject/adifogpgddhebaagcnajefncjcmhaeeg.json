@@ -1,0 +1,16 @@
+{
+    "name": "Tiny Toon Adventures - Buster Busts Loose!",
+    "description": "Juga gratis online sin descargar el juego!",
+    "app": {
+        "urls": ["http://www.juegossd.com/"],
+        "launch": {
+            "web_url": "http://www.juegossd.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

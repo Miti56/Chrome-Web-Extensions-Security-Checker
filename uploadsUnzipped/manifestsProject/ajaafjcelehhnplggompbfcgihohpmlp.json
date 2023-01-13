@@ -1,0 +1,63 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SoloStar",
+  "short_name": "SoloStar",
+  "description": "Supercharge your recruiting game",
+  "version": "1.0.2",
+
+  "browser_action": {
+    "default_icon": "assets/logo192.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["runtime.js", "vendors.js", "background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "exclude_matches": ["https://*.linkedin.com/recruiter/*"],
+      "css": ["main.css"],
+      "js": ["runtime.js", "vendors.js", "main.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://*.linkedin.com/recruiter/smartsearch*"],
+      "css": ["recruiter.css"],
+      "js": ["runtime.js", "vendors.js", "recruiter.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://*.linkedin.com/recruiter/profile/*"],
+      "css": ["recruiter_profile.css"],
+      "js": ["runtime.js", "vendors.js", "recruiter_profile.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "icons": {
+    "32": "assets/logo32.png",
+    "48": "assets/logo48.png",
+    "128": "assets/logo96b.png",
+    "192": "assets/logo192.png",
+    "256": "assets/logo256.png"
+  },
+
+  "permissions": ["activeTab", "identity", "storage", "https://*.linkedin.com/*"],
+
+  "content_security_policy": "script-src 'self' http://localhost https://solostar.io https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://apis.google.com https://www.googletagmanager.com https://js.stripe.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "804380140759-4k7d7ghngj0nd94nvqmfv92l5jpms21v.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApauBOHnnD4jYt+jKKUM17OWA0/zoYgsahcs6Fg4DIio7qb/9ckH+Vrk8Qr+AmB9oPAHec97sP+F2gjSzYAp8tGl4uWX2yy/Fip+RtWWWEoOy0aW1a6dah4PQoHy8RBQebm44YqO6c7LZKgqmUSTP7mAwDizU2k1IwtnV7+T4U/vAlYRJTwpZSWgtyNRpeg+iOFMgphG5vSIxawM9wSsMljTT2gZ8MqL096fn9thU3lDTLj7wScBPKTWDbTgFPvwiAgnxn8FRu39Odkp5O+oTM/rL/Q8jaysgCutF4tF0IBz9bl7JVhg/iHGLz8x11Xd0lrywIgEyW97XNwpfufYGxQIDAQAB"
+}

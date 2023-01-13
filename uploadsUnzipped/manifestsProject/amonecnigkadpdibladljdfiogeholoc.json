@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PowerGST",
+  "manifest_version": 2,
+  "default_locale": "en_US",
+  "offline_enabled": false,
+  "description": "Chrome Extesion is used with PowerGST to automate GSTN Portal activities such as Login, Submit Returns, Upload Restuns etc.",
+  "author" : "Powergst",
+  "version": "0.0.19",
+  "permissions": [
+    "tabs", "*://*.gst.gov.in/*", "http://localhost/*", "http://*/*","<all_urls>",
+    "cookies","*://*.gst.gov.in/*", "http://localhost/*", "http://*/*","<all_urls>",
+    "management","nativeMessaging", "storage", "<all_urls>"
+    ],
+    "background": {
+      "scripts": ["background.js" ],
+      "persistent": false
+    },
+    "icons":{
+      "16": "Powergst-16X16.png",
+      "48": "Powergst-48X48.png",
+     "128": "Powergst-128X128.png" 
+    },
+    "content_scripts": [
+      {
+        "js": ["jquery-1.12.2.min.js","background.js", "content.js" ],
+        "matches": [ "*://*.gst.gov.in/*","https://www.ewaybills.com/*", "http://localhost/*", "http://*/*","<all_urls>"],
+        "run_at": "document_end"
+      }
+    ],
+    "browser_action": {
+      "default_title": "PowerGST",
+      "default_icon":"Powergst-16X16.png"
+    },
+    "externally_connectable": {
+      "matches": ["*://www.ewaybills.com/*"]
+  },
+	"web_accessible_resources": [
+    "Powergst-16X16.png"
+  ]
+}

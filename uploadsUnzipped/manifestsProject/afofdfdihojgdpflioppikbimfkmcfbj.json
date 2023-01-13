@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Cavea Cinemas",
+    "icons": { "128": "icon_128.png" },
+    "description": "Cavea Cinmeas Chrome Extensions",
+    "version": "0.1",
+    "manifest_version": 2,
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "notifications"
+    ]
+}

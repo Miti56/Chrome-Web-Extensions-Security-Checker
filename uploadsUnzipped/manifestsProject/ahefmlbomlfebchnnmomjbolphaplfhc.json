@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Streak CRM for Gmail",
+  "description": "Manage sales and customer relationships within Gmail.",
+  "version": "7.0",
+  "homepage_url": "http://www.streak.com",
+  "background": {
+    "scripts": ["extension.js","background.js"]
+  },
+  "icons": { "16": "webstoreIcon16.png",
+             "48": "webstoreIcon48.png",
+             "128": "webstoreIcon128.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/*"
+      ],
+      "js": ["inboxsdk.js","extension.js","app.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://*.google.com/webstore/wall/*"
+      ],
+      "js": ["inboxsdk.js","extension.js","app.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "minimum_chrome_version": "42.0",
+  "permissions": [
+    "cookies",
+	"tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "management",
+	"*://*.streak.com/",
+    "*://mail.google.com/",
+    "*://mailfoogae.appspot.com/",
+    "*://*.mailfoogae.appspot.com/",
+    "*://*.googleusercontent.com/",
+    "*://*.google.com/",
+	"\u003Call_urls>"
+  ],
+
+  "web_accessible_resources": [
+    "blank.png",
+    "blank.html",
+    "iframe.js",
+    "orangeIcon.png",
+    "exclamation.png"
+  ]
+}

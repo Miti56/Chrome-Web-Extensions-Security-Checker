@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Google Docs Serienbriefe Add-on",
+"description": "Erstellen Sie einfach aus Google Docs Serienbriefe zur Ablage in Drive im Doc/PDF-Format und versenden Sie diese direkt via E-Mail.",
+"version": "20",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"http://apps-experts.de/google-apps-addons/google-docs-serienbriefe-erstellen/"
+],
+"launch": {
+"web_url": "http://apps-experts.de/google-apps-addons/google-docs-serienbriefe-erstellen/"
+}
+}
+}

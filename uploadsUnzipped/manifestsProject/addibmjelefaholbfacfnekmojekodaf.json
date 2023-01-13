@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Photo Zoomer For Facebook",
+  "manifest_version": 2,
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "1.3.1",
+  "icons": {
+    "16": "icon2_16.png",
+    "128": "icon2_128.png"
+  },
+  "background":{"scripts":["bg.js"]},
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["jquery.min.js","ddpowerzoomer.js","content.js"],
+	  "css":["epic.css"]
+    }
+  ],
+  "permissions": [
+	"*://*.facebook.com/*","tabs"
+  ],
+  "web_accessible_resources":["try.png","try2.png"]
+}

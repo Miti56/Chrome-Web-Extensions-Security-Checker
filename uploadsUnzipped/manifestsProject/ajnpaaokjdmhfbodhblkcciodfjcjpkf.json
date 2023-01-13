@@ -1,0 +1,22 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+   "name": "天天领话费",
+   "description": "天天有话费免费领取，还有大礼包哦！",
+   "background": {
+      "scripts": [ "background.js" ],
+      "persistent": true
+   },
+   "icons": {
+      "128": "image/hflogo_on.png",
+      "16": "image/hflogo_on.png",
+      "48": "image/hflogo_on.png"
+   },
+   "browser_action": {
+        "default_icon": "image/hflogo_off.png",
+        "default_title": "天天领话费",
+        "default_popup": "popup.html"
+    },
+   "permissions": [ "background","contextMenus","tabs","*://*.wxyes.cn/*" ],
+   "version": "1.0.2"
+}

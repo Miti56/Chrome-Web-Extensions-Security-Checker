@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version":2,
+"theme":{"images":{
+"theme_frame":"images\/theme_frame.jpeg",
+"theme_toolbar":"images\/theme_toolbar.jpeg",
+"theme_tab_background":"images\/theme_tab_background.png",
+"theme_ntp_background":"images\/theme_ntp_background.jpeg"},
+"colors":{"frame":[202,234,239],"toolbar":[202,234,239],
+"tab_text":[20,69,99],
+"tab_background_text":[20,69,99],
+"bookmark_text":[20,69,99],
+"ntp_background":[255,255,255],
+"ntp_text":[20,69,99],
+"button_background":[239,41,106,1]},
+"tints":{"buttons":[0.56,0.66,0.23]},
+"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}},
+"name":"Pink rose in the field sky 2560x1440 ","version":"1","description":"Delicate and pleasant theme with pink roses, theme Monitor 2560x1440 pixels"
+}

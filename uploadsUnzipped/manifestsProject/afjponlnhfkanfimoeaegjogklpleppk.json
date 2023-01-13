@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "쌈지길~~",
+  "description": "쌈지길을 소개하는 웹앱입니다.",
+  "version": "1.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [ 
+         ],
+
+    "launch": {
+      "web_url": "http://kimjuchan.22web.org"
+    }
+}
+  
+}

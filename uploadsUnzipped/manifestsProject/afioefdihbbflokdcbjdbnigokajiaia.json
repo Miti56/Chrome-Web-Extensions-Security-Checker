@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Kanes's Website",
+  "description": "by Kanes",
+  "version": "2.0.0.1",
+ "icons": {
+    "128": "icon.png"
+  },
+"manifest_version": 2,
+    "app": {
+    "urls": [
+      "http://elite87.blogspot.com/"
+    ],
+    "launch": {
+      "web_url": "http://elite87.blogspot.com/"
+    }
+  }
+}

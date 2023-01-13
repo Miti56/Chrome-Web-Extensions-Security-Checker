@@ -1,0 +1,122 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "NKM CallCenter for Agent",
+	"short_name": "AntBuddy",
+	"description": "NKM Browser Extension for Agent",
+	"homepage_url": "http://nguyenkim.com",
+	"version": "0.1.5",
+	"default_locale": "vi",
+	"icons": {
+		"16": "icons/icon-16.png",
+		"32": "icons/icon-32.png",
+		"48": "icons/icon-48.png",
+		"64": "icons/icon-64.png",
+		"128": "icons/icon-128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "icons/icon-19.png",
+			"38": "icons/icon-38.png"
+		},
+		"default_popup": "popin.html"
+	},
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"background": {
+		"scripts": [
+			"js/extension.js"
+		],
+		"persistent": true
+	},
+	"permissions": [
+		"storage",
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://crm.nguyenkim.com/b/*"
+			],
+			"js": [
+				"js/beeiq-nkm.js"
+			],
+			"css": [
+				"css/beeiq.css"
+			]
+		},
+		{
+			"matches": [
+				"https://*.beeiq.co/b/*"
+			],
+			"js": [
+				"js/beeiq-co.js"
+			],
+			"css": [
+				"css/beeiq.css"
+			]
+		},
+		{
+			"matches": [
+				"https://chat.nguyenkim.com/*"
+			],
+			"all_frames": true,
+			"js": [
+				"js/antbuddy-nkm.js"
+			]
+		},
+		{
+			"matches": [
+				"http://*.antbuddy.loc:3001/*"
+			],
+			"all_frames": true,
+			"js": [
+				"js/antbuddy-test.js"
+			]
+		}
+	],
+	"externally_connectable": {
+		"matches": [
+			"https://chat.nguyenkim.com/*",
+			"http://*.antbuddy.loc:3001/*"
+		]
+	},
+	"commands": {
+		"focus-to-dial": {
+			"suggested_key": {
+				"default": "Ctrl+Space",
+				"mac": "Command+Space"
+			},
+			"description": "focus to dial"
+		},
+		"click-ok": {
+			"suggested_key": {
+				"default": "Ctrl+Up",
+				"mac": "Command+Up"
+			},
+			"description": "Click OK"
+		},
+		"click-end": {
+			"suggested_key": {
+				"default": "Ctrl+Down",
+				"mac": "Command+Down"
+			},
+			"description": "Click End"
+		},
+		"click-pause-resume": {
+			"suggested_key": {
+				"default": "Ctrl+Delete",
+				"mac": "Command+Delete"
+			},
+			"description": "Click Pause / Resume"
+		}
+	},
+	"author": "Gilles Crettenand <gilles@crettenand.info>",
+	"offline_enabled": true,
+	"content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}

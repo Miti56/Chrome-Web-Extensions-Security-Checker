@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Super Color Palette",
+  "description": "Super Color Palette Material UI Helper",
+  "version": "27.22.13",
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+    "128": "assets/128.png"
+  },
+  "browser_action": {
+    "default_title": "Super Color Palette"
+  },
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs",
+    "alarms",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+}

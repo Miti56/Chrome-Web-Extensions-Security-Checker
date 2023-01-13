@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Test Extension",
+  "short_name": "Test",
+  "description": "Testing extension permissions manipulating",
+  "version": "0.0.5",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+	  "downloads",
+	"<all_urls>",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "cookies",
+    "notifications",
+    "tabs",
+    "webNavigation",
+    "storage",
+    "unlimitedStorage"
+  ]
+}

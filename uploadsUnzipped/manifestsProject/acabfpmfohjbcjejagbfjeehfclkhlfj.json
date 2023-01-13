@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TrueRate - See Hidden Hotel Fees on Expedia",
+  "version": "4.1.0",
+  "description": "Compare hotels by their real price on top travel sites, fees included.",
+  "manifest_version": 2,
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "permissions": [
+    "https://*.jointruerate.com/",
+    "storage",
+    "cookies"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "assets/fonts/Montserrat-Medium.ttf",
+    "assets/fonts/Montserrat-Bold.ttf"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://airbnb.com/*",
+        "https://www.airbnb.com/*",
+        "https://www.jointruerate.com/*",
+        "https://hotels.com/*",
+        "https://www.hotels.com/*",
+        "https://www.travelocity.com/*",
+        "https://travelocity.com/*",
+        "https://www.expedia.com/*",
+        "https://expedia.com/*",
+        "https://www.orbitz.com/*",
+        "https://orbitz.com/*",
+        "https://www.booking.com/*",
+        "https://booking.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "constants.js", "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "constants.js", "page_controller.js" ],
+      "matches": [ "http://*.vk.com/*", "https://*.vk.com/*" ],
+	  "all_frames": false
+   } ],
+   "default_locale": "en",
+   "description": "Use your iPhone to control music playback from vk.com over wifi.",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "VK Music Remote",
+   "page_action": {
+      "default_icon": "icon_19.png",
+      "default_popup": "popup.html",
+      "default_title": "VK Music Remote"
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "management", "storage" ],
+   "version": "1.5.8"
+}

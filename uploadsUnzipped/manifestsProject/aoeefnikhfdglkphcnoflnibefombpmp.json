@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Top News Stories",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "Get all the top stories from your most trusted sources - all on your Chrome new tab page.",
+  "homepage_url": "http://www.newtabtools.com/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/bg/config.js",
+      "js/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "topSites",
+    "unlimitedStorage",
+    "*://*.newtabtools.com/*"
+  ],
+  "content_scripts": [{
+  "matches": ["http://*.newtabtools.com/*", "https://*.newtabtools.com/*"],
+      "js": ["js/bg/ext.js"]
+  }, {
+      "matches": ["http://*.seekit.com/*", "https://*.seekit.com/*"],
+      "js": ["js/bg/ext.js"]
+  }],
+  "chrome_url_overrides": {
+    "newtab": "new_tab.html"
+  }
+}

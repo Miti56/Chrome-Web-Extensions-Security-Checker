@@ -1,0 +1,79 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "SMartease",
+  "description": "SMartease - Work smarter in SM9, handle tickets with ease!",
+  "version": "0.1.5",
+
+  "author": "ASIC HU",
+
+  "icons": { "128": "sm128.png" },
+
+  "permissions": [
+    "storage",
+    "https://smweb.telekom.de/*",
+    "<all_urls>",
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "nativeMessaging"
+  ],
+
+  "options_page": "options.html",
+
+  "browser_action": {
+    "default_icon": "sm128.png",
+    "default_title": "SMartease - Click to open SM9"
+  },
+
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": true
+  },
+
+  "externally_connectable": {
+    "ids": [ "*" ],
+    "matches": [
+      "https://smweb.telekom.de/*"
+    ],
+    "accepts_tls_channel_id": false
+  },
+
+  "content_scripts": [
+    { "matches"   : [ "https://smweb.telekom.de/*" ],
+      "css"       : [ "sm9.css" ],
+
+      "js"        : [ "addPlugin.js",
+
+                      "smweb/Events.js",
+                      "smweb/SMweb.js",
+                      "smweb/Cache.js",
+                      "smweb/CmdBar.js",
+
+                      "smweb/AutoLogin.js",
+                      "smweb/EnlargePageSize.js",
+                      "smweb/InputToTextarea.js",
+                      "smweb/NoPopup.js",
+                      "smweb/SmallMastHead.js",
+                      "smweb/TicketSearch.js",
+                      "smweb/DetailActions.js",
+                      "smweb/ListActions.js",
+                      
+                      "smweb/CIActions.js",
+                      "smweb/AutoRefresh.js",
+                      "smweb/TableMagnify.js",
+
+                      "injectPlugins.js" ],
+
+      "run_at"    : "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "web_accessible_resources": [ "*.css", "smweb/*" ]
+}

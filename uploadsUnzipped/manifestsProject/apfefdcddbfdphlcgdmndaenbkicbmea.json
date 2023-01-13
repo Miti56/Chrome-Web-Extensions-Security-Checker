@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Predict for Chrome",
+  "description": "Predict -- and Improve -- Your Subject Line Performance.",
+  "version": "1.0.15",
+  "background": { "scripts": ["./dist/background.js"], "persistent": false },
+  "icons": { "16": "assets/images/favicon@2x.png",
+             "48": "assets/images/logo_48.png",
+             "128": "assets/images/logo_128.png"
+           },
+  "browser_action": {
+    "default_popup": "popup/popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "https://alpha-sushi.persado.com/*",
+    "https://qa-sushi.persado.com/*",
+    "https://predict.persado.com/*",
+    "storage",
+    "tabs",
+    "https://*/*",
+    "http://*/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["dist/all-frames-content.js"],
+      "all_frames": true,
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["dist/top-frame-content.js"],
+      "all_frames": false,
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": ["dist/inserted-directly-into-dom.js"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

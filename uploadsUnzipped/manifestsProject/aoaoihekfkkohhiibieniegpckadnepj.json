@@ -1,0 +1,18 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.ticketchopper.com/index.php?chrome"
+      },
+      "urls": [ "http://www.ticketchopper.com/index.php?chrome" ]
+   },
+   "default_locale": "en",
+   "description": "Compare thousands of concert, sporting event, and theater tickets from hundreds of reputable sellers.",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "Ticket Chopper",
+   "permissions": [ "unlimitedStorage", "notifications" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

@@ -1,0 +1,35 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.0",
+  "name": "Samurai Champloo Theme",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/champloo_frame.png",
+	  "theme_frame_inactive" : "images/champloo_frame_inactive.png",
+	  "theme_frame_incognito" : "images/champloo_frame_incognito.png",
+	  "theme_frame_incognito_inactive" : "images/champloo_frame_incognito_inactive.png",
+	  "theme_tab_background" : "images/champloo_tab_background.png",
+      "theme_frame_overlay" : "images/champloo_frame_overlay.png",
+      "theme_toolbar" : "images/champloo_toolbar.png",
+      "theme_ntp_background" : "images/champloo_ntp_background.png",
+      "theme_ntp_attribution" : "images/champloo_ntp_attribution.png"
+    },
+    "colors" : {
+      "frame" : [71, 105, 91],
+      "toolbar" : [237, 225, 185],
+      "ntp_text" : [243, 131, 81],
+      "ntp_link" : [243, 131, 81],
+      "ntp_section" : [111, 21, 73],
+      "button_background" : [243, 131, 81],
+	  "tab_text" : [14, 51, 77],
+	  "tab_background_text" : [255, 255, 255],
+	  "bookmark_text" : [14, 51, 77]
+    },
+    "tints" : {
+      "buttons" : [0.40, 0.21, 0.73]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom"
+    }
+  }
+}

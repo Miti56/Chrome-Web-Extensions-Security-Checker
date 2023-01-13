@@ -1,0 +1,20 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "short_name": "Red Driver 5",
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "manifest_version": 2,
+    "version": "1",
+    "default_locale": "en",
+    "app": {
+        "urls": [
+            "http://www.everydayplaygame.com/red-driver-5/"
+        ],
+        "launch": {
+            "web_url": "http://www.everydayplaygame.com/red-driver-5/"
+        }
+    },
+    "icons": {
+        "128": "128.png"
+    }
+}

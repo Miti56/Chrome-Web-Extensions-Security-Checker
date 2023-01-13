@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name" :"Extension iArbitres",
+"manifest_version" : 2,
+"version" :"2.3",
+"permissions": ["tabs", "activeTab", "http://*/"],
+"description" :"Cette extension permet de récupérer les rapports d'Ovale pour les importer sur votre site iArbitres !",
+"browser_action" :
+	{
+		"default_icon" : "icone.png",
+		"default_popup" :"accueil.html"
+	}
+}

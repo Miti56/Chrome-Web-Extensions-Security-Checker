@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "devMode": false,
+  "manifest_version": 2,
+  "name": "Loox Curator",
+  "description": "Loox Curator",
+  "version": "2.1",
+  "icons": {
+    "16" : "images/icon-small.png",
+    "48" : "images/icon.png",
+    "128": "images/icon-big.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "48": "images/icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["js/start.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Version Manager ASW",
+  "version": "2.0",
+  "author": "ASW",
+  "description": "Version Manager ASW",
+  "permissions": [
+	"tabs",
+    "activeTab",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*"
+      ],
+      "js": [
+		"scripts/jquery.js","scripts/common.js","scripts/load_disable.js"
+      ],
+	  "run_at": "document_end"
+    }
+  ]
+}

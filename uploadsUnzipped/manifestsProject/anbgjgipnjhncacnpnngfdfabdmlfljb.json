@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "MKV to AVI Converter",
+  "default_locale": "en",
+  "description": "Convert mkv video upto 100mb to avi format.",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "version": "1.1",
+     "icons": { 
+      "128":"images/icon.png"           
+  }, 
+
+  "browser_action": {
+   "default_icon": "images/icon.png"
+  },
+  "permissions": [
+   "tabs"
+   ]
+}

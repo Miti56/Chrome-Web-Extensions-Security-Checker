@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Star Wars Font",
+  "short_name": "Star Wars Font",
+  "description": "Star Wars font that you can download and use for your projects. Some personal, others commercial-use allowed.",
+  "version": "0.0.0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+    "http://www.starwarsfont.com/"
+    ],
+    "launch": {
+    "web_url": "http://www.starwarsfont.com/"
+    }
+  }
+}

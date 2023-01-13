@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "IELTS Vocabulary Test",
+  "description": "IELTS Vocabulary Test is based 1200+ basic IELTS words. Each test sheet has 12 questions that are produced dynamically.",
+  "version": "2.3.4",
+  "app": {
+    "urls": [
+      "https://www.examword.com/test/ielts"
+    ],
+    "launch": {
+      "web_url": "https://www.examword.com/test/ielts"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

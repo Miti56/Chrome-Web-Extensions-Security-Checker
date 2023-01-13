@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{f71a3a36-dad5-403a-ad08-a80721ea2345}",
+      "strict_min_version": "42.0"
+    }
+  },
+  "manifest_version": 2,
+  "name": "Synction",
+  "description": "",
+  "version": "1.0.1774.1",
+  "content_scripts": [
+    {
+      "css": [
+        "css/styles.css"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "matches": [
+        "https://online.perfectview.nl/*",
+        "https://*/*/api/extension/requestCall*"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "alarms",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

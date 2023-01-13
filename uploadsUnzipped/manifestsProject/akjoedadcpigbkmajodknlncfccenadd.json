@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Netkil SSL",
+  "version": "1.2.2",
+  "description": "Netkil SSL proxy extension",
+  "author": "Nixson",
+  "short_name": "Netkil SSL",
+  "homepage_url": "https://netkil.com",
+  "icons": {
+    "16": "img/16.png",
+    "32": "img/32.png",
+    "48": "img/48.png",
+    "64": "img/64.png",
+    "128": "img/128.png"
+  },
+  "background": {
+    "scripts": ["start.js"]
+  },
+  "permissions": [
+    "proxy",
+    "storage",
+    "webRequest",
+    "tabs",
+    "alarms",
+    "webRequestBlocking",
+    "\u003Call_urls>"
+  ],
+
+      "browser_action": {
+        "default_title": "Netkil SSL",
+        "default_icon": "img/49-r.png",
+        "default_popup": "popup.html"
+    }
+    
+} 

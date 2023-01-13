@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "logotype.png",
+      "default_popup": "popup.html",
+      "default_title": "Only watch"
+   },
+   "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+    "content_scripts": [
+   {
+      "matches" : [ "http://*/*", "https://*/*" ],
+      "js": [ "Contribution.js" ],
+	  "all_frames" : false
+    }
+   ],
+   "web_accessible_resources": [
+	 "icon-8.png"
+  ],
+   "description": "This extension Only watch",
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png"
+	  
+   },
+    "manifest_version": 2,
+   "name": "Only watch",
+   "short_name": "Only watch",
+   "permissions": [ "tabs", "notifications", "storage" ],
+   "version": "0.1"
+}

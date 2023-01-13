@@ -1,0 +1,35 @@
+{
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self';  font-src 'self' 'unsafe-eval'",
+  "description": "Handy utils for web development",
+  "devtools_page": "devtools.html",
+  "manifest_version": 2,
+  "minimum_chrome_version": "10.0",
+  "name": "Coder Tools",
+  "permissions": [
+    "desktopCapture",
+    "webRequest",
+    "webRequestBlocking",
+    "*://sample.img/",
+    "activeTab",
+    "cookies",
+    "tabs", "<all_urls>",
+    "webNavigation"
+  ],
+  "icons": {
+    "16": "icon19.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "short_name": "CCT",
+  "background": {
+    "scripts": [
+      "helpers/randomImage.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsXPwAbSexFbCEktT97AmM6WsqOCz8saY1K/WOgS+IVKL+IezWJE81pBd/n/vOEMNaYYavK5zqQeEIEMU4+ZV6OMH5NgWb18oOo9s0M0IYT+3eu5iB0oaCQxwnYd/UU3HmqyqWW9XauPTFxmG+ABUqF8wno66ElpAl/jvJaiR+T5L+6BtZ7AH4c+lN/Jv3WMTs1kpsIkt3W10rfgfz2SdmEZWNGfwSU2FeLc1jN7t1pc9YHYwgpqldONCVptmQbVShM/00TWi3M/RJ1cnunBXggZg6TQBsMYMhG/tLMJUwE4S9rGeDhE9tkVEbsTumspFDcY7mxkIabYJVAQIyQPHMQIDAQAB",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "18.1.10"
+}

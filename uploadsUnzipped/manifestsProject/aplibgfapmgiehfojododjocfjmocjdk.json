@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Get Online Recipes",
+    "description": "Search and access popular recipes quick links instantly with free web search from your new tab page!",
+    "version": "1.2",
+    "homepage_url": "https://getonlinerecipestab.com",
+    "browser_action": {
+        "browser_style": true,
+        "default_icon": "icon.png",
+        "default_title": ""
+    },
+    "background": {
+        "persistent": true,
+        "scripts": ["app/background.js"]
+    },
+    "permissions": [
+        "tabs",
+        "alarms",
+        "storage",
+        "cookies",
+        "contextMenus",
+        "management",
+        "*://getonlinerecipestab.com/*",
+        "*://*.getonlinerecipestab.com/*"
+    ],
+    "chrome_url_overrides": { "newtab": "index.html" },
+    "icons": { "128": "icon.png" },
+    "web_accessible_resources": [ "*.json" ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

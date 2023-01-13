@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version" : 2,
+  "name": "Easy Restaurant Online - Le blog",
+  "version": "2",
+
+  "description": "Recevez les derniers articles de notre Blog",
+  "icons": { "16" : "images/icon.png",
+      "48" : "images/48.png",
+      "128" : "images/128.png"},
+  "homepage_url": "http://easyrestaurantonline.com/",
+  "background": {
+    "page" : "background.html" },
+  "permissions": [
+    "http://easyrestaurantonline.com/feed"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon.png", 
+    "default_title": "Easy Restaurant Online | Le Blog",      
+    "default_popup": "popup.html"       
+  }
+}

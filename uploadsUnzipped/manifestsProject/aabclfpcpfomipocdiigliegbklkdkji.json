@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Free Zombies and Plants Play Games",
+"version": "3.1",
+"description": "plants vs zombies free game",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "plants vs zombies",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

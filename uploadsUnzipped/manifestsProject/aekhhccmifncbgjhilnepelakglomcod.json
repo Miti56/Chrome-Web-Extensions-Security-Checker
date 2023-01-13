@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "js/back.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icn/icon48.png",
+      "default_popup": "newtab.html"
+   },
+   "description": "__MSG_description__",
+   "default_locale": "en",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.7.21"
+}

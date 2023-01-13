@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "YouTube Hide Progress Bar and Comment",
+    "description": "Hide Comments and/or Progress Bar from YouTube. Especially useful for sports replays.",
+    "version": "1.0.0",
+
+    "icons": {
+        "128": "icons/icon128.png"
+    },
+    "browser_action": {
+        "name": "Encoding",
+        "icons": ["icons/icon128.png"],
+        "default_popup": "menu/popup.html",
+        "default_icon": "icons/icon128.png"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "contextMenus",
+        "webNavigation",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "content_scripts": [ 
+        {
+            "matches": ["<all_urls>"],
+            "run_at": "document_end",
+            "all_frames": true,
+                "js": ["js/control.js","js/hide.js"]
+        }
+    ]
+}

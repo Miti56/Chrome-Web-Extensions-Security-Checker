@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "StartupWind Desktop Sharing",
+  "description": "A simple extension that allows you to stream your desktop during mentoring sessions",
+  "version": "0.1.3",
+  "minimum_chrome_version": "62",
+  "icons": {
+    "16": "suw-logo-16x16.png",
+    "48": "suw-logo-48x48.png",
+    "128": "suw-logo-128x128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://meetnow.startupwind.com/*"
+      ]
+  }
+}

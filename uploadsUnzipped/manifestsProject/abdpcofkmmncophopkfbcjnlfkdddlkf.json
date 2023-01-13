@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Emacs on rollApp",
+    "icons": {
+        "128": "emacs-128.png"
+    },
+    "app": {
+        "urls": [
+            "*://www.rollapp.com/launch/emacs"
+        ],
+        "launch": {
+            "width": 900,
+            "web_url": "https://www.rollapp.com/launch/emacs?ref=chrome-app",
+            "container": "panel",
+            "height": 600
+        }
+    },
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Online version of popular text editor for developers. Integrated with cloud storage. Perfect for Chromebooks and tablets."
+}

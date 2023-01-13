@@ -1,0 +1,72 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Linkedofy",
+	"manifest_version": 2,
+	"description": "Super charge your networking on LinkedIn",
+	"version": "1.0",
+	"options_page": "options.html",
+	"background": {
+		"page": "background.html"
+	},
+	"page_action": {
+		"default_icon": {
+			"16": "images/icon16.png",
+			"32": "images/icon32.png",
+			"48": "images/icon48.png",
+			"128": "images/icon128.png"
+		},
+		"default_title": "Linkedofy"
+	},
+	"web_accessible_resources": [
+		"changelog.txt",
+		"assets/btb.landing.html",
+		"assets/btb.broadcast.html",
+		"assets/btb.auto-connect.html",
+		"assets/btb.auto-visit.html",
+		"assets/btb.endorse-contacts.html",
+		"assets/btb.create-contact-list.html"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://www.linkedin.com/*", "https://www.linkedin.com/*"],
+			"css": [
+				"assets/material-icons.css",
+				"assets/material-components-web@0.37.1.min.css",
+				"assets/btb.common.css",
+				"assets/btb.mtrl-io.card-layout.css",
+				"assets/btb.mtrl-io.progress-dots.css",
+				"assets/btb.mtrl-io.loading-anim.css",
+				"assets/btb.broadcast.css",
+				"assets/btb.auto-connect.css",
+				"assets/btb.auto-visit.css",
+				"assets/btb.endorse-contacts.css",
+				"assets/btb.create-contact-list.css"
+			],
+			"js": [
+				"assets/jQuery-3.3.1.min.js",
+				"assets/tableExport/tableExport.fileSaver.min.js",
+				"assets/tableExport/tableExport.jspdf.min.js",
+				"assets/tableExport/tableExport.jspdf.plugin.autotable.js",
+				"assets/tableExport/tableExport.main.min.js",
+				"script.js",
+				"models/btb.contacts.js",
+				"models/btb.messages.js",
+				"assets/material-components-web@0.37.1.min.js",
+				"assets/btb.common.js",
+				"assets/btb.mtrl-io.progress-dots.js",
+				"assets/btb.landing.js",
+				"assets/btb.broadcast.js",
+				"assets/btb.auto-connect.js",
+				"assets/btb.auto-visit.js",
+				"assets/btb.endorse-contacts.js",
+				"assets/btb.create-contact-list.js"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"permissions": [
+		"tabs", "storage", "unlimitedStorage", "https://linkedofy.com/*"
+	],
+	"default_locale" : "en"
+}

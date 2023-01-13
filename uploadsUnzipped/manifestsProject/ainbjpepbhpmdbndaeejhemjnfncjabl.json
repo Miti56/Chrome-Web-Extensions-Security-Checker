@@ -1,0 +1,39 @@
+{
+  "browser_action": {
+    "default_icon": "48x48.png",
+    "default_title": "Trans Status Table Manager"
+  },
+  "options_page": "options.html",
+  "homepage_url": "http://appworx.detmir-group.ru:39898/trans_status.html",
+  "version": "1.3",
+  "content_security_policy": "script-src \u0027self\u0027; object-src \u0027self\u0027",
+  "web_accessible_resources": [
+    "/injected.ext.js",
+    "/jquery-1.9.1.js"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Trans Status Table Manager",
+  "background": {"page": "background.html"},
+  "permissions": [
+    "storage",
+    "notifications",
+    "tabs",
+    "http://appworx.detmir-group.ru/*",
+    "http://monitoring/*"
+  ],
+  "icons": {
+    "48": "48x48.png",
+    "32": "32x32.png",
+    "16": "16x16.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://appworx.detmir-group.ru:39898/*"],
+    "js": [
+      "jquery-1.9.1.js",
+      "index.ext.js"
+    ],
+    "run_at": "document_end",
+    "css": ["default.ext.css"]
+  }],
+  "manifest_version": 2
+}

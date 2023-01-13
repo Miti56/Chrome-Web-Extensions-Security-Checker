@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Close Tabs",
+    "description": "Close other tabs or tabs to the right",
+    "version": "1.0",
+    "icons": {
+        "150": "icon.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "150": "icon.png"
+        },
+        "default_popup": "actions.html"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "content_security_policy": "script-src 'self'; default-src 'self'"
+}

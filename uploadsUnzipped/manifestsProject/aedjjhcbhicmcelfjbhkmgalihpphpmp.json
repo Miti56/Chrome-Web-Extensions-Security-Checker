@@ -1,0 +1,33 @@
+{
+   "manifest_version": 2,
+   "name": "__MSG_app_name__",
+   "short_name": "__MSG_app_short_name__",
+   "description": "__MSG_app_description__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "default_locale": "en",
+   "version": "0.6.1",
+   "author": "raingart",
+   "permissions": [
+      "proxy",
+      "storage",
+      "notifications",
+      "management"
+   ],
+   "content_security_policy": "default-src 'self'",
+   "background": {
+      "scripts": ["lib/storage.min.js", "js/app.js"]
+   },
+   "options_page": "html/settings.html",
+   "options_ui": {
+      "chrome_style": false,
+      "page": "html/settings.html"
+   },
+   "browser_action": {
+      "default_title1": "__MSG_app_title__"
+   },
+   "icons": {
+      "16": "images/16.png",
+      "48": "images/48.png",
+      "128": "images/128.png"
+   }
+}

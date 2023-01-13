@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Impero Client Application",
+  "version": "5.4.2.0",
+  "minimum_chrome_version": "35.0.1916.114",
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "icons":
+  {
+    "128": "images/Impero_Icon_128px.png"
+  },
+
+  "app":
+  {
+    "background":
+      {
+      "scripts": ["web/background.js"]
+      }
+  },
+  
+  "permissions": [
+  	"overrideEscFullscreen",
+  	"alarms",
+  	"system.cpu",
+  	"system.display",
+  	"system.memory",
+  	"system.network",
+  	"alwaysOnTopWindows",
+  	"unlimitedStorage",
+    {
+      "socket": [
+    		"resolve-host",
+    		"tcp-connect",
+    		"tcp-listen",
+    		"network-state",
+    		"udp-bind:*:*",
+    		"udp-send-to:*:*" ]
+   	} ]
+}

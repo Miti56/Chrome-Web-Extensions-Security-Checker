@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "content_scripts": [ {
+      "js": [ "js/jquery.js", "js/content.js" ],
+      "matches": [ "http://mixi.jp/*", "http://*.mixi.jp/*" ]
+   } ],
+   "default_locale": "ja",
+   "description": "__MSG_extDescription__",
+   "icons": {
+      "128": "img/mixi_icon128.png",
+      "16": "img/mixi_icon16.png",
+      "48": "img/mixi_icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_title__",
+   "permissions": [ "http://mixi.jp/*", "http://*.mixi.jp/", "tabs" ],
+   "version": "1.0.1"
+}

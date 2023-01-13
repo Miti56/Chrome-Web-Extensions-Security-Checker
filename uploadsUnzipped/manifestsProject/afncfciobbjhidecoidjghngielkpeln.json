@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FILTR8",
+  "short_name": "FILTR8",
+  "description": "Add to your website a stunning magazine to educate, entertain, and grow your audience with awesome content recommendations!",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "logo_128x128.png"
+  },
+  "app": {
+    "urls": [
+      "https://filtr8.com/"
+    ],
+    "launch": {
+      "web_url": "https://filtr8.com/discover/"
+    }
+  }
+}

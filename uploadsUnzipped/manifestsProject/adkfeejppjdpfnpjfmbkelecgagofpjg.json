@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "NewsAI -- Tabulae QuickTab",
+  "short_name": "Tabulae QuickTab",
+  "description": "Tabulae QuickTab is meant for NewsAI Tabulae existing users to quickly add contacts and check sent email stats on any webpage.",
+  "version": "0.0.0.4",
+  "browser_action": {
+    "default_icon": {
+      "16": "icon_logo_16.png",
+      "48": "icon_logo_48.png",
+      "128": "icon_logo_64.png"
+    },
+    "default_popup": "index.html",
+    "default_title": "NewsAI Tabulae QuickTab"
+  },
+  "icons": {
+    "16": "icon_logo_16.png",
+    "48": "icon_logo_48.png",
+    "128": "icon_logo_64.png"
+  },
+  "content_security_policy": "script-src 'self' https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js; object-src 'self'",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "*://*/*"
+  ]
+}

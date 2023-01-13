@@ -1,0 +1,31 @@
+  {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "p2p.Ninja!",
+    "version": "1.2",
+    "description": "Reroutes all web requests ending with .p2p to your p2p.Ninja Gateway",
+    "permissions": ["activeTab", "declarativeContent", "storage", "webRequest", "webRequestBlocking", "*://*.p2p/"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/round16.png",
+        "32": "images/round32.png",
+        "48": "images/round48.png",
+        "96": "images/round96.png",
+        "128": "images/round128.png"
+      }
+    },
+    "icons": {
+       "16": "images/round16.png",
+        "32": "images/round32.png",
+        "48": "images/round48.png",
+        "96": "images/round96.png",
+        "128": "images/round128.png"
+    },
+    "manifest_version": 2,
+"options_page": "options.html"
+  }

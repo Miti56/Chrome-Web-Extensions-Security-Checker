@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "__MSG_name__",
+	"version": "0.0.1",
+	"background": {
+		"scripts": [
+			"scripts/bg.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "images/princess-valentines-day-party-48.png",
+		"default_popup": "newtab.html"
+	},
+	"default_locale": "en",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"description": "__MSG_description__",
+	"icons": {
+		"48": "images/princess-valentines-day-party-48.png",
+		"128": "images/princess-valentines-day-party-128.png"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

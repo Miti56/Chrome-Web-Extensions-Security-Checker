@@ -1,0 +1,2 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx","name":"Election Info  App","description":"","version":"1","app":{"urls":["https://script.google.com/macros/s/AKfycby3ThGoi2zwXDwiLO52H0GxyjRmFZ6YnZ5bYjeUsiR3zg8OVJ4/exec"],"launch":{"web_url":"https://script.google.com/macros/s/AKfycby3ThGoi2zwXDwiLO52H0GxyjRmFZ6YnZ5bYjeUsiR3zg8OVJ4/exec"}},"icons":{"128":"script-icon.png"},"manifest_version":2}

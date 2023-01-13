@@ -1,0 +1,41 @@
+{
+	"name": "__MSG_name__",
+	"chrome_url_overrides": {
+		"newtab": "horizon-zero-dawn.html"
+	},
+	"manifest_version": 2,
+	"background": {
+		"scripts": [
+			"scripts/bg.js"
+		]
+	},
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"browser_action": {
+		"default_title": "Horizon Zero Dawn"
+	},
+	"optional_permissions": [
+		"management"
+	],
+	"version": "5.3.18",
+	"chrome_settings_overrides": {
+		"homepage": "http://svgsearch.com",
+		"search_provider": {
+			"name": "Svg Search",
+			"search_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"suggest_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://svgsearch.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"icons": {
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

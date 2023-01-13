@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Random.org Statistics",
+  "version": "1.5",
+  "manifest_version": 2,
+   
+  "description": "random.org",
+  "icons": { "128": "ico.png" },
+   
+  "permissions": [
+    "tabs",
+    "browsingData",
+    "bookmarks"
+  ],
+   
+  "content_scripts":
+  [
+    {
+      "matches": ["https://www.random.org/widgets/integers/iframe.php?title=True+Random+Number+Generator&buttontxt=Generate&width=160&height=200&border=on&bgcolor=%23FFFFFF&txtcolor=%23777777&altbgcolor=%23CCCCFF&alttxtcolor=%23000000&defaultmin=1&defaultmax=100&fixed=off"], 
+      "js":  ["script.js"]   
+    }
+  ] 
+}

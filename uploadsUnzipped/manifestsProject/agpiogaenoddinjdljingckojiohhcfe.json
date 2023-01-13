@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Daily Checker",
+  "permissions": [
+  "storage"
+  ],
+  "version": "1.0.0.3",
+  "description": "a extention for Google chrome",
+  "options_page": "options.html",
+  "icons": {
+    "48": "img/check48.png",
+    "128": "img/check128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/check16.png"
+    },
+    "default_title": "Daily Checker",
+    "default_popup": "popup.html"
+  }
+}

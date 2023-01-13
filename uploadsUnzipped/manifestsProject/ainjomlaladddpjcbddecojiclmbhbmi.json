@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "LuxLekarz - LuxMed + ZnanyLekarz",
+  "short_name": "LuxLekarz",
+  "description": "Wtyczka dodaje opinie o lekarzach na Portalu Pacjenta Luxmed.pl, bazując na opiniach z serwisu ZnanyLekarz.pl.",
+  "version": "1.6",
+  "homepage_url": "https://github.com/mstachniuk/LuxLekarz",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png",
+    "256": "icon256.png",
+    "512": "icon512.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://portalpacjenta.luxmed.pl/*"],
+      "js": ["jquery-3.1.1.min.js", "doctor.js", "myscript.js"]
+    }
+  ],
+  "permissions": [
+    "https://portalpacjenta.luxmed.pl/*"
+  ],
+  "web_accessible_resources": ["star-gold-left-10.png", "star-gold-right-10.png", "star-gray-left-10.png",
+    "star-gray-right-10.png"]
+}

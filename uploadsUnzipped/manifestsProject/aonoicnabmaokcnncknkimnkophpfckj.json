@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	
+"name": "Ichigeki Trend",
+"description": "ニュース・本・映画・言葉など、「今」何が流行っているのか一瞬で確認することが出来ます。",
+"version": "1.0",
+"manifest_version": 2,
+"app": {
+	"urls": [
+		"http://trend.matrix.jp/"
+	],
+	"launch": {
+		"web_url": "http://trend.matrix.jp/"
+	}
+},
+"icons": {
+	"128": "icon_128.png"
+},
+"permissions": [
+	"notifications"
+]
+}
+

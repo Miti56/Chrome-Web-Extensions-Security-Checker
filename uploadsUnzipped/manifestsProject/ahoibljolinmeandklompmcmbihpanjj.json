@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "OU Assistant",
+  "version": "0.11",
+  "icons": {
+	"128": "squid128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://todayhumor.co.kr/*",
+        "http://www.todayhumor.co.kr/*"
+      ],
+      "css": [
+        "empty.css"
+      ],
+      "js": [
+        "jquery-3.2.1.min.js",
+        "assist.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

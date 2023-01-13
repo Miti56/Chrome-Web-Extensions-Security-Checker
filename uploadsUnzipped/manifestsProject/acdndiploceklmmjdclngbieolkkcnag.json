@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "minimum_chrome_version": "34",
+   "name": "Kstych Screensharing",
+   "permissions": [ "desktopCapture" ],
+   "short_name": "Screen sharing plugin from Kstych Pvt Ltd",
+   "version": "0.0.0.3",
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "script.js" ]
+   },
+   "description": "Extension to allow screen sharing in kstych.com applications.",
+   "externally_connectable": {
+      "matches": [ "*://*.kstych.com/*"]
+   },
+   "icons": {
+      "128": "kstych_icon_128.png",
+      "16": "kstych_icon_16.png",
+      "48": "kstych_icon_48.png"
+   },
+   "browser_action":{
+     "default_icon": "kstych_icon_16.png"
+   }
+}
+

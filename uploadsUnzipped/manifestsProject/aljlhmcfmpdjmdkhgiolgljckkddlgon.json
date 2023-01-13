@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Chien à donner, chiot à adopter",
+"short_name": "Chien à donner",
+"description": "Chiot à donner, chien à adopter Belgique: Bruxelles, Hainaut, Namur, Liège!",
+"version": "1.0.1",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": ["http://www.babatic.be/"],
+"launch": {"web_url": "http://www.babatic.be/fr/annonce/chiens-chiots-95"}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

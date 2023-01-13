@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "y2mate",
+  "version": "1.0.3",
+
+  "description": "y2mate video downloader",
+  "icons": {
+    "96": "logo.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "jquery.js",
+        "y2mate.js"
+      ],
+      "run_at": "document_end",
+      "persistent": false
+    }
+  ]
+}

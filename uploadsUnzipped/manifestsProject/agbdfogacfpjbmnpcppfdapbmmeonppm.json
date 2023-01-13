@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GDevApp",
+  "short_name": "GDevApp",
+  "description": "Create your games without programming! GDevApp is a game creator webapp that allows you to make your own games - no coding required.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "https://gdevapp.com/"
+    ],
+    "launch": {
+      "web_url": "https://gdevapp.com/#!/home"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage"
+  ]
+}

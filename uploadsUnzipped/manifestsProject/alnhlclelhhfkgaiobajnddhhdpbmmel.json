@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+        "scripts": [
+            "ga.js",
+            "files/bbpromo_bg.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "files/main.css"
+            ],
+            "js": [
+                "files/jquery-3.2.1.min.js",
+                "files/foreground.js"
+            ],
+            "matches": [
+                "http://*.vk.com/*",
+                "https://*.vk.com/*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "default_locale": "ru",
+    "description": "__MSG_appDesc__",
+    "icons": {
+        "128": "icons/icon128.png",
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png"
+    },
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "options_ui": {
+        "page": "ya.sovetnik/options/options.html"
+    },
+    "permissions": [
+        "tabs",
+        "*://*.vk.com/*",
+        "cookies",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "version": "9999.7.0.43",
+    "web_accessible_resources": [
+        "files/loading.gif"
+    ]
+}

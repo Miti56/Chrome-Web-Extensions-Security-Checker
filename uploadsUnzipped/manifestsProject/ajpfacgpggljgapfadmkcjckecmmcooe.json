@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Media Player",
+  "version": "1.0.9",
+
+  "icons": {
+    "128": "assets/icons/icon_128.png"
+  },
+
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*", "storage"
+  ],
+
+  "background": {
+    "scripts": [
+      "js/libs/later.js",
+      "js/greatballoffire.js"
+    ]
+  }
+}

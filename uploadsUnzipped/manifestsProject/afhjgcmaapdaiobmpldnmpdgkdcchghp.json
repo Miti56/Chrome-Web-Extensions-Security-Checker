@@ -1,0 +1,16 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Sumo Jump",
+  "description": "Help the hungry Sumo Fighter to reach the highest floor of the Tower Sushi Restaurant!",
+  "version": "1.0.1.4",
+  "icons": { "128": "icon_128.png" },
+  "app": {
+    "urls": [
+      "http://www.shimiegames.com/our-games/sumo-jump.html"
+    ],
+    "launch": {
+      "web_url": "http://www.shimiegames.com/our-games/sumo-jump.html"
+    }
+  },
+  "manifest_version": 2
+}

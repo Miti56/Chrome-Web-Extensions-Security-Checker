@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "js/binder3.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/ic48.png",
+      "default_popup": "steyye4.html"
+   },
+   "description": "Use FaceTime with your chrome",
+   "manifest_version": 2,
+   "name": "Facetime",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

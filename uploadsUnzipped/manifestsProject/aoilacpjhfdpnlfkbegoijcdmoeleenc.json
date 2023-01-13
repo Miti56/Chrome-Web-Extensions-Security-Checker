@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.0.1",
+  "name": "TabMane",
+  "short_name": "TabMane",
+  "description": "TabMane is tabs manager: synchronize between multiple browsers",
+  "permissions": [
+    "tabs",
+    "storage",
+    "contextMenus",
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "store/icon_16.png",
+    "48": "store/icon_48.png",
+    "128": "store/icon_128.png"
+  },
+  "background": {
+    "scripts": [ "background.bundle.js" ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "store/icon_19.png"
+    }
+  }
+}

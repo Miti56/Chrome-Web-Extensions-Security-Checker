@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "淘易易",
+	"description":"淘易易拾壹版是一款阿里妈妈辅助工具，支持高佣查询、普通佣金查询，支持自动进入推广模式。",
+	"version": "11.1.0.2",
+	"icons": { "128": "Icons/logo_128.png" },
+	"background": { "scripts": ["Tools/patch.js","Tools/bluebird.min.js","Tools/qs.js","Tools/EventEmitter.min.js","Tools/core.js","Tools/md5.js","apibus.sdk.js","trs.js","background.js"]},
+	"permissions": ["webRequest", "webRequestBlocking","tabs","storage","cookies","*://*/*"],
+	"page_action": {
+		"default_icon":"Icons/logo_19.png",
+		"default_popup": "popup.html",
+		"default_title": "淘易易拾壹版"
+	},
+	"options_page": "config.html",
+
+	 "content_scripts": [ {
+      "js": [ "Tools/patch.js", "Tools/nameStorage.js","Tools/bluebird.min.js","Tools/jquery-2.1.4.min.js","Tools/qs.js","Tools/clipboard.min.js","Execute.js","login_alimama.js","page.js" ],
+      "matches": ["*://*/*"],
+      "run_at": "document_end",
+      "css":["common.css","page.css"],
+	  "all_frames":true
+   } ] ,
+   "web_accessible_resources": []
+}

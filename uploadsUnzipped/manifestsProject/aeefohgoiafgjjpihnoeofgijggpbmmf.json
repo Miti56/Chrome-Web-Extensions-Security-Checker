@@ -1,0 +1,27 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Learn English - Beelingo.com",
+  "short_name": "Beelingo.com",
+  "description": "Learn English: All the tools you need to learn English quickly and pass the official exams (Grammar,Dictionary,Games,Audiobooks,...)",
+  "version": "1.4",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png",
+	"48": "icon_48.png",
+    "16": "icon_16.png"
+  },
+  "app": {
+    "urls": [
+      "http://app.beelingo.com/"
+    ],
+    "launch": {
+	  "container": "tab",
+      "web_url": "http://app.beelingo.com/"
+    }
+  },
+  "permissions": [
+	"unlimitedStorage"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "CodeTank",
+  "description": "CodeTank（代码坦克）使用 Javascript 对坦克机器人进行编程，方便的构建属于自己富有个性的 Tank 机器人，并通过互联网进行在线互动和竞赛！",
+  "version": "1",
+  "app": {
+    "launch": {
+      "web_url": "http://codetank.alloyteam.com"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+  ]
+}

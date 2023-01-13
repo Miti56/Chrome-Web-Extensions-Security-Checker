@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Angry strategy play games",
+"version": "1.1",
+"description": "play angry birds space free play",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "play angry birds space free play",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

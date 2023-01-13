@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "W3Schools TopFix",
+  "description": "This extension removes the 100 pixels of white space on the top of a W3Schools TryIt Editor",
+  "version": "0.0.0.1",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.w3schools.com/*/tryit.asp*"],
+      "js": ["myscript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

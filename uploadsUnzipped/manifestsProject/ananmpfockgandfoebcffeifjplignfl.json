@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+    "default_title": "Periodic Table"
+  },
+  "icons": {
+    "128": "icons/128.png"
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "cookies",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "version": "5.8.0",
+  "name": "Periodic Table",
+  "background": {
+    "page": "html/bg.html"
+  }
+}

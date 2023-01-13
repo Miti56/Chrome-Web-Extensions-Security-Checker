@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Basketball Stars",
+  "short_name":"Play Basketball Stars game",
+  "description": "In the game of Basquetball Stars, make more baskets than your rival to win the challenge.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "baskettstars128.png",
+    "default_popup": "popup.html"
+  },
+  "icons": { "16": "baskettstars128.png",
+           "48": "baskettstars128.png"  },
+		  
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

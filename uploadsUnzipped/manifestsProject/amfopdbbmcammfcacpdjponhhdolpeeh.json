@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Adhelper",
+  "version": "0.1.6",
+  "icons": {
+    "16" : "icon_16.png",
+    "48" : "icon_48.png",
+    "128" : "icon_128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "<all_urls>"
+  ],
+  "options_page": "options.html",
+  "browser_action": {
+    "default_tooltip": "Adhelper. Импорт тизеров.",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["jquery.min.js", "background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://publer.pro/my/teasers/*"
+      ],
+      "js": ["jquery.min.js", "publer-content.js"]
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://publer.pro/my/teasers/*"
+      ],
+      "js": ["jquery.min.js", "all-content.js"]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+	"default_locale": "en",
+	"version": "0.0.1",
+	"name": "__MSG_name__",
+	"icons": {
+		"48": "dragon-trials-icons/icon-small.png",
+		"128": "dragon-trials-icons/dragon-trials-128.png"
+	},
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "dragon-trials-icons/icon-small.png",
+		"default_popup": "main.html"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"description": "__MSG_description__",
+	"background": {
+		"scripts": [
+			"dragon-trials-js/back.js"
+		]
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

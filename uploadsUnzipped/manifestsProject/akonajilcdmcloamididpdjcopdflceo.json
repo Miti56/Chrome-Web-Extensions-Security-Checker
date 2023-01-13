@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "VK Files",
+  "version" : "1.3",
+  "default_locale": "ru",
+  "description" : "__MSG_application_description__",
+  "web_accessible_resources": ["background.js","file.js"],
+  "icons": {
+    "16": "main.png",
+    "48": "main.png",
+    "128": "main.png"
+  },
+  "permissions": ["tabs","storage","background","https://*/*","http://*/*"],
+  "browser_action": {
+    "default_icon": "main.png"
+  },
+  "background":{
+    "persistent": false,
+    "scripts": ["content_script.js","file.js"]
+  },
+  "manifest_version": 2
+}

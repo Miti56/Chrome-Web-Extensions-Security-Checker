@@ -1,0 +1,24 @@
+{
+  "browser_action": {
+    "default_icon": "128x128.png",
+    "default_popup": "nocouponsfound.html"
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Sparen Sie Geld mit Gutscheinen vom Gutscheinbaron.de",
+  "background": {"scripts": [
+    "jquery.min.js",
+    "chromesplat.js"
+  ]},
+  "name": "Gutscheinbaron",
+  "permissions": [
+    "tabs",
+    "http://www.gutscheinbaron.de/*"
+  ],
+  "icons": {
+    "48": "48x48.png",
+    "128": "128x128.png",
+    "16": "16x16.png"
+  },
+  "manifest_version": 2,
+  "version": "2.1"
+}

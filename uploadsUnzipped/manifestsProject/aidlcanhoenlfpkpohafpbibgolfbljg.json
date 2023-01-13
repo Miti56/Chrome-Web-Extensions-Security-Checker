@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Datalist it",
+  "description": "merge and view your Excel data",
+  "version": "0.0.0.6",
+  "manifest_version": 2,
+  "icons": {
+    "128": "dli_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://datalistit.com/"
+    ],
+    "launch": {
+      "web_url": "http://datalistit.com/"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Compile.work Online Compiler",
+  "short_name": "Online Compiler",
+  "description": "Compile C,C++, PHP, Python, Go, Swift, Ruby, Perl without a compiler",
+  "version": "0.1.0",
+  "minimum_chrome_version": "38",
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+  "permissions": [
+          "https://www.google-analytics.com/",
+          "storage",
+          {"fileSystem": ["write", "retainEntries", "directory"]}
+        ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

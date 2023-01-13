@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "The Unflappable Academic (and his hoverboard)",
+	"description": "Oh the trials and tribulations of trying to succeed as an academic... as expressed perfectly by an unwinnable flappy game.",
+	"version": "1.0.0.0",
+	"manifest_version": 2,
+	"homepage_url": "http://markdangerchen.net",
+	"app": {
+		"launch": {
+			"local_path": "index.html",
+			"container": "panel",
+			"width": 400,
+			"height": 500
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

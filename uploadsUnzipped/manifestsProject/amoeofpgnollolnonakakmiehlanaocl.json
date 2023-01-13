@@ -1,0 +1,19 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Export HTML List Options",
+  "version": "1.0.0",
+  "description": "Exports the options for all HTML select elements (dropdown lists and list boxes) as text from a web page.",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": { "16": "img/icon-copy-16px.png",
+             "48": "img/icon-copy-48px.png",
+            "128": "img/icon-copy-128px.png" },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "manifest_version": 2
+}

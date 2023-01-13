@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Kansas City Chiefs NFL Social Tab Theme *NEW*",
+  "description": "*BRAND NEW* extension for Kansas City Chiefs fans! Better than wallpapers, your New Tab is filled w/ tweets from KC greats.",
+  "version": "0.2.0.7",
+
+  "chrome_url_overrides" : {
+	"newtab": "tab.html"
+  },
+  "content_security_policy":"script-src 'self' https://platform.twitter.com https://cdn.syndication.twimg.com; object-src 'self'",
+  "permissions": [
+	"webRequest",
+	"webRequestBlocking",
+	"tabs",
+	"idle",
+	"storage",
+	"history",	
+	"alarms",
+	"http://*/*",
+	"https://*/*",
+	"https://www.google-analytics.com/"
+  ],
+  "background": {
+	"scripts": ["jquery-3.1.1.min.js", "config.json", "background.js"]
+  },
+  "content_scripts" : [
+     {
+       "matches" : [
+			"http://*/*",
+			"https://*/*"
+       ],
+       "js" : ["scripts/mouse.js"],
+       "run_at" : "document_start",
+       "all_frames" : false
+     }
+  ],
+  "web_accessible_resources": [
+	"tab.html"
+  ],
+  "browser_action": {
+  },
+  "incognito": "not_allowed",
+  "icons": { "16": "icons/16.png",
+			 "32": "icons/32.png",
+			 "48": "icons/48.png",
+			 "128": "icons/128.png" }
+}

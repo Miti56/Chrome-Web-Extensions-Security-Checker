@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Alaska",
+  "description": "Alaska",
+  "version": "1.1.1",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "img/Alaska_38x38.png",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "19": "img/Alaska_19x19.png",
+    "38": "img/Alaska_38x38.png",
+    "128": "img/Alaska_128x128.png"
+  },
+  "permissions": [
+	"https://*.licdn.com/*",
+  	"https://linkedin.com/*",
+	"https://*.linkedin.com/*",
+	"https://*.recruitd.com/*",
+	"https://*.recruitd.co.uk/*",
+    "cookies",
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://linkedin.com/*/*/",
+        "*://www.linkedin.com/*/*/",
+        "*://www.linkedin.com/*/*/*/*/",
+        "*://linkedin.com/*/*/*/*/"	
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": ["fonts/Inter-Regular.ttf"]
+}

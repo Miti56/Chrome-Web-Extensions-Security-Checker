@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "一键下单",
+  "description": "针对从1688进货的淘宝卖家，可实现自动快捷下单",
+  "version": "3.3.5",  
+  "background":{"scripts":["background.js"]},
+   "content_scripts" : [
+   		{"js" : ["alibabaOrder.js"],"matches" : ["http://*.1688.com/*","https://*.1688.com/*"]},
+   		{"js" : ["alipayOrder.js"],"matches" : ["https://*.alipay.com/*"]},
+   		{"js" : ["ytWebOrder.js"],"matches" : ["http://*.1tsoft.com/*","http://*.1tsoft.cn/*"]},
+   		{"js" : ["taobaoOrder.js"],"matches" : ["http://*.taobao.com/*","https://*.taobao.com/*","https://*.tmall.com/*"]}
+   		],
+   "permissions": ["background","tabs","cookies",
+   					"http://www.1tsoft.com/*", 
+   					"http://www.1tsoft.cn/*",
+   					"http://*.taobao.com/*", 
+					"https://*.taobao.com/*", 
+   					"https://*.1688.com/*",
+   					"https://*.tmall.com/*",
+   					"https://*.alipay.com/*",
+   					"http://*.1688.com/*"],
+  "browser_action": {
+      "default_popup": "popup.html",
+    "default_title": "open trade taobao"
+  },"icons": {"48":"yi48.png","128": "yi.png"},  
+  "manifest_version": 2
+}

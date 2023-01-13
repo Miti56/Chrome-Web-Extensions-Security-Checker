@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Unbeaded",
+  "description": "A puzzle game with the objective to slide the beads into their final positions.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://unbeaded.com/"
+    ],
+    "launch": {
+      "web_url": "http://unbeaded.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": []
+}

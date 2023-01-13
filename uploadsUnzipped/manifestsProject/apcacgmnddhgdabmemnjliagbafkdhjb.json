@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tracking code check",
+  "description": "Displays tracking code",
+  "version": "1.0",
+  "permissions": [
+    "debugger"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Tracking code check"
+  },
+  "manifest_version": 2
+}

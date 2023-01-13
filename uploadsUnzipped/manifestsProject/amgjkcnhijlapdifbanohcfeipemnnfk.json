@@ -1,0 +1,91 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "0.0.0.2",
+  	"manifest_version": 2,
+    "name": "QA world platform", 
+
+	"description": "The key to staying up-to-date on the latest QA trends.",
+	"icons": {
+		"128": "images/icon.png"
+	},
+
+	"app": {
+	    "urls": [
+		"https://www.testcraft.io/"
+	    ], 
+	    "launch": {
+      		"web_url": "https://www.testcraft.io/"
+    	}
+	},
+
+    "theme": {
+        "images": {
+            "theme_toolbar": "images/theme_toolbar.png", 
+            "theme_tab_background": "images/theme_tab_background.png", 
+            "theme_frame": "images/theme_frame.png", 
+            "theme_ntp_background": "images/theme_ntp_background.png"
+        }, 
+        "colors": {
+            "tab_text": [
+               255, 
+               255, 
+               255
+            ], 
+            "frame": [
+                60, 
+                64, 
+                67
+            ], 
+            "ntp_background": [
+                60, 
+                64, 
+                67
+            ], 
+            "ntp_link": [
+                6, 
+                55, 
+                116
+            ], 
+            "tab_background_text": [
+                0, 
+                0, 
+                0
+            ], 
+            "ntp_text": [
+                0, 
+                0, 
+                0
+            ], 
+            "button_background": [
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "toolbar": [
+               0, 
+               0, 
+               0
+            ], 
+            "bookmark_text": [
+                255, 
+                255, 
+                255
+            ]
+        }, 
+        "tints": {
+            "buttons": [
+                0, 
+                0, 
+                0.44
+            ]
+        }, 
+        "properties": {
+            "ntp_background_repeat": "no-repeat", 
+            "ntp_background_alignment": "bottom"
+        }
+    },
+
+    "version_name": "1.1 alpha"
+}

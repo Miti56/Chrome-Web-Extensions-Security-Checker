@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Parking Games",
+ "manifest_version": 2,
+ "short_name": "Parking Games",
+ "description": "Play Parking Games Now!",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1491720790_Games_1.ico"
+  },
+ "icons": {
+	"128": "icon.png"
+  }
+}

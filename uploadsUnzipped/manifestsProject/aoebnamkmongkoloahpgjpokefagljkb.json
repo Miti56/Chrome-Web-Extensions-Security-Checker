@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Youtube Repeat Part of Video",
+  "version": "1.0.0",
+  "description": "Make auto repeat part of video easier on Youtube!",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "css": [],
+      "js": ["/static/js/content.js"]
+    }
+  ],
+  "icons": {
+      "48": "images/icons8-replay-48.png",
+      "128": "images/icons8-replay-128.png"
+    },
+  "manifest_version": 2,
+  "background": {
+    "scripts": []
+  },
+  "browser_action": {},
+  "web_accessible_resources":[
+    
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+}

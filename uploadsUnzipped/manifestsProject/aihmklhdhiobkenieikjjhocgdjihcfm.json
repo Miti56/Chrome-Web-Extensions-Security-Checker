@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Search on Youtube",
+  "version": "1.0",
+  "description": "Select text, right click to open context menu, click \"Search on Youtube\".",
+  "manifest_version": 2,
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "youtube-search.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_action": {
+      "16": "favicon-16x16.png",
+      "32": "favicon-32x32.png",
+      "128": "apple-icon-120x120.png"
+    }
+  },
+  "icons": {
+    "16": "favicon-16x16.png",
+    "32": "favicon-32x32.png",
+    "128": "apple-icon-120x120.png"
+  }
+}

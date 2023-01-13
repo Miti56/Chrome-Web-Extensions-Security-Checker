@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "persistent": true,
+    "scripts": ["lib/crypto.js", "scripts/background.js"]
+  },
+  "content_security_policy":
+  "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "Convert Image to Data URI",
+  "icons": {
+    "128": "img/icon_extension.png",
+    "16": "img/icon_extension.png"
+  },
+  "manifest_version": 2,
+  "name": "Image to URI",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "*://*/*",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+  "version": "4.5.8"
+}

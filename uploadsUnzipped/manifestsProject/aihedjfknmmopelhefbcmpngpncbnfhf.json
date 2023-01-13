@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Save to Bucket",
+    "version": "1.0.5",
+    "manifest_version": 2,
+    "description": "Save to Bucket - Easy way to save the content from a webpage for later use or for later reading.",
+    "icons": {
+        "16": "Bucket_19.png",
+        "48": "Bucket_48.png",
+        "128": "Bucket_19.png"
+    },
+    
+    "background": {
+        "persistent": true,
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_title": "Save to Bucket",
+        "default_icon": "Bucket_19-grey.png",
+        "default_popup": "BucketApp.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "contextMenus"
+    ],
+    "content_scripts": [
+    {
+        "run_at" : "document_start",
+        "matches": [
+            "<all_urls>"
+        ],
+        "css": ["appStyle.css"],
+        "js": ["jquery.js", "app.js"]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"version":"1.2",
+"manifest_version":2,
+"name":"Assassin's Creed IV Black Flag",
+"description": "Visit UltraPeter.com for more themes!",
+"theme":{
+
+"images":{
+"theme_frame":"img/frame.jpg",
+"theme_toolbar":"img/toolbar.jpg",
+"theme_ntp_background":"img/ntp_background.jpg",
+"theme_frame_overlay":"img/frame_overlay.png",
+"theme_tab_background":"img/tab_background.jpg",
+"theme_tab_background_incognito":"img/tab_background.jpg",
+"theme_ntp_attribution":"img/ntp_attribution.png"
+},
+
+"colors" : {
+"bookmark_text":[255,255,255],
+"ntp_link":[0,0,0],
+"ntp_header":[40,40,40],
+"ntp_section":[0,0,0,0.5],
+"ntp_section_link": [255,255,255],
+"ntp_section_text": [255,255,255],
+"ntp_text": [255,255,255],
+"ntp_background": [0,0,0],
+"tab_background_text":[10,10,10],
+"tab_text": [255,255,255],
+"frame":[90,116,133],
+"toolbar": [49,64,69]},
+
+"properties":{
+"ntp_background_alignment":"top",
+"ntp_background_repeat":"no-repeat"},
+
+"tints":{
+"buttons":[1,1,1]
+}}}

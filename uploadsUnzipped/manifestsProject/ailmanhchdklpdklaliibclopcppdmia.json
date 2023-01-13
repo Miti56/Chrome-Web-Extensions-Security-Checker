@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "SHSP Email Block Recycler",
+    "version": "0.1",
+    "description": "Save email blocks to use in different emails within SharpSpring.",
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.marketingautomation.services/email/edit/*",
+                "*://*.marketingautomation.services/email/editTemplate/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {},
+    "options_page": "options.html",
+    "manifest_version": 2
+}

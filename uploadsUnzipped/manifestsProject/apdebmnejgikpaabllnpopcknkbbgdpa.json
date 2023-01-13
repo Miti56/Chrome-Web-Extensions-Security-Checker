@@ -1,0 +1,18 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/128.png",
+      "default_title": "Shell Shockers Game"
+   },
+   "description": "This is an exciting multiplayer first person shooter",
+   "icons": {
+      "128": "img/128.png"
+   },
+   "manifest_version": 2,
+   "name": "Shell Shockers Game",
+   "permissions": [ "tabs", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

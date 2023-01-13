@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.0.13",
+  "name": "Amplitude Instrumentation Explorer",
+  "manifest_version": 2,
+  "description": "Explore and debug your Amplitude JavaScript SDK instrumentation by interacting with your site.",
+  "browser_action": {
+    "default_title": "Amplitude Instrumentation Explorer",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/amplitude-logo-16.png",
+    "48": "img/amplitude-logo-48.png",
+    "128": "img/amplitude-logo-128.png"
+  },
+  "web_accessible_resources": [
+    "inject.html", "details.html"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "cookies",
+    "contextMenus",
+    "management",
+    "tabs",
+    "storage",
+    "https://api.amplitude.com/*",
+    "http://*/*",
+    "https://*/*",
+    "http://localhost:3030/",
+    "webRequest"
+  ],
+  "content_security_policy": "default-src 'self'; script-src 'self'; style-src * 'unsafe-inline'; connect-src https://analytics.amplitude.com/; img-src 'self' data:"
+}

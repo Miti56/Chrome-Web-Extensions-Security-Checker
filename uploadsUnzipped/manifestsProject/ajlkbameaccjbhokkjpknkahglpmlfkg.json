@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+   "manifest_version":2,
+   "name":"Battle for the Galaxy",
+   "description": "Cool science-fiction strategy game!",
+   "short_name":"BFTG",
+   "homepage_url": "https://battleforthegalaxy.com/play/",
+   "version":"2.4.1",
+   "minimum_chrome_version":"23",
+   "offline_enabled":false,
+      "web_accessible_resources": [
+    "*"
+  ],
+  "background":{
+  "scripts": ["background.js"]
+},
+   "icons":{  
+      "16":"bftg_16.png",
+      "128":"bftg_128.png"
+   },
+	"browser_action": {
+         "default_icon": {
+            "16": "bftg_16.png"
+          },
+          "default_title": "Battle for the Galaxy"
+        },
+   "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApBWVsJTr8QzzsGcroLrGUC3inWETX/NTlzLmBlLYIk0czPyDI6etIRcwPH725ir0Q+u4QF7kF8tiHxY/4COb3v3GUd6I+bUpMFo1jLb8G8J2bZJWnWlZdl9hufLYl2ftzrgDoU41is8oB3gowqfy2tLMRDl9BJnwoPlaSUtFF+/2EeypF/tigYstVMMObDRXSE5JKZOhtYSTJ0c+jeLAMbneT2bgkJHLTyqFIYcLARYVjKfQuvMq5O2NdlEGYJHIjoA9v4EQzxWSRxV+F8sSleG+O2xrMnB1R+F/jCX7KM7N7wKQGGtllXLTaXw0MBv3Sg6saGTf+3WgfPIpf8zepwIDAQAB",
+   "permissions":[
+		"tabs",
+        "identity",
+        "identity.email",
+        "storage",
+        "<all_urls>",
+        "http://localhost/",
+        "http://*/*",
+        "https://*/*"
+   ],
+   "oauth2": {
+    "client_id": "506627248936-p7hrk2nuvgvb08aqt4fpjl3tr5j2ub7e.apps.googleusercontent.com",
+    "scopes": [
+        "openid","profile", "https://www.googleapis.com/auth/chromewebstore.readonly"
+    ]
+  },
+  "default_locale": "en"
+}

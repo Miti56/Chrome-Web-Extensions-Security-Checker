@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name" : "Pintrips",
+    "version" : "2.7.2",
+    "options_page": "options.html",
+    "homepage_url": "http://www.pintrips.com/",
+    "description" : "Pintrips is your pre-flight travel companion. Use it to plan a trip, compare options, and share them with friends and family.",
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "permissions": [
+        "http://*.codelovers.co.il/",
+        "https://*.codelovers.co.il/",
+        "http://*.pintrips.com/",
+        "https://*.pintrips.com/",
+        "http://*.facebook.com/",
+        "https://*.facebook.com/",
+        "tabs",
+        "activeTab",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+
+    "content_scripts" : [
+        {
+            "matches" : [
+                "http://pintrips.codelovers.co.il/*",      "https://pintrips.codelovers.co.il/*",
+                "http://*.pintrips.com/*",      "https://*.pintrips.com/*",
+                "http://*.aa.com/*",            "https://*.aa.com/*",
+                "http://*.delta.com/*",         "https://*.delta.com/*",
+                "http://*.expedia.com/*",       "https://*.expedia.com/*",
+                "http://*.google.com/flights*", "https://*.google.com/flights*",
+                "http://*.jetblue.com/*",       "https://*.jetblue.com/*",
+                "http://*.kayak.com/*",         "https://*.kayak.com/*",
+                "http://*.orbitz.com/*",        "https://*.orbitz.com/*",
+                "http://*.southwest.com/*",     "https://*.southwest.com/*",
+                "http://*.united.com/*",        "https://*.united.com/*",
+                "http://*.usairways.com/*",     "https://*.usairways.com/*",
+                "http://*.virginamerica.com/*", "https://*.virginamerica.com/*",
+                "http://*.skyscanner.net/*",    "https://*.skyscanner.net/*",
+                "http://*.skyscanner.com/*",    "https://*.skyscanner.com/*",
+                "http://*.apideeplink.com/*", "https://*.apideeplink.com/*",
+                "http://localhost:3000/*",      "https://localhost:3000/*"
+            ],
+            "js": ["boot.js"],
+            "run_at" : "document_start",
+            "all_frames" : true
+        }
+    ],
+
+    "icons" : {
+        "16": "images/pin_16x16.png",
+        "48": "images/pin_48x48.png",
+        "128": "images/pin_128x128.png"
+    }
+}

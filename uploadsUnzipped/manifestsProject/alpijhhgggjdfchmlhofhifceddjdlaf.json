@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Gmail Snooze",
+ "manifest_version": 2,
+ "short_name": "Gmail Snooze",
+ "description": "Provides the ability to snooze messages right from your Google mail, simply by assigning a label",
+ "version": "1.1",
+ "icons": {
+	"128": "GmailSnooze_noshadow.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "https://script.google.com/macros/s/AKfycbx5m89oeZFHSVNi2R-wmFJdFTko4uaFtQVXMOnmqwmd61JcOVE/exec"
+	}
+ }
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "NewKramer",
+	"version": "1.6",
+	"manifest_version": 2,
+	"description": "Adds a little Seinfeld into your life. Cheers!",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "JERRY"
+	},
+	
+	"chrome_url_overrides" : {
+		"newtab": "popup.html"
+	},
+	
+	"permissions": ["activeTab"]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "BRC & Company Extension",
+    "version": "0.1.3",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "*://richmedia.channeladvisor.com/*",
+                "*://richmedia.ca-richimage.com/*"
+            ],
+            "css": ["src/css/default.css"],
+            "js": ["src/js/jquery-3.2.1.min.js", "src/js/content.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": ["src/js/background.js"]
+    }
+}

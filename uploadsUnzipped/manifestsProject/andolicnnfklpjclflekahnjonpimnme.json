@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Timed Test: Sight Words",
+  "manifest_version": 2,
+  "version": "1",  
+  "description": "More than 100 high-frequency sight words in a fun beat-the-clock format. Grades 1+, Ages 6+",
+  "app": {
+    "launch": {
+      "local_path": "Series.html"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "sandbox": {
+     "pages": ["sandbox.html"]
+  }
+}

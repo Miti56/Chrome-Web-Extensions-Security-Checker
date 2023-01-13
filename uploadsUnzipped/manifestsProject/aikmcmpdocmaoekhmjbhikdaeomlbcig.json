@@ -1,0 +1,36 @@
+{
+   "icons": {
+      "128": "painting.png"
+   },
+
+
+   "browser_action": {
+      "default_icon": "painting.png",
+      "default_title": "playwithmario",
+      "default_popup" : "when.html"
+   },
+
+
+   "chrome_settings_overrides":
+   {
+      "search_provider":
+      {
+         "encoding": "UTF-8",
+         "favicon_url": "http://playwithmario.com/supermariow/fav.png",
+         "is_default": true,
+         "keyword": "playwithmario",
+         "name": "playwithmario",
+         "search_url": "http://playwithmario.com?q={searchTerms}"
+      }
+   },
+
+   "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+   
+   "description": "playwithmario Will Provide You An Access To The Famous Super Mario Game From Your Browser",
+
+
+   "manifest_version": 2,
+   "name": "playwithmario",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.4.14"
+}

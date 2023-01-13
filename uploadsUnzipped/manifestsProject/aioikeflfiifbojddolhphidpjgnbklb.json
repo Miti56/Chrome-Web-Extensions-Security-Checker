@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Chewata I",
+  "description": "Chewata I is an app which help kids to differentiate shape and character of similar consonant clusters. Developed by SISMEN",
+  "version": "1.0.7",
+  "manifest_version": 2,
+  "app": {
+    "launch": {
+      "local_path": "index.htm"
+    }
+  },
+  "icons": {
+    "16": "icon_16.ico",
+    "128": "icon_128.ico"
+  }
+}
+

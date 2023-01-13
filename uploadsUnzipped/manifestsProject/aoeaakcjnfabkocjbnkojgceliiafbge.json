@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "description": "A free tool that lets you check if any domain is running WordPress, Drupal or Joomla.",
+   "homepage_url": "https://ermis.co",
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "48": "icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjHxG60gxRS12ey1E4T7s5qzEQgUZKHq9qYMNK9mYuBv/hmKe38Cl4fJhYxPOf3DaN8PmWMpnJf8Yg5xfy4RO5hxaBLH3BBfHRYXD2Fi3CG3JxfIMtcDARJXYpJyDxwhDbVdKMRF9OgE3z3ITkVmSm5So32dVsFSEpnOIaAAS3HUvRNXBPuxeniIV2/hAZhG2csJ3Lxm0uMiSBX0XXoDY3rF0MTtHKPP+ANNxxheKvnQI0iyqkGyJTU0QPqC9qiYDc4qFQurzYeXX/wV4OuxBXYyxkbLZo/ZhPojB9NhRDfa0cSCHkilbnBkbpguHFy3HfmUmH5kLtUUM04IHg1hD7QIDAQAB",
+   "manifest_version": 2,
+   "name": "ermis.co CMS Security Scanner",
+   "page_action": {
+      "default_icon": "icon-128.png",
+      "default_title": "ermis.co - CMS Security Scanner"
+   },
+   "permissions": [ "tabs", "http://scanner.ermis.co/*", "http://fonts.googleapis.com/", "https://fonts.googleapis.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.7"
+}

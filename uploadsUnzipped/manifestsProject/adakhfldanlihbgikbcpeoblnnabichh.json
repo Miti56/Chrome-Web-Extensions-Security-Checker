@@ -1,0 +1,14 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "柏訓網絡助手",
+  "version": "9",
+  "manifest_version": 2,
+  "description": "柏訓網絡助手",
+  "browser_action": {
+    "default_icon": "off.ico",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "proxy"
+  ]
+}

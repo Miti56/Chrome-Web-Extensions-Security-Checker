@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Contentsquare-Google data studio connector",
+    "short_name" : "CS-GDS",
+    "version": "1.1",
+    "description": "An extension for GDS contentsquare connector",
+	"manifest_version": 2,
+	"icons": {
+	  "16": "icons/icon_16.png",
+		"48": "icons/icon_48.png",
+	  "128":"icons/icon_128.png"
+	},
+	"page_action" : {
+	"default_popup": "index.html",
+	"default_icon": {
+		"16": "icons/icon_16.png",
+		"24": "icons/icon_24.png",
+		"32": "icons/icon_32.png"
+	  }
+	},
+	"background": {
+		"scripts" : ["event-page.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+		"matches" : ["https://datastudio.google.com/*"],
+		"js": ["bootstrap.js","backend-communication.js","gds-config-mapper.js"],
+		"run_at": "document_start"
+		}
+	],
+	"permissions": [
+		"tabs",
+		"storage",
+		"https://datastudio.google.com/*",
+		"https://gds-connector-back.ps-contentsquare.com/*"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"web_accessible_resources" : ["ajax_patch.js"]
+ }

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Simple Tab",
+    "version": "1.0",
+    "author": "Trinity Chung",
+    "description": "Customizable, clean, simple new tab.",
+
+    "permissions": [ "storage" ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "options_page": "html/options.html",
+    "chrome_url_overrides": {
+        "newtab": "html/newtab.html"
+    },
+    "icons": {
+        "16": "assets/icon/icon-16.png",
+        "32": "assets/icon/icon-32.png",
+        "48": "assets/icon/icon-48.png",
+        "128": "assets/icon/icon-128.png"
+    }
+}

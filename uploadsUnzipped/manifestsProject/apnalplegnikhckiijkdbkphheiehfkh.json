@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Helpful Games",
+  "short_name": "Helpful Games",
+  "description": "Play free games in math, english, geography and other school subjects.",
+  "version": "1.0.3",
+  "icons": {
+    "128": "icon_128.png",
+	"48": "icon_48.png"
+  },
+  "permissions": [  ],
+  "app": {
+    "urls": [
+      "http://www.helpfulgames.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.helpfulgames.com/"
+    }
+  }
+}

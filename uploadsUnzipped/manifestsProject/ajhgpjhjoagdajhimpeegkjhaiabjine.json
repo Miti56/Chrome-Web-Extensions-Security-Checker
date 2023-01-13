@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Simplit.io",
+    "version": "0.8",
+
+    "description": "Виджет для уведомления пользователя о звонках на сервере Asterisk",
+    "icons": {
+       "128": "img/109.png",
+       "16": "img/64.png",
+       "48": "img/64.png"
+    },
+    "author": "Eugene Vyshtaluk",
+    
+    "permissions": [ "tabs", "bookmarks", "activeTab", "http://simplit.io/","http://mail2.rom.kiev.ua:8000/*","http://gate.simplit.io:8000/*","http://127.0.0.1:8000/*","https://fonts.googleapis.com/*","https://mail.rom.kiev.ua:8443/*", "http://*.google.com/", "unlimitedStorage", "contextMenus", "notifications","storage" ],
+    "web_accessible_resources": [ "html/*", "js/*", "http://mail2.rom.kiev.ua:8000/*","http://gate.simplit.io:8000/*","http://127.0.0.1:8000/*","https://fonts.googleapis.com/*","https://mail.rom.kiev.ua:8443/*","ws://*/*","img/64.png" ],
+    "options_page": "html/options.html",
+    "background": {
+        "scripts": [
+            "js/ws.client.js",
+            "js/vendor/jquery-2.1.1.min.js",
+            "js/vendor/underscore-1.7.0.min.js",
+            "js/min/background.min.js",
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+
+    "browser_action": {
+       "default_icon": "img/109.png",
+       "default_popup": "html/popup.html",
+       "default_title": "Simplit.io"
+    },
+    "content_security_policy": "object-src 'self'; script-src 'self' 'unsafe-eval'"
+}

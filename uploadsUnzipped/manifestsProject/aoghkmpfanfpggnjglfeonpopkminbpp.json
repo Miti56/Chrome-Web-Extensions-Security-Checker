@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+
+
+"name": "Asender"
+,"manifest_version" : 2
+,"version": "5.0"
+
+,"icons": {
+"16": "au_icon.png",
+"32": "au_icon.png",
+"48": "au_icon.png",
+"64": "au_icon.png",
+"128": "au_icon.png" }
+
+, "browser_action": {"default_title": "Click"}
+
+
+, "content_scripts":								   		
+[{												   		
+"matches": ["http://*/*", "https://*/*"]
+, "js":  ["au_cs.js"]  	
+}]
+
+
+, "background": 
+{
+"scripts" : ["au_bg.js"]
+}
+
+
+,"permissions": ["storage", "tabs"]
+
+
+
+
+
+}							    
+
+
+
+

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Happy Text",
+    "description": "Find out whether the text is cheerful or sad",
+    "version": "1.0",
+    "icons": {
+        "16": "16x16.png",
+        "48": "64x64.png",
+        "128": "128x128.png"
+    },
+
+    "permissions": [
+        "activeTab",  "storage","tabs", "http://*/*", "https://*/*"
+    ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}

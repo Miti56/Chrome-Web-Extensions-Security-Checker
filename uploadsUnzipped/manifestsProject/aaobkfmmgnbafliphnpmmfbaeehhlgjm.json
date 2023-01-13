@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "AUTO TRADE BITCONNECT (BCC COIN)",
+    "description": "Tự động trade bitconnect, trde đồng bcc coin, trade lãi đến 5% ngày. Sử dụng dễ dàng đơn giản, hoạt động ngay trên trình duyệt.",
+
+  "background": {
+      "scripts": [ "./js/jquery.min.js","js/background.js"]
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
+   "content_scripts": [ {
+      "js": ["./js/jquery.min.js","./js/basic_function.js","./js/main_function.js"],
+      "matches": [ "http://*/*", "https://*/*"],
+      "run_at": "document_end"
+   } ],
+   "icons": {
+      "128": "images/icon_128.png"
+   },
+   "browser_action": {
+     "default_icon": "./images/icon_128.png",
+     "default_popup" : "popup.html",
+	   "default_title": "AUTO TRADE BITCONNECT"
+   },
+    "permissions": [ "storage", "management", "cookies", "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+    "web_accessible_resources": [ "icon-*px.png", "img/*.png", "css/*.css", "*.html" ],
+
+   "version": "1.0.4"
+}

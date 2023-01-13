@@ -1,0 +1,40 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icons/icons128.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_app_name__"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "description": "Opens popup.html",
+         "suggested_key": {
+            "default": "Ctrl+Q",
+            "mac": "MacCtrl+Q"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "css/style.css" ],
+      "js": [ "js/popup.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "ru",
+   "description": "__MSG_app_description__",
+   "icons": {
+      "128": "icons/icons128.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "42",
+   "name": "__MSG_app_name__",
+   "permissions": [ "storage", "https://translate.google.com/", "https://translate.google.cn/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ "static/*.*" ]
+}

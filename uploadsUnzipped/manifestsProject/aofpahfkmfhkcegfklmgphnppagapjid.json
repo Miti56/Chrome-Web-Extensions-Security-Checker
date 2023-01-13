@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Alter Facebook",
+  "description": "This extension shows how Facebook can actually modernise their homepage.",
+  "version": "1.0",
+
+  "content_scripts": [
+     {
+        "matches":    ["https://www.facebook.com/"],
+        "css":        ["fix.css"]
+     }
+  ]
+}

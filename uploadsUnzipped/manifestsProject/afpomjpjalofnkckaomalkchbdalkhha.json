@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Emoji Picker",
+  "description": "Emoji picker library based on emojis from open source project Openmoji - https://openmoji.org/",
+  "version": "1.0.2",
+  "author": "Maciek Grzybek - https://github.com/maciekgrzybek",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Get the emoji"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [],
+  "content_security_policy": "script-src 'self' 'sha256-1r7eLgkUWKyUL9cmsy073y2a2ojTPzrZxyAeGLCfJFg='; object-src 'self';"
+}

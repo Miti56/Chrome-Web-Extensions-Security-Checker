@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.0.1",
+  "name": "快车优化助手",
+  "manifest_version": 2,
+  "description": "直通车优化工具，提高操作效率",
+  "browser_action": {
+    "default_title": "快车优化助手",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "web_accessible_resources": [
+    "inject.html"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": ["contextMenus", "management", "tabs", "storage", "webRequest", "https://ztc.quicloud.cn/*", "https://f002.quicloud.cn/*", "https://ztcex.quicloud.cn/*", "https://subway.simba.taobao.com/*"],
+  "content_security_policy": "default-src 'self'; script-src 'self' http://localhost:3600 https://localhost:3600 http://ztcex002.quicloud.cn https://ztcex002.quicloud.cn http://ztcex.quicloud.cn https://ztcex.quicloud.cn https://at.alicdn.com 'unsafe-eval'; connect-src http://localhost:3600 https://localhost:3600 http://ztcex002.quicloud.cn https://ztcex002.quicloud.cn http://ztcex.quicloud.cn https://ztcex.quicloud.cn https://ztc.quicloud.cn https://f002.quicloud.cn https://subway.simba.taobao.com; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
+}

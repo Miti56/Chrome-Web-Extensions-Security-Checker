@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "IT・科学に関するニュースや読み物",
+  "short_name": "科学新聞",
+  "description": "IT・科学に関するニュースや読み物を収集するアプリ。",
+  "manifest_version": 2,
+  "version": "2.1",
+  "app": {
+    "urls": [
+      "http://blogest.net/news/it/"
+    ],
+    "launch": {
+      "web_url": "http://blogest.net/news/it/"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  }
+}

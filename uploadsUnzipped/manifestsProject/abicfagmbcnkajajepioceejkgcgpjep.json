@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Cotação de bitcoin e altcoins - WatchCoins",
+  "description": "Cotações minuto a minuto de bitcoin e altcoins via WatchCoins",
+  "version": "2.1",
+  "background": {
+    "scripts": ["agent.js", "index.js"]
+  },
+  "permissions": [
+    "alarms",
+    "https://watchcoins.net/*"
+  ],
+  "browser_action": {
+    "default_icon": "images/watchcoins-icon-48.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/watchcoins-icon-16.png",
+    "32": "images/watchcoins-icon-32.png",
+    "48": "images/watchcoins-icon-48.png",
+    "64": "images/watchcoins-icon-64.png",
+    "128": "images/watchcoins-icon-128.png"
+  },
+  "manifest_version": 2
+}

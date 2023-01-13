@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Jira No Badge",
+	"version": "1.0.0",
+	"description": "if gamification has ruined your life, work stress free and remove badge from your face on jira",
+	"manifest_version": 2,
+	"permissions": [
+		"https://*.atlassian.net/*"
+	],
+	"icons": {
+		"128": "128.png"
+	},
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": [
+				"https://*.atlassian.net/*"
+			],
+			"css": [
+				"no-badge.css"
+			]
+		}
+	]
+}

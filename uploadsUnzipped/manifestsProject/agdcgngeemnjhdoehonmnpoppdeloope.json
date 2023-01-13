@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Walterizer",
+	"description": "Sometimes emojis are worth a thousand words.",
+	"version": "2",
+	"content_scripts": [
+		{
+			"matches": ["https://www.facebook.com/groups/316841598699162/*"],
+			"js": ["components/jquery/dist/jquery.min.js", "script.js"],
+			"css": ["styles.css"],
+			"run_at": "document_end"
+		}
+	],
+	"icons": {
+		"16": "icon128.png",
+		"48": "icon128.png",
+		"128": "icon128.png"
+	}
+}

@@ -1,0 +1,63 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+    "manifest_version": 2,
+    "name": "ReaderQ Fr",
+    "version": "1.0.8",
+    "author": "Quillsoft",
+
+    "description": "Réduire le plagiat avec la copie sélective et paraphraser plus facile.",
+
+    "icons": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "alarms",
+        "identity",
+        "identity.email",
+        "https://1q4all.com/*",
+        "https://www.googleapis.com/"
+    ],
+    "oauth2":{
+        "client_id": "52661162786-5im5sv3hcuq39eimui7p78b99dndi6cl.apps.googleusercontent.com",
+        "scopes":[
+            "https://www.googleapis.com/auth/chromewebstore.readonly"
+        ]
+    },
+    "background": {
+        "scripts": ["background.bundle.js"],
+        "persistent": false
+    },
+
+    "web_accessible_resources": [
+        "assets/loader.gif",
+        "content.css",
+        "assets/ParagraphRule.mp3",
+        "assets/SentenceRule.mp3",
+        "assets/WordRule.mp3",
+        "assets/listBullet.svg",
+        "assets/FrenchRules/expressions.txt",
+        "assets/FrenchRules/before_not_after.txt",
+        "assets/FrenchRules/not_after.txt",
+        "assets/FrenchRules/not_before_not_after.txt",
+        "assets/FrenchRules/not_before.txt",
+        "assets/imgs/ReaderQLicenseSplash.png",
+        "assets/imgs/ReaderQLicenseSplashFR.png"
+    ],
+
+    "browser_action": {
+        "default_icon": {
+            "16": "assets/icon16.png",
+            "48": "assets/icon48.png",
+            "128": "assets/icon128.png"
+        },
+        "default_title": "ReaderQ Edu"
+    }
+
+}

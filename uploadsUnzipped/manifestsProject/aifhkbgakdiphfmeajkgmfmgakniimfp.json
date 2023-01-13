@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bell+Cat",
+  "version": "5",
+  "manifest_version": 2,
+  "description": "A super simple and free tool to get you organized. Saves in Google Drive.",
+  "url": "https://bellpluscat.com",
+  "container": ["GOOGLE_DRIVE"],
+  "api_console_project_id": "1080262476462",
+  "gdrive_mime_types": {
+    "http://drive.google.com/intents/opendrivedoc": [
+      {
+        "type": [
+          "application/vnd.genus.unified",
+          "application/vnd.bell+cat.unified",
+          "application/vnd.google.drive.ext-type.bpc"
+        ],
+        "href": "https://bellpluscat.com/app",
+        "title": "Open",
+        "disposition": "window"
+      }
+    ]
+  },
+  "icons": {
+    "128": "icon-bellpluscat-small.png"
+  },
+  "app": {
+    "launch": {
+      "web_url": "https://bellpluscat.com/app"
+    }
+  }
+}

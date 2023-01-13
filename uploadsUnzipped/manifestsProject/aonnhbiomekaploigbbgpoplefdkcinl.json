@@ -1,0 +1,165 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "My Shopping",
+  "short_name": "My Shopping",
+  "description": "My Shopping vous propose des bons plans personnalisés durant votre shopping.",
+   "version": "4.7.2",
+
+  "icons": {
+     "16": "data/img/icons/picto_16.png",
+     "48": "data/img/icons/picto_48.png",
+     "128": "data/img/icons/picto_128.png"
+   },
+
+ "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "*://*/",
+    "webRequest",
+    "webRequestBlocking",
+    "proxy",
+    "unlimitedStorage"
+  ],
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "content_security_policy":"script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+	"browser_action": {
+    	"default_icon": {
+        	"19": "data/img/icons/icon19.png",
+	        "38": "data/img/icons/icon38.png"
+	    },
+		"default_title": "Voir les codes promos",
+		"default_popup": "panel.html"
+	},
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": [
+          "data/js/jquery.min.js",
+          "data/page-mods/utils/chrome-adapter.js",
+          "data/page-mods/utils/ui.js",
+          "data/page-mods/utils/cookies.js",
+          "data/page-mods/nav/analyzer.js",
+          "data/page-mods/boosters/more-products.js",
+          "data/page-mods/boosters/more-offers.js",
+	      "data/page-mods/boosters/more-flights.js",
+          "data/page-mods/boosters/more-coupons.js",
+          "data/page-mods/boosters/promo-offers.js"
+        ]
+    },
+    {
+      "matches": ["*://*.leguide.com/*"],
+      "js": [ "data/page-mods/search/leguide.js"]
+    },
+    {
+      "matches": ["*://*.kelkoo.fr/*"],
+      "js": [ "data/page-mods/search/kelkoo.js"]
+    },
+    {
+      "matches": ["*://*.shopping.com/*"],
+      "js": [ "data/page-mods/search/shopping.js"]
+    },
+    {
+      "matches": ["*://*.pricerunner.fr/*"],
+      "js": [ "data/page-mods/search/pricerunner.js"]
+    },
+    {
+      "matches": ["*://*.idealo.fr/*"],
+      "js": [ "data/page-mods/search/idealo.js"]
+    },
+    {
+      "matches": ["*://*.2xmoinscher.com/*"],
+      "js": [ "data/page-mods/search/2xmc.js"]
+    },
+    {
+      "matches": ["*://*.priceminister.com/*"],
+      "js": [ "data/page-mods/search/priceminister.js"]
+    },
+    {
+      "matches": ["*://*.izideal.fr/*"],
+      "js": [ "data/page-mods/search/izideal.js"]
+    },
+    {
+      "matches": ["*://*.lebigcomparateur.com/*"],
+      "js": [ "data/page-mods/search/lebigcomparateur.js"]
+    },
+    {
+      "matches": ["*://*.twenga.fr/*"],
+      "js": [ "data/page-mods/search/twenga.js"]
+    },
+    {
+      "matches": ["*://*.cherchons.com/*"],
+      "js": [ "data/page-mods/search/cherchons.js"]
+    },
+    {
+      "matches": ["*://*.achetezfacile.com/*"],
+      "js": [ "data/page-mods/search/achetezfacile.js"]
+    },
+    {
+      "matches": ["*://*.i-comparateur.com/*"],
+      "js": [ "data/page-mods/search/icomparateur.js"]
+    },
+    {
+      "matches": ["*://*.shopwiki.fr/*"],
+      "js": [ "data/page-mods/search/shopwiki.js"]
+    },
+    {
+      "matches": ["*://*.shopzilla.fr/*"],
+      "js": [ "data/page-mods/search/shopzilla.js"]
+    },
+    {
+      "matches": ["*://*.malinoo.fr/*"],
+      "js": [ "data/page-mods/search/malinoo.js"]
+    },
+    {
+      "matches": ["*://*.monsieurprix.com/*"],
+      "js": [ "data/page-mods/search/monsieurprix.js"]
+    },
+    {
+      "matches": ["*://*.amazon.fr/*"],
+      "js": [ "data/page-mods/search/amazon.js"]
+    },
+    {
+      "matches": ["*://*.google.fr/*"],
+      "js": [ "data/js/jquery.ba-hashchange.js", "data/page-mods/search/google.js"]
+    },
+    {
+      "matches": ["*://*.ebay.fr/*"],
+      "js": [ "data/page-mods/search/ebay.js"]
+    },
+    {
+      "matches": ["*://*.cdiscount.com/*"],
+      "js": [ "data/page-mods/search/cdiscount.js"]
+    },
+    {
+      "matches": ["*://*.laredoute.fr/*"],
+      "js": [ "data/page-mods/search/laredoute.js"]
+    },
+    {
+      "matches": ["*://*.pixmania.com/*"],
+      "js": [ "data/page-mods/search/pixmania.js"]
+    },
+    {
+      "matches": ["*://*.rueducommerce.fr/*"],
+      "js": [ "data/page-mods/search/rueducommerce.js"]
+    },
+    {
+      "matches": ["*://*.3suisses.fr/*"],
+      "js": [ "data/page-mods/search/3suisses.js"]
+    },
+    {
+      "matches": ["*://*.mistergooddeal.com/*"],
+      "js": [ "data/page-mods/search/mistergooddeal.js"]
+    }
+  ]
+}

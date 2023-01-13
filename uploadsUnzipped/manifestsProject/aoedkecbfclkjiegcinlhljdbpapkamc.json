@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Comments",
+  "short_name": "Comments",
+  "description": "Collect and display visitor comments in a custom feed!",
+  "version": "1.1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128x128.png"
+  },
+  "app": {
+    "urls": [
+      "https://www.powr.io/plugins/comments/"
+    ],
+    "launch": {
+      "web_url": "https://www.powr.io/plugins/comments/standalone?platform=chrome"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Fishbole For Google Slides",
+  "description": "Create a Fishbole from google slides",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/Icon-Fishbole_16.png",
+    "32": "icons/Icon-Fishbole_32.png",
+    "48": "icons/Icon-Fishbole_48.png",
+    "128": "icons/Icon-Fishbole_128.png"
+  },
+  "permissions": [
+    "https://docs.google.com/presentation/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/presentation/*"],
+      "js": ["contentscript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 2
+}

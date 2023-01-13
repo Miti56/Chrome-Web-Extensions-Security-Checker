@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Password App",
+  "short_name": "Password App",
+  "version": "2.0.17.1",
+  "manifest_version": 2,
+  "description": "Password App (powered by Passportal), is a password manager that saves and secures your passwords for easy use from any device.",
+  "homepage_url": "http://passportalmsp.com",
+  "icons": {
+    "16": "icons/16x16.png",
+    "19": "icons/19x19.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128o.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": ["js/chrome-platform-analytics/google-analytics-bundle.js","js/jquery/jquery.min.js","js/url-tld/url-tld.min.js","src/bg/background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/128x128o.png",
+    "default_title": "Password App",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/jquery/jquery.min.js","js/lib/UrlDetection.js","js/form-field-detection.js","js/url-tld/url-tld.min.js","src/inject/inject.js"],
+      "css" : ["src/inject/PPStyles.css"]
+    }
+  ],
+ "web_accessible_resources": ["overlay.html","overlay-update.html","insert-login-popup.html", "img/blank.png","img/shield.gif","src/inject/PPStyles.css"] ,
+  "permissions": [
+		"tabs",
+		"webRequest",
+		"storage",
+        "contextMenus",
+        "cookies",
+        "privacy",
+        "chrome://favicon/",
+		"notifications",
+        "https://www.google-analytics.com/",
+        "https://*.passportalmsp.com/",
+        "https://*.passportalmsp.com/*",
+        "unlimitedStorage"
+	]
+}

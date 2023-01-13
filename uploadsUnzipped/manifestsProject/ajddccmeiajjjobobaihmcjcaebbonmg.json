@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "ГИС ГЕОМИКС",
+"description": "Номер один в горном деле",
+"manifest_version": 2,
+"version": "1",
+"icons": { "128": "icon.png" },
+"app": {
+"urls": [
+"http://www.geomix.ru/"
+],
+"launch": {
+"web_url": "http://www.geomix.ru/"
+}
+}
+}

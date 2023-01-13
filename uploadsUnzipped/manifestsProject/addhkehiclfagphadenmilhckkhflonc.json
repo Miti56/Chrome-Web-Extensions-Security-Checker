@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Support for Quickbooks Errors",
+"description": "Get Support for Quickbooks Errors & Fix the Issues Fast",
+"version": "1.1",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://quickbooksnumber.support/"
+],
+"launch": {
+"web_url": "http://quickbooksnumber.support/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

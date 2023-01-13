@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Muzzle",
+  "description": "Muzzle users on social platforms",
+  "version": "1.0",
+  "browser_action": {
+   "default_icon": "icon128.png"
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/", "*://*.reddit.com/r*", "*://*.reddit.com/user*"],
+      "js" : ["jquery-3.1.1.min.js", "reddit.js"],
+      "css": ["main.css"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "*://*.reddit.com/",
+    "*://*.reddit.com/r*",
+    "*://*.reddit.com/user*",
+    "*://localhost/*"
+   ]
+}

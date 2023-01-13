@@ -1,0 +1,20 @@
+{
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "photozoom.js" ]
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "description": "Facebook photozoom. Facebook photos zoom manager, descriptor, hider extension download.",
+   "icons": {
+      "128": "icons.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "60.0.3112.101",
+   "name": "Facebook For Photo Zoom",
+   "permissions": [ "notifications", "storage", "browser", "alarms" ],
+   "short_name": "pohotozoom",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.10"
+}

@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Snake",
+  "description": "Classic Snake game",
+  "version": "2.1",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": { "16": "test16.png", "128": "test128.png" }
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "url-shortener",
+  "short_name": "ushortener",
+  "description" : "URL shortener plugin",
+  "version": "1.0",
+  "icons": {
+    "16":   "images/icon016.png",
+    "32":   "images/icon032.png",
+    "64":   "images/icon064.png",
+    "128":  "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon032.png",
+    "default_title": "url shortener",
+    "default_popup": "popup.html"
+  },
+  "permissions": [  
+    "cookies",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "manifest_version": 2
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "assistant",
+    "description": "Assistant for life~",
+    "version": "0.0.1",
+    "browser_action": {
+        "default_popup": "src/popup.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "icons": {
+        "16": "images/assistant.png",
+        "32": "images/assistant.png",
+        "48": "images/assistant.png",
+        "128": "images/assistant.png" 
+    },
+    "options_page": "src/options.html",
+    "manifest_version": 2
+}

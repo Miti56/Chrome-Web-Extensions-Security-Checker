@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Properties for Apptimo",
+  "short_name": "Properties",
+  "description": "Search, view, organize and manage information for all the properties in your PM portfolio.",
+  "version": "1.2",
+  "minimum_chrome_version": "23",
+  "icons": {
+    "128": "128.png"    
+  },
+  "permissions": ["webview", "pointerLock", "geolocation", "videoCapture"],
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  }
+}

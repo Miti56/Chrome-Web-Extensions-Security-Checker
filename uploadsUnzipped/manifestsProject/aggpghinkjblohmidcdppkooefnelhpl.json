@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+	"name" : "Roiland CTI Plugin",  
+	"version" : "1.1.2",  
+	"description" : "Roiland CTI Plugin",  
+	"background" : { "scripts": ["background.js"] },  
+	"permissions" : [  
+		"nativeMessaging"
+	],  
+	"icons": {
+      "128": "cti.png"
+   },
+	"content_scripts": [  
+	{  
+		"matches": ["https://*.roistar.net/*","http://*.roistar.net/*","http://127.0.0.1/*"],  
+		"js": ["content.js"]  
+	}  
+	],  
+	"minimum_chrome_version" : "23.0.0.0",  
+	"manifest_version": 2  
+}

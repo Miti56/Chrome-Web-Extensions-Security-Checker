@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "LiveSparrow Screen Capture",
+  "description": "This extension enables you to record your presentation and also share it when conferencing",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_icon": "icon_128.png"
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://*.livesparrow.com/*"
+    ]
+  },
+  "permissions": [
+    "desktopCapture",
+    "*://*.livesparrow.com/*"
+  ]
+}

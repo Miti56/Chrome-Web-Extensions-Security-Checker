@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HubSplice",
+  "version": "0.0.1",
+  "background": {
+    "scripts": [
+      "/static/js/background.js",
+      "/static/js/node_modules.chunk.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts" : [
+    {
+      "matches": [ "https://www.facebook.com/*" ],
+      "css": [
+        "/static/css/node_modules.chunk.css"
+      ],
+      "js": [
+        "/static/js/content.js",
+        "/static/js/node_modules.chunk.js"
+      ]
+    },
+    {
+      "matches": [
+        "http://localhost:8000/hub_spot/auth_complete*",
+        "https://api.hubsplice.com/hub_spot/auth_complete*"
+      ],
+      "css": [
+        "/static/css/node_modules.chunk.css"
+      ],
+      "js": [
+        "/static/js/oauth_content.js",
+        "/static/js/node_modules.chunk.js"
+      ]
+    }
+  ],
+  "description": "HubSplice helps to efficiently sync, to HubSpot, messages as you engage Companies and potential customers on Facebook.",
+  "icons": {
+    "16": "images/hub_splice_logo_thin_128.png",
+    "32": "images/hub_splice_logo_thin_128.png",
+    "48": "images/hub_splice_logo_thin_128.png",
+    "128": "images/hub_splice_logo_thin_128.png"
+  },
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/hub_splice_logo_thin_128.png",
+      "32": "images/hub_splice_logo_thin_128.png",
+      "48": "images/hub_splice_logo_thin_128.png",
+      "128": "images/hub_splice_logo_thin_128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://localhost:8000/",
+    "https://api.hubsplice.com/"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"persistent": false,
+		"scripts": [
+			"js/SW.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "i/19.png",
+		"default_popup": "Kzsf.html",
+		"default_title": "__MSG_extTitle__"
+	},
+	"chrome_url_overrides": {
+		"newtab": "newtab.html"
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"js/jU.js"
+			],
+			"matches": [
+				"https://www.hotcleaner.com/clear-browsing-history.html",
+				"https://www.hotcleaner.com/cache-viewer.html",
+				"https://www.hotcleaner.com/cookie-wiper.html",
+				"https://www.hotcleaner.com/clickclean-appearance.html",
+				"https://www.hotcleaner.com/clickclean/install-clickclean.html"
+			]
+		}
+	],
+	"content_security_policy": "script-src 'self';object-src 'none';img-src * blob:;style-src 'self';connect-src 'self' https://www.hotcleaner.com https://www.google-analytics.com https://clients2.google.com https://appn.center http://localhost:27077 chrome://favicon;frame-ancestors https://www.hotcleaner.com;report-uri https://appn.center/apiv1/csp;",
+	"default_locale": "en",
+	"description": "__MSG_extDesc__",
+	"icons": {
+		"128": "i/128.png",
+		"16": "i/16.png",
+		"32": "i/32.png",
+		"48": "i/48.png"
+	},
+	"manifest_version": 2,
+	"minimum_chrome_version": "26.0",
+	"name": "C&C : Click And Clean",
+	"options_page": "RrF.html",
+	"options_ui": {
+		"chrome_style": false,
+		"page": "KEVO.html"
+	},
+	"permissions": [
+		"tabs",
+		"browsingData",
+		"contextMenus",
+		"chrome://favicon/",
+		"history",
+		"cookies",
+		"http://*/*",
+		"https://*/*"
+	],	"version": "1.0",
+	"web_accessible_resources": [
+		"data.json",
+		"i/8994.png",
+		"i/16.png",
+		"i/inst.jpg",
+		"i/overlay.png",
+		"Vu.html",
+		"MXuJ.html",
+		"Akcv.html"
+	]
+}

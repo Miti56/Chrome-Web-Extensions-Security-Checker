@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Hot Bucket",
+  "version": "1.1",
+  "description": "Removes Ice Bucket posts from Facebook",
+  "permissions": ["tabs", "*://www.facebook.com/*"],
+  "content_scripts": [
+  	{
+  		"matches": ["*://www.facebook.com/*"],
+  		"js": ["remove_posts.js"]
+  	}
+  ],
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_popup": "background.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
+}

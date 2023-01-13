@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bus24.cz",
+  "description": "Удобный сервис по аренде микроавтобусов", 
+  "version": "2.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.bus24.cz/"
+    ],
+    "launch": {
+      "web_url": "http://www.bus24.cz/"
+    }
+  }
+}

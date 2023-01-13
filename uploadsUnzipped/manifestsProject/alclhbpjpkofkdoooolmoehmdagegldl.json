@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "LazyCode",
+  "description": "Very useful soft",
+  "version": "0.5",
+
+  "icons": {
+    "48": "icon/open.png"
+  },
+  "web_accessible_resources": [
+      "icon/open.png"
+    ],
+
+  "permissions": [
+    "identity",
+    "notifications",
+    "background"
+   ],
+
+  "content_security_policy":"script-src  'self' https://www.gstatic.com/ https://maxcdn.bootstrapcdn.com/ https://*.firebaseio.com https://*.googleapis.com; object-src 'self'",
+
+  "browser_action": {
+    "default_title": "LazyCode",
+    "default_icon": "icon/close.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "options_page": "options.html",
+  "oauth2": {
+    "client_id": "1005535696669-ilp64van0ge3o772lo0e238sjrfi1cs8.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiBw9Sb5NOsiuEyucVmiA8XU9M5Dto0cJJlYv66n/8ptfMrNp9xdtOrs86e0iS+Q7xX4EckL/xPsTCAAYiXPAc8e0H1IyBx1EBsQzo3K3PoLrJUkEI4gQ/kH5Ks9Mn2WoLju6g/oreWWbSIyrg+rkxsVa98L3n4epzeBScuJT/ytXbZ7L3mPzIeNCD0LM+JTOBRX/a5hq1gbd6mAJH9UOZ2p6bOILUs7Z1d/XsJDbZQgLLM3yCcloH8jLUiStOO3tiGlKQU4kCjzCnSctO2TwvCdMR+f/OVFKJECpF0762HayLBg98QdlqfGmrHm6V3ESb6qzmU6RWdn7LZIlo4sXRQIDAQAB"
+}

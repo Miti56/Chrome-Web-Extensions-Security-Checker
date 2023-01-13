@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Portals student",
+  "manifest_version": 2,
+  "version": "1.3",  
+  "description": "Portals browser student",
+  "app": {
+  
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+   "permissions": [ "webview" ],
+
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  }
+
+}

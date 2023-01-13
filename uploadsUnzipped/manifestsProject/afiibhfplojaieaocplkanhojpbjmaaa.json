@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Classroom Cloud - Join for FREE.",
+  "description": "Backup, Share and Sync your files across all your Computers and Devices: Android, desktop, laptop, iPad, iPhone, Blackberry.",
+  "version": "1.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.cloudtrial.net/index.php"
+    ],
+    "launch": {
+      "web_url": "http://www.cloudtrial.net/index.php"
+    }
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

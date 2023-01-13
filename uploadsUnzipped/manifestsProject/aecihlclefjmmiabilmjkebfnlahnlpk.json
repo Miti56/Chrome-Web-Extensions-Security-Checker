@@ -1,0 +1,17 @@
+{
+   "name": "Represent Analytics",
+   "description": "Represent Analytics lets you see how your Represent campaigns are doing with one click of a browser button.",
+   "browser_action": {
+      "default_icon": "app/images/represent-icon.png",
+      "default_title": "Represent seller analytics",
+      "default_popup": "index.html"
+   },
+   "icons": {
+      "128": "app/images/represent-icon.png"
+   },
+   "permissions": ["https://*.represent.com/*"],
+   "manifest_version": 2,
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

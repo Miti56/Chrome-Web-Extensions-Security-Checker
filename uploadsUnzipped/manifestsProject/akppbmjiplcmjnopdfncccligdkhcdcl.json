@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "EXVERSION",
+  "description": "Open data, and data management tools for developers",
+  "version": "1",
+  "app": {
+    "launch": {
+      "web_url": "http://exversion.com"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

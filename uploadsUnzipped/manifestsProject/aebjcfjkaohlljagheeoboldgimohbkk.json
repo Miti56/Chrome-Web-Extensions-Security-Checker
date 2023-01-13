@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Software Vulnerability Reports",
+  "description": "Check if software has reported security vulnerabilities listed in Secunia, Exploit Database, and Packet Storm.",
+  "version": "1.0.4",
+  "manifest_version": 2,
+  "omnibox": { "keyword" : "svr" },
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["background.js"],
+	"persistent": false
+  },
+  "options_page": "options.html",
+    "icons" : {
+    "16" : "icon16.png",
+    "48" : "icon48.png",
+    "128" : "icon128.png",
+  "homepage_url": "http://www.whitefirdesign.com/software-vulnerability-reports?pk_campaign=SVR-Chrome"
+  }
+}

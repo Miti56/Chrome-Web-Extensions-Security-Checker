@@ -1,0 +1,21 @@
+{
+   "browser_action": {
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "css/list.css" ],
+      "js": [ "content_script.js" ],
+      "matches": [ "https://www.amazon.com/*" ]
+   } ],
+   "description": "The simplest way to copy Amazon ASIN shortcodes for your AAWP tables.",
+   "icons": {
+      "128": "128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA40KG70/I7MHT5NliE2JTOC88buUQ1TNKMy1aRRmHJI+BpGK21tizo5xOasNEwhGTy54u+B1s4NK52Y3rvM2NYidjCVTMgec+OGq63Ch9JtmSZdopyCGsCAvYYLvld6tuNCSzwOIyHxr3jzsZOUeklFxLehrS546T2FuKCqOjv5bpt5JubgEgg2IDrxJsMJIpFHoWfP+AjaTQ28WT32+UJUSLjvTXP0dOL6LXn/dB/8l/9IqiWkI/7uZBouNYZGMoFnr4SeKyOjgKjsjD1Evsid73vn98H2eAR4dpou392KJGYV/LeKf7R6ZDjAswC+jJpusoFT2dHP/a4oOSW+iBwwIDAQAB",
+   "manifest_version": 2,
+   "name": "AMZ Table Assistant Pro",
+   "permissions": [ "tabs", "activeTab", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.8.2",
+   "web_accessible_resources": [ "scriptAppendedToHead.js", "css/list.css" ]
+}

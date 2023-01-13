@@ -1,0 +1,20 @@
+{
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "background.js" ]
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "description": "Vpn adguard chrome, opera, download a program that prevents ads in any browser such as mozilla firefox.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "24.0.1307.0",
+   "name": "Adguard Vpn Download",
+   "permissions": [ "notifications", "storage", "browser", "alarms" ],
+   "short_name": "Myapp",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.53"
+}

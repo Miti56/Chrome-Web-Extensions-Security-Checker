@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "くわツリービュー",
+	"version": "10.15",
+	"description": "あやしいわーるど＠みさおの投稿をツリーで表示できます。スタック表示の方にもいくつか機能を追加できます。",
+	"permissions": [
+		"http://misao.on.arena.ne.jp/",
+		"http://misao.mixh.jp/",
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"js": ["build/main.js"],
+			"matches": [
+				"http://misao.on.arena.ne.jp/cgi-bin/bbs.cgi*",
+				"http://misao.mixh.jp/cgi-bin/bbs.cgi*",
+				"http://usamin.elpod.org/cgi-bin/swlog.cgi?b=*&s=*"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"options_page": "options/options.html",
+	"background": {
+		"persistent": false,
+		"scripts": ["eventPage.js"]
+	},
+	"manifest_version": 2,
+	"minimum_chrome_version": "42",
+	"icons": {
+		"48": "icon/icon48.png",
+		"128": "icon/icon128.png"
+	}
+}

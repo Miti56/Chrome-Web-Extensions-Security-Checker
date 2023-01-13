@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Afore",
+  "description": "Afore Tools.",
+  "version": "0.96",
+  "minimum_chrome_version": "16.0.884",
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false,
+      "matches": ["https://www.linkedin.com/*", "https://angel.co/*", "https://www.crunchbase.com/*"],
+      "all_frames": false
+  },
+  "browser_action": {
+      "default_title": "Afore",
+      "default_icon": "images/a16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["jquery.js", "defines.js", "afore_gcal.js"],
+      "css": ["venturestack.css"],
+      "run_at": "document_end"
+    }
+   ],
+  "web_accessible_resources": ["images/*"],
+  "icons": { "16": "images/a16.png"},
+  "permissions": ["activeTab", "tabs"],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}

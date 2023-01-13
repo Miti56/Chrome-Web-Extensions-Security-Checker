@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Buzzweb - Instagram analytics for bloggers",
+    "description" : "Get rid of fake followers. Track followers and get insights about your audience and engagement rate.",
+    "version": "1.10",
+    "browser_action": {
+      "default_popup": "buzzweb.html",
+      "default_icon": "images/buzzweb.png"
+    },
+    "background": {
+      "scripts": ["js/background.js"],
+      "persistent": false
+    },
+    "permissions": [
+    	"cookies",
+      "https://.buzzweb.pro/",
+      "https://.instagram.com/",
+    	"storage",
+    	"alarms",
+      "identity",
+      "identity.email"
+    ],
+	"externally_connectable": {
+	  "matches": ["https://*.buzzweb.pro/*"]
+	},
+    "icons": {
+      "16": "images/buzzweb-16.png",
+      "32": "images/buzzweb-32.png",
+      "48": "images/buzzweb-48.png",
+      "128": "images/buzzweb-128.png"
+    },
+  	"content_scripts": [
+  		{
+      		"matches": ["https://*.buzzweb.pro/*"],
+      		"js": ["js/communicate-buzzweb.js"]
+    	}
+	],
+    "manifest_version": 2
+  }

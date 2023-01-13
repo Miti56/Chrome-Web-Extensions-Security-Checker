@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CANVAS20190530",
+  "version": "19.05.30",
+  "manifest_version": 2,
+  "description": "Get pages source from a popup",
+  "browser_action": {"default_icon": "icon.png","default_popup": "popup.html"},
+  "icons": {"16": "/icon1.png","48": "/icon2.png","128": "/icon3.png"},
+  "permissions": ["activeTab","downloads","webRequest","http://gibra2.co.il/", "http://gibra2.co.il/pirsoom/pirsoom1.gif", "http://gibra2.co.il/tosafim"],
+  "options_page": "options.html"
+}
+

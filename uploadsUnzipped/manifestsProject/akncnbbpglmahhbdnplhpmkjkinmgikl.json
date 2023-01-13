@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+	"name": "Lordz IO Play",
+	"author": "http://www.iogamesplus.com",
+	"version": "1.9",
+	"manifest_version": 2,
+	"description": "The best mod and extension for all io games.",
+	"browser_action": {
+		"default_popup": "index.html",
+		"default_icon": "128x128.png"
+	},
+	"icons" :{
+		"16"	:	"16x16.png",
+		"48"	:	"48x48.png",
+		"128"	:	"128x128.png"
+	},
+	"background" : { "scripts" : ["add.js"]
+	}	
+}

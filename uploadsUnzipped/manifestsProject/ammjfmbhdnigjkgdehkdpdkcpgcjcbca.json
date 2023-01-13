@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "OZON.Travel",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Авиабилеты, железнодорожные билеты. Заказ, бронирование продажа авиабилетов и ж/д билетов. Бронирование гостиниц и отелей",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icons/icon64.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://ozon.travel/*"
+  ],
+  "icons": {"64": "icons/icon64.png",
+            "128": "icons/icon128.png"},
+  "homepage_url": "http://bright-flights.ru/"
+}

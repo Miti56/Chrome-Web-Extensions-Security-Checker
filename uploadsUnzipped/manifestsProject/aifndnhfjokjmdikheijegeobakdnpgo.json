@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "立タブ",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "立教のシラバスのタブの名前を『授業名』にChange！",
+  "content_scripts": [
+    {
+      "matches": ["https://sy.rikkyo.ac.jp/timetable/slbssbdr*"],
+      "js": ["jquery-2.1.4.min.js", "fuga.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

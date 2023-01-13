@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Colobit LTD - Mini account",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "permissions": [
+	"cookies",
+	"notifications",
+    "https://colobit.biz/"
+  ],
+  "background": {
+    "scripts": ["bg.js"]
+  },
+	"browser_action": 
+	{
+        "default_title": "Colobit LTD - Mini account",
+        "default_popup": "popup.html"
+    },
+	"icons": { "16": "icon16.png",
+           "48": "icon48.png" }
+}

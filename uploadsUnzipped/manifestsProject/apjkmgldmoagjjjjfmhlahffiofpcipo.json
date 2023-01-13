@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "Silver & Carbon Aero Theme",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 0, 0, 0 ],
+         "button_background": [ 0, 0, 0 ],
+         "frame": [ 0, 0, 0 ],
+         "ntp_link": [ 225, 225, 225 ],
+         "ntp_link_underline": [ 225, 225, 225 ],
+         "ntp_section": [ 0, 0, 0 ],
+         "ntp_section_link": [ 255, 255, 255 ],
+         "ntp_section_text": [ 225, 225, 225 ],
+         "ntp_text": [ 225, 225, 225 ],
+         "tab_background_text": [ 0, 0, 0 ],
+         "tab_text": [ 0, 0, 0 ],
+         "toolbar": [ 225, 225, 225 ]
+      },
+      "images": {
+         "theme_button_background": "images/buttons.png",
+         "theme_frame_inactive": "images/theme_frame_inact.png",
+         "theme_ntp_background": "images/bg.png",
+         "theme_tab_background": "images/tab_bg.png",
+         "theme_toolbar": "images/toolbar.png",
+         "theme_window_control_background": "images/control_buttons.png"
+      },
+      "properties": {
+         "ntp_background_repeat": "repeat",
+         "ntp_logo_alternate": "1"
+      },
+      "tints": {
+         "buttons": [ 60, 55, 0 ]
+      }
+   },
+   "version": "1.3"
+}

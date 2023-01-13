@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SkinsTrader Reseller",
+  "version": "2.0",
+  "manifest_version": 2,
+  "description": "Extension for traders",
+  "homepage_url": "https://skinstrader.club",
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "38": "icons/icon38.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Settings",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "permissions": [
+    "cookies",
+    "<all_urls>",
+    "http://localhost:3000/",
+    "background",
+    "storage",
+    "unlimitedStorage"
+  ],
+
+  "web_accessible_resources": [ "*.mp3" ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://opskins.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://opskins.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

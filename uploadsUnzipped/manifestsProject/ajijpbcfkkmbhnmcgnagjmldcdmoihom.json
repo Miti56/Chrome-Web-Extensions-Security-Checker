@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Last Day on Earth: Survival",
+  "description": "Last Day on Earth is a FREE MMORPG zombie shooter survival and strategy game,",
+  "minimum_chrome_version": "24.0.1307.0",
+"container": "GOOGLE_DRIVE",
+  "version": "1",
+  "icons": {
+    "128": "last.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["last.js"],
+      "persistent": true
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

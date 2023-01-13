@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*", 
+                "https://*/*"
+            ], 
+            "all_frames": true, 
+            "run_at": "document_start", 
+            "js": [
+                "includes/content.js"
+            ]
+        }
+    ], 
+    "name": "GetYoko Cashback Extension", 
+    "short_name": "GetYoko", 
+    "icons": {
+        "128": "icons/icon128.png", 
+        "48": "icons/icon48.png", 
+        "16": "icons/button.png"
+    }, 
+    "web_accessible_resources": [
+        "js/*", 
+        "toolbar/*", 
+        "icons/*"
+    ], 
+    "description": "Get the latest deals, cashback and coupons from most popular stores at getyoko.com", 
+    "background": {
+        "page": "background.html"
+    }, 
+    "homepage_url": "http://getyoko.ileaddigital.com/", 
+    "version": "1.0.5", 
+    "manifest_version": 2, 
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'", 
+    "browser_action": {
+        "default_popup": "popup.html", 
+        "default_icon": "icons/button.png", 
+        "default_title": "GetYoko Cashback Extension"
+    }, 
+    "permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*", 
+        "contextMenus", 
+        "webNavigation"
+    ]
+}

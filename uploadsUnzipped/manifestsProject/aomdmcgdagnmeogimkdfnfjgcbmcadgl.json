@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "WebPage Contents Diff",
+	"description": "Webページ上のコンテンツを比較する拡張機能です。(It is an extension to check the contents on a Web page.)",
+	"version": "0.0.1",
+	"icons": {
+		"128": "images/icon/icon_128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"128": "images/icon/icon_128.png"
+		},
+		"default_title": "WebPage Content Diff"
+	},
+	"background": {
+		"scripts": [ "js/background.js" ],
+		"persistent": false
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": [
+			"js/jquery-2.1.1.min.js",
+			"js/content.js"
+		]
+	}],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+    "options_page": "options.html"
+}

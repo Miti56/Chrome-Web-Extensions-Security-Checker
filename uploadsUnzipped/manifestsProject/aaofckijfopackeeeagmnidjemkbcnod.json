@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Pixton for Schools",
+  "short_name": "Pixton",
+  "version": "3.4",
+  "description": "Inspire students to read and write with comics! Encourage both written and graphical literacy.",
+  "icons": {
+    "128": "icons/icon-pixton-128x128.png",
+    "16": "icons/icon-pixton-16x16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "88628410472",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://www.pixton.com/schools/platform/google/auth-google/v1"
+    }
+  }
+}

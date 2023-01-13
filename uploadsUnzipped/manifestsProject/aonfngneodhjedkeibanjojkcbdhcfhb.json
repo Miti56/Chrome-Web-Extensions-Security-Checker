@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Collaborative Brain",
+  "description": "This extension offers the possibility to add tabs to your Collaborative Brain account",
+  "version": "0.0.4",
+
+  "browser_action": {
+    "default_icon": "brain.png",
+    "default_popup": "popup.html"
+  },
+  "background": { "scripts": ["background.js"] },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "https://alexa-cz-meetup.herokuapp.com/",
+    "notifications",
+    "tabs",
+    "storage"
+  ]
+}

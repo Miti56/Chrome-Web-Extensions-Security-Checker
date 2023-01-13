@@ -1,0 +1,23 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "img/news19.png",
+      "default_popup": "popup.html"
+   },
+   "default_locale": "ru",
+   "description": "Последние новости - Экономика, Политика, Общество, Происшествия, Спорт, Наука и Техника, Авто, Культура, В мире, Другие новости",
+   "icons": {
+      "128": "img/news128.png",
+      "16": "img/news19.png",
+      "48": "img/news48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjBTda4xwnuHd1xzHWASK+wdPlJdWOpXUWfvvtoT7iUbcobo1xMoX9QdW2EEWwVBNtvshDPy5l08PgNHBv5LYDyWaFJ/my+gzHO2V1HbXTFCES3bu7Wo1GdRqBtZuJSgRwLcVpdJ0CQ+kfqT6mnV+O9rtNCIuwcvGhjGN44jU/q7vszEwtp0fAiL7IN1AE/UcNWz8QwQJmACk23Np1BbpFoZSIRJ9HfPkEfvYarWkRXe5rp9wi0OUKCf/IscnYtojWVm99v3RTrrx9AFNq8Y9Eu07x4gJOgPYoqGL81wIF3KMFYxevMtN1OatDbQpI/ZHEM/e3r7VcRX5oia6fi7qIQIDAQAB",
+   "manifest_version": 2,
+   "name": "Новости NETClion",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "alarms", "notifications", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.3.0"
+}

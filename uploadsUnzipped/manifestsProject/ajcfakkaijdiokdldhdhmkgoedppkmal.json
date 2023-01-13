@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Golf4Holland",
+  "description": "Golf4Holland is dé online golfvereniging van Nederland!",
+  "version": "0.2",
+  "app": {
+    "urls": [
+      "http://golf4holland.nl/"
+    ],
+    "launch": {
+      "web_url": "http://golf4holland.nl/"
+    }
+  },
+  "icons": {
+    "128": "g4h_logo.png"
+  }
+}

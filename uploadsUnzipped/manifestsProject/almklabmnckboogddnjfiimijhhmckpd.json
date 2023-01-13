@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version":2,
+ "name": "Colpensiones-Bizagi",
+ "version": "1.1",
+  
+ "description": "Aplicación para el logueo en la plataforma bizagi",
+ "browser_action":{
+	"default_icon": "adictec.png"
+ },
+  "content_scripts": [
+    {
+	   "matches": ["http://192.168.72.97:8080/millecolpensionessac/pages/Application.jsp","http://10.72.73.11:8080/millecolpensionessac/pages/Application.jsp","http://10.72.73.12:8080/millecolpensionessac/pages/Application.jsp","http://10.100.70.25/prod_colpensiones/"],
+       "js": ["jquery-3.3.1.min.js","inyeccion.js"]
+    }
+  ],
+ "permissions":[
+	"tabs",
+	"http://*/",
+	"https://*/",
+	"storage" 
+ ] 
+}

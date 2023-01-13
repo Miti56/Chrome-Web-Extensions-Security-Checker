@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "WP Content Discovery",
+  "version": "1.1",
+  "description": "Discover content on WordPress sites, using the WordPress REST API",
+  "homepage_url": "https://earthpeople.agency/",
+  "icons": {},
+  "browser_action": {
+    "default_title": "wordpress thingie",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+       "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content_script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "豆口袋",
+    "version": "1.0",
+    "description": "查询二手房历史价格",
+    "icons": {
+
+        "16": "images/avatar_snail.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "*://*.peapocket.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://*.lianjia.com/ershoufang/*.html"],
+            "js": ["js/jquery-3.2.1.js","js/echarts.js","js/history.js"],
+            "run_at": "document_end"
+        }
+    ]
+
+
+}

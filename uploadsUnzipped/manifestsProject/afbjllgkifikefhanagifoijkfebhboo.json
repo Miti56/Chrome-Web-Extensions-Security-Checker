@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Parking Passion",
+	"short_name": "ParkingPassion",
+	"description": "Best Game In which we have different situations for parking cars.",
+	"version": "1.0",
+	"manifest_version": 2,
+	"app": {
+		"launch": {
+			"web_url": "http://w0wtv.xyz/cars/parking-passion"
+		}
+	},
+	"icons": {
+		"128": "icon-128.png"
+	},
+	"permissions": [
+		"storage",
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

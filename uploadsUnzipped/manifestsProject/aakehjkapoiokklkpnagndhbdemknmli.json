@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1.3",
+  "name": "Satsuki's Riko",
+  "short_name": "RikoSat",
+  "theme": {
+    "images" : {
+      "theme_toolbar" : "images/theme_toolbar.png",
+	  "theme_button_background" : "images/theme_button_background.png",
+      "theme_ntp_background" : "images/theme_ntp_background.png"
+	 },
+    "colors" : {
+      "frame" : [21,191,231],
+	  "theme_frame" : [157, 227, 250],
+      "toolbar" : [187, 251, 255],
+      "ntp_text" : [27, 15, 9],
+      "ntp_link" : [27, 15, 10],
+      "ntp_section" : [207, 221, 192],
+      "button_background" : [232, 184, 184],
+	  "control_background" : [255, 56, 56]
+	  },
+    "tints" : {
+	  "frame" : [0.5, 0.5, 0.1]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom right"
+	 }
+	 }
+	 }

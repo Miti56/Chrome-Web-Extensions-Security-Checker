@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "content_scripts": [ {
+      "css": [ "dist/css/wordhelper.css" ],
+      "js": [ "dist/js/jquery-1.11.3.min.js", "dist/js/howler.min.js", "dist/js/main.js" ],
+      "matches": [ "http://*/", "http://*/*", "https://*/", "https://*/**" ]
+   } ],
+   "description": "单词助手",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "32": "icons/32.png"
+   },
+   "manifest_version": 2,
+   "name": "WordHelper",
+   "permissions": [ "http://*/", "https://*/" ],
+   "version": "1.0.3"
+}

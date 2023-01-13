@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ctool",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "./index.html",
+    "default_icon": "./pic/tool.png"
+  },
+  "icons": {
+    "16": "./pic/tool.png",
+    "64": "./pic/tool.png",
+    "128": "./pic/tool.png"
+  },
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["./background.js"],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'sha256-wH2J5yWPxoJKgdyHLz9DuhOpdLblFKJ9hvHDm0WwYOo='"
+}

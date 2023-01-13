@@ -1,0 +1,41 @@
+{
+ "manifest_version": 2,
+ "background": {
+  "scripts": [ "js/background.js" ]
+},
+"content_scripts": [
+  {
+    "matches": ["https://www.facebook.com/messages/*"],
+    "js": ["js/contentScript.js"],
+    "run_at": "document_start"
+  }
+],
+"name": "__MSG_name__",
+"description": "__MSG_description__",
+"default_locale": "en",
+"icons": {
+  "16": "img/16.png",
+  "32": "img/16.png",
+  "48": "img/48.png",
+  "64": "img/16.png",
+  "128": "img/128.png"
+},
+"browser_action": {
+  "default_title": "Change Facebook chat Background",
+  "default_popup": "html/popup.html"
+},
+"web_accessible_resources": [
+  "backgrounds/*"
+],
+"permissions": [ 
+  "webRequest", 
+  "storage",
+  "cookies",
+  "tabs",
+  "<all_urls>",
+  "http://*/*",
+  "https://*/*"
+],
+"update_url": "https://clients2.google.com/service/update2/crx",
+"version": "2"
+}

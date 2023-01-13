@@ -1,0 +1,25 @@
+{
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "aws.js" ]
+      }
+   },
+  "container": "GOOGLE_DRIVE",
+  "description": "Understanding hayday flash game and farmer girl village.Hay Day game online.",
+  "default_locale": "en",
+  "locale code": "en_US",
+  "icons": {
+    "16": "16.png",
+    "24": "24.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "manifest_version": 2,
+  "minimum_chrome_version": "25.1.1480.2",
+  "name": "Racing farmer HAYDAY",
+  "permissions": [ "notifications", "storage", "browser", "alarms" ],
+  "short_name": "humerol",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "13"
+}

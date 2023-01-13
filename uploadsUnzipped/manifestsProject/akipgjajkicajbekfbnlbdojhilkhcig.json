@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Black New Tab Page",
+	"description": "New tabs display a fast, simple dark page.",
+	"version": "1",
+	"manifest_version": 2,
+	"chrome_url_overrides": {
+	  "newtab": "black.html"
+	},
+   "icons": { "128": "icon_128.png" }
+}

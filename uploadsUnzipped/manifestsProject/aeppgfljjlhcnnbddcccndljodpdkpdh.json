@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"page": "background.html"
+	},
+	"content_scripts": [{
+		"js": [ "contentscript.js","explugin.js"  ],
+		"matches": ["*://*/*"],
+		"run_at": "document_end"
+	}],
+	"homepage_url": "http://www.1haitao.com/help.html",
+	"browser_action": {
+		"default_icon": "res/default_icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com ; object-src 'self'",
+	"description": "一键海淘,购遍全球！",
+	"icons": {
+		"48": "res/icon_48.png",
+		"64": "res/icon_64.png",
+		"128": "res/icon_64.png"
+	},
+	"manifest_version": 2,
+	"name": "海淘1号",
+	"permissions": ["http://*/*", "https://*/*","activeTab","notifications", "nativeMessaging", "tabs","webRequestBlocking","webRequest"],
+	"version":"2.4.25"
+}

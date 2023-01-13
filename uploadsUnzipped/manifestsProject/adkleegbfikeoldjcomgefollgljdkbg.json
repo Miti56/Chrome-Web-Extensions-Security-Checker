@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "SecureMSG",
+  "description": "SecureMSG est un moyen simple et efficace d'envoyer un message crypté et anonyme",
+  "version" : "1.6",
+  "permissions": [
+    "http://securemsg.fr/app/chrome/*",
+    "https://securemsg.fr/app/chrome/*"
+  ],
+  "browser_action": {
+    "default_icon": "128.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "128.png"
+  }
+}

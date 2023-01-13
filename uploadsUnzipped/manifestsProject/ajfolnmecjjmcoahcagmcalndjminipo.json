@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Concat AG MSuS",
+  "short_name": "Concat MSuS",
+  "version": "2.23",
+  "manifest_version": 2,
+  "description": "Client side information exchange extention for Concat AG",
+  "content_scripts": [ {
+    "all_frames": true,
+    "css": [ "src/inject/inject.css" ],
+    "js": [ "js/jquery/jquery.min.js", "js/datejs/date.js", "src/inject/inject.js" ],
+    "matches": [ "*://helpdesk/tas/*", "*://helpdesk.concat.de/tas/*", "*://wentds001/tas/*", "*://wentds001.concat.de/tas/*" ]
+  } ],
+  "browser_action": {
+    "default_icon": "icons/icon19.png"
+  },
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "permissions": [ "*://helpdesk/tas/*,*://helpdesk.concat.de/tas/*,*://wentds001/tas/*,*://wentds001.concat.de/tas/*" ],
+  "web_accessible_resources": [ "js/store/store.js", "js/datejs/date.js", "js/jquery/jquery.min.js", "js/jquery/jquery.min.map", "js/digest/md5.js" ]
+}

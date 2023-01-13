@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_chrome_extension_name__",
+  "short_name": "__MSG_chrome_extension_short_name__",
+  "description": "__MSG_chrome_extension_description__",
+  "version": "1.1.0",
+  "app": {
+	"background": {
+	  "scripts": ["js/background.js"]
+	}
+  },
+  "default_locale": "zh_CN",
+  "permissions": [
+    "*://*/*",
+	"webview",
+	"clipboardRead",
+	"clipboardWrite",
+	"contextMenus",
+	"fileSystem",
+	"fullscreen",
+	"geolocation",
+	"notifications",
+	"storage",
+	"tts",
+	"unlimitedStorage"
+  ],
+  "icons": { 
+  	"16": "img/icon_16.png", 
+	"128": "img/icon_128.png"
+  }
+}

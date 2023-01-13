@@ -1,0 +1,63 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+
+   "name": "Bạch hổ order ",
+   "description": "bạch hổ order hàng trung quốc, công cụ đặt hàng online taobao, tmall, 1688",
+   "version": "2.4",
+
+   "page_action": {
+      "default_icon": "images/144x144.png",
+      "default_popup": "popup.html"
+   },
+
+   "icons": {
+      "16": "images/144x144.png",
+      "32": "images/144x144.png",
+      "64": "images/144x144.png",
+      "128": "images/144x144.png"
+   },
+
+   "permissions": [
+      "activeTab",
+      "storage",
+      "https://bh.bachhoorder.com/",
+      "http://bh.bachhoorder.com/",
+      "https://2.taobao.com/item.htm"
+   ],
+
+   "web_accessible_resources": [
+      "images/*"
+   ],
+
+   "short_name" : "bh.bachhoorder.com",
+
+   "input_components": {
+      "rate": 3470,
+      "homepage_url": "http://bh.bachhoorder.com",
+      "storage": "bh",
+      "storage_new": "bh_new",
+      "storage_token": "tbe_bh_token",
+      "alt_name": "BH"
+
+   },
+
+   "content_scripts": [{
+      "matches": [
+         "https://*.bachhoorder.com/*",
+         "http://*.bachhoorder.com/*",
+         "http://*.taobao.com/*",
+         "https://*.taobao.com/*",
+         "http://*.tmall.com/*",
+         "https://*.tmall.com/*",
+         "https://*.tmall.hk/*",
+         "http://detail.1688.com/*",
+         "https://detail.1688.com/*",
+         "http://wwww.amazon.com/*",
+         "https://wwww.amazon.com/*"
+      ],
+      "css": ["/css/all.min.css"],
+      "js": ["/dist/all.min.js"]
+   }]
+}

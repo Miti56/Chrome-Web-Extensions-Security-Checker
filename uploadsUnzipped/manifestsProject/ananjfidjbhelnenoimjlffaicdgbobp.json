@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "LFS : Oak Furniture Store",
+"description": "Oak Furniture Store",
+"short_name": "London Furniture Store: Oak Furniture Store",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://londonfurniturestore.com/oak-furniture/"
+],
+"launch": {
+"web_url": "http://londonfurniturestore.com/oak-furniture/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

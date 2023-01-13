@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Open Google.at website as a new tab.",
+  "description": "All the new tabs will be open with Google.at website.",
+  "version": "1.1.1",
+  "manifest_version": 2,
+  "permissions": ["tabs","storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "EL",
+    "default_icon" : "icon.png",
+    "default_popup": "popup.html"
+  }
+}

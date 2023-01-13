@@ -1,0 +1,72 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "jumb.la: Share your text/picture",
+  "short_name": "jumb.la",
+  "version": "1.0",
+  "homepage_url" : "http://jumb.la",
+
+  "description": "jumb.la is a free online text/picture sharing service easily and safely. You can encrypt it and set limits.",
+  "icons": {
+      "32":  "icon32.png",
+      "36":  "icon36.png",
+      "48":  "icon48.png",
+      "72":  "icon72.png",
+      "96":  "icon96.png",
+      "144": "icon144.png",
+      "192": "icon192.png"
+  },
+  "permissions" : [
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "32" : "icon32.png"
+    },
+    "default_title": "jumb.la",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+        "matches": [ "http://*/*", "https://*/*" ],
+        "js": [ "content.js" ]
+    }
+  ],
+
+  "commands": {
+    "share-text": {
+      "description": "Share now!",
+      "global": false,
+      "suggested_key": {
+        "default": "Alt+Shift+1",
+        "windows": "Alt+Shift+1",
+        "mac": "Command+Shift+1",
+        "chromeos": "Alt+Shift+1",
+        "linux": "Alt+Shift+1"
+      }
+    },
+    "share-text-with-reference": {
+      "description": "Share now with reference",
+      "global": false,
+      "suggested_key": {
+        "default": "Alt+Shift+2",
+        "windows": "Alt+Shift+2",
+        "mac": "Command+Shift+2",
+        "chromeos": "Alt+Shift+2",
+        "linux": "Alt+Shift+2"
+      }
+    }    
+  },
+
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": false
+  },
+
+  "minimum_chrome_version": "35"
+}

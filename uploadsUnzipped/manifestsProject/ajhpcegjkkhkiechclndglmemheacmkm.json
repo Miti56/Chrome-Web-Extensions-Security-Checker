@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "uberTrans Instant Translation Tool",
+    "short_name": "uberTrans",
+    "version": "1.0.5",
+    "manifest_version": 2,
+    "description" : "Translate any text instantly from and to 30+ different languages. Use it for web texts, in emails or to quickly lookup some words.",
+    "icons": { "16": "icons/16x16.png", "48": "icons/48x48.png", "128": "icons/128x128.png" },
+    "browser_action": {
+        "default_icon": { "19": "icons/19x19.png", "38": "icons/38x38.png" },
+        "default_title": "uberTrans Instant Translation",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://www.bizeditors.com/",
+        "tabs",
+        "contextMenus"
+    ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/content.js"]
+    }]
+}

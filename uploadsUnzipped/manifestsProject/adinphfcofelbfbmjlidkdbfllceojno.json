@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "R3byR2",
+  "description": "Recommendations, Ratings and Reviews by people we Respect/Recognize",
+  "version": "0.1.1",
+
+  "browser_action": {
+    "default_icon": {
+        "16": "images/logo-16.png",
+        "19": "images/logo-19.png",
+        "24": "images/logo-24.png",
+        "32": "images/logo-32.png"
+    },
+    "default_popup": "r3byr2.html",
+      "default_title": "Rate this"
+  },
+  "permissions": [
+    "activeTab",
+      "tabs",
+    "https://r3byr2.com/api/*",
+    "http://test.r3byr2.com/api/*"
+  ]
+}

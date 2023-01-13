@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "OpLab",
+  "description": "O aplicativo que simplifica o mercado de opções pra você.",
+  "version": "1.6",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "https://app.oplab.com.br/"
+    ],
+    "launch": {
+      "web_url": "https://app.oplab.com.br"
+    }
+  },
+  "icons": {
+    "128": "128.png"
+  },
+  "permissions": [
+  ]
+}

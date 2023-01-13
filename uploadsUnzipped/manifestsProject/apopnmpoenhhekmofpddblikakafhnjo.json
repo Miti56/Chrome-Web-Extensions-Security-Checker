@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "parameters.js", "btnlive.js", "chrome.js" ]
+   },
+   "browser_action": {
+      "default_icon": "iconoff48.png"
+   },
+   "description": "Pour être au courant lorsque Minii-Killer est en live !",
+   "icons": {
+      "128": "iconoff128.png",
+      "16": "iconoff16.png",
+      "48": "iconoff48.png"
+   },
+   "manifest_version": 2,
+   "name": "Extension Twitch Minii-Killer",
+   "permissions": [ "https://api.twitch.tv/", "notifications" ],
+   "version": "2.0"
+}

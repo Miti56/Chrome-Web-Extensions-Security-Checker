@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Clipsters",
+"description": "Happy Life and Well Being.",
+"version": "0.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"http://www.clipsters.gr/"
+],
+"launch": {
+"web_url": "http://www.clipsters.gr/"
+}
+}
+}

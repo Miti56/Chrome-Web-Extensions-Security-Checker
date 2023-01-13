@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "trissues",
+	"version": "1.0",
+	"description": "Changes trans issues to trissues.",
+	"icons": {
+		"16": "images/16pxtransflag.png",
+		"48": "images/48pxtransflag.png",
+		"128": "images/128pxtransflag.png"
+		},
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["trissues.js"],
+			"run_at": "document_end"
+		}
+	]
+}

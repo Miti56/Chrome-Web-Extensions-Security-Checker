@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Message Hero",
+"description": "Send & Receive SMS Online",
+"version": "1",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"https://www.messagehero.com/"
+],
+"launch": {
+"web_url": "https://www.messagehero.com/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

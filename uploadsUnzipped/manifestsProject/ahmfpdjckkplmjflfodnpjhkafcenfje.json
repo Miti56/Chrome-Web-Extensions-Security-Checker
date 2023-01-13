@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "tlo.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/19.png",
+         "38": "images/38.png"
+      },
+      "default_title": "Call FPS Online of Duty"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "skrypt.js" ],
+      "matches": [ "*://*.minecraft-howe.blogspot.com/*" ]
+   } ],
+   "description": "Candy crush saga, clash of clans, clash royale, Call of Duty, temple run 2, minecraft, agar.io pokemon go, gta v",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "name": "Call FPS Online of Duty",
+   "permissions": [ "*://*.minecraft-howe.blogspot.com/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "Call FPS Online of Duty",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

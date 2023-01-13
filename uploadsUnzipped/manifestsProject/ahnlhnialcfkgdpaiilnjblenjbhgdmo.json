@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Waffle Colorizer",
+  "description": "Change colors for a compiled board of projects in waffle.",
+  "version": "0.2",
+  "author": "goalves",
+  "icons": {
+    "16": "images/icons/icon_16.png",
+    "48": "images/icons/icon_48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://waffle.io/*",
+        "http://waffle.io/*"
+      ],
+      "js": ["./libs/jquery-3.2.1.min.js","./content-scripts.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "http://waffle.io/*",
+    "https://waffle.io/*"
+  ]
+}

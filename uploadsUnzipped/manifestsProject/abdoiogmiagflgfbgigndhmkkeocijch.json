@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Manage It - Project Management",
+  "short_name": "Manage It",
+  "description": "Organize your team with this easy to use project manager.",
+  "version": "5.40.0",
+  "container" : "GOOGLE_DRIVE",
+  "api_console_project_id" : "1097804225412",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "assets/icon-16.png",
+              "128": "assets/icon-128.png",
+              "256": "assets/icon-256.png"
+            },
+  "offline_enabled": true,
+  "permissions": [
+    "identity",
+    "storage",
+    "webview",
+    "videoCapture",
+    "unlimitedStorage",
+    "https://www.google-analytics.com/",
+    "https://app.manageitapp.com/*",
+    "http://localhost/",
+    "http://localhost/*",
+    "https://ssl.gstatic.com/*",
+    "https://www.googleapis.com/*",
+    "https://accounts.google.com/*",
+    "https://apis.google.com/*",
+    "https://plus.google.com/*",
+    "https://s3.amazonaws.com/*",
+    "https://app4.manageitapp.com/*",
+    "https://api.braintreegateway.com/*"
+  ]
+}

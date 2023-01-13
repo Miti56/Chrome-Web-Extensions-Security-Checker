@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "background2.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icon19.png",
+         "38": "icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "nowplayTWO"
+   },
+   "description": "To access tools you are subscribed for Go to My Account in seotoolguru.com website",
+   "externally_connectable": {
+      "matches": [ "*://*.seotoolguru.com/*" ]
+   },
+   "homepage_url": "http://seotoolguru.com",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+  
+   "manifest_version": 2,
+   "minimum_chrome_version": "26.0",
+   "name": "nowplayTWO",
+   "permissions": [ "webRequest", "webRequestBlocking", "tabs", "proxy", "cookies", "management", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.3"
+}

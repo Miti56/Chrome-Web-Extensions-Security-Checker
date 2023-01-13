@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Trello custom progress bar",
+  "short_name": "Trello custom progress bar",
+  "description": "Customize you Trello progress bar",
+  "version": "1.2",
+
+  "permissions": ["tabs", "storage", "webNavigation"],
+  "browser_action": {
+    "default_title": "blahblah",
+    "default_icon": {
+      "32": "32.png"
+    }
+  },
+  "background": {
+    "matches": ["*://trello.com/c/*"],
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "icons": {
+    "32": "32.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://trello.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": ["*.png"],
+  "options_page": "options.html"
+}

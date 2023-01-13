@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"author": "David Lalonde-Lavoie",
+	"name": "Image Fit",
+	"description": "Allows to instantly resize an image to fit the browser window as well as to adjust the size of an image with the mouse wheel.",
+	"version": "0.5.1",
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"permissions": [ "tabs", "http://*/*", "https://*/*", "storage", "contextMenus" ],
+	"background": {
+		"persistent": true,
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [ 
+		{ 
+			"all_frames": true, 
+			"js": [ "Image_Fit.js" ], 
+			"matches": [ "http://*/*", "https://*/*" ] 
+		} 
+	],
+	"icons": {
+		"128": "img/Image_Fit_128px.png",
+		"48": "img/Image_Fit_48px.png",
+		"16": "img/Image_Fit_16px.png"
+	}
+}

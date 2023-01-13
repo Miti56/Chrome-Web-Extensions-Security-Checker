@@ -1,0 +1,32 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "devg_32.png",
+      "default_title": ""
+   },
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "homepage_url": "https://extmix.com/scanweb",
+   "icons": {
+	  "16":"devg_16.png",
+      "24":"devg_16.png",
+	  "32":"devg_16.png",
+	  "48":"devg_16.png",
+	  "64":"devg_16.png",
+	  "96":"devg_16.png",
+	  "128":"devg_16.png",
+	  "192":"devg_16.png",
+	  "256":"devg_16.png"
+	  
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "permissions": [ "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+      "offline_enabled": true,
+    "container": "GOOGLE_DRIVE"
+}

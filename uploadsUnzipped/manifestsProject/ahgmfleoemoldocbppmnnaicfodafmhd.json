@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "SIL Learning Center",
+  "description": "SIL's Learning Center Website",
+  "version": "1.4",
+  "manifest_version": 2,
+  "icons": {
+    "128": "sil_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://googleapps.sil.org/"
+    ],
+    "launch": {
+      "web_url": "http://googleapps.sil.org/"
+    }
+  }
+}

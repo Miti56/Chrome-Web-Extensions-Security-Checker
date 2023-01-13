@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Bora Search",
+  "version": "0.0.2",
+  "description": "Switch automatically between 5 (or less) search engines and enjoy a more responsible surf on the web.",
+  "icons": {
+    "32":  "img/bora.png",
+    "48":  "img/bora.png",
+    "128": "img/bora.png"
+  },
+  "background": {
+    "scripts": ["js/background.js", "js/jquery-3.3.1.min.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "img/bora.png",
+    "default_title": "Bora",
+    "default_popup": "bora.html"
+  },
+  "omnibox": { "keyword" : "bora" },
+  "permissions": [ "storage" ]
+}

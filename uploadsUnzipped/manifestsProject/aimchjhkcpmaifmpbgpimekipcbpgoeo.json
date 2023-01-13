@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "name": "High Contrast - Responsive Browser Color",
+  "description": "Change or invert the color scheme according to the time of day.",
+  "manifest_version": 2,
+  "version": "0.3.1",
+  "permissions": [
+  
+  	"background",
+	"http://*/*",
+	"https://*/*",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["scripts/bg.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "match_about_blank": true,
+      "run_at": "document_start",
+      "css": ["color-schemes/scheme1.css",
+      	"color-schemes/scheme2.css",
+      	"color-schemes/scheme3.css",
+      	"color-schemes/features.css"],
+      "js": ["scripts/page.js"]
+    }
+  ],
+  
+  
+  "options_page": "options/index.html",
+
+  "browser_action": {
+    "default_title": "High Contrast",
+    "default_icon": {
+      "16": "images/logo/logo-small.png",
+      "32": "images/logo/logo-smaller.png"
+    }
+  },
+
+
+  "icons": {
+    "16": "images/logo/logo-small.png",
+    "64": "images/logo/logo-bigger.png",
+    "128": "images/logo/logo-big.png"
+  }
+
+}

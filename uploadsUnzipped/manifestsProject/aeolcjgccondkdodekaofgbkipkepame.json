@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ultimate Quebec Calendar",
+  "version": "3.8",
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "identity",
+    "webNavigation",
+    "https://www.googleapis.com/*",
+    "https://www.ultimatequebec.ca/*"
+  ],
+  "options_ui": {
+    "page": "assets/options.html",
+    "chrome_style": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.ultimatequebec.ca/*"],
+      "js": ["dist/tab.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["dist/background.js"]
+  },
+  "page_action": {
+    "default_title": "Ultimate Quebec Calendar",
+    "default_popup": "assets/options.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "24": "assets/icon24.png",
+      "32": "assets/icon32.png"
+    }
+  },
+  "manifest_version": 2,
+  "oauth2": {
+    "client_id": "66182221437-j8duscgn23tpo6e4dusacijtjmfvm3hd.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/calendar"]
+  }
+}

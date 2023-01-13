@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "tkw.live Screensharing",
+	"version" : "2.0.7",
+	"manifest_version" : 2,
+	"minimum_chrome_version": "34",
+	"description": "Extension to allow screen sharing in tkw.live.",
+	"homepage_url": "https://tkw.live/",
+	"background": {
+	  "scripts": ["script.js"],
+	  "persistent": false
+	},
+	"externally_connectable": {
+		"matches": ["*://tkw.live/*", "http://localhost/*", "*://www.tkw.live/*" , "*://beta.tkw.live/*", "*://staging.tkw.live/*"]
+	},
+	"icons": {
+		"128": "128w.png",
+		"16": "16w.png",
+		"48": "48w.png"
+	  },
+	"permissions": [
+	  "desktopCapture"
+	],
+	"browser_action":{
+		"default_icon": "16w.png"
+	  }
+  }
+
+   

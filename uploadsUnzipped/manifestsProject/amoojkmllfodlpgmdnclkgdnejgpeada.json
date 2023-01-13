@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"name":"Siteimprove Browser Extension","version":"1.1.0","description":"Measure of the quality and potential impact of a site's digital presence","homepage_url":"https://siteimprove.com","author":"Siteimprove","default_locale":"en","browser_action":{"default_title":"Siteimprove"},"background":{"scripts":["./js/background.js"],"persistent":true},"icons":{"48":"/img/active.png","128":"/img/active@128x128.png"},"content_security_policy":"script-src 'self' https://cdn.siteimprove.net https://cdnjs.cloudflare.com; object-src 'self'","permissions":["cookies","tabs","activeTab","storage","webRequest","webRequestBlocking","*://*.siteimprove.com/*"]}

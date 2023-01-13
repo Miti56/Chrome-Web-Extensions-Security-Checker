@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Talentscreen Screen Capturing",
+    "author": "Muaz Khan",
+    "version" : "3.9",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Capture full-screen or specific application's screen on any HTTPs domain!",
+    "homepage_url": "https://talentscreen.io",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_end",
+       "matches": ["https://app.dev.talentscreen.io/*","https://app.qa.talentscreen.io/*","https://app.qa1.talentscreen.io/*","https://app.stag.talentscreen.io/*","https://app.talentscreen.io/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

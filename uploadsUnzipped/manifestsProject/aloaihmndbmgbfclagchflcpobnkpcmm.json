@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "WhoAmI",
+    "version": "1.0",
+    "description": "Change your profile by visiting random sites",
+    "permissions": ["activeTab","storage","tabs","history", 
+      "https://www.thisiswhyimbroke.com/*",
+      "https://www.amazon.com/*",
+      "https://democrats.org/*",
+      "https://www.google.com/*",
+      "https://swingleft.org/*",
+      "https://www.democratsabroad.org/*",
+      "https://bigeyeview.com/*",
+      "https://www.reddit.com/*",
+      "https://www.facebook.com/*",
+      "https://eagleforum.org/*",
+      "https://www.freerepublic.com/*",
+      "https://www.metclubnyc.org/*",
+      "https://www.theguardian.com/*",
+      "https://www.foxnews.com/*",
+      "https://www.theguardian.com/*",
+      "https://jhiblog.org/*",
+      "http://americanmonarchistsociety.com/*",
+      "http://radicalroyalist.blogspot.com/*",
+      "http://themonarchist.blogspot.com/*",
+      "https://monarchyinternational.net/*",
+      "http://www.monarquiaeuropea.org/*",
+      "https://libcom.org/*",
+      "http://www.anarchism.net/*",
+      "https://freedompress.org.uk/*",
+      "http://www.infoshop.org/*",
+      "https://raddle.me/f/Anarchism",
+      "https://downandoutdistro.noblogs.org/*",
+      "http://www.nclrights.org/*",
+      "http://www.lesbianavengers.com/*",
+      "http://lesbiansciencefiction.com/*",
+      "https://www.lesbiannews.com/*",
+      "http://scissr.com/*",
+      "https://www.elitesingles.com/*",
+      "https://www.pinkcupid.com/*",
+      "https://www.facebook.com/*",
+      "https://www.pinterest.fr/*",
+      "http://www.instanthookups.com/*",
+      "https://www.adam4adam.com/*",
+      "https://gayfriendfinder.com/*",
+      "https://aplaceinthemiddle.org/*",
+      "https://kumuhina.com/*",
+      "https://nialler9.com/*",
+      "https://assofias.webs.com/*",
+      "https://medium.com/*"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+   "icons": {
+      "16": "images/profiling16.png",
+      "32": "images/profiling32.png",
+      "48": "images/profiling48.png",
+      "128": "images/profiling128.png"
+    },
+    "manifest_version": 2
+  }

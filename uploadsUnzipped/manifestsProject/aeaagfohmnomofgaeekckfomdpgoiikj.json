@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Call Nxphone",
+	"description": "Make phone calls using nxphone",
+	"version": "0.9",
+	"icons":    {
+		"16": "nxcloud.png",
+		"48": "nxcloud.png",
+		"128": "nxcloud.png"  
+	},
+	"browser_action":{
+		"default_icon":"nxcloud.png"
+	},
+	"permissions": ["contextMenus","storage"],
+	"background": {
+		"matches":["<all_urls>"],
+		"scripts": ["sample.js"]
+	},
+	"content_scripts":[
+		{
+			"matches":["<all_urls>"],
+			"js":["sip.js"]
+		}
+
+	],
+	"manifest_version": 2
+}
+

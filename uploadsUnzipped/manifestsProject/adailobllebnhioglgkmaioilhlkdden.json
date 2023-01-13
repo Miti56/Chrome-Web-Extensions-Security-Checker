@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Hacker News Colors",
+  "description": "Makes Hacker News easier to read by adding a bit of color to every story, based on points.",
+  "version": "1.3",
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://news.ycombinator.com/news",
+        "https://news.ycombinator.com/",
+        "https://news.ycombinator.com/x?fnid=*",
+        "https://news.ycombinator.org/news",
+        "https://news.ycombinator.org/",
+        "https://news.ycombinator.org/x?fnid=*"
+      ],
+      "js": ["jquery-2.0.0.min.js", "hn.js"]
+    }
+  ]
+}

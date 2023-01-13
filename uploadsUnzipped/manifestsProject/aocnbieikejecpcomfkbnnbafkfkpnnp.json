@@ -1,0 +1,22 @@
+{
+   "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html",
+      "default_title": "PDF to DOC – Convert PDF to Word Online"
+   },
+   "description": "Convert PDF to Word online. Free PDF to DOC converter",
+   "icons": {
+        "16": "logo.png",
+        "32": "logo.png",
+        "48": "logo.png",
+        "128": "logo128.png"
+   },
+    "manifest_version": 2,
+   "name": "PDF to DOC – Convert PDF to Word Online",
+   "permissions": [ "tabs", "notifications" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+       "offline_enabled": true,
+    "container": "GOOGLE_DRIVE",
+   "version": "1.0.6"
+}
+

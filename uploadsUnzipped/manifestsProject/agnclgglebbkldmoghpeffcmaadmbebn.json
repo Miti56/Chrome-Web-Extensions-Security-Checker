@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GitHub Folover",
+  "short_name": "folover",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Display whether a GitHub user follows you or not",
+  "homepage_url": "http://github.com/ozlerhakan/folover",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "exclude_matches": [ "https://github.com/notifications/*", "https://github.com/pulls","https://github.com/issues","https://github.com/marketplace" ],
+      "js": ["folover.js"]
+    }
+  ]
+}

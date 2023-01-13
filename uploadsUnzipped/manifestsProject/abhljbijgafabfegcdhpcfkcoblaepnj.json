@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Trustbot for Google Calendar",
+  "version": "0.0.0.2",
+  "description": "Make sure an NDA is in place for meeting without leaving calendar. Displays NDA status of the attendees and gets the NDA e-signed.",
+  "icons": {
+    "128": "logo_128.png",
+    "16": "logo_16.png"
+  },
+  "container": ["DOMAIN_INSTALLABLE"],
+  "api_console_project_id": "470210592477",
+  "app" : {
+    "launch" : {
+      "web_url" : "https://trustbot.io/"
+    }
+  }
+}

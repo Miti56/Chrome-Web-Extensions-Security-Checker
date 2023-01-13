@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "iMW Uploader",
+	"short_name": "iMW Uploader",
+	"version": "1.0",
+	"description": "iMW uploader captures sepecific part of opened page and upload that image on opened web appliation.",
+	"icons": {
+		"128": "images/icon-128.png"
+	},
+	"background": {
+		"scripts": ["javascripts/md5.min.js",
+			"javascripts/background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["javascripts/content-script.js"],
+			"run_at": "document_idle"
+		}
+	],
+	"permissions": [
+        "activeTab",
+		"tabs",
+		"<all_urls>"
+	]
+}

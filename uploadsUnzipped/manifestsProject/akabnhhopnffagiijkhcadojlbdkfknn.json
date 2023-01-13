@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Nacionless",
+  "version": "1.0",
+  "description": "Remove the modal from la nación to have a friendly user experience.",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "images/logo-size.png"
+    }
+  },
+  "icons": {
+    "128": "images/logo-size.png"
+  },
+  "options_page": "options.html",
+  "manifest_version": 2
+}

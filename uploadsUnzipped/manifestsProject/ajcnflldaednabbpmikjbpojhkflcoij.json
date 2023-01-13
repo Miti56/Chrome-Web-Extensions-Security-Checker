@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Amazing Castles",
+  "version": "0.1.100.102",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "cookies",
+    "topSites",
+    "alarms",
+    "https://*.joona.io/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "description": "Amazing Castles by Amazing Apps",
+  "chrome_url_overrides": {
+    "newtab": "load.html"
+  },
+  "content_scripts": [{
+    "js": [
+      "js/cs/data-frame.js"
+    ],
+    "matches": [
+      "https://*.joona.io/*"
+    ],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "background": {
+    "page": "html/background.html",
+    "persistent": false
+  }
+}

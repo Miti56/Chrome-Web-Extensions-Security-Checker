@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "__MSG_extDesc__",
+  "default_locale":"zh_CN",
+  "commands": {
+    "toggle": {
+      "suggested_key": {
+        "default": "Ctrl+Y",
+        "mac": "Alt+E"
+      },
+      "description": "切换 foo 特性"
+    }
+  },
+  "icons": {
+    "48":"img/f48.png",
+    "96": "img/icon.png",
+    "128":"img/f128.png"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "html/index.html"
+  },
+  "background": {
+    "scripts": ["js/eventPage.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "http://*/",
+    "https://*/",
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*","ftp://*/*","file://*/*"],
+      "js": ["js/jq.js","js/common.js", "js/s2.js"],
+      "css": ["css/mystyles.css"],
+      "match_about_blank":true,
+      "run_at":"document_start",
+      "match_about_blank":true,
+      "all_frames":true
+    }
+  ],
+  "options_page": "html/option.html"
+
+}

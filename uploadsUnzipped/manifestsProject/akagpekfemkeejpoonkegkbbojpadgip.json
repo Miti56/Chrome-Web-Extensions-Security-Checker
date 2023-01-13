@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Cut the Rope - UNBLOCKED",
+"description": "Cut the rope to feed candy to Om Nom! Play one of the most popular games ever made!",
+"version": "1.7",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://freegamesunblocked.com/cut-the-rope/"
+],
+"launch": {
+"web_url": "http://freegamesunblocked.com/cut-the-rope/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

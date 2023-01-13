@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Oscar HQIC User Extension- COMMUNITY MD",
+  "description": "This extension supplies more functionalities to Oscar",
+  "version": "2.5.6",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "background":{
+    "scripts": ["HQICmenu.js","sha1.js", "oauth.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/oscar/*"],
+      "js": ["sha1.js", "oauth.js","tableOU.js", "dataservice.js","browserhqic.js"],
+	  "run_at": "document_start"																					   
+    },
+	{
+      "matches": ["https://*/oscar/provider/providercontrol.jsp?*"],
+      "js": ["jquery/jquery-1.9.1.js"]																			   
+    },
+	{
+      "matches": ["https://project1.sptest.com/Reports/Pages/*"],
+	  "all_frames": true,
+      "js": ["setupReport.js"]																				   
+    },
+	{
+      "matches": ["https://*/oscar/oscarRx/choosePatient.do?*"],
+      "js": ["contentRefill.js"],
+	  "run_at": "document_end"																				   
+    }
+  ],
+  "web_accessible_resources": [ "tableOU.css","doctorApp.css","images/newimage.png","images/eraven.png","images/eravenHover.png","images/cigarette.png","images/imgHQIC.png","images/imgHQIC.png","contentRefillInjected.js"]
+  ,
+  "permissions":["http://*/IntellidashService.svc/*","https://*/IntellidashAPI/IntellidashService.svc/*", "contextMenus", "tabs", "storage",
+				"https://vibes-sp.sptest.com:4443/IntellidashAPI/IntellidashService.svc/*", "https://*/MidashService.svc/*"]  
+}

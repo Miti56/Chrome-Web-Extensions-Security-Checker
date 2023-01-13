@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "The boys streaming vf",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "https://cinemey.com/NDmpzZG-the-boys - Voir serie the boys en streaming vf gratuitement haute qualité HD",
+  "homepage_url": "https://cinemey.com/NDmpzZG-the-boys",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "src/override/override.html"
+  }
+}

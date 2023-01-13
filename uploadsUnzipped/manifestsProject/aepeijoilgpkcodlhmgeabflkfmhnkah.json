@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "clash-royale-scripts/clash-royale.js" ]
+   },
+   "browser_action": {
+      "default_icon": "imgs/icon-48.png",
+      "default_popup": "activate.html"
+   },
+   "description": "__MSG_description__",
+   "default_locale": "en",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.1.14"
+}

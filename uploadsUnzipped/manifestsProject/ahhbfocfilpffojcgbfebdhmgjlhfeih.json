@@ -1,0 +1,41 @@
+{
+	"manifest_version": 2,
+	"version": "6.0.5",
+	"optional_permissions": [
+		"management"
+	],
+	"browser_action": {
+		"default_title": "Falls"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"js/back.js"
+		]
+	},
+	"chrome_settings_overrides": {
+		"homepage": "http://funsearchbox.com",
+		"search_provider": {
+			"name": "Fun Search Box",
+			"search_url": "http://funsearchbox.com/search/{searchTerms}",
+			"suggest_url": "http://funsearchbox.com/suggest/{searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://funsearchbox.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"chrome_url_overrides": {
+		"newtab": "default.html"
+	},
+	"name": "__MSG_name__",
+	"icons": {
+		"48": "images/ic48.png",
+		"128": "images/ic128.png"
+	},
+	"description": "__MSG_description__",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"description": "__MSG_description__",
+	"app": {
+	"background": {
+		"scripts": 	["assets/bg.js"],
+	      "persistent": true
+		}		  
+	},
+	"icons": {
+		"48": "imgs/icon-small.png",
+		"128": "imgs/icon-big.png"
+	},
+	"name": "__MSG_name__",
+	"default_locale": "en",
+	"optional_permissions": [
+		"management"
+	],
+	"manifest_version": 2,
+	"version": "0.11.25",
+
+ "minimum_chrome_version": "24.0.1307.0",
+ "container": "GOOGLE_DRIVE",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"permissions": [
+		"browser","tabs"
+	]
+}

@@ -1,0 +1,56 @@
+{
+    "background": {
+        "scripts": [],
+        "page": "bg.html",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "css/jquery.dataTables.min.css",
+                "css/jquery-ui.css",
+                "css/style.min.css"
+            ],
+            "js": [
+                "js/jquery-3.2.1.min.js",
+                "js/jquery-ui.min.js",
+                "js/jquery.dataTables.min.js",
+                "js/moment.js",
+                "js/main.js"
+            ],
+            "matches": [
+                "https://www.youtube.com/*"
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "description": "Search through Youtube subtitles and get to the exact spot in the video! Compatible with all languages that the subtitles support.",
+    "icons": {
+        "16": "img/16.png",
+        "48": "img/48.png",
+        "128": "img/icon.png"
+    },
+    "manifest_version": 2,
+    "name": "Youtube Subtitles Search",
+    "permissions": [
+        "background",
+        "webRequest",
+        "webRequestBlocking",
+        "activeTab",
+        "storage",
+        "*://*/*"
+    ],
+    "short_name": "Subtitles Search",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "3.10.0",
+    "web_accessible_resources": [
+        "js/player.js",
+        "index.html",
+        "img/youtube_search.png",
+        "img/logo.png"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+		
+	"name": "PPS Application",
+	"version": "1.5",
+	"manifest_version": 2,
+	"description": "Send a message to a native application.",  
+	"background": {
+	"scripts": ["background.js"] 
+	},
+	"icons": {
+	"128": "logo.jpg"
+	},
+	"externally_connectable": {
+	  "matches": ["http://localhost/*" , "http://test-patioplus.mysysonline.com.au/*"]
+	},
+
+	"permissions": [
+		"nativeMessaging"
+	],
+	
+	"content_scripts": [
+		{
+		  "matches": ["http://localhost/*" , "http://test-patioplus.mysysonline.com.au/*"],		  
+		  "js": ["content.js"]
+		}
+	]
+}

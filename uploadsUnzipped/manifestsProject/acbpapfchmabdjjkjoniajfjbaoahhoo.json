@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "WeSeeDo Screen Sharing",
+    "author": "WeSeeDo",
+    "version" : "1.1",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Share your browser or an application screen with other participants using WebRTC.",
+    "homepage_url": "https://www.weseedo.nl",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "run_at": "document_end",
+	   "matches": ["https://192.168.56.233/*", "https://dev.weseedo.nl/*", "https://acceptatie.weseedo.nl/*", "https://login.weseedo.nl/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}

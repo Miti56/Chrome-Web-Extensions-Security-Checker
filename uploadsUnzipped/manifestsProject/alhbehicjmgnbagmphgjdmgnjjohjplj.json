@@ -1,0 +1,27 @@
+{
+   "browser_action": {
+      "default_icon": "48.png",
+      "default_popup": "popup.html",
+      "default_title": "Реверси плюс"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "myscript.js", "jquery-1.10.2.min.js" ],
+      "matches": [ "*://node.orangeapps.ru/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://reversi-ai.appspot.com; object-src 'self'",
+   "description": "Расширяет функционал приложения Реверси. Добавлены звуки, блокировка сообщений, история игр.",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAliHOCbA4Mvt1oQI+ZZhgIiSi8gHOyb/bwePLQbKXJyHkArhTLLUkYgMk9Kg4IbSX15FbhX/+/4yiWGpwRxDoyG1TeiFZDMPAchkQPDfXUetLDWGj8IqR8t3rU8xFlrZ4OaVxoqkAHvZgSZjB5edns87t1+ybBbeaQ6c2Bwcf0BiStpwwivnJ+rI61doRByY9KPSbpUagy/4K5sO3CervJW1G1memYqZ5x2bPGGsR4+Mhdyr3WQjl8yDuFGGNBSYDAl7GtQitRCk7kqlc/0QZ5qtOUKwx5V1rupeSP2zu6q6Kw9zwHw3RbVjqeJVf5UXmQfpZpRJwE7lBBNi1rXJwNQIDAQAB",
+   "manifest_version": 2,
+   "name": "Реверси плюс (beta)",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.22",
+   "web_accessible_resources": [ "jquery-1.10.2.min.js", "main.js", "statusx_op.gif", "close.gif", "prefReadymonolighterlike.png", "new.html", "new.css", "intro.mp3", "move.mp3", "win.mp3", "lose.mp3", "hamlite.html", "script/hamcode.js", "script/ecl.js", "script/test.js", "script/test0.js", "script/test1.js", "image/repeat_off.gif", "image/repeat_on.gif", "image/repeat_out.gif", "image/solving.gif", "image/b32.png", "image/e32.png", "image/w32.png", "style/hamsize_L.css", "style/hamsize_M.css", "style/hamsize_S.css", "style/hamsizeEL.css", "style/hamsizeSS.css", "style/hamsizeXL.css" ]
+}

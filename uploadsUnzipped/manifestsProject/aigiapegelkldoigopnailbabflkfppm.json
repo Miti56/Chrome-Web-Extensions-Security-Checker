@@ -1,0 +1,16 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.mefancy.com/textchange/"
+      },
+      "urls": [ "http://www.mefancy.com/textchange/" ]
+   },
+   "description": "Format Text Tools, including reformat adjust find replace text and so on! ",
+   "icons": {
+      "128": "icon-128.png"
+   },
+   "manifest_version": 2,
+   "name": "Format Text",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

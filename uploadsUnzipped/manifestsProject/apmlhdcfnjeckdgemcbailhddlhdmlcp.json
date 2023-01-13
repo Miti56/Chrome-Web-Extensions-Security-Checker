@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "0.4.1",
+
+    "short_name": "__MSG_appShortName__",
+
+    "icons": {
+        "128": "img/128x128.png",
+        "440": "img/440x280.png"
+    },
+
+
+    "permissions": [
+        "background",
+        "http://*.binopt.com/*",
+        "https://*.binopt.com/*"
+    ],
+    "content_security_policy": "script-src 'self' https://signals.signalsxp.com/signal ; object-src 'self' ",
+
+    "browser_action": {
+        "default_icon": "img/128x128.png",
+        "default_title": "Forzasignalspro",
+        "default_popup": "popup.html"
+    },
+
+    "background": {
+        "scripts": ["jquery.js", "socket.io-1.3.7.min.js", "background.js"],
+        "persistent": true
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["jquery.js", "socket.io-1.3.7.min.js", "background.js"]
+        }
+    ]
+
+}

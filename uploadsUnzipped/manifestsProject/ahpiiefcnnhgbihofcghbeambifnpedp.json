@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Playtalk Configurator",
+  "version": "1.0.3",
+  "description": "Configurator for Playtalk from Playstreet.",
+  "minimum_chrome_version": "25",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "permissions" : [
+    "videoCapture",
+    "audioCapture",
+    "unlimitedStorage",
+    "storage",
+    {"fileSystem": ["write"]}
+  ],
+  "app": {
+    "background": {
+      "scripts": [
+        "main.js"
+      ]
+    }
+  }
+}

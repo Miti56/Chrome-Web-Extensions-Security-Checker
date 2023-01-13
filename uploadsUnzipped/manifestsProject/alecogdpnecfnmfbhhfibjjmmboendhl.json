@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Rainbow JIRA",
+  "description": "Colorize the cards on your JIRA board",
+  "homepage_url": "https://github.com/enginedigital/rainbow-jira",
+  "version": "2.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "browser_action": {
+    "default_title": "Rainbow JIRA",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "script.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "https://*.atlassian.net/secure/RapidBoard.jspa"
+  ]
+}

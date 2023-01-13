@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "2.0.1",
+  "name": "hacker news filter",
+  "manifest_version": 2,
+  "description": "filter the web by hacker news",
+  "browser_action": {
+    "default_title": "hacker news filter",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/hn-16.png",
+    "48": "img/hn-48.png",
+    "128": "img/hn-128.png"
+  },
+  "web_accessible_resources": [
+    "inject.html",
+    "css/*",
+    "fonts/*",
+    "img/*",
+    "data/*"
+  ],
+  "content_scripts": [{
+      "persistent": true,
+      "matches": ["https://news.ycombinator.com/*"],
+      "js":      ["content.js"],
+      "run_at": "document_start"
+  }],
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [ "contextMenus", "management", "tabs", "storage", "gcm", "notifications", "cookies", "https://hackernewsfilter.com/*"],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com 'unsafe-eval'; object-src 'self'; connect-src https://a.hackernewsfilter.com/ https://hackernewsfilter.com/ https://www.hackernewsfilter.com/ https://ssl.google-analytics.com/ https://hacker-news.firebaseio.com/; style-src * 'unsafe-inline' 'self' blob:;"
+}

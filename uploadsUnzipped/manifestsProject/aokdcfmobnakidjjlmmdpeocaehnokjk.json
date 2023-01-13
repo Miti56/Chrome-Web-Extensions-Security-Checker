@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_appName__",
+	"description": "__MSG_appDesc__",
+	"default_locale": "en",
+	"version": "1.0.0.5",
+	"manifest_version": 2,
+	"icons": 
+			{ 
+				"128": "icon128.png",
+				"96": "icon96.png",	
+				"48": "icon48.png" ,
+				"19": "icon19.png" ,
+				"16": "icon16.png"
+			}, 
+	"browser_action": 
+			{
+				"default_icon": "icon19.png",
+				"default_title": "Classic Slot Machine - Free And Fun Slots Machine Game",
+				"default_popup": "popup.html"
+			},
+	"background": 
+			{ 
+				"page": "background.html" 
+			},
+			
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+			
+	"permissions": 
+			[
+				"tabs", "webRequest", "webNavigation","webRequestBlocking", "*://*/*"
+			]
+}
+

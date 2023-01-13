@@ -1,0 +1,20 @@
+{
+   "browser_action": {
+      "default_icon": "assets/icon.png",
+      "default_popup": "index.html"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "mroads extension to upload resume",
+   "icons": {
+      "128": "assets/icon_128.png",
+      "16": "assets/icon_16.png",
+      "48": "assets/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhW6LSuUGswqQTg3Xxp/bZ/AhNwJ1tJzYmUdUK4hrlotZ6nrTn9jMGe9n6SIEjBBZq0C3v009tpmNNlVsVl0JpIb3kSGE3UfEGtbmwr5eJvIRI39BURSkimG/7kcHXZV4ZfRrK5prS7/4Xe80b+dWjj25tPbbUwgYDYqEebl5gAgzXkiXmepfhvgkaVcINWZLTSD4hiQoJ2kyzkfmUMd1FWoffZ4AUAtcoVuIAu3JIXFHPhniQIywCF/lu3DHHHK3kb2AxpW1w33svg/T/aSwvgfuwlYvehX2vdnPfKUv+/o4oO6bDcK0P4Hq/fiIZC4qBtxHjHst1TY7cuAzEy/PgwIDAQAB",
+   "manifest_version": 2,
+   "name": "panna-ATS",
+   "permissions": [  ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.6.1",
+   "web_accessible_resources": [ "./*" ]
+}

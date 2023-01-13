@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GigaDomo Gmail",
+  "version": "0.99",
+  "description": "GigaDomo Payment for Gmail",
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": [ "main.css" ]
+    }
+  ],
+  "web_accessible_resources": [
+    "jquery-3.2.1.min.js",
+    "gmail.js",
+    "main.js",
+    "main.css"
+  ],
+  "manifest_version": 2
+}

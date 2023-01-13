@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Reminders From God",
+  "description": "Daily encouraging words and inspirational quotes to help overcome fear and live a braver, joyful, more spiritual life",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128t2.png"
+  },
+  "app": {
+    "urls": [
+      "http://remindersfromgod.net/today-reminder.html"
+    ],
+    "launch": {
+      "web_url": "http://remindersfromgod.net/today-reminder.html"
+    }
+  }
+}

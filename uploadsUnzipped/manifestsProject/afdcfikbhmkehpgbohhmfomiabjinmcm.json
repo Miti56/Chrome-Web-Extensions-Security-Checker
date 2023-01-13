@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "GoldClubUtils",
+    "version": "0.6",
+    "description": "Utilitario do CRM",
+    "permissions": ["cookies","activeTab", "tabs", "http://*/*", "https://*/*","https://web.whatsapp.com/"],
+    "icons": { "16": "GCicon.png", "48": "GCicon.png", "128": "GCicon.png" },
+    "browser_action": {
+        "default_icon": "GCicon.png",
+		"default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "manifest_version": 2
+}

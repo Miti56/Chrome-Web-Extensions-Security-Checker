@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Lichess Timed Puzzles",
+  "version": "1.0.0",
+  "permissions": ["https://lichess.org/training/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://lichess.org/training/*"],
+      "css": ["index.css"],
+      "js": ["index.js"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "icons": { "128": "128x128.png" },
+  "name": "Button Facebook",
+  "short_name": "Button Facebook",
+  "description": "Button Facebook - is an extension for quick and easy access from the Google Chrome browser to Faсebook.com",
+  "version": "1.0",
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": "128x128.png"
+  },
+  "background":
+  {
+	"scripts": ["background.js"]
+  }
+}
+

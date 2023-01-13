@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Exchange rates",
+  "description": "Free, real-time currency exchange rates and converter",
+  "version": "1.1.0.4",
+  "app": {
+    "urls": [
+      "http://www.exchangeratestoday.co.uk/"
+    ],
+    "launch": {
+      "web_url": "http://www.exchangeratestoday.co.uk/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+    "manifest_version": 2
+}

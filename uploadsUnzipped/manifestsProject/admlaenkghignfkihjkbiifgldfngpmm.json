@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "fr",
+  "version": "0.0.2",
+  "browser_action": {
+	  "default_icon": {
+	    "128": "images/128.png"
+	  },
+	  "default_popup": "popup.html"
+  },
+  "icons": {
+    "128" : "images/128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
+   ],
+   "background":{
+    "scripts": ["src/jquery-1.11.2.js","background.js"],
+    "persistent": true
+	},
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkZwS+aYdiTiDTqBvdqF3IxrFOa+4UCMHsYy55FM6byQSgOnIyU5sE5pBcoWlcXcVfy5NJ78OmD8vnPvbwuU08ardiibEU4YjIAKMQRZj684QW7jyrsFBDW/qI1DSQagoWbamJ1CSuVx2qkJzqE9Z0sjBOFMsNAT3V9FtwZQnabXpPzkylUXumTOX3w1yXmN5V1uHVm85C/RCcJafqt0MsEqacA0F+/W5vLp40Fcq83n5w59DGPCNB6TD94ukIA+EXUJsDy37sBsBnSdrun3wdWV6HNwHsJJDDIjh7I0kJs4qKYodGpH26DBZ/Vw/wXGuqUKLAyI00nxCcnirmYMu2wIDAQAB",
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["src/jquery-1.11.2.js","page.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

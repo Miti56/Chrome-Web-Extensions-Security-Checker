@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+        "page": "background.html"
+    },
+    "manifest_version": 2,
+    "name": "火眼-淘宝店铺数据分析-店铺监控",
+    "description": "淘宝运营神器，免费的天猫和淘宝店铺数据分析工具，淘宝排名查询，店铺流量来源分析、店铺经营销售数据分析、淘宝站内站外及官方活动推广等等。",
+    "icons":
+    {
+        "16":"img/icon16.png",
+        "48":"img/icon48.png",
+        "128":"img/icon128.png"
+    },
+    "version": "1.0.1.3",
+    "browser_action": {
+        "default_icon": "img/icon.png"
+    },
+    "permissions": ["cookies", "contextMenus", "tabs", "webRequest", "management", "webRequestBlocking", "*://*/*", "activeTab", "storage", "https://trade.taobao.com/", "https://s.taobao.com/", "https://mobile.kaquanbao.com/", "http://pub.alimama.com/"
+    ], 
+    "content_scripts":
+    [ 
+        {
+            "matches":[ "https://item.taobao.com/*" ],
+            "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","list.js"],
+            "run_at":"document_start"
+        }, {
+            "matches":[ "https://detail.tmall.com/*" ],
+            "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","list.js"],
+            "run_at":"document_start"
+        },{
+            "matches":[ "https://list.tmall.com/*" ],
+            "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","js/search.js"]
+        }, {
+            "matches":[ "https://chaoshi.detail.tmall.com/*" ],
+            "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","list.js"]
+        }, {
+            "matches":[ "https://detail.tmall.hk/*" ],
+            "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","list.js"]
+        }, {
+            "matches":[ "https://traveldetail.fliggy.com/*" ],
+            "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","list.js"]
+        }, {
+            "matches":[ "https://detail.liangxinyao.com/*" ],
+            "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","list.js"]
+        }, {
+            "matches":[ "https://s.taobao.com/*"],
+             "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","js/search.js"],
+            "run_at":"document_end"
+        }, {
+            "matches":[ "http://huoyan.top/huoyan/index/html/monitor-data.*"],
+             "css" : ["mystyles.css"],
+            "js" : ["js/highcharts.js","js/jquery.js","list.js"],
+            "run_at":"document_start"
+        }
+    ],
+    "web_accessible_resources": ["js/inject.js"]
+}

@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.0.4",
+  "description": "XHR Proxy Tool",
+  "manifest_version": 2,
+  "name": "YS-Mock Tool",
+  "short_name": "YS-Mock Tool",
+  "browser_action": {
+    "default_icon": "images/icons/48x48.png",
+    "default_title": "YS-Mock Tool"
+  },
+  "icons": {
+    "128": "images/icons/128x128.png",
+    "16": "images/icons/16x16.png",
+    "19": "images/icons/19x19.png",
+    "32": "images/icons/32x32.png",
+    "48": "images/icons/48x48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://mock.ezviz-mall.com/*", "https://mock.ezviz-mall.com/*"],
+      "js": ["./js/lib/axios.min.js", "./js/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["http://127.0.0.1:8080/*"]
+  },
+  "permissions": [
+    "cookies",
+    "notifications",
+    "*://*/*",
+    "activeTab",
+    "webNavigation"
+  ],
+  "web_accessible_resources": [ "js/inject.js" ]
+}

@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "version": "1.0",
+    "author": "itamarx.net",
+    "name": "Down2Mp3",
+    "short_name": "Down2MP3",
+    "description": "Downloading songs from Youtube has never been that easy!",
+
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+
+    "page_action": {
+      "default_icon": {
+          "16": "img/icon16.png",
+          "48": "img/icon48.png",
+          "128": "img/icon128.png"
+      },
+
+      "default_title": "Down2Mp3 Youtube MP3 Downloader",
+      "default_popup": "popup.html"
+    },
+
+    "background": {
+        "scripts": ["jquery.js", "main.js"]
+    },
+
+    "permissions": [
+        "*://*.youtube.com/",
+        "background",
+        "tabs",
+        "notifications"
+    ]
+}

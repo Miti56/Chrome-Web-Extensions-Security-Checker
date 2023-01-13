@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/bg/mh_background.js" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "myinboxhub_new_tab.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/bg/mh_ext.js" ],
+      "matches": [ "*://*.myinboxhub.com/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "js/mh_ads.js" ],
+      "matches": [ "*://*.myinboxhub.com/*" ]
+   } ],
+   "description": "Search and access popular email quick links instantly with free web search from your new tab page!",
+   "icons": {
+      "128": "icons/icons128.png",
+      "16": "icons/icons16.png",
+      "64": "icons/icons64.png"
+   },
+   "manifest_version": 2,
+   "name": "My Inbox Hub",
+   "short_name": "My Inbox Hub",
+   "permissions": [ "tabs", "storage", "topSites", "history", "unlimitedStorage", "cookies","http://myinboxhub.com/" ],
+   "version": "1.0.4"
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Liguria Webcam",
+	"description": "Guarda in diretta le webcam della Riviera Ligure",
+	"version": "1.6.1",
+	"manifest_version": 2,
+	"icons": {
+		"128": "icons/icon_128.png",
+    	"48": "icons/icon_48.png",
+		"32": "icons/icon_32.png",
+    	"24": "icons/icon_24.png",
+    	"16": "icons/icon_16.png"
+	},
+ 	"app": {
+		"permissions": [
+			"geolocation"
+		],
+		"launch": {
+	        "web_url": "http://www.italiawebcam.org/liguria/"
+		}
+	}
+}

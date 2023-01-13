@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self' https://mail.google.com; object-src 'self'",
+  "name": "SilvrBullet - Mail Merge for Gmail",
+  "short_name": "SilvrBullet",
+  "description": "Automate outbound sales with Big Data",
+  "version": "1.4.2",
+  "permissions": [
+    "notifications",
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*",
+    "webRequest",
+    "webRequestBlocking",
+    "identity"
+  ],
+  "background": {
+    "persistent": true,
+    "page": "html/background.html"
+  },
+  "manifest_version": 2,
+  "icons": {
+    "128": "resources/imgs/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "resources/imgs/icon19.png",
+      "38": "resources/imgs/icon38.png"
+    },
+    "default_title": "See recent notifications",
+    "default_popup": "/html/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.nytimes.com/robots.txt*"
+      ],
+      "js": [
+        "/vendor/oauth2/oauth2_inject.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": [
+        "vendor/inboxsdk.js",
+        "silvrbullet.js"
+      ],
+      "css": [
+        "vendor/bower/ladda/dist/ladda-themeless.min.css",
+        "vendor/popconfirm_bootstrap/bootstrap.css",
+        "vendor/flexboxgrid.min.css",
+        "vendor/bower/components-font-awesome/css/font-awesome.min.css",
+        "vendor/bower/medium-editor/dist/css/medium-editor.min.css",
+        "vendor/bower/medium-editor/dist/css/themes/beagle.min.css",
+        "vendor/bower/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.min.css",
+        "vendor/bower/tether-shepherd/dist/css/shepherd-theme-arrows.css",
+        "vendor/bower/snackbarjs/dist/snackbar.min.css",
+        "vendor/bower/snackbarjs/themes-css/material.css",
+        "vendor/bower/bootstrap-multiselect/dist/css/bootstrap-multiselect.css",
+        "vendor/bower/javascript-auto-complete/auto-complete.css",
+        "css/silvrbullet.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "vendor/oauth2/oauth2.html",
+    "vendor/bower/components-font-awesome/fonts/*",
+    "html/widgets/*.html",
+    "resources/imgs/*"
+  ]
+}

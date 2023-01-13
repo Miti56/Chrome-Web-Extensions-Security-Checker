@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "🅱️",
+    "description": "🅱️",
+    "version": "98.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_icon": { "16": "b-icons/b-16.png",
+            "48": "b-icons/b-48.png",
+           "128": "b-icons/b-128.png"
+        }
+    }
+}

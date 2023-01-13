@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery-1.8.3.min.js", "js/jquery.SuperSlide.2.1.1.js", "js/highcharts.js", "js/count-down.js", "js/main.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "惠省钱购物助手,一款提供优惠券的同时为让用户购物更加便利的购物插件，当您在网上购物时，惠省钱购物助手能够为您提供自动查询商品优惠券、超强全网比价、方便的扫码功能,强大的猜你喜欢模块。让您真正享受方便,快捷的购物的乐趣！",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgi4OufZc0Bz5zowN2o746BWehjekfM64hsYiNvHk25jfxkM843ylcWqDae8ufno8kmPiMNbLOWkkJg1zOT/s5DCqTf2EFpBvIl5fXTi7ypWJR3MLjN13bNDpjuCCAaqt2SG+MXUjoz1bxqpM46a5YPIIU2WKSfZLMckV2ix5UNXPhp/RGF8NE0HOOzBV2TId4uYj52QWlsduNgMmmqZQBk5KejGrZMORKGQp5byJXMCyQZ5CwPSg2X1knv0Lrm+0UwH1tdQNjtuuCtclay8oI7OBhnRia9nFVaVTjuHXOyBazOxRzjIrFsEJHa7XHWrsPK+B6XZriOFAzgvEFfYHKQIDAQAB",
+   "manifest_version": 2,
+   "name": "惠省钱购物助手",
+   "permissions": [ "*://*/*", "http://img.alicdn.com/", "tabs", "storage", "cookies" ],
+   "version": "3.0.3"
+}

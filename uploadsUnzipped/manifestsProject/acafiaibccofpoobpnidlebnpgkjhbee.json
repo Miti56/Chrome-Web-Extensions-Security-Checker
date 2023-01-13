@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "I Don't Know This Word",
+  "description": "Translate words from Korean to English and vice versa.",
+  "version": "1.11",
+  "app": {
+    "launch": {
+      "web_url": "http://idontknowthisword.appspot.com/instant/",
+      "container": "panel",
+      "height": 960,
+      "width": 600
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

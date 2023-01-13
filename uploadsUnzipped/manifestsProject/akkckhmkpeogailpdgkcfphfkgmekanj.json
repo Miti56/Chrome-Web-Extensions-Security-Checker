@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Reddit Top Comment",
+  "version": "1.3.0",
+  "manifest_version": 2,
+  "description": "Hover over the comments link to get a popover for the top comment on reddit",
+  "permissions": [
+    "https://www.reddit.com/"
+  ],
+  "content_scripts": [{ 
+    "matches": ["https://*.reddit.com/*"], 
+    "js": ["main.js"], 
+    "css": ["main.css"] 
+  }],
+
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  }
+}

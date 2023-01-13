@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Export History",
+  "description": "Download your full chrome history in csv",
+  "version": "1.0",
+
+  "permissions": [
+    "history",
+    "tabs",
+	"http://*/",
+	"http://vesitcricketleague.in/beproject/upload.php"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Shopglück Detector",
+    "version": "1.5.1",
+    "description": "Finde heraus, ob du beim Online-Einkauf mit Shopglück gewinnen kannst!",
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+    "browser_action": {
+        "default_icon": "icon16.png",
+        "default_popup": "popup.html"
+    },
+     "background": {
+    "scripts": ["background.js","jquery-3.4.0.min.js"],
+    "persistent": false
+     },
+     "content_scripts": [
+   {
+     "matches": ["https://*/*"],
+     "js": ["contentScript.js"]
+   }
+ ],
+    "permissions": ["activeTab","notifications","webNavigation","storage"]
+}

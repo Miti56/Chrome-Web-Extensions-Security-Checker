@@ -1,0 +1,21 @@
+{
+   "author": "StackIT",
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "description": "Now you can secure your browser info from your family members, friends or room mates with your personal password.",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "26.0.1428",
+   "name": "Password Protection - Secure Chrome",
+   "options_page": "options.html",
+   "permissions": [ "storage", "tabs" ],
+   "short_name": "Password for Chrome",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

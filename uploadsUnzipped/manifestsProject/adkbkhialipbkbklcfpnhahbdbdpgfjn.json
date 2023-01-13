@@ -1,0 +1,11 @@
+{"default_locale": "en", 
+"name": "Glitter Wallpapers & New Tab", 
+"browser_action": {"default_icon": "128-ico.png", 
+"default_title": "Glitter Wallpapers & New Tab"},
+ "description": "__MSG_info__", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"chrome_url_overrides": {"newtab": "newtab.html"},
+ "background": {"scripts": ["bg_script.js"]},
+ "icons": {"128": "128-ico.png"},
+ "version": "1.5.3", 
+"manifest_version": 2}

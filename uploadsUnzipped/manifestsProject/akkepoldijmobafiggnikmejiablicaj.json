@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Format Autograder",
+    "description": "Format the JSON in autograder",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://autograder.cse.buffalo.edu/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

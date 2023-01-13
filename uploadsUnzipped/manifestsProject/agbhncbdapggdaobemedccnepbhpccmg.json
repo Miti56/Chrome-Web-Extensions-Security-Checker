@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"scripts": [ "background.js" ]
+	},
+	"browser_action": {
+		"default_icon": "images/icon32_off.png",
+		"default_title": "Wazzmedia"
+	},
+	"externally_connectable": {
+		"matches": ["http://www.wazzmedia.com/*", "https://www.wazzmedia.com/*"]
+	},
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+
+	"manifest_version": 2,
+
+	"name": "Wazzmedia",
+	"short_name": "Wazzmedia",
+	"description": "Wazzmedia allows you to access media services if you live outside United States. Also your data and location keeps protected.",
+	"version": "0.0.3",
+	"permissions": [ "proxy", "http://www.wazzmedia.com/*", "https://www.wazzmedia.com/*" ]
+}

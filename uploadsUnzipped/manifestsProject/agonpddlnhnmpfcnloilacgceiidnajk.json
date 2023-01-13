@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Remind Me Extension",
+    "description": "Schedule your meeting and todo's and set custom background in your browser new tab.",
+    "homepage_url": "https://www.remindmeextension.com/",
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "permissions": ["storage", "webNavigation", "tabs", "https://www.ishtwo.com/meeting_reminder/", "notifications"],
+    "version": "1.6",
+    "browser_action": {
+        "default_icon": {
+            "16": "images/bd-16.png",
+            "32": "images/bd-32.png",
+            "48": "images/bd-48.png",
+            "128": "images/bd-128.png"
+        }
+    },
+    "icons": {
+        "16": "images/bd-16.png",
+        "32": "images/bd-32.png",
+        "48": "images/bd-48.png",
+        "128": "images/bd-128.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "chrome_settings_overrides": {
+        "homepage": "https://www.ishtwo.com/",
+        "search_provider": {
+            "name": "Keyword",
+            "keyword": "keyword",
+            "search_url": "https://www.ishtwo.com/meeting_reminder/search/{searchTerms}",
+            "favicon_url": "https://www.ishtwo.com/images/favicon.png",
+            "suggest_url": "https://www.ishtwo.com/meeting_reminder/suggest/{searchTerms}",
+            "instant_url": "https://www.ishtwo.com/meeting_reminder/instant/{searchTerms}",
+            "image_url": "https://www.ishtwo.com/image/{searchTerms}",
+            "encoding": "UTF-8",
+            "is_default": true
+        }
+    },
+    "web_accessible_resources": ["images/*.*"],
+    "content_security_policy": "script-src 'self'; object-src 'self';style-src 'self' 'unsafe-inline' *;media-src *;"
+
+}

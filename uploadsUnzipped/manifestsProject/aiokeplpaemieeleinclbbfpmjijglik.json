@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "TechXSoftware Products",
+  "description": "TechXSoftware Web App.",
+  "version": "2",
+
+  "permissions": [
+    "https://googledrive.com/host/0B73l9kWzZ9YVRlFuN0hiYWZfUk0/extion.html"
+  ],
+  "browser_action": {
+    "default_icon": "kk.png",
+    "default_popup": "popup.html"
+  }
+}

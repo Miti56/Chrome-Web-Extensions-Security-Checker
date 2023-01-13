@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Qminder",
+  "description": "Qminder is a simple but powerful tool eliminating wait in line",
+  "manifest_version": 2,
+  "version": "2.1",
+  "icons": {
+    "128": "qminder_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://pos.qminderapp.com/chrome-web-store/"
+    ],
+    "launch": {
+      "web_url": "https://pos.qminderapp.com/chrome-web-store/"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Solitaire Classic",
+  "short_name":"Play Solitaire Classic game",
+  "description": "Solitaire Classic is a fun card game in which you need to concentrate a lot if you want to organize stacks of cards.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "classic128.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ĐÀO TẠO SEO TANDIGI",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Khóa đào tạo SEO từ cơ bản đến nâng cao. Khóa học được hướng dẫn chi tiết từ A - Z bằng tất cả các phương pháp TẠI TPHCM.",
+  "homepage_url": "https://tandigi.com/dao-tao-seo",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  }
+}

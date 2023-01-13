@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "minimum_chrome_version": "25",
+  "manifest_version": 2,
+  "name": "TRAFx Communicator Multi",
+"short_name": "TCM",
+  "version": "1.0.21",
+  "default_locale": "en",
+  "icons": {
+    "128": "img/TRAFx-128.png",
+    "48": "img/TRAFx-48.png",
+    "32": "img/TRAFx-32.png",
+	"16": "img/TRAFx-16.png"
+  },
+  "description": "This app enables TRAFx customers to communicate with their TRAFx counting equipment using a MAC, Linux or Chromebook computer.",
+  "offline_enabled": true,
+      "author":"Stefan Martin",
+  "permissions": [
+    "unlimitedStorage",
+    "serial",
+    "storage",
+    {"fileSystem": ["write", "retainEntries", "directory"]} 
+  ],
+  "app": {
+    "background": {
+      "scripts": ["launch.js"]
+    }
+  }
+}

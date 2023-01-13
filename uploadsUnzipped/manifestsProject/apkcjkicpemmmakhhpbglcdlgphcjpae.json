@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"minimum_chrome_version": "18",
+	"offline_enabled": true,
+
+	"name": "NoFollow Simple",
+	"version": "1.4.1",
+	"description": "Outlines all nofollow links on webpages",
+	"homepage_url": "https://www.igorware.com/extensions/nofollow-simple?referrer-ver=chrome-ext-manager",
+
+	"icons": {
+		"16": "images/icon-016.png",
+		"19": "images/icon-019.png",
+		"32": "images/icon-032.png",
+		"48": "images/icon-048.png",
+		"64": "images/icon-064.png",
+		"128": "images/icon-128.png"
+	},
+	"content_scripts": [{
+		"all_frames": true,
+		"css": [ "css/style.css" ],
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_start"
+	}],
+
+	"content_security_policy": "default-src 'none';",
+	"permissions": [
+		"http://*/*",
+		"https://*/*"
+	]
+}

@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "CLANNAD", 
+"theme": {
+"colors": { 
+"bookmark_text": [ 0, 0, 0 ],
+"frame": [ 66, 111, 190 ], 
+"ntp_background": [ 255, 255, 255 ],
+"ntp_header": [ 35, 70, 145, 1 ], 
+"ntp_link": [ 0, 0, 0 ],
+"ntp_section": [ 228, 237, 255, 0.8 ], 
+"ntp_section_link": [ 0, 0, 0 ],
+"ntp_section_text": [ 0, 0, 0 ],
+"ntp_text": [ 0, 0, 0 ],
+"tab_background_text": [ 0, 0, 0 ],
+"tab_text": [ 0, 0, 0 ],
+"toolbar": [ 237, 244, 253 ] 
+},
+"images": { 
+"theme_frame": "Image/frame.png", 
+"theme_frame_overlay": "Image/frame_overlay.png",  
+"theme_ntp_background": "Image/ntp_back.png", 
+"theme_tab_background": "Image/tab_back.png", 
+"theme_toolbar": "Image/toolbar.png" 
+},
+"properties": { 
+"ntp_background_alignment": "bottom", 
+"ntp_background_repeat": "no-repeat", 
+"ntp_logo_alternate": 0
+},
+"tints": { 
+"buttons": [ 0.577, 0.718, 0.506 ]
+}
+},
+"version": "3"
+}

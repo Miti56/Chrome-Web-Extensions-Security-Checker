@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "EchoSystem",
+   "background": {
+      "persistent": true,
+      "scripts": [ "main.js" ]
+   },
+   "browser_action": {
+      "default_title": "InstaStar"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-lZ2Ix8019fUnf6ow4fyqn5ceCQ+bgfmRs5JUcIKB0OU=' https://ssl.google-analytics.com/ https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "ru",
+   "description": "InstaStar - личный БОТ в твоём браузере для раскрутки в Instagram.",
+   "icons": {
+      "128": "./res/images/icon_128.png"
+   },   
+   "manifest_version": 2,
+   "name": "InstaStar",
+   "permissions": [ "notifications", "alarms", "background", "power", "storage", "tabs", "cookies", "identity", "unlimitedStorage", "webRequest", "webRequestBlocking", "*://*.instagram.com/", "*://*.echosystem.ru/" ],
+   "short_name": "InstaStar",
+   "version": "1.9.0",
+   "web_accessible_resources": [ "res/*" ]
+}

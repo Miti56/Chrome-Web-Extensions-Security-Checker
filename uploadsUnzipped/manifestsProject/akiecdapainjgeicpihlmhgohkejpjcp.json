@@ -1,0 +1,36 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.3",
+	"name": "Liverpool F.C. Theme",
+	"theme": {
+		"images" : {
+			"theme_frame" : "frame.png",
+			"theme_toolbar" : "toolbar.png",
+			"theme_ntp_background" : "newtab.png",
+			"theme_tab_background" : "bgtab.png",
+			"theme_button_background" : "button.png"
+		},
+		"colors" : {
+			"frame":[16,110,110],
+			"toolbar":[141,21,22],
+			"tab_text":[255,255,255],
+			"tab_background_text":[255,180,180],
+			"bookmark_text":[255,180,180],
+			"ntp_background":[232,45,54],
+			"ntp_text":[255,255,123],
+			"ntp_link":[255,255,123],
+			"ntp_header":[232,45,54],
+			"ntp_section":[232,45,54],
+			"ntp_section_text":[255,215,38],
+			"ntp_section_link":[255,215,38]
+		},
+		"properties":{
+		"ntp_background_alignment":"right",
+			"ntp_background_repeat":"no-repeat",
+			"ntp_logo_alternate":0
+		},
+		"tints":{
+			"buttons":[1,0.5,0.5]
+		}
+	}
+}

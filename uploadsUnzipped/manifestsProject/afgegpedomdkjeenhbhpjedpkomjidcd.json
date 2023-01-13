@@ -1,0 +1,27 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  
+"name": "__MSG_appName__",
+  
+"description": "__MSG_appDesc__",
+  
+"default_locale": "en",
+  
+"version": "1.0.2",
+  
+"icons": {
+    "128": "maxpanda_icon_128.png"
+  },
+  
+"app": {
+    "urls": [
+      "https://app.maxpanda.com/"
+    ],
+    
+"launch": {
+      "web_url": "https://app.maxpanda.com"
+    }
+  
+},"manifest_version": 2
+
+}

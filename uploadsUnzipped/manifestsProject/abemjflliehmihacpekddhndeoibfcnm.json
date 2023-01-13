@@ -1,0 +1,102 @@
+{
+   "background": {
+      "scripts": [ 
+	  "libs/jquery.js", 
+	  "libs/underscore.js", 
+	  "libs/util.js", 
+	  "js/core.js", 
+	  "js/background.js" 
+	  ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "manifest_version": 2,
+   "version": "1.0",
+   "default_locale": "en",
+   "name": "__MSG_name__",
+   "description": "__MSG_desc__",
+      
+   "browser_action": {
+      "default_icon": "assets/img/icon128.png",
+      "default_popup": "popup.html"
+      
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ 
+	  "assets/css/instagram-main.css" 
+	  ],
+      "js": [ 
+	  "libs/jquery.js", 
+	  "js/instagram-main.js" 
+	  ],
+      "matches": [ 
+	  "*://www.instagram.com/*" 
+	  ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "css": [ 
+	  "assets/css/story-main.css", 
+	  "assets/css/owl.theme.css", 
+	  "assets/css/photoswipe.css", 
+	  "assets/css/default-skin/default-skin.css" 
+	  ],
+      "js": [ 
+	  "libs/jquery.js", 
+	  "libs/underscore.js", 
+	  "libs/moment.js" 
+	  ],
+      "matches": [ 
+	  "*://www.instagram.com/*" 
+	  ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ 
+	  "libs/touch-emulator.js", 
+	  "libs/setnavigator.js" 
+	  ],
+      "matches": [ 
+	  "*://www.instagram.com/*" 
+	  ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": [ "js/px.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "externally_connectable": {
+      "matches": [ "*://www.instagram.com/*" ]
+   },
+   "icons": {
+      "128": "assets/img/icon128.png",
+      "16": "assets/img/icon16.png",
+      "19": "assets/img/icon19.png",
+      "48": "assets/img/icon48.png"
+   },
+   "permissions": [ 
+   "<all_urls>",
+   "idle", 
+   "tabs", 
+   "storage", 
+   "notifications", 
+   "background", 
+   "webRequest", 
+   "webRequestBlocking", 
+   "*://*/*", 
+   "cookies", 
+   "unlimitedStorage" 
+   ],
+   "sandbox": {
+      "pages": [ "sandbox.html" ]
+   },
+   
+   "web_accessible_resources": [ 
+   "js/*", 
+   "libs/*", 
+   "assets/img/*", 
+   "assets/css/*" 
+   ]
+}

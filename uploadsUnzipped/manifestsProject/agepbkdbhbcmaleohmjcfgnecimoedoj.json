@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+	"manifest_version": 2,
+	"version": "1.0", 
+	"name": "Serenity", 
+	"description": "I don't like other people's themes so I took the time to make one myself.", 
+	"theme": { 
+		"images" : { 
+			"theme_frame" : "frame.png", 
+			"theme_frame_inactive" : "frame.png",
+			"theme_tab_background" : "frame.png",
+			"theme_toolbar" : "toolbar.png", 
+			"theme_ntp_background" : "bg.png"
+		}, 
+		"colors" : { 
+			"frame" : [111, 255, 255], 
+			"toolbar" : [14, 32, 59], 
+			"ntp_text" : [0, 190, 255], 
+			"ntp_link" : [0, 190, 255], 
+			"ntp_section" : [0, 190, 255], 
+			"tab_text": [0, 190, 255],
+			"tab_background_text": [0, 78, 105],
+			"tab_background": [255, 255, 255],
+			"button_background" : [0, 0, 0],
+			"bookmark_text": [0, 190, 255]
+		}, 
+		"tints" : { 
+			"buttons" : [0.33, 0.5, 0.47] 
+		}, 
+		"properties" : { 
+			"ntp_background_alignment" : "center" 
+			} 
+		} 
+	} 

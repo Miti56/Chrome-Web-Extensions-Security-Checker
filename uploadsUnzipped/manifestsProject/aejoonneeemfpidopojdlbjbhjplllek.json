@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "キャプ太",
+	"version": "2.0.3",
+
+	"description": "「キャプ太」はスマホページを自動的にスクロールしてページ全体をキャプチャすることができる Google Chrome 用の拡張機能です。",
+	"icons": {
+		"16": "img/capta_16.png",
+		"19": "img/capta_19.png",
+		"48": "img/capta_48.png",
+		"128": "img/capta_128.png"
+	},
+
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+
+	"author": "TAKEMOTO Daigo",
+
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["js/content_scripts.js"],
+			"run_at": "document_start"
+		}
+	],
+
+	"permissions": ["clipboardWrite", "contextMenus", "webRequest", "webRequestBlocking", "tabs", "<all_urls>"]
+}

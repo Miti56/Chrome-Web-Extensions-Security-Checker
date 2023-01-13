@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Open eCard Legacy Activator",
+    "version": "1.0.1",
+    "permissions": [
+	"tabs", "http://*/*", "https://*/*"
+    ],
+    "browser_action": {
+	"default_title": "Open eCard Legacy Activator",
+	"default_icon": "Open-eCard-Logo_48.png"
+    },
+    "content_scripts": [
+	{
+	    "matches": ["https://*/*"],
+	    "all_frames": true,
+	    "js": ["activate.js"]
+	}
+    ],
+    "manifest_version": 2,
+    "description": "Scans for eCard object tags and invokes the localhost activation when one is encountered.",
+    "icons": {
+	"48": "Open-eCard-Logo_48.png",
+	"64": "Open-eCard-Logo_64.png"
+    },
+    "minimum_chrome_version": "17"
+}

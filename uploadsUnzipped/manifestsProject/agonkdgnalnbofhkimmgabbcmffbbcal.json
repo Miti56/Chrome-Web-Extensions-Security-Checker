@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+	"manifest_version": 2,
+	
+	"name": "__MSG_extension_name__",
+	
+	"short_name": "__MSG_extension_short_name__",
+	
+	"description": "__MSG_extension_description__",
+	
+	"version": "2.4.1",
+	
+	"minimum_chrome_version": "31",
+	
+	"default_locale": "en",
+	
+	"icons": {
+		"128": "images/icon-128.png",
+		"64": "images/icon-64.png",
+		"48": "images/icon-48.png",
+		"32": "images/icon-32.png",
+		"16": "images/icon-16.png"
+	},
+	
+	"background": {
+		"page": "background.html",
+		"persistent": true
+	},
+	
+	"browser_action": {
+		"default_title": "__MSG_extension_default_title__",
+		"default_icon": "images/icon-19.png",
+		"default_popup": "popup.html"
+	},
+	
+	"content_scripts": [ {
+		"all_frames": true,
+		"js": [ "scripts/content/preload.js" ],
+		"match_about_blank": true,
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_start"
+	}, {
+		"all_frames": true,
+		"js": [ "scripts/content/postload.js" ],
+		"match_about_blank": true,
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_end"
+   } ],
+	
+	"web_accessible_resources": [ "images/*.png" ],
+	
+	"permissions": [ "tabs", "activeTab", "http://*/*", "https://*/*", "downloads", "storage", "notifications" ]
+   
+}

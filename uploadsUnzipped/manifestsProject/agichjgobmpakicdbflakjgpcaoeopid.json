@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "Ehab Kahwati",
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "extension.html",
+      "default_title": "Git IP Address"
+   },
+   "content_security_policy": "script-src  'self'  https://api.ipify.org; object-src 'self' ",
+   "description": "Get IP address quickly",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Get IP Address",
+   "options_page": "OptionsPage.html",
+   "permissions": [ "*://*/*", "http://*.ipify.org/", "tabs", "notifications", "storage" ],
+   "short_name": "Get IP",
+   "version": "1.1.8"
+}

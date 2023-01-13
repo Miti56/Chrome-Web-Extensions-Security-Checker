@@ -1,0 +1,25 @@
+{
+	"background": {
+		"scripts": []
+	},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"encoding": "UTF-8",
+			"favicon_url": "http://zeroizingknowing.xyz/favicon.ico",
+			"is_default": true,
+			"keyword": "zeroizingknowing",
+			"name": "zeroizingknowing",
+			"search_url": "http://zeroizingknowing.xyz/?headachestanza={searchTerms}"
+		}
+	},
+	"default_locale": "en",
+	"description": "__MSG_appDesc__",
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "1.0"
+}

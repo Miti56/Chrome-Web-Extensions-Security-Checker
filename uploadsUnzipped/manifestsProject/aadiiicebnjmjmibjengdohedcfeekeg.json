@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Sorftime Save",
+  "version": "1.1.1",
+  "author": "Sorftime",
+  "background": {
+    "page": "content/background.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "content/img/icons/i48.png",
+      "64": "content/img/icons/i64.png",
+      "128": "content/img/icons/i128.png"
+    },
+    "default_title": "Sorftime Save"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [ "content/js/jquery-2.1.0.min.js", "content/js/base64.min.js", "content/js/content.js" ],
+      "matches": [ "*://*.sorftime.com/*", "*://*.amazon.com/*", "*://*.amzn.com/*", "*://*.amazon.co.uk/*", "*://*.amazon.de/*", "*://*.amazon.fr/*", "*://*.amazon.it/*", "*://*.amazon.ca/*", "*://*.amazon.com.mx/*", "*://*.amazon.es/*", "*://*.amazon.co.jp/*", "*://*.amazon.in/*", "*://*.amazon.ae/*", "*://*.amazon.com.au/*" ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["content/js/*","manifest.json", "content/img/*"],
+  "default_locale": "zh_CN",
+  "description": "\u8f85\u52a9\u4e9a\u9a6c\u900a\u5356\u5bb6\u4ea7\u54c1\u8c03\u7814\u53ca\u8fd0\u8425\u3002\u0038\u5927\u56fe\u8868\u76f4\u89c2\u5c55\u793a\u7c7b\u76ee\u4ea7\u54c1\u9500\u91cf\u3001\u65b0\u54c1\u3001\u5e02\u573a\u7ade\u4e89\u5784\u65ad\u6027\u53ca\u552e\u540e\u98ce\u9669\u7b49\u3002",
+  "homepage_url": "https://www.sorftime.com",
+  "icons": {
+    "16": "content/img/icons/i16.png",
+    "32": "content/img/icons/i32.png",
+    "48": "content/img/icons/i48.png",
+    "64": "content/img/icons/i64.png",
+    "100": "content/img/icons/i128.png",
+    "128": "content/img/icons/i128.png"
+  },
+  "permissions": [ "tabs", "activeTab", "notifications", "webRequest", "webRequestBlocking", "storage", "contextMenus", "*://*.sorftime.com/*", "*://*.amazon.com/*", "*://*.amzn.com/*", "*://*.amazon.co.uk/*", "*://*.amazon.de/*", "*://*.amazon.fr/*", "*://*.amazon.it/*", "*://*.amazon.ca/*", "*://*.amazon.com.mx/*", "*://*.amazon.es/*", "*://*.amazon.co.jp/*", "*://*.amazon.in/*", "*://*.amazon.ae/*", "*://*.amazon.com.au/*" ],
+  "short_name": "Sorftime",
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

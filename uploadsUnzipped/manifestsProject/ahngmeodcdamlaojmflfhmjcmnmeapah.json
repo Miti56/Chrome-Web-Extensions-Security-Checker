@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Leprechauns New Tab St Patrick Theme",
+  "version": "4.0.6",
+  "description": "Leprechauns on every new tab. For fans of St. Patty’s Day Irish culture and Leprechauns!",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_title": "Leprechauns New Tab St Patrick Theme",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png"
+    }
+  },
+  "options_ui": { "page": "options.html", "chrome_style": true },
+  "chrome_url_overrides" : { "newtab": "newtab.html" },
+  "permissions": ["storage"],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

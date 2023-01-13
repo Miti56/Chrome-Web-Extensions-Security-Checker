@@ -1,0 +1,59 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "OMI Call",
+    "description": "Using OMI Call Extension to make a Call for HubSpot Contacts",
+    "version": "1.2.0",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "logo.png",
+        "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "scripts": [
+            "assets/js/jquery-3.2.1.min.js",
+            "assets/js/sip-0.11.4.min.js",
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://app.hubspot.com/*"
+            ],
+            "css": [
+                "content/callbox.css",
+                "content/iframe.css",
+                "content/esms/esms.css",
+                "content/hubspot/hubspot.css"
+            ],
+            "js": [
+                "assets/js/jquery-3.2.1.min.js",
+                "assets/js/sip-0.12.0.min.js",
+                "assets/js/circular-json.js",
+                "assets/js/moment.min.js",
+                "content/sdk.js",
+                "content/message.js",
+                "content/callbox.js",
+                "content/hubspot/hubspot.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "assets/*",
+        "popup/*",
+        "content/*",
+        "logo.png"
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "notifications"
+    ]
+}

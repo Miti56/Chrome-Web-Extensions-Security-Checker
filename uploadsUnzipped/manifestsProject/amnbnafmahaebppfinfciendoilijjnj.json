@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ultimate Guitar - Spotify Connector",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Tab finder based on your current Spotify track.",
+  "homepage_url": "https://github.com/madya121/ug-spotify-connector",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+   {
+     "matches": ["https://*.ultimate-guitar.com/*"],
+     "js": [
+       "src/content_scripts/jquery.js",
+       "src/content_scripts/ug.js"
+     ]
+   }
+ ],
+  "permissions": [
+    "storage",
+    "https://*.ultimate-guitar.com/*"
+  ]
+}

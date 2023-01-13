@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Pichars",
+  "description": "Just a quick way to access pichars",
+  "manifest_version": 2,
+  "version": "3",
+  "app": {
+    "urls": [
+      "*://pichars.org/",
+      "*://*.pichars.org/"
+    ],
+    "launch": {
+      "web_url": "http://pichars.org/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

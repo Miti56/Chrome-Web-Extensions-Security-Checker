@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "English - Hindi Translator",
+	"version":"1.2.0",
+	"description":"live transltion of English typing text into Hindi",
+	"author":"Anugandula Naveen Kumar, Sandeep Sharma, Rahul Shrivastav",
+	"browser_action":{
+		"default_popup":"popup.html"
+	},
+	"background": {
+		"scripts": ["background.js","jquery-3.4.1.js"],
+		"persistent": true
+	},
+	"icons":{
+		"16":"translate16.png",
+		"32":"translate32.png",
+		"128":"translate128.png"
+	},
+	"content_scripts":[{
+		"matches": ["file:///*","http://webmail/*","http://webmail.cdot.in/*","http://webmail.cdotd.ernet.in/*","*://webmail.cdot.in/*","http://openwebmail.amcpl.net/*","https://openwebmail.amcpl.net/*"],
+		"js": ["jquery-3.4.1.js","content_script.js"]
+	}],
+	"permissions": ["webRequest","webRequestBlocking","tabs","https://translation.googleapis.com/*","*://*.googleapis.com/"]
+}

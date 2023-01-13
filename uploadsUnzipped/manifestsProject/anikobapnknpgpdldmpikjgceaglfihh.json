@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Mario Online Nostalgia Game",
+  "description": "Mario, Marvel Contest of Champions, Mobile Legend Bang Bang, Mobile Strike, Monopoly, NBA 2K17, Five Night at Freddy's",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

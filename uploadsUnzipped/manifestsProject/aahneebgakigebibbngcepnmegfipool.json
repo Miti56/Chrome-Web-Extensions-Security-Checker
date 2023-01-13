@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+        "manifest_version": 2,
+        "name": "YAYxtension",
+        "version": "0.0.1",
+        "description": "Changes what is displayed on your browser from English to Yaynglish.",
+        "content_scripts": 
+        [
+            {
+                "matches": ["*://*/*"],
+                "js": ["content_script.js"],
+                "css": ["csshake-little.css"],
+                "run_at": "document_end"
+            }
+        ]
+    }
+    

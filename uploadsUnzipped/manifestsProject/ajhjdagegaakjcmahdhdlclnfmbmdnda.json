@@ -1,0 +1,30 @@
+{
+   "background": {
+                  "scripts": [ "poehali.js" ]
+   },
+   
+   "browser_action": {
+                      "default_icon": "images/logo16.png"
+   },
+   
+   
+   "name": "__MSG_name__",
+   "short_name": "__MSG_shortName__",
+   "description": "__MSG_desc__",
+   "default_locale": "en",
+      
+   "icons": {
+   "16": "images/logo16.png",
+   "32": "images/logo32.png",
+	  "48": "images/logo48.png",
+	  "64": "images/logo64.png",
+	  "128": "images/logo128.png"
+   },
+   
+   "manifest_version": 2,
+   "offline_enabled": true,
+   "container": "GOOGLE_DRIVE",
+   "permissions": ["unlimited_storage", "https://google.com/", "https://extmix.com/scanweb/"],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

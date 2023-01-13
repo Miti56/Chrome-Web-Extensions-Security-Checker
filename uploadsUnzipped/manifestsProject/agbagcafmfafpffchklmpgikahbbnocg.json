@@ -1,0 +1,13 @@
+{"offline_enabled": true, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"name": "__MSG_extName__", 
+"browser_action": {"default_icon": "icons/128.png", 
+"default_title": "Dirt Bikes  Wallpapers & HD Themes"},
+ "background": {"scripts": ["background.js"]},
+ "icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "default_locale": "en", 
+"version": "0.9.11", 
+"chrome_url_overrides": {"newtab": "index.html"},
+ "description": "__MSG_extDesc__"}

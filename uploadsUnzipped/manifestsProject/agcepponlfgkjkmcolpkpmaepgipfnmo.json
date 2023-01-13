@@ -1,0 +1,41 @@
+{
+	"name": "__MSG_name__",
+	"chrome_settings_overrides": {
+		"homepage": "http://svgsearch.com",
+		"search_provider": {
+			"name": "Svg Search",
+			"search_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"suggest_url": "http://svgsearch.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://svgsearch.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"version": "0.15.0",
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_title": "Man Of Steel"
+	},
+	"chrome_url_overrides": {
+		"newtab": "micron.html"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"optional_permissions": [
+		"management"
+	],
+	"icons": {
+		"48": "icons/ic48.png",
+		"128": "icons/ic128.png"
+	},
+	"background": {
+		"scripts": [
+			"js/man-of-steel.js"
+		]
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

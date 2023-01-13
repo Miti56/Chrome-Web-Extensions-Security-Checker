@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "version": "1.0.5",
+  "default_locale": "en",
+  "icons": {
+    "16": "./img/james16.png",
+    "32": "./img/james32.png",
+    "48": "./img/james48.png",
+    "64": "./img/james64.png",
+    "128": "./img/james128.png",
+    "256": "./img/james256.png"
+  },
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.bundle.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "*://*.linkedin.com/*",
+    "https://ui.boondmanager.com/*",
+    "storage",
+    "activeTab",
+    "cookies",
+    "tabs",
+    "declarativeContent"
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "boondmanager.bundle.js"
+      ],
+      "matches": [
+        "https://ui.boondmanager.com/*"
+      ]
+    },
+    {
+      "all_frames": true,
+      "js": [
+        "parse.bundle.js"
+      ],
+      "matches": [
+        "*://*.linkedin.com/*"
+      ]
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+      "16": "./img/boondmanager-16-16-gris.png",
+      "32": "./img/boondmanager-32-32-gris.png"
+    },
+    "default_title": "Open on LinkedIn or BoondManager",
+    "default_popup": "popup.html"
+  }
+}

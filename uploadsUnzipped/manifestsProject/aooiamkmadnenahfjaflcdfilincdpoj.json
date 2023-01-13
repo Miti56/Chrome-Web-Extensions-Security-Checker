@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "易简",
+	"short_name" : "YiJian",
+	"version" : "1.2.3",
+	"manifest_version" : 2,
+	"description" : "表单填写助手，为输入框添加一个候选列表",
+	"icons" : {
+		"16": "imgs/icon16.png",
+		"48": "imgs/icon48.png",
+		"128": "imgs/icon128.png"
+	},
+	"browser_action":{
+		"default_icon" : "imgs/icon48.png",
+		"default_title" : "易简",
+		"default_popup" : "popup.html"
+	},
+	"background" : {
+		"page" : "background.html"
+	},
+	"content_scripts" : [{
+		"matches" : ["*://*/*"],
+		"css" : ["css/content.css"],
+		"js" : ["js/jquery.js", "js/content.js"],
+		"all_frames" : true
+	}],
+	"options_page" : "options.html",
+	"offline_enabled" : true,
+	"web_accessible_resources":["imgs/close.png","imgs/save.png","imgs/search.png"],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "最新ニュース・最新トピックス",
+  "short_name": "トピックス",
+  "description": "主要ポータルサイトのニュース・トピックスをタブ形式で表示",
+  "manifest_version": 2,
+  "version": "2.1",
+  "app": {
+    "urls": [
+      "http://blogest.net/news/topics/"
+    ],
+    "launch": {
+      "web_url": "http://blogest.net/news/topics/"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  }
+}

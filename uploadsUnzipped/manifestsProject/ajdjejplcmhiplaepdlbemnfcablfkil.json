@@ -1,0 +1,41 @@
+{
+	"chrome_settings_overrides": {
+		"homepage": "http://crazycraftz.com",
+		"search_provider": {
+			"name": "Crazy Craftz",
+			"search_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"suggest_url": "http://crazycraftz.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://crazycraftz.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"icons": {
+		"48": "icons/ratchet-clank-48.png",
+		"128": "icons/ratchet-clank-128.png"
+	},
+	"description": "__MSG_description__",
+	"optional_permissions": [
+		"management"
+	],
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"background": {
+		"scripts": [
+			"ratchet-clank-js/ratchet-clank.js"
+		]
+	},
+	"browser_action": {
+		"default_title": "Ratchet & Clank"
+	},
+	"name": "__MSG_name__",
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "5.2.20",
+	"manifest_version": 2,
+	"default_locale": "en",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

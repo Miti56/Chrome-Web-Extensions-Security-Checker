@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Sup Ex",
+  "version": "0.1.4",
+  "description": "Testing Extension",
+
+  "content_scripts": [{
+    "js": ["jquery-3.3.1.min.js", "content.js", "api.js", "recaptcha__en.js"],
+    "matches": ["https://www.supremenewyork.com/mailinglist*"]
+  }]
+
+}

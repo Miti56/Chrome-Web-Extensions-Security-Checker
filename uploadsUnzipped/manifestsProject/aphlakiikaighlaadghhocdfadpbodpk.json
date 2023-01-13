@@ -1,0 +1,18 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/128.png",
+      "default_title": "MiniGiants.io Game"
+   },
+   "description": "You control a small giant; you must attempt to grow your size and try to eliminate other players in the arena. ",
+   "icons": {
+      "128": "img/128.png"
+   },
+   "manifest_version": 2,
+   "name": "MiniGiants.io Game",
+   "permissions": [ "tabs", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

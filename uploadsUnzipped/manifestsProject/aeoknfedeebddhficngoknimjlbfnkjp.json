@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+"short_name": "Football Wallpapers Fifa Games",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "name": "Football Wallpapers Fifa Games",
+  "container": "GOOGLE_DRIVE",
+  "description": "If you want more quality posters and backgrounds from the world of sports please check out our Football gallery.",
+     "permissions": [ "webview", "power", "storage", "videoCapture", "geolocation", "pointerLock", "system.display", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "accessibilityFeatures.read", "accessibilityFeatures.modify" ],
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "2.3",
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

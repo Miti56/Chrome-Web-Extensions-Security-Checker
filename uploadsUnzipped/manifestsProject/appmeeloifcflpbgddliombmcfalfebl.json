@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Euro Fast Truck Ride Simulator 2",
+  "description": "Euro Truck Simulator 2, Friday the 13th: The Game, Rocket League®, Football Manager 2017, Inside, Rust, The Forest, Limbo",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

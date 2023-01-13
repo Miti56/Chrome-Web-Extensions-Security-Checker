@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Facebook Hidden Suggest Friends",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "Control the \"People You May Know\" feature on Facebook,  Disable Facebook's \"People you may know\" feature",
+  "homepage_url": "https://mydeveloper.info",
+  "icons": {
+    "128": "./icons/fb-hidden-suggest-friends-edit.png"
+  },
+  "browser_action": {
+    "default_icon": "./icons/fb-hidden-suggest-friends-edit.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://facebook.com/*",
+        "https://facebook.com/*",
+        "http://www.facebook.com/*",
+        "https://www.facebook.com/*"
+      ],
+      "js": [
+        "./script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "VkSpinnerBlock",
+	"version": "0.1",
+	"author": "MadGustave",
+	"description": "Убирает анимацию спиннера во ВК",
+
+	"background": {
+		"scripts": ["event_page.js"],
+		"persistance": false
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://vk.com/*"],
+	      	"css": ["style.css"],
+	      	"run_at": "document_idle"
+		}
+	],
+
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"tabs",
+		"<all_urls>"
+	]
+}

@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "ZoneGive",
+  "description": "This extension helps online shoppers automatically help their favorite non-profits",
+  "version": "2.0.2",
+
+  "browser_action": {
+    "default_icon": "icon-chrome-shopping-square-heart-on-16.png",
+    "default_popup": "popup.html",
+    "default_title": "ZoneGive"
+  }
+}

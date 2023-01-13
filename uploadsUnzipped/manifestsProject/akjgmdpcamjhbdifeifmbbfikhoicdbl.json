@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Social Autofollower",
+	"version": "1.5.22",
+	"description": "Automatically follows/unfollows people on twitter, pinterest and instagram",
+
+	"permissions": [
+        "tabs",
+		"storage",
+        "activeTab",
+        "webRequest",
+        "<all_urls>",
+        "https://www.pinterest.com/resource/UserFollowResource/create/",
+        "https://www.instagram.com/web/friendships/*",
+		"declarativeContent"
+	],
+
+    "content_scripts": [
+		{
+			"matches": ["https://twitter.com/*"],
+			"js": ["js/jquery-3.2.1.js", "js/jBox.min.js", "js/twitterContent.js"],
+			"css": ["css/jBox.css"]
+		},
+		{
+			"matches": ["https://www.pinterest.com/*"],
+			"js": ["js/jquery-3.2.1.js", "js/jBox.min.js", "js/pinterestContent.v2.js"],
+			"css": ["css/jBox.css"]
+		},
+        {
+          	"matches": ["https://www.instagram.com/*"],
+          	"js": ["js/jquery-3.2.1.js", "js/jBox.min.js", "js/instaContent.js"],
+			"css": ["css/jBox.css"]
+        }
+    ],
+	
+    "icons": { 
+	       "16": "images/16x16.png",
+           "48": "images/48x48.png",
+          "128": "images/128x128.png" 
+    },
+
+	"page_action": {
+		"default_title": "Twitter/Pinterest autofollower",
+		"default_icon": "images/icon.png",
+		"default_popup": "popup.html"
+	},
+    "background": {
+      "scripts": ["js/jquery-1.12.24.js", "js/background.js"]
+    }
+
+}

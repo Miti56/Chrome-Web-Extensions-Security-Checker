@@ -1,0 +1,18 @@
+{
+   "browser_action": {
+      "default_icon": "icon-large.png",
+      "default_popup": "amazon.html"
+   },
+   "description": "Navigate Amazon's Homepage directly from Google Chrome, the Amazon\u2122 Navigator.",
+   "icons": {
+      "128": "icon-large.png",
+      "16": "icon-bitty.png",
+      "48": "icon-small.png"
+   },
+
+   "manifest_version": 2,
+   "name": "Amazon\u2122 Navigator",
+   "permissions": [ "tabs", "*://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.5"
+}

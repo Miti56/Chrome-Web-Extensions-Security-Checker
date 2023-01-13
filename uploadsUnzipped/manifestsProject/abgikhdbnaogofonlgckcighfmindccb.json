@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "description": "Beautifully lightweight Extension to show only ads on your Facebook Feed. Perfect for ad and product research.",
+    "name": "Facebook Ads Only",
+    "short_name": "Facebook Ads Only",
+    "author": "ragy89",
+    "homepage_url": "https://facebookadsonly.com/",
+    "permissions": [  
+        "activeTab"
+    ],
+    
+    "icons": { 
+        "16": "icon_128.png",
+        "48": "icon_128.png",
+       "128": "icon_128.png" 
+    },
+    
+    "version": "1.0.0.0",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+      },
+
+    "browser_action": {},
+
+
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+
+ }
+ 

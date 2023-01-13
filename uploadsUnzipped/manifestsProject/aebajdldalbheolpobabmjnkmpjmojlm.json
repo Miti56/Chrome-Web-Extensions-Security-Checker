@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Owlead",
+    "version": "1.0.4",
+    "description": "Get Real and Targeted Twitter Followers on Autopilot",
+    "permissions": [
+        "storage",
+        "cookies",
+        "https://app.owlead.com/",
+        "https://twitter.com/"
+    ],
+    "browser_action": {
+        "default_popup": "window.html"
+    },
+    "background": {
+        "scripts": ["js/jquery-3.3.1.min.js", "js/util.js", "js/background.js"],
+        "persistent": false
+    },
+    "icons": { 
+        "128": "img/icon.png" 
+    },
+    "content_scripts": [{
+        "css": ["css/styles.css"],
+        "js": ["js/jquery-3.3.1.min.js", "js/util.js", "js/content.js"],
+        "matches": ["https://twitter.com/*", "http://localhost/*", "https://app.owlead.com/*"],
+        "run_at": "document_end"
+    }]
+}

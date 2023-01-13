@@ -1,0 +1,301 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+        "scripts": [
+            "scripts/libs/jquery-3.1.1.js",
+            "scripts/libs/underscore-min.js",
+            "scripts/libs/jquery.signalR-2.2.1.min.js",
+            "scripts/libs/webapi_endpoints.js",
+            "scripts/backgrounds/background_signalr.js",
+            "scripts/backgrounds/background.js"
+        ]
+    },
+    "icons": {
+        "16": "images/icon19.png",
+        "48": "images/icon38.png",
+        "128": "images/icon38.png"
+    },
+    "manifest_version": 2,
+    "name": "N3 OneGlass",
+    "version": "2.0.625.0",
+    "description": "Provides an easy way for the BDRs to initiate phone calls.",
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "Extension"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "https://n3oneglass.azurewebsites.net/extension" ],
+            "js": [
+                "scripts/libs/jquery-3.1.1.js",
+                "scripts/libs/jquery-ui.min.js",
+                "scripts/libs/clipboard.min.js",
+                "scripts/libs/sha256.js",
+                "scripts/libs/moment.js",
+                "scripts/libs/moment-timezone.js",
+                "scripts/libs/underscore-min.js",
+                "scripts/libs/phoneparser.js",
+                "scripts/libs/webapi_endpoints.js",
+                "scripts/contents/shared.js",
+				"scripts/contents/window_messages.js"
+            ],
+            "css": [
+                "styles/jquery-ui.min.css"
+            ],
+            "all_frames": true
+        },
+		{
+      "matches": [ "https://n3oneglass.azurewebsites.net/account/login" ],
+      "js": [
+        "scripts/libs/jquery-3.1.1.js",
+        "scripts/libs/jquery-ui.min.js",
+        "scripts/libs/webapi_endpoints.js",
+        "scripts/contents/window_messages.js"
+      ],
+      "exclude_matches": [
+        "*://*.microsoftpartnersolutions.com/*",
+        "*://*.salesforceliveagent.com/*",
+        "*://demandcenterdata.azurewebsites.net/*",
+        "*://*.n3click-to-call.azurewebsites.net/*",
+        "*://*.n3click-to-call-staging.azurewebsites.net/*",
+        "*://*.n3click-to-call-dev.azurewebsites.net/*",
+        "*://*.n3oneglass01.azurewebsites.net/*",
+        "*://*.login.microsoftonline.com/*",
+        "*://*.officeapis.azurewebsites.net/*",
+        "*://*.system.nexonia.com/*"
+      ],
+      "css": [
+        "styles/jquery-ui.min.css"
+      ],
+      "all_frames": true
+    },
+    {
+      "matches": [ "https://n3oneglass.azurewebsites.net/account/ringcentrallogin" ],
+      "js": [
+        "scripts/libs/jquery-3.1.1.js",
+        "scripts/libs/jquery-ui.min.js",
+        "scripts/libs/webapi_endpoints.js",
+        "scripts/contents/window_messages.js"
+      ],
+      "exclude_matches": [
+        "*://*.microsoftpartnersolutions.com/*",
+        "*://*.salesforceliveagent.com/*",
+        "*://demandcenterdata.azurewebsites.net/*",
+        "*://*.n3click-to-call.azurewebsites.net/*",
+        "*://*.n3click-to-call-staging.azurewebsites.net/*",
+        "*://*.n3click-to-call-dev.azurewebsites.net/*",
+        "*://*.n3oneglass01.azurewebsites.net/*",
+        "*://*.login.microsoftonline.com/*",
+        "*://*.officeapis.azurewebsites.net/*",
+        "*://*.system.nexonia.com/*"
+      ],
+      "css": [
+        "styles/jquery-ui.min.css"
+      ],
+      "all_frames": true
+    },
+        {
+            "all_frames": false,
+            "matches": [
+                "*://*.dynamics.com/*"
+            ],
+            "exclude_matches": [
+                "*://*.microsoftpartnersolutions.com/*",
+                "*://*.salesforceliveagent.com/*",
+                "*://demandcenterdata.azurewebsites.net/*",
+                "*://*.n3click-to-call.azurewebsites.net/*",
+                "*://*.n3click-to-call-staging.azurewebsites.net/*",
+                "*://*.n3click-to-call-dev.azurewebsites.net/*",
+                "*://*.n3oneglass01.azurewebsites.net/*",
+                "*://*.login.microsoftonline.com/*",
+                "*://*.officeapis.azurewebsites.net/*",
+                "https://n3oneglass.azurewebsites.net/extension",
+        "*://*.system.nexonia.com/*"
+            ],
+            "js": [
+                "scripts/libs/jquery-3.1.1.js",
+                "scripts/libs/clipboard.min.js",
+                "scripts/libs/sha256.js",
+                "scripts/libs/moment.js",
+                "scripts/libs/moment-timezone.js",
+                "scripts/libs/underscore-min.js",
+                "scripts/libs/phoneparser.js",
+                "scripts/libs/webapi_endpoints.js",
+                "scripts/libs/crm_script_injector.js",
+				"scripts/libs/jquery-ui.min.js",
+                "scripts/contents/shared_page.js",
+                "scripts/contents/content_script_crm.js"
+            ],
+            "css": [
+                "styles/shared_page.css",
+                "styles/fontawesome-all.min.css"
+            ]
+        },
+        {
+            "all_frames": false,
+            "matches": [
+                "*://*.salesforce.com/*",
+                "*://*.visual.force.com/*",
+                "*://*.lightning.force.com/*",
+                "*://*.powerbi.com/*"
+            ],
+            "exclude_matches": [
+                "*://*.microsoftpartnersolutions.com/*",
+                "*://*.salesforceliveagent.com/*",
+                "*://demandcenterdata.azurewebsites.net/*",
+                "*://*.n3click-to-call.azurewebsites.net/*",
+                "*://*.n3click-to-call-staging.azurewebsites.net/*",
+                "*://*.n3click-to-call-dev.azurewebsites.net/*",
+                "*://*.n3oneglass01.azurewebsites.net/*",
+                "*://*.login.microsoftonline.com/*",
+                "*://*.officeapis.azurewebsites.net/*",
+                "https://n3oneglass.azurewebsites.net/extension",
+        "*://*.system.nexonia.com/*"
+            ],
+            "js": [
+                "scripts/libs/jquery-3.1.1.js",
+                "scripts/libs/clipboard.min.js",
+                "scripts/libs/sha256.js",
+                "scripts/libs/moment.js",
+                "scripts/libs/moment-timezone.js",
+                "scripts/libs/underscore-min.js",
+                "scripts/libs/phoneparser.js",
+                "scripts/libs/webapi_endpoints.js",
+                "scripts/libs/js-force.js",
+                "scripts/libs/webapi_endpoints.js",
+				"scripts/libs/jquery-ui.min.js",
+                "scripts/contents/shared_page.js",
+                "scripts/pages/salesforce_session.js",
+                "scripts/contents/content_script_sfdc.js"
+            ],
+            "css": [
+                "styles/shared_page.css",
+                "styles/fontawesome-all.min.css"
+            ]
+        },
+        {
+            "all_frames": false,
+            "matches": [
+                "*://*.marketingautomation.services/*"
+            ],
+            "exclude_matches": [
+                "*://*.microsoftpartnersolutions.com/*",
+                "*://*.salesforceliveagent.com/*",
+                "*://demandcenterdata.azurewebsites.net/*",
+                "*://*.n3click-to-call.azurewebsites.net/*",
+                "*://*.n3click-to-call-staging.azurewebsites.net/*",
+                "*://*.n3click-to-call-dev.azurewebsites.net/*",
+                "*://*.n3oneglass01.azurewebsites.net/*",
+                "*://*.login.microsoftonline.com/*",
+                "*://*.officeapis.azurewebsites.net/*",
+        "*://*.system.nexonia.com/*"
+            ],
+            "js": [
+                "scripts/libs/jquery-3.1.1.js",
+                "scripts/libs/clipboard.min.js",
+                "scripts/libs/sha256.js",
+                "scripts/libs/moment.js",
+                "scripts/libs/moment-timezone.js",
+                "scripts/libs/underscore-min.js",
+                "scripts/libs/phoneparser.js",
+                "scripts/libs/webapi_endpoints.js",
+                "scripts/libs/crm_script_injector.js",
+				"scripts/libs/jquery-ui.min.js",
+                "scripts/contents/shared_page.js",
+                "scripts/contents/content_script_crm.js"
+            ],
+            "css": [
+                "styles/shared_page.css",
+                "styles/fontawesome-all.min.css"
+            ]
+        },
+        {
+            "all_frames": false,
+            "matches": [
+                "<all_urls>"
+            ],
+            "exclude_matches": [
+                "*://*.dynamics.com/*",
+                "*://*.salesforce.com/*",
+                "*://*.visual.force.com/*",
+                "*://*.lightning.force.com/*",
+                "*://*.microsoftpartnersolutions.com/*",
+                "*://*.powerbi.com/*",
+                "*://*.salesforceliveagent.com/*",
+                "*://demandcenterdata.azurewebsites.net/*",
+                "*://*.n3click-to-call.azurewebsites.net/*",
+                "*://*.n3click-to-call-staging.azurewebsites.net/*",
+                "*://*.n3click-to-call-dev.azurewebsites.net/*",
+                "*://*.n3oneglass01.azurewebsites.net/*",
+                "*://*.marketingautomation.services/*",
+                "*://*.login.microsoftonline.com/*",
+                "*://*.officeapis.azurewebsites.net/*",
+				"https://n3oneglass.azurewebsites.net/metrics*",
+				"https://n3oneglass.azurewebsites.net/home/managernotes*",
+        "*://*.system.nexonia.com/*"
+            ],
+            "js": [
+                "scripts/libs/jquery-3.1.1.js",
+                "scripts/libs/clipboard.min.js",
+                "scripts/libs/sha256.js",
+                "scripts/libs/moment.js",
+                "scripts/libs/moment-timezone.js",
+                "scripts/libs/underscore-min.js",
+                "scripts/libs/phoneparser.js",
+                "scripts/libs/webapi_endpoints.js",
+				"scripts/libs/jquery-ui.min.js",
+                "scripts/contents/shared_page.js",
+                "scripts/contents/content_script.js"
+            ],
+            "css": [
+                "styles/shared_page.css",
+                "styles/fontawesome-all.min.css"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "notifications",
+        "http://*/",
+        "https://*/",
+        "tabs",
+        "cookies"
+    ],
+    "externally_connectable": {
+        "matches": [
+            "*://*.dynamics.com/*",
+            "https://*.salesforce.com/*",
+            "https://*.visual.force.com/*",
+            "https://*.lightning.force.com/*",
+            "https://n3oneglass.azurewebsites.net/extension",
+			"https://n3oneglass.azurewebsites.net/account/ringcentrallogin"
+        ]
+    },
+    "web_accessible_resources": [
+		"scripts/libs/webapi_endpoints.js",
+        "scripts/pages/crm_session.js",
+        "scripts/pages/sharpspring_session.js",
+        "scripts/pages/crm_insightsfetchfields.js",
+        "scripts/insights/default_insights.js",
+        "scripts/insights/equifax_insights.js",
+        "images/favicon.png",
+        "images/icon19.png",
+        "images/icon38.png",
+        "images/spin.gif",
+		"images/loading.gif",
+        "styles/images/arrow.png",
+        "styles/images/dark_leather.png",
+        "styles/images/ui-icons_444444_256x240.png",
+        "styles/images/ui-icons_555555_256x240.png",
+        "styles/images/ui-icons_777620_256x240.png",
+        "styles/images/ui-icons_777777_256x240.png",
+        "styles/images/ui-icons_cc0000_256x240.png",
+        "styles/images/ui-icons_ffffff_256x240.png",
+        "styles/webfonts/*",
+        "styles/fonts/*"
+    ]
+}

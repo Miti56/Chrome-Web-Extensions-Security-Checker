@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Canvas Extended for Auckland University",
+    "version": "1.0.4",
+    "description": "Gives you greater control over Canvas lecture videos, including the speed and quality.",
+    "permissions": [
+        "*://mediastore.auckland.ac.nz/"
+    ],
+    "content_scripts": [{
+        "matches": ["https://mediastore.auckland.ac.nz/*.preview"],
+        "js": ["jquery.js", "main.js"],
+        "css": ["main.css"],
+        "run_at": "document_idle"
+    }],
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "manifest_version": 2
+}

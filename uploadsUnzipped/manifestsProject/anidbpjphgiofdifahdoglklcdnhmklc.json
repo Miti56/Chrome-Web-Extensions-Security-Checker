@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tradiio - Discover new music",
+  "description": "Play your part and discover the best new music. Win real rewards for helping new artists emerge. It's completely free.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "urls": [
+      "http://tradiio.com/"
+    ],
+    "launch": {
+      "web_url": "http://tradiio.com/"
+    }
+  }
+}

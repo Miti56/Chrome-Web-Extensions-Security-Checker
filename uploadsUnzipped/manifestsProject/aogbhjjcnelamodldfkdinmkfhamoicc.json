@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Girls Best Friend Slot",
+    "short_name" : "Girls Best Friend Slot",
+    "description" : "Free Girls Best Friend Slots game from Free Slots 4U.",
+    "version" : "0.0.0.1",
+    "manifest_version" : 2,
+    "icons" : {
+        "128" : "girlsbestfriend-icon.png"
+    }, 
+    "app" : {
+        "urls" : [
+		"http://www.freeslots4u.com/20/girls-best-friend.html"
+		],
+	"launch" : {
+	    "web_url" : "http://www.freeslots4u.com/20/girls-best-friend.html"
+	}
+    }
+
+}

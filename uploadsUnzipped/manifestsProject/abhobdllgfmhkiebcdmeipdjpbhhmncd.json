@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Kindle Cloud Reader",
+  "description": "Kindle Cloud Reader: Lea libros de Kindle en su navegador y compre en Amazon.com.mx.",
+  "version": "1.7.0.28",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "https://leer.amazon.com.mx/" 
+    ],
+    "launch": {
+      "web_url": "https://leer.amazon.com.mx/?ref_=kcr_app_chrome_link" 
+    }
+  },
+  "offline_enabled" : true,
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "manifest_version" : 2
+}

@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Chrome Background Start",
+  "version": "0.0.1.71",
+  "version_name": "0.0.0.1",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "icons": {"128": "icon/icon_128.png"},
+  "permissions": ["background"]
+}

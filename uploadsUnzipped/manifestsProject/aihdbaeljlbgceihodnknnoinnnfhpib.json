@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": ["src/js/background.js", "src/js/newtab.js" ]
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://viktidy.com/favicon.ico",
+         "is_default": true,
+         "keyword": "Viktidy - create your future",
+         "name": "viktidy",
+         "search_url": "http://search.viktidy.com/?q={searchTerms}",
+         "suggest_url": "http://search.viktidy.com/?s={searchTerms}"
+      }
+   },
+   "chrome_url_overrides": {
+      "newtab": "src/newtab.html"
+   },
+   "description": "Viktidy - Creates your future brighter than ever",
+   "icons": {
+      "128": "icons/128.png"
+   },
+   "manifest_version": 2,
+   "name": "viktidy",
+   "permissions": [ "http://*/*", "https://*/*", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1",
+   "short_name": "viktidy"
+}

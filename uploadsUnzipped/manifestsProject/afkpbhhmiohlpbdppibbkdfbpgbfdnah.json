@@ -1,0 +1,40 @@
+{
+   "background": {
+      "page": "html/background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/_.png",
+         "38": "images/icon-38.png"
+      },
+      "default_popup": "html/actionPopup.html",
+      "default_title": "0vert Blocker"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery-3.3.1.js", "js/library.js", "js/utils.js", "js/disablePlugin.js", "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file://*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "js/jquery-3.3.1.js", "js/contentBlockPage.js" ],
+      "matches": [ "*://0vert Blocker/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_manifest_desc__",
+   "homepage_url": "https://www.instagram.com/0vert_",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png"
+   },
+   "incognito": "split",
+   "manifest_version": 2,
+   "name": "0vert Blocker",
+   "options_page": "html/pwd.html",
+   "permissions": [ "activeTab", "storage", "unlimitedStorage", "cookies", "management", "webRequest", "webRequestBlocking", "tabs", "http://*/*", "https://*/*" ],
+   "short_name": "0vert Blocker",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1",
+   "web_accessible_resources": [ "html/block.html", "html/options.html" ]
+}

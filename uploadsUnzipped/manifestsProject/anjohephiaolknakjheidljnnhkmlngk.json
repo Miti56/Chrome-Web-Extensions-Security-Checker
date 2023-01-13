@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "HEXPAC",
+  "description": "The Hexpac puzzle game is a 10 by 6 rectangle into which ten hexominos must be placed such that they tile the puzzle area",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "hexpac.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.ejectamenta.com/hexpac-fullscreen/"
+    ],
+    "launch": {
+      "web_url": "http://www.ejectamenta.com/hexpac-fullscreen/"
+    }
+  }
+}

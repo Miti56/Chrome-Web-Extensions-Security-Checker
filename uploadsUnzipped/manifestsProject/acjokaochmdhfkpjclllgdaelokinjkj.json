@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PDF Doctor",
+  
+  "version": "1.8",
+  "manifest_version": 2,
+  "description": "Convert a PDF to a Google Slideshow. Have every slideshow option on a PDF. Edit, add to, collaborate and more.",
+  "icons":{
+    
+    "128":"icons/logo.png"
+  },
+  
+  
+  "browser_action": {
+    "default_popup": "src/browser_action/browser_action.html",
+    "default_icon": "icons/logo.png",
+    "default_title": "PDF Doctor"
+  },
+  "permissions": [
+    "bookmarks",
+    "chrome://favicon/",
+   
+    "clipboardRead"
+  ],
+  "permissions": [
+          "storage", "tabs", "cookies", "*://*/*"
+      
+        ],
+    
+  "background": {
+      "persistent": true,
+      "page": "src/bg/background.html"},
+	  
+	"web_accessible_resources" : ["src/browser_action/pdf_to_slideshow.html","src/browser_action/pdf_to_word.html"]  
+	
+
+    }

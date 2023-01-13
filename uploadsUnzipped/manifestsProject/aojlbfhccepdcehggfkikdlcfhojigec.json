@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Google News’ “Top Stories” Section Remover",
+  "version": "1.2.8",
+  "description": "Removes the “Top Stories” section from Google News’ page.",
+  "icons": {
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "permissions": [
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "css": ["customization.css"]
+    }
+  ]
+}

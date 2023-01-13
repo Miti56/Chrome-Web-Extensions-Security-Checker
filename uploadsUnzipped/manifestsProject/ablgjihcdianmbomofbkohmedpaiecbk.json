@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Racing Games",
+ "manifest_version": 2,
+ "short_name": "Racing Games",
+ "description": "Play  free racing games online, including car games, bike games, parking games and more. Just Free Games",
+ "version": "1",
+ "icons": {
+	"128": "racing.fw.png"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://justdailygames.com/c/racing-games/"
+	}
+  }
+}

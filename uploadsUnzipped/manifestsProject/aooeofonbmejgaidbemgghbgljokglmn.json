@@ -1,0 +1,28 @@
+{
+   "author": "Piggy Dog",
+   "background": {
+      "persistent": false,
+      "scripts": [ "background-script.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content-script.js" ],
+      "matches": [ "*://pd.tmstream.com/*" ]
+   } ],
+   "description": "Team Desk requires this extension to do share your desktop.",
+   "externally_connectable": {
+      "matches": ["*://pd.tmstream.com/*"]
+   },
+   "homepage_url": "https://pd.tmstream.com",
+   "icons": {
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsOqkfU1jRcE1yTn6Uf3hBi9DM31YYHqr0yhCjKUIHGnuOsbZG7qV9L8x5pH5y5O1vHpPM1KIV2k6y4SwRp+qfzime77jF5zTtIgWyfSgHDscpNyjTM9JosdNmlrcaSmcBtS9FQiR/rgjiR6EePR6X/jqfN4Aa/1m1Xdb/FsteiU0JiGuMHecOAOQVdWXRUeOiHnQrrIGkke4T2iCSwf5VNlVp6AlkdZE51U71b1NbBCi+o4QYqI/GkjXW4bjugZAXnMfttkk6QnAuKmZXNY4AVTYCYmtURheUC2j0BypRK5Ttv2MSHlYcjuNZ7iWoTgwPr5D64RXgSj4Erii/1FEvwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "34",
+   "name": "Conference Screen Capture",
+   "permissions": [ "desktopCapture" , "tabs" , "*://pd.tmstream.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.37",
+   "web_accessible_resources": [ "icon.png" ]
+}

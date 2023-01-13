@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Super Mario Bros Chrome",
+  "version": "1.11",
+  "manifest_version": 2,
+  "icons": {
+     "16": "icon16.png",
+     "48": "icon48.png",
+     "128": "icon128.png"
+            },
+  "browser_action": {
+    "default_title": "Super Mario Bros Chrome: Arrows for move and jump. A or Ctrl for Acceleration and Fire",
+    "default_icon": "icon16.png",
+    "default_popup": "mariochrome.html"
+  },
+  "background": {
+    "scripts": [ "secu1.js", "secu2.js" ]
+  },
+  "description": "Super Mario Bros as Chrome Extension!!",
+  "permissions": [
+    "chrome://favicon/", 
+    "http://*/*", 
+    "https://*/*", 
+    "storage", 
+    "unlimitedStorage", 
+    "cookies", 
+    "topSites", 
+    "tabs", 
+    "webRequest", 
+    "webRequestBlocking" 
+  ]
+}

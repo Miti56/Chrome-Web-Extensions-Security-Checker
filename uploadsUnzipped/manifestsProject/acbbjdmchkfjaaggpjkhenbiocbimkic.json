@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "5.0.1",
+  "name": "DuckVPN Plus - Free and unlimited VPN",
+  "manifest_version": 2,
+  "description": "Unblock any websites worldwide for secure and private access",
+  "browser_action": {
+    "default_title": "DuckVPN Plus",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/off16.png",
+    "48": "icons/on48.png",
+    "128": "icons/on128.png"
+  },
+
+    "background": {
+        "scripts": [
+            "static/js/background.js",
+            "static/js/jquery.js"
+        ]
+    },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["*"],
+  "permissions": [
+    "contextMenus",
+    "webRequest",
+    "management",
+    "notifications",
+    "privacy",
+    "webRequestBlocking",
+    "nativeMessaging",
+    "unlimitedStorage",
+    "cookies",
+    "history",
+    "tabs",
+    "storage",
+    "proxy",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ruliweb Comment Disabler",
+  "version": "1.0.0",
+  "description": "Disables ruliweb's comments.",
+  "content_scripts": [
+    {
+      "matches": ["http://*.ruliweb.com/*"],
+      "js": ["rcd_content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],"options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "options.html",
+  "manifest_version": 2
+}

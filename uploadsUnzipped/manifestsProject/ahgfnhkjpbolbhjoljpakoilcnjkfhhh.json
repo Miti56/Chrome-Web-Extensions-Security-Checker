@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Intencje.pl",
+	"short_name": "Intencje.pl",
+	"version": "1.1",
+	"manifest_version": 2,
+	"description": "Wyświetla powiadomienia o nowych intencjach, które czekają na Twoją modlitwę",
+	"homepage_url": "https://intencje.pl/dodatki/wtyczka-do-przegladarek",
+	"icons": {"16": "assets/img/16.png", "48": "assets/img/48.png", "128": "assets/img/128.png"},
+	"browser_action": {
+		"default_title": "Intencje.pl - Platforma Duchowej Łączności",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"notifications", "https://intencje.pl/*"
+	],
+	"options_page": "options.html",
+	"background": { "scripts": ["assets/js/background.js"] }
+}

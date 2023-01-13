@@ -1,0 +1,100 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "applications": {
+        "gecko": {
+            "id": "marrryanx@gmail.com"
+        }
+    },
+    "author": "AnimeG",
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": {
+            "20": "assets/icons/logo256.png"
+        },
+        "default_popup": "pages/popupmenu/popupmenu.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_scripts/document_start.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_scripts/top_window.js"
+            ],
+            "css": [
+                "/assets/css/csVideoPopup.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_scripts/document_idle.js"
+            ],
+            "run_at": "document_idle",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_scripts/document_end.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "content_security_policy": "script-src 'self'; object-src 'self';",
+    "default_locale": "en",
+    "description": "__MSG_extDescr__",
+    "icons": {
+        "16": "assets/icons/logo16.png",
+        "48": "assets/icons/logo48.png",
+        "64": "assets/icons/logo64.png",
+        "128": "assets/icons/logo128.png",
+        "256": "assets/icons/logo256.png"
+    },
+    "manifest_version": 2,
+    "name": "AnimeG FastStream",
+    "options_page": "pages/options/options.html",
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs",
+        "unlimitedStorage",
+        "webNavigation",
+        "downloads",
+        "proxy"
+    ],
+    "short_name": "AnimeG FastStream",
+    "version": "1.0.1",
+    "web_accessible_resources": [
+        "pages/videoplay/videoplay.html",
+        "pages/videopopup/videopopup.html",
+        "pages/library/library.html",
+        "inject_scripts/search_videos.js"
+    ],
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
+}

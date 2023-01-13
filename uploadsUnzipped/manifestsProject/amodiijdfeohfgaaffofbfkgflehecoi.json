@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MovieOnScreen",
+  "description": "MovieOnScreen - Shortcut",
+  "version": "1.2",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://nisweb.biz/chromeapp/movieonscreen"
+    ],
+    "launch": {
+      "web_url": "http://movieonscreen.com"
+    }
+  },
+  "icons": {
+    "128": "128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

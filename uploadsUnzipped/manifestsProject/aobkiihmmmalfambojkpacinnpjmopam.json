@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Heianzon",
+    "version": "1.2.0",
+    "manifest_version": 2,
+    "description": "Extension for 平安堂 like Libron.",
+    "homepage_url": "https://github.com/roronya/Heianzon",
+    "content_scripts": [
+        {
+            "matches": ["http://www.amazon.co.jp/*"],
+            "js": ["jquery-2.1.3.min.js", "content.js"]
+        }
+    ],
+    "permissions": [
+        "https://shop.heiando.jp/"
+    ]
+}

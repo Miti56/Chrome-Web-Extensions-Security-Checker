@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "background": {
+    "scripts": [
+      "package/bg.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "package/jquery-3.3.1.min.js",
+        "package/fontawesome/js/fontawesome-all.min.js"
+      ],
+      "matches": ["<all_urls>"],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "无",
+  "icons": {
+    "48": "res/png-48.png",
+    "128": "res/png-128.png"
+  },
+  "browser_action": {
+    "default_icon": "res/png-48.png",
+
+    "default_title": "fly_controller版",
+
+    "default_popup": ""
+  },
+
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "rp/idc/userpublic_1_8.js",
+    "rp/idc/userpublic_1_7.js",
+    "rp/sgwin/bet.js",
+    "rp/sgwin_new/lottery.js",
+    "rp/moa/page_order.js",
+    "rp/elc16/index.pack.min.js",
+    "rp/elc17/index.pack.min.js",
+    "wx/vendor_0cc94ce.js",
+    "wx/index_8f1ca59.js",
+    "wx/index.htm",
+    "rp/page.js"
+  ],
+  "name": "fly_controller版",
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "cookies",
+    "management",
+    "clipboardWrite",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "version": "3.06"
+}

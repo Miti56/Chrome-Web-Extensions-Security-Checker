@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Krunch",
+  "version": "1.0",
+  "description": "Easily save a post to Krunch!",
+  "permissions": ["declarativeContent", "storage", "tabs", "activeTab", "cookies", "https://app.krunchdata.io/"],
+  "background": {
+    "scripts": ["axios.js", "background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "run_at": "document_idle",
+      "css": ["content_style.css"],
+      "js": ["axios.js", "jquery.js", "content_script.js"]
+    }
+  ],
+  "page_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "76": "images/icon76.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "76": "images/icon76.png"
+  },
+  "incognito": "not_allowed",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'sha256-P0Q2e0+g8ysKDuUACXyNelSjoeiafujbJjvy2R8PNbI='; object-src 'self'"
+}

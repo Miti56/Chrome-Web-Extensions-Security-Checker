@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Supremacy Vote Hack",
+	"version": "0.2.1",
+	"description": "Supremacy 1914 Vote Hack addon.",
+	"homepage_url": "http://www.none.yet",
+	"icons": {
+		"16": "icon_16.png",
+		"48": "icon_48.png",
+		"128": "icon_128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*"
+			],
+			"include_globs":[
+				"*supremacy1914*"
+			],
+			"exclude_globs":[
+				"*googleads*"
+			],
+			"js": [
+				"library_ajax.js",
+				"library_save.js",
+				"library_built.js",
+				"library_func.js",
+				"library_keyblink.js",
+				"main_script.js"
+			],
+			"all_frames": true
+		}
+	],
+	"manifest_version": 2
+}

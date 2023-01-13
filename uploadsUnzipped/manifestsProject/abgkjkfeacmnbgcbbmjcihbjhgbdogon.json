@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "SS Siteboost for Shutterstock",
+  "version": "0.314",
+  "version_name": "0.314 beta",
+
+  "description": "Shutterstock live statistics by Plrang - for CHROME",
+
+  "icons": {
+    "24": "icons/siteboost24.png",
+    "100": "icons/siteboost100.png",
+    "96": "icons/siteboost96.png",
+    "48": "icons/siteboost48.png"
+    
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.shutterstock.com/*"],
+      "js": ["ss_siteboost_gm.user.js"]
+    }
+  ],
+
+ "browser_action": {
+    "default_icon": "icons/siteboost24.png",
+    "default_title": "SS Siteboost",
+    "default_popup": "popup/sspop.html"
+  },
+
+ "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+
+
+
+}

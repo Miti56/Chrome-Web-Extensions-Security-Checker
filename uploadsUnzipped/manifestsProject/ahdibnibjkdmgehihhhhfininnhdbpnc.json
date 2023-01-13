@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Rabbit URL Opener",
+  "version": "1.0",
+  "manifest_version": 2,
+  "author": "Rahul Digital",
+  "description": "Rabbit URL Opener  -  Bulk URL Opener Extension just lets you open multiple URLs at once (in new tabs or windows).",
+  "icons": {
+    "16": "bulkurlopener16.png",
+    "19": "bulkurlopener19.png",
+    "128": "bulkurlopener128.png"
+  },
+  "browser_action": {
+    "default_icon": "bulkurlopener19.png",
+    "default_popup": "popup_cool_opener.html"
+  },
+  "permissions": [
+		"tabs",
+		"<all_urls>",
+	    "clipboardRead",
+        "clipboardWrite",
+		"activeTab",
+		"declarativeContent"
+  ]
+}

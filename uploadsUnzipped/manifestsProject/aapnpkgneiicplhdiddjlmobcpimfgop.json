@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Learn Chinese",
+"version": "1",
+"icons": { "256": "256.png", "128": "128.png" },
+"app": {
+"urls": [
+"http://learn101.org/chinese.php"
+],
+"launch": {
+"web_url": "http://learn101.org/chinese.php"
+}
+},
+"permissions": ["unlimitedStorage"],
+"manifest_version": 2
+}

@@ -1,0 +1,46 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Wremix",
+  "short_name": "Wremix",
+  "version": "1.1.1",
+  "manifest_version": 2,
+  "description": "Super Social",
+  "browser_action": {
+    "default_icon": "images/icons/record-pop-on.png",
+    "default_popup": "lib/popup.html"
+  },
+  "web_accessible_resources": [ "images/*", "fonts/*.ttf", "fonts/*.otf", "lib/*", "lib/cam.html"],
+  "icons": {
+        "16": "images/icons/record-pop-on.png",
+        "48": "images/icons/record-pop-on.png",
+        "64": "images/icons/record-pop-on.png",
+        "128": "images/icons/record-pop-on.png"
+    },
+  "background": {
+    "scripts": [
+      "lib/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [ "storage", "<all_urls>", "tabs", "tabCapture", "activeTab", "contextMenus", "desktopCapture", "unlimitedStorage", "identity", "notifications", "webRequest", "webRequestBlocking", "clipboardRead"],
+  "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": [
+            "lib/jquery-3.2.1.min.js",
+            "lib/jquery-ui.min.js",
+            "lib/search.js",
+            "lib/content.js",
+            "lib/mix.js",
+            "lib/record.js",
+            "lib/cropper.min.js",
+            "lib/jquery-cropper.min.js",
+            "lib/ua.js"
+        ],
+        "css": [ "lib/insert.css", "lib/ani.css", "lib/jquery-ui.min.css", "lib/cropper.min.css"],
+        "run_at": "document_end",
+        "all_frames": true
+    }],
+    "externally_connectable": {
+		"matches": ["https://*.wremix.com/*"]
+	  }
+}

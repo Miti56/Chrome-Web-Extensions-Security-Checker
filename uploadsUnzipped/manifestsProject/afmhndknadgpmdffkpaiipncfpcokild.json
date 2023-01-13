@@ -1,0 +1,116 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "1.0.8",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": {
+      "19": "logo_icon_19.png",
+      "38": "logo_icon_38.png"
+    }
+  },
+  "background": {
+    "page": "tiempy.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "contextMenus"
+  ],
+  "web_accessible_resources": [
+    "manifest.json",
+    "data/shared/img/tiempy-icon-sprite.png",
+    "data/shared/img/tiempy_twitter_small.png",
+    "data/shared/img/twttr-sprite.png",
+    "data/shared/img/twttr-sprite-small.png",
+    "data/shared/img/tiempy-hover-icon@1x.png",
+    "data/shared/img/tiempy-hover-icon@2x.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "data/chrome/tiempy-chrome-port-wrapper.js",
+        "data/chrome/tiempy-chrome-data-wrapper.js",
+        "data/chrome/tiempy-chrome-embed.js",
+        "data/shared/libs/jquery-1.7.2.min.js",
+        "data/shared/libs/postmessage.js",
+        "data/shared/tiempy-overlay.js",
+        "data/shared/embeds/tiempy-scraper.js",
+        "data/shared/embeds/tiempy-hotkey.js",
+        "data/shared/embeds/tiempy-tpc-check.js",
+        "data/shared/embeds/tiempy-hover-button.js",
+        "data/chrome/tiempy-chrome.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.tiempy.com/*"
+      ],
+      "css": [
+        "data/shared/tiempy-extension-detection.css"
+      ],
+      "js": [
+        "data/chrome/tiempy-chrome-port-wrapper.js",
+        "data/chrome/tiempy-chrome-embed.js",
+        "data/shared/embeds/tiempy-overlay-scraper.js",
+        "data/shared/tiempy-install-check.js",
+        "data/shared/tiempy-extension-settings.js"
+      ],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "js": [
+        "data/shared/embeds/tiempy-facebook.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.reddit.com/*"
+      ],
+      "js": [
+        "data/shared/embeds/tiempy-reddit.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "data/shared/embeds/tiempy-twitter.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.ycombinator.org/*",
+        "*://*.ycombinator.com/*"
+      ],
+      "js": [
+        "data/shared/embeds/tiempy-hn.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.quora.com/*"
+      ],
+      "js": [
+        "data/shared/embeds/tiempy-quora.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "logo_icon_small.png",
+    "48": "logo_icon_large.png",
+    "128": "logo_icon_128.png"
+  }
+}

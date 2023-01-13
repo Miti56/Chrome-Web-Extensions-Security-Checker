@@ -1,0 +1,16 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "app": {
+      "launch": {
+         "web_url": "http://www.6funny.com/qsqy/start?sr=chromeShortcut"
+      },
+      "urls": [ "http://www.6funny.com/qsqy/start?sr=chromeShortcut" ]
+   },
+   "icons": { "16": "icon16.png",
+              "48": "icon48.png",
+              "128": "icon128.png" },
+   "name": "傾世情緣",
+   "description": "傾世情緣 - 快速登入器",
+   "version": "1.0",
+   "manifest_version": 2
+}

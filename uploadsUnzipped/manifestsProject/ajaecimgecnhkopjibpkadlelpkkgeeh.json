@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Learn Italian with Pinocchio",
+  "short_name": "Italian with Pinocchio",
+  "start_url": "index.html",
+  "display": "standalone",
+  "version": "2.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "assets/icon_128.png",
+    "512": "assets/icon.png"
+    },
+  "background_color": "#4e8ef7",
+  "theme_color": "#4e8ef7",
+  "app": {
+    "launch": {
+      "web_url": "http://www.swirlystudios.com/pinocchio/app"
+    }
+  }
+}

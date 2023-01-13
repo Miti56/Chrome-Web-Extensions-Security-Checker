@@ -1,0 +1,175 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Trident for Gmail",
+    "description": "Trident for Gmail",
+    "version": "3.2",
+    "background": {
+        "scripts": ["js/lib/config/config.js", "js/lib/jquery/jquery.min.js",
+            "js/lib/jquery/jquery-ui.min.js",
+            "js/lib/jquery/jquery-ui.js",
+            "js/lib/bootstrap/js/bootstrap.min.js",
+            "js/lib/typeahead/typeahead.bundle.js",
+            "js/lib/jquery/jquery.min.2.1.0.js", "background.js", "js/lib/pouchdb/pouchdb-7.0.0.js"
+        ]
+    },
+
+    "content_scripts": [{
+            "matches": [
+                "https://mail.google.com/*",
+                "https://inbox.google.com/*"
+            ],
+            "js": ["inboxsdk.js",
+                "content.js",
+                "js/lib/config/config.js",
+                "js/lib/jquery/jquery.min.js",
+                "js/lib/jquery/jquery-ui.min.js",
+                "js/lib/jquery/jquery-ui.js",
+                "js/lib/bootstrap/js/bootstrap.min.js",
+                "js/lib/typeahead/typeahead.bundle.js",
+                "js/lib/jquery/jquery.min.2.1.0.js",
+                "js/lib/md5/md5.js",
+                "js/lib/adapter/adapter.js",
+                "js/lib/types/browsers.types.js",
+                "js/lib/codecountry/names.js",
+                "js/lib/codecountry/codes.js",
+                "js/lib/socketio/socketio.js",
+                "js/lib/ionsound/ion.sound.min.js",
+                "js/lib/fingerprint/fingerConfig.js",
+                "js/lib/fingerprint/fingerprint2.js",
+                "js/lib/pouchdb/pouchdb-7.0.0.js",
+                "js/lib/webnotifications/WebNotifications.js",
+                "js/lib/fontawesome.icons.files.types.js",
+                "js/lib/validator/validator.js",
+                "js/lib/webrtcstats/webrtc-stats.js",
+                "js/lib/webrtcstats/webrtc-stats-quality.js",
+                "js/lib/webrtcstats/quality-bar.js",
+                "js/lib/webrtcstats/callStats.js",
+                "js/lib/callrecords/callRecords.js",
+                "js/lib/types/callTypes.js",
+                "js/lib/types/imMessagesTypes.js",
+                "js/lib/types/infoTypes.js",
+                "js/lib/timer/timer.js",
+                "js/lib/microphone/microphone.js",
+                "js/lib/language/transcript.languages.js",
+                "js/lib/language/countries.js",
+                "js/lib/language/language.js",
+                "js/lib/protocol/callsProtocol.js",
+                "js/lib/protocol/imProtocol.js",
+                "js/lib/phone/phoneBase.js",
+                "js/lib/userdata/userData.js",
+                "js/lib/phone/phoneSettings.js",
+                "js/lib/phone/PhoneStatus.js",
+                "js/lib/phone/PhoneDebug.js",
+                "js/lib/phone/PhoneUtils.js",
+                "js/lib/phone/PhoneGUI.js",
+                "js/lib/keys/Cursor.js",
+                "js/lib/keys/keypad.js",
+                "js/lib/contacts/contacts.js",
+                "js/lib/list/broadcasts.js",
+                "js/lib/channels/channelManager.js",
+                "js/lib/channels/chatChannel.js",
+                "js/lib/chat/chatBuffer.js",
+                "js/lib/webrtctester/test_js.js",
+                "js/lib/auth/authAPI.js",
+                "js/lib/transfer/transferApi.js",
+                "js/lib/apis/payment.api.js",
+                "js/lib/weblogincontrol/webLoginControl.js",
+                "js/lib/sockets/sockets.js",
+                "js/lib/login/login.js",
+                "js/lib/phone/phone.js",
+                "js/lib/mediaprocessevents/media.process.events.js",
+                "js/lib/mediaprocessevents/recording.js",
+                "js/lib/mediaprocessevents/transcriptions.js",
+                "js/lib/mediaprocessevents/language.id.js",
+                "js/lib/mediaprocessevents/sound.classifier.js",
+                "js/lib/chat/chatUser.js",
+                "js/lib/chat/chatManager.js",
+                "js/lib/chat/chat-tot.js",
+                "js/lib/chat/chat-utils.js",
+                "js/lib/chat/imManager.js",
+                "js/lib/presence/presence.manager.js",
+                "js/index.js",
+                "js/lib/keys/keyboard.js",
+                "js/lib/webrtcsupport/webRtcSupport.js",
+                "js/lib/links/phone-bond.js",
+                "js/lib/transferCall/transfer.call.js"
+
+            ],
+            "css": ["css/custom_bootstrap.css", "css/main.css", "css/agentPanel.css",
+                "js/lib/jquery/jquery-ui.min.css", "js/lib/bootstrap/css/bootstrap.css", "css/typeaHead.css", "css/custom.css", "css/list-broadcasts.css", "css/channels.css", "css/fontawesome/css/all.css"
+
+
+            ],
+            "run_at": "document_end"
+        }
+
+    ],
+    "web_accessible_resources": [
+        "ima/*.svg",
+        "ima/*.png",
+        "ima/*.gif",
+        "ima/mundo.svg",
+        "ima/trident_horizontal.svg",
+        "*.png", "*.ttf", "*.eot",
+
+        "sounds/telephone-ring-01a.mp3",
+        "sounds/*.mp3",
+        "js/lib/language/*.json",
+        "css/fontawesome/webfonts/fa-brands-400.ttf",
+        "css/fontawesome/webfonts/fa-brands-400.eot",
+        "css/fontawesome/webfonts/fa-brands-400.svg",
+        "css/fontawesome/webfonts/fa-brands-400.ttf",
+        "css/fontawesome/webfonts/fa-brands-400.woff",
+        "css/fontawesome/webfonts/fa-brands-400.woff2",
+        "css/fontawesome/webfonts/fa-regular-400.eot",
+        "css/fontawesome/webfonts/fa-regular-400.svg",
+        "css/fontawesome/webfonts/fa-regular-400.ttf",
+        "css/fontawesome/webfonts/fa-regular-400.ttf",
+        "css/fontawesome/webfonts/fa-regular-400.woff",
+        "css/fontawesome/webfonts/fa-regular-400.woff2",
+        "css/fontawesome/webfonts/fa-solid-900.eot",
+        "css/fontawesome/webfonts/fa-solid-900.svg",
+        "css/fontawesome/webfonts/fa-solid-900.ttf",
+        "css/fontawesome/webfonts/fa-solid-900.woff",
+        "css/fontawesome/webfonts/fa-solid-900.woff2",
+        "font/Lato-Light.eot",
+        "font/Lato-Light.otf",
+        "font/Lato-Light.svg",
+        "font/Lato-Light.ttf",
+        "font/Lato-Light.woff",
+        "font/Lato-Regular.eot",
+        "font/Lato-Regular.svg",
+        "font/Lato-Regular.otf",
+        "font/Lato-Regular.ttf",
+        "font/Lato-Regular.woff",
+        "font/Lato-Regular.woff2",
+        "font/Lato-Regular.woff",
+        "font/fontawesome-webfont.woff"
+
+    ],
+
+    "permissions": [
+        "https://mail.google.com/",
+        "https://inbox.google.com/",
+        "identity"
+
+    ],
+
+
+
+    "content_security_policy": "script-src nonce-%s 'report-sample' 'unsafe-inline' 'self'  'strict-dynamic' https: http:'unsafe-eval' chrome-extension: 'unsafe-inline' 'unsafe-eval'",
+
+    "oauth2": {
+        "client_id": "287198393658-iut4falfld2a4bf1gjn12r136havsr23.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/userinfo.email"
+        ]
+    },
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}

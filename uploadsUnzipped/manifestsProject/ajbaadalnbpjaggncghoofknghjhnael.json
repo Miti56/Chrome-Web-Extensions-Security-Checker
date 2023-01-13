@@ -1,0 +1,44 @@
+{
+    "name": "MultiVis Screen Capture",
+    "author": "Thomas Marrinan",
+    "version": "2.2.0",
+    "manifest_version": 2,
+    "minimum_chrome_version": "36",
+    "description": "This chrome extension is developed primarily for Multi Vis. It captures the content of your screen to stream to MultiVis.",
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": ["content.js"],
+            "matches": ["https://*/*index.html", "https://*/*sageUI.html", "https://*/*sagePointerApp.html"],
+            "run_at": "document_start"
+        } 
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Enviar conteúdo para o Multivs"
+    },
+    "icons": {
+        "128": "assets/images/icon_128.png",
+        "16": "assets/images/icon_16.png",
+        "19": "assets/images/icon_19.png",
+        "38": "assets/images/icon_38.png",
+        "48": "assets/images/icon_48.png"
+    },
+    "permissions": [
+        "desktopCapture",
+        "tabs",
+        "activeTab"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "web_accessible_resources": [
+        "assets/images/icon_128.png",
+        "assets/images/icon_16.png",
+        "assets/images/icon_19.png",
+        "assets/images/icon_38.png",
+        "assets/images/icon_48.png"
+    ]
+}

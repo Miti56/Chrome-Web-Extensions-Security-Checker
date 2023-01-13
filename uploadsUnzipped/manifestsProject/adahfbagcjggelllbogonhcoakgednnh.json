@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "manifest_version":2,
+ "name": "Mandragora Tools",
+ "version":"1.2",
+ 
+ "description": "Primera Extension para Chrome",
+ "browser_action":{
+ "default_icon": "icono.png",
+ "default_popup": "popup.html"
+ },
+ "permissions":[
+ "activeTab"
+ ] 
+}

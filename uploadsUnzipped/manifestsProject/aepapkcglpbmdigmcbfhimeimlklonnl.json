@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Free GTA City Best Game",
+  "description": "gta vice city ,farm game, conflict of groups, conflict royale, hayday, sanctuary run 2, minecraft, agar.io pokemon go, gta v",
+  "version": "1.2",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

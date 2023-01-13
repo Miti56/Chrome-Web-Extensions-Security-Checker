@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Witchr Chrome Extension",
+  "version": "0.0.1",
+  "manifest_version":2,
+  "description": "Attaches /ref.js listener waiting to reload your page when you ask it nicely",
+  "permissions": [
+    "http://*/*",
+    "file://*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://localhost:8765/*", "http://localhost:8000/*", "http://localhost:8081/*", "http://localhost:8082/*", "http://*.local/*"],
+      "js": ["content_script.js"]
+    }
+    
+  ]
+}

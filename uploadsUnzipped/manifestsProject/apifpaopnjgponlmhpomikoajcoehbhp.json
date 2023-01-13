@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+ 
+    "name": "SocialDataHub HR",
+    "description": "Онлайн проверка цифровых следов соискателей",
+    "version": "1.3",
+ 
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["*://*.hh.ru/resume/*"],
+        "js": ["content.js"]
+    }],
+    
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "cookies",
+        "background",
+        "https://cp.socialdatahub.com/",
+        "https://socialdatahub.com/",
+        "https://*.socialdatahub.com/"
+    ]
+}

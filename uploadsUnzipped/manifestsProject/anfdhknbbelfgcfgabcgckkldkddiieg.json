@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Evrywer for Reddit",
+	"short_name": "Evrywer",
+	"author": "mphennum",
+	"description": "bring reddit with you as you browse the web",
+	"version": "1.0.4",
+	"homepage_url": "https:\/\/www.evrywer.com\/",
+	"incognito": "spanning",
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"http:\/\/*\/*",
+		"https:\/\/*\/*",
+		"storage"
+	],
+	"icons": {
+		"16": "img\/icon\/16.png",
+		"48": "img\/icon\/48.png",
+		"128": "img\/icon\/128.png"
+	},
+	"web_accessible_resources": [
+		"img\/*",
+		"css\/*",
+		"font\/*"
+	],
+	"background": {
+		"scripts": [
+			"js\/evrywer.js",
+			"js\/background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http:\/\/*\/*",
+				"https:\/\/*\/*"
+			],
+			"run_at": "document_end",
+			"all_frames": false,
+			"match_about_blank": false,
+			"css": [
+				"css\/content.css"
+			],
+			"js": [
+				"js\/snuowned.js",
+				"js\/evrywer.js",
+				"js\/content.js"
+			]
+		}
+	]
+}

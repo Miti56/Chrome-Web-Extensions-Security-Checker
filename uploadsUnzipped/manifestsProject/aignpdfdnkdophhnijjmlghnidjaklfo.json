@@ -1,0 +1,23 @@
+{
+   "browser_action": {
+      "default_icon": "img/logo-16.png"
+   },
+   "content_scripts": [ {
+      "css": [ "css/style.css" ],
+      "js": [ "js/jquery-2.1.1.min.js", "js/scripts.js", "js/chart_js/Chart.min.js" ],
+      "matches": [ "https://*.alunoonline.uerj.br/*", "http://*.alunoonline.uerj.br/*" ]
+   } ],
+   "description": "Desenvolvido por Daniel Henrique.",
+   "icons": {
+      "128": "img/logo-128.png",
+      "16": "img/logo-16.png",
+      "48": "img/logo-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA74UZ/dehS+Yrul2LW+BdfLa1HYznCVPRTTZcTmsgaIsvcj/SYlY/2q98Y8f9qGP6Fn8N3S0yA/9P8ZNpN4rMrdgVhX/TkTO1qXzZi5oeI+C/lHTDf0K5bU3dQ8aNfB7g3KbZYCou8E+n6OEv5nHgzQBvaY1/Da5ox4szA9oTmCQ/272sRXr/qPI03qpq9gB46Qe13PbY1fv+OPGlcUmWXjsJpwKJmo7kVWedgCCMBmQ2WYTbTnjyIxi2aclDRgFyuqhCtRWuFMwPbZnLccPHkKYbCw5kgHGb6AWoNgAmUdOX8dEJ8GKigdS6Swo5ub60kTo1Lx0wJl2rXylq1hep2QIDAQAB",
+   "manifest_version": 2,
+   "name": "Aluno Online Plus - UERJ",
+   "permissions": [ "https://alunoonline.uerj.br/", "http://alunoonline.uerj.br/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2",
+   "web_accessible_resources": [ "img/retornar.png", "img/background.jpg", "img/icone_voltar.png", "img/icone_imprimir.png"]
+}

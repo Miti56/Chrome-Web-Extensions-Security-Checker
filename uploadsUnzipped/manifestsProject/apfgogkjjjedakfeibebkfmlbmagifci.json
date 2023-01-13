@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Tv-replay",
+  "description": "Le guide de la télévision de rattrapage",
+  "version": "0.1",
+  "minimum_chrome_version": "23",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "app": {
+    "urls": ["http://www.tv-replay.fr/"],
+    "launch": {
+	"web_url": "http://www.tv-replay.fr/"
+     }
+      
+  }
+
+}

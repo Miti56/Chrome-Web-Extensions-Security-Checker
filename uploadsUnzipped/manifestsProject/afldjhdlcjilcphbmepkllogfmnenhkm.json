@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "ehh.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "sudo/images/19.png",
+         "38": "sudo/images/38.png"
+      },
+      "default_title": "Snapchat for Chrome™"
+   },
+   "content_scripts": [ {
+      "js": [ "pomarancza.js" ],
+      "matches": [ "*://*.app2t.com/extention/snapchat/*" ]
+   } ],
+   "description": "lets you easily talk with friends, view Live Stories from around the world, and explore news in Discover",
+   "icons": {
+      "128": "kiwi/128.png",
+      "16": "kiwi/16.png",
+      "48": "kiwi/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Snapchat for Chrome™",
+   "permissions": [ "*://*.app2t.com/extention/snapchat/*", "tabs", "webRequest", "webRequestBlocking" ],
+   "short_name": "Snapchat for Chrome™",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.7.1"
+}
+

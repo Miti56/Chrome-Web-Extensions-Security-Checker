@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_extName__",
+    "short_name": "__MSG_extName__",
+    "version": "1.1.1",
+    "manifest_version": 2,
+    "description": "__MSG_extDesc__",
+    "icons": { "128": "icon128.png" },
+    "browser_action": {
+        "default_icon": {
+            "19": "icon19.png",
+            "38": "icon38.png"
+        },
+        "default_title": "__MSG_extName__",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "persistent": true,
+        "page": "html/background.html"
+    },
+    "default_locale": "en",
+    "optional_permissions": ["management"],
+    "permissions": ["downloads", "downloads.open", "downloads.shelf", "tabs", "webRequest", "webRequestBlocking", "\u003Call_urls>", "storage"],
+    "content_scripts": [{
+        "matches": ["\u003Call_urls>"],
+        "exclude_matches": ["*://*.youtube.com/*"],
+        "js": ["js/content/content.js"]
+    }]
+}

@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"author": "Joaquin A.",
+	"name": "Habbo Look Clone",
+	"author": "Joaquin A.",
+	"version": "1.0.6",
+	"description": "Habbo Look Clone for Habbo Hotel.",
+	"content_scripts": [ 
+		{
+			"css": ["css/style.css"],
+			"js": ["js/jquery.js", "js/script.js"],
+			"matches": ["https://www.habbo.es/*", "https://www.habbo.com/*", "https://www.habbo.com.br/*", "https://www.habbo.it/*", "https://www.habbo.fr/*", "https://www.habbo.de/*"],
+			"run_at": "document_end"
+		}
+	],
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"permissions": [
+		"cookies", 
+		"tabs", 
+		"*://*.habbo.es/*"
+	]
+}

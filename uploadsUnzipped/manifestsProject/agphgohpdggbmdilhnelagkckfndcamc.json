@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "noMyTT",
+  "description": "Eliminate redirects to www.mytischtennis.de",
+  "version": "1.8",
+
+  "icons": {
+    "48": "nomytts.png",
+    "128": "nomytt.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.click-tt.de/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Esconde Lula no Facebook",
+    "description": "Você está cansado de ver posts sobre o Lula no seu Facebook? Se sim, essa extensão é pra você!",
+    "version": "1.0",
+    "offline_enabled": true,
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "index.html"
+    },
+
+    "content_scripts": [
+    {
+        "matches": ["https://*.facebook.com/*"],
+        "js": ["scripts.js"]
+    }]
+}

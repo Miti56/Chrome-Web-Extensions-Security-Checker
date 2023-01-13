@@ -1,0 +1,81 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "1.2.0",
+  "homepage_url": "https://app.shopzie.com",
+  "name": "__MSG_appName__",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "browser_action": {
+    "default_title": "__MSG_appName__",
+    "default_popup": "popup.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/shopzie-icon-19.png",
+      "38": "images/shopzie-icon-38.png"
+    },
+    "default_title": "__MSG_appName__",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "scripts/jquery-3.3.1.min.js",
+      "scripts/background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.shopzie.com/*",
+        "*://*.aliexpress.com/*",
+        "*://*.alipay.com/*",
+        "*://*.oberlo.com/*",
+        "*://*.dropified.com/*"
+      ],
+      "js": [
+        "scripts/sweetalert.min.js",
+        "scripts/jquery-3.3.1.min.js",
+        "scripts/jquery.sweet-modal.min.js",
+        "scripts/toastr.min.js",
+        "scripts/content.js",
+        "scripts/moment.min.js"
+      ],
+      "css": [
+        "styles/jquery.sweet-modal.min.css",
+        "styles/content.css",
+        "styles/toastr.min.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.oberlo.com/*",
+      "*://*.shopzie.com/*"]
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    "styles/spinner.css",
+    "styles/epacket.css",
+    "styles/loader.gif",
+    "images/*"
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "optional_permissions": [
+    "gcm",
+    "notifications",
+    "identity"
+  ]
+}

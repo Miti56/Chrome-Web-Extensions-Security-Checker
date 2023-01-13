@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+ 
+  "name": "eTempo Info",
+  "version": "0.1.0",
+  "author": "Toni S / Roche DCA",
+  "description": "Informació extra a l'eTempo",
+  
+  "permissions": [
+    "tabs"
+  ],
+
+  "browser_action": {},
+  "background": {
+    "scripts": ["moment.js", "jq.js", "background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["moment.js", "jq.js", "content.js"],
+    "matches": ["http://rkamvrtcwebp421/*"]
+  }] 
+}

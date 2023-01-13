@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Push & Paste",
+  "version": "1.0",
+  "description": "Push & Paste is a extension which enables you to sent Evernote text memo to your iPhone quickly.",
+  "permissions": [
+    "tabs",
+    "http://push-and-paste.ogaoga.org/"
+  ],
+  "icons": { "16": "icon16.png",
+             "128": "icon_128x128.png" },
+  "browser_action": {
+      "default_title": "Push & Paste",
+      "default_icon": "icon_128x128.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}

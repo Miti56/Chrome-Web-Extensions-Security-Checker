@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/logo19.png"
+    },
+    "default_popup": "popup/index.html",
+    "default_title": "Json Parser"
+  },
+  "icons": {
+    "128": "images/logo128.png",
+    "16": "images/logo16.png",
+    "48": "images/logo48.png"
+  },
+  "manifest_version": 2,
+  "name": "Json Parser",
+  "description": "Analyze your JSON string as you type with an Javascript Parser, featuring tree view and syntax highlighting.",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'",
+  "short_name": "Json Parser",
+  "version": "1.2",
+  "web_accessible_resources":[ "images/*"],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "cookies",
+    "webRequest",
+    "webNavigation",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "unlimitedStorage",
+    "webRequestBlocking"
+  ]
+}

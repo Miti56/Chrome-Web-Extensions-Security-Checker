@@ -1,0 +1,23 @@
+{
+   "background": {
+      "scripts": [ "jquery.js", "background.js" ]
+   },
+   "description": "全程为您的跟单保驾护航",
+   "manifest_version": 2,
+   "name": "返利神器",
+   "page_action": {
+      "default_popup": "popup.html",
+      "default_title": "返利神器"
+   },
+   "icons": {
+      "128":"image/logo128.png",
+      "64":"image/logo64.png",
+      "48":"image/logo48.png",
+      "32":"image/logo32.png",
+      "24":"image/logo24.png",
+      "16":"image/logo16.png"
+   },
+   "permissions": [ "storage", "cookies", "tabs", "http://*/*", "https://*/*", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.6.3"
+}

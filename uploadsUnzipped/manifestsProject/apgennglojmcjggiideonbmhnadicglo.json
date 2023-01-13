@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "JIRA Issue Branch Name Generator",
+  "version": "1",
+  "description": "Generates a branch name based on the current JIRA issue in classic view.",
+  "icons": {
+    "128": "128.png",
+    "64": "64.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.atlassian.net/projects/*/issues/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "page_action": {
+    "default_icon": "128.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab", "clipboardWrite", "declarativeContent"]
+}

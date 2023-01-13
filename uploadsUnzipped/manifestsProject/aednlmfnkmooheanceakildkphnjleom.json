@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+	"default_locale": "en",
+	"version": "1.1",
+	"icons": {
+			"64": "64.png",
+			"128": "128.png"
+	},
+	"permissions": [
+        "tabs",
+        "alarms",
+        "webRequest",
+        "webRequestBlocking",
+		"cookies",
+		"storage",
+		"tabs",
+		"<all_urls>"
+	],
+	"browser_action": {
+		"default_title": "__MSG_appDesc__",
+		"default_icon": {
+			"64": "64.png",
+			"128": "128.png"
+		},
+		"default_popup": "popup/index.html"
+	},
+	"content_scripts": [{
+		"matches": ["*://facebook.com/*", "*://*.facebook.com/*"],
+		"js": [
+			"./inject.js"
+		],
+		"run_at": "document_start",
+		"all_frames": true
+	}],
+	"web_accessible_resources": [
+		"*"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"offline_enabled": true,
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

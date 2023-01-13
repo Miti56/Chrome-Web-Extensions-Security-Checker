@@ -1,0 +1,21 @@
+{"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"background": {"scripts": ["bg.js"]}, 
+
+"icons": {"128": "128-icons.png"}, 
+
+"browser_action": {"default_icon": "128-icons.png", 
+
+"default_title": "Mortal Kombat Backgrounds & New Tab"}, 
+
+"manifest_version": 2, 
+
+"version": "3.2.7", 
+
+"description": "__MSG_localeDesc__", 
+
+"name": "__MSG_AddHead__", 
+
+"chrome_url_overrides": {"newtab": "my_index.html"}, 
+
+"default_locale": "en"}

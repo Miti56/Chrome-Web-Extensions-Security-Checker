@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "BP Proxy Switcher",
+    "description": "7 plugins in 1:Proxy Switcher,Cookie Cleaner,Browser Agent Changer,URL blocker,Adblocker,Proxy auto-rotator,Ip2location database",
+    "version": "2.7.0",
+
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "icons": {
+        "16": "img/icon.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+
+    "permissions": [
+        "storage", 
+        "proxy",
+        "privacy",
+        "notifications",  
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs",
+        "https://*/*",
+        "http://*/*",
+        "cookies",
+        "history",
+        "browsingData",
+        "contentSettings",
+        "contextMenus"
+
+
+    ],
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_start",
+            "all_frames": false
+        }
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    }
+}

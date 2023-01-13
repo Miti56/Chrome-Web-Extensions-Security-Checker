@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Wow I spent a lot on Blizzard games!",
+  "version": "0.1.4",
+  "description": "Easily visualize how much money you've spent on Blizzard games.",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["*://*.blizzard.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle",
+    "all_frames": false
+  }],
+  "permissions": ["declarativeContent"],
+  "page_action": {
+    "default_popup": "view.html",
+    "default_icon": {
+      "16": "wow.png",
+      "32": "wow.png",
+      "48": "wow.png",
+      "128": "wow.png"
+    }
+  },
+  "icons": {
+    "16": "wow.png",
+    "32": "wow.png",
+    "48": "wow.png",
+    "128": "wow.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "__MSG_appName__",
+    "short_name" : "__MSG_appShortName__", 
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "1.0.2",
+    "app": {
+        "urls": [
+            "http://www.websiteplanet.com/"
+        ],
+        "launch": {
+            "web_url": "http://www.websiteplanet.com/review/wix/?utm_source=webstrore&utm_medium=webstore&utm_campaign=webstore&utmx=webstore"
+        }
+    },
+    "icons": {
+        "128": "128.png"
+    }
+}

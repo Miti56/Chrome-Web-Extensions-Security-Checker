@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en_US",
+  "options_page": "options_page.html",
+  "content_scripts": [
+    {
+      "js": [
+        "text_url_linker.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "ftp://*/*"
+      ],
+      "run_at": "document_end",
+      "all_frames":true
+    }
+  ],
+  "icons": {
+    "128": "url128.png",
+    "48": "url48.png"
+  },
+  "version": "1.3.0",
+  "permissions": [
+    "storage"
+  ],
+  "manifest_version": 2
+}

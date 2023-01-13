@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Go Go Gummo",
+  "description": "Go Go Gummo - Trouvez toutes les clés. Il va falloir acquérir toutes les capacités de Gummo pour réussir!",
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://harry-games.fr/play-1244-go-go-gummo.html"
+    ],
+    "launch": {
+      "web_url": "http://harry-games.fr/play-1244-go-go-gummo.html"
+    }
+  },
+  "icons": {
+    "128": "1244.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

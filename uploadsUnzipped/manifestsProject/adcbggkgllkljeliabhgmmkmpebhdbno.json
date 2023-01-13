@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "EffAllYall",
+  "description": "This Chrome extension blocks all the f***s, once and for all.",
+  "version": "0.5.3",
+  "content_scripts": [
+    {
+      "js": [
+        "src/content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    "src/inject.js"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Balanced [BETA]",
+    "short_name": "Balanced [BETA]",
+    "version": "0.1.5",
+
+    "description": "Balanced helps people make sense of an increasingly polarized and interconnected world",
+
+    "browser_action": {
+        "default_icon": "img/yinyang_128.png",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "<all_urls>",
+        "storage"
+    ],
+
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+
+    "content_scripts": [{
+        "matches": ["*://*.motherjones.com/*", "*://*.theguardian.com/*",
+            "*://*.cnn.com/*", "*://*.bbc.co.uk/*", "*://*.forbes.com/*",
+            "*://*.washingtonpost.com/*", "*://*.breitbart.com/*",
+            "*://*.nytimes.com/*", "*://*.usatoday.com/*",
+            "*://*.theintercept.com/*", "*://*.salon.com/*",
+            "*://*.slate.com/*", "*://*.aljazeera.com/*",
+            "*://*.abcnews.go.com/*", "*://*.theblaze.com/*",
+            "*://*.reuters.com/*", "*://*.wsj.com/*", "*://*.dailycaller.com/*",
+            "*://*.rt.com/*", "*://*.cbsnews.com/*", "*://*.bloomberg.com/*",
+            "*://*.nationalreview.com/*", "*://*.economist.com/*",
+            "*://*.foxnews.com/*", "*://*.nbcnews.com/*"],
+        "js": ["js/content.js"],
+        "run_at": "document_end"
+    }],
+
+    "icons": {
+        "16": "img/yinyang_16.png",
+        "48": "img/yinyang_48.png",
+        "128": "img/yinyang_128.png"
+    }
+}

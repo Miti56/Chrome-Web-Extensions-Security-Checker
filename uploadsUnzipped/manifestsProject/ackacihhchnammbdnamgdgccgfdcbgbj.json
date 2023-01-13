@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "SocBox",
+ "manifest_version": 2,
+ "short_name": "SocBox.ru",
+ "description": "Увеличение конверсии, используя технологии отслеживания посетителей вашего сайта",
+ "version": "1.0",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "fav.png"
+  },
+ "icons": {
+	"128": "Untitled-1.png"
+  }
+}

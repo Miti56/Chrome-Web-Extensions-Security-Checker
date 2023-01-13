@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Extension Chrome NiuTV",
+    "version": "2.0.1",
+    "manifest_version": 2,
+    "icons": {
+        "19": "icons/19x19.png",
+        "48": "icons/48x48.png",
+        "128": "icons/128x128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "icons/19x19.png",
+            "48": "icons/48x48.png",
+            "128": "icons/128x128.png"
+        },
+        "default_title": "Extension Chrome NiuTV",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "omnibox": {
+        "keyword" : "niutv"
+    },
+    "permissions": [
+        "storage",
+        "contextMenus",
+        "https://api.niutv.co/*"
+    ],
+    "minimum_chrome_version": "6"
+}

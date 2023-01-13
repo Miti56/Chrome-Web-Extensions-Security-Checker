@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Screen capture with cursor",
+    "author": "Alan Poon",
+    "version" : "1.2",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Screen Capture",
+    "homepage_url": "https://alanpoon.no-ip.org",
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "all_frames": true,
+       "matches": ["*://alanpoon.no-ip.org/*"]
+    }],
+    "icons" : {
+        "48" : "icon.png"
+    },
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "icon.png"
+    ],
+	 "externally_connectable": {
+		"matches": ["*://alanpoon.no-ip.org/*"]
+	 },		
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAivSiy0XX2OM7olUFf8MZOzxmwebolUIr/rA1Tdx+pZCg/QozweDEA5MVvxGey6wMDH5KcCI43brUUnibB+9cy3gzzRogOz+1BaRbUqhXvI1IAcdRorbwaWo5q+TGQQKmyJSLfgoTh+rhlDHXPf3edYDq5wpLvQoXTzOabWYd9rDVuYzT1lEqmVNLDa9lT1u5mf8Ex2UDyLWdAYwUXPmxSmtcMVNnDTunVEYkTRMb1nyCua0GN8voNAYVUDiw9yqGtJRUzZWv8d64mco9aJV+PHo57cg0doJ16MTVjJUx2vTM/1nuEzlcPJue4WXHLscDqmW73CaHsp3HTRtZwZ39HwIDAQAB"
+}

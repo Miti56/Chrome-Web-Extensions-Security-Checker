@@ -1,0 +1,21 @@
+{"icons": {"128": "128-icons.png"}, 
+
+"background": {"scripts": ["backscript.js"]}, 
+
+"chrome_url_overrides": {"newtab": "page.html"}, 
+
+"manifest_version": 2, 
+
+"browser_action": {"default_icon": "128-icons.png", 
+
+"default_title": "Bugatti Backgrounds & Themes"}, 
+
+"update_url": "https://clients2.google.com/service/update2/crx", 
+
+"default_locale": "en", 
+
+"version": "3.3.10", 
+
+"name": "__MSG_localeTitle__", 
+
+"description": "__MSG_extinfo__"}

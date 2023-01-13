@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+
+  },
+  "manifest_version": 2,
+  "name": "YT extended styler",
+  "version": "1.0",
+  "options_page": "pages/options.html",
+  "description": "YT extended style editor",
+  "icons" : {
+    "32": "icons/32.png",
+    "128": "icons/128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions": [ "tabs", "storage", "<all_urls>", "contextMenus","webRequest", "webRequestBlocking"],
+  "content_scripts": [ {
+    "js": [ "javascript/restyle.js" ],
+    "matches": [ "*://www.youtube.com/*" ]
+  } ],
+  "background": {
+    "page": "pages/bg.html"
+  },
+  "web_accessible_resources": [ "pages/*" ]
+}

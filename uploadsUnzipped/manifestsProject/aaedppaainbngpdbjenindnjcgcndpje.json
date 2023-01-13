@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "__MSG_display_name__",
+    "description": "__MSG_description__",
+    "default_locale": "en",
+    "version": "1.1.2",
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "icons": {
+        "16": "wrench16.png",
+        "48": "wrench48.png",
+        "128": "wrench128.png"
+    },
+    "browser_action": {
+        "default_icon": "wrench128.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.ebay.fr/*",
+                "https://*.ebay.es/*",
+                "https://*.ebay.com/*",
+                "https://*.ebay.co.uk/*",
+                "https://*.ebay.de/*",
+                "https://*.ebay.it/*"
+            ],
+            "js": [
+                "js/content_script.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "webNavigation",
+        "https://*.ebay.fr/*",
+        "https://*.ebay.es/*",
+        "https://*.ebay.com/*",
+        "https://*.ebay.co.uk/*",
+        "https://*.ebay.de/*",
+        "https://*.ebay.it/*"
+    ]
+}

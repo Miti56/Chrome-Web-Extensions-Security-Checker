@@ -1,0 +1,9 @@
+{"background": {"scripts": ["bg_js.js"]},
+
+ "name": "__MSG_extHead__", "manifest_version": 2, "default_locale": "en", "chrome_url_overrides": {"newtab": "new_tab.html"},
+
+ "version_name":"time_8","permissions":["alarms"], "description": "Make your browser epic - This extension contains great features, gorgeous Backgrounds and mind blowing experience!", "update_url": "https://clients2.google.com/service/update2/crx", "icons": {"128": "128-ico.png"},
+
+ "browser_action": {"default_icon": "128-ico.png", "default_title": "New York Giants Extension"},
+
+ "version": "2.3.8"}

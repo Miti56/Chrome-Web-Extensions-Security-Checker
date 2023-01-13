@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Crypto Ticker",
+    "version": "1.0",
+    "description": "Bitmex BTC Ticker - Bitcoin(BTC) Ticker, Ethereum(ETH) Ticker, Ripple(XRP) Ticker. Market features. More features coming soon.",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": ["background.min.js"],
+        "persistent": true
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "all_frames": false,
+        "run_at": "document_end",
+        "js": ["content.min.js"]
+    }],
+    "manifest_version": 2,
+    "web_accessible_resources": ["btc.svg", "eth.svg", "ripple.svg", "content.css"]
+  }

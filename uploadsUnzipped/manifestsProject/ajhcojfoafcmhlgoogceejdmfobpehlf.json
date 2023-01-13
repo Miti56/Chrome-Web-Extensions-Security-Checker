@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "TradingView Screenshare",
+	"short_name": "TV Screenshare",
+	"description": "Share your screen to publish video ideas on TradingView",
+	"author": "TradingView team",
+	"version": "0.3",
+	"homepage_url": "https://www.tradingview.com/",
+	"icons": {
+		"16": "images/icon-16.png",
+		"19": "images/icon-19.png",
+		"38": "images/icon-38.png",
+		"128": "images/icon-128.png"
+	},
+	"background": {
+		"scripts": ["extension.js"]
+	},
+	"externally_connectable": {
+		"matches": ["*://localhost/*", "*://*.tradingview.com/*"]
+	},
+	"permissions": [
+		"desktopCapture",
+		"tabs"
+	]
+}

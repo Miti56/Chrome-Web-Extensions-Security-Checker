@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Lottery Results Checker",
+  "short_name": "Lottery Results Checker",
+  "description": "Results checker for Powerball, Mega Millions and Cash4Life lotteries in the USA",
+  "version": "0.0.0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+    "http://www.lotteryresultschecker.net/"
+    ],
+    "launch": {
+    "web_url": "http://www.lotteryresultschecker.net/"
+    }
+  }
+}

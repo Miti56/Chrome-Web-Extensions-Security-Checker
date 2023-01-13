@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "cloud-host",
+  "version": "1.0.11",
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "icon-regular.png",
+    "32": "icon-regular.png",
+    "48": "icon-regular.png",
+    "128": "icon-regular.png"
+  },
+  "browser_action": {
+    "default_title": "云Hosts",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "proxy"
+  ],
+  "manifest_version": 2
+}

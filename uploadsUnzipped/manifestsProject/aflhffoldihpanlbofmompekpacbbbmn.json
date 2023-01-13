@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "WhatsTR",
+  "version": "2.0",
+  "description": "Whatsapp üzerinden mesaj gönderme eklentisi.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "declarativeContent",
+    "storage"
+  ],
+  "content_scripts": [{
+    "matches": ["https://web.whatsapp.com/*"],
+    "js": [
+      "Scripts/socket.js"
+    ]
+  }],
+  "options_page": "options.html",
+  "background": {
+    "scripts": [
+      "Scripts/install.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "Images/logo16.png",
+      "32": "Images/logo32.png",
+      "48": "Images/logo48.png",
+      "128": "Images/logo128.png"
+    }
+  },
+  "icons": {
+    "16": "Images/logo16.png",
+    "32": "Images/logo32.png",
+    "48": "Images/logo48.png",
+    "128": "Images/logo128.png"
+  },
+  "manifest_version": 2
+}

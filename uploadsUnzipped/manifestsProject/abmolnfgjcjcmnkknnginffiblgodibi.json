@@ -1,0 +1,18 @@
+{
+   "background": {
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon_128.png"
+   },
+   "content_security_policy": "script-src 'unsafe-eval' 'self' https://maps.googleapis.com https://maps.gstatic.com; object-src 'self'",
+   "description": "Tool for measuring distance and acreage on a map",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "ncrdo",
+   "permissions": [ "tabs", "https://*/*", "http://*/*", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.8"
+}

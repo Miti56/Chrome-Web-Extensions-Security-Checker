@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name":"Tribune Publishing Paywall Removal",
+"description":"Removes premium content protection for Tribune Publishing online properties",
+"version":"1.1.2",
+"manifest_version":2,
+"icons": { "128": "icon128.png" },
+"content_scripts": [
+    {
+      "matches": ["http://www.orlandosentinel.com/*",
+      			  "http://www.latimes.com/*",
+      			  "http://www.chicagotribune.com/*",
+      			  "http://www.sun-sentinel.com/*",
+      			  "http://www.baltimoresun.com/*",
+      			  "http://www.mcall.com/*",
+      			  "http://www.courant.com/*",
+      			  "http://www.dailypress.com/*"],
+      "js": ["jquery-2.1.3.min.js","destroyer.js"]
+    }
+  ]
+}

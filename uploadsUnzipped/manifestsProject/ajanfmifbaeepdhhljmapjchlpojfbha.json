@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "assets/images/icon32.png"
+   },
+   "content_scripts": [ {
+      "js": [ "assets/scripts/main.js" ],
+      "matches": [ "http://*.sharepoint.com/*", "https://*.sharepoint.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Removes hidden characters (zero width space and non breaking space) from SharePoint pages on page load",
+   "icons": {
+      "128": "assets/images/icon128.png",
+      "16": "assets/images/icon16.png",
+      "32": "assets/images/icon32.png",
+      "48": "assets/images/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "SharePoint Hidden Character Destroyer",
+   "permissions": [  ],
+   "version": "1.0.4"
+}

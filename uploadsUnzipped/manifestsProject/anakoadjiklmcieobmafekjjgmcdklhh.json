@@ -1,0 +1,17 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "128": "icon_128x128.png",
+      "default_icon": "icon_128x128.png"
+   },
+   "description": "Purchase Price Drop Protection & Money Back! Automatically get refunds on purchases when prices drop. Join for free & start earning!",
+   
+   "manifest_version": 2,
+   "name": "Earny - Price Drop Protection & Money Back",
+   "options_page": "options.html",
+   "permissions": [ "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.1.0"
+}

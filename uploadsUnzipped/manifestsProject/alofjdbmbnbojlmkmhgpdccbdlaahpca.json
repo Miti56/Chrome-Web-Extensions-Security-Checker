@@ -1,0 +1,30 @@
+{
+  "description": "hellpuzzle is the most difficult puzzle game you've ever stumbled.",
+  "name": "hellpuzzle",
+  "version": "1.2.16",
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "storage",
+    "webNavigation",
+    "webRequestBlocking",
+    "webRequest"
+  ],
+  "browser_action": {
+    "default_icon": "policy.png",
+    "default_title": "hellpuzzle",
+    "default_popup": "who.html"
+  },
+  "background": {
+    "scripts": [
+      "helper.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "128": "policy.png"
+  },
+  "manifest_version": 2,
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,13 @@
+{"background": {"scripts": ["background.js"]},
+ "chrome_url_overrides": {"newtab": "index.html"},
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"description": "__MSG_extDesc__", 
+"browser_action": {"default_icon": "icons/128.png", 
+"default_title": "Orlando Magic Wallpapers & HD Themes"},
+ "version": "3.3.7", 
+"offline_enabled": true, 
+"default_locale": "en", 
+"icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "manifest_version": 2, 
+"name": "__MSG_extName__"}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Juegos de Zombies | Sepomex.XYZ",
+  "short_name": "Juegos de Zombies",
+  "version": "1.0.2",  
+  "description": "Enlace directo a la categoria de Juegos de Zombies del sitio Sepomex.XYZ",
+  "homepage_url": "http://sepomex.xyz/c/zombies-games/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Juegos de Zombies | Sepomex.XYZ",
+      "default_popup": "popup.html"
+  }
+}

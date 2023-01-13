@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"description":"Wazo click to call and popup call extension for Chrome","version":"1.0.11","content_security_policy":"script-src 'self' 'unsafe-eval'; object-src 'self'","name":"Wazo extension","manifest_version":2,"icons":{"16":"icon-16.png","48":"icon-48.png","60":"icon-60.png","128":"icon-128.png"},"browser_action":{"default_title":"Wazo extension","default_icon":"icon-60.png","default_popup":"popup.html"},"options_ui":{"page":"options.html","open_in_tab":true},"background":{"page":"background.html","persistent":true},"web_accessible_resources":["*"],"permissions":["notifications","storage"],"content_scripts":[{"matches":["*://*/*"],"js":["content.bundle.js"],"run_at":"document_end"}]}

@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"description":"RxJS Devtools Extension","version":"0.0.1","name":"RxJS Devtools","options_page":"options.html","background":{"page":"background.html"},"devtools_page":"devtools.html","icons":{"128":"rxjs-logo.png"},"content_scripts":[{"matches":["http://*/*","https://*/*","<all_urls>"],"js":["contentScript.bundle.js"],"css":["content.styles.css"]}],"permissions":["activeTab"],"web_accessible_resources":["content.styles.css","rxjs-logo.png","rxjs-logo.png","injectedScript.bundle.js"],"manifest_version":2,"content_security_policy":"script-src 'self' 'unsafe-eval'; object-src 'self'"}

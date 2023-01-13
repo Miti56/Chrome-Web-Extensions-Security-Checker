@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "theme": {
+        "images": {
+            "theme_frame": "images/theme_frame.png",
+            "theme_toolbar": "images/theme_toolbar.png",
+            "theme_tab_background": "images/theme_tab_background.png",
+            "theme_ntp_background": "images/theme_ntp_background.png",
+            "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+        },
+        "icons": {
+            "16": "images/icon16.png",
+            "32": "images/icon32.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        },
+        "colors": {
+            "frame": [
+                183,
+                138,
+                84
+            ],
+            "toolbar": [
+                212,
+                185,
+                152
+            ],
+            "tab_text": [
+                16,
+                14,
+                9
+            ],
+            "tab_background_text": [
+                16,
+                14,
+                9
+            ],
+            "bookmark_text": [
+                16,
+                14,
+                9
+            ],
+            "ntp_background": [
+                183,
+                138,
+                84
+            ],
+            "ntp_text": [
+                185,
+                161,
+                104
+            ],
+            "button_background": [
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "tints": {
+            "buttons": [
+                0,
+                0,
+                0.5
+            ]
+        },
+        "properties": {
+            "ntp_background_alignment": "top",
+            "ntp_background_repeat": "no-repeat"
+        }
+    },
+    "name": "Sea Breeze Ninjas Into the Holocaust",
+    "version": "1",
+    "description": "To Paddle is To Close with and Destroy"
+}

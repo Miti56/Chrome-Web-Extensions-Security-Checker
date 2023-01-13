@@ -1,0 +1,61 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_appName__",
+	"version": "2.0.4",
+	"manifest_version": 2,
+	"description": "__MSG_appDescription__",
+	"icons": {
+		"16": "images/icon-16.png",
+		"128": "images/icon-128.png"
+	},
+	"default_locale": "ru",
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"permissions": [
+		"tabs",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"unlimitedStorage",
+		"*://vk.com/*",
+		"*://razbudi.loc/*",
+		"*://razbudi.net/*"
+	],
+	"externally_connectable": {
+		"matches": [
+			"*://*.razbudi.net/*"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"extnesions/afkpfjljjhhonjehpkmgonimjjgaheap/6.0.10_0/js/lib/jquery-3.1.1.min.js",
+				"extnesions/afkpfjljjhhonjehpkmgonimjjgaheap/6.0.10_0/js/_config.js",
+				"extnesions/afkpfjljjhhonjehpkmgonimjjgaheap/6.0.10_0/js/audio-model.js",
+				"scripts/content-script-db.js",
+				"scripts/content-script-vk.js",
+				"scripts/content-script-main.js"
+			],
+			"css": [
+				"styles/vk.css"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon-19.png",
+			"38": "images/icon-38.png"
+		},
+		"default_title": "razbudi",
+		"default_popup": "popup.html"
+	}
+}

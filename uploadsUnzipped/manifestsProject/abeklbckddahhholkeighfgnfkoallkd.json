@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "SacChat por Consensus",
+    "description": "Nuestro chat de soporte a su servicio.",
+    "permissions": ["tabs"],
+    "version": "1.0",
+    "icons": {
+        "48": "images/icono-css.png"
+        
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+    
+    
+    
+}

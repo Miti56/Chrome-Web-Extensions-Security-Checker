@@ -1,0 +1,22 @@
+{
+  "browser_action": {
+      "default_icon": "images/icons/icon48.png"
+   },
+   "content_scripts": [ {
+      "css": [ "styles/common.css"],
+      "js": [ "scripts/3rd-party/jquery-1.9.1.min.js","scripts/3rd-party/jquery.cookie.js","scripts/3rd-party/bootstrap.min.js","scripts/main.js"],
+      "matches": [ "http://kanobu.ru/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Черновики для Паба Канобу",
+   "icons": {
+      "128": "images/icons/icon128.png",
+      "48": "images/icons/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Kanobu Черновики",
+   "permissions": [ "http://kanobu.ru/*", "notifications", "tabs", "storage", "alarms", "background" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2",
+   "web_accessible_resources": [ "images/icons/icon48.png", "scripts/3rd-party/jquery.min.map" ]
+}

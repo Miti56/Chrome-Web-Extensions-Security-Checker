@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+    "manifest_version": 2,
+    "name": "Easy dccon",
+    "version": "0.9.1",
+    "icons": {
+        "48": "48.png"
+    },
+    "description": "디시콘 30개 제한 우회(사용중인 콘 교체 자동화)&빠른 콘로딩",
+
+    "content_scripts": [
+        {
+            "matches": ["*://gall.dcinside.com/*"],
+            "js": ["easy_dccon.js"]
+        }
+    ],
+
+
+    "permissions": [
+        "*://gall.dcinside.com/*",
+        "cookies"
+    ],
+
+    "web_accessible_resources": [ "recent.png" ]
+}

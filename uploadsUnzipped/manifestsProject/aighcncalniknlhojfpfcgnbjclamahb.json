@@ -1,0 +1,19 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "Eventmanager-Online.com",
+"version": "1.0",
+"manifest_version": 2,
+"description": "Online Eventmanagement und Ticketing Tool.",
+"icons": {
+"32": "favicon.ico",
+"128": "favicon128.ico"
+},
+"app": {
+"urls": [
+"http://www.eventmanager-online.com/"
+],
+"launch": {
+"web_url": "http://www.eventmanager-online.com/"
+}
+}
+}

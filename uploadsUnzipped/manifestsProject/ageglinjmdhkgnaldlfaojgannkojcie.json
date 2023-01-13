@@ -1,0 +1,63 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "exocad webview",
+  "version": "1.5.7276",
+  "description": "Load almost any type of 3D model quickly and easily in our established 3D viewer. All common open file formats are supported.",
+  "icons": {
+    "16": "icons/exocadWebViewAppIcon-16x16.png",
+    "48": "icons/exocadWebViewAppIcon-48x48.png",
+    "128": "icons/exocadWebViewAppIcon-128x128.png",
+    "256": "icons/exocadWebViewAppIcon-256x256.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "file:///*",    
+    "storage",
+    "identity",
+    "identity.email",
+    "notifications",
+    "contextMenus"
+  ],
+  "oauth2": {
+    "client_id": "16979037505-ouhajhinptda4re7op297t9ute1gs9n4.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.install",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false,
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icons": {
+      "16": "icons/exocadWebViewAppIcon-16x16.png",
+      "48": "icons/exocadWebViewAppIcon-48x48.png",
+      "128": "icons/exocadWebViewAppIcon-128x128.png"
+    },
+    "default_title": "exocad webview"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    "index.html",
+    "http:/*",
+    "https:/*",
+    "ftp:/*",
+    "file:/*",
+    "chrome-extension:/*",
+    "blob:*",
+    "data:*",
+    "filesystem:/*",
+    "drive:*"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgEaLZmSpk3dUVmhxfSGpU6WUPD8JaJkh+euoyu8VHAWE6/oy4LSfM9iTUvjKEtwgnHIFgi9IbAxpF1tzssSGuf8LSEZ631Wctg8d4wdtmBKwhlhMY9WWopfyXCE9e04Dpl5ExtrQ4EKYnvxOKZsGFIg5zIaR3dv8H3jRw/Ad1mTFrjuO7EtIWEp+6Hwf2G9ucuwiueC2X83BCXGKc1YFGwBWNtcnkDvqROj6mD2zTUwzONGW5TT2AC2CxT0WPkvN5r+MUHIl+oJ4vFQiNR9hv3CYifsTUWmYnFyEx6HE35TP3irHTrry/g5kJoP6RUyrqKm6UZlttkhhOwCEuTUPXQIDAQAB"
+}

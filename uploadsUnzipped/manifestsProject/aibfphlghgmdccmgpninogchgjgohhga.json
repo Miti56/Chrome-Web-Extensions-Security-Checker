@@ -1,0 +1,100 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "TERIVA - AssinaNet For Business",
+	"description": "Permite realizar assinaturas através do AssinaNet For Business da TERIVA.",
+	"version": "2.7.0",
+ 
+    "icons": {
+    	"16": "images/16.png",
+    	"48": "images/48.png",
+    	"128": "images/128.png"
+    },
+ 
+ 	"browser_action": {
+     	"default_popup": "popup.html"
+   	},
+ 
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "declarativeContent",
+        "nativeMessaging"
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+ 
+    "content_scripts": [ {
+        "js": [ "jquery-2.1.1.min.js", "assinanetfb.js" ],
+        "matches": [ 
+	        "http://*/iassinanet/app/assinanetfb/authorized/signature/*",
+	        "http://iassinanet.com/app/assinanetfb/authorized/signature/*",
+	        "http://*.iassinanet.com/app/assinanetfb/authorized/signature/*",
+	        "http://iassinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "http://*.iassinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "http://cq06:8080/app/assinanetfb/authorized/signature/*",
+	        "http://localhost:8080/app/assinanetfb/authorized/signature/*",
+			
+			"https://*/iassinanet/app/assinanetfb/authorized/signature/*",
+	        "https://iassinanet.com/app/assinanetfb/authorized/signature/*",
+	        "https://*.iassinanet.com/app/assinanetfb/authorized/signature/*",
+	        "https://iassinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "https://*.iassinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "https://cq06:8080/app/assinanetfb/authorized/signature/*",
+	        "https://localhost:8080/app/assinanetfb/authorized/signature/*",
+	        
+			"http://*/assinanetfb/app/assinanetfb/authorized/signature/*",
+	        "http://assinanetfb.com/app/assinanetfb/authorized/signature/*",
+	        "http://*.assinanetfb.com/app/assinanetfb/authorized/signature/*",
+	        "http://assinanetfb.com.br/app/assinanetfb/authorized/signature/*",
+	        "http://*.assinanetfb.com.br/app/assinanetfb/authorized/signature/*",
+	        "http://cq06:8080/app/assinanetfb/authorized/signature/*",
+	        "http://localhost:8080/app/assinanetfb/authorized/signature/*",
+			
+			"https://*/assinanetfb/app/assinanetfb/authorized/signature/*",
+	        "https://assinanetfb.com/app/assinanetfb/authorized/signature/*",
+	        "https://*.assinanetfb.com/app/assinanetfb/authorized/signature/*",
+	        "https://assinanetfb.com.br/app/assinanetfb/authorized/signature/*",
+	        "https://*.assinanetfb.com.br/app/assinanetfb/authorized/signature/*",
+	        "https://cq06:8080/app/assinanetfb/authorized/signature/*",
+	        "https://localhost:8080/app/assinanetfb/authorized/signature/*",
+	        
+			"http://*/assinanet/app/assinanetfb/authorized/signature/*",
+	        "http://assinanet.com/app/assinanetfb/authorized/signature/*",
+	        "http://*.assinanet.com/app/assinanetfb/authorized/signature/*",
+	        "http://assinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "http://*.assinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "http://cq06:8080/app/assinanetfb/authorized/signature/*",
+	        "http://localhost:8080/app/assinanetfb/authorized/signature/*",
+			
+			"https://*/assinanet/app/assinanetfb/authorized/signature/*",
+	        "https://assinanet.com/app/assinanetfb/authorized/signature/*",
+	        "https://*.assinanet.com/app/assinanetfb/authorized/signature/*",
+	        "https://assinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "https://*.assinanet.com.br/app/assinanetfb/authorized/signature/*",
+	        "https://cq06:8080/app/assinanetfb/authorized/signature/*",
+	        "https://localhost:8080/app/assinanetfb/authorized/signature/*",
+	        
+	        "http://*/assinanetcartorio/app/assinanetcartorio/authorized/signature/*",
+	        "http://assinanet.com/app/assinanetcartorio/authorized/signature/*",
+	        "http://*.assinanet.com/app/assinanetcartorio/authorized/signature/*",
+	        "http://assinanet.com.br/app/assinanetcartorio/authorized/signature/*",
+	        "http://*.assinanet.com.br/app/assinanetcartorio/authorized/signature/*",
+	        "http://cq06:8080/app/assinanetcartorio/authorized/signature/*",
+	        "http://localhost:8080/app/assinanetcartorio/authorized/signature/*",
+			
+			"https://*/assinanetcartorio/app/assinanetcartorio/authorized/signature/*",
+	        "https://assinanet.com/app/assinanetcartorio/authorized/signature/*",
+	        "https://*.assinanet.com/app/assinanetcartorio/authorized/signature/*",
+	        "https://assinanet.com.br/app/assinanetcartorio/authorized/signature/*",
+	        "https://*.assinanet.com.br/app/assinanetcartorio/authorized/signature/*",
+	        "https://cq06:8080/app/assinanetcartorio/authorized/signature/*",
+	        "https://localhost:8080/app/assinanetcartorio/authorized/signature/*"
+		]
+    }]
+}	

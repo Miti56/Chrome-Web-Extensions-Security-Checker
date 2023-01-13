@@ -1,0 +1,29 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Расширяет функционал чата Bizarre.",
+  "name": "Chat Bizarre Extension",
+  "permissions": [
+    "http://ajax.googleapis.com/",
+    "http://bizarre.tsua.net/",
+    "http://bizarre.kiev.ua/",
+    "http://bizarre.com.ua/",
+    "tabs"
+  ],
+  "icons": {
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png",
+    "16": "images/icon_16.png"
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://bizarre.kiev.ua/*",
+      "http://bizarre.com.ua/*",
+      "http://bizarre.tsua.net/*"
+    ],
+    "js": ["script.js"],
+    "run_at": "document_end"
+  }],
+  "manifest_version": 2,
+  "content_security_policy": "script-src \u0027self\u0027 https://ajax.googleapis.com; object-src \u0027self\u0027",
+  "version": "1.2"
+}

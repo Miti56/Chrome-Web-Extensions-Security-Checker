@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Remix-Tube",
+  "version": "2",
+  "description": "",
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": [
+        "class.extend.js",
+        "HTML.stream.dispatcher.js",
+        "jquery-3.1.1.min.js",
+        "main.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "images/logo19.png",
+    "default_popup": "popup.html",
+    "default_title": "Remix-Tube"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "images/logo16.png",
+    "48": "images/logo48.png",
+    "128": "images/logo128.png"
+  }
+}
+

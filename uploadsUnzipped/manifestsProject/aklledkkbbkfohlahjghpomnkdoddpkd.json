@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "루리웹 스포 방지기",
+	"description": "캐릭터 이름이나 스포가 될 만한 단어 기준으로 게시글을 걸러냅니다.",
+	"version": "0.1.1",
+	"content_scripts": [{
+		"matches": ["http://*.ruliweb.com/*", "https://*.ruliweb.com/*"],
+		"js": ["rsb.js", "jquery.js"],
+		"run_at": "document_start"
+	}],
+	"permissions": ["activeTab"],
+	"browser_action": {
+		"default_icon": "rsb_icon.png",
+		"default_popup": "popup.html"
+	}
+}

@@ -1,0 +1,25 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "moodlinx button",
+  "version": "1.0",
+  "manifest_version": 2,
+  
+  "background": {
+    "scripts": [
+      "jquery.min.js",
+      "background.js"
+    ]
+  },
+  
+  "description": "Select the mood of your pages and help making the Web more human.",
+  "icons": { "16": "images/icon16.png",
+           "48": "images/icon48.png",
+          "128": "images/icon128.png" },
+  "browser_action": {
+    "default_icon": "images/icon48.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ]
+}

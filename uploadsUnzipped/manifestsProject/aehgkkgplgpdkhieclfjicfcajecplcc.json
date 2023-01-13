@@ -1,0 +1,12 @@
+{"name": "__MSG_titleHead__", 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"default_locale": "en", 
+"background": {"scripts": ["my_js.js"]},
+ "chrome_url_overrides": {"newtab": "newtab.html"},
+ "icons": {"128": "128-ico.png"},
+ "permissions":["alarms","storage"], 
+"version": "2.5.3", 
+"description": "Install Fullmetal Alchemist and get wallpapers, awesome features, impressive experience to make your browser the best ever.", 
+"browser_action": {"default_icon": "128-ico.png", 
+"default_title": "Fullmetal Alchemist Extension"},
+ "manifest_version": 2}

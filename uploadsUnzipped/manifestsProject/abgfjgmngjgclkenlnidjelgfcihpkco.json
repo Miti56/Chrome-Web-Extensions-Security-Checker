@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+   "page": "background.html"
+   },
+   "chrome_url_overrides": {
+      "newtab": "nordwest.html"
+   },
+   "description": "A new tab in style of Peppa",
+   "content_scripts": [ {
+      "js": [ "options.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+	  "run_at": "document_end"
+   } ],
+   "homepage_url": "http://nordwest.xyz/peppapig/",
+   "icons": {
+      "128": "i/128.png",
+      "16": "i/16.png",
+      "48": "i/48.png"
+   },
+   "manifest_version": 2,
+   "name": "Peppa New Tab page",
+   "options_page": "options.html",
+   "short_name": "Peppa New Tab page",
+   "version": "1"
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "CloudFlare CDN Cache Monitor",
+	"short_name": "CF Cache Mon",
+	"description": "View loaded resource headers and check CloudFlare CDN cache settings.",
+
+	"author": "Xim S",
+	"homepage_url": "https://github.com/xims/cf_cache_mon",
+
+	"version": "0.0.1",
+	"version_name": "init",
+
+
+	"icons": { "52": "icons/cf_mon_ico.png"
+	},
+
+	"browser_action": {
+		"default_title": "CF Cache Mon",
+		"default_icon": {
+				"52": "icons/cf_mon_ico.png"
+		}
+	},
+
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+
+	"permissions": [
+		"activeTab",
+		"webRequest",
+		"<all_urls>"
+	]
+}

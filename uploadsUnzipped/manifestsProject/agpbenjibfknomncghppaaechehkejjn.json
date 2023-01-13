@@ -1,0 +1,16 @@
+	{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name":"Fighting",
+	"description":"If you like Street fighter, boxing and karate, hand-to-hand battles, you are in the right place to play free fighting games.",
+	"version":"0.0.0.2",
+	"manifest_version":2,
+	"icons":{"128":"128.png"},
+	"app":{
+		"urls":["http://coolfightinggames.blogspot.com/"],
+		"launch":{"web_url":"http://coolfightinggames.blogspot.com/"}
+	},
+	"permissions":[
+		"unlimitedStorage"
+		]
+	}

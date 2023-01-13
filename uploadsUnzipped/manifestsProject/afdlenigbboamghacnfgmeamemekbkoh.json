@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Racing Games | MyAddons.XYZ",
+  "short_name": "Racing Games",
+  "version": "1.0.2",
+  "description": "Direct link to the Racing Games category on MyAddons.XYZ",
+  "homepage_url": "http://myaddons.xyz/c/car-games/",  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Racing Games | MyAddons.XYZ",
+      "default_popup": "popup.html"
+  }
+}

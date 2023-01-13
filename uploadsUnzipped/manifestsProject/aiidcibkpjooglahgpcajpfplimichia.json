@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Fox Reklam Engelleyici",
+  "version": "1.1",
+  "description": "Fox sitesinden reklamları temizler. Normal Adblock eklentinizi Fox'ta etkisiz duruma getirdikten sonra keyifle dizi izleyin.",
+  "icons": { "128": "icon_128.png" },
+    "background": {
+    "persistent": true,
+    "scripts": ["main.js"]
+  },
+      "content_scripts": [],
+	  "web_accessible_resources": [
+    "content.js"
+   ],
+  "permissions": [
+   "https://www.fox.com.tr/", "http://www.fox.com.tr/", "activeTab", "webNavigation"
+    ],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icon_19.png",
+    "default_popup": ""
+  }
+}

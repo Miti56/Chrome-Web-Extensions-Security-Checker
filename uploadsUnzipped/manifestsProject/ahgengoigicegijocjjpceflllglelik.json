@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Carrefour asbl - Formations",
+  "description": "Webopera Carrefour asbl : Nos Formations",
+  "version": "1.1",
+  "manifest_version": 2,
+  "app": {
+    "launch": {
+      "web_url": "http://asblcarrefour.be"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

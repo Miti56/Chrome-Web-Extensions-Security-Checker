@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Water ripple wave button special effect",
+	"description": "Water ripple effect with SVG",
+   "browser_action": {
+      "default_popup": "box/index.html"
+   },
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "icons": {
+      "128": "logo.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "1.0",
+   "version": "1.0"
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Nyaa Redirect",
+	"version": "1.0",
+	"description": "Redirects nyaa.se URLs to nyaa.pantsu.cat or nyaa.si",
+	"permissions": ["webNavigation", "tabs", "storage"],
+	"background":
+	{
+		"persistent": false,
+		"scripts": ["bg.js"]
+	},
+	"browser_action":
+	{
+		"default_title": "",
+		"default_popup": "popup.html"
+	},
+	"options_page": "popup.html"
+}

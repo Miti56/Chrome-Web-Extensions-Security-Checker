@@ -1,0 +1,35 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "DoomusMe",
+  "version": "0.2",
+  "manifest_version": 2,
+  "description": "custom DoomusMe Chrome behavior",
+  "icons": { "48": "doomus48.png", "128": "doomus128.png" },
+  "browser_action": {
+    "default_icon": "doomus128.png",
+	"default_popup": "popup.html"
+  },
+  "background": {
+  	"page": "background.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+	"*://doomus.me/",
+	"tabs",
+	"notifications",
+	"cookies",
+	"unlimitedStorage"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts": [
+    {
+    	"matches": ["<all_urls>"],
+		"exclude_globs": ["*/doomus/*"],
+      	"js": ["dom.js","framework.js","jquery.js"],
+      	"css": ["dom.css"]
+    }
+  ],
+  "chrome_url_overrides" : {
+    "newtab": "newtab.html"
+  }
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "KuuPofy Cashback Assistant",
+  "description": "Get curated offers, coupons, and deals delivered right in your browser with a click from over 1000+ Indian online shopping sites.",
+  "version": "0.9",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Coupon"
+  },
+  "icons": {
+    "16": "images/icon16d.png",
+    "48": "images/icon48d.png",
+    "128": "images/icon128d.png"
+  },
+  "background": {
+    "scripts": ["js/lib/jquery.min.js", "js/lib/angular.min.js","js/dataProvider.js","js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/lib/angular.min.js","js/dataProvider.js"]
+    }
+  ],
+  "web_accessible_resources": ["images/icon48.png", "partials/*.*"],
+  "permissions": [
+    "tabs",
+    "*://*/*",
+    "storage",
+    "notifications",
+    "webNavigation",
+    "declarativeContent"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+          "short_name": "SubPals",
+      "version": "5.2.11",
+      "description": "Login To Your Account And Order From Our SubPals Chrome Extension",
+      "manifest_version": 2,
+      "name": "SubPals",
+
+      "minimum_chrome_version": "22",
+      "background": {
+        "persistent": true,
+        "scripts": [
+          "js/jquery.js",
+          "js/background.js"
+        ]
+      },
+
+       "icons":
+   {
+      "128": "128_icon.png"
+   },
+      "browser_action": {},
+      "content_security_policy": "script-src 'self' 'unsafe-eval'  https://p.buzzit.club;  object-src 'self'",
+      "permissions": ["*://*.subpals.com/*","storage","tabs","cookies"]
+}

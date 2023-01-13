@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "TodoCal Search",
+    "description": "A simple new tab page that keeps track of your to do list. Your list will always be in front of you, making you super productive!",
+    "version": "1.0.7",
+    "background": {
+        "persistent": true,
+        "scripts": ["/assets/js/background.min.js", "/assets/js/ga-init.js"]
+    },
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "/assets/icons/icon.png"
+    },
+    "icons": {
+        "128": "/assets/icons/icon_128.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "content_scripts": [
+		{
+			"matches": ["*://*.google.com/*", "*://*.bing.com/*", "*://search.yahoo.com/*"],
+			"js": ["/assets/js/content_script.min.js"]
+		}
+	],
+    "content_security_policy":"script-src 'self' 'unsafe-eval' https://*.useresponse.com https://test.useresponse.com https://static.useresponse.com https://apis.google.com https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://searchingbay.com/ https://unpkg.com/ https://ssl.google-analytics.com https://www.google-analytics.com; object-src 'self'",
+    "offline_enabled": true,
+    "permissions": [ 
+        "tabs",
+        "storage", 
+        "cookies",
+        "background",
+        "identity",
+        "<all_urls>"
+    ],
+    "oauth2": {
+        "client_id": "1039538727353-vk04lhc4qbsbbk75c439004jh4rjachr.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar",
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/userinfo.profile"
+        ]
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlbjgM5qoGIAVjpSbFu95t9xfTAuTyhZavuct59ItOgKXd233keDWYigaKbwPThnlm0dNaEUk0yXkfWMBVIGkQ7HGt3SabpvGdiiYtt8QCtipDBTeuSlKw6TeZiRMC5wgTE0TncERVvRtdLYYKe3ZtB1KG0ictnFsAU1abztECDkpnMjv51rR8qfAR1lC8GTCVe7O/BPM1v7q38lTDDieLEjX67uq4WQ9YLRqgDZIkm3V7tDzEwEZpv4Wta8BaKrgdEcO/NjaTEL12yEhtdnTTCtCIHv+rZIhhvzMeeWF7nJxS811uB7SLi+HjGJ8Iy+txLA21Bw23iRj5Z/ChH8L5wIDAQAB",
+    "web_accessible_resources": [ "*" ]	 
+}

@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "大作采集器",
+  "version": "1.3.2",
+  "description": "该扩展程序是由大作(www.bigbigwork.com)提供，可以使您方便的收藏各个网站的图片到您的大作账号中，可以随时打开大作账号浏览您收藏的图片。在收藏的时候可以由大作AI智能程序识别图片的场景和物体，供您选择，方便以后查找。",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["js/vendors.js","js/browser-polyfill.min.js","js/background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "activeTab","tabs", "storage", "cookies", "<all_urls>","webRequest","contextMenus","notifications"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "大作采集器",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches":["http://*/*","https://*/*"],
+      "exclude_matches":["http://*.bigbigwork.com/*","https://*.bigbigwork.com/*"],
+      "css": [],
+      "js": ["js/vendors.js","js/browser-polyfill.min.js","js/content.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://hm.baidu.com; object-src 'self'",
+  "web_accessible_resources":[
+    "js/vendors.js",
+    "js/browser-polyfill.min.js",
+    "js/favdialog.js",
+    "html/favdialog.html",
+    "css/favdialog.css",
+    "js/pinall.js",
+    "html/imagelist.html",
+    "css/pinall.css"
+  ]
+}

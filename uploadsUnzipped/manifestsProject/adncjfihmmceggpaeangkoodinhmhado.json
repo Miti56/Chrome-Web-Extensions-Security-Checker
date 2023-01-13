@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Tlice - Photo Puzzle",
+ "short_name": "Tlice",
+  "description": "Tlice is a photo puzzle game, where player can solve the photo puzzle by drag and drop the photo slices",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.tlice.com/"
+    ],
+    "launch": {
+      "web_url": "http://www.tlice.com/"
+    }
+  }
+}

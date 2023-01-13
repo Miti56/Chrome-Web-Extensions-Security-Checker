@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Youtube Guard",
+    "short_name": "youtubeguard",
+    "description": "Block distracting videos on Youtube",
+    "version": "0.1.5",
+    "icons": {
+        "128": "icon.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": [
+        "identity",
+        "tabs"
+    ],
+    "oauth2": {
+        "client_id": "673634027003-c02oqpc1k02kjj464vuh38b9197jbq0f.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/userinfo.profile",
+            "https://www.googleapis.com/auth/youtube.readonly"
+        ]
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.gstatic.com/ https://*.firebaseio.com/ https://www.googleapis.com/ https://apis.google.com/; object-src 'self'",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArt20VW1fQf++dnq44iG0+A9dL3OwO3kwL9aXuRG0cPKrP5XIcZXU9dhkvSOTDzdrEvlShr0RAVBoU2lYlbbnT6IX8X9Zm5GK3R0aZFRQcX25dIhZEzpGHI5Q4VcQc7uEUCYgKuNLgKR9e9R5K63Lk1CGV+VkkNEZ54mMz9eooosA8c1vnjvJwwFSeD3hng7Ep8wfNDq629PAnUgBSryXriU/WHN9aEn06WH2UeA3Psim2ofMe+dmZQXe7jaE8DPxa8Q56O9r04YXimM6qS6TgA3Sn66iH956fZogyx/oah13Ii+619qEJNL92yrW7jciJ0XrzfoSTmhVW/xAeJP82wIDAQAB"
+}

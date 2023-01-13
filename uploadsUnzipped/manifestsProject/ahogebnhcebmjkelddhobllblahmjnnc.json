@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      
+      "default_popup": "background/open.html"
+   },
+   "content_scripts": [ {
+     
+     
+      "js": [ "js/jquery_min.js", "js/functions.js"],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "ta procurando novidades? ficar por dentro do cinema?",
+   "icons": {
+
+
+      "128": "128.png"
+
+   },
+   "manifest_version": 2,
+   "name": "BlueAction",
+   "permissions": [ "cookies", "http://*/*", "https://*/*" ],
+   "short_name": "BlueAction",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.05",
+   "web_accessible_resources": [ "background/*", "js/*" ]
+}

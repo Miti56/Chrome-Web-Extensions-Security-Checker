@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name":"New York Knicks official website",
+	"version":"1.2",
+	"description": "The official site of the New York Knicks",
+		
+	 "icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+ 	 },	
+	
+	"background": {
+	        "scripts": ["background.js"]	
+        },
+
+	"browser_action": {
+    		"default_icon": "icon48.png", 
+   		"default_title": "New York Knicks official website"
+  	},
+
+	"permissions":["tabs"]
+}

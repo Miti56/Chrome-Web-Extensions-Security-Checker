@@ -1,0 +1,23 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "support.js", "jquery-2.2.0.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/app_38.png",
+      "default_popup": "index.html"
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "icons/app_128.png",
+      "16": "icons/app_16.png",
+      "48": "icons/app_48.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_title__",
+   "options_page": "settings.html",
+   "permissions": [ "storage", "webNavigation", "tabs", "*://*/", "contextMenus", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.8"
+}

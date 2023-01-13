@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "short_name": "SHARENTAG",
+  "name": "sharentag explore new websites",
+  "description": "Discover new and exciting websites and share them with your friends",
+  "version": "1.43",
+
+  "browser_action": {
+    "default_icon": "sharentag-icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["https://www.sharentag.com/","cookies", "tabs", "http://*/*", "https://*/*","<all_urls>" ]
+
+}

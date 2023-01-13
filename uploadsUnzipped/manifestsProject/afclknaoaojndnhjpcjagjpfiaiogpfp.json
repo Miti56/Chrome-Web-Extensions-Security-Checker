@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "assassins-creed-origins-js/assassins-creed-origins.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icn/icon-small.png",
+      "default_popup": "sigma.html"
+   },
+   "description": "__MSG_description__",
+   "default_locale": "en",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.6.15"
+}

@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Facebook Gold by Strawberry",
+  "short_name" : "Facebook Gold",
+  "version" : "1.0.0",
+  "description" : "Chrome extension for making Facebook navbar gold.",
+  "manifest_version": 2,
+  "icons": {
+    "32": "icons/gold_32.png",
+    "48": "icons/gold_48.png",
+    "128": "icons/gold_128.png",
+    "512": "icons/gold_512.png"
+  },
+  "author" : "Strawberry Party",
+  "offline_enabled": false,
+  "content_scripts" : [{
+    "matches" : [ "http://*/*", "https://*/*" ],
+    "js" : ["jquery.js", "fbgold.js"]
+  }]
+}

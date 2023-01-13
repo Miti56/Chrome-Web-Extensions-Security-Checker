@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Moria Cohen",
+  "short_name": "Moria Cohen",
+  "version": "1.1.0",
+  "manifest_version": 2,
+  "description": "Moria Cohen",
+  "icons": {
+    "16": "g16.png",
+    "48": "g48.png",
+    "128": "g128.png"
+  },
+  "permissions": [ "tabs", "storage", "activeTab", "cookies"],
+  "browser_action": {
+    "default_icon": "g48.png",
+    "default_title": "Moria Cohen",
+    "default_popup": "index.html"
+  }
+}

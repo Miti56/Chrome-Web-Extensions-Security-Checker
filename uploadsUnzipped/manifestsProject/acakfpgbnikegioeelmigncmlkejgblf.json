@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "UEC 休講",
+    "version": "0.0.1",
+    "description": "UECの休講確認を最高にするアプリケーション",
+    "app": {
+        "background": {
+            "scripts": ["./src/kyuko.js"]
+        }
+    },
+    "sandbox": {
+        "pages": ["./src/kyuko.html"]
+    },
+    "icons": {
+        "16": "./img/ueckyuko16.png",
+        "48": "./img/ueckyuko48.png",
+        "128": "./img/ueckyuko128.png"
+    },
+    "permissions": [
+        "http://kyoumu.office.uec.ac.jp/kyuukou/kyuukou.html"
+    ]
+}

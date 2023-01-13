@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "QuickLook for Google News",
+  "description": "Quickly view Google News from your browser bar",
+  "version": "0.1.1",
+  "browser_action": {
+    "default_title": "QuickLook for Google News",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "persistent": true,
+    "page": "background.html"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgfxXYGNjA6JJoiiRQT8g/lRYkkneULe8BwJQ0Ub/faCXBYYbv0/3NJLOGCDZ/h4acHL1c3h/BKAb5CzHVAmF8iV0E1C9mbyTO5OWdzacO/m43byP2zs09ZtNEO4o5I5Cy5SF09IY7yI/AznuXyCgxDf2TDRhep50qkmIuLEH0BD8vHV5j0YH66D6OqMJQ6XebAu9xteVcMLLmBkYBOI7GopLPPQ0o5ss3ylBxodFXaPx4TBMt7ufqalSm8ISFtCmIfu1DsbRmYjTxG1dJIHpR72YEFxfaHms23BM0LsN12PyEUZ4TkrrcN+XiFBwt5rdwgfUQtScEdEwsFHwqgV64wIDAQAB",
+  "permissions": [
+    "*://news.google.com/",
+    "idle",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "web_accessible_resources": [
+  ]
+}

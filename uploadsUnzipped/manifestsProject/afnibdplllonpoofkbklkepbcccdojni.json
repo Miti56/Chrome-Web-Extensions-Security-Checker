@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2
+ ,"name": "SAVO-GMAILER"
+ ,"description": "savo gmailer"
+ ,"version": "0.8"
+ ,"icons": {
+    "128": "SGM_ICON.png"
+  }
+ ,"permissions": [  ]
+ ,"app": {
+    "launch": {
+      "web_url": "http://www.savo.it/GMAILER/",
+      "urls": [ "http://www.savo.it/GMAILER/" ]
+    }
+  }
+ ,"minimum_chrome_version": "28"
+}

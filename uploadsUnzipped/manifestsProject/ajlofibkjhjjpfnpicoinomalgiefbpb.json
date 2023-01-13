@@ -1,0 +1,11 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "findAndColorUp",
+  "version": "1.2.1",
+  "description": "...",
+  "icons": {
+    "128":"test.png"
+  }
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Retro Revolution Crossroads",
+	"description": "Are you a top notch pilot? Think you can make it to the end? What is waiting for you at the enemy home world?",
+	"version": "1.9.0",
+	"manifest_version": 2,
+	"homepage_url": "https://i2tmlabs.com/index.php?go=arcade_crossroads",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"storage",
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

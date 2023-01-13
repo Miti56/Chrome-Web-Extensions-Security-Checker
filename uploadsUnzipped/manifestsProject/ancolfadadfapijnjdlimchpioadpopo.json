@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+  "name": "AzLyrics - Clean View & Dark Mode",
+  "version" : "0.001",
+  "description": "Get a Cleaner, Wider and Darker AzLyrics Experience!",
+  
+  "permissions": ["activeTab"],
+
+	"content_scripts" : [
+		{
+			"matches" : ["https://www.azlyrics.com/*"],
+                  "js" : ["content.js"]
+        }
+    ],
+    "background" : {
+                  "scripts" : ["background.js"]
+    },
+    "browser_action" : {
+      "default_icon": {
+        "16": "images/az16.png",
+        "32": "images/az32.png",
+        "48": "images/az48.png",
+        "128": "images/az128.png"
+      }
+
+    },
+      "icons": {
+        "16": "images/az16.png",
+        "32": "images/az32.png",
+        "48": "images/az48.png",
+        "128": "images/az128.png"
+      }
+}

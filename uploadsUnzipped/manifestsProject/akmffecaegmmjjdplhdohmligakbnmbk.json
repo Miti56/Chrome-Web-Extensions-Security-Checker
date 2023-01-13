@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "NZHerald Fixer",
+    "version": "1.1.0",
+    "description": "Overrides NZHerald's \"Premium\" paywall allowing you to view the entire site",
+
+    "permissions": [
+          "webRequest",
+          "webRequestBlocking",
+          "*://*.nzherald.co.nz/*"
+    ],
+
+    "content_scripts": [{
+      "css": ["resources/css/style.css"],
+      "matches": ["https://www.nzherald.co.nz/*"]
+    }],
+
+    "background": {
+        "scripts": ["resources/js/jquery-3.4.1.min.js", "resources/js/background.js"]
+    },
+
+    "icons": { "128": "resources/img/icon-128.png" }
+  }

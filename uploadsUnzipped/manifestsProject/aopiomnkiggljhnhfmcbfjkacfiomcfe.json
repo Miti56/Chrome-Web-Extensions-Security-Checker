@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Alexa Traffic Rank Checker",
+  "description": "Alexa traffic rank checker tool helps to find the rank in country and global ranking for the website.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://smallseotools.inramstechnology.com/alexa-rank-checker"
+    ],
+    "launch": {
+      "web_url": "http://smallseotools.inramstechnology.com/alexa-rank-checker"
+    }
+  }
+}

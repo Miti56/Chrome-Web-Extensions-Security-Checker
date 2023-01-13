@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "background": {
+    "scripts": [ "js/jquery-2.2.0.min.js", "js/injector.min.js" ]
+  },
+  "browser_action": {
+    "default_icon": "images/icon128.png",
+    "default_title": "Save to Cloud",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": [ "css/injector.css" ],
+      "js": [ "js/jquery-2.2.0.min.js", "js/content.min.js" ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://apis.google.com https://apis.live.net https://api.onedrive.com https://login.live.com/ https://api.dropboxapi.com https://www.imgtocloud.com; object-src 'self'",
+  "description": "Save instantly any web image, PDF or any local document to your favorite cloud: Amazon S3, Google Drive, OneDrive or DropBox.",
+  "icons": {"16": "images/icon16.png","48": "images/icon48.png","128": "images/icon128.png"},
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq6fxX8tgplJxix8KtnFS1yhxIrPhoarih0CVVQflYzZ/gZZwvc5H0hZqy859HNaKKK1lLNjHTVDFW2AwbrSqNmqQ3+w8p5Y8OhbC8qr1dI34UFME1KW5y1OQ9zJ61K2MhYVaoo3n396K5B/MH3nAM2Aai94FM728hP6dGX7tW4yaJEImpVx50vaPW7LG05c31Ivzy8ge2FvDlmRiDrScWci+2faFKx0RFl6KmsLkCbkKUKlJGA7Jsfotiynys98qJKpCYiaur7CkKrFA9K0zj3MiOO52Ff6JO5kXEX/r+fFOUIskas0stPUgdK87mF+uf6z+OI9V05COw7ksUwQNNQIDAQAB",
+  "manifest_version": 2,
+  "name": "imgToCloud",
+  "short_name": "imgToCloud",
+  "oauth2": {
+    "client_id": "987062924678-u7lncdoidkommkkgme8rnmf9p4a2f14h.apps.googleusercontent.com",
+    "scopes": [ "https://www.googleapis.com/auth/drive", "profile", "email" ]
+  },
+  "options_page": "html/options.html",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "<all_urls>",
+    "identity"
+  ],
+  "version": "0.9.6.5",
+  "version_name": "0.9.6.5 Beta",
+  "web_accessible_resources": [
+    "html/dialog.html",
+    "html/options.html",
+    "html/update.html",
+    "images/icon128.png"
+  ]
+}

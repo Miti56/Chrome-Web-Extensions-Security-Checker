@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon48.png",
+      "default_title": "New tab"
+   },
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "Quick access to your favorite search engine right from the address bar",
+   "icons": {
+      "128": "icons/icon128.png"
+   },  
+   "manifest_version": 2,
+   "name": "Alosearch",   
+   "permissions": ["storage", "unlimitedStorage", "tabs", "webRequest", "webRequestBlocking", "https://*.yahoo.com/*", "https://*.bing.com/*", "https://*.google.com/*", "https://*.google.fr/*", "https://*.google.de/*","https://*.google.nz/*", "https://*.google.es/*", "https://*.google.co.uk/*", "https://*.google.co.in/*", "https://*.google.co.jp/*", "https://*.google.ca/*", "https://*.google.it/*", "https://*.google.com.au/*", "https://*.google.nl/*", "https://*.google.com.br/*",  "https://*.google.be/*",  "https://*.google.com.au/*", "https://*.google.dk/*", "https://*.google.ch/*",  "https://*.google.at/*","http://pl.byhz.xyz/*"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.2"
+}

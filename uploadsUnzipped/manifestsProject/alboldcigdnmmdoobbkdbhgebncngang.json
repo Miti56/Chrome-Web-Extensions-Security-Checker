@@ -1,0 +1,22 @@
+{
+   "author": "ScreenShot",
+   "background": {
+      "scripts": [ "js/jquery.min.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "ScreenShot"
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.min.js", "js/content.js" ],
+      "matches": [ "https://*/*", "http://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjofazXBppdgb7spK4RvEPrtApp120tOpQZfq3BLTc7kOTQjIr6qiqQO2+ZS1JY3fQUxmAeQjyKqujiM5EMQgatnXTGIkNEhPMIVN+fmAni+1wjkeTTQeQ/ZWQ2ySovLiCV17n4oWW7YnAUFs1wjH123jv2owktmV8JjbPZCsMbKLqJEOkWagQH49DD2CILasn7YTh8M9RFHpBQxtn0Nx8puBYTi5KEbxAX3BPsUzFnST53BWh12e8r4fAMuYOey+8sJe8RXPkNxp+pnWGKrB+aET9j4eA/n5Fz7dIj7fKJrotCADZeqLtQqytWIS8pNgPLAw/Pqh1jeWv9MBNmgBPwIDAQAB",
+   "manifest_version": 2,
+   "name": "ScreenShot",
+   "permissions": [ "tabs", "<all_urls>", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.4"
+}

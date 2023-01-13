@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Worderan",
+  "description": "This extension allows you to export orders data from shopee to Worderan",
+  "version": "2.3",
+
+  "icons": {  "16": "img/logo.png",
+              "48": "img/logo.png",
+              "128": "img/logo.png" },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "img/logo.png",
+      "38": "img/logo.png"
+    }
+  },
+
+  "background": {
+    "scripts": ["js/vendor/jquery.min.js","js/eventPage.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["css/main.css"],
+      "js": ["js/vendor/jquery.min.js", "js/contentScript.js", "js/main.js"]
+    }
+  ],
+
+  "permissions": [
+    "tabs","<all_urls>"
+    ]
+}

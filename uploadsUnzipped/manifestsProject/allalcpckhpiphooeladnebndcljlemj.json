@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "No Autoplay, Mirror Group!",
+  "version": "0.0.4",
+  "manifest_version": 2,
+  "description": "Stop videos from autoplaying on Mirror group websites. Walesonline, Mirror, Bristol Post, Liverpool Echo.",
+  "homepage_url": "http://twitter.com/hintofsarcasm",
+  "background": {
+    "scripts": [
+      "jquery-3.2.1.slim.min.js", "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Stop autoplaying"
+  },
+  "permissions": [
+    "https://www.walesonline.co.uk/*",
+    "https://www.mirror.co.uk/*",
+    "https://www.bristolpost.co.uk/*",
+    "https://www.liverpoolecho.co.uk/*",
+    "tabs"
+  ]
+}

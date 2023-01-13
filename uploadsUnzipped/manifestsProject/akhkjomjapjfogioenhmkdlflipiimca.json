@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+  "manifest_version": 2,
+  "name": "Overwatch Mercy",
+  "version": "1.1",  
+  "description": "A theme for Mercy, a character from the game Overwatch",
+  "short_name": "OWMercy",  
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+  
+  "theme": {
+    "images" : {
+      "theme_frame":"images\/background.png",      
+      "theme_toolbar":"images\/theme_toolbar.png",
+      "theme_ntp_background":"images\/background2.png",
+      "theme_ntp_attribution" : "images\/attribution.png",
+	  "theme_tab_background":"images\/theme_tab_background.png"
+    },
+    "colors" : {
+      "frame" : [132,159,240],
+      "toolbar" : [108, 111, 125],
+      "ntp_text" : [255,190,0],
+	  "ntp_background":[132,159,240],
+      "ntp_link" : [255,190,0],
+      "ntp_section" : [108, 111, 125,100],
+      "button_background" : [132,159,240,35],
+	  "tab_text":[255,190,0],
+	  "tab_background_text":[35, 38, 40,35],
+	  "bookmark_text":[255,190,0]  
+	  
+    },
+    "tints" : {
+      "buttons" : [0.11,0.75,0.6]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "top left",
+	  "ntp_background_repeat":"no-repeat"
+    }
+  }
+  
+  
+  
+}

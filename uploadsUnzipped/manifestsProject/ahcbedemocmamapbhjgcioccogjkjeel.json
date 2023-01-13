@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "betterMovies Home",
+  "description": "betterMovies Home is a new Chrome extension for a quick movies,trailers and actress click-and-visit experience",
+  "version": "1.0.1",
+  "short_name": "betterMovies",
+  "icons": {  "128": "imgs/icon128.png"},
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": [ "/js/*"],
+  "permissions": ["http://*/","tabs","storage","cookies","topSites","contextMenus"],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "background": {
+   "scripts": ["/js/background.js"]
+  },
+  "browser_action": {
+  "default_popup": "about/index.html"
+},
+  "externally_connectable": {
+	  "matches": ["*://*.bettersearchtools.com/*"]
+  },
+  "homepage_url":"http://www.bettersearchtools.com"
+}
+
+

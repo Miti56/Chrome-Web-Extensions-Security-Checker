@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "version": "1.0.4",
+    "manifest_version": 2,
+    "description": "iReadtime helps you to estimates the article reading time",
+    "default_locale": "en",
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "js/jquery/jquery.min.js",
+            "js/utils/utils.js",
+            "src/bg/background.js"
+        ]
+    },
+    "name": "iReadtime - Reading Time Estimator",
+    "browser_action": {
+        "default_icon": "icons/icon19.png",
+        "default_title": "iReadtime - Click to estimate reading time"
+    },
+    "permissions": [
+        "idle",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "omnibox": {
+        "keyword": "iReadtime, Reading Time, Content Reading Time Estimator, Glance, Reading time calculator"
+    },
+    "content_scripts": [{
+        "matches": [
+            "*://*/*"
+        ],
+        "js": [
+            "js/jquery/jquery.min.js", "js/utils/utils.js", "js/utils/Readability.js", "src/inject/js/readtime.js"
+        ]
+    }],
+    "web_accessible_resources": ["src/inject/html/readtime.html"],
+    "icons": {
+        "16": "icons/icon16.png",
+        "19": "icons/icon19.png",
+        "64": "icons/icon64.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    }
+}

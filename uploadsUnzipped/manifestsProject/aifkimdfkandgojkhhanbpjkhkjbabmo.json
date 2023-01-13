@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+    "default_title": "Planets Quiz"
+  },
+  "icons": {
+    "128": "icons/128.png"
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "cookies",
+    "storage"
+  ],
+  "version": "3.5.2",
+  "name": "Planets Quiz",
+  "background": {
+    "page": "html/bg.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

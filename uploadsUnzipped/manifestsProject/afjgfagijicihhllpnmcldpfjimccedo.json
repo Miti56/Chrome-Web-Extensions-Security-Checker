@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Cash4Causes - by BrightSearch.org",
+    "description": "Never Miss A Donation Opportunity Again With Cash4Causes!",
+
+    "version": "1.8",
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": ["myscript.js", "ga-config.js", "ga.js"],
+        "all_frames": false,
+        "run_at": "document_start"
+    }],
+    "icons": { "16" : "images/16.png",
+            "48" : "images/48.png",
+            "128" : "images/128.png"},
+
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    
+    
+ 
+    "permissions": [
+    "tabs",
+    "webRequest",
+    "http://*/",
+    "https://*/" 
+  ]
+}

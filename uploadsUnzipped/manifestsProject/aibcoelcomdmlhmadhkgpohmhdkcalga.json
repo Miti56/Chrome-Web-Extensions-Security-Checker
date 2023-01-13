@@ -1,0 +1,20 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "QAvMentor",
+  "version": "0.1.8",
+  "description": "Virtual mentor (Chrome) plugin for social Q&A sites, e.g. Stack Overflow",
+  "browser_action": {
+	"default_popup": "index.html"
+   },
+  "content_scripts": [
+    {
+      "matches": ["https://stackoverflow.com/questions/ask*"],
+      "css": ["/static/css/main.css"],
+      "js": ["/static/js/main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

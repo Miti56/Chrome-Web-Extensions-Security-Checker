@@ -1,0 +1,48 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.0",
+  "name": "Green Day",
+  "theme": {
+      "images" : {
+      "theme_frame": "images/theme_frame.png",
+      "theme_frame_inactive": "images/theme_frame_inactive.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_ntp_attribution": "images/theme_ntp_attribution.png"
+    },
+    "colors" : {
+      "frame" : [57, 156, 24],
+      "frame_inactive" : [151, 235, 122],
+      "frame_incognito" : [35, 94, 15],
+      "frame_incognito_inactive" : [88, 145, 72],
+      "toolbar" : [0, 0, 0],
+      "tab_text" : [255, 255, 255],
+      "tab_background_text" : [57, 156, 24],
+      "bookmark_text" : [57, 156, 24],
+      "ntp_background" : [0, 0, 0],
+      "ntp_text" : [57, 156, 24],
+      "ntp_link" : [255, 255, 255],
+      "ntp_link_underline" : [57, 156, 24],
+      "ntp_header" : [186, 186, 186],
+      "ntp_section" : [57, 156, 24],
+      "ntp_section_text" : [0, 0, 0],
+      "ntp_section_link" : [255, 255, 255],
+      "ntp_section_link_underline" : [0, 0, 0],
+      "control_background" : [255, 255, 255],
+      "button_background" : [0, 0, 0]
+    },
+    "tints" : {
+      "buttons" : [1.00, 1.00, 1.00],
+      "frame" : [-1.00, -1.00, -1.00],
+      "frame_inactive" : [-1.00, -1.00, 0.75],
+      "frame_incognito" : [-1.00, 0.20, 0.35],
+      "frame_incognito_inactive" : [-1.00, 0.30, 0.60],
+      "background_tab" : [-1.00, 0.50, 0.75]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "center top",
+      "ntp_background_repeat" : "no-repeat",
+      "ntp_logo_alternate" : 0
+    }
+  }
+}

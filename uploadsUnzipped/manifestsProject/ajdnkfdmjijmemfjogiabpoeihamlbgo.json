@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Enhanced Github",
+  "description": "Enhances Github PR page with quick copy buttons - see https://github.com/mhujer/enhanced-github for more information",
+  "version": "1.0.3",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": [
+        "jquery-2.1.1.min.js",
+        "enhanced-github.js"
+      ],
+      "css": [
+        "enhanced-github.css"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "clipboardWrite",
+    "*://github.com/*",
+    "tabs",
+    "webNavigation"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "name": "GW2 World Boss Timers",
+  "description": "This will display the description of the extention/project",
+  "version": "3.0",
+  "manifest_version": 2,
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+
+}

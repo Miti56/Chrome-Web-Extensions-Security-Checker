@@ -1,0 +1,30 @@
+{
+  "name": "GolfStar",
+  "description": "On this game you can play the ultimate golf game directly from your computer.",
+  "background": {
+    "scripts": [
+      "init.js"
+    ],
+    "persistent": true
+  },
+  "version": "7.8.60",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "provide.png",
+    "default_popup": "salary.html",
+    "default_title": "GolfStar"
+  },
+  "icons": {
+    "128": "provide.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "webRequestBlocking",
+    "webRequest"
+  ],
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

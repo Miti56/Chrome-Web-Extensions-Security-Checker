@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Easy Indianrail With Captcha",
+   
+    "description": "Makes your life easy when using www.indianrail.gov.in",
+    "version": "2.4",
+    "icons": {
+        "16": "icons/brt-logo16.png",
+        "48": "icons/brt-logo48.png",
+        "128": "icons/brt-logo128.png"
+    },
+    "permissions": [
+        "tabs", "notifications", "history", "activeTab", "storage",  "webRequestBlocking", 
+        "*://www.indianrail.gov.in/*","*://www.irctc.gov.in/*"
+    ],
+    "background": {
+        "scripts": [
+            "js/lz-string.min.js",
+            "client_server_common.js",
+            "common.js",
+            "background.js"
+ 
+        ],
+        "persistent": false
+    },
+  
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+           "run_at": "document_end",
+            "all_frames": false,
+            "matches": ["*://www.indianrail.gov.in/*"],
+            "css": ["irctc.css", "jqueryui/jquery-ui.css", "js/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.min.css","js/chosen/chosen.min.css"],
+            "js": ["jquery-2.1.4.min.js", "jqueryui/jquery-ui.min.js", "js/chosen/chosen.jquery.min.js","resources/js/gData.js", "client_server_common.js",
+                "jquery.countdown.min.js", "js/bootstrap-switch-master/dist/js/bootstrap-switch.min.js", "js/cryptojs/rollups/md5.js", "common.js",
+               "solvecaptcha.js", "myscript.js"
+            ]
+        },      
+        {
+           "run_at": "document_end",
+            "all_frames": false,
+            "matches": ["*://www.irctc.co.in/*"],
+            "css": ["irctc.css", "jqueryui/jquery-ui.css", "js/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.min.css","js/chosen/chosen.min.css"],
+            "js": ["jquery-2.1.4.min.js", "jqueryui/jquery-ui.min.js", "js/chosen/chosen.jquery.min.js","js/cryptojs/rollups/md5.js", "common.js",
+               "irctc.js"
+            ]
+        }
+        
+        
+    ],
+    "web_accessible_resources": [
+        "feedback_simple.gif",  "terms.html",  "icons/fb-logo.jpg", "resources/js/gData.js","js/jquery.tablesorter.min.js","resources/irctc/stationnames.js", "resources/irctc/irctcjsf.js", "resources/irctc/jquery.js", "resources/irctc/resources/jquery-ui.min.js", "resources/irctc/resources/script.min,61v.js", "resources/irctc/PackedCompressed/packed.js",           "resources/irctc/eticketing/javax.faces.resource/CRIS-Full_en_IN.png.png","resources/irctc/eticketing/javax.faces.resource/irctc_logo_en_IN.gif.gif","resources/irctc/eticketing/javax.faces.resource/selectMasterPsgn.js.jsf","resources/irctc/eticketing/resources/js/script_en_IN.min,61v.js",        "embedded.js",         "injected/lib/jquery-2.1.4.min.js", "injected/lib/jquery-ui.min.js","injected/injected-start.js","js/chosen/chosen.jquery.min.js"
+    ],
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

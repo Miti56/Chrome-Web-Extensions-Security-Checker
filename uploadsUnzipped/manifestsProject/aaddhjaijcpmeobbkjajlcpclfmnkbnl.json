@@ -1,0 +1,126 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Corona Blocker",
+    "version": "1.0.6",
+    "description": "Take a break from Coronavirus news, block ALL mentions of Coronavirus from top news websites and social networks.",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "*://*.facebook.com/*",
+        "*://*.twitter.com/*",
+        "*://*.worldometers.info/*",
+        "*://*.statista.com/*",
+        "*://*.cnn.com/*",
+        "*://*.cnbc.com/*",
+        "*://*.bbc.com/*",
+        "*://news.yahoo.com/*",
+        "*://news.google.com/*",
+        "*://*.huffpost.com/*",
+        "*://*.nytimes.com/*",
+        "*://*.foxnews.com/*",
+        "*://*.nbcnews.com/*",
+        "*://*.washingtonpost.com/*",
+        "*://*.theguardian.com/*",
+        "*://*.wsj.com/*",
+        "*://*.go.com/*",
+        "*://*.latimes.com/*",
+        "*://*.almasryalyoum.com/*",
+        "*://*.elwatannews.com/*",
+        "*://*.coronameter.co/*",
+        "https://google.com/covid19-map",
+        "*://ensonhaber.com/*",
+        "*://*.who.int/*",
+        "*://*.google.com/*",
+        "https://covid19.saglik.gov.tr/*",
+        "*://*.aa.com.tr/*",   
+        "*://*.rt.com/*",   
+        "*://*.reddit.com/*",   
+        "*://*.france24.com/*",  
+        "*://*.usatoday.com/*",
+        "https://flic.kr/*",
+        "https://giphy.com/*",
+        "*://*.aljazeera.com/*",
+        "*://*.aljazeera.net/*",
+        "https://www.youtube.com/*"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "jquery-3.4.1.min.js",
+                "contentScript.js"
+            ],
+            "run_at": "document_start",
+            "matches": [
+                "*://*.facebook.com/*",
+                "*://*.twitter.com/*",
+                "*://*.worldometers.info/*",
+                "*://*.statista.com/*",
+                "*://*.cnn.com/*",
+                "*://*.cnbc.com/*",
+                "*://*.bbc.com/*",
+                "*://news.yahoo.com/*",
+                "*://news.google.com/*",
+                "*://*.huffpost.com/*",
+                "*://*.nytimes.com/*",
+                "*://*.foxnews.com/*",
+                "*://*.nbcnews.com/*",
+                "*://*.washingtonpost.com/*",
+                "*://*.theguardian.com/*",
+                "*://*.wsj.com/*",
+                "*://*.go.com/*",
+                "*://*.latimes.com/*",
+                "*://*.almasryalyoum.com/*",
+                "*://*.elwatannews.com/*",
+                "*://*.coronameter.co/*",
+                "https://google.com/covid19-map",
+                "https://covid19.saglik.gov.tr/*",
+                "*://*.aa.com.tr/*",
+                "*://*.google.com/*",
+                "*://ensonhaber.com/*",
+                "*://*.who.int/*",
+                "*://*.rt.com/*",
+                "*://*.reddit.com/*",   
+                "*://*.france24.com/*",
+                "*://*.aljazeera.com/*",
+                "*://*.aljazeera.net/*",
+                "*://*.usatoday.com/*"
+
+            ],
+            "exclude_matches":[
+                "https://www.reddit.com/r/firefox/comments/fsvdgw/corona_blocker_take_a_break_from_coronavirus_news/",
+                "https://www.reddit.com/r/chrome_extensions/comments/ftal1v/corona_blocker_take_a_break_from_coronavirus_news/",
+                "https://www.reddit.com/r/chrome_extensions/",
+                "https://www.reddit.com/r/firefox/"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "32": "images/icon32.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+      },
+    "manifest_version": 2,
+    "web_accessible_resources": [ "cat_pics/*.jpg", "cat_pics/*.gif", "cat_pics/*.webp" ]
+
+}

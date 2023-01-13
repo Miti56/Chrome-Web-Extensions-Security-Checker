@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "SearchLock Germany",
+    "version": "1.0.4",
+    "manifest_version": 2,
+    "description": "__MSG_appDesc__",
+    "default_locale" : "en",
+    "homepage_url": "https://www.searchlock.com",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "background": {
+        "scripts": ["src/bg/background.js"],
+        "persistent": true
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/",
+        "storage",
+        "privacy",
+        "management"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["src/inject/protect.js"]
+    },
+    {
+        "matches": ["http://*.searchlock.com/*", "https://*.searchlock.com/*"],
+        "js": ["src/inject/attribution.js", "src/inject/protect.js"],
+        "all_frames": true
+    }],
+    "web_accessible_resources": ["src/inject/protect.js", "img/*"],
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "name": "SearchLock",
+            "keyword": "searchlock.com",
+            "favicon_url": "https://www.searchlock.com/assets/images/favicon.png",
+            "search_url": "https://results.searchlock.com/search/?q={searchTerms}&sr=def-search",
+            "suggest_url": "https://www.searchlock.com/search/suggest?q={searchTerms}",
+            "image_url": "https://results.searchlock.com/search/?q={searchTerms}&sr=def-search&tbm=isch",
+            "encoding": "UTF-8",
+            "is_default": true
+        }
+    }
+}

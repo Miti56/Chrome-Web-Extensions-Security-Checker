@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "CSS Analysis",
+ "description": "View the stats behind the CSS",
+ "icons": {
+     "16": "icon-16.png",
+     "48": "icon-48.png",
+     "128": "icon-128.png" },
+ "permissions": [
+     "tabs",
+     "http://*/*",
+     "https://*/*"
+ ],
+ "background": {"scripts": ["js/background.js"]},
+  "commands": {
+      "cssAnalysis": {
+        "suggested_key": {
+          "default": "Alt+Shift+C",
+          "mac": "Command+Shift+C"
+        },
+        "description": "CSS Analysis"
+    }
+  },
+ "version": "0.1",
+ "manifest_version": 2
+}

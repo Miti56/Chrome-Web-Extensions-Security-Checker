@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Oxylane's Search Engines",
+    "version": "1.2",
+    "description": "Easy access to Oxylane Search & Bible Dring, and others!",
+    "permissions": [
+	"tabs",
+	"contextMenus" 
+	],
+    "options_page": "options.html",
+    "background": {
+        "scripts": ["background.js"]
+        },
+    "browser_action": {
+        "default_title": "Oxylane's Search Engines",
+	"default_icon" : "default-icon-16.png",
+        "default_popup": "popup.html"
+    	},
+    "icons" : {
+	"16" : "default-icon-16.png",
+	"32" : "default-icon-32.png",
+	"48" : "default-icon-48.png",
+	"64" : "default-icon-64.png",
+	"128" : "default-icon-128.png"
+	}
+}

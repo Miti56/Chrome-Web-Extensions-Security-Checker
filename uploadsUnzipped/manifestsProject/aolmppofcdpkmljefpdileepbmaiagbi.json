@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Hide-MOOC-Progress",
+    "description": "This is an extension that will allow you to hide the progress bar on popular MOOCs: Udacity and Edx",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "MOOC Progress Hider",
+        "default_popup": "popup.html"
+    },
+
+    "background":{
+        "scripts":["background.js"],
+        "persistent":false
+    },
+    "content_scripts":[
+    {
+        "matches": ["https://www.udacity.com/course/*","https://courses.edx.org/courses/*"],
+        "js": ["content.js"]
+    }
+    ],
+        "permissions": ["tabs", "https://www.udacity.com/course/*","https://courses.edx.org/courses/*" ]
+}

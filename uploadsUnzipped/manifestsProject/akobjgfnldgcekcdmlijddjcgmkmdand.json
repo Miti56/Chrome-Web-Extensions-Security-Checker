@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Wikiburg - ReachOut",
+    "description": "Lobby for your causes in tweets and not dollars. Find your elected rep and publicly share the news you care about right now.",
+    "version": "0.1.6",
+    "browser_action": {
+        "default_icon": "logo-128x128v2.png",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "logo-16x16v2.png",
+        "48": "logo-48x48v2.png",
+        "128": "logo-128x128v2.png"
+    },
+    "permissions": [
+        "cookies",
+        "*://*.wikiburg.com/",
+        "tabs"
+    ],
+    "web_accessible_resources": [
+        "data.js",
+        "assets/*"
+    ],
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; img-src *; object-src 'self'"
+}

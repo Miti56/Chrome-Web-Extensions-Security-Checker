@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "console.beep",
+  "description": "Add beep() function to console. So that we can console.beep()",
+  "version": "1.1",
+  "web_accessible_resources": ["beep.js"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_end",
+      "js": ["index.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "iRecord Dragonflies",
+  "short_name": "Dragonflies",
+  "description": "Helps to identify UK's dragonflies and submit your sightings to support their study and conservation",
+  "version": "1.1.1",
+  "author": "Karolis Kazlauskis",
+
+  "app": {
+    "urls": [
+      "http://irecord.org.uk/dragonflies"
+    ],
+    "launch": {
+      "web_url": "http://irecord.org.uk/dragonflies"
+    }
+  },
+
+  "icons": {
+    "48": "images/Icon-48.png",
+    "72": "images/Icon-72.png",
+    "96": "images/Icon-96.png",
+    "128": "images/Icon-128.png",
+    "144": "images/Icon-72@2x.png",
+    "192": "images/Icon-192.png"
+  },
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "offline_enabled": true,
+  "permissions": [
+    "geolocation",
+    "unlimitedStorage"
+  ]
+}

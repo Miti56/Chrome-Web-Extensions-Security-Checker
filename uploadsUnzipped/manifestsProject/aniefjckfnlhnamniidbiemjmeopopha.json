@@ -1,0 +1,22 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "100order",
+"description": "100order ซื้อง่าย ขายสนุก - รวบรวมทุกไอเดียเจ๋ง เลือกช็อปได้ในราคา 100฿",
+"version": "1.0",
+"manifest_version": 2,
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.100order.com/"
+],
+"launch": {
+"web_url": "http://www.100order.com/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

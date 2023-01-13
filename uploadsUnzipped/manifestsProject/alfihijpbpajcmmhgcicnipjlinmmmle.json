@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "theHunter:Classic helper",
+  "version": "1.3",
+  "description": "Show in-game friends, discount items, ammo and trophies",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+  "page_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html",
+    "default_title": "theHunter:Classic helper"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.thehunter.com/*"],
+      "js": [
+        "jquery-3.4.1.min.js",
+        "contentPage.js",
+        "friends/friendsContentPage.js",
+        "shop/salesContentPage.js",
+        "ammo/ammoContentPage.js",
+        "owned/ownedContentPage.js",
+        "message/messageContentPage.js",
+        "scoresheet/scoreContentPage.js",
+        "lodge/lodgeContentPage.js"
+      ],
+      "css": [
+        "contentPage.css",
+        "friends/friendsPage.css",
+        "shop/salesPage.css",
+        "ammo/ammoPage.css",
+        "message/messagePage.css",
+        "scoresheet/scorePage.css",
+        "lodge/lodgePage.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "tts",
+    "storage",
+    "https://www.thehunter.com/*"
+  ]
+}

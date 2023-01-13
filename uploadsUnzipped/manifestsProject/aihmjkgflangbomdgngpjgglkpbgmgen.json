@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "name": "Ücretsiz izle",
+  "version": "1.3",
+  "manifest_version": 2,
+  "description": "The Ücretsiz izle! New extension",
+  "icons": {
+    "19": "images/icon_active19.png",
+    "48": "images/icon_logo48.png",
+    "128": "images/icon_logo128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon_active19.png",
+      "38": "images/icon_active38.png"
+    },
+    "default_title": "Ücretsiz İzle!",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "Background.js"
+	  ],
+    "persistent": true
+  },
+  "permissions":[
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "background",
+        "storage",
+		"*://*/*",
+        "tabs",
+		"cookies"
+  ],
+    "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "e_inc.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "images/icon_logo48.png"
+  ],
+  "options_page": "options.html"
+}

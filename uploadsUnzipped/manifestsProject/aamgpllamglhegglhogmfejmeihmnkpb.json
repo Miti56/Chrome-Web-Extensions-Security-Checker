@@ -1,0 +1,121 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "YOYBUY Taobao/1688 Shopping Assistant",
+	"version": "1.0.8",
+	"manifest_version": 2,
+	"description": "YOYBUY Taobao Extension help you to add items from Taobao.com,Tmall.com and 1688.com to taobao agent:YOYBUY.com",
+	"icons": { "128": "logo.png" },
+	"background": {
+	    "scripts": [
+	    	"lib/jquery/jquery.min.js",
+	    	"background.js"
+	    ]
+	  },
+	"permissions": [
+		"tabs",
+		"cookies",
+		"webRequest",
+		"*://*.yoybuy.com/",
+		"*://*.taobao.com/", 
+		"*://*.tmall.com/",
+		"*://*.1688.com/"
+	],
+	"browser_action": {
+		"default_title": "YOYBUY",
+		"default_icon": "logo.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://s.taobao.com/search?*"
+			],
+			"js": [
+				"lib/jquery/jquery.min.js", 
+				"lib/jquery-cookie/jquery.cookie.min.js", 
+				"js/yoybuy.js",
+				"js/taobao-search.js"
+			]
+		},
+		{
+			"matches": [
+				"*://list.tmall.com/search_product.htm?*"
+			],
+			"js": [
+				"lib/jquery/jquery.min.js", 
+				"lib/jquery-cookie/jquery.cookie.min.js", 
+				"js/yoybuy.js",
+				"js/tmall-search.js"
+			]
+		},
+		{
+			"matches": [
+				"*://s.1688.com/selloffer/offer_search.htm?*"
+			],
+			"js": [
+				"lib/jquery/jquery.min.js", 
+				"lib/jquery-cookie/jquery.cookie.min.js", 
+				"js/yoybuy.js",
+				"js/1688-search.js"
+			]
+		},
+		{
+			"matches": [
+				"*://item.taobao.com/item.htm?*"
+			],
+			"css": [
+				"iconfont/iconfont.css",
+				"css/taobao-item.css",
+				"lib/alertify/alertify.css",
+				"lib/alertify/default.css"
+			],
+			"js": [
+				"lib/jquery/jquery.min.js", 
+				"lib/jquery-cookie/jquery.cookie.min.js", 
+				"lib/alertify/alertify.min.js",
+				"js/yoybuy.js",
+				"js/dialog.js",
+				"js/taobao-item.js"
+			]
+		},
+		{
+			"matches": [
+				"*://detail.tmall.com/item.htm?*"
+			],
+			"css": [
+				"iconfont/iconfont.css",
+				"css/taobao-item.css",
+				"lib/alertify/alertify.css",
+				"lib/alertify/default.css"
+			],
+			"js": [
+				"lib/jquery/jquery.min.js", 
+				"lib/jquery-cookie/jquery.cookie.min.js", 
+				"lib/alertify/alertify.min.js",
+				"js/yoybuy.js",
+				"js/dialog.js",
+				"js/tmall-item.js"
+			]
+		},
+		{
+			"matches": [
+				"*://detail.1688.com/offer/*"
+			],
+			"css": [
+				"iconfont/iconfont.css",
+				"css/taobao-item.css",
+				"lib/alertify/alertify.css",
+				"lib/alertify/default.css"
+			],
+			"js": [
+				"lib/jquery/jquery.min.js", 
+				"lib/jquery-cookie/jquery.cookie.min.js", 
+				"lib/alertify/alertify.min.js",
+				"js/yoybuy.js",
+				"js/dialog.js",
+				"js/1688-item.js"
+			]
+		}
+	]
+}

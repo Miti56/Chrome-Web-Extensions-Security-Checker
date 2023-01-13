@@ -1,0 +1,28 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name" : "MultiPaste",
+  "version" : "0.5",
+  "description" : "Pastes content separated by tab or enter into multiple input text fields",
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "page_action" :
+  {
+    "default_icon" : "sandwich-19.png",
+    "default_title" : "There's a 'sandwiach' in this page!"
+  },
+  "content_scripts" : [
+    {
+	  "matches": [ "http://*/*", "https://*/*", "file://*/*" ],
+      "js" : ["contentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "icons" : {
+    "48" : "sandwich-48.png",
+    "128" : "sandwich-128.png"
+  },
+  "permissions": [ "tabs", "http://bypass.rd.to/" ],
+  "manifest_version": 2
+}

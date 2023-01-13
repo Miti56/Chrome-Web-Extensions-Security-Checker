@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Purple Click-To-Call",
+  "version": "0.9.6",
+
+  "description": "Find and highlights phone numbers to automagically call with Purple's P3",
+  "icons": { "48": "Click-to-call_logo-48x48.png"},
+
+
+
+  "content_scripts": [{
+      "matches": ["http://*/*"],
+      "js": ["purpleclicktocall.js"]
+    }
+  ],
+  "minimum_chrome_version": "4.0"
+}

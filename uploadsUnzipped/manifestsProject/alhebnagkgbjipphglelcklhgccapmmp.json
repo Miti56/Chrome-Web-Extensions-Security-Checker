@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "vendor/jquery.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/cam.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "MPGO Screen Recorder"
+   },
+   "content_scripts": [ {
+      "js": [ "vendor/jquery.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://raw.githubusercontent.com https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "pt_BR",
+   "description": "__MSG_extDescription__",
+   "icons": {
+      "19": "icons/cam.png",
+      "48": "icons/cam.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "permissions": [ "tabs", "tabCapture", "activeTab", "desktopCapture", "storage", "unlimitedStorage", "cookies", "http://*/*", "https://*/*", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.4"
+}

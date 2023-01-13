@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Super Mario Run",
+  "description": "Candy Crush Saga, Clash of Clans, Clash Royale, Gta V, Minecraft, Pokemon go, Temple run 2 subway surfers, agar.io",
+  "minimum_chrome_version": "24.0.1307.0",
+  "container": "GOOGLE_DRIVE",
+  "version": "2",
+  "icons": {
+    "128": "bb.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["bb.js"],
+      "persistent": true
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

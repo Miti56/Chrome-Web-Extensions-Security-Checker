@@ -1,0 +1,23 @@
+{
+   "browser_action": {
+      "default_icon": "128.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_title__"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "cs.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en_US",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "128.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "short_name": "__MSG_shortname__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.11.30.1"
+}

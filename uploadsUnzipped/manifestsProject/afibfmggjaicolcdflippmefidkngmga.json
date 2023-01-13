@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_ProductName__",
+  "description": "__MSG_ProductDescription__",
+   "version": "1.1",
+  "default_locale": "en",
+  "manifest_version": 2,
+  "incognito": "split",
+  "background": {
+		"scripts": [
+			"js/config.js",
+			"js/store.js",
+			"js/utility.js",
+			"js/log.js",
+			"js/search.js",
+			"js/dailyFeature.js",
+			"central.js"
+		],
+    "persistent": true
+  },
+	"browser_action": {
+		"default_icon": {
+			"128" : "icon.png"
+		},
+		"default_popup": "html/bAction/newtabpage.html",
+		"default_title" : "Open NewTab"
+	},
+	"permissions": [
+		"tabs",
+		"storage",
+		"cookies",
+		"*://*.hmyrecipefinder.co/*",
+		"alarms",
+		"contextMenus"
+	],
+  "web_accessible_resources": [
+    "*.json"
+  ],
+ 
+  "chrome_url_overrides": {
+    "newtab": "newtabhtml/newtabpage.html"
+  },
+  "icons": {
+	"128" : "icon.png"
+  }
+}

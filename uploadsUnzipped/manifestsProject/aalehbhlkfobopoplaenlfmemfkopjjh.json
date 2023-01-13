@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Steam Phishing Protection",
+    "version": "2.0.1",
+    "manifest_version": 2,
+    "description": "This is a Steam Anti Phishing Extension for all users of steam.",
+    "background" : {
+        "scripts" : ["SAPS/background.js"]
+      },
+    "icons": {
+        "16": "images/saps_16.png",
+        "32": "images/saps_32.png",
+        "64": "images/saps_64.png",
+        "128": "images/saps_128.png",
+        "512": "images/saps_512.png"
+    },
+    "content_scripts": [{
+        "js": ["thirdparty/jquery.min.js", "thirdparty/Resemble.js/Resemble.js", "SAPS/Utilities.js", "SAPS/Profile.js", "SAPS/TradeOffers.js", "SAPS/TradeWindow.js", "SAPS/Scanners/Scanner v4.js", "SAPS/SAPSMain.js"],
+        "matches": ["http://*/*", "https://*/*"],
+        "all_frames": true,
+        "match_about_blank" : true
+    }],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "web_accessible_resources": [
+        "images/*",
+        "html/*",
+        "font/*"
+    ],
+    "browser_action": {
+        "default": "images/saps_512.png"
+    }
+}

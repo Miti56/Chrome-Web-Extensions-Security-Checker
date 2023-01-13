@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "استندر",
+  "version": "0.4.6",
+  "description": "تشغيل الفوكالات الصوتية بشكل متواصل!",
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": true
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["src/content-script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon-16-idle.png"
+  },
+  "options_page": "options.html"
+}

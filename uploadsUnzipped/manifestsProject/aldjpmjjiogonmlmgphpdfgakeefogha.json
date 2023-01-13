@@ -1,0 +1,40 @@
+{
+  "name": "CÔNG CỤ ĐẶT HÀNG - Muahangalibaba.com",
+  "short_name" : "Muahangalibaba.com",
+  "description": "Công cụ hỗ trợ người dùng của Muahangalibaba.com đặt hàng trên website: Taobao.com, Tmall.com và 1688.com",
+  "manifest_version": 2,
+  "author": "HAIHS",
+  "version": "2.3.7",
+  "homepage_url": "https://muahangalibaba.com",
+  "browser_action": {
+    "default_icon": "images/icon128.png"
+  },
+  "icons": {
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "css/styles.css"
+      ],
+      "js": [
+        "js/scripts.js"
+      ],
+      "matches": [
+          "https://*.1688.com/*",
+          "http://*.1688.com/*",
+          "https://*.taobao.com/*",
+          "http://*.taobao.com/*",
+          "https://*.tmall.com/*",
+          "http://*.tmall.com/*",
+          "https://*.tmall.hk/*",
+          "http://*.tmall.hk/*"
+      ]
+    }
+  ],
+  "permissions": [       
+    "https://muahangalibaba.com/*",
+    "http://muahangalibaba.com/*"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon128.png",
+      "default_title": "To-Html"
+   },
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "Saves the current web page as one file",
+   "icons": {
+      "128": "img/icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "To-Html",
+   "permissions": [ "activeTab", "contextMenus", "downloads", "tabs","https://*.com/*", "https://*.org/*" , "https://*.net/*" , "https://*.edu/*", "webRequest", "webRequestBlocking", "browsingData"],
+   "content_scripts": [ {
+      "js": [ "tohtml.js" ],
+      "matches": [ "https://*.com/*", "https://*.org/*" , "https://*.net/*" , "https://*.edu/*" ],
+      "run_at": "document_start"
+   } ],
+   "version": "1.3.0"
+}

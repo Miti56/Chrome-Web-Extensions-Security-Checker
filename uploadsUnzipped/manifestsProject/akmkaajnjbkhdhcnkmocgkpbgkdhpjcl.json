@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+   "name": "DL VIDEO",
+   "description": "Download videos from web sites",
+   "version": "4.8",
+   "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+   },
+   "content_scripts": [
+   {
+      "all_frames": false,
+      "run_at": "document_start",
+      "js": [ "contentscript.js" ],
+      "matches": [
+         "*://*/*"
+      ]
+   }],
+   "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "icon19.png",
+	   "default_title": "DL VIDEO",
+      "default_popup": "search.html"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "minimum_chrome_version": "34",
+   "permissions": [ 
+      "tabs",
+      "webRequest",
+      "webRequestBlocking",
+      "unlimitedStorage",
+      "downloads",
+      "browsingData",
+	   "clipboardWrite",
+	   "clipboardRead",
+      "webNavigation",
+      "http://*/*",
+      "https://*/*",
+      "<all_urls>"
+   ]
+}

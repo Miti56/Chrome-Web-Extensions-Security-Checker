@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Jolla askbot unseen posts",
+	"description": "Highlights unseen posts on together.jolla.com and other askbot sites.",
+	"version": "2.0.0",
+  "author": "DaveRo",
+  "background": {
+    "scripts": ["index.js"]
+  },
+	"options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+	"permissions": 
+	  [ "<all_urls>", "tabs", "storage", "webNavigation"] 
+}

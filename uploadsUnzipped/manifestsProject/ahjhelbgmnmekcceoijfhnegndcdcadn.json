@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "default_locale": "en",
+    "icons": {
+        "128": "icon.png"
+    },
+    "theme": {
+        "images": {
+            "theme_ntp_background": "theme_ntp_background.jpg",
+            "theme_toolbar": "theme_toolbar.png",
+            "theme_frame": "theme_frame.png",
+            "theme_frame_inactive": "theme_frame_inactive.png",
+            "theme_frame_incognito": "theme_frame_incognito.png",
+            "theme_frame_incognito_inactive": "theme_frame_incognito_inactive.png",
+            "theme_tab_background": "theme_tab_background.png",
+            "theme_tab_background_incognito": "theme_tab_background_incognito.png"
+        },
+        "properties": {
+            "ntp_background_alignment": "center",
+            "ntp_background_repeat": "no-repeat",
+            "ntp_logo_alternate": 0
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Kibana org extension",
+	"version": "1.0",
+	"permissions": ["tabs", "*://kibana.internal.spotinst.io/*"],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_title": "Kibana org extension 0.0.0.1",
+		"default_icon": {
+			"16": "spotLogo16.png",
+			"32": "spotLogo32.png",
+			"48": "spotLogo48.png",
+			"128": "spotLogo128.png"
+		}
+	},
+	"icons": {
+			"16": "spotLogo16.png",
+			"32": "spotLogo32.png",
+			"48": "spotLogo48.png",
+			"128": "spotLogo128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://kibana.internal.spotinst.io/*"],
+			"js": ["content.js"]
+		}
+	],
+	"manifest_version": 2
+}

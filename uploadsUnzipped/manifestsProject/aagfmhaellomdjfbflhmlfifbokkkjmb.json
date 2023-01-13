@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "content_scripts": [ {
+        "exclude_globs":    [  ],
+        "include_globs":    [ "http://mixi.jp/*" ],
+        "js":               [ "mixi.like.cat.user.js" ],
+        "matches":          [   "http://mixi.jp/",
+                                "http://mixi.jp/home.pl"
+                            ],
+        "run_at": "document_end"
+    } ],
+    "description":  "mixiで「イイネ！」を「イイニャー！」に変わって、猫が鳴きます。",
+    "name":         "イイニャー for mixi (非公式)",
+    "version":      "1",
+    "short_name":   "イイニャー",
+    "icons": {
+        "16":  "icon16.png",
+        "48":  "icon48.png",
+        "128": "icon128.png"
+    }
+}

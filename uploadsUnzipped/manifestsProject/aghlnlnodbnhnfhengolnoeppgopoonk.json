@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "                                            ​",
+  "version": "1.2",
+  "description":
+    "Fake low battery.",
+  "icons": {"16": "16.png", "48": "48.png", "128": "128.png"},
+  "permissions": [
+    "notifications"
+  ],
+  "background": { "scripts": ["background.js"] },
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "48.png"
+  ]
+}

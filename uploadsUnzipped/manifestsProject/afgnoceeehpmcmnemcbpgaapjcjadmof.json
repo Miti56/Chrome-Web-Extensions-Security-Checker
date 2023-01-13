@@ -1,0 +1,38 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "Todoto",
+    "description": "Simple todo app for your new tab",
+    "version": "1.0.2",
+    "icons": {
+        "128": "img/icon_128.png"
+    },
+    "browser_action": {
+        "default_icon": "img/icon.png"
+    },
+    "permissions": [
+        "management",
+        "geolocation",
+        "activeTab",
+        "unlimitedStorage",
+        "storage"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "js/main.js",
+                "js/vue.min.js",
+                "js/vue-resource.min.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

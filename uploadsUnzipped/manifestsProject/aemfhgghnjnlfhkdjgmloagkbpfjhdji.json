@@ -1,0 +1,68 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "code-beautification",
+	"homepage_url": "https://github.com/liandie/code-beautification",
+  "author": "Xu Fangyi",
+	"version": "1.1.0",
+	"description": "这是一个对有代码显示的网站进行代码美化",
+	"icons": {
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "img/icon.png",
+			"48": "img/icon.png",
+			"128": "img/icon.png"
+		},
+		"default_title": "code-beautification",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"js/highlight.min.js",
+				"js/content-script.js"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": [
+		"js/marked.min.js",
+		"js/highlight.min.js",
+		"js/init.js",
+		"js/toolbar.js",
+		"js/clipboard.min.js",
+		"js/mermaid.js",
+		"css/mermaid.forest.css",
+		"js/Dark.js",
+		"css/Dark.css",
+		"js/Default.js",
+		"css/Default.css",
+		"js/Coy.js",
+		"css/Coy.css",
+		"js/Funky.js",
+		"css/Funky.css",
+		"js/Okaidia.js",
+		"css/Okaidia.css",
+		"js/Twilight.js",
+		"css/Twilight.css",
+		"js/SolarizedLight.js",
+		"css/SolarizedLight.css",
+		"js/TomorrowNight.js",
+		"css/TomorrowNight.css"
+	],
+	"permissions": [
+		"storage",
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"default_locale": "zh_CN"
+}

@@ -1,0 +1,30 @@
+{
+    "name": "__MSG_appName__",
+    "update_url": "https:\/\/clients2.google.com\/service\/update2\/crx",
+    "manifest_version": 2,
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "data/bg.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icn/icons.png"
+    },
+    "icons": {
+        "128": "icn/icons.png"
+    },
+    "permissions": [
+        "cookies",
+        "storage",
+        "tabs",
+        "<all_urls>",
+        "alarms", 
+        "webRequest", 
+        "webRequestBlocking"
+    ],
+    "default_locale": "en",
+    "description": "__MSG_appDesc__",
+    "version": "4.0",
+    "content_security_policy": "connect-src *; script-src 'self' https:\/\/www.google-analytics.com; object-src 'self'"
+}

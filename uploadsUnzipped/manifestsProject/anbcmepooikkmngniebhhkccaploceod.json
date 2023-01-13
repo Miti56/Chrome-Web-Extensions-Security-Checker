@@ -1,0 +1,16 @@
+{
+  "app": {
+    "urls": ["http://www.9wsearch.com/"],
+    "launch": {"web_url": "http://www.9wsearch.com/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "9W Search is the next generation financial platform that provides the one right answer to a financial question.",
+  "name": "9W Search",
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "icons": {"128": "logo.png"},
+  "manifest_version": 2,
+  "version": "1.1"
+}

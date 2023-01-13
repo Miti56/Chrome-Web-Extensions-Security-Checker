@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"background": {
+		"persistent": true,
+		"scripts": ["scripts/background.js" ]
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon-120.png"
+		},
+		"default_popup": "popup.html",
+		"default_title": "AdBlock Вк"
+	},
+	"icons": {
+		"128": "images/icon-120.png",
+		"16": "images/icon-120.png",
+		"48": "images/icon-120.png"
+	},
+	"content_scripts": [ {
+		"all_frames": true,
+		"js": ["scripts/content.js" ],
+		"matches": [ "<all_urls>" ],
+		"run_at": "document_start"
+	}],
+	"manifest_version": 2,
+	"name": "Блокировка рекламы Вконтакте",
+	"description": "Блокировка всех видов рекламы в социальной сети Вконтакте. Держит ленту и группы которые вы посещаете в чистоте от объявлений.",
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"cookies",
+		"webRequest",
+		"webNavigation",
+		"<all_urls>",
+		"storage",
+		"unlimitedStorage",
+		"webRequestBlocking",
+		"downloads"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"short_name": "Блокировка рекламы Вконтакте",
+	"version": "1.2.3"
+}

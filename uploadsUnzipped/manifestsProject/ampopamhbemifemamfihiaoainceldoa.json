@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "merleCRM ProfileParser",
+  "version": "2.0.5",
+  "description": "Mit diesem Plugin können Web-Profile in merleCRM importiert werden",
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "*://*.linkedin.com/",
+    "webRequestBlocking"
+  ],
+
+  "icons": {
+    "16": "favicon-16x16.png",
+    "32": "favicon-32x32.png",
+    "96": "favicon-96x96.png"
+  },
+
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://xing.com/xtm*", "https://www.xing.com/xtm*", "https://linkedin.com/in*", "https://www.linkedin.com/in*"]
+  }]
+
+}
+

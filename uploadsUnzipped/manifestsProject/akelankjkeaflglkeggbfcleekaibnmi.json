@@ -1,0 +1,15 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Поиск дешевых авиабилетов",
+  "description": "Онлайн сервис поиска авиа и ЖД билетов. Выбор лучших предложений по РФ и зарубеж.",
+  "version": "1.2",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {  
+    "launch": {
+      "web_url": "http://feed-you.ru/apps.php?id=1"
+    }
+  }
+}

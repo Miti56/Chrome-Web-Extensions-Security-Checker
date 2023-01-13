@@ -1,0 +1,100 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "100kFactory Revolution-Importer & Fulfillment",
+  "short_name": "Products Importer & Order Fulfillment",
+  "description": "This extension will help 100k revolution students to import products & auto order fulfillment from aliexpress by using single click.",
+  "version": "4.8",
+  "icons": {
+    "128": "assets/images/icon-128.png",
+    "16": "assets/images/icon-16.png"
+  },
+  "background": {
+    "scripts": [
+      "assets/bootstrap/js/jquery.min.js",
+      "assets/js/orderFulfillment/background.js",
+      "assets/js/tracking/trackingBackground.js",
+      "assets/js/tracking/queue.js",
+      "assets/js/global.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "js": [
+        "assets/bootstrap/js/jquery.min.js",
+        "assets/js/orderFulfillment/100kContentScript.js",
+        "assets/js/orderFulfillment/sweetalert.min.js"
+      ],
+      "css": [
+        "assets/js/orderFulfillment/sweetalert.css"
+      ],
+      "matches": [
+        "*://*.100kfactory.net/*"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "all_frames": false,
+      "js": [
+        "assets/bootstrap/js/jquery.min.js",
+        "assets/js/tracking/nkTrackingScript.js",
+        "assets/js/orderFulfillment/sweetalert.min.js"
+      ],
+      "css": [
+        "assets/js/orderFulfillment/sweetalert.css"
+      ],
+      "matches": [
+        "*://*.100kfactory.net/tracking*"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "all_frames": false,
+      "js": [
+        "assets/bootstrap/js/jquery.min.js",
+        "assets/bootstrap/js/bootstrap.min.js",
+        "assets/js/orderFulfillment/AliExpressClientScript.js",
+        "assets/js/orderFulfillment/sweetalert.min.js"
+      ],
+      "css": [
+        "assets/bootstrap/css/bootstrap.min.css",
+        "assets/js/orderFulfillment/style.css",
+        "assets/js/orderFulfillment/sweetalert.css"
+      ],
+      "matches": [
+        "*://*.aliexpress.com/*",
+        "*://*.icashier.alipay.com/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "assets/images/icon-16.png",
+    "default_popup": "index.html",
+    "default_title": "Click here to Import!"
+  },
+  "permissions": [
+    "management",
+    "storage",
+    "notifications",
+    "cookies",
+    "<all_urls>",
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    "assets/js/orderFulfillment/AliShippingInfo.js",
+    "assets/bootstrap/js/jquery.min.js",
+    "assets/bootstrap/js/bootstrap.min.js",
+    "assets/bootstrap/css/bootstrap.min.css"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://shoppingcart.aliexpress.com/order/confirm_order.htm*"
+    ]
+  }
+}

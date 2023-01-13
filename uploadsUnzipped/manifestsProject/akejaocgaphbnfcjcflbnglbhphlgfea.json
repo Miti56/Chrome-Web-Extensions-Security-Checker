@@ -1,0 +1,15 @@
+{  
+   "name": "Google Start Page",
+   "description": "Google Start Page ",
+   "version": "1.0.0",
+   "manifest_version": 2,
+   "minimum_chrome_version": "67.0.0.0", 
+   "minimum_chrome_version": "60.0.0.0", 
+   "minimum_chrome_version": "50.0.0.0", 
+   "update_url": "https://clients2.google.com/service/update2/crx", 
+   "icons": { "128": "icons/128.png", "16": "icons/16.png", "256": "icons/256.png", "32": "icons/32.png", "48": "icons/48.png", "96": "icons/96.png" }, 
+   "permissions": ["tabs"],
+   "background": {
+    "scripts": ["background.js"], "persistent": false
+}
+   }

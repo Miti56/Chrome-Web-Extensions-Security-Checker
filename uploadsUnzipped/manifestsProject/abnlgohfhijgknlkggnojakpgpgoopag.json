@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "version": "0.3",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "name": "Smarti",
+    "description": "Smarti הוא תוסף חיפוש טיסות חדש המאפשר השוואה בין מגוון אתרי חיפוש הטיסות",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [ "assets/js/jquery.js", "assets/js/main.js" ]
+        }
+    ],
+    "background": 
+    {
+        "scripts": [ "assets/js/background.js", "assets/js/flightSearch.js" ]
+    },
+    "browser_action": {
+      "default_icon": "assets/imgs/icon_new.png",
+      "default_popup": "flightSearch.html",
+      "default_title": "NewTV"
+   },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "cookies",
+        "<all_urls>"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "vk audio player",
+    "description": "маленький плеер для ВКонтакте",
+    "version": "0.4.2",
+    "minimum_chrome_version": "30",
+    "app": {
+        "background": {
+            "scripts": [
+                "lib/google-analytics-bundle.js",
+                "lib/Messenger.min.js", "lib/Vault.min.js", "lib/SyncVault.min.js",
+                "lib/jquery.min.js", "lib/VKAPI.min.js",
+                "js/PlayList.min.js", "js/Player.min.js",
+                "bootstrap.min.js"],
+            "persistent": true
+        }
+    },
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "permissions": [
+        "identity", "storage",
+        "https://www.google-analytics.com/",
+        "https://*.vk.com/*",
+        "http://vk.com/*",
+        "https://*.vk.me/*",
+        "http://*.vk.me/*"
+    ]
+}

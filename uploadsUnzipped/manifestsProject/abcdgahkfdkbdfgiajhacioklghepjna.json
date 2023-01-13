@@ -1,0 +1,13 @@
+{"description": "__MSG_extDesc__", 
+"manifest_version": 2, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"offline_enabled": true, 
+"background": {"scripts": ["background.js"]},
+ "chrome_url_overrides": {"newtab": "index.html"},
+ "icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "browser_action": {"default_icon": "icons/128.png", 
+"default_title": "Philadelphia 76ers Wallpapers & HD Themes"},
+ "default_locale": "en", 
+"name": "__MSG_extName__", 
+"version": "0.6.4"}

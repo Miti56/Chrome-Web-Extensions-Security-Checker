@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Switch by NeotiDev",
+	"homepage_url": "https://docs.neotidev.com/switch",
+	"incognito": "spanning",
+	"author": "NeotiDev",
+	"version": "0.0.2",
+	"version_name": "0.0.2 Pre-Release",
+	"short_name": "Switch",
+	"manifest_version": 2,
+	"description": "Easier way to replace a hostname with another one. This is useful if your government blocked imgur.",
+	"browser_action": {
+		"default_title": "Manage NeotiDev Switch redirect rules.",
+		"default_popup": "ndswitch.html"
+	},
+	"icons": { "16": "switch16.png",
+               "48": "switch48.png",
+               "128": "switch128.png" },
+	"permissions": ["webRequest", "webRequestBlocking", "<all_urls>", "tabs"],
+	"background": {
+		"scripts": ["request.js"]
+	}
+}

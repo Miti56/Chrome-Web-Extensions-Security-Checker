@@ -1,0 +1,16 @@
+{
+   "name": "Static",
+   "description": "testing",
+   "background": {
+      "scripts": [
+         "js/background.js"
+      ]
+   },
+   "icons": {
+      "128": "images/icon128.png"
+   },
+   "manifest_version": 2,
+ 
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1"
+}

@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "__MSG_cursorsAppName__",
+  "short_name": "cursors minecraft",
+  "description": "__MSG_shortDescription__",
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "icons": {
+    "128": "128.png",
+    "24": "24.png"
+  },
+  "default_locale": "en_US",
+  "permissions": [
+    "storage",
+    "tabs",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "js/bundle.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "24.png",
+    "default_popup": "cursors.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "version": "1.0",
+  "web_accessible_resources": [
+    "content.css",
+    "res/*"
+  ]
+}

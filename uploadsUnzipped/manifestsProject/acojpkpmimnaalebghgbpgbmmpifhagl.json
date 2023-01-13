@@ -1,0 +1,27 @@
+{
+   "content_scripts": [{
+      "css": ["cardstyles.css"],
+      "js": ["storage.js", "cards.js"],
+      "matches": [
+         "*://*.faeria.com/*",
+         "*://*.reddit.com/r/faeria/*",
+         "*://*.metagaming.tv/*",
+         "*://tidwell.github.io/faeria-cards/*"
+      ],
+      "run_at": "document_idle"
+   }],
+   "description": "Automatically adds Faeria card image popups for any card name in text anywhere on the Faeria site, Reddit, or metagaming.tv.",
+   "icons": {
+      "256": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Faeria Card Popup",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options.html"
+   },
+   "permissions": ["tabs", "storage"],
+   "short_name": "Faeria Card Popup",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.2"
+}

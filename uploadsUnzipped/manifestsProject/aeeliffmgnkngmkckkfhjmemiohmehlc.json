@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Nettbonus",
+  "version": "2.6",
+  "manifest_version": 2,
+  "description": "Nettbonus",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs", "storage", "webNavigation", "http://*/*", "https://*/*", "notifications"],
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["main.js"],
+    "all_frames": false
+  }],
+  "web_accessible_resources": ["images/*.png", "*.css"],
+  "browser_action": {
+    "default_icon": {
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "100": "images/icon100.png",
+      "128": "images/icon128.png",
+      "256": "images/icon128.png"
+    },
+    "default_title": "Nettbonus"
+  }
+}

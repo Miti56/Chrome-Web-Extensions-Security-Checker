@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "19.png"
+   },
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "19": "19.png"
+   },
+"optional_permissions": [ "background", "*://*/*"],
+   "name": "__MSG_chrome_extension_name__",
+   "description": "__MSG_chrome_extension_description__",
+   "default_locale": "ru",
+   "manifest_version": 2,
+   "permissions": [ "tabs", "storage", "cookies", "*://*/*", "management" ],
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "version": "1.3",
+   "content_scripts": [ {
+      "js": [ "jquery.min.js" ],
+      "matches": [ "*://*/*" ]
+   } ]
+
+}

@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Pyrus Gadget for Gmail",
+	"version": "1.0.0",
+	"description": "Turn any email into a Pyrus task right in Gmail!",
+	"icons": {
+		"128": "icons/icon128.png",
+		"16": "icons/icon16.png"
+	},
+	"container": ["DOMAIN_INSTALLABLE"],
+	"api_console_project_id": "388732830236"
+}

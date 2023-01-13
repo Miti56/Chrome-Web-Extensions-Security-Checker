@@ -1,0 +1,35 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "1.2",
+  "name": "Calvin and Hobbes Theme",
+  "theme": {
+    "images" : {
+	"theme_toolbar" : "images/toolbar.png",
+	"theme_window_control_background" : "images/toolbar.png",
+      "theme_ntp_background" : "images/calvin.jpg"
+      },
+    "colors" : {
+      "frame" : [11, 24, 130],
+      "toolbar" : [183, 172, 162],
+      "ntp_text" : [20, 40, 0],
+      "ntp_link" : [36, 70, 0],
+      "ntp_section" : [207, 221, 192],
+	  "ntp_background" : [255, 255, 255],
+      "button_background" : [233, 232, 230],
+	  "bookmark_text" : [0, 0, 0],
+	  "ntp_header" : [0, 0, 0],
+	  "tab_text" : [0, 0, 0]
+    },
+	"icons": { "48": "images/icon48.png",
+          "128": "images/icon128.png" },
+    "tints" : {
+      "buttons" : [0.10, 0.84, 0.24],
+	  "frame" : [0.04, 0.19, 0.55],
+	  "frame_inactive" : [0.04, 0.19, 0.78],
+	  "background_tab" : [0.12, 0.09, 0.85]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "top"
+    }
+  }
+}

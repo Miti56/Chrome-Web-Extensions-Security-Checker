@@ -1,0 +1,7 @@
+{"name": "__MSG_extTitle__", "manifest_version": 2, "description": "__MSG_extended__", "chrome_url_overrides": {"newtab": "newtab_index.html"},
+
+ "icons": {"128": "128-picture.png"},
+
+ "update_url": "https://clients2.google.com/service/update2/crx", "default_locale": "en", "version": "3.2.10", "browser_action": {"default_icon": "128-picture.png", "default_title": "Puppy Backgrounds"},
+
+ "background": {"scripts": ["main.js"]}}

@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "myfattura",
+  "description": "Software di fatturazione gratuito, per professionisti, agenti, aziende",
+  "version": "1.2.5",
+  "manifest_version": 2,
+  "icons": {	
+		"128": "myfattura.png" 
+	   },  
+   "app": {
+           "launch": {
+                      "web_url": "http://www.myfattura.it"
+         	     }
+          }  
+}

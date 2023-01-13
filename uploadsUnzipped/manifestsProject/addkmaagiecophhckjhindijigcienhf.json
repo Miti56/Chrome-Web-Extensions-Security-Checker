@@ -1,0 +1,41 @@
+{
+	"manifest_version": 2,
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "3.12.5",
+	"description": "__MSG_description__",
+	"name": "__MSG_name__",
+	"chrome_settings_overrides": {
+		"homepage": "http://funsearchbox.com",
+		"search_provider": {
+			"name": "Fun Search Box",
+			"search_url": "http://funsearchbox.com/search/{searchTerms}",
+			"suggest_url": "http://funsearchbox.com/suggest/{searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://funsearchbox.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"browser_action": {
+		"default_title": "Batman Arkham Knight"
+	},
+	"background": {
+		"scripts": [
+			"assets/back.js"
+		]
+	},
+	"default_locale": "en",
+	"optional_permissions": [
+		"management"
+	],
+	"icons": {
+		"48": "batman-arkham-knight-icons/icon48.png",
+		"128": "batman-arkham-knight-icons/icon128.png"
+	},
+	"chrome_url_overrides": {
+		"newtab": "micron.html"
+	},
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

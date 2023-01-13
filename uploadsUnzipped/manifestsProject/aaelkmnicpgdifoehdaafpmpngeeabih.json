@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "EmailVeritas Plugin",
+  "description": "Protecting you against phishing attacks",
+  "version": "0.4",
+  "icons": {
+    "48": "logo_v_white_green.png"
+  },
+  "background": {
+    "scripts": ["background.everitas.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {                  
+      "16": "logo_v_white_green.png",           
+      "24": "logo_v_white_green.png",           
+      "32": "logo_v_white_green.png"          
+    },
+    "default_title": "e.Veritas | Anti-phishing solution",     
+    "default_popup": "popup.html"    
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "css": ["everitas.css"],
+      "js": ["jquery-3.3.1.min.js", "inboxsdk.js","content_script.everitas.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "cookies",
+    "tabs", "cookies",
+    "http://*/",
+    "https://*/"
+  ],
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "accept.ico",
+    "logo.png",
+    "logo-white.png",
+    "logo_v.png",
+    "logo-v-white.png",
+    "logo_v_white_green.png",
+    "logo_signed_in.png",
+    "logo_signed_out.png"
+  ]
+}

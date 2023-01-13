@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Z2POS",
+  "author": "Z2 s.r.o.",
+  "version" : "2.0.1",
+  "description" : "POS native messaging interface",
+  "options_page": "options.html",
+  "permissions": [
+    "notifications"
+   ],
+  "background" : {
+     "page": "background.html"
+  },
+  "page_action" : {
+    "default_icon" : "z2pos_19.png",
+    "default_title" : "POS",
+    "default_popup": "popup.html"
+  },
+  "content_scripts" : [{
+    "matches" : [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js" : ["contentscript.js"],
+    "run_at" : "document_idle",
+    "all_frames" : false
+  }],
+  "icons" : {
+    "48" : "z2pos_48.png",
+    "128" : "z2pos_128.png"
+  },
+  "permissions": [
+	    "nativeMessaging"
+  ],
+  "manifest_version": 2
+}

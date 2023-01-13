@@ -1,0 +1,23 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+"name": "Solargest",
+"description": "Solargest - Il monitoraggio definitivo per il tuo impianto fotovoltaico. Per maggiori informazioni vai su www.tmrtech.it ",
+"version": "1.4",
+"manifest_version": 2,
+"icons": {
+"128": "128.png"
+},
+"minimum_chrome_version": "5.0",
+"app": {
+"urls": [
+"http://www.tmrservizi.it/"
+],
+"launch": {
+"web_url": "http://www.solargest.it/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

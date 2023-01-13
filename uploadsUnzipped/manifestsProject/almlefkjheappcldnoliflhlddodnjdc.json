@@ -1,0 +1,42 @@
+{
+   "description": "theme unofficial Sensation Source of Light.",
+   "name": "Sensation Source of Light",
+   "manifest_version": 2,
+   "theme": {
+      "colors": {
+         "frame":[0,33,60],
+         "bookmark_text":[255,255,255],
+         "toolbar": [ 0,33,60 ],
+         "ntp_link": [ 44, 51, 66 ],
+         "ntp_section": [ 194, 217, 122 ],
+         "ntp_text": [ 142, 159, 156 ],
+         "ntp_background":[0,33,60],
+         "tab_background_text": [ 163, 163, 163 ],
+         "tab_text": [ 255, 255, 255 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame_overlay.png",
+         "theme_frame_incognito": "images/theme_frame_overlay.png",
+         "theme_frame_overlay": "images/theme_frame_overlay.png",
+         "theme_button_background": "images/theme_button_background.png",
+         "theme_toolbar": "images/theme_toolbar.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_ntp_background_incognito": "images/theme_ntp_background.png",
+         "theme_ntp_attribution": "images/theme_ntp_attribution.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_tab_background_incognito": "images/theme_tab_background_incognito.png",
+         "theme_window_control_background": "images/theme_window_control_background.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom center",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 2
+      },
+      "tints": {
+
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.1"
+}

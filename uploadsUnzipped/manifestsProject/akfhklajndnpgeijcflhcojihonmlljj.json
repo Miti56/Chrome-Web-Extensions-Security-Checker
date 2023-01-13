@@ -1,0 +1,20 @@
+  {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Numerology",
+    "version": "1.2",
+    "description": "Get the Numerology number for any Name",
+"background": {
+     "scripts":["popup.js"],
+      "persistent": false
+    },
+ "permissions": [
+    "https://www.w3schools.com/",
+	"https://cdnjs.cloudflare.com/"
+  ],
+"browser_action": {
+      "default_icon": "numerologylogo-small.png",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+  }

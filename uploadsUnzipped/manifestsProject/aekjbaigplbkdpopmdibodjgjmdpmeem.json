@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+	"name": "Surviv.io Play Hack Mods Bots",
+	"version": "0.3",
+	"manifest_version": 2,
+	"description": "Log in to a fast surviv io server and have fun with players all over the world.",
+	"browser_action": {
+		"default_icon": "128x128.png",
+		"default_popup" : "hello.html"
+	},
+	"icons" :{
+		"16"	:	"16x16.png",
+		"48"	:	"48x48.png",
+		"128"	:	"128x128.png"
+	},
+	"background" : { "scripts" : ["popup.js"]
+	}
+}

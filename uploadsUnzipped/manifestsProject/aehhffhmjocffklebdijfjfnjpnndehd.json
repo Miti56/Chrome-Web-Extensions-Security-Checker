@@ -1,0 +1,28 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"version": "1.0",
+	"name": "Brown Argyle Theme",
+	"theme": {
+		"images" : {
+			"theme_frame" : "images/argyle-brown-64-light.png",
+			"theme_frame_overlay" : "images/argyle-brown-background-2048x1280.png",
+			"theme_ntp_background" : "images/argyle-brown-background-256x256-lower.png",
+			"theme_ntp_attribution" : "images/credit.png",
+			"theme_toolbar" : "images/argyle-brown-toolbar-fade-down-64x64.png"
+		},
+		"colors" : {
+			"frame" : [153, 109, 88],
+			"toolbar" : [153, 109, 88],
+			"ntp_text" : [0, 0, 0],
+			"ntp_link" : [0, 0, 255],
+			"ntp_section" : [153, 109, 88],
+			"button_background" : [153, 109, 88]
+		},
+		"tints" : {
+			"buttons" : [0.40, 0.75, 0]
+		},
+		"properties" : {
+			"ntp_background_alignment" : "bottom | right"
+		}
+	}
+}

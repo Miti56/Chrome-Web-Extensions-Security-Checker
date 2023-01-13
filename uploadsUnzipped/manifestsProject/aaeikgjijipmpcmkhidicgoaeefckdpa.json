@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Adria Scan - PNS Extension",
+	"description": "This extension will enable Adria Scan - Plug And Scan application to insert data into web forms",
+	"version": "1.5",
+	"web_accessible_resources": ["*.jpg", "*.JPG"],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": true
+	},
+
+	"permissions": [
+		"activeTab",
+		"background",
+		"downloads",
+		"tabs",
+		"nativeMessaging",
+		"notifications",
+		"storage",
+		"*://*/*"
+	]
+}

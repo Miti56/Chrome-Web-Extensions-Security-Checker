@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "كود خصم سيفي sivvi كوبون 20% -AC18  ",
+  	"manifest_version": 2,  	
+  	"version": "1.4",
+  	"description": " كود خصم  AC18   sivvi تخفيض 20% من قيمة الطلبية على جميع المنتجات . ايضا يمكن الأستفادة من… ",
+
+	"background": { 
+		"scripts": [
+			"scripts/background.js", 
+			"scripts/jsuri-1.1.1.min.js"
+	]},
+
+	"content_scripts": [{ 
+		"matches": [
+			"http://www.noon.com/*",
+			"https://www.noon.com/saudi-ar/*",
+			"https://www.noon.com/egypt-ar/*",
+			"https://www.noon.com/uae-en/*"
+		], 
+		"js": ["scripts/contentscript.js"] 
+	}],
+
+  	"page_action" : {
+    	"default_icon" : "images/badge19.png",
+    	"default_title" : "Affiliate link found",
+		"default_popup" : "pages/popup.html"
+  	},
+  	
+	"permissions" : [
+    	"tabs",
+		"clipboardWrite"
+  	],
+
+  	"icons": {
+    	"48":   "images/icon48.png",
+    	"96":   "images/icon96.png",
+    	"144":  "images/icon144.png"
+  	},
+
+	"options_page" : "pages/options.html"
+
+}

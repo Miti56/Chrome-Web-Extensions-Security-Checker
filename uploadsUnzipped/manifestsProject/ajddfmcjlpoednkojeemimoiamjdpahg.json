@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "CRAZYSPECTS",
+"description": "GET IMPORTED SUNGLASSES AND EYEGLASSES AT GUARANTEED LOWEST PRICE.",
+"version": "0.0.0.1",
+"icons": {
+"128": "icon_128.png"
+},
+"app": {
+"urls": [
+"https://www.crazyspects.com/app/crazyspects.apk"
+],
+"launch": {
+"web_url": "https://www.crazyspects.com"
+}
+}
+}

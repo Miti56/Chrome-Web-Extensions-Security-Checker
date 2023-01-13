@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Facebook Shortcut Button",
+  "version": "1.0.3",
+  "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "96": "images/icon96.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "64": "images/icon64.png"
+   },
+  "manifest_version": 2,
+   "background": {
+      "scripts": ["scripts/background.js" ]
+   },
+  "browser_action": {
+      "default_icon": "images/icon48.png",
+	   "default": ["scripts/background.js" ]
+   },
+  "description": "Shortcut Button for your own Facebook URL",
+  "options_page": "options.html",
+  "permissions": [ "storage"]
+}

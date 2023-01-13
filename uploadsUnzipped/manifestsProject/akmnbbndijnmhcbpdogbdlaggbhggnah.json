@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Entr.ae (by entr.ae)",
+	"description": "Esta extenção permite encurtar seus link preferidos.",
+	"version": "2.1",
+		"background": {
+		"scripts": ["entr.ae.js"],
+		"persistent": false
+	},
+	
+	"icons": { "128": "128.png" },
+	"permissions": [
+		"tabs", "http://*/*", "https://*/*"
+	],
+	"browser_action": {
+		"default_title": "Click aqui para encurtar esse link",
+		"default_icon": "16.png"
+	},
+	
+	"manifest_version": 2
+}

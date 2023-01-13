@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Strategy Games",
+ "manifest_version": 2,
+ "short_name": "Strategy Games",
+ "description": "Strategy Games are very good.",
+ "version": "1",
+ "icons": {
+	"128": "icone.jpg"
+  },
+ "app": {
+	"launch": {
+	  "web_url": "http://sepomex.xyz/c/strategy-games/"
+	}
+  }
+}

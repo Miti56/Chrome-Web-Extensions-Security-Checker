@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "CRA Health Extension",
+    "version": "5.0",
+    "manifest_version": 2,
+    "description": "Support for enhanced Chrome interactions within CRA Health.",
+    "page_action": {
+        "default_icon": "cra48.png"
+    },
+    "permissions": [
+	    "activeTab","<all_urls>"
+    ],
+    "background": {
+        "scripts": ["jquery-2.2.4.js", "background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["jquery-2.2.4.js","contentscript.js"],
+        "run_at": "document_idle",
+        "all_frames": false
+    }],
+    "icons": {
+        "16": "cra16.png",
+        "48": "cra48.png",
+        "128": "cra128.png"
+    },
+    "externally_connectable": {
+        "matches": ["*://*.crahealth.com/*","*://localhost/*"]
+}
+}

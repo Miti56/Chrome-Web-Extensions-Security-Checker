@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PowerSeek",
+  "version": "1.1.1",
+  "manifest_version": 2,
+  "description": "To give you authority online",
+  "icons": {
+    "128": "images/128.png",
+    "48": "images/48.png",
+    "16": "images/16.png"
+  },
+  "permissions": [
+    "chrome://favicon/",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "idle",
+    "notifications",
+    "webNavigation",
+    "tabs",
+    "proxy"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+    "scripts": [
+      "scripts/vendor/jquery/jquery.js",
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "PowerSeek",
+    "default_icon": "images/48.png",
+    "default_popup": "markup/popup.html"
+  },
+  "web_accessible_resources": [
+    "images/*",
+    "fonts/*"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Fortnite Chapter 2 Season 2 Wallpapers",
+  "description": "__MSG_AppDescription__",
+  "version": "1.1",
+  "default_locale": "en_US",
+  "browser_action": {
+    "default_icon": {
+    "128": "pictures/128.png"
+    }
+  },
+  "icons": {
+    "128": "pictures/128.png"
+  },
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "topSites",
+    "chrome://favicon/*",
+	"http://*/*",
+	"https://*/*",
+    "webRequestBlocking",
+    "webRequest"
+  ]
+}

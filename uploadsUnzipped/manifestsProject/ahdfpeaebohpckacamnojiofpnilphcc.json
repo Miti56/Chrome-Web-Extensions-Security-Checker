@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [  "background.js" ]
+   },
+   "description": "Web Booooooooooooooost !!!",
+   "icons": {
+      "128": "webboost.png"
+   },
+   "manifest_version": 2,
+   "name": "Web Boost",
+   "permissions": [ "chrome://favicon/", "nativeMessaging", "*://*/*", "http://*/*", "https://*/*", "storage", "management",  "unlimitedStorage",  "downloads", "notifications", "contentSettings", "cookies", "\u003Call_urls>", "topSites", "activeTab", "tabs", "webNavigation", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.2"
+}

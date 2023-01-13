@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "name": "Speed Tweaks",
+  "short_name": "speed-tweaks",
+  "background": {"page": "lib/chrome/background.html"},
+  "homepage_url": "http://mybrowseraddon.com/speed-tweaks.html",
+  "description": "Speed up your browser with 7 tweaks via toolbar popup.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "privacy",
+    "webRequest",
+    "http://*/*",
+    "https://*/*",
+    "browsingData",
+    "notifications",
+    "webRequestBlocking"
+  ],
+  "browser_action": {
+    "default_title": "Speed Tweaks",
+    "default_popup": "data/popup/popup.html",
+    "default_icon": {
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "run_at": "document_start",
+    "js": ["data/content_script/inject.js"],
+    "css": ["data/content_script/inject.css"]
+  }],
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png"
+  }
+}

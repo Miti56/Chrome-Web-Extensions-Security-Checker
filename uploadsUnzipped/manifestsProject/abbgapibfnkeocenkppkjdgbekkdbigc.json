@@ -1,0 +1,90 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+    "version": "2.0",
+    "name": "Paramore",
+    "theme": {
+        "images" : {
+            "theme_frame" : "images/theme_frame.png",
+            "theme_frame_inactive" : "images/theme_frame_inactive.png",
+            "theme_toolbar" : "images/theme_toolbar.png",
+            "theme_ntp_background" : "images/theme_ntp_background.png", 
+            "theme_tab_background" : "images/theme_tab_background.png"
+        },
+        "colors" : {
+            "toolbar" : [
+                 0,
+                 0,
+                 0 
+            ],
+            "ntp_text" : [
+                255,
+                255,
+                255 
+            ],
+            "ntp_link" : [
+                255,
+                  0,
+                  0 
+            ],
+            "ntp_section" : [
+                  0,
+                  0,
+                  0 
+            ],
+            "button_background" : [
+                 64,
+                 64,
+                 64 
+            ],
+            "ntp_background" : [
+                 0,
+                 0,
+                 0 
+            ],
+            "tab_text" : [
+               255,
+                 0,
+                 0
+            ],
+            "tab_background_text" : [
+               255,
+                 0,
+                 0
+            ],
+            "frame" : [
+                 64,
+                 64,
+                 64
+            ],
+            "ntp_section_link": [
+                255,
+                  0,
+                  0
+            ],
+            "bookmark_text" : [
+                255,
+                  0,
+                  0
+            ]
+        },
+        "tints" : {
+            "buttons" : [
+                1.0,
+                1.0,
+                0.5 
+            ],
+            "frame" : [
+                0.2,
+                0.5,
+                0.4
+            ] 
+        },
+        "properties" : {
+            
+        },
+        "icons" : {
+           "48" : "images/icon_48",
+           "128" : "images/icon_128"
+        }
+    }
+}

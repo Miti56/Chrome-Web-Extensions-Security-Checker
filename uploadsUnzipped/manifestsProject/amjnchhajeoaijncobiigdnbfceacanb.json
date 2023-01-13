@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Download documenti Arianna",
+  "version": "2.1.0",
+  "background": {
+    "persistent": true,
+    "scripts": [ "main.js" ]
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "browser_action": {
+    "default_icon": "48.png"
+  },
+  "content_scripts": [
+    {
+
+      "matches": [ "<all_urls>" ],
+      "js": [ "buttonsHandler.js" ]
+    },
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "login.js" ]
+    }
+  ],
+  "permissions": [ "contextMenus", "downloads", "nativeMessaging", "tabs" ,"storage"]
+}

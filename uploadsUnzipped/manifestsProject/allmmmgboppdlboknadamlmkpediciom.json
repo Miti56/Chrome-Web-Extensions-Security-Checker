@@ -1,0 +1,16 @@
+{
+    "name": "Jim's Music Online",
+    "description": "Jim's Music, Your one stop shop for Music / Gear / Rentals and More.",
+    "app": {
+        "urls": ["http://www.jimsmusiconline.com/"],
+        "launch": {
+            "web_url": "http://www.jimsmusiconline.com"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

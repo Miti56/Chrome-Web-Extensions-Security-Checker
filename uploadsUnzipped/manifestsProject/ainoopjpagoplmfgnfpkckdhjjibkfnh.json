@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Easy Music VK Remote Control",
+  "short_name" : "Easy Music VK",
+  "manifest_version": 2,
+  "version": "0.4",
+  "description": "Управление воспроизведением музыки VK, скачивание музыки",
+  "icons": {
+    "128": "main_icon.png"
+  },
+  "offline_enabled": true,
+  "browser_action": {
+    "default_title": "Easy VK",
+    "default_icon": "main_icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://vk.com/*",
+        "https://vk.com/*"
+      ],
+      "js": [
+        "jquery-1.7.1.min.js",
+        "batchRequest.js",
+        "content_script.js",
+        "options.js"
+      ],
+      "css": [
+        "custom.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "sandbox": {
+    "pages": [
+      "sandbox.html"
+    ]
+  },
+  "permissions": [
+    "notifications",
+    "unlimitedStorage",
+    "http://*.vk.com/*",
+    "http://*.vk.me/*",
+    "http://*.vk-cdn.net/*",
+    "background"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "web_accessible_resources": [
+    "images/save.png",
+    "scripts/ec_audio.js",
+    "scripts/jquery-1.7.1.min.js",
+    "scripts/controller.js"
+  ]
+}

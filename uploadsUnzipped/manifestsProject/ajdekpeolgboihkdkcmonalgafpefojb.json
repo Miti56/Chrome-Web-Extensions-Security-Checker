@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "name": "ReLoader",
+  "version": "1.0",
+
+  "author": "Alister Zhao",
+
+  "description": "Easy reload the current tab without any cached data. Works with iFrame too.",
+  "icons" : {"128":"128.png"},
+
+  "permissions": ["tabs","notifications", "https://*/*","http://*/*"],
+
+  "browser_action": {
+    "default_icon": "128.png",
+    "default_title": "Reload Tab"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

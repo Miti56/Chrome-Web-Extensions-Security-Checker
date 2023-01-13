@@ -1,0 +1,35 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "version": "4.7",
+  "name": "DareDevil Small",
+  "theme": {
+    "images" : {
+      "theme_frame" : "images/frame.png",
+      "theme_toolbar" : "images/toolbar.png",
+      "theme_ntp_background" : "images/background.png",
+      "theme_tab_background" : "images/tab.png",
+      "theme_ntp_attribution" : "images/theme_ntp_attribution.png"
+    },
+    "colors" : {
+      	"ntp_link": [255,255,255], 
+	"ntp_text": [248,5,27], 
+	"ntp_section_link": [248,5,27], 
+	"ntp_section_text": [248,5,27],
+	"ntp_background": [251, 236, 0], 
+	"frame": [251, 236, 0], 
+	"toolbar": [0 , 0 , 0], 
+	"tab_text": [175,32,45], 
+	"tab_background_text": [0 , 0 , 0], 
+	"bookmark_text": [255,255,255]
+    },
+    "tints" : {
+                "buttons" : [0.1000, 0.800, 0.800],
+                "frame_inactive": [0.50, 0.50, 0.50], 
+                "frame_incognito_inactive": [0.50, 0.50, 0.50] 
+    },
+    "properties" : {
+     	"ntp_background_alignment" : "bottom",
+	"ntp_background_repeat": "no-repeat"
+    }
+  }
+}

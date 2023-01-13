@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AppFinder for Workspace One",
+  "version": "0.0.5",
+  "manifest_version": 2,
+  "description": "Quickly open any app you have access to from VMware Workspace One",
+  "homepage_url": "http://github.com/mikfreedman/appfinder-for-workspace-one",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    "src/keyboard_behaviors.js"
+  ],
+  "default_locale": "en",
+  "browser_action": {
+    "default_popup": "src/menu.html"
+  },
+  "optional_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+  "options_ui": {
+    "page":   "src/options.html"
+  },
+  "background": {
+    "scripts": ["src/bg/background.js"]
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "https://*.workspaceair.com/*"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Ctrl+Shift+K"
+      }
+    }
+  }
+}

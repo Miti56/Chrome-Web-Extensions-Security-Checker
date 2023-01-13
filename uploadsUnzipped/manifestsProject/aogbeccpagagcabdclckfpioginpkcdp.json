@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Opportunity Detect Phone",
+  "version": "0.1",
+  "content_scripts": [
+  {
+    "matches": [
+      "https://crm.extsrv.com/*",
+      "https://rpa.extsrv.com/*",
+      "https://spa.extsrv.com/*"
+    ],
+    "js": ["jquery-3.4.1.min.js","content.js"]
+  }
+],
+  "browser_action": {
+  "default_icon": "phonegreen.png"
+}
+}

@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Postwoman Browser Extension",
+  "version": "0.5",
+  "description": "Provides more capabilities for Postwoman (https://postwoman.io)",
+  "icons": {
+    "16": "icons/icon-16x16.png",
+    "48": "icons/icon-48x48.png",
+    "128": "icons/icon-128x128.png"
+  },
+  "background": {
+    "scripts": [ "index.js" ],
+    "persistent": false 
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://postwoman.io/",
+        "https://postwoman.io/*",
+        "https://postwoman.netlify.com/*",
+        "https://postwoman.netlify.com/"
+      ],
+      "js": [ "contentScript.js" ]
+    }
+  ],
+  "permissions": [
+    "*://*/*",
+    "https://postwoman.io/",
+    "https://postwoman.io/*",
+    "https://postwoman.netlify.com/*",
+    "https://postwoman.netlify.com/"
+  ],
+  "applications": {
+    "gecko": {
+      "id": "postwoman-firefox@postwoman.io"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "postwoman-firefox@postwoman.io"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "GUI日本語化 for Slack",
+  "version": "0.1.34",
+  "manifest_version": 2,
+  "description": "Japanese Language for Slack",
+  "content_scripts": [
+    {
+      "matches": ["*://*.slack.com/*"],
+      "js": ["js/jquery-3.2.0.min.js","js/slack_japanese.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "js/slack_japanese_embeded.js",
+    "js/slack_japanese_tbl.js",
+    "js/debug.js"
+  ],
+  "permissions": [
+    "<all_urls>"
+  ]
+}

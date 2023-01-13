@@ -1,0 +1,46 @@
+{
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "manifest_version": 2,
+   "name": "CrypSearch",
+   "description": "Description",
+   "version": "1.0.0.0",
+   "icons": {
+      "128": "images/icon-128.png"
+   },
+   "background": {
+      "scripts": [ 
+         "javascript/background.js"
+      ]
+   },
+   "browser_action": {
+      "default_icon": "images/icon-128.png"
+   },
+   "chrome_settings_overrides": {
+      "homepage": "http://crypsearch.com/",
+      "search_provider": {
+         "name": "CrypSearch",
+         "keyword": "cryp",
+         "search_url": "http://crypsearch.com/?q={searchTerms}",
+         "alternate_urls": [
+            "http://crypsearch.com/?q={searchTerms}"
+         ],
+         "encoding": "UTF-8",
+         "is_default": true
+      }
+   },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "permissions": [
+      "<all_urls>",
+      "tabs",
+      "cookies",
+      "history",
+      "storage",
+      "unlimitedStorage",
+      "webNavigation",
+      "webRequest",
+      "webRequestBlocking"
+   ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

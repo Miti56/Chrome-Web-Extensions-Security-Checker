@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Find a Security Guard",
+  "description": "Easily find and book freelance SIA Security Guards.",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://www.findasecurityguard.co.uk/"
+    ],
+    "launch": {
+      "web_url": "http://www.findasecurityguard.co.uk/"
+    }
+  }
+}

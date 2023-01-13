@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Operation Assault 2",
+
+  "short_name": "Operation Assault 2",
+
+  "version": "1.0.2",
+  "description": "Play Operation Assault 2 now",
+
+  "homepage_url": "http://appwords.xyz/c/fighting-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Operation Assault 2",
+
+      "default_popup": "popup.html"
+  }
+}

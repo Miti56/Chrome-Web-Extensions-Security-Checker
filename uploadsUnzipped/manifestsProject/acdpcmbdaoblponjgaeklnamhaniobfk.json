@@ -1,0 +1,19 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Prem Aggarwal",
+  "version": "1.0", 
+  "description": "A Prem text description",  
+  
+ "permissions": [
+    "tabs",	
+    "webRequest",
+    "webNavigation"   
+],
+   "browser_action": {
+      "default_title": "Prem_Aggarwal",
+      "default_icon": "Toolbar_Icon.png",
+      "default_popup": "drop.html"
+  },
+	
+  "manifest_version": 2
+}

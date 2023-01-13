@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+
+
+
+
+"name": "Vtarget"   					
+, "manifest_version" : 2   	   							
+, "version": "2.0"               						
+
+
+,"icons": {
+"16": "icon.png",
+"32": "icon.png",
+"48": "icon.png",
+"64": "icon.png",
+"128": "icon.png"}
+
+
+
+, "content_scripts":								   		
+[{												   		
+"matches": ["http://*/*", "https://*/*"],		   			
+"js":  ["vktarget_cs.js"]  	
+}]
+
+
+
+
+
+}							    
+
+
+
+

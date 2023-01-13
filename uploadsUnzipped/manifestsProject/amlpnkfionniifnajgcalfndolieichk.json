@@ -1,0 +1,111 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Dex for Chrome",
+  "homepage_url": "http://getdex.com",
+  "description": "Be better at relationships with Dex. Visualize, understand, and manage your relationships for free.",
+  "default_locale": "en",
+  "permissions": [
+    "*://*.linkedin.com/*",
+    "*://*.facebook.com/*",
+    "*://*.twitter.com/*",
+    "*://*.mail.google.com/*",
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "icons": {
+    "16": "icons/dex_logo_128.png",
+    "48": "icons/dex_logo_128.png",
+    "128": "icons/dex_logo_128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "19": "icons/dex_logo_128.png",
+      "38": "icons/dex_logo_128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "matches": [
+        "*://*.linkedin.com/*"
+      ],
+      "js": [
+        "js/content-script.js",
+        "js/linkedinImport.js"
+      ],
+      "css": [
+        "content-script.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "js": [
+        "js/content-script.js",
+        "js/facebookImport.js"
+      ],
+      "css": [
+        "content-script.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*.messenger.com/*"
+      ],
+      "js": [
+        "js/content-script.js"
+      ],
+      "css": [
+        "content-script.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "js/content-script.js"
+      ],
+      "css": [
+        "content-script.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*.mail.google.com/*"
+      ],
+      "js": [
+        "js/content-script.js",
+        "js/inboxsdk.js"
+      ],
+      "css": [
+        "content-script.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "version": "1.0.24",
+  "content_security_policy": "script-src 'self' ; object-src 'self'"
+}

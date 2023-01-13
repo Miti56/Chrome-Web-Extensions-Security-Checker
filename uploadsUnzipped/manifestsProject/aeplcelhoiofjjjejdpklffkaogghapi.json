@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "cookies",
+    "webRequest",
+    "bookmarks",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["js/jquery.js", "js/content.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon_small.png",
+      "48": "images/icon_mid.png"
+    },
+    "default_title": "TalentSeer Sourcing Assistant",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "allow_frames": true,
+    "css": ["css/jquery-ui.css"],
+    "js": ["js/jquery.js", "js/jquery-ui.js", "js/content.js"],
+    "matches": ["*://*.linkedin.com/*", "*://*.talentseer.com/*"]
+  }, {
+    "js": ["js/jquery.js"],
+    "matches": ["*://*.linkedin.com/*", "*://*.talentseer.com/*"]
+  }],
+  "description": "CrossCircles. Inc.",
+  "icons": {
+    "128": "images/icon_large.png",
+    "16": "images/icon_small.png",
+    "48": "images/icon_mid.png"
+  },
+  "incognito": "spanning",
+  "manifest_version": 2,
+  "name": "TalentSeer Sourcing Assistant",
+  "short_name": "Sourcing Assistant",
+  "version": "0.7.3",
+  "web_accessible_resources": ["images/icon.png"],
+  "content_security_policy": "script-src 'self' https://localhost http://localhost ; object-src 'self'; "
+
+}

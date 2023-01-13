@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "FMQ Syncer",
+    "version": "0.3.8",
+    "description": "FMQ Syncer",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://focus-local.msp-uk.com/*",
+                "https://focus-dev.msp-uk.com/*",
+                "https://focus-sys.msp-uk.com/*",
+                "https://focus-uat.msp-uk.com/*"
+            ],
+            "css": [
+                "syncer.css"
+            ],
+            "js": [
+                "syncer.js"
+            ]
+        }
+    ],
+    "manifest_version": 2
+}

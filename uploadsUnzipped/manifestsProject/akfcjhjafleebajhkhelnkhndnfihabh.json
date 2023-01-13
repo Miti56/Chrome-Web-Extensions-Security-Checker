@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "VCCGenerator - Credit Card Generator Tool",
+	"short_name": "VCCGenerator",
+    "description": "Generates valid credit card details and BIN codes with all details such as Name, Address, Expiry Date and CVV code.",
+    "version": "1.0.0",
+    "homepage_url": "https://vccgenerator.com/",
+    "browser_action": {
+        "default_icon": "favicon.png",
+        "default_popup": "popup.html",
+        "default_title": "VCCGenerator - Credit Card Generator Tool"
+    },
+    "icons": {
+      "128": "favicon.png"
+   }
+}
+

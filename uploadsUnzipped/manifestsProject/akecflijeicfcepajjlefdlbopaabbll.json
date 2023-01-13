@@ -1,0 +1,28 @@
+{
+	"description": "__MSG_description__",
+	 "container": "GOOGLE_DRIVE",
+	"app": {
+	"background": {
+		"scripts": 	["scripts/back.js"],
+	      "persistent": true
+		}		  
+	},
+	"icons": {
+		"48": "imgs/asphalt-8-airborne-48.png",
+		"128": "imgs/asphalt-8-airborne-128.png"
+	},
+	"name": "__MSG_name__",
+	"default_locale": "en",
+	"optional_permissions": [
+		"management"
+	],
+	"manifest_version": 2,
+	"version": "1.0.0",
+
+ "minimum_chrome_version": "24.0.1307.0",
+
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"permissions": [
+		"browser","tabs"
+	]
+}

@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "韓總過濾器",
+  "version": "3.0",
+  "description": "還給你乾淨的 Facebook 瀏覽體驗，沒有韓總。預防心臟，高血壓等相關疾病。",
+  "manifest_version": 2,
+
+  "content_scripts": [{
+    "matches": ["https://*.facebook.com/*"],
+    "js": ["script/watch.js"]
+  }],
+
+  "permissions": ["webRequest", "https://*.facebook.com/*", "http://*.facebook.com/*"]
+}

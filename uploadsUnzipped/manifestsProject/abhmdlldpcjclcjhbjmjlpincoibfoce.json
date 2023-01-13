@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Start browser with only your pinned tabs",
+  "short_name": "Startup with only pinned",
+  "version": "0.4",
+  "description": "This extension removes all your not pinned tabs on startup of your browser.",
+  "author": "Codulo",
+  "icons": {
+    "16": "16.png",
+    "32": "32.png",
+    "48": "48.png",
+    "64": "64.png",
+    "128": "128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

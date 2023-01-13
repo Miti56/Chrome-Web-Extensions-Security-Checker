@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"app": {
+"launch": {
+"web_url": "http://gameog.org/mad-shark/play/"
+},
+"urls": [ "http://gameog.org/mad-shark/play/" ]
+},
+"default_locale": "en",
+"description": "__MSG_appDesc__",
+"icons": { "24": "24.png", "128": "128.png" },
+"name": "__MSG_appName__",
+"version": "2.0.3",
+"manifest_version": 2,
+"permissions": [ "unlimitedStorage", "notifications" ]
+}

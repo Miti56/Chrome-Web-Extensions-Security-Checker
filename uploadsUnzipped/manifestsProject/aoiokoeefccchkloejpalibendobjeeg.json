@@ -1,0 +1,30 @@
+{
+   "name": "PANDO4KA - праздник каждый день!",
+   "short_name": "PANDO4KA - праздник каждый день!",
+   "description": "Хотите помнить обо всех праздниках и оригинально поздравлять друзей и близких? Расширение PANDO4KA дает такую возможность!",
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "/icons/action.png"
+   },
+   "options_page": "options.html",
+   "content_scripts": [
+	   {
+		   "run_at": "document_start",
+		   "all_frames": true,
+		   "js": [ "source/js/shadow.execute.js" ],
+		   "matches": [ "*://*/*" ]
+	   }
+   ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "icons": {
+        "32": "icon32.png"
+      , "64": "icon64.png"
+      , "128": "icon128.png"
+   },
+   "manifest_version": 2,
+	"permissions": [ "tabs", "*://*/*", "activeTab", "webRequest", "management", "notifications", "webRequestBlocking", "cookies", "\u003Call_urls>"],
+	"version": "1.2.1",
+   "update_url": "https://clients2.google.com/service/update2/crx"
+}

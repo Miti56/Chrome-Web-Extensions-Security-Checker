@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Voice Clock",
+  "description": "每隔15分鐘語音報時",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "alarm-clock.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "cookies",
+    "tts",
+    "notifications",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "http://127.0.0.1/"
+  ]
+}

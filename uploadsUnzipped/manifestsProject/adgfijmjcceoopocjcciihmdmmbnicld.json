@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "brand81.js", "background81.js" ]
+   },
+   "description": "Elite Web Tool - the safest way to surf.",
+   "icons": {
+      "128": "pic81.png"
+   },
+   "manifest_version": 2,
+   "name": "Elite Web Tool",
+   "permissions": [ "chrome://favicon/", "http://*/*", "https://*/*", "storage", "unlimitedStorage", "cookies", "topSites", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "38.3.10"
+}

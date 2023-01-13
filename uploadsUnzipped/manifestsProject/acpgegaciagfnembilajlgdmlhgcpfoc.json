@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bubble Charms",
+  "description": "Brimming with bubbly fun! A fun and colorful arcade puzzle game. Aim the bubbles and pop matching groups of three or more.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://game-cdn.poki.com/v11/bubblecharms/index.html"
+    ],
+    "launch": {
+      "web_url": "http://games.poki.com/781350/bubblecharms"
+    }
+  }
+}

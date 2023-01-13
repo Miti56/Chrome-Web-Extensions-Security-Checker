@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TapApp Student",
+  "short_name": "TapApp Student",
+  "description": "Anonymous Reporting",
+  "version": "1.0.6",
+  "manifest_version": 2,
+  "icons": {
+    "128": "ic_launcher.png",
+    "16": "ic_launcher.png",
+    "32": "ic_launcher.png",
+    "48": "ic_launcher.png",
+    "64": "ic_launcher.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {}
+}

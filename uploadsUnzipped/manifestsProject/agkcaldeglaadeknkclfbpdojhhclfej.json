@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Yandex Music Downloader",
+    "version": "0.0.2",
+    "description": "Download tracks",
+    "permissions": ["https://music.yandex.by/*","https://music.yandex.ru/*","https://music.yandex.ua/*","https://music.yandex.kz/*","https://storage.mds.yandex.net/*","downloads"],
+    "background": {
+      "scripts": [ "bundle.js","md5.js","main.js"],
+      "persistent": false
+    },
+    
+    "content_scripts": [
+      {
+        "matches": ["https://music.yandex.by/*","https://music.yandex.ru/*","https://music.yandex.ua/*","https://music.yandex.kz/*"],
+        "js": ["script/content.js"],
+        "css" : ["style/main.css"]
+      }
+    ],
+    "web_accessible_resources": [
+      "script/content.js",
+      "script/page.js",
+      "images/icon-dark.svg",
+      "images/icon-light.svg"
+    ],
+    "externally_connectable": {
+      "matches": ["https://music.yandex.by/*","https://music.yandex.ru/*","https://music.yandex.ua/*","https://music.yandex.kz/*"]
+    },
+    "browser_action": { 
+        "default_icon": "images/logo.png"
+      },
+    "icons":{
+        "24":"logos/24.png",
+        "48":"logos/48.png",
+        "128":"logos/128.png"
+    },
+    
+    "manifest_version": 2
+  }

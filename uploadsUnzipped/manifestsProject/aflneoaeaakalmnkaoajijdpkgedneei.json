@@ -1,0 +1,13 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+	"name": "TRX Helper", 
+		"version": "1.0", 
+		"manifest_version": 2,
+"description" : "营销平台审核小助手",
+		"content_scripts": [ { 
+			"js": [ "jquery.js", "main.js" ], 
+			"matches": [ "http://tyx.admin.taobao.org/baoming/query_application_new.htm*" ], 
+			"run_at": "document_end" 
+		} ] 
+}

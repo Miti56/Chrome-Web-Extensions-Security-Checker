@@ -1,0 +1,28 @@
+
+	{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+		"name": "Match Game - Weights at Duckie Deck",
+		"description": "You have to organize the weights to fit into corresponding holes. This game develops the ability of identifying and matching shapes.",
+		"version": "1.1",
+		"manifest_version": 2,
+		"app":
+		{
+			"urls": 
+			[
+				"http://www.duckiedeck.com/play/weights?ref=cws"	
+			],
+			"launch":
+			{
+				"web_url": "http://www.duckiedeck.com/play/weights?ref=cws"
+			}
+		},
+		"icons":
+		{
+			"128": "icon_128.png"
+		},
+		"permissions":
+		[
+			"notifications"	
+		]
+	}

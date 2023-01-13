@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Run 3 - Install Bookmark",
+  "version": "3.8",
+  "manifest_version": 2,
+  "description": "Install the Run 3 game and be ready to play anytime!",
+  "homepage_url": "http://run3unblocked.co/run-3/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Run 3",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "http://run3unblocked.co/run-3/"
+  ]
+}

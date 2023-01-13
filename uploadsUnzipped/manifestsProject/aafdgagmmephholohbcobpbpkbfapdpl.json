@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name":"all car",
+	"version":"1.2",
+	"description": "Find expert reviews, photos and pricing for All Cars and Trucks from U.S. News Rankings and Review",
+		
+	 "icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+ 	 },	
+	
+	"background": {
+	        "scripts": ["background.js"]	
+        },
+
+	"browser_action": {
+    		"default_icon": "icon48.png", 
+   		"default_title": "all car"
+  	},
+
+	"permissions":["tabs"]
+}

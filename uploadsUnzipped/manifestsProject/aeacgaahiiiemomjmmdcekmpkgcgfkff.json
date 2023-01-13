@@ -1,0 +1,65 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	
+	"name": "Queue 'n Play for YouTube™",
+	"description": "__MSG_appDescription__",
+	"version": "2.1.0",  
+	"homepage_url": "https://chrome.google.com/webstore/detail/aeacgaahiiiemomjmmdcekmpkgcgfkff",
+	"short_name": "Queue 'n Play",
+
+	"icons": { 
+		"16": "img/icon.16.png",
+        "48": "img/icon.48.png",
+        "128": "img/icon.128.png" 
+	},
+	
+	"permissions": [
+		"notifications",
+		"webRequest",	
+		"*://*.youtube.com/*"
+	],
+
+	"externally_connectable": {
+	  "matches": ["*://*.youtube.com/*"]
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.youtube.com/*"],
+			"js": [
+				"js/injectangular.js"
+			],
+			"run_at": "document_start"
+		},
+		{
+			"matches": ["*://*.youtube.com/*"],
+			"js": [
+				"js/core/modules.js",
+				"js/contentscript.js"
+			],
+			"run_at": "document_end"
+		}
+	],
+	
+	"background": 
+	{ 
+		"scripts": ["js/core/modules.js", "js/background.js"] 
+	},
+	
+	"web_accessible_resources": [
+		"js/core/modules.js",
+		"js/dd.js",
+		"js/ytqnp.js",
+		"css/ytqnp.css",
+		"html/upgrade-snp.html",
+		"html/playlist.html",
+		"html/plus.html",
+		"html/mini.html"
+	],
+	
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	
+	"default_locale": "en"
+}

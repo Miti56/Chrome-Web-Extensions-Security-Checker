@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Plants Strtegy VS Online Zombies Games",
+  "description": "Plants Vs Zombies, Roblox, Roll The Ball, Roller Coaster Tycoon, Rolling Sky, Scribblenauts Remix, Smash or Pass",
+  "version": "1.7",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

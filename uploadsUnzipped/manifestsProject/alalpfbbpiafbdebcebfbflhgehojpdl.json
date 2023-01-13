@@ -1,0 +1,18 @@
+﻿{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Email links: почтовый клиент MAIL.RU",
+  "version": "1.0.1",
+    "background": { "scripts": ["background.js"] },
+	"content_scripts": [
+    {
+      "js": ["background.js"],
+	  "matches": ["http://*/*"]
+      
+    }
+	]
+	,"permissions": [
+    "tabs", "http://*/*","https://*/*"
+  ],
+  
+  "manifest_version": 2
+}

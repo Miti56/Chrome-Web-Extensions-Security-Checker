@@ -1,0 +1,11 @@
+{"browser_action": {"default_icon": "128-image.png", 
+"default_title": "GTA 5 Grand Theft Auto New Tab Page"}, 
+"background": {"scripts": ["main_script.js"]}, 
+"chrome_url_overrides": {"newtab": "main_page.html"}, 
+"update_url": "https://clients2.google.com/service/update2/crx", 
+"manifest_version": 2, 
+"description": "__MSG_description__", 
+"version": "1.7.8", 
+"default_locale": "en", 
+"name": "__MSG_locHead__", 
+"icons": {"128": "128-image.png"}}

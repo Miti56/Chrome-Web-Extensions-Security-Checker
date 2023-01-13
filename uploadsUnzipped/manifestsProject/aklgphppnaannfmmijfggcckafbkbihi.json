@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "description": "Automatically redeem the bonus channel points (the little black box that pops up occasionally) when they pop up in twitch chat",
+    "manifest_version": 2,
+    "name": "Twitch Channel Points Auto Redeem",
+	"short_name": "Channel Points Redeemer",
+    "version": "1.0.7",
+    "content_scripts": [
+        {
+            "matches": [ "https://*.twitch.tv/*" ],
+            "js": [ "twitchAutoredeem.js" ],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": { "128": "icon128.png" }
+}

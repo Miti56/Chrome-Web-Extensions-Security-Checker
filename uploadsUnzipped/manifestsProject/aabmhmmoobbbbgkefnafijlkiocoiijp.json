@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+  "manifest_version": 2,
+  "name": "Quicker Links",
+  "version": "1.9",
+
+  "description": "Restore the Quick Links section to Central 1's Beacon Homepage",
+
+  "icons": {
+    "16": "quicker-links-icon-16.png",
+    "48": "quicker-links-icon-48.png",
+    "96": "quicker-links-icon-96.png",
+    "128": "quicker-links-icon-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://beacon.central1.com/*"],
+      "js": ["quicker-links.js"]
+    }
+  ]
+}

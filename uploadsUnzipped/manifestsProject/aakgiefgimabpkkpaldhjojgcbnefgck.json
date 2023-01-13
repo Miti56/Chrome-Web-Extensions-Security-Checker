@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ 
+  "name": "IMESD-Canvas-for-Staff",
+  "description": "Canvas link forYour district Canvas link!login.",
+  "version": "4.0",
+  "manifest_version": 2,
+  "short_name": "imesd.instructure.com",
+  "app": {
+    "background": {
+      "scripts": ["loadCanvas.js"]
+    }
+  },
+  "icons": { "16": "Canvas_16.png",
+            "128": "Canvas_128.png", 
+            "32": "Canvas_32.png"}
+}

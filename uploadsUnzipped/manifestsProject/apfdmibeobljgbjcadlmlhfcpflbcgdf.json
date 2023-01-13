@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "2014 Nails Art",
+	"description": "This free app provides you all kinds of beautiful nail designs. You should make your nails different.",
+	"default_locale": "en",
+	"version": "1.1",
+	"icons": {
+		"128": "icon.png"
+	},
+	"app": {
+		"urls": ["http://www.loveitsomuch.com/makeup/nail-polish.html"],
+		"launch": {
+			"web_url": "http://www.loveitsomuch.com/makeup/nail-polish.html"
+		}
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	]
+}

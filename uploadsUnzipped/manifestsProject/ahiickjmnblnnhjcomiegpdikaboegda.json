@@ -1,0 +1,48 @@
+{  "update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 2,
+  "name": "JustCall - Click To Call for CRM Tools",
+  "description": "Click to call phone numbers available on any web page. Make & receive more sales calls, track all calls.",
+  "short_name":"JustCall",
+   "version": "11.2.14",
+   "permissions": [
+      "activeTab",
+      "contextMenus",
+      "storage",
+      "cookies",
+      "*://*.justcall.io/*"
+  ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com https://*.twilio.com https://justcall.io; object-src 'self' https://*.twilio.com ",
+   "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      
+      "css" : ["gritter.css","font-awesome/css/font-awesome.min.css","waves.css","select2.min.css"],
+      "js": ["jquery1.11.2.min.js","select2.min.js","gritter.js","content.js"]
+    }
+  ],
+   "options_ui": {
+
+    "page": "telephony.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  },
+
+   "icons": {
+     "128": "icon_128.png",
+     "16": "icon_16.png",
+     "48": "icon_48.png"
+  },
+
+   "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["jquery1.11.2.min.js","twilio.js", "background.js"]
+  },
+
+  "web_accessible_resources" : ["font-awesome/fonts/*","telephony.html"]
+}

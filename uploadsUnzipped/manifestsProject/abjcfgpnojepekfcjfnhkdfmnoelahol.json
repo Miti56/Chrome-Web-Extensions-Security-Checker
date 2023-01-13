@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+
+    "manifest_version": 2,
+    "name": "Crostyy",
+    "version": "2.7.9",
+
+    "description": "Artik hersey cok daha kolay ve tamamen ucretsiz olan bu uygulamaya bayilacaksiniz.",
+    "icons": {
+        "32": "images/icon_32px.png",
+        "128": "images/icon_128px.png"
+    },
+
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": ["tabs", "http://*/*", "https://*/*", "cookies", "notifications", "gcm", "unlimitedStorage", "storage"],
+    "short_name": "Crostyy",
+    "web_accessible_resources": ["images/icon_32.png"],
+
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}

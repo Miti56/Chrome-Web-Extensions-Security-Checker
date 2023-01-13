@@ -1,0 +1,13 @@
+{
+  "app": {
+    "urls": ["http://www.duckiedeck.com/play/tug-of-war?ref\u003dcws"],
+    "launch": {"web_url": "http://www.duckiedeck.com/play/tug-of-war?ref\u003dcws"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "Which is stronger: a machine or a big animal? The game broadens your child\u2019s knowledge.",
+  "name": "Tractor Games - Tug of War at Duckie Deck",
+  "permissions": ["notifications"],
+  "icons": {"128": "icon_128.png"},
+  "manifest_version": 2,
+  "version": "1.1"
+}

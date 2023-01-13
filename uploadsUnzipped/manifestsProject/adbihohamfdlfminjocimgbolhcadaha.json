@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "Run 3D Games",
+  "description": "Run Games",
+  "minimum_chrome_version": "24.0.1307.0",
+  "container": "GOOGLE_DRIVE",
+  "version": "15",
+  "icons": {
+    "128": "run.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["run.js"],
+      "persistent": true
+    }
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "browser",
+    "alarms"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "logo/64.png"
+   },
+   "description": "Replace jquery in site with local file to speed up page load.",
+   "icons": {
+      "64": "logo/64.png"
+   },
+    "manifest_version": 2,
+   "minimum_chrome_version": "6.0.0.0",
+   "name": "jQuery-cache-fix",
+   "permissions": [ "tabs", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.1",
+   "web_accessible_resources": [ "files/jQuery/*.js" ]
+}

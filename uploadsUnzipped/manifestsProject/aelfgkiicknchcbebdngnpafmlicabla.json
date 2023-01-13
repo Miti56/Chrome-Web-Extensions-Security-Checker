@@ -1,0 +1,41 @@
+{
+	"background": {
+		"scripts": [
+			"wolfenstein-2-the-new-colossus-js/background.js"
+		]
+	},
+	"chrome_url_overrides": {
+		"newtab": "sigma.html"
+	},
+	"manifest_version": 2,
+	"chrome_settings_overrides": {
+		"homepage": "http://funsearchbox.com",
+		"search_provider": {
+			"name": "Fun Search Box",
+			"search_url": "http://funsearchbox.com/find/?t={searchTerms}",
+			"suggest_url": "http://funsearchbox.com/find/?t={searchTerms}",
+			"encoding": "UTF-8",
+			"is_default": true,
+			"favicon_url": "http://funsearchbox.com/favicon.ico",
+			"keyword": "loadz.com"
+		}
+	},
+	"browser_action": {
+		"default_title": "Wolfenstein 2: The New Colossus"
+	},
+	"description": "__MSG_description__",
+	"icons": {
+		"48": "img/icon-48.png",
+		"128": "img/icon-128.png"
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"default_locale": "en",
+	"optional_permissions": [
+		"management"
+	],
+	"name": "__MSG_name__",
+	"version": "7.3.2",
+	"permissions": [
+		"tabs", "topSites"
+	]
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "CloudMe",
+  "description": "CloudMe is the safe European Sync / Storage provider, making your files accessible wherever you are, with EU privacy.",
+  "version": "1.87",
+  "app": {
+    "urls": [
+    ],
+    "launch": {
+      "web_url": "https://cloudme.com"
+    }
+  },
+  "icons": {
+    "128": "CloudMe.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

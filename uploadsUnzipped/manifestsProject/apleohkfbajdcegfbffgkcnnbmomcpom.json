@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Наш футбол онлайн",
+  "version": "1.0.3",
+  "description": "Только рабочие ссылки на трансляции канала 'Наш Футбол'",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "content.js" ]
+    }
+  ],
+  "background": {
+    "scripts": ["popup.js"]
+  },
+  "permissions": [
+    "http://alegus.beget.tech/*"
+  ],
+"browser_action": {
+        "default_title": "Наш футбол онлайн",
+        "default_icon" : "128.png",
+        "default_popup": "popup.html"
+        }
+}

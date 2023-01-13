@@ -1,0 +1,16 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Университет в кармане",
+  "version": "0.2",
+  "manifest_version": 2,
+  "icons": {"128": "icon.png" },
+  "app": {
+    "launch": {
+      "container": "tab",
+      "web_url": "http://skladchik.com/"
+    },
+    "web_content": {
+      "enabled": true
+    }
+  }
+}

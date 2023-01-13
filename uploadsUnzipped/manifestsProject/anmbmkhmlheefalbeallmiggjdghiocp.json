@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "browser_action": {
+      "default_icon": "16.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "src/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+	  "run_at": "document_end"
+   } ],
+   "description": "Старая игра с новыми уровнями. Работает без подключения к Интернету.",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+  "permissions": [
+    "\u003Call_urls>"
+  ],
+   "manifest_version": 2,
+   "name": "Марио Плюс",
+   "offline_enabled": true,
+   "version": "1.1.13"
+}

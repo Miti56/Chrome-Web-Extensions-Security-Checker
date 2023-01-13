@@ -1,0 +1,28 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Ru Savefrom.net"
+   },
+   "content_scripts": [ {
+      "css": [ "modify.css" ],
+      "js": [ "jquery-3.1.1.min.js", "content.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://google-analytics.com; object-src 'self'",
+   "description": "Сохранить музыку вконтакте(vk.com)",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Vk music saver",
+   "options_page": "options.html",
+   "permissions": [ "storage", "http://vk.com/*", "https://vk.com/*" ],
+   "short_name": " save vk",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ "download-icon.png", "download_new.png", "download-icon-new.png", "download-icon-white.png", "modify_bitrate.css", "modify_nobitrate.css", "icon.png" ]
+}

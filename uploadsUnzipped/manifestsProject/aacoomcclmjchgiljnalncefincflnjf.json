@@ -1,0 +1,26 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"manifest_version": 2,
+	"name": "iInternet",
+ 	"version": "0.0.1",
+ 	"description": "Radically improves the internet! (for Apple fanboys)",
+ 	"icons": {
+ 		"16": "iI_icon16.png",
+        "48" : "iI_icon48.png",
+        "128": "iI_icon128.png"
+ 	},
+ 	"browser_action": {
+ 		"default_title":"iInternet",
+    	"default_icon": "iI_icon19.png",
+    	"default_popup":"background.html"
+	},
+	"content_scripts":[
+		{
+			"matches":["http://*/*"],
+			"js":["inject.js"],
+			"run_at": "document_end",
+			"all_frames": true
+		}
+	],
+  "permissions": ["tabs","http://*/*"]
+}

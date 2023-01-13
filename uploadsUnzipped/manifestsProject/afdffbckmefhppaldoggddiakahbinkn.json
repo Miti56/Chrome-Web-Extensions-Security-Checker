@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "ClasH Strategy WAR Play Games",
+"version": "2.4",
+"description": "clash royale game,clash of clans  game",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "clash of clans game free and hd",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

@@ -1,0 +1,42 @@
+{
+   "author": "njkhanh",
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "css": [ "css/facebook.css" ],
+      "js": [ "js/libs/requirejs/require.js", "js/libs/require-cs.js", "js/content-scripts/facebook-cs.config.js" ],
+      "matches": [ "*://*.facebook.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "css/facebook.css" ],
+      "js": [ "js/libs/requirejs/require.js", "js/libs/require-cs.js", "js/content-scripts/messenger-cs.config.js" ],
+      "matches": [ "*://*.messenger.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "css/imgur.css" ],
+      "js": [ "js/libs/requirejs/require.js", "js/libs/require-cs.js", "js/content-scripts/imgur-cs.config.js" ],
+      "matches": [ "*://*.imgur.com/a/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "description": "Gửi ảnh động và biểu tưởng cảm xúc của bạn tới bạn bè facebook",
+   "externally_connectable": {
+      "matches": [ "*://*.njkhanh.com/*" ]
+   },
+   "icons": {
+      "128": "img/icon-128.png",
+      "16": "img/icon-16.png",
+      "48": "img/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlwjxp7qPQ0OYs7wmFmsRuFYhKxu1q/lKGJ/MeWMY7YEmvvKp7pr/shKSYSTI8xlsLfrBI5k2KvexQZB/5N1xX2il8EGGtvKrwDZKuP3M1OURTpAJq1m7cC9YV0ccPSSDafN1YERXMr6ofpX9vnmrs2ZGWnVHU9T53epSqPYM/1wxmO2tbvnmLGEyixwFcRADeGwD4UbDc82xre9g+/Si2IQHAUQzMFBbnoXpliD+DVV/N6Qvxhpz1+Ey3wC29GL/U4gcgiplMJoR1bvmuINNO+QlRME+7TzGSBwaAXjnjj6mKGTOSD+N6GMzMW2E9840mdHyqTojjDQ/BwvUI+piJQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "31.0",
+   "name": "Mew Sticker",
+   "options_page": "manage.html",
+   "permissions": [ "storage", "cookies", "contextMenus", "webRequest", "webRequestBlocking", "notifications", "*://*.facebook.com/*", "*://*.messenger.com/*", "*://*.imgur.com/*", "*://*.njkhanh.com/*" ],
+   "short_name": "Mew",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.6",
+   "web_accessible_resources": [ "img/*", "js/*", "css/*" ]
+}

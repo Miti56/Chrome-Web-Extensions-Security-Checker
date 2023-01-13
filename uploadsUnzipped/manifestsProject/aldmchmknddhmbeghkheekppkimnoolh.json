@@ -1,0 +1,20 @@
+{
+   "app": {
+      "background": {
+         "persistent": true,
+         "scripts": [ "background.js" ]
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "description": "YouTubeCenter Youtube Video Center nice extesion",
+   "icons": {
+      "128": "YouTubeCenter_128.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "24.0.1307.0",
+   "name": "YouTubeCenter Youtube Video Center",
+   "permissions": [ "notifications", "storage", "browser", "alarms" ],
+   "short_name": "YouTubeCenter",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.8"
+}

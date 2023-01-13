@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "es",
+  
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "coMenta_16x16.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://www.idealista.com/inmueble/*", "*://www.idealista.com/pro/*"],
+    "js":      ["jquery-2.1.4.min.js", "content.js"]
+  }],
+  "permissions": [
+    "activeTab",
+    "http://www.idealista.com/",
+    "https://ajax.googleapis.com/"
+  ],
+  "icons": { 
+    "16": "coMenta_16x16.png",
+    "48": "coMenta_48x48.png",
+    "128": "coMenta_128x128_Borde.png" 
+  }
+}

@@ -1,0 +1,30 @@
+﻿{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_application_title__",
+    "short_name": "__MSG_application_shortname__",
+    "description": "__MSG_application_description__",
+    "default_locale": "en",
+    "manifest_version": 2,
+    "version": "1.0",
+    "app": {
+        "urls": [
+            "*://app.mobiare.com/"
+        ],
+        "launch": {
+            "web_url": "https://app.mobiare.com/?utm_source=chromewebstore&utm_medium=marketplace&utm_campaign=marketplace"
+        }
+    },
+    "icons": {
+        "128": "icons/mobiare-logo-128x128.png",
+        "48": "icons/mobiare-logo-48x48.png",
+        "16": "icons/mobiare-logo-16x16.png"
+    },
+    "permissions": [
+        "unlimitedStorage",
+        "notifications",
+        "geolocation",
+        "clipboardRead",
+        "clipboardWrite"
+    ]
+}

@@ -1,0 +1,53 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+   "name": "GroupWise-2012-Red",
+   "theme": {
+      "colors": {
+        "frame": [ 82, 0, 0 ],
+        "frame_inactive": [ 148, 148, 148 ],
+        "frame_incognito": [ 83, 106, 139 ],
+        "frame_incognito_inactive": [ 126, 139, 156 ],
+        "toolbar": [ 210, 225, 246 ],
+        "tab_text": [ 31, 31, 31 ],
+        "tab_background_text": [ 55, 85, 95 ],
+        "bookmark_text": [ 0, 80, 105 ],
+        "ntp_background": [ 82, 0, 0 ],
+        "ntp_text": [ 31, 31, 31 ],
+        "ntp_link": [ 0, 160, 210 ],
+        "ntp_link_underline": [ 0, 160, 210 ],
+        "ntp_header": [ 0, 80, 105 ],
+        "ntp_section": [ 210, 225, 246 ],
+        "ntp_section_text": [ 31, 31, 31 ],
+        "ntp_section_link": [ 0, 160, 210 ],
+        "ntp_section_link_underline": [ 0, 160, 210 ],
+        "control_background": [ 0, 0, 0, 0 ],
+        "button_background": [ 0, 0, 0, 0 ]
+      },
+      "images": {
+      "theme_frame": "images/frame.png",
+      "theme_toolbar": "images/toolbar.png",
+      "theme_tab_background": "images/tab_background.png",
+      "theme_ntp_background": "images/ntp_background.png",
+      "theme_ntp_attribution": "images/ntp_attribution.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "top",
+         "ntp_background_repeat": "no-repeat",
+         "ntp_logo_alternate": 0
+      },
+      "tints": { 
+        "buttons": [ -1, -1, -1 ],
+        "frame": [ -1, -1, -1 ],
+        "frame_inactive": [ -1, -1, 0.75 ],
+        "frame_incognito": [ -1, 0.2, 0.35 ],
+        "frame_incognito_inactive": [ -1, 0.3, 0.6 ],
+        "background_tab": [ -1, 0.5, 0.75 ]
+      },
+      "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+      }
+   },
+   "version": "1.0"
+}

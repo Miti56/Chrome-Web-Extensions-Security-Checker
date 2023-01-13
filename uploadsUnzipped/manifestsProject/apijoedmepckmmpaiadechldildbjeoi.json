@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Lamoneta.it Extension",
+	"manifest_version": 2,
+	"description": "Piccolo tool per recuperare messaggi direttamente nel browser",
+	"version": "1.0.0",
+	"browser_action": {
+		"default_icon": "icon19.png",
+		"default_popup": "popup.html"
+	},
+	"icons": { 
+		"48": "icon48.png",
+		"64": "icon64.png",
+		"128": "icon128.png"
+	},
+	"background": {
+	"page": "background.html",
+	"persistent": true
+	},
+	"permissions": [
+"http://*.lamoneta.it/*",
+"alarms",
+"notifications"
+]
+}

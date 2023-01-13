@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"manifest_version": 2,
+"name": "Docswave", 
+"description": "Software in Life, Inc.",
+"version": "4.0.2",
+	"icons": {
+		"16": "icons/16x16-icon.png",
+		"48": "icons/48x48-icon.png",
+		"128": "icons/128x128-icon.png"
+	},
+"app": {
+"urls": [
+"http://www.docswave.com/"
+],
+"launch": {
+"web_url": "http://www.docswave.com/"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}

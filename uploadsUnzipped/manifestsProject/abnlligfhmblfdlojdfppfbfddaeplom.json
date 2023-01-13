@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name" : "AutoAnswer", 
+ "version": "0.2", 
+ "manifest_version": 2,
+ "description": "某アンケートの自動回答用拡張機能．某アンケートのページでしか動作しません．アンケートの回答画面を開くと解答が終了するのでOKを押してください．",
+ "options_page":"option.html",
+ "icons": {
+  "16": "16.png",
+  "48": "48.png",
+  "128": "128.png"
+ },
+ "permissions": [
+   "storage",
+    "tabs", "https://portal.student.kit.ac.jp/ead/?c=class_evaluation_reply&lc=*"
+  ],
+  "content_scripts": [
+   {
+    "matches" : ["https://portal.student.kit.ac.jp/ead/?c=class_evaluation_reply&lc=*"], 
+    "js": ["content_script.js"]
+   }
+  ]
+}

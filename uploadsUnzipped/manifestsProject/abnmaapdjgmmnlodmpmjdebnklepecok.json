@@ -1,0 +1,43 @@
+{
+  "background": {
+    "persistent": false,
+    "scripts": ["conf.js", "term_parser.js", "main.js"]
+  },
+  "content_scripts": [
+    {
+      "js": ["sizzle.js"],
+      "matches": ["\u003Call_urls>"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "data/icons/disabled/16.png",
+      "32": "data/icons/disabled/32.png",
+      "64": "data/icons/disabled/64.png"
+    }
+  },
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png",
+    "256": "data/icons/256.png"
+  },
+  "name": "Internet Download Manager (IDM)",
+  "description": "Download picture, video and files with built-in internet download manager (idm)",
+  "version": "0.9.5",
+  "manifest_version": 2,
+  "permissions": [
+    "storage",
+    "tabs",
+    "nativeMessaging",
+    "notifications",
+    "downloads",
+    "contextMenus",
+    "<all_urls>"
+  ],
+  "offline_enabled": true,
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

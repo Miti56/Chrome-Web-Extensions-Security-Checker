@@ -1,0 +1,44 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "description": "A lively burst of teal for Chrome, inspired by niivu's MIKU visual style and including a wallpaper from the MikuMNML wallpaper pack.",
+   "version": "3.0.0",
+   "manifest_version": 2,
+   "name": "Vivant",
+   "icons": { "48": "images/icon48.png",
+         "128": "images/icon128.png" },
+   "theme": {
+      "colors": {
+		 "background_tab": [ 24, 34, 36 ],
+		 "background_tab_inactive": [ 14, 24, 26 ],
+		 "background_tab_incognito": [ 4, 14, 16 ],
+		 "background_tab_incognito_inactive": [ 0, 4, 6 ],
+		 "bookmark_text": [ 255, 255, 255 ],
+         "frame": [ 24, 34, 36 ],
+         "frame_inactive": [ 14, 24, 26 ],
+         "frame_incognito": [ 4, 14, 16 ],
+         "frame_incognito_inactive": [ 0, 4, 6 ],
+         "ntp_background": [ 36, 52, 49 ],
+		 "ntp_text": [ 186, 195, 207 ],
+		 "ntp_link": [ 176, 185, 197 ],
+		 "ntp_header": [ 47, 58, 60 ],
+         "tab_background_text": [ 186, 195, 207 ],
+		 "tab_background_text_inactive": [ 176, 185, 197 ],
+		 "tab_background_text_incognito": [ 186, 195, 207 ],
+		 "tab_background_text_incognito_inactive": [ 176, 185, 197 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 0, 80, 65 ]
+      },
+      "images": {
+         "theme_ntp_background": "images/mikumnml.png",
+		 "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_repeat": "repeat",
+         "ntp_logo_alternate": 1
+      },
+      "tints": {
+         "buttons": [ 0, 0, 1 ]
+      }
+   }
+}

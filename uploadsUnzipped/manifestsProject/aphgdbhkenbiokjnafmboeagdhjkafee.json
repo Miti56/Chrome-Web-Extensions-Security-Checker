@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "usansible",
+    "version": "1.0.0",
+    "description": "usansible ... support your Ansible Development. this tool provides you with two functions.",
+    "icons": {
+        "128": "icons/usansible.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://docs.ansible.com/ansible/*/modules/*",
+                "https://docs.ansible.com/ansible/*/plugins/*"
+            ],
+            "js": [
+                "usansible.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "omnibox": {
+        "keyword": "usa"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    }
+}

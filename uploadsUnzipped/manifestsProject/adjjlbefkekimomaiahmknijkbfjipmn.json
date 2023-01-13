@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "1.2",
+  "manifest_version": 2,
+  "icons": { "16": "img/icon16.png",
+           "48": "img/icon48.png",
+          "128": "img/icon128.png" },
+   "web_accessible_resources": [
+        "img/logo.png",
+		"img/close_button.png",
+		"img/icon128.png"
+  ],
+  "browser_action": {
+    "default_icon": "img/icon19.png",
+	"default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+	"http://*/*", "https://*/*",
+	"cookies",
+    "browsingData",
+	"tabs",
+	"notifications"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://tomusss.univ-lyon1.fr/*"],
+      "css": ["modify.css"],
+      "js": ["lib/jquery.js", "hack.js"]
+    },{
+	  "matches": ["https://accesbv.univ-lyon1.fr/owa/auth/*"],
+	  "js": ["lib/jquery.js", "login.js"]
+	},{
+	  "matches": ["https://accesbv.univ-lyon1.fr/owa/"],
+	  "js": ["lib/jquery.js", "messagepage.js"]
+	},{
+	  "matches": ["http://adeweb.univ-lyon1.fr/*"],
+	  "js": ["lib/jquery.js", "adepage.js"],
+	  "all_frames": true
+	}
+  ],
+  "background": {
+    "scripts": ["lib/jquery.js", "background.js"],
+	"permissions": ["http://*/*", "https://*/*"]
+  }
+}

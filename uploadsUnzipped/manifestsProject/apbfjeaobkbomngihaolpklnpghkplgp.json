@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version" : 2,
+    "name" : "MIX Assistance Screen Sharing",
+    "version" : "1.0.1",
+    "icons" : {
+        "16" : "Assistance-16.png",
+        "32" : "Assistance-32.png",
+        "48" : "Assistance-48.png",
+        "128" : "Assistance-128.png"
+    },
+    
+    "author": "Indeca 4D GmbH",
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+       "js": ["content.js"],
+       "all_frames": true,
+       "run_at": "document_end",
+       "matches": ["*://*/*"]
+    }],
+    "homepage_url": "https://xrgo.io/produkt/assistance/",
+    "minimum_chrome_version": "34",
+    "permissions": [
+        "desktopCapture"
+    ],
+    "web_accessible_resources": [
+        "Assistance-16.png",
+        "Assistance-32.png",
+        "Assistance-48.png",
+        "Assistance-128.png"
+    ]
+}

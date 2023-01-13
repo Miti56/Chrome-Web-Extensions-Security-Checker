@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Panda Love",
+	"description": "Non-stop tapping romantic adventure! Timing and accuracy rule! Avoid spikes clear the coins head to the portal.",
+	"version": "1.0.0.1",
+	"manifest_version": 2,
+	"homepage_url": "http://pandalove.parseapp.com",
+	"app": {
+		"launch": {
+			"local_path": "index.html"
+		}
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
+	},
+	"permissions": [
+		"unlimitedStorage"
+	],
+	"offline_enabled": true
+}

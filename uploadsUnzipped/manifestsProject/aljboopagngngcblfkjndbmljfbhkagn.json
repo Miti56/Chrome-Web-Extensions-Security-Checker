@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "short_name": "DeepTranslator",
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "1.0.15",
+    "permissions": [
+        "<all_urls>",
+        "storage",
+        "tabs",
+        "contextMenus",
+        "clipboardRead",    
+        "activeTab",
+        "background",
+        "notifications"
+    ],
+    "background": {
+        "scripts": [
+            "content_scripts/deepL.js",
+            "content_scripts/db.js",
+            "content_scripts/http.js",
+            "content_scripts/general.js",
+            "content_scripts/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icons/icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Deep Translator"
+    },
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+U",
+                "mac": "Command+Shift+U",
+                "chromeos": "Ctrl+Shift+U",
+                "linux": "Ctrl+Shift+U"
+          },
+          "description": "Open Deep Translator",
+          "global" : true
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_security_policy": "script-src 'self'; object-src 'self'"
+}

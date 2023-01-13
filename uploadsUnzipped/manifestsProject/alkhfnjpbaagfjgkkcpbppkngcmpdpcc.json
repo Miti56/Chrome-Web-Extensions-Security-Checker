@@ -1,0 +1,16 @@
+{
+   "browser_action": {
+      "default_icon": "back.png",
+      "default_popup": "background.html"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery.js", "background.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Công cụ đặt hàng trên trình duyệt Chrome & Cờ rôm+ OD.",
+   "manifest_version": 2,
+   "name": "Đặt hàng trên HAIPHONGORDER.COM",
+   "permissions": [ "http://haiphongorder.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5"
+}

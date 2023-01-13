@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Musix Cloud",
+   "description": "MusixCloud is a powerful newtab, offering you a variety of unique features and search tools",
+   "short_name": "MusixCloud",
+    "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/icon38.png",
+    "default_popup": "about/index.html"
+  },
+  "options_page": "index.html?showmenu=1",
+
+  "manifest_version": 2,
+   "background": {
+      "scripts": ["js/settings.js","js/background.js","js/ds.js","js/private.js","js/bg.js"]
+   },
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": [ "/js/*"],
+   "permissions": [
+     "contextMenus", "http://*/*","https://*/*"  ,"webRequest"  ,"webRequestBlocking","privacy" ,"storage","cookies","tabs","topSites"
+   ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "author": "MusixCloud",
+  "version": "1.7"
+}

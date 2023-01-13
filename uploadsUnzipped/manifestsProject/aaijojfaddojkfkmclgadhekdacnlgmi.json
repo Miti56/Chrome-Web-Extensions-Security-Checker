@@ -1,0 +1,12 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"app": {"launch": {"web_url": "http://www.guoxiaoming.com/"} },
+"icons": {
+	"128": "icon_128.png"
+},
+"version": "0.0.0.1",
+"manifest_version": 2,
+"name": "郭小铭",
+"description": "郭小铭的博客"
+}

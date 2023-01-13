@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "QTUM Light Wallet",
+  "description": "QTUM Wallet Light for Chrome",
+  "version": "0.5.0",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "QTUM Light Wallet"
+  },
+  "icons": {
+    "16": "favicon.png",
+    "48": "favicon.png",
+    "128": "favicon.png"
+  },
+  "background": {
+    "page": "integration/background/index.html",
+    "persistent": true
+  },
+    "content_scripts": [
+      {
+          "matches": [
+              "file://*/*",
+              "http://*/*",
+              "https://*/*"
+          ],
+          "js": [
+              "integration/contentScript/index.js"
+          ],
+          "run_at": "document_start",
+          "all_frames": false
+      }
+  ],
+  "web_accessible_resources": ["integration/inpage/index.js"],
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "clipboardWrite",
+    "activeTab",
+    "tabs",
+    "background"
+  ]
+}

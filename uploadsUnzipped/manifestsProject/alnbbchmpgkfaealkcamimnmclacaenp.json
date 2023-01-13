@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Nowp Qrcode Decoder",
+  "description": "Qrcode decoder",
+  "version": "1.2",
+
+  "browser_action": {
+    "default_icon": "icon.orig.png"
+  },
+  "permissions": [
+    "activeTab",
+    "http://133.186.135.115/",
+    "contextMenus",
+    "tabs"
+  ],
+  "icons": {
+    "16": "icon.16.png"
+  },
+  "background": {
+    "page": "b.html"
+  }
+}

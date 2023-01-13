@@ -1,0 +1,36 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"icons": {
+		"128": "resources/img/icon.png"
+	},
+	"name": "iVysilani pro Chromecast",
+	"description": "Rozšíření, které odešle video archívu České Televize a Aktualne.TV (DVTV) do zařízení Chromecast",
+	"version": "0.11",
+	"content_scripts": [
+		{
+			"js": [
+				"resources/lib/vue.min.js",
+				"main.js"
+			],
+			"matches": [
+				"https://www.ceskatelevize.cz/*",
+				"https://video.aktualne.cz/*"
+			]
+		}
+	],
+	"web_accessible_resources": [
+		"cast.js",
+		"resources/lib/vue.min.js",
+		"resources/css/caster.css",
+		"resources/img/play.png",
+		"resources/img/pause.png"
+	],
+	"content_security_policy": "script-src 'self' https://www.gstatic.com; object-src 'self'",
+	"permissions": [
+		"activeTab",
+		"http://80.188.65.18/*",
+		"https://www.gstatic.com/*"
+	]
+}

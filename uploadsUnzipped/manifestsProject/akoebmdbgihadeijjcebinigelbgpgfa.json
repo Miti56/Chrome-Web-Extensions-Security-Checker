@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "sjsAuto",
+  
+  "version" : "1.2",
+  
+  "description" : "sjsAuto",
+  
+  "permissions": [ "storage" ],
+
+  "options_page": "options.html",
+  
+  "content_scripts": [
+    {
+      "matches": ["http://*.sjs373.com/*"],
+      "js": ["jquery-1.10.2.js","content_script.js"],
+      "all_frames":true
+    }
+  ],
+  
+ 
+  "browser_action": {
+     "default_icon": "favicon.png",
+     "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

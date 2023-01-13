@@ -1,0 +1,34 @@
+{
+   "background": {
+      "scripts": [ "js/lib/grafy.js", "js/lib/analytics.js", "js/lib/jquery-3.1.1.min.js", "js/lib/tools.js", "js/_config.js", "js/search-engine.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon_32.png",
+      "default_popup": "popup.html",
+      "default_title": "Video Downloader Ocean"
+   },
+   "content_scripts": [ {
+      "css": [ "css/app.css", "css/sidebar.css", "css/content.css" ],
+      "js": [ "js/lib/jquery-3.1.1.min.js", "js/lib/tools.js", "js/lib/md5.min.js", "js/_config.js", "js/providers/abstract-provider.js", "js/providers/dm.js", "js/providers/fb.js", "js/providers/in.js", "js/providers/tw.js", "js/providers/vm.js", "js/providers/xx.js", "js/providers/dz.js", "js/providers/sc.js", "js/providers/sf.js", "js/providers/ya.js", "js/providers/mr.js", "js/app.js", "js/content.js" ],
+      "matches": [ "*://*/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "js/lib/analytics.js", "js/lib/jquery-3.1.1.min.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_extDesc__",
+   "icons": {
+      "128": "img/icon_128.png",
+      "32": "img/icon_32.png",
+      "64": "img/icon_64.png"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "optional_permissions": [ "downloads" ],
+   "permissions": [ "storage", "webRequest", "webRequestBlocking", "http://vk.com/*", "https://vk.com/*", "*://vkmusic.xyz/*", "*://*/*", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.5",
+   "web_accessible_resources": [ "img/*" ]
+}

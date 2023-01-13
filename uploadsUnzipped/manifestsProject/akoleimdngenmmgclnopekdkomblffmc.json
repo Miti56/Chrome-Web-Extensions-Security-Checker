@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Polybot for CSGOAtse",
+	"version": "2.8",
+	"manifest_version": 2,
+	"description": "Tools and features for csgoatse!",
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.csgoatse.com/*"
+			],
+			"css": ["lib/bootstrap.min.css", "lib/font-awesome.css"],
+			"js": ["lib/jquery-2.2.4.js", 
+				   "lib/bootstrap.min.js",
+				   "inject/injector.js",
+				   "non-inject/botcore.js",
+				   "non-inject/uimods.js",
+				   "non-inject/bots/martingale.js",
+				   "non-inject/bots/popular.js",
+				   "non-inject/bots/green.js",
+				   "non-inject/bots/smartgreen.js"]
+		}
+	],
+	"icons": { "128": "128.png" },
+	"background": {
+      "scripts": ["firsttimerun.js"]
+    },
+
+	"web_accessible_resources": ["inject/sidebar.js",
+								 "cryptico/*.js",
+									"fonts/*.*"
+								 ],
+	"permissions": ["storage", "tabs", "*://*.csgoatse.com/*"]
+}

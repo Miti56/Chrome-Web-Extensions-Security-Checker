@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Noteme",
+  "description": "Replace new tab page with a personal note application",
+  "permissions": ["storage", "unlimitedStorage", "alarms"],
+  "version": "1.0.11",
+  "icons": {
+    "16": "assets/icons/noteme-icon-16.png",
+    "32": "assets/icons/noteme-icon-32.png",
+    "48": "assets/icons/noteme-icon-48.png",
+    "128": "assets/icons/noteme-icon-128.png"
+  },
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
+}

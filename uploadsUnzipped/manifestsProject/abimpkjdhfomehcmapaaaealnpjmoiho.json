@@ -1,0 +1,12 @@
+{"update_url": "https://clients2.google.com/service/update2/crx", 
+"background": {"scripts": ["backscript.js"]},
+ "icons": {"128": "128-splatoon-2.png", 
+"48": "48-splatoon-2.png"},
+ "version": "0.3.0", 
+"browser_action": {"default_icon": "128-splatoon-2.png", 
+"default_title": "Splatoon 2 Wallpapers & Themes"},
+ "description": "Add our Splatoon 2 Wallpapers To Your Browser And Enjoy HD Themes Every New Tab", 
+"offline_enabled": true, 
+"manifest_version": 2, 
+"chrome_url_overrides": {"newtab": "index.html"},
+ "name": "Splatoon 2 Wallpapers & Themes"}

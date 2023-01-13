@@ -1,0 +1,64 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "NCTU Awesome",
+  "description": "讓交大的網頁變得更好用。",
+  "version": "0.1.1",
+  "homepage_url": "https://github.com/kevinptt0323/NCTU-Awesome",
+  "content_scripts": [
+    {
+      "matches": ["*://course.nctu.edu.tw/", "*://course.nctu.edu.tw/index.asp"],
+      "js": [
+        "lib/jquery/jquery-3.2.1.slim.min.js",
+        "lib/mdl/material.min.js",
+        "dist/course/index.js"
+      ],
+      "css": [
+        "lib/mdl/material.min.css",
+        "lib/mdl/icon.css",
+        "dist/course/index.css"
+      ]
+    },
+    {
+      "matches": ["*://course.nctu.edu.tw/adSchedule.asp"],
+      "js": [
+        "lib/jquery/jquery-3.2.1.slim.min.js",
+        "lib/mdl/material.min.js"
+      ],
+      "css": [
+        "lib/mdl/material.min.css",
+        "lib/mdl/icon.css",
+        "dist/course/table.css"
+      ]
+    },
+    {
+      "matches": [
+        "*://course.nctu.edu.tw/testCourse/testCourse.asp"
+      ],
+      "all_frames": true,
+      "js": [
+        "lib/jquery/jquery-3.2.1.slim.min.js",
+        "lib/mdl/material.min.js",
+        "dist/course/testCourse.js"
+      ],
+      "css": [
+        "lib/mdl/material.min.css",
+        "lib/mdl/icon.css",
+        "dist/course/table.css",
+        "dist/course/testCourse.css"
+      ]
+    },
+    {
+      "matches": [
+        "*://e3new.nctu.edu.tw/*"
+      ],
+      "css": [
+        "dist/e3new/index.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "*.woff2"
+  ]
+}

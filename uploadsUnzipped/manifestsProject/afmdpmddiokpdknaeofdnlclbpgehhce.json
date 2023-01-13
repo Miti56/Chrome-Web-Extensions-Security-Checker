@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version"        : 2,
+  "name"                    : "__MSG_extensionName__",
+  "version"                 : "4.5.4",
+  "description"             : "__MSG_extensionDescription__",
+  "icons"                   : {
+                               "16" : "images/icons/icon_016.png",
+                               "48" : "images/icons/icon_048.png",
+                               "128": "images/icons/icon_128.png"
+                              },
+  "default_locale"          : "en_GB",
+  "page_action"             : {
+                                "default_icon" : "images/icons/icon_016.png",
+                                "default_title": "__MSG_defaultPageAction__"
+                              },
+  "background"              : {
+				  			               "scripts": ["oauth/chrome_ex_oauthsimple.js", "oauth/chrome_ex_oauth.js", "js/encodeToGb2312.js", 
+			  				                           "js/commonfunctions.js", "js/objectfunctions.js", "js/extensioninfo.js", 
+		  					                           "js/settings.js", "js/menu.js", "js/omnibox.js", "js/versioncheck.js", "js/opensearch.js", 
+	  						                           "js/rawsearch.js", "js/chromesync.js", "js/multisearch.js"]
+  							              },
+  "content_scripts"         : [{"matches": ["http://*/*"],
+                                "js"     : ["js/contentscript.js"]
+                               },
+                               {"matches": ["http://mycroftproject.com/*"],
+                                "js"     : ["js/mycroft.js"],
+                                "run_at" : "document_end"
+                               }],
+  "web_accessible_resources": ["images/icons/icon_016.png"],
+  "content_security_policy" : "default-src 'self'; connect-src *; script-src 'self' https://apis.google.com; style-src 'self' blob: data: filesystem: 'unsafe-inline'; img-src *; frame-src 'self' http://www.facebook.com https://plusone.google.com blob: data: filesystem:; font-src 'self' blob: data: filesystem:; media-src *;",
+  "minimum_chrome_version"  : "6.0.472.55",
+  "omnibox"                 : {"keyword": "multi"},
+  "options_page"            : "options.html",
+  "permissions"             : ["contextMenus", "notifications", "tabs", "<all_urls>"]
+}

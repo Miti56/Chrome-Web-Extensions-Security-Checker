@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bogijn Automotive",
+  "short_name": "Bogijn",
+  "version": "0.0.18",
+  "manifest_version": 2,
+  "description": "Welkom bij Bogijn, het voordelige alternatief voor uw auto-onderdelen",
+  "icons": { "16": "Algemeen/icon16.ico",
+	         "19": "Algemeen/icon19.png",
+			 "38": "Algemeen/icon38.png",
+             "48": "Algemeen/icon48.png",
+            "128": "Algemeen/icon128.png" },
+  "author": "Job Moll",
+  "incognito": "split",
+  "chrome_url_overrides": {
+	  
+	"newtab": "Bogijn.html"
+  }
+}
+
+

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Find 4 Leaf Clover",
+  "description": "Find 4 Leaf Clover",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "widget_128X128.png"
+  },
+  "app": {
+    "urls": [
+      "http://busidol1.cafe24.com/CHROME/4leaf/"
+    ],
+    "launch": {
+      "web_url": "http://busidol1.cafe24.com/CHROME/4leaf/"
+    }
+  }
+}

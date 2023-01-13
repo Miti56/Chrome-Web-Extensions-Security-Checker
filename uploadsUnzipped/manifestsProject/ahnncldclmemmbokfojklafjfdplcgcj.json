@@ -1,0 +1,16 @@
+{
+    "name": "Burlesque fm",
+    "description": "radio Burlesque fm.",
+    "app": {
+        "urls": ["http://www.burlesquefm.com/"],
+        "launch": {
+            "web_url": "http://www.burlesquefm.com/"
+        }
+    },
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    }
+}

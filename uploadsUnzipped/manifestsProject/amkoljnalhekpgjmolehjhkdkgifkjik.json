@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PKU Gateway",
+  "version": "2.0.6",
+  "manifest_version": 2,
+  "description": "北京大学网关插件 2.0",
+  "icons": {
+    "16": "public/img/16x16.png",
+    "48": "public/img/48x48.png",
+    "128": "public/img/128x128.png"
+  },
+  "browser_action": {
+    "default_icon": "public/img/24x24.png",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [
+    "https://its.pku.edu.cn:5428/*"
+  ]
+}

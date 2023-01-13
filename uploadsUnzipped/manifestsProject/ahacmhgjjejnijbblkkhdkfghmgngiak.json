@@ -1,0 +1,80 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "思成简历抓取插件",
+  "description": "只需要轻轻一按，就可以抓取来自招聘网站的简历。",
+  "homepage_url": "http://www.google.com",
+  "version": "2.0.0",
+  "manifest_version": 2,
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.zhaopin.com/*",
+        "*://*.51job.com/*",
+        "*://*.liepin.com/*",
+        "*://*.58.com/*",
+        "*://*.highpin.cn/*",
+        "*://*.fenjianli.com/*",
+        "*://*.101pin.com/*",
+        "*://*.zhaopingou.com/*",
+        "*://*.yifengjianli.com/*",
+        "*://*.jianlika.com/*",
+        "*://*.lagou.com/*",
+        "*://*.jobcn.com/*",
+        "*://*.job5156.com/*",
+        "*://*.linkedin.com/*",
+        "*://*.chinahr.com/*",
+        "*://*.ganji.com/*",
+        "*://*.cjol.com/*",
+        "*://*.dajie.com/*",
+        "*://*.xmrc.com/*",
+        "*://*.jobmd.com/*",
+        "*://*.buildhr.com/*",
+        "*://*.carjob.com/*",
+        "*://*.51jingying.com/*"
+      ],
+      "js": [
+        "js/libs/jquery/jquery-2.1.0.min.js",
+        "js/content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/libs/jquery/jquery-2.1.0.min.js",
+      "js/libs/hashmap/hashmap.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "128": "images/extension_icon_large.png"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "management",
+    "contextMenus",
+    "cookies",
+    "tabs",
+    "notifications",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>",
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "思成简历抓取插件",
+    "default_icon": "images/extension_icon_small.png"
+  },
+  "web_accessible_resources": [
+    "images/extension_icon_large.png",
+    "images/extension_icon_small.png",
+    "images/plugin_download.png",
+    "images/drag.png",
+    "templates/extractor/main.html",
+    "templates/extractor/check-result.html",
+    "js/libs/jquery/jquery-2.1.0.min.map"
+  ]
+}

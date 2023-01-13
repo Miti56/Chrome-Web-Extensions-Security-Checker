@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "jsonz",
+  "version": "2.1.1",
+  "author": "Archie Lee <achi@987.tw",
+  "description": "Make JSON pretty and syntax highlight",
+  "homepage_url": "https://github.com/jihchi/jsonz",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "*://*/*",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "bundled/commons.css"
+  ],
+  "options_page": "bundled/options.html",
+  "background": {
+    "scripts": ["bundled/background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Pretty and syntax highlight"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "bundled/commons.bundle.js",
+        "bundled/inject.bundle.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 2
+}

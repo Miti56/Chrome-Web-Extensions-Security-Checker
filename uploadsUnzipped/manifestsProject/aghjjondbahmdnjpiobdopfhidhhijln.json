@@ -1,0 +1,27 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Throw It 2 Me - Extension",
+  	"version": "1.333",
+  	"manifest_version": 2,
+  	"description": "Throw URLs and be alerted when new items are waiting for you to catch.",
+	"options_page": "options.htm",
+  	"browser_action": 
+  		{
+    	"default_icon": "ball.png",
+    	"default_title": "Throw It 2 Me",	
+		"default_popup": "control.htm"
+  		},
+  	"permissions": ["contextMenus", "notifications", "tabs", "https://throwit2me.com/"],
+	"background": 
+		{
+    	"scripts": ["main.js"]
+  		},
+  	"icons": 
+  		{
+		"128": "ball128.png",
+		"64": "ball64.png",
+		"48": "ball48.png",
+		"32": "ball32.png",
+		"16": "ball16.png"
+  		}
+}

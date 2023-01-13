@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Hide Media 2",
+  "description": "Hide media for WhatsApp™ Web, hover to see it",
+  "version": "0.0.1",
+  "permissions": ["https://web.whatsapp.com/"],
+  "browser_action": {
+    "default_icon": {
+      "19": "icon19x19.png",
+      "38": "icon38x38.png"
+    },
+    "default_title": "Hiding media on WhatsApp™ Web, hover to see it"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "css": ["style.css"]
+    }
+  ]
+}

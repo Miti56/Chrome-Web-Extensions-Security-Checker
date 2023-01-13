@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Futinator",
+  "short_name": "Futinator",
+  "version": "2.5",
+  "icons": { "16": "Logo.png",
+           "48": "Logo.png",
+          "128": "Logo.png" },
+  "permissions": [
+      "storage",
+      "activeTab",
+      "https://www.easports.com/de/fifa/ultimate-team/web-app/",
+      "https://www.easports.com/en/fifa/ultimate-team/web-app/"
+    ],
+   "browser_action": {
+        "default_icon": "Logo.png",
+        "default_popup": "options.html"
+   },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.easports.com/*fifa/ultimate-team/web-app/*",
+        "https://www.easports.com/de/fifa/ultimate-team/web-app/",
+        "https://www.easports.com/en/fifa/ultimate-team/web-app/",
+        "https://www.easports.com/fifa/ultimate-team/web-app/",
+        "https://www.easports.com/uk/fifa/ultimate-team/web-app/",
+        "https://www.easports.com/tr/fifa/ultimate-team/web-app/",
+        "https://www.easports.com/es/fifa/ultimate-team/web-app/"
+      ],
+      "js": ["backgroundob.js"]
+    }
+  ]
+}

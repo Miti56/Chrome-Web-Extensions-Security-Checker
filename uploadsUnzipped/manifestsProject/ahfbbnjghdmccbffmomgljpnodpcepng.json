@@ -1,0 +1,17 @@
+{
+  "name": "SignEasy: Sign Documents & Collect Signatures",
+  "description": "SignEasy is the simplest and the fastest way to sign documents, fill forms and collect signatures from others remotely.",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "api_console_project_id": "707661628736",
+  "version": "0.0.0.3",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "container": ["GOOGLE_DRIVE","DOMAIN_INSTALLABLE"],
+  "app": {
+    "launch": {
+      "web_url": "https://getsigneasy.com/"
+    }
+  }
+}

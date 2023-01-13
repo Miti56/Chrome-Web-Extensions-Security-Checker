@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "robotron3ksux",
+  "version": "0.2",
+  "description": "Hides anything posted by robotron3k on QBN.",
+  "icons": {
+  	"16": "icon16.png",
+	"32": "icon32.png",
+	"48": "icon48.png",
+	"128": "icon128.png"},
+  "content_scripts": [
+  {
+    "matches": [
+    	"https://www.qbn.com/*", 
+    	"http://www.qbn.com/*"
+	],
+     "js": ["jquery-3.4.0.min.js", "content.js"],
+            "run_at": "document_idle"
+        }
+  ],
+  "browser_action": {
+    "default_icon": "icon16.png"
+  }
+}

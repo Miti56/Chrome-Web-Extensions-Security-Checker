@@ -1,0 +1,21 @@
+{
+   "name": "__MSG_extName__",
+   "description": "__MSG_chrome_extension_description__",
+   "version": "0.4.4",
+   "app": {
+    "background": {
+      "scripts": ["BG.js"]
+    }
+  },
+  "icons": {
+      "128": "Icones/icon-128.png",
+      "16": "Icones/icon-16.png",
+      "48": "Icones/icon-48.png"
+   },
+   
+   "default_locale": "en",  
+   "manifest_version": 2,
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",    
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx"  
+}

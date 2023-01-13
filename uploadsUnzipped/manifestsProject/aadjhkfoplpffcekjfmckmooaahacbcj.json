@@ -1,0 +1,73 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "default_locale": "en",
+  "name": "__MSG_nameAndDesc__",
+  "short_name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "version": "2.3.9",
+  "author": "The Used",
+  "homepage_url": "https://wiselang.com",
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "65": "logo.png",
+    "128": "logo.png"
+  },
+  "minimum_chrome_version": "52",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.wiselang.com/*",
+        "*://wiselang.com/*",
+        "*://*.google-analytics.com/collect",
+        "*://*.google.com/*",
+        "*://*.yandex.ru/*",
+        "*://*.googleapis.com/*",
+        "*://*.youtube.com/*",
+        "*://*.netflix.com/*",
+        "*://*.primevideo.com/*",
+        "*://*.ted.com/*",
+        "*://*.amediateka.ru/*",
+        "*://*.vimeo.com/*",
+        "*://*.coursera.org/*",
+        "*://*.tubitv.com/*"
+      ],
+      "js": [
+        "content-script.bundle.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start",
+      "match_about_blank": true
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background-script.bundle.js"
+    ],
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "background-script.bundle.js",
+    "content-script.bundle.css",
+    "content-script.bundle.js",
+    "popup-script.bundle.css",
+    "popup-script.bundle.js"
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://wiselang.com/*",
+    "https://www.google-analytics.com/collect",
+    "https://translate.google.com/*",
+    "*://www.youtube.com/api/*",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://translate.googleapis.com; object-src 'self'"
+}

@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "MagicFM.ro",
+"description": "MagicFM.ro soft music.",
+"version": "1.0",
+"icons": {
+"128": "magicfm.png"
+},
+"app": {
+"launch": {
+"web_url": "http://magicfm.bluepink.ro"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+],
+"manifest_version": 2
+}

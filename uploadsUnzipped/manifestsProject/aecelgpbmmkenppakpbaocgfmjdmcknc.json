@@ -1,0 +1,18 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Kabam Presents: Castlot",
+  "version": "1.1",
+  "default_locale": "en",
+  "description": "Your Hunt For the Grail Begins Now!",
+  "icons": { "128": "CLT_icon_128x128.png" },
+  "app": {
+    "urls": [
+      "https://www.kabam.com/games/castlot/chrome-play?entrypt=clt-gcs-z-z-z-z"
+    ],
+    "launch": {
+      "web_url": "https://www.kabam.com/games/castlot/chrome-play?entrypt=clt-gcs-z-z-z-z"
+    }
+  },
+  "permissions": ["unlimitedStorage", "notifications"],
+  "manifest_version": 2
+}

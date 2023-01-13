@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Critical Combat Battle Royale",
+
+  "short_name": "Critical Combat Battle Royale",
+
+  "version": "1.0.2",
+  "description": "Play Critical Combat Battle Royale now",
+
+  "homepage_url": "http://razergamesr.xyz/c/soccer-games/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Critical Combat Battle Royale",
+
+      "default_popup": "popup.html"
+  }
+}

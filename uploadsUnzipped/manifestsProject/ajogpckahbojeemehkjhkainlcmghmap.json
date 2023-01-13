@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Meme Magic",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "description": "Instantly turn any picture on the web into a meme!",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+
+ "background": {
+    "scripts": ["background.js"]
+  },
+ "permissions": [
+   "*://*/",
+   "tabs",
+   "contextMenus"
+  ],
+ "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["meme.js"]
+    }
+  ]
+}

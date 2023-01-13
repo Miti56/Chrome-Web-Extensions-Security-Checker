@@ -1,0 +1,20 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "OfficeHR",
+  "description": "Program do rekrutacji internetowej",
+  "version": "1.0.6",
+  "app": {
+    "urls": [
+      "*://www.officehr.pl/logowanie"
+    ],
+    "launch": {
+      "web_url": "http://www.officehr.pl/"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "EVI Meetings",
+  "description": "A simple extension that allows you to schedule EVI Meetings and stream your desktop into EVI conferences.",
+  "version": "0.2.8",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "evi-logo-16x16.png",
+    "48": "evi-logo-48x48.png",
+    "128": "evi-logo-128x128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture", "https://calendar.google.com/*"
+  ],
+  "externally_connectable": {
+      "matches": [
+        "*://evijitsi.southeastasia.cloudapp.azure.com/*"
+      ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/calendar/*", "https://outlook.live.com/owa/*"],
+      "js": ["jquery.js", "RandomUtil.js", "RoomnameGenerator.js", "meet-calendar.js"],
+      "css": ["/css/all.css"],
+      "all_frames" : false,
+      "run_at" : "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+  	"evi-logo-16x16.png",
+    "evi-logo-48x48.png",
+    "evi-logo-128x128.png",
+    "jitsi-logo-48x48.png",
+    "jitsi-logo-white-48x48.png",
+    "jitsi-logo-blue.svg",
+    "jitsi-logo-grey.svg"
+  ],
+  "browser_action": {
+    "default_title": "Create EVI Meetings",
+    "default_popup": "popup.html"
+  }
+}

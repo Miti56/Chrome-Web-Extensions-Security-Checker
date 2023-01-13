@@ -1,0 +1,33 @@
+{
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Sex Girls Images"
+  },
+  "description": "Beautiful girls decorate your browser",
+  "default_locale": "en",
+  "icons": {
+    "128": "icon-128.png",
+    "16": "icon-16.png",
+    "48": "icon-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["\u003Call_urls>"],
+      "js": ["js/sizzle.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "manifest_version": 2,
+  "name": "Sex Girls Images",
+  "offline_enabled": true,
+  "permissions": ["idle", "storage", "notifications", "alarms", "background", "tabs", "<all_urls>"],
+  "short_name": "Sex Girls Images",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.7"
+}

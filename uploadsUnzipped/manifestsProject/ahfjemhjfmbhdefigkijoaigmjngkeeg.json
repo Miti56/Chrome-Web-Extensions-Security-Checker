@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "icon16.png",
+         "24": "icon24.png",
+         "32": "icon32.png"
+      },
+      "default_title": "Website Blocker"
+   },
+   "description": "Blocks websites.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Website Blocker",
+   "options_page": "options.html",
+   "permissions": [ "management", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4"
+}

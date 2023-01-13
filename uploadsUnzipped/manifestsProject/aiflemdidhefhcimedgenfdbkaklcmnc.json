@@ -1,0 +1,36 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "MDC - Môce Dum Cabréste",
+  
+  "version": "0.0.1",
+  
+  "manifest_version": 2,
+  
+  "description": "App Extensão do Môce Dum Cabréste.",
+  
+  "icons": { "16": "imagens/icon16.png",
+  			 "19": "imagens/icon19.png",
+			 "48": "imagens/icon48.png",
+			 "128": "imagens/icon128.png"
+  },
+  
+  "browser_action": {
+    "default_icon": "imagens/icon19.png",
+	"default_title": "MDC - Môce Dum Cabréste",
+	"default_popup": "popup.html"
+	},
+  
+  "options_page": "options.html",
+  
+  "background": {
+  },
+  
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "http://*/*",
+    "https://*/*",
+	"http://www.youtube.com/",
+	"http://mocedumcabreste.blogspot.pt/"
+  ]
+}

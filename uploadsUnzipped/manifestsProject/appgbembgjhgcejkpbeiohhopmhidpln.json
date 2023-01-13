@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"background":{
+      "persistent": false,
+      "scripts": [ "js/background.js" ]
+},
+"browser_action" : {
+    	"default_icon" : {
+    	"19":"img/icon19.png",
+    	"38":"img/icon38.png"
+    	}
+    },
+"chrome_settings_overrides": {
+    "homepage": "https://www.solidareco.org",
+      "search_provider": {
+        "name": "__MSG_extensionNameShort__",
+        "keyword": "solidareco",
+        "search_url": "https://__MSG_urlDomainSearch__?recherche={searchTerms}&url",
+        "favicon_url": "https://www.__MSG_urlDomain__favicon.ico",
+        "encoding": "UTF-8",
+        "is_default": true
+        },
+        "startup_pages": ["https://www.solidareco.org"]
+    },
+ "chrome_url_overrides" : {
+     "newtab": "html/newtab.html"
+  }, 
+"icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png" 
+    },
+"default_locale": "fr",
+"name":"__MSG_extensionName__",
+"version":"0.3.8",
+"manifest_version":2,
+"description":"__MSG_extensionDesc__",
+ "permissions": [ "*://*.solidareco.org/*", "contextMenus", "topSites" ]
+}
+

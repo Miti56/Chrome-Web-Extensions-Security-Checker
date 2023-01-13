@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Online Notary Session Recorder",
+    "short_name": "online notary recorder",
+    "description": "This is the default application",
+    "version": "0.0.4",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "extension.js"
+        ],
+        "persistent": false
+    },
+    "externally_connectable": {
+        "ids" : ["*"],
+        "matches": [
+                "https://onlinenotary.us/*",
+                "https://demo.onlinenotary.us/*",
+                "https://*.cloudfront.net/*",
+                "https://192.168.1.143/*",
+                "https://app.onlinenotary.us/*"
+            ]
+    },
+    "permissions": [
+        "desktopCapture"
+    ]
+}

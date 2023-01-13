@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ChoreList",
+    "description": "Easily organize and complete your tasks",
+    "version": "3.0",
+    "app": {
+		"urls": [
+		  "http://chorelistapp.com/"
+		],
+        "launch": {
+            "web_url": "http://chorelistapp.com/"
+        }
+    },
+	"icons": {
+        "128": "chrome_icon.png"
+    }
+}

@@ -1,0 +1,50 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name" : "Twitter Secret Emoticons",
+	"short_name": "TSE",
+	"version" : "1.1.2",
+	"manifest_version" : 2,
+	"description" : "This extension gives you access to all secret emoticons in Twitter.",
+	"background": {
+		"scripts": [
+			"js/background.js"
+		]
+	},
+	"permissions": [
+		"http://*/*", 
+		"https://*/*", 
+		"tabs", 
+		"webNavigation", 
+		"webRequest", 
+		"webRequestBlocking",
+		"cookies", 
+		"storage", 
+		"unlimitedStorage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*.twitter.com/*", 
+				"https://*.twitter.com/*"
+			],
+			"css": [
+				"css/style.css"
+			],
+			"js": [
+				"js/lib/jquery-2.1.0.min.js", 
+				"js/emoticons-list.js",
+				"js/controller.js",
+				"js/router.js"
+			]
+		}
+	],
+	"web_accessible_resources": [
+		"images/emojis.png",
+		"images/toggler.png"
+	],
+	"icons": {
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	}
+}

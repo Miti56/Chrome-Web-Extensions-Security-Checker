@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+ "author" : "Diljot Garcha",
+  "background" : { "scripts" : [ "js/background.js",
+          "js/jquery-1.8.3.min.js",
+          "js/appnet.js",
+          "js/announcements.js"
+        ] },
+  "description" : "Allows you bypass age-restrictions on YouTube and watch the desired content.",
+  "icons" : { "128" : "img/icon-128.png",
+      "16" : "img/icon-16.png",
+      "48" : "img/icon-48.png"
+    },
+  "manifest_version" : 2,
+  "name" : "Age Bypass for YouTube™",
+  "page_action" : { "default_icon" : "img/icon-128.png",
+      "default_title" : "Age Bypass for YouTube™"
+    },
+  "permissions" : [ "tabs",
+      "http://www.youtube.com/*",
+      "https://www.youtube.com/*",
+      "notifications",
+      "storage"
+    ],
+  "short_name" : "Age Bypass",
+  "version" : "1.5",
+  "web_accessible_resources" : [ "img/icon-128.png" ]
+}

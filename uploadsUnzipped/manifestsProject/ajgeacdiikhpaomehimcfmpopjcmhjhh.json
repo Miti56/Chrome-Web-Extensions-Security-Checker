@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Fire and Water 5 Unblocked",
+  "description": "As in other games of Fireboy and Watergirl, they need each other's help to pass levels",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["tabs", "bookmarks"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon" : "icon.png",
+      "default_title": "Fire and Water 5 Unblocked"
+  }
+
+}

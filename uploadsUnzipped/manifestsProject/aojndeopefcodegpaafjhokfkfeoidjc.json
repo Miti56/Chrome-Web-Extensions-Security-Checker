@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Otus",
+  "version": "1.0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+	"urls": ["https://my.otus.com/"],
+	"launch": {"web_url": "https://my.otus.com/"}
+  },
+  "permissions": [
+  "unlimitedStorage",
+  "notifications"
+  ],
+  "minimum_chrome_version": "28"
+}

@@ -1,0 +1,39 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "Kartmanage Tally Sync"
+   },
+   "commands": {
+      "toggle-default-mode": {
+         "description": "Access-Control-Allow-Origin",
+         "suggested_key": {
+            "default": "Ctrl+Shift+D",
+            "mac": "Command+Shift+D"
+         }
+      }
+   },
+   "description": "Kartmanage Tally Sync Extension allows you to seamlessly sync your data with India's Biggest accounting software Tally.",
+   "homepage_url": "https://kartmanage.com/",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlLyls/doJSLRWVbl67jQluXqJF0V9l3rCqyfEAN9QEdod9gTYSFN62kRLr9A96qXVDSRfYq3H3X8GOgOELQmLhLu43jVOeBuAirFxY8vBmxN55f1UIrgznyEQaSo5kT3OVL02+J0X6NC4Pe8zjqPOQrYXumscc88dp/T8khY7k0glWB0SqX/IgGfYzZznMzj5LfGZaceSwdlQAExfde/jmxhDvfAo3vSCm6stF2O03E0CHhiJT/KepWSZviKZRB/HiwSP/6anweX4hqL1N/E6w+xcV95XmNe1m9FZxq+yjoOVjYtuRYRo1K1pMrU8BL2tGZLCUZIRxssyBBtHwjCYQIDAQAB",
+   "manifest_version": 2,
+   "name": "Kartmanage Tally Sync",
+   "permissions": [ "storage", "\u003Call_urls>", "webRequest", "webRequestBlocking", "tabs" ],
+   "short_name": "cors-kartmanage",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.4"
+}

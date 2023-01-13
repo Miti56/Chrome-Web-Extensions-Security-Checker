@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version":2,
+  "name": "ATS Extension",
+  "description": "ATS Chrome Extension",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "background": {
+      "scripts": ["js/background.js"]
+    },
+    "page_action":{
+      "default_popup": "popup1.html",
+      "default_title": "ATS"
+  },
+   "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "background",
+    "tabs"
+  ]
+}

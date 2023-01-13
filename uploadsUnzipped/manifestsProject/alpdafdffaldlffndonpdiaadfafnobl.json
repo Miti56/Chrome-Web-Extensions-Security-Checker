@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"name":"Drake Toosie Slide Theme Chrome","version":"1.0","description":"","manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.png","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.png"},"colors":{"frame":[0,29,59],"toolbar":[0,0,0],"tab_text":[233,233,233],"tab_background_text":[172,172,172],"bookmark_text":[209,209,209],"ntp_background":[255,255,255],"ntp_text":[235,235,235],"ntp_link":[74,144,226],"button_background":[19,91,177,1]},"tints":{"buttons":[0.59,1,0.81]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}}}

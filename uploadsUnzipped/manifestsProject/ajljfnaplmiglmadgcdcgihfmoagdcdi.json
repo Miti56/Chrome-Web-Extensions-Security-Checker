@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "豆开",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "在新页面打开被转播的原始豆瓣广播",
+  "permissions": [],
+  "icons": {
+    "128" : "yangxiaomi.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.douban.com/*"],
+      "js" : ["lib/zepto.js", "contentscript.js"],
+      "css" : ["contentcss.css"]
+    }
+  ]
+}

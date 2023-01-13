@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Trellomino",
+	"version": "0.7",
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "img/icon-trello-blue-24x24.png"
+	},
+	"permissions": [
+		"tabs"
+	],
+	"web_accessible_resources": [
+		"index.html"
+	]
+}

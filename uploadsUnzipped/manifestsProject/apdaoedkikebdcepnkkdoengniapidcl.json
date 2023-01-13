@@ -1,0 +1,17 @@
+{
+    "name": "Металографско оборудване - SEM-Technologies",
+    "description": "SEM-Technologies предлага огромно разнообразие от професионални микроскопи и апаратура за индустриални цели от ZEISS и Struers.",
+    "browser_action": {
+        "default_icon": {
+            "38": "icon.png"
+            }, 
+        "default_title": "Металографско оборудване и микроскопи SEM-Technologies", 
+        "default_popup": "labnol.html"
+    }, 
+    "manifest_version": 2,
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "content_security_policy": "script-src 'self' https://wpeos.eu; object-src 'self'",
+    "version": "1.2"
+}
+
+

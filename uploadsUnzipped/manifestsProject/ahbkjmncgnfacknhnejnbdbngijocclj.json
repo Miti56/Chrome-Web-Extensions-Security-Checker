@@ -1,0 +1,15 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Soar", 
+    "version": "1.0",
+    "description": "Send unwanted advertisements soaring, up, up, and away",
+    "permissions": ["webRequest", "webRequestBlocking", "activeTab"],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "128": "icons/logo_128x128.png"
+    },
+    "manifest_version": 2
+}

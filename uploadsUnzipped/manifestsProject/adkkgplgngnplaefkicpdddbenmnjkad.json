@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "CSP Safe Browsing",
+  "version": "0.1",
+  "description": "Protect against XSS and code injection attacks with this plugin",
+  "manifest_version": 2,
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "assets/disabled.png",
+    "default_title": "CSP Safe Browsing Shield",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/jquery-3.3.1.min.js", "js/content-script.js"]
+    }
+  ]
+}

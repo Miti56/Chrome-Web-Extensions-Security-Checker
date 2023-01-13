@@ -1,0 +1,17 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LinkedIn easy select Recruiter",
+  "version": "1.2",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+	"matches": [ "https://www.linkedin.com/cap/peopleSearch/results*" ],
+      "js": [ "jquery.js", "background.js" ],
+	  "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "/injected.js"
+  ]
+}

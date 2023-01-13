@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Round Robin Assignment",
+  "description": "A simple tool for round robin assignment of work",
+  "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "assets/icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "__real_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoxhhgyM3xL2PieGxfyqS3F/WYEQJrh4nCP38bDksnBoDUR1EKTRg+Wd7IvaUaBjU+CIju1VyTr8i7ZcVBx+aeZatAoHeZ+0yLU1gt78cco9dqniTiMZUJX35V1FtlAhL7om3wh1Q/ethZ1chGw3Cnzw6Y9aYoWIsswDh7xBHJouquttzSH9EqDK8sK1p2k82sniPkSq0LlDZ37mOkvhVKl+tvHGqz9f6epRqO/wpJsg9hgLw7KUOn3JNUx+x+MaSfSXNi3lNtp14jujzJhMTlyW1w+ixDR9e0Qj8lC3PbUbHHe55y/LBeOthe+qKhAvItVurhX3lWYTAkVKfGDbD5wIDAQAB",
+  "oauth2": {
+    "client_id": "271425856197-2pbf8hcknv3m4j780cmun34q86n29tf3.apps.googleusercontent.com",
+	"scopes": ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/spreadsheets"]
+  },
+  "permissions": ["identity", "identity.email", "storage"]
+}

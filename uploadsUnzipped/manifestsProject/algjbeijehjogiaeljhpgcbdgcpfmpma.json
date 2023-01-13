@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Stash Tabs",
+  "version": "1.43",
+  "minimum_chrome_version": "55",
+  "description": "A session manager with little UI and a lot of attention to detail.",
+  "permissions": [
+    "tabs", "storage"
+  ],
+  "browser_action": {
+      "default_title": "Stash tabs",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "background": {
+    "page": "background.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      }
+    }
+  },
+  "offline_enabled": true
+}

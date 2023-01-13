@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Ukulele Việt",
+  "short_name": "ukulele-viet",
+  "description": "Tiện tích hỗ trợ cho người học Ukulele",
+  "version": "0.0.1",
+  "manifest_version": 2,
+
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+
+  "minimum_chrome_version": "31.0",
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.hopamchuan.com/song/*"],
+      "js": ["js/chord-renderer.js", "js/cs/hopamchuan-cs.js"],
+      "css": ["css/styles.css"],
+      "run_at": "document_end"
+    },
+
+    {
+      "matches": ["*://*.hopamviet.com/chord/song/*"],
+      "js": ["js/chord-renderer.js", "js/cs/hopamviet-cs.js"],
+      "css": ["css/styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "web_accessible_resources": [
+    "img/*",
+    "js/*",
+    "css/*"
+  ],
+
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
+  "permissions": []
+}

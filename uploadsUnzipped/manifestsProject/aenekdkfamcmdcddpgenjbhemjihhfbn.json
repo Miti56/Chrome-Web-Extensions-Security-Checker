@@ -1,0 +1,37 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version" : 2,
+	"name" : "Les réducs",
+	"version" : "1.0.6",
+	"icons": 
+	{
+		"16": "/icon/icon16.png",
+        "48": "/icon/icon48.png",
+        "128": "/icon/icon128.png" 
+    },
+	"description" : "LesReducs trouve pour vous les bons de réduction les plus avantageux et les applique directement à votre panier lors d'une commande",
+	"browser_action" :
+	{
+		"default_icon" : "/icon/icon.png"
+	},
+	"content_scripts": [ {
+      "js": [ "/public/js/app.bundle.js" ],
+       "css": [ "/public/css/style.css" ],
+      "matches": [ "*://*/*" ]
+   	}],
+   	"web_accessible_resources": [
+		"/public/img/*.svg",
+		"/icon/icon.png",
+		"/public/font/MaterialIcons-Regular.eot",
+		"/public/font/MaterialIcons-Regular.ttf",
+		"/public/font/MaterialIcons-Regular.woff",
+		"/public/font/MaterialIcons-Regular.woff2"
+	],
+	"permissions": [
+		"storage"
+	],
+	"background": {
+		"scripts": [ "/public/js/background.bundle.js" ]
+	}
+}

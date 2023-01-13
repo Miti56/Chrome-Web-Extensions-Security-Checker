@@ -1,0 +1,30 @@
+{
+  "icons": {
+    "128": "icon.png"
+  },
+  "version": "1.5.53",
+  "manifest_version": 2,
+  "name": "ActFast",
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "webNavigation",
+    "<all_urls>",
+    "storage",
+    "webRequestBlocking"
+  ],
+  "description": "React As Fast As You Can The Second You Hear The Sound!",
+  "background": {
+    "scripts": [
+      "main.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_title": "ActFast",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src blob: filesystem: chrome-extension-resource: 'self' 'unsafe-eval'; object-src 'self'",
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

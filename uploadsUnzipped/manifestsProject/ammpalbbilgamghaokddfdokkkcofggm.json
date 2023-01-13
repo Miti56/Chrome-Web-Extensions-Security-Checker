@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon/128.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "extension.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://vk.com https://ssl.google-analytics.com;object-src 'self'",
+   "description": "Ставки на спорт онлайн! Лига ставок! В вашем браузере!",
+   "icons": {
+      "16": "icon/16.png",
+      "48": "icon/48.png",
+      "128": "icon/128.png"
+   },
+   "options_page": "local.html",
+   "manifest_version": 2,
+   "minimum_chrome_version": "45",
+   "name": "Ставки на спорт!",
+   "permissions": [ "storage" ],
+   "short_name": "Ставки спорт!",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "*" ]
+}

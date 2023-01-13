@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Honest Transfers",
+  "version": "1.3",
+  "description": "An extension by David Rudin (@DavidSRudin) and Howler Magazine (@WhatAHowler) that takes the hype out of soccer transfer stories.",
+  "browser_action": {
+  "default_icon": "icon128.png",
+  "default_title": "Honest Transfers"
+},
+
+"content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+             "128": "icon128.png" }
+}

@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "J2Team Dark Theme",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "matches": ["https://www.facebook.com/*"],
+    "css": ["dark-style.css"]
+  }],
+  "browser_action": {
+    "default_title": "J2Team Dark Theme"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs"]
+}

@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Boodmo - Spare Parts Expert",
+  "description": "Boodmo.com is the largest marketplace of car spare parts in India", 
+  "version": "2.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "app": {
+    "urls": [
+      "http://boodmo.com/"
+    ],
+    "launch": {
+      "web_url": "http://boodmo.com/"
+    }
+  }
+}

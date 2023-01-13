@@ -1,0 +1,22 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "name": "Watch new Movies in HD",
+    "version": "5.1",
+    "manifest_version": 2,
+    "description": "Free & Online Movie streaming website! Leally! Download and watch offline!",
+    "icons": {
+        "128": "128.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "128.png",
+        "default_title": "Watch Free Movies Online"
+    }
+}

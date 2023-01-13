@@ -1,0 +1,54 @@
+ {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	 "name": "__MSG_appName__",
+	 "description": "__MSG_appDescription__",
+	 "homepage_url": "https://ali-scout.com",
+	 "default_locale": "en",
+	 "version": "0.16",
+	 "manifest_version": 2,
+	 "permissions": [
+		 "cookies",
+		 "activeTab",
+		 "declarativeContent",
+		 "https://*.alibaba.com/",
+		 "http://*.alibaba.com/"
+	 ],
+	"background" : {
+		"scripts" : ["background.js"]
+	},
+	 "page_action": {
+		 "default_icon": "icon128.png",
+		 "default_title": "AliScout"
+	 },
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"content_scripts": [
+	   {
+		 	"matches": [
+				"https://*.alibaba.com/*"
+			],
+		 	"js": [
+				 "jquery-3.3.1.min.js",
+				 "font-awesome.js",
+				 "content-script.js",
+				 "chunk-vendors.js",
+				 "app.js"
+		 	],
+		   "css": [
+			   "bundle.css",
+			   "style.css",
+			   "on-page-style.css"
+		   ],
+		 	"run_at": "document_end"
+	   }
+   ],
+	 "web_accessible_resources":[
+		 "icon128.png",
+		 "icon128-white.png"
+
+	 ]
+}

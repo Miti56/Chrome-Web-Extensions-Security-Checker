@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Tinder Auto Swipe",
+    "version": "0.0.3",
+    "description": "Too busy or tired of swiping right? we are here to the rescue!",
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "declarativeContent",
+        "tabs"
+      ],
+      "icons": {
+        "128": "favicon-16x16.png"
+      },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+      },
+      "browser_action": {
+        "default_title": "Click to start swiping",
+        "default_icon": "favicon-16x16.png"
+      },
+    "manifest_version": 2
+  }

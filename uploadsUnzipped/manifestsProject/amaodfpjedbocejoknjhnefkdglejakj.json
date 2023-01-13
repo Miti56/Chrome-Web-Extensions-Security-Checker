@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Streamiflux",
+    "description": "StreamIFY est l'outil qui vous permet de suivre toutes vos séries préférées.",
+    "background": {
+        "page": "background.html"
+    },
+    "default_locale": "fr",
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "img/icon-128.png",
+        "16": "img/icon-16.png",
+        "48": "img/icon-48.png"
+    },
+    "externally_connectable": {
+        "matches": ["*://*/*"]
+    },
+    "manifest_version": 2,
+    "options_page": "options.html",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "alarms",
+        "notifications",
+        "runtime",
+        "management",
+        "*://*/*"
+    ],
+    "version": "1.2",
+    "content_scripts": [{
+        "matches": [
+            "*://*/*"
+        ],
+        "js": ["content.js"]
+    }]
+}

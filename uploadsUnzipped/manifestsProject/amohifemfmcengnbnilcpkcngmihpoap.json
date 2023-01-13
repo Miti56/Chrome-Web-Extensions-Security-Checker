@@ -1,0 +1,49 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "icons": {
+    "16": "logo16.png",
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "contextMenus",
+    "storage",
+    "*://www.walmart.com/*",
+    "*://www.worldmarket.com/*",
+    "*://www.macys.com/*",
+    "*://www.kohls.com/*",
+    "*://www.shopdisney.com/*",
+    "background"
+  ],
+  "name": "The BOAT Lite (Best Online Arbitrage Tool)",
+  "short_name": "The BOAT (Lite Version)",
+  "description": "The best online arbitrage tool for speeding up your sourcing on sites such as Walmart, Kohls, Disney, Target and many more sites.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "js": [ "js/jquery-1.8.3.min.js", "js/materialize.min.js", "content.js" ],
+      "css": [ "css/MYmaterialize-1.0.0.css", "css/BOAT.css" ],
+      "matches": [
+        "*://www.walmart.com/*",
+        "*://www.worldmarket.com/*",
+        "*://www.macys.com/*",
+        "*://www.kohls.com/*",
+        "*://www.shopdisney.com/*"
+      ],
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'",
+  "background": { "page": "background.html" },
+  "browser_action": {
+    "default_popup": "b_popup.html",
+    "default_title": "The BOAT"
+  },
+  "web_accessible_resources": [
+    "*"
+  ]
+}

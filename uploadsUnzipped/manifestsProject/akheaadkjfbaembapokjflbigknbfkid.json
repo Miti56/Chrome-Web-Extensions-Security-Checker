@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "browser_action": {
+    "default_icon": "ua.png",
+    "default_popup": "ua.html",
+    "default_title": "Kcdns Manage"
+  },
+  "default_locale": "en",
+  "options_page": "options.html",
+  "minimum_chrome_version": "17.0.963.12",
+  "version": "1.1.0",
+  "description": "kcdns.com",
+  "name": "Kcdns Manage",
+  "background": {"page": "background.html"},
+  "permissions": [
+    "tabs",
+    "background",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "icons": {
+    "48": "ua48.png",
+    "128": "ua128.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "version": "1",
+  "name": "pale pink",
+  "theme": {
+    "images" : {
+      "theme_frame" : "1920w/frame.png",
+      "theme_toolbar" : "1920w/toolbar.png",
+      "theme_ntp_background" : "1920w/ntp.png"
+    },
+    "colors" : {
+      "frame" : [252, 212, 220],
+      "toolbar" : [253, 227, 232],
+      "ntp_text" : [35, 30, 32],
+      "ntp_link" : [253, 227, 232],
+      "button_background" : [255, 255, 255]
+    },
+    "properties" : {
+      "ntp_background_alignment" : "bottom"
+    }
+  }
+}

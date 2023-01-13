@@ -1,0 +1,26 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/icon-96x96.png"
+   },
+   "description": "Automatically allows Flash player to run, rather than ask for permission each time.",
+   "icons": {
+      "128": "images/icon-128x128.png",
+      "144": "images/icon-144x144.png",
+      "152": "images/icon-152x152.png",
+      "192": "images/icon-192x192.png",
+      "384": "images/icon-384x384.png",
+      "512": "images/icon-512x512.png",
+      "72": "images/icon-72x72.png",
+      "96": "images/icon-96x96.png"
+   },
+
+   "manifest_version": 2,
+   "name": "Hangout Flash Enabler",
+   "permissions": [ "contentSettings" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

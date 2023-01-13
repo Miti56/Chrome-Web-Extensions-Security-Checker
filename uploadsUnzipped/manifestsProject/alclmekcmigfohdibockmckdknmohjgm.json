@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+
+    "name": "Reddit Direct Video Link",
+    "description": "Watch and download videos from v.redd.it without annoying redirects.",
+    "author": "(not available yet)",
+    "version": "1.0",
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://v.redd.it/*",
+        "*://*.reddit.com/*"
+    ]
+}

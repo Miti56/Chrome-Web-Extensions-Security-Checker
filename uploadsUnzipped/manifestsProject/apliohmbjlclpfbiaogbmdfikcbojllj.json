@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+	"name": "Practo Ray",
+	"version": "1",
+	"icons": {
+		"24": "24.png",
+		"38": "38.png",
+		"48": "48.png",
+		"64": "64.png",
+		"128": "128.png"			
+	},
+	"app": {
+		"urls": [
+			"https://ray.practo.com/"
+		],
+		"launch": {
+			"web_url": "https://ray.practo.com/"
+		}
+	},
+	"manifest_version": 2
+}

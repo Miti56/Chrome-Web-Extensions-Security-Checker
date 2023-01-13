@@ -1,0 +1,40 @@
+{
+	"background" : {
+		"scripts" : ["js/jquery.js", "js/purl.js", "js/jquery.base64.min.js", "js/uuid.js", "js/background.js"]
+	},
+
+	"content_scripts": [
+		{
+		  "all_frames": false,
+		  "matches": ["http://*/*", "https://*/*"],
+		  "js": ["js/content.js"],
+		  "run_at": "document_start"
+		}
+	],
+    
+    "externally_connectable": {
+        "ids": [
+            "*"
+        ],
+        "matches": [
+          "*://*.ncupons.com/*",
+          "*://*.ncupons.com.br/*",
+          "*://localhost/*"
+        ]
+    },
+	
+	"icons": { 
+		"16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png" 
+	},
+
+	"manifest_version": 2,
+	"web_accessible_resources": ["manifest.json"],
+	"permissions" : ["management", "tabs", "<all_urls>", "webRequest", "webRequestBlocking", "webNavigation" , "bookmarks", "cookies", "storage"],
+	"name": "NCupons",
+	"version": "1.0.3",
+	"description": "Economize comprando e ganhe uma porcentagem de volta.",
+	"update_url":"http://clients2.google.com/service/update2/crx",
+	"content_security_policy": "script-src 'self' https://services.ncupons.com.br https://cdn.ncupons.com.br https://ssl.google-analytics.com; object-src 'self'"
+}	

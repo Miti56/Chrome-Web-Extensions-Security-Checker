@@ -1,0 +1,33 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name" : "Holiday Custom Background",
+	"description" : "Change your Search Engine Background to a Holiday photo",
+	"homepage_url": "http://bensendigital.com/",
+	"background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+	"permissions": ["activeTab","declarativeContent","storage","webNavigation","management","tabs","https://www.bensendigital.com/extapi/"],
+	  "version": "2.0",
+	  "browser_action": {
+		  "default_icon": {
+			"16": "images/bd-16.png",
+			"32": "images/bd-32.png",
+			"48": "images/bd-48.png",
+			"128": "images/bd-128.png"
+		  }
+		},
+	"icons": {
+		  "16": "images/bd-16.png",
+		  "32": "images/bd-32.png",
+		  "48": "images/bd-48.png",
+		  "128": "images/bd-128.png"
+		},
+	"chrome_url_overrides" : {
+	  "newtab": "landing.html"
+	},
+	"web_accessible_resources": ["images/*.*"]
+	
+}

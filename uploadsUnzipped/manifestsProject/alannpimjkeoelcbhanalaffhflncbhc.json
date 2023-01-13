@@ -1,0 +1,15 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Webová tužka",
+  "version": "1.2",
+  "background": { "scripts": ["background.js"] },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  
+  "browser_action": {
+    "name": "Zapni webovou tužku"
+  },
+  
+  "manifest_version": 2
+}

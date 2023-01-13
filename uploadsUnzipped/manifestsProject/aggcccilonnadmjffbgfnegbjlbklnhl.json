@@ -1,0 +1,26 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Free BTC - Bitcoin Earner",
+  "description": "Are you ready to make some FREE easy money?",
+  "version": "1.1",
+  "app": {
+    "urls": [
+      "http://btcfreemart.imobileappsys.com/indexd.php?agent=chromeApp"
+    ],
+    "launch": {
+      "web_url": "http://btcfreemart.imobileappsys.com/indexd.php?agent=chromeApp",
+      "container": "panel",
+      "height":600,
+      "width":800
+    }
+  },
+  "icons": {
+    "128": "logo128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "manifest_version": 2
+}

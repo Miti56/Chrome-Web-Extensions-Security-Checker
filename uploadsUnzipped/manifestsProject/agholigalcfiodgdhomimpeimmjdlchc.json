@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "persistent": false,
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "img/icon128.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Bitcoin Ticker"
+   },
+   "description": "This extension shows the price of bitcoin price",
+   "icons": {
+      "128": "img/icon128.png"
+   },
+   "manifest_version": 2,
+   "name": "CoinPrice View",
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "css":["content.css"],
+      "matches": [ "https://*.com/*","https://*.org/*","https://*.net/*","https://*.kr/*","https://*.edu/*","https://*.ru/*"],
+      "run_at": "document_end",
+      "all_frames": true
+   } ],
+   "permissions": [ "storage","activeTab", "alarms","cookies","https://*.com/*","https://*.org/*","https://*.net/*","https://*.kr/*","https://*.edu/*","https://*.ru/*"],
+   "version": "1.3"
+}

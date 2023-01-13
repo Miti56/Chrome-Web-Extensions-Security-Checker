@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "alternate_urls": [  ],
+         "encoding": "UTF-8",
+         "favicon_url": "http://ext.musixhub.com/favicon.ico",
+         "image_url": "http://musix.searchalgo.com/go/?category=images&s=mhdm&vert=music&var=multi&q={searchTerms}",
+         "image_url_post_params": "",
+         "instant_url": "",
+         "instant_url_post_params": "",
+         "is_default": true,
+         "keyword": "Musixhub MultiSearch",
+         "name": "Musixhub MultiSearch",
+         "search_url": "http://musix.searchalgo.com/go/?category=web&s=mhdm&vert=music&var=multi&q={searchTerms}",
+         "search_url_post_params": "",
+		 "suggest_url":"http://sug.searchalgo.com/search/index_sg.php?q={searchTerms}",
+         "suggest_url_post_params": ""
+      }
+   },
+   "description": "Musixhub MultiSearch is a powerful search engine, offering you a variety of unique features and search tools.",
+   "short_name": "Musixhub MultiSearch",
+   
+    "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/icon38.png",
+    "default_popup": "about/index.html"
+  },
+  "options_page": "index.html?showmenu=1",
+
+  "manifest_version": 2,
+   "background": {
+      "scripts": ["js/background.js","js/ds.js","js/private.js"]
+   },
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "omnibox": { "keyword" : "m" },
+   "name": "Musixhub MultiSearch",
+  "web_accessible_resources": [ "/js/*"],
+   "permissions": [
+     "contextMenus", "http://*/*","https://*/*"  ,"webRequest"  ,"webRequestBlocking","privacy" ,"storage","cookies","tabs","topSites"
+   ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "homepage_url": "http://www.musixhub.com",
+  "author": "Musixhub",
+  "version": "1.0.0"
+}

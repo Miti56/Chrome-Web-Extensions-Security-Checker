@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Go Friends",
+  "short_name": "Go Friends",
+  "description": "Improve your memory and concentration as you play Go with your friends, a fascinating strategy board game!",
+  "version": "2.2.2.3",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhExbqQ6HDPNcry9qCuITZTBnaomnaHbn6mg1+vicpUhhCCv5jPfC2TXle9YClFNEpP0RidFTkDLVD24e5NJVXBxMgQmwAJzTj4VPL/a12k9YnvP+ROQfIMTqWcYLQQ4P+I/KtXzIZ14x2m5gjsJ4FIvseqYhvINUhabo5BhPwGKR4KPcWaVDC8FnwdId+BgW+zp/R/pODwb5Y7VMNSj7VVSUzxaiazfbcXq5dNjv8yCjIxVF6/etrQKZ4h/oYqksiY3msxbppv+y/4zlXzkKzk2AvYEOYu26u2BCWlvA3Y11yuPB0/58j4r/ywMFy/WhsCiojQz7B2J+/bsppLy0GwIDAQAB",
+  
+  "webview": {
+    "partitions": [
+        {
+              "name": "static",
+              "accessible_resources": ["*"]
+            },
+            {
+              "name": "trusted*",
+              "accessible_resources": ["*"]
+            }
+
+          ]
+        },
+     
+        
+  "permissions": ["webview"]
+}

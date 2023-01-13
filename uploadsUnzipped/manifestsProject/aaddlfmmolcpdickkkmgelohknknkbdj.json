@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Banana Bread",
+  "version": "0.0.0.1",
+  "description": "Helps to prevent the baking of banana bread",
+  "author": "Jarrod Luca | github.com/jsl15c",
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "http://*/*", "https://*/*"
+],
+  "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["jquery-3.2.1.min.js", "script.js"],
+      "css":["style.css"],
+      "run_at":"document_start"
+    }]
+}

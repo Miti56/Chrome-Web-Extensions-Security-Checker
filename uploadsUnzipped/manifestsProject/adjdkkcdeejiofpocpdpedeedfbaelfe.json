@@ -1,0 +1,53 @@
+{
+   "name": "__MSG_appName__",
+   "description": "__MSG_appDesc__",
+   "default_locale": "en",
+   "manifest_version": 2,
+   "version": "1.7.0",
+
+   "background": {
+      "scripts": ["js/analytics.js", "js/jquery-1.9.1.js", "js/background.js"]
+   },
+
+   "page_action": {
+      "default_icon": {
+         "19": "images/active19.png",
+         "38": "images/active38.png"
+      },
+      "default_title": "__MSG_appName__"
+   },
+
+   "icons": {
+      "128": "images/icon_128.png",
+      "16": "images/icon_16.png",
+      "48": "images/icon_48.png"
+   },
+
+   "content_scripts": [{
+      "matches": [
+         "http://www.facebook.com/*",
+         "https://www.facebook.com/*"
+      ],
+      "js": [
+         "js/jquery-1.9.1.js",
+         "js/jquery-ui-1.10.3.custom.min.js",
+         "js/contentscript.js"
+      ],
+      "css": [
+         "css/content_css.css",
+         "css/jquery-ui-1.10.3.custom.min.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+   }],
+
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "permissions": ["storage", "unlimitedStorage", "contextMenus", "cookies", "tabs", "notifications", "browsingData", "webRequest", "webNavigation", "webRequestBlocking", "http://*/*", "https://*/*", "\u003Call_urls\u003E"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "web_accessible_resources": [
+      "js/jquery-1.9.1.js",
+      "js/jquery-ui-1.10.3.custom.min.js",
+      "css/jquery-ui-1.10.3.custom.min.css",
+      "images/exit_128.png"
+   ]
+}

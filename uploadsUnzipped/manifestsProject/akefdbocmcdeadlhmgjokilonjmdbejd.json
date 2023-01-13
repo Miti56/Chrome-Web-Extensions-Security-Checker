@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"DACAS CARD READER - SSD ENCRYPT",
+	"version":"0.1.0",
+	"description":"DACAS CARD READER extentsion for Chrome",
+	"icons": { "16": "logo_16.png",
+               "48": "logo_48.png",
+              "128": "logo_128.png" 
+    },
+	"background":{
+		"persistent":false,
+		"scripts":["eventPage.js"]
+	},
+	"content_scripts":[
+		{
+			"matches":["http://*/*"],
+			"js":["content.js"]
+		}
+	],
+	"web_accessible_resources": [
+        "logo_16.png"
+    ],
+	"permissions":[
+		"nativeMessaging"
+	]
+}

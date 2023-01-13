@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"name": "Gata Andreas strategy Free",
+"version": "1.6",
+"description": "gta san andreas free ,gta vice city, gta v",
+"icons": { 
+"16": "icon_16.png",
+"48": "icon_48.png",
+"128": "icon_128.png"
+},
+"browser_action": {
+"default_icon": "icon_16.png",
+"name": "gta san andreas free",
+"default_popup": "pencere.html"
+},
+
+"manifest_version": 2
+}

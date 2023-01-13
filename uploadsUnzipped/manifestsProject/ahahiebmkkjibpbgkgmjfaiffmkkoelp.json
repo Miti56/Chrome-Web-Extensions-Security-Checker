@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "BazaarHero, Your Shopping Hero",
+    "short_name" : "BazaarHero",
+	"version": "1.0.8",
+	"minimum_chrome_version": "20",
+	"manifest_version": 2,
+	"description": "Find the best offers while shopping",
+    "icons": { "16": "images/icon_16.png",
+        "48": "images/icon_48.png",
+        "128": "images/icon_128.png" },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon_19.png"
+        },
+        "default_title": "BazaarHero"
+    },
+    "background": {
+        "scripts": [ "background.js" ]
+    },
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*" ],
+			"js": [ "load.js"],
+			"all_frames": false,
+			"run_at": "document_end"
+		}
+	],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://apis.google.com; object-src 'self'",
+	"permissions": [
+		"\u003Call_urls\u003E",
+		"webRequest",
+		"webRequestBlocking",
+		"tabs",
+		"storage",
+        "file:///*",
+        "https://r.srvtrck.com/"
+	]
+}
+

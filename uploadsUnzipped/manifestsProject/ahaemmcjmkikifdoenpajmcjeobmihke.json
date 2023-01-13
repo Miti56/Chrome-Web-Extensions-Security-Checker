@@ -1,0 +1,20 @@
+{
+    "background": {
+        "scripts": [ "background.js" ]
+    },
+    "browser_action": {
+        "default_icon": "16X16.png",
+
+        "default_popup": "page.html",
+        "default_title": "Type Fast, Score good!"
+    },
+    "manifest_version": 2,
+    "name": "Type As Fast as possible",
+    "description": "Type as fast as possible and check you speed",
+    "version": "1.0.0",
+    "short_name": "type fast",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+
+    "permissions": [ "http://*/*", "https://*/*", "cookies", "tabs", "unlimitedStorage", "storage", "webRequest", "webRequestBlocking", "management" ]
+}

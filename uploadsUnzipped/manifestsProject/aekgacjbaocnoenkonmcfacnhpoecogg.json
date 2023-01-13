@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "js/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icon-128.png"
+      }
+   },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "default_locale": "en",
+   "description": "Beautiful Dr. Stone wallpaper with useful utilities",
+   "icons": {
+      "128": "icon-128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtJRRHYCV0A6VOQnNF4qjcXGiJff1swZ7jFuCJVkbUBLROo3X/4Fl1VxOMvdlaHtHXIvbc9cyd1TD1yrLbBz1iZV5vF5hJT16rilUa4r8AW/r8fvVeDKWI2nb+II1DNSTKsv3hJh9YGEXamaEtSjkVilvQjTcevUa/LfmJBMOVMVIA9XtN/mi/El2IgOqSOzeAbM9gD7ySSDFqGi07L1yIsbUwihKvjwtOKB2/uNaHr6954UkbghYSnVlkkg5G+nGfRkfLf9k6igk3UoyiiXg463ceMNMGEZfyl976B3YTxiI0uNNUnXDLzsysajHRzJL4RMFJE8zwbE6OeiREZDcPQIDAQAB",
+   "manifest_version": 2,
+   "name": "Dr. Stone Wallpapers Dr. Stone New Tab HD",
+   "offline_enabled": true,
+   "permissions": [ "topSites", "\u003Call_urls>", "chrome://favicon/*", "webRequestBlocking", "webRequest" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

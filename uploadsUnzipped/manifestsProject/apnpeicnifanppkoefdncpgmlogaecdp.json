@@ -1,0 +1,71 @@
+{
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "app/scripts/background.js",
+            "app/assets/js/populate.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "app/assets/images/frenet16.png",
+            "32": "app/assets/images/frenet32.png",
+            "48": "app/assets/images/frenet48.png",
+            "128": "app/assets/images/frenet128.png"
+        },
+        "default_popup": "app/views/main.html",
+        "default_title": "Frenet-AmazonSeller"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "app/scripts/vendor/jquery/dist/jquery.min.js",
+                "app/assets/js/populate.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' ; object-src 'self' ",
+    "description": "Plugin de integração de modelos de fretes Frenet para o Amazon Marketplace.",
+    "homepage_url": "https://www.frenet.com.br",
+    "icons": {
+        "16": "app/assets/images/frenet16.png",
+        "32": "app/assets/images/frenet32.png",
+        "48": "app/assets/images/frenet48.png",
+        "128": "app/assets/images/frenet128.png"
+    },
+    "manifest_version": 2,
+    "name": "Frenet - Integração Amazon Marketplace",
+    "short_name": "Frenet - Amazon Marketplace",
+    "permissions": [
+        "identity",
+        "activeTab",
+        "declarativeContent",
+        "storage",
+        "tabs",
+        "cookies",
+        "background",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.1.1",
+    "web_accessible_resources": [
+        "app/assets/css/style.css",
+        "app/assets/fonts/OpenSans-Regular.ttf",
+        "app/assets/fonts/OpenSans-Semibold.ttf",
+        "app/scripts/vendor/jquery/dist/jquery.min.js",
+        "app/scripts/background.js",
+        "app/assets/js/populate.js",
+        "https://*.amazon.com",        
+        "https://*.media-amazon.com",
+        "https://*.ssl-images-amazon.com",
+        "https://d31nzsodhpnnyy.cloudfront.net",
+        "https://*.amazonaws.com",
+        "https://amazonseller.frenet.com.br/*",
+        "http://localhost:55382/*"
+    ]
+}

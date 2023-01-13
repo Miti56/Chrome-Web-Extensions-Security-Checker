@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Ikki宣言サポート",
+  "description": "Ikki Fantasyの宣言画面を少しだけ便利にします。",
+
+  "version": "0.3",
+
+  "author": "kibi",
+  "content_scripts": [
+    {
+      "matches": ["http://lisge.com/ikki/act_battle.php*"],
+      "js": ["jquery-2.1.1.min.js", "myscript.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "http://ikki.room427.info/"
+  ]
+}

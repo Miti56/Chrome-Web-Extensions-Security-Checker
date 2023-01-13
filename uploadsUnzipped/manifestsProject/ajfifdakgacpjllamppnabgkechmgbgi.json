@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "VCS Screen Sharing Utility",
+	"description":
+	"This extension allows you to share any active screen, window, or tab with another user through VCSRTC.com",
+	"version": "0.1.1",
+	"manifest_version": 2,
+	"background": {
+		"scripts": ["extension.js"],
+		"persistent": false
+	},
+	"externally_connectable": {
+		"matches": ["*://localhost/*","*://www.vcsrtc.com/*","*://chuckblier.com/*","*://www.vetcareshare.com/*"]
+	},
+	"permissions": ["desktopCapture"],
+	"icons": {
+		"16": "assets/16.png",
+		"32": "assets/32.png",
+		"48": "assets/48.png",
+		"128": "assets/128.png"
+	}
+}

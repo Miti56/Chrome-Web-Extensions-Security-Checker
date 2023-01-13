@@ -1,0 +1,17 @@
+{
+   "icons" : {
+   		"16":"icon_bitty.png"
+   	},
+   "background":{
+       "page":"index.html"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "17",
+   "name": "One Click Save",
+   "description" : "__MSG_ext_description__",
+   "default_locale":"en",
+   "version":"0.1",
+   "permissions": [ "tabs", "contextMenus", "http://*/*", "https://*/*"],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "update_url": "http://clients2.google.com/service/update2/crx"
+}

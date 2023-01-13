@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Live Scores - Cricket",
+  "description": "Live cricket scores and commentary from around the world, updated real-time",
+  "version": "1.1",
+  "icons": {
+    "16": "/img/icon16.png",
+    "48": "/img/icon48.png",
+    "128": "/img/icon128.png"
+     },
+  "browser_action": {
+    "default_title": "Follow world cricket scores",
+    "default_icon": "/img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background":{
+    "scripts": ["back.js"],
+    "persistent": true
+ },
+ "content_scripts": [
+   {
+     "matches": ["http://*/*","https://*/*"],
+     "js": ["page.js"]
+   }
+ ],
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+      "tabs", "http://*/*", "https://*/*"
+
+  ]
+}

@@ -1,0 +1,51 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "short_name": "Cinemedia",
+  "name": "Cinemedia",
+  "version": "1.0.4",
+  "permissions": [
+    "notifications",
+    "gcm",
+    "storage",
+    "identity",
+    "identity.email",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon16.png",
+    "default_popup": "index.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+	"16": "icons/icon16.png",
+	"48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "javascript/3rd/OneSignal.js",
+      "javascript/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.cinemedia.com.br/*",
+        "http://*.cinemedia.com.br/*"
+      ],
+      "js": [
+        "javascript/contentscript.js"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.cinemedia.com.br/*"
+    ]
+  }
+}

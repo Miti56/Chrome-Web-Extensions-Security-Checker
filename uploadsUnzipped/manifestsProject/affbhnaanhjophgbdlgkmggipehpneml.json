@@ -1,0 +1,17 @@
+{
+  "app": {
+    "urls": ["http://www.2pg.com/game/bomb-it-5/play/"],
+    "launch": {"web_url": "http://www.2pg.com/game/bomb-it-5/play/"}
+  },
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "description": "In Bomb it 5 your task is simple. Blast all your opponents before they blast you!",
+  "name": "Bomb it 5",
+  "permissions": ["unlimitedStorage"],
+  "icons": {
+    "128": "128.png",
+    "72": "72.png",
+    "256": "256.png"
+  },
+  "manifest_version": 2,
+  "version": "1.12"
+}

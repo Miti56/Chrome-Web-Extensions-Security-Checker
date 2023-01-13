@@ -1,0 +1,13 @@
+{"offline_enabled": true, 
+"default_locale": "en", 
+"background": {"scripts": ["background.js"]},
+ "name": "__MSG_extName__", 
+"browser_action": {"default_icon": "icons/128.png", 
+"default_title": "One Piece Wallpapers Themes HD"},
+ "manifest_version": 2, 
+"description": "__MSG_extDesc__", 
+"icons": {"128": "icons/128.png", 
+"48": "icons/48.png"},
+ "update_url": "https://clients2.google.com/service/update2/crx", 
+"version": "2.2.10", 
+"chrome_url_overrides": {"newtab": "index.html"}}

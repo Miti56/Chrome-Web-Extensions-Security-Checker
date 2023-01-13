@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name" : "Minecraft Plain",
+  "version" : "2",
+  "manifest_version" : 2,
+  "description" : "Minecraft Pocket Edition 2019 Guide is an app that may or may not be useful for you.",
+  "browser_action" : {
+    "default_icon" : "icon.png",
+    "default_popup" : "popup.html"
+  },
+  "icons" : {
+    "16" : "icon-16.png",
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}
+

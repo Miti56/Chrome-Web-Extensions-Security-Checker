@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Bounce Games",
+ "version": "1.0",
+"manifest_version": 2,
+ "description": "Free Bounce Games",
+  "app": {
+    "urls": [
+      "http://www.chromegameszone.com/category/10"
+    ],
+    "launch": {
+      "web_url": "http://www.chromegameszone.com/category/10"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

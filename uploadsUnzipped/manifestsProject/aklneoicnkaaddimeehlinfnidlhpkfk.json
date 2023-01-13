@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Hide Youtube Videos (Audio Only)",
+  "short_name": "Audio Youtube",
+  "version": "1.0",
+  "description": "It hides the thumbnails and video view in Youtube if you don't want to be distracted by them and listen to music",
+  "permissions": [
+    "declarativeContent",
+    "storage",
+    "https://www.youtube.com/*"
+    ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["jquery-3.4.1.min.js", "content.js"],
+      "run_at":"document_end"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/Group16 (1).png",
+      "32": "images/Group32 (1).png",
+      "48": "images/Group48 (1).png",
+      "128": "images/Group128 (1).png"
+    }
+  },
+  "icons": {
+    "16": "images/Group16 (1).png",
+    "32": "images/Group32 (1).png",
+    "48": "images/Group48 (1).png",
+    "128": "images/Group128 (1).png"
+  },
+  "manifest_version": 2
+}

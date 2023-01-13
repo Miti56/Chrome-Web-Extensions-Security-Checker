@@ -1,0 +1,32 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "MiDasiMiruMiru",
+  "short_name": "MdMM",
+  "description": "検索結果からサイトの見出しをリストアップする",
+  "version": "1.0.1.05",
+  "icons": {
+    "16": "images/icon/kuroneko16.png",
+    "48": "images/icon/kuroneko48.png",
+    "128": "images/icon/kuroneko128.png"
+  },
+   "background": {
+      "scripts": ["js/background.js"]
+    },
+  "browser_action": {
+    "default_icon": {"19": "images/icon/kuroneko19.png"},
+    "default_popup": "popup.html",
+    "persistent": true
+},
+  "web_accessible_resources": [
+    "images/*.png"
+  ],
+  "permissions": [
+    "tabs","activeTab","background","storage","contextMenus",
+    "https://affi-sapo-sv.com/tools/chrome/*","https://www.google.com/*"
+  ],
+"content_scripts": [
+    {"matches": ["https://www.google.com/search*"],"js": ["js/jquery-3.3.1.min.js","js/jquery-ui.min.js","js/contents.js"]}],
+  "content_security_policy": "img-src 'self'; script-src 'self';object-src 'self'; connect-src 'self' https://affi-sapo-sv.com/tools/chrome/;"
+}

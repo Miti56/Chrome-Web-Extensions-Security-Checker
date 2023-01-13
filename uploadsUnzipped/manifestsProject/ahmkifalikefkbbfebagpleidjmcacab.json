@@ -1,0 +1,14 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Free fancy cakes games",
+  "description": "Candy crush saga, clash of clans, clash royale, subway surfes, temple run 2, minecraft, agar.io pokemon go, gta v",
+  "version": "1.1",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

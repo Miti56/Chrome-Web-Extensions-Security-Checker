@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "MyVideo",
+  "short_name": "MyVideo",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "permissions": [
+    "webRequest",
+    "storage",
+    "webRequestBlocking",
+    "*://*.myvideo.ge/*"
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png" 
+  },
+  "browser_action": {
+  	"default_icon": "images/icon.png",
+  	"default_popup": "popup.html",
+  	"default_title": "MyVideo"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

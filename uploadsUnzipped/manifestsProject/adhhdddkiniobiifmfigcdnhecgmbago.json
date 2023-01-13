@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_EXT_NAME__",
+  "description": "__MSG_DESCRIPTION__",
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+
+  "default_locale": "zh_CN",
+  "icons": {
+    "128": "res/128.png",
+    "16": "res/16.png"
+  },
+
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "minimum_chrome_version": "18.0.0",
+  "permissions": [
+     "tabs",
+     "contextMenus",
+     "http://*/*",
+     "topSites",
+     "chrome://favicon/",
+     "storage",
+     "background",
+     "management"
+  ],
+  "version": "1.0"
+}

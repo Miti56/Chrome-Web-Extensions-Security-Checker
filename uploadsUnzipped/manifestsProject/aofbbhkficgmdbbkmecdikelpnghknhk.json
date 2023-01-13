@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "TuringGame Remote Help",
+  "description": "Capture the current tab for remote help by a teacher or a support person.",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["back.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "favicon.ico"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.tgame.ai/*"],
+      "js": ["capture.js"]
+    }
+  ],
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "tabs",
+    "tabCapture"
+  ]
+}

@@ -1,0 +1,3 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+"manifest_version":2,"theme":{"images":{"theme_frame":"images\/theme_frame.png","theme_toolbar":"images\/theme_toolbar.png","theme_tab_background":"images\/theme_tab_background.png","theme_ntp_background":"images\/theme_ntp_background.jpeg"},"colors":{"frame":[220,237,243],"toolbar":[220,237,243],"tab_text":[82,116,133],"tab_background_text":[82,116,133],"bookmark_text":[82,116,133],"ntp_background":[255,255,255],"ntp_text":[82,116,133],"button_background":[120,170,195,1]},"tints":{"buttons":[0.56,0.24,0.33]},"properties":{"ntp_background_alignment":"bottom","ntp_background_repeat":"no-repeat"}},"name":"Christmas background with snow","version":"1","description":"Theme for Monitors 2560x1440 pixels"}

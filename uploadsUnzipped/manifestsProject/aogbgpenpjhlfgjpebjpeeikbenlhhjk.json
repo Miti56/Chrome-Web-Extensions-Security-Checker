@@ -1,0 +1,26 @@
+{
+   "authors": [ {
+      "email": "contact@logicielreferencement.com",
+      "name": "Référencement"
+   } ],
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "images/icon.ico",
+      "default_title": "Référencement Par LogicielReferencement.com",
+      "popup": "pagerank.html"
+   },
+   "debug_mode": false,
+   "description": "Référencement Par LogicielReferencement.com",
+   "homepage": "http://www.logicielreferencement.com/",
+   "icons": {
+      "128": "image/logo-128.png",
+      "32": "image/logo-32.png",
+      "48": "image/logo-48.png",
+      "64": "image/logo-64.png"
+   },
+   "manifest_version": 2,
+   "name": "Référencement Par LogicielReferencement.com",
+   "permissions": [ "webRequest", "tabs", "*://*/*", "webNavigation" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.3"
+}

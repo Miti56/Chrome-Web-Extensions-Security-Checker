@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+ 
+  "name": "Github++",
+  "version": "0.1.0",
+  "description": "Adding power to github",
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+ 
+  "web_accessible_resources": [
+    "styles.css"
+  ],
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://github.com/*"],
+    "run_at":    "document_end"
+  }]
+ 
+}

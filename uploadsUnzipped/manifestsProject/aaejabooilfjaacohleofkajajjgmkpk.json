@@ -1,0 +1,29 @@
+{
+    "default_locale": "ru",
+    "name": "__MSG_extName__",
+    "short_name": "__MSG_extShortName__",
+    "description": "__MSG_extDescription__",
+    "icons": {
+        "16": "images/icons/icon16.png",
+        "48": "images/icons/icon48.png",
+        "128": "images/icons/icon128.png"
+    },
+    "version": "1.1.3",
+    "browser_action": {
+        "default_title": "__MSG_extBrowserActionTitle__",
+        "default_icon": "images/icons/icon32.png",
+        "default_popup": "pages/popup.html"
+    },
+    "background": {
+        "persistent": true,
+        "scripts": [ "scripts/globalNames.js", "scripts/background.js" ]
+    },
+    "content_scripts": [{
+        "run_at": "document_end",
+        "matches": ["http://*/*", "https://*/*"],
+        "js": [ "scripts/globalNames.js", "scripts/content.js" ]
+    }],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "permissions": ["tabs", "*://*/", "webRequest", "storage", "webRequestBlocking"],
+    "manifest_version": 2
+}

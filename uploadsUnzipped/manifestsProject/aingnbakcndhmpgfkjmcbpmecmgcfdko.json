@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+ "name": "Traducteur Français - Chinois",
+ "manifest_version": 2,
+ "short_name": "Traducteur Français - Chinois",
+ "description": "Traduire rapidement Français - Chinois",
+ "version": "1",
+ "background": {
+	"scripts": ["background.js"]
+  },
+ "browser_action": {
+	"default_icon": "1480811512_China-Flag.png"
+  },
+ "icons": {
+	"128": "spain-flag.png"
+  }
+}

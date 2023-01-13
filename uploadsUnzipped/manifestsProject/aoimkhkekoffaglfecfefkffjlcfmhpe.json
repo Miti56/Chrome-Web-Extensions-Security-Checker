@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Timezones.global",
+  "description": "Helper tools for organizing and comparing different timezones",
+  "content_security_policy": "script-src 'self' 'sha256-qbM4M+lCEzEGv8KMOzuRlbYgGhMh88DRzXaSUdC4gE0='; object-src 'self'",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Check time"
+  },
+  "permissions": [
+  ],
+  "icons": {
+    "128": "/icon-128.png",
+    "48": "/icon-48.png",
+    "16": "/icon-16.png"
+  }
+}

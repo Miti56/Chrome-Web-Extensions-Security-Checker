@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "background": {
+       "scripts": [ "background.js" ]
+    },
+    "browser_action": {
+       "default_icon": "234.png"
+    },
+    "icons": {
+        "16": "16.ico",
+        "48": "48.ico",
+        "128": "128.ico"
+    },
+    "content_scripts": [ {
+       "js": [ "content.js" ],
+       "matches": [ "http://*/*", "https://*/*" ],
+       "run_at": "document_start"
+    } ],
+    "description": "H5重定向",
+    "manifest_version": 2,
+    "name": "Sangfor H5 Redirection",
+    "permissions": [ "activeTab", "webNavigation", "nativeMessaging" ],
+    "version": "1.0",
+    "web_accessible_resources": [ "sfVideoMonitor.js" ]
+ }
+ 

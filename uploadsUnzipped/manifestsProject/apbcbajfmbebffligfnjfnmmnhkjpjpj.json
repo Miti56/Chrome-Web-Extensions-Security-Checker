@@ -1,0 +1,17 @@
+{
+   "content_scripts": [ {
+      "css": [ "css/memeStyle.css" ],
+      "js": [ "javascript/jquery-1.7.2.js", "javascript/memeInfo.js", "javascript/memes.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Memes para tu facebook, extension para tener memes en tu chat y mensajes y asi sorprender a tus amigos.",
+   "icons": {
+      "128": "mim/ico/megusta_128.png"
+   },
+    "manifest_version": 2,
+   "name": "Memes para Chatear",
+   "permissions": [ "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "mim/tab1/s1.png", "mim/tab2/s1.png", "mim/tab1/s2.png", "mim/tab2/s2.png", "mim/tab1/s3.png", "mim/tab2/s3.png", "mim/tab1/s4.png", "mim/tab2/s4.png", "mim/tab1/s5.png", "mim/tab2/s5.png", "mim/tab1/s6.png", "mim/tab2/s6.png", "mim/tab1/s7.png", "mim/tab2/s7.png", "mim/tab1/s8.png", "mim/tab2/s8.png", "mim/tab1/s9.png", "mim/tab2/s9.png", "mim/tab1/s10.png", "mim/tab2/s10.png", "mim/tab1/s11.png", "mim/tab2/s11.png", "mim/tab1/s12.png", "mim/tab2/s12.png", "mim/tab1/s13.png", "mim/tab2/s13.png", "mim/tab1/s14.png", "mim/tab2/s14.png", "mim/tab1/s15.png", "mim/tab2/s15.png", "mim/tab1/s16.png", "mim/tab2/s16.png", "mim/tab1/s17.png", "mim/tab2/s17.png", "mim/tab1/s18.png", "mim/tab2/s18.png", "mim/tab1/s19.png", "mim/tab2/s19.png", "mim/tab1/s20.png", "mim/tab2/s20.png", "mim/tab1/s21.png", "mim/tab2/s21.png", "mim/tab1/s22.png", "mim/tab2/s22.png", "mim/tab1/s23.png", "mim/tab2/s23.png", "mim/tab1/s24.png", "mim/tab2/s24.png", "mim/tab1/s25.png", "mim/tab2/s25.png", "mim/tab1/s26.png", "mim/tab2/s26.png", "mim/tab1/s27.png", "mim/tab2/s27.png", "mim/tab1/s28.png", "mim/tab2/s28.png", "mim/tab1/s29.png", "mim/tab2/s29.png", "mim/tab1/s30.png", "mim/tab2/s30.png", "mim/tab1/s31.png", "mim/tab2/s31.png", "mim/tab1/s32.png", "mim/tab2/s32.png", "mim/tab1/s33.png", "mim/tab2/s33.png", "mim/tab1/s34.png", "mim/tab2/s34.png", "mim/tab1/s35.png", "mim/tab2/s35.png", "mim/tab1/s36.png", "mim/tab2/s36.png", "mim/tab1/s37.png", "mim/tab2/s37.png", "mim/tab1/s38.png", "mim/tab2/s38.png", "mim/tab1/s39.png", "mim/tab2/s39.png", "mim/tab1/s40.png", "mim/tab2/s40.png", "mim/sd.png", "mim/slaq.png", "mim/t1.png", "mim/t2.png", "mim/smile.png", "mim/s6.png", "mim/newApp.png", "mim/meme.png", "mim/rec.png", "mim/Close.png", "javascript/messages.js" ]
+}

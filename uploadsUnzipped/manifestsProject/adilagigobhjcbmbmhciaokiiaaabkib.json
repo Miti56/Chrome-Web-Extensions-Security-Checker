@@ -1,0 +1,26 @@
+
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "FLATLAY Browser Extension",
+  "version": "1.1",
+  "description": "FLATLAY Browser Extension",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background-es5.js",
+      "runtime-es5.js"
+    ]
+  },
+  "page_action": {
+    "default_icon": "assets/flatlay_LOGO.png",
+    "default_popup": "index.html",
+    "default_title": "flatlay"
+  }
+}

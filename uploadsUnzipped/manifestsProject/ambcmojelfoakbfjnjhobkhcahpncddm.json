@@ -1,0 +1,44 @@
+{
+    "name": "Notipocket",
+    "version": "0.12",
+    "description": "Watch all the web you care about.",
+    "manifest_version": 2,
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "background": {
+        "page": "html/background.html"
+    },
+    "browser_action": {
+        "default_title": "Watch all the web you care about.",
+        "default_icon": {
+            "19": "image/icon-19.png",
+            "38": "image/icon-38.png"
+        }
+    },
+    "content_scripts": [{
+        "css": ["css/bootstrap.css", "css/main.css"],
+        "js": ["js/lib/jquery.js", "js/lib/jquery-cookie.js", "js/lib/underscore.js", "js/main.js"],
+        "matches": ["*://*/*"]
+    }, {
+        "js": ["js/auth-injector.js"],
+        "matches": ["http://api.notipocket.com/login", "http://dev.notipocket.com:1337/login"]
+    }],
+    "icons": {
+        "128": "image/icon-128.png",
+        "48": "image/icon-48.png",
+        "16": "image/icon-16.png"
+    },
+    "permissions": [
+        "tabs",
+        "contextMenus",
+        "cookies",
+        "notifications",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "web_accessible_resources": [
+        "html/main.html",
+        "image/*",
+        "font/*"
+    ]
+}

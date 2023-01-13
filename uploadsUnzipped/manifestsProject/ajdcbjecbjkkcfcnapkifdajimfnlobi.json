@@ -1,0 +1,45 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name" : "Frosmo Preview",
+    "version" : "2.2.2",
+    "manifest_version": 2,
+    "description" : "Frosmo preview functionality for Frosmo customers",
+    "icons": {
+        "16": "icon-16x16.png",
+        "48": "icon-48x48.png",
+        "128": "icon-128x128.png"
+    },
+    "background" : {
+        "scripts" : ["background.js"]
+    },
+    "content_scripts" : [
+        {
+            "matches": ["*://*/*"],
+            "js": ["extension.js"]
+        },
+        {
+            "matches": [
+                "*://dev.inpref.com/mahi/message/get-extension*",
+                "*://admin.inpref.com/mahi/message/get-extension*",
+                "*://admin.tui.frosmo.com/mahi/message/get-extension*",
+                "*://admin.jturunen.frosmo/mahi/message/get-extension*"
+            ],
+            "js": ["instructions.js"]
+        }
+    ],
+    "page_action": {
+        "default_icon": "icon-deactive.png"
+    },
+    "permissions" : [
+        "*://*/*",
+        "tabs"
+    ],
+    "web_accessible_resources": [
+        "extension.js",
+        "init.js",
+        "icon-active.png",
+        "icon-16x16.png",
+        "icon-48x48.png"
+    ]
+}

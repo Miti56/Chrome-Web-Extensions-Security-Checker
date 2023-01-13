@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+
+  "name": "Miner Rusher 2",
+
+  "short_name": "Miner Rusher 2",
+
+  "version": "1.0.2",
+  "description": "Play Miner Rusher 2 on your browser",
+
+  "homepage_url": "https://appdomain.pw/c/juegos-de-peine/",
+  
+
+  "icons": {
+      "128": "icon.png"
+  },
+
+  "browser_action": {
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png"
+      },
+      "default_title": "Miner Rusher 2",
+
+      "default_popup": "popup.html"
+  }
+}
